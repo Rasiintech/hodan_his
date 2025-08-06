@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-22 11:44:28.230678",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "column_break_jesn7",
+  "pid",
+  "column_break_cq8y7",
+  "dob",
+  "column_break_sm7ah",
+  "mrp",
+  "section_break_xllny",
+  "physicians_orders",
+  "section_break_yov7g",
+  "date",
+  "column_break_jend6",
+  "allergies",
+  "column_break_kmxo8",
+  "no",
+  "column_break_qns1v",
+  "yes",
+  "section_break_hefnp",
+  "weight",
+  "column_break_hvzve",
+  "height",
+  "column_break_vreem",
+  "diagnosis"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "column_break_jesn7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "column_break_cq8y7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_sm7ah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_xllny",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "physicians_orders",
+   "fieldtype": "HTML",
+   "label": "PHYSICIANS ORDERS ",
+   "options": "PHYSICIANS ORDERS "
+  },
+  {
+   "fieldname": "section_break_yov7g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_jend6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "HTML",
+   "label": "Allergies",
+   "options": "Allergies"
+  },
+  {
+   "fieldname": "column_break_kmxo8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_qns1v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "section_break_hefnp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "column_break_hvzve",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "column_break_vreem",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-22 11:44:28.230678",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "PHYSICIANS ORDERS FORM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

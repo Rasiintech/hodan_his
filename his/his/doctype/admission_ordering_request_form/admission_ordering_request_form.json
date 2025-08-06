@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 13:29:24.386598",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "mrp",
+  "column_break_wgrxh",
+  "column_break_xvmya",
+  "column_break_rnupp",
+  "section_break_k5lhj",
+  "admission_ordering_request",
+  "section_break_lfhfa",
+  "column_break_ptuqx",
+  "file_no",
+  "section_break_senef",
+  "daignosis",
+  "column_break_fyxe6",
+  "date_of_admission",
+  "section_break_wj90d",
+  "procedure",
+  "column_break_evnou",
+  "date_of_procedure",
+  "section_break_r5gju",
+  "length_of_stay",
+  "section_break_qicak",
+  "comments",
+  "section_break_vzqca",
+  "doctors_name",
+  "column_break_o0vvy",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_wgrxh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xvmya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_rnupp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_k5lhj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "admission_ordering_request",
+   "fieldtype": "HTML",
+   "label": "Admission ordering Request",
+   "options": "Admission ordering Request"
+  },
+  {
+   "fieldname": "section_break_lfhfa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_ptuqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "file_no",
+   "fieldtype": "Data",
+   "label": "File No"
+  },
+  {
+   "fieldname": "section_break_senef",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "daignosis",
+   "fieldtype": "Data",
+   "label": "Daignosis"
+  },
+  {
+   "fieldname": "column_break_fyxe6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "label": "Date of Admission"
+  },
+  {
+   "fieldname": "section_break_wj90d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Data",
+   "label": "Procedure"
+  },
+  {
+   "fieldname": "column_break_evnou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_procedure",
+   "fieldtype": "Date",
+   "label": "Date of Procedure"
+  },
+  {
+   "fieldname": "section_break_r5gju",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "length_of_stay",
+   "fieldtype": "Data",
+   "label": "Length of stay"
+  },
+  {
+   "fieldname": "section_break_qicak",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "section_break_vzqca",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "doctors_name",
+   "fieldtype": "Data",
+   "label": "Doctors Name"
+  },
+  {
+   "fieldname": "column_break_o0vvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:03:29.608222",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Admission Ordering Request Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

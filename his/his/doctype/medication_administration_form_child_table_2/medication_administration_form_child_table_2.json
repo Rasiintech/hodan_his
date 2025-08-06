@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-22 13:18:42.817816",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "initail_date",
+  "order",
+  "meds__dos",
+  "frequency__route"
+ ],
+ "fields": [
+  {
+   "fieldname": "initail_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "initail Date"
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Order"
+  },
+  {
+   "fieldname": "meds__dos",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "MEDS / DOS"
+  },
+  {
+   "fieldname": "frequency__route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Frequency / Route"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-22 13:18:42.817816",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "medication administration form child_table 2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-26 12:22:13.707002",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "purchase_request_form",
+  "section_break_z9p3c",
+  "date_request",
+  "column_break_yzcsk",
+  "departmen",
+  "section_break_wlwl6",
+  "purchase_request_2",
+  "section_break_sm8kh",
+  "justification",
+  "column_break_glcy4",
+  "request_2",
+  "column_break_kqyop",
+  "approved_by",
+  "section_break_ziuiu"
+ ],
+ "fields": [
+  {
+   "fieldname": "purchase_request_form",
+   "fieldtype": "HTML",
+   "label": "PURCHASE REQUEST FORM",
+   "options": "PURCHASE REQUEST FORM"
+  },
+  {
+   "fieldname": "section_break_z9p3c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_request",
+   "fieldtype": "Date",
+   "label": "Date Request"
+  },
+  {
+   "fieldname": "column_break_yzcsk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "departmen",
+   "fieldtype": "Data",
+   "label": "Departmen"
+  },
+  {
+   "fieldname": "section_break_wlwl6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "purchase_request_2",
+   "fieldtype": "Table",
+   "label": "Purchase Request Form",
+   "options": "Purchase Request Form child"
+  },
+  {
+   "fieldname": "section_break_sm8kh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "justification",
+   "fieldtype": "Data",
+   "label": "Justification"
+  },
+  {
+   "fieldname": "column_break_glcy4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_2",
+   "fieldtype": "Data",
+   "label": "Requested by"
+  },
+  {
+   "fieldname": "column_break_kqyop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved by"
+  },
+  {
+   "fieldname": "section_break_ziuiu",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-26 12:22:13.707002",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Purchase Request Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

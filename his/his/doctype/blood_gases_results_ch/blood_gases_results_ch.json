@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 08:44:11.198502",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "frequency",
+  "d",
+  "ph",
+  "pco2",
+  "po2",
+  "hco3",
+  "o2sat",
+  "be",
+  "f"
+ ],
+ "fields": [
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "FREQUENCY"
+  },
+  {
+   "fieldname": "d",
+   "fieldtype": "Data",
+   "label": "DATE/TIME"
+  },
+  {
+   "fieldname": "ph",
+   "fieldtype": "Data",
+   "label": "PH"
+  },
+  {
+   "fieldname": "pco2",
+   "fieldtype": "Data",
+   "label": "PCO2"
+  },
+  {
+   "fieldname": "po2",
+   "fieldtype": "Data",
+   "label": "PO2"
+  },
+  {
+   "fieldname": "hco3",
+   "fieldtype": "Data",
+   "label": "HCO3"
+  },
+  {
+   "fieldname": "o2sat",
+   "fieldtype": "Data",
+   "label": "O2SAT"
+  },
+  {
+   "fieldname": "be",
+   "fieldtype": "Data",
+   "label": "BE"
+  },
+  {
+   "fieldname": "f",
+   "fieldtype": "Data",
+   "label": "FiO2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-28 08:44:11.198502",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "BLOOD GASES RESULTS Ch",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

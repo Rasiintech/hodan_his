@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-25 10:38:18.386062",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "represent_name",
+  "relation",
+  "signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "represent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Represent Name"
+  },
+  {
+   "fieldname": "relation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relation"
+  },
+  {
+   "default": "........................",
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Signature",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-25 10:43:18.592254",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Representors",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

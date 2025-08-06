@@ -1,0 +1,552 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-27 11:50:33.953297",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "column_break_holne",
+  "patient_name",
+  "column_break_udfan",
+  "dob",
+  "column_break_ozr5s",
+  "mrp",
+  "section_break_3e4tj",
+  "procedure",
+  "column_break_gbrop",
+  "date",
+  "column_break_gkhoe",
+  "time",
+  "column_break_orrsl",
+  "id_band_on",
+  "section_break_0yec2",
+  "alergy_band",
+  "column_break_jqzxy",
+  "surgial_consent",
+  "column_break_itxrq",
+  "anethesia_consent",
+  "column_break_igndb",
+  "other_related_consent",
+  "column_break_qqdfb",
+  "old_related_consent",
+  "section_break_gycta",
+  "old_notes_or_x_rays",
+  "column_break_sjib2",
+  "npo_time",
+  "column_break_28aon",
+  "medication_chart_downtime",
+  "column_break_ptljh",
+  "last_time_voided",
+  "column_break_ap2ax",
+  "bowel_prep",
+  "section_break_iiy5l",
+  "lab_results",
+  "column_break_zfs1l",
+  "chest_x_ray",
+  "column_break_qz4xh",
+  "blood_availabe",
+  "column_break_s8qsh",
+  "latest_blood_sugar",
+  "section_break_nxxhj",
+  "egg",
+  "column_break_uzcfm",
+  "side_and_site_marked_by",
+  "column_break_svafb",
+  "congnitive_state",
+  "section_break_buvav",
+  "history_and_physical_correct_or_attire",
+  "column_break_vlu0z",
+  "contract_lenses_glasses_removed",
+  "column_break_k4jai",
+  "dentures_removed",
+  "column_break_shkwf",
+  "jewelery_removed",
+  "section_break_xruih",
+  "prosthesis",
+  "column_break_eh29f",
+  "preop_medication_given",
+  "column_break_ui8i3",
+  "iv_fluids_iv_medication",
+  "column_break_kmrzg",
+  "iv_cannula_site",
+  "section_break_mmada",
+  "vital_signs",
+  "column_break_fnw1b",
+  "weight",
+  "column_break_tmtmg",
+  "height",
+  "column_break_orfzg",
+  "o2_saturation",
+  "section_break_hiyl1",
+  "temperature",
+  "column_break_nbj6f",
+  "pulse",
+  "column_break_giwu7",
+  "respiration",
+  "column_break_aavc6",
+  "bp",
+  "section_break_cv3zc",
+  "full_name",
+  "column_break_cjiwz",
+  "signure",
+  "column_break_mwogk",
+  "sing_date",
+  "column_break_jynkv",
+  "sing_time",
+  "section_break_bgtst"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Data",
+   "label": "Procedure",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "id_band_on",
+   "fieldtype": "Select",
+   "label": "ID Band on",
+   "options": "Right\nLeft"
+  },
+  {
+   "fieldname": "alergy_band",
+   "fieldtype": "Select",
+   "label": "Alergy Band ",
+   "options": "Right\nLeft"
+  },
+  {
+   "fieldname": "surgial_consent",
+   "fieldtype": "Data",
+   "label": "Surgial Consent"
+  },
+  {
+   "fieldname": "anethesia_consent",
+   "fieldtype": "Data",
+   "label": "Anethesia Consent"
+  },
+  {
+   "fieldname": "other_related_consent",
+   "fieldtype": "Data",
+   "label": "Other Related Consent"
+  },
+  {
+   "fieldname": "old_related_consent",
+   "fieldtype": "Data",
+   "label": "Old related Consent"
+  },
+  {
+   "fieldname": "old_notes_or_x_rays",
+   "fieldtype": "Data",
+   "label": "Old Notes or X Rays"
+  },
+  {
+   "fieldname": "npo_time",
+   "fieldtype": "Data",
+   "label": "NPO Time"
+  },
+  {
+   "fieldname": "medication_chart_downtime",
+   "fieldtype": "Data",
+   "label": "Medication Chart Downtime"
+  },
+  {
+   "fieldname": "last_time_voided",
+   "fieldtype": "Data",
+   "label": "Last Time voided"
+  },
+  {
+   "fieldname": "bowel_prep",
+   "fieldtype": "Data",
+   "label": "Bowel Prep"
+  },
+  {
+   "fieldname": "lab_results",
+   "fieldtype": "Data",
+   "label": "Lab Results"
+  },
+  {
+   "fieldname": "chest_x_ray",
+   "fieldtype": "Data",
+   "label": "Chest X Ray "
+  },
+  {
+   "fieldname": "blood_availabe",
+   "fieldtype": "Data",
+   "label": "Blood Availabe"
+  },
+  {
+   "fieldname": "latest_blood_sugar",
+   "fieldtype": "Data",
+   "label": "Latest Blood Sugar"
+  },
+  {
+   "fieldname": "egg",
+   "fieldtype": "Data",
+   "label": "EGG"
+  },
+  {
+   "fieldname": "side_and_site_marked_by",
+   "fieldtype": "Data",
+   "label": "Side and Site marked by"
+  },
+  {
+   "fieldname": "congnitive_state",
+   "fieldtype": "Data",
+   "label": "Congnitive State"
+  },
+  {
+   "fieldname": "history_and_physical_correct_or_attire",
+   "fieldtype": "Data",
+   "label": "History and Physical Correct OR Attire"
+  },
+  {
+   "fieldname": "contract_lenses_glasses_removed",
+   "fieldtype": "Data",
+   "label": "Contract lenses Glasses removed"
+  },
+  {
+   "fieldname": "dentures_removed",
+   "fieldtype": "Data",
+   "label": "dentures removed "
+  },
+  {
+   "fieldname": "jewelery_removed",
+   "fieldtype": "Data",
+   "label": "jewelery removed"
+  },
+  {
+   "fieldname": "prosthesis",
+   "fieldtype": "Data",
+   "label": "Prosthesis "
+  },
+  {
+   "fieldname": "preop_medication_given",
+   "fieldtype": "Data",
+   "label": "Preop medication given"
+  },
+  {
+   "fieldname": "iv_fluids_iv_medication",
+   "fieldtype": "Data",
+   "label": "IV Fluids IV medication"
+  },
+  {
+   "fieldname": "iv_cannula_site",
+   "fieldtype": "Select",
+   "label": "IV Cannula Site",
+   "options": "Right\nLeft"
+  },
+  {
+   "fieldname": "vital_signs",
+   "fieldtype": "Data",
+   "label": "Vital Signs"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "o2_saturation",
+   "fieldtype": "Data",
+   "label": "O2 Saturation"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Data",
+   "label": "Pulse"
+  },
+  {
+   "fieldname": "respiration",
+   "fieldtype": "Data",
+   "label": "Respiration"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name "
+  },
+  {
+   "fieldname": "signure",
+   "fieldtype": "Data",
+   "label": "Signure"
+  },
+  {
+   "fieldname": "sing_date",
+   "fieldtype": "Data",
+   "label": "Sing Date"
+  },
+  {
+   "fieldname": "sing_time",
+   "fieldtype": "Data",
+   "label": "Sing Time"
+  },
+  {
+   "fieldname": "section_break_mmada",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_hiyl1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fnw1b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tmtmg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_orfzg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bgtst",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_cv3zc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nbj6f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_giwu7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_aavc6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_holne",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_udfan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ozr5s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_3e4tj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_gbrop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gkhoe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_orrsl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_0yec2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jqzxy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_itxrq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_igndb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qqdfb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gycta",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sjib2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_28aon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ptljh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ap2ax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_iiy5l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zfs1l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qz4xh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_s8qsh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nxxhj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uzcfm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_svafb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_buvav",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vlu0z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_k4jai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_shkwf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xruih",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_eh29f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ui8i3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kmrzg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cjiwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mwogk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jynkv",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:18:47.120329",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Preoperative Checklist Inpatient",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

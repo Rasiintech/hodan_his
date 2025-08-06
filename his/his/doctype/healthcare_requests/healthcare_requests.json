@@ -1,0 +1,493 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-13 09:35:53.763209",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "doctor_plan",
+  "patient",
+  "patient_name",
+  "patient_sex",
+  "patient_age",
+  "inpatient_record",
+  "inpatient_status",
+  "room",
+  "bed",
+  "source_order",
+  "column_break_6",
+  "company",
+  "encounter_date",
+  "encounter_time",
+  "practitioner",
+  "practitioner_name",
+  "medical_department",
+  "gp_doctor",
+  "section_break_ydcki",
+  "sb_drug_prescription",
+  "section_break_bwqlu",
+  "drug_prescription",
+  "sb_test_prescription",
+  "section_break_gpfct",
+  "select_lab_tests",
+  "lab_test_prescription",
+  "imaging_tab",
+  "section_break_u3mpg",
+  "select_imaging",
+  "radiology_prescription",
+  "request_form",
+  "procedure_tab",
+  "section_break_z6ngr",
+  "procedure_prescription",
+  "other_services",
+  "section_break_iyt2h",
+  "services_prescription",
+  "medication_so",
+  "services_so",
+  "user",
+  "full_name",
+  "opthalmology",
+  "obs",
+  "amended_from",
+  "hide",
+  "eye_glass_prescription_tab",
+  "section_break_eaamk",
+  "glass_prescription"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "HLC-ENC-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "doctor_plan",
+   "fieldtype": "Link",
+   "label": "Doctor Plan",
+   "options": "Doctor Plan",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "doctor_plan.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "patient_sex",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "inpatient_status",
+   "fieldtype": "Data",
+   "label": "Inpatient Status",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "doctor_plan.room",
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "Healthcare Service Unit Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "doctor_plan.bed",
+   "fieldname": "bed",
+   "fieldtype": "Link",
+   "label": "Bed",
+   "options": "Healthcare Service Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_order",
+   "fieldtype": "Link",
+   "label": "Source Order",
+   "options": "Source Order"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Hospital",
+   "options": "Company"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ipd Order Date",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "encounter_time",
+   "fieldtype": "Time",
+   "label": "Ipd Order Time"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Doctor",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Practitioner Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "medical_department",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Medical Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ydcki",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.hide !=1",
+   "fieldname": "sb_drug_prescription",
+   "fieldtype": "Tab Break",
+   "label": "Medications"
+  },
+  {
+   "fieldname": "section_break_bwqlu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Drug Prescription",
+   "options": "Drug Prescription"
+  },
+  {
+   "depends_on": "eval: doc.hide !=1",
+   "fieldname": "sb_test_prescription",
+   "fieldtype": "Tab Break",
+   "label": "Lab Request"
+  },
+  {
+   "fieldname": "section_break_gpfct",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lab_test_prescription",
+   "fieldtype": "Table",
+   "label": "Lab Tests",
+   "options": "Lab Prescription"
+  },
+  {
+   "depends_on": "eval: doc.hide !=1",
+   "fieldname": "imaging_tab",
+   "fieldtype": "Tab Break",
+   "label": "Imaging Request"
+  },
+  {
+   "fieldname": "section_break_u3mpg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "radiology_prescription",
+   "fieldtype": "Table",
+   "label": "Radiology Prescription",
+   "options": "Radiology Prescription"
+  },
+  {
+   "fieldname": "procedure_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procedure Request"
+  },
+  {
+   "fieldname": "procedure_prescription",
+   "fieldtype": "Table",
+   "label": "Procedure Prescription",
+   "options": "Procedure Prescription"
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "label": "medication_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "label": "services_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "default": "User",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "section_break_z6ngr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "request_form",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "options": "<div id=\"rad_request_form\"></div>"
+  },
+  {
+   "fieldname": "opthalmology",
+   "fieldtype": "Data",
+   "label": "opthalmology",
+   "read_only": 1
+  },
+  {
+   "fieldname": "obs",
+   "fieldtype": "Data",
+   "label": "OBS",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Healthcare Requests",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "hide",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Hide"
+  },
+  {
+   "fieldname": "select_lab_tests",
+   "fieldtype": "Button",
+   "label": "Select Lab Tests"
+  },
+  {
+   "fieldname": "select_imaging",
+   "fieldtype": "Button",
+   "label": "Select Imaging"
+  },
+  {
+   "fieldname": "other_services",
+   "fieldtype": "Tab Break",
+   "label": "Other Services"
+  },
+  {
+   "fieldname": "section_break_iyt2h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "services_prescription",
+   "fieldtype": "Table",
+   "label": "Services Prescription",
+   "options": "Services Prescription"
+  },
+  {
+   "fieldname": "glass_prescription",
+   "fieldtype": "Table",
+   "label": "Eye Glass Prescription",
+   "options": "Glass prescription"
+  },
+  {
+   "fieldname": "eye_glass_prescription_tab",
+   "fieldtype": "Tab Break",
+   "label": "Glass Prescription"
+  },
+  {
+   "fieldname": "section_break_eaamk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gp_doctor",
+   "fieldtype": "Link",
+   "label": "GP Doctor",
+   "options": "GP Doctor"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-31 10:03:17.381242",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Healthcare Requests",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "if_owner": 1,
+   "read": 1,
+   "role": "Physician",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nurse",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Emergency Nurse",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Healthcare",
+ "search_fields": "patient, practitioner, medical_department, encounter_date, encounter_time",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient_name",
+ "track_changes": 1,
+ "track_seen": 1
+}

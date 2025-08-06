@@ -1,0 +1,281 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OPDSUR-.#####",
+ "creation": "2025-05-06 09:57:18.948516",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gender",
+  "age",
+  "column_break_n0dhb",
+  "date_of_visit",
+  "section_break_vqzzz",
+  "name_01",
+  "why_1",
+  "section_break_hbquh",
+  "name_04",
+  "why_2",
+  "column_break_qnirv",
+  "name_05",
+  "why_3",
+  "section_break_nlnf5",
+  "were_you_treated_with_courtesy_and_caring_by_the_medical_doctor",
+  "why_4",
+  "section_break_pf4ns",
+  "was_the_waiting_area_in_opd_comfortable",
+  "why_5",
+  "section_break_nnmog",
+  "if_you_had_a_needle_stick_venipuncture_was_it_comfortable",
+  "why_6",
+  "section_break_1l6mb",
+  "name_09",
+  "why_7",
+  "section_break_eha8e",
+  "name_08",
+  "why_8",
+  "section_break_cngg9",
+  "9_how_would_you_rate_the_helpfulness_of_our_staff",
+  "why_9",
+  "section_break_gmwxe",
+  "name_06",
+  "why_10"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "patient.age_type",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_n0dhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_vqzzz",
+   "fieldtype": "Section Break",
+   "label": "Questions"
+  },
+  {
+   "fieldname": "name_01",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "1. How would you rate your experience at the cashier?",
+   "options": "\nPoor\nFair\nVery Good\nN/A"
+  },
+  {
+   "fieldname": "name_04",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "2. If you contacted the call center, how helpful was the person you spoke with?",
+   "options": "\nPoor\nFair\nVery Good\nN/A"
+  },
+  {
+   "fieldname": "name_05",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "3. How would you rate the tests and examinations done to find out what illness you have?",
+   "options": "\nPoor\nFair\nVery Good\nN/A"
+  },
+  {
+   "fieldname": "name_06",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "10. Please rate your overall experience with your visit",
+   "options": "\nPoor\nFair\nVery good\nN/A",
+   "reqd": 1
+  },
+  {
+   "fieldname": "were_you_treated_with_courtesy_and_caring_by_the_medical_doctor",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "4. Were you treated with kindness and respect by the doctor?",
+   "options": "\nPoor\nFair\nVery Good\nN/A"
+  },
+  {
+   "fieldname": "was_the_waiting_area_in_opd_comfortable",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "5. Was the waiting area in the outpatient department (OPD) comfortable?",
+   "options": "\nPoor\nFair\nVery Good\nN/A"
+  },
+  {
+   "fieldname": "if_you_had_a_needle_stick_venipuncture_was_it_comfortable",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "6. If you had a needle stick (blood draw), was it comfortable?",
+   "options": "\nPoor\nFair\nVery Good\nN/A"
+  },
+  {
+   "fieldname": "name_09",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "7. Was your primary health care doctor able to quickly diagnose your condition and prescribe the right medication?",
+   "options": "\nPoor\nFair\nVery Good\nN/A"
+  },
+  {
+   "fieldname": "name_08",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "8. Did the staff explain clearly how to take your medication?",
+   "options": "\nPoor\nFair\nVery Good\nN/A"
+  },
+  {
+   "fieldname": "why_1",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_hbquh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_2",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "column_break_qnirv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_3",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_nlnf5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_4",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_pf4ns",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_5",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_nnmog",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_6",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_1l6mb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_7",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_eha8e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_8",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_cngg9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "9_how_would_you_rate_the_helpfulness_of_our_staff",
+   "fieldtype": "Select",
+   "label": "9. How would you rate the helpfulness of our staff?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "why_9",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_gmwxe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_10",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-15 11:24:24.224258",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OPD Survey",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

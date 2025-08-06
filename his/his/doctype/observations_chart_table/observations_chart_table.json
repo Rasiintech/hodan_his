@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-20 14:30:47.338544",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "time",
+  "observations_section",
+  "temp",
+  "bp",
+  "pulse",
+  "res",
+  "po",
+  "input_section",
+  "iv_fluid",
+  "oral",
+  "output_section",
+  "urine",
+  "drain",
+  "section_break_15",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "observations_section",
+   "fieldtype": "Section Break",
+   "label": "Observations"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "Temp"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "B/P"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Data",
+   "label": "Pulse"
+  },
+  {
+   "fieldname": "res",
+   "fieldtype": "Data",
+   "label": "Res"
+  },
+  {
+   "fieldname": "po",
+   "fieldtype": "Data",
+   "label": "PO"
+  },
+  {
+   "fieldname": "input_section",
+   "fieldtype": "Section Break",
+   "label": "Input"
+  },
+  {
+   "fieldname": "iv_fluid",
+   "fieldtype": "Data",
+   "label": "IV Fluid"
+  },
+  {
+   "fieldname": "oral",
+   "fieldtype": "Data",
+   "label": "Oral"
+  },
+  {
+   "fieldname": "output_section",
+   "fieldtype": "Section Break",
+   "label": "Output"
+  },
+  {
+   "fieldname": "urine",
+   "fieldtype": "Data",
+   "label": "Urine"
+  },
+  {
+   "fieldname": "drain",
+   "fieldtype": "Data",
+   "label": "Drain"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "label": "Remark"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-20 14:30:47.338544",
+ "modified_by": "Administrator",
+ "module": "his",
+ "name": "OBSERVATIONS CHART TABLE",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

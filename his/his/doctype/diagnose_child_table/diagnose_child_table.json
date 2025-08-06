@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 16:23:47.738500",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "medication_list",
+  "special_instructions"
+ ],
+ "fields": [
+  {
+   "fieldname": "medication_list",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Medication List"
+  },
+  {
+   "fieldname": "special_instructions",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Special instructions"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-21 16:23:47.738500",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "diagnose child table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

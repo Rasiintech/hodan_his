@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-27 11:09:09.272488",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "patient_name",
+  "patient_age",
+  "of_death",
+  "column_break_bxz18",
+  "date",
+  "date_of_admission",
+  "date_of_death",
+  "time_of_death",
+  "section_break_ndo8z",
+  "brief_medical_history",
+  "laboratory_findings",
+  "main_medical_examination__clinical_findings",
+  "column_break_3n4rl",
+  "radiological_and_pathological_findings",
+  "diagnosis",
+  "primary_cause_of_death",
+  "section_break_ljejh",
+  "name1",
+  "title",
+  "name2",
+  "chief_medical_officer"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "pid.p_age",
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Age"
+  },
+  {
+   "fieldname": "of_death",
+   "fieldtype": "Select",
+   "label": " POD",
+   "options": "\nDead On Arrival (DOA)\nDied In the Ward\nDied in the emergency\nDied in OR\nDied in ICU\nDied in NICU"
+  },
+  {
+   "fieldname": "column_break_bxz18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "label": "Date Of Admission"
+  },
+  {
+   "fieldname": "date_of_death",
+   "fieldtype": "Date",
+   "label": "Date Of Death"
+  },
+  {
+   "fieldname": "time_of_death",
+   "fieldtype": "Time",
+   "label": "Time of Death"
+  },
+  {
+   "fieldname": "section_break_ndo8z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "brief_medical_history",
+   "fieldtype": "Small Text",
+   "label": "Brief Medical History"
+  },
+  {
+   "fieldname": "laboratory_findings",
+   "fieldtype": "Small Text",
+   "label": "LABORATORY FINDINGS"
+  },
+  {
+   "fieldname": "main_medical_examination__clinical_findings",
+   "fieldtype": "Small Text",
+   "label": "Main Medical Examination  And Clinical Findings"
+  },
+  {
+   "fieldname": "column_break_3n4rl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "radiological_and_pathological_findings",
+   "fieldtype": "Small Text",
+   "label": "RADIOLOGICAL AND PATHOLOGICAL FINDINGS"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "DIAGNOSIS"
+  },
+  {
+   "fieldname": "primary_cause_of_death",
+   "fieldtype": "Small Text",
+   "label": "PRIMARY CAUSE OF DEATH"
+  },
+  {
+   "fieldname": "section_break_ljejh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "name2",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "chief_medical_officer",
+   "fieldtype": "Data",
+   "label": "Chief Medical Officer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-29 13:48:38.012743",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Death Report Layout",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

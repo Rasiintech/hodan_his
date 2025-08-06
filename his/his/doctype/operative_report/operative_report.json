@@ -1,0 +1,284 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-26 18:57:53.572562",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_name",
+  "column_break_umzya",
+  "pid",
+  "column_break_kylmt",
+  "dob",
+  "column_break_vlpto",
+  "mrp",
+  "section_break_cawqg",
+  "date_of_operation",
+  "section_break_pdab7",
+  "surgeon",
+  "anesthetist",
+  "section_break_cttvq",
+  "type_of_anesthesia",
+  "column_break_a9rfq",
+  "preoperative_diagnosis",
+  "column_break_ickua",
+  "postoperative_diagnosis",
+  "column_break_ue9qm",
+  "procedure",
+  "section_break_xvtro",
+  "incision",
+  "column_break_0gayl",
+  "findings",
+  "section_break_wfinq",
+  "description_of_procedure",
+  "section_break_o2rqj",
+  "assistant",
+  "nurse",
+  "closure",
+  "drains",
+  "column_break_f3fi1",
+  "specimen",
+  "column_break_igxr2",
+  "condition_of_the_patient_at_the_end_of_procedure",
+  "section_break_xq5vo",
+  "patient_discharged_to",
+  "section_break_eu9jy",
+  "signature",
+  "column_break_9rxwr",
+  "id_no",
+  "column_break_cutna",
+  "datetime"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_of_operation",
+   "fieldtype": "Date",
+   "label": "DATE OF OPERATION"
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Link",
+   "label": "SURGEON ",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "assistant",
+   "fieldtype": "Data",
+   "label": "ASSISTANT "
+  },
+  {
+   "fieldname": "anesthetist",
+   "fieldtype": "Data",
+   "label": "ANESTHETIST"
+  },
+  {
+   "fieldname": "nurse",
+   "fieldtype": "Data",
+   "label": "NURSE"
+  },
+  {
+   "fieldname": "type_of_anesthesia",
+   "fieldtype": "Data",
+   "label": "TYPE OF ANESTHESIA "
+  },
+  {
+   "fieldname": "preoperative_diagnosis",
+   "fieldtype": "Data",
+   "label": "PREOPERATIVE DIAGNOSIS "
+  },
+  {
+   "fieldname": "postoperative_diagnosis",
+   "fieldtype": "Data",
+   "label": "POSTOPERATIVE DIAGNOSIS "
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Data",
+   "label": "PROCEDURE "
+  },
+  {
+   "fieldname": "incision",
+   "fieldtype": "Data",
+   "label": "INCISION "
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Long Text",
+   "label": "FINDINGS "
+  },
+  {
+   "fieldname": "description_of_procedure",
+   "fieldtype": "Long Text",
+   "label": "DESCRIPTION OF PROCEDURE "
+  },
+  {
+   "fieldname": "closure",
+   "fieldtype": "Section Break",
+   "label": "CLOSURE "
+  },
+  {
+   "fieldname": "drains",
+   "fieldtype": "Select",
+   "label": "DRAINS ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "specimen",
+   "fieldtype": "Select",
+   "label": "SPECIMEN",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "condition_of_the_patient_at_the_end_of_procedure",
+   "fieldtype": "Select",
+   "label": "CONDITION OF THE PATIENT AT THE END OF PROCEDURE",
+   "options": "Stable\nUnstable"
+  },
+  {
+   "fieldname": "patient_discharged_to",
+   "fieldtype": "Select",
+   "label": "PATIENT DISCHARGED TO",
+   "options": "PACU\nICU\nOTHER"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "HTML",
+   "options": "SIGNATURE              ______________________"
+  },
+  {
+   "fieldname": "id_no",
+   "fieldtype": "Data",
+   "label": "ID NO"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "DATETIME"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "pid.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_o2rqj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_f3fi1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9rxwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cutna",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_igxr2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_xq5vo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_eu9jy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_cawqg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_umzya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kylmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vlpto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pdab7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_cttvq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_a9rfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ickua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ue9qm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xvtro",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_0gayl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wfinq",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-28 13:29:35.764246",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OPERATIVE REPORT",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-27 12:02:50.615401",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "bed_temp",
+  "temp",
+  "o2",
+  "rr",
+  "rgp",
+  "bp",
+  "amount_of_feeding",
+  "feeding_type",
+  "vomoting",
+  "pr"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "bed_temp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bed temp"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Inf temp"
+  },
+  {
+   "fieldname": "o2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SPO2"
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RR"
+  },
+  {
+   "fieldname": "rgp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RBG"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BP"
+  },
+  {
+   "fieldname": "amount_of_feeding",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "feeding"
+  },
+  {
+   "fieldname": "feeding_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Feeding Type"
+  },
+  {
+   "fieldname": "vomoting",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vomiting"
+  },
+  {
+   "fieldname": "pr",
+   "fieldtype": "Data",
+   "label": "PR"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-22 11:01:50.177448",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Vital Signs Flow sheet NICU child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

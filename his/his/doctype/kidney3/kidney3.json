@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 15:34:28.855887",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "condom",
+  "foleys_catheter",
+  "conservative_management",
+  "creatinine",
+  "k",
+  "na",
+  "urinary_catheter",
+  "urine_output_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "condom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOP/hour"
+  },
+  {
+   "fieldname": "foleys_catheter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOP/24 hour"
+  },
+  {
+   "fieldname": "conservative_management",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Urea "
+  },
+  {
+   "fieldname": "creatinine",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Creatinine"
+  },
+  {
+   "fieldname": "k",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "K"
+  },
+  {
+   "fieldname": "na",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Na"
+  },
+  {
+   "fieldname": "urinary_catheter",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Urinary catheter",
+   "options": "\nFoley's\nCondom\nNone"
+  },
+  {
+   "fieldname": "urine_output_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Urine output status",
+   "options": "\nNormal\nUnric\nOligu uric\nPoly uric"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-02 12:58:49.981272",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Kidney3",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

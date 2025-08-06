@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 09:54:52.596317",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hb_platelets",
+  "platelets",
+  "bleeding_site",
+  "fibrinogen_level",
+  "bleeding_profile"
+ ],
+ "fields": [
+  {
+   "fieldname": "hb_platelets",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hb "
+  },
+  {
+   "fieldname": "bleeding_site",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bleeding site"
+  },
+  {
+   "fieldname": "platelets",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "platelets"
+  },
+  {
+   "fieldname": "fibrinogen_level",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fibrinogen level "
+  },
+  {
+   "fieldname": "bleeding_profile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "bleeding profile"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 11:44:56.944569",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Hematology",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

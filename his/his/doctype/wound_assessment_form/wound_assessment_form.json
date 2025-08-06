@@ -1,0 +1,338 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-26 13:37:31.580910",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "patient_name",
+  "age",
+  "column_break_vh4ey",
+  "gender",
+  "date",
+  "section_break_oodi5",
+  "weight",
+  "nutrition_status",
+  "mobility_status",
+  "smoking",
+  "if_yes_how_manyday",
+  "alcohol",
+  "co_morbidities",
+  "medications",
+  "abpi_if_done",
+  "column_break_f4pxv",
+  "wound_type",
+  "duration_of_wound",
+  "previous_treatments",
+  "size",
+  "width",
+  "depth",
+  "wound_location_please_circle_wound",
+  "pain_level",
+  "section_break_qkftn",
+  "tissue_type",
+  "exudate_section",
+  "level",
+  "type",
+  "infection_section",
+  "local",
+  "column_break_hzcyc",
+  "spreadingsystemic",
+  "wound_edge_assessment_section",
+  "wound_edge_wound_assessme",
+  "periwound_skin_assessment_section",
+  "periwound_skin_assessment",
+  "status",
+  "treatment_choice_section",
+  "treatment",
+  "dressing_typename",
+  "reason_for_choosing_dressing",
+  "follow_up_plan_section",
+  "date_of_next_visit",
+  "main_objective_at_next_visit"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "section_break_oodi5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "pid.age_type",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fetch_from": "pid.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "nutrition_status",
+   "fieldtype": "Select",
+   "label": "Nutrition status",
+   "options": "Malnourished\nWell nourished"
+  },
+  {
+   "fieldname": "mobility_status",
+   "fieldtype": "Select",
+   "label": "Mobility status",
+   "options": "Good mobility\nBad Mobility"
+  },
+  {
+   "fieldname": "smoking",
+   "fieldtype": "Select",
+   "label": "Smoking",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "if_yes_how_manyday",
+   "fieldtype": "Data",
+   "label": "If yes, how many/day"
+  },
+  {
+   "fieldname": "alcohol",
+   "fieldtype": "Data",
+   "label": "Alcohol"
+  },
+  {
+   "fieldname": "co_morbidities",
+   "fieldtype": "Data",
+   "label": "Co morbidities"
+  },
+  {
+   "fieldname": "medications",
+   "fieldtype": "Data",
+   "label": "Medications"
+  },
+  {
+   "fieldname": "abpi_if_done",
+   "fieldtype": "Data",
+   "label": "ABPI (if done)"
+  },
+  {
+   "fieldname": "column_break_f4pxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wound_type",
+   "fieldtype": "Data",
+   "label": "Wound type"
+  },
+  {
+   "fieldname": "duration_of_wound",
+   "fieldtype": "Data",
+   "label": "Duration of wound"
+  },
+  {
+   "fieldname": "previous_treatments",
+   "fieldtype": "Data",
+   "label": "Previous treatments"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Data",
+   "label": "width"
+  },
+  {
+   "fieldname": "depth",
+   "fieldtype": "Data",
+   "label": "depth"
+  },
+  {
+   "fieldname": "wound_location_please_circle_wound",
+   "fieldtype": "Data",
+   "label": "Wound location (please circle wound)"
+  },
+  {
+   "fieldname": "pain_level",
+   "fieldtype": "Select",
+   "label": "Pain level",
+   "options": "No pain\nModerate pain\nWorst pain"
+  },
+  {
+   "fieldname": "column_break_vh4ey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qkftn",
+   "fieldtype": "Section Break",
+   "label": "Tissue type"
+  },
+  {
+   "fieldname": "tissue_type",
+   "fieldtype": "Select",
+   "label": "Tissue type",
+   "options": "Necrotic\nGranulating\nSloughy\nEpithelialising"
+  },
+  {
+   "fieldname": "exudate_section",
+   "fieldtype": "Section Break",
+   "label": "Exudate"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "label": "Level",
+   "options": "Dry\nLow\nMedium\nHigh"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Thin/watery\nCloudy\nThick\nPurulent\nClear\nPink/red"
+  },
+  {
+   "fieldname": "infection_section",
+   "fieldtype": "Section Break",
+   "label": "Infection"
+  },
+  {
+   "fieldname": "local",
+   "fieldtype": "Select",
+   "label": "Local",
+   "options": "Increased pain\nErythema\nOedema\nLocal warmth\nDelayed healing\nFriable granulation tissue\nIncreased exudate\nPocketing\nPocketing"
+  },
+  {
+   "fieldname": "column_break_hzcyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "spreadingsystemic",
+   "fieldtype": "Select",
+   "label": "Spreading/systemic",
+   "options": "Increased erythema\nPyrexia\nAbscess/pus\nWound breakdown\nCellulitis\nGeneral malaise\nRaised WBC count\nLymphangitis"
+  },
+  {
+   "fieldname": "wound_edge_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Wound edge assessment"
+  },
+  {
+   "fieldname": "wound_edge_wound_assessme",
+   "fieldtype": "Select",
+   "label": "Wound edge Wound Assessme",
+   "options": "Maceration\nDehydration\nUndermining\nRolled edges"
+  },
+  {
+   "fieldname": "periwound_skin_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Periwound skin assessment"
+  },
+  {
+   "fieldname": "periwound_skin_assessment",
+   "fieldtype": "Select",
+   "label": "Periwound skin Assessment",
+   "options": "Maceration\nExcoriation\nDry skin cm\nHyperkeratosis\nCallus\nEczema"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Is the wound\nN/A- First visit\nDeteriorating\nStatic\nImproving"
+  },
+  {
+   "fieldname": "treatment_choice_section",
+   "fieldtype": "Section Break",
+   "label": "Treatment choice"
+  },
+  {
+   "fieldname": "treatment",
+   "fieldtype": "Data",
+   "label": "Treatment"
+  },
+  {
+   "fieldname": "dressing_typename",
+   "fieldtype": "Data",
+   "label": "Dressing type/name"
+  },
+  {
+   "fieldname": "reason_for_choosing_dressing",
+   "fieldtype": "Data",
+   "label": "Reason for choosing dressing"
+  },
+  {
+   "fieldname": "follow_up_plan_section",
+   "fieldtype": "Section Break",
+   "label": "Follow up plan"
+  },
+  {
+   "fieldname": "date_of_next_visit",
+   "fieldtype": "Data",
+   "label": "Date of next visit"
+  },
+  {
+   "fieldname": "main_objective_at_next_visit",
+   "fieldtype": "Data",
+   "label": "Main objective at next visit"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-03 10:27:35.485824",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Wound Assessment form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

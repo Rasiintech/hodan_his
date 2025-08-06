@@ -1,0 +1,634 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-04 08:51:48.091914",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patientid",
+  "patient_name",
+  "age",
+  "sex",
+  "premed",
+  "column_break_rka0a",
+  "asa",
+  "dentition",
+  "npo",
+  "proposed_surgery",
+  "section_break_jx3bo",
+  "ptided_section",
+  "ptided",
+  "consent_section",
+  "consented",
+  "chart_reviewed_section",
+  "chartreviewed",
+  "surge_on",
+  "operationperfomed",
+  "pre_op",
+  "bp",
+  "pr",
+  "column_break_5jtm7",
+  "rr",
+  "t",
+  "hct",
+  "allergies",
+  "section_break_9kwkx",
+  "new_dih_aneshesia_sheet_data",
+  "monitors_section",
+  "oximeter",
+  "oximetercheck",
+  "transfer_section",
+  "transfercheck",
+  "bpsitecheck",
+  "forced_section",
+  "forcedcheck",
+  "exg_section",
+  "exgcheck",
+  "fluid_warmer_section",
+  "fluidwarmercheck",
+  "f102_section",
+  "f102check",
+  "precadial_section",
+  "precadialcheck",
+  "etc02_section",
+  "etc02check",
+  "temp_section",
+  "tempcheck",
+  "esoph_section",
+  "esophcheck",
+  "humidfier_section",
+  "humidfiercheck",
+  "nervestim_section",
+  "nervestimcheck",
+  "balanked_section",
+  "balanked",
+  "cvp_section",
+  "cvpcheck",
+  "warmcool_section",
+  "warmcoolcheck",
+  "a_line_section",
+  "aline",
+  "monitered_section",
+  "moniteredcheck",
+  "regionnal_section",
+  "regionnalcheck",
+  "general_section",
+  "generalcheck",
+  "blade",
+  "ett",
+  "column_break_b7yym",
+  "bbs",
+  "cuf",
+  "atraumatic_section",
+  "atraumaticcheck",
+  "comments_section",
+  "commentscheck",
+  "eye_protection_section",
+  "anesth_start",
+  "anesth_induc",
+  "column_break_pwieo",
+  "surg_start",
+  "surg_end",
+  "anesth_net",
+  "section_break_4tzpu",
+  "remarks",
+  "recovery_room_section",
+  "bp2",
+  "p",
+  "column_break_dsxgp",
+  "rr2",
+  "time",
+  "02sat",
+  "section_break_qezyk",
+  "condition",
+  "signed_resident",
+  "signed_staff",
+  "place",
+  "of"
+ ],
+ "fields": [
+  {
+   "fieldname": "patientid",
+   "fieldtype": "Link",
+   "label": "PatientID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patientid.age_type",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fetch_from": "patientid.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "premed",
+   "fieldtype": "Data",
+   "label": "Premed"
+  },
+  {
+   "fieldname": "asa",
+   "fieldtype": "Data",
+   "label": "ASA"
+  },
+  {
+   "fieldname": "dentition",
+   "fieldtype": "Data",
+   "label": "Dentition"
+  },
+  {
+   "fieldname": "npo",
+   "fieldtype": "Data",
+   "label": "NPO"
+  },
+  {
+   "fieldname": "proposed_surgery",
+   "fieldtype": "Data",
+   "label": "Proposed Surgery"
+  },
+  {
+   "fieldname": "section_break_jx3bo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ptided_section",
+   "fieldtype": "Section Break",
+   "label": "PT.IDED"
+  },
+  {
+   "default": "0",
+   "fieldname": "ptided",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "consent_section",
+   "fieldtype": "Section Break",
+   "label": "Consent/ED"
+  },
+  {
+   "default": "0",
+   "fieldname": "consented",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "chart_reviewed_section",
+   "fieldtype": "Section Break",
+   "label": "Chart Reviewed"
+  },
+  {
+   "default": "0",
+   "fieldname": "chartreviewed",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "surge_on",
+   "fieldtype": "Data",
+   "label": "Surge On"
+  },
+  {
+   "fieldname": "column_break_rka0a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operationperfomed",
+   "fieldtype": "Data",
+   "label": "Operation Perfomed"
+  },
+  {
+   "fieldname": "pre_op",
+   "fieldtype": "Data",
+   "label": "Pre OP"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "pr",
+   "fieldtype": "Data",
+   "label": "PR"
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "label": "RR"
+  },
+  {
+   "fieldname": "t",
+   "fieldtype": "Data",
+   "label": "T"
+  },
+  {
+   "fieldname": "hct",
+   "fieldtype": "Data",
+   "label": "HCT"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "column_break_5jtm7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9kwkx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "new_dih_aneshesia_sheet_data",
+   "fieldtype": "Table",
+   "label": "New DIH Aneshesia Sheet Data",
+   "options": "New DIH Aneshesia Sheet Data"
+  },
+  {
+   "fieldname": "monitors_section",
+   "fieldtype": "Section Break",
+   "label": "Monitors"
+  },
+  {
+   "default": "0",
+   "fieldname": "oximetercheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "oximeter",
+   "fieldtype": "Section Break",
+   "label": "OXIMETER"
+  },
+  {
+   "fieldname": "transfer_section",
+   "fieldtype": "Section Break",
+   "label": "Transfer"
+  },
+  {
+   "default": "0",
+   "fieldname": "transfercheck",
+   "fieldtype": "Section Break",
+   "label": "BP Site"
+  },
+  {
+   "default": "0",
+   "fieldname": "bpsitecheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "forced_section",
+   "fieldtype": "Section Break",
+   "label": "Forced"
+  },
+  {
+   "default": "0",
+   "fieldname": "forcedcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "exg_section",
+   "fieldtype": "Section Break",
+   "label": "EXG"
+  },
+  {
+   "default": "0",
+   "fieldname": "exgcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "fluid_warmer_section",
+   "fieldtype": "Section Break",
+   "label": "Fluid Warmer"
+  },
+  {
+   "default": "0",
+   "fieldname": "fluidwarmercheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "f102_section",
+   "fieldtype": "Section Break",
+   "label": "F102"
+  },
+  {
+   "default": "0",
+   "fieldname": "f102check",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "precadial_section",
+   "fieldtype": "Section Break",
+   "label": "Precadial"
+  },
+  {
+   "default": "0",
+   "fieldname": "precadialcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "etc02_section",
+   "fieldtype": "Section Break",
+   "label": "ETC02"
+  },
+  {
+   "default": "0",
+   "fieldname": "etc02check",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "temp_section",
+   "fieldtype": "Section Break",
+   "label": "Temp"
+  },
+  {
+   "default": "0",
+   "fieldname": "tempcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "esoph_section",
+   "fieldtype": "Section Break",
+   "label": "ESOPH"
+  },
+  {
+   "default": "0",
+   "fieldname": "esophcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "humidfier_section",
+   "fieldtype": "Section Break",
+   "label": "HUMIDFIER"
+  },
+  {
+   "default": "0",
+   "fieldname": "humidfiercheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "nervestim_section",
+   "fieldtype": "Section Break",
+   "label": "NerveStim"
+  },
+  {
+   "default": "0",
+   "fieldname": "nervestimcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "balanked_section",
+   "fieldtype": "Section Break",
+   "label": "Balanked"
+  },
+  {
+   "default": "0",
+   "fieldname": "balanked",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "cvp_section",
+   "fieldtype": "Section Break",
+   "label": "CVP"
+  },
+  {
+   "default": "0",
+   "fieldname": "cvpcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "warmcool_section",
+   "fieldtype": "Section Break",
+   "label": "Warm/Cool"
+  },
+  {
+   "default": "0",
+   "fieldname": "warmcoolcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "a_line_section",
+   "fieldtype": "Section Break",
+   "label": "A LINE"
+  },
+  {
+   "default": "0",
+   "fieldname": "aline",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "monitered_section",
+   "fieldtype": "Section Break",
+   "label": "MONITERED"
+  },
+  {
+   "default": "0",
+   "fieldname": "moniteredcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "regionnal_section",
+   "fieldtype": "Section Break",
+   "label": "REGIONNAL"
+  },
+  {
+   "default": "0",
+   "fieldname": "regionnalcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "GENERAL"
+  },
+  {
+   "default": "0",
+   "fieldname": "generalcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "blade",
+   "fieldtype": "Data",
+   "label": "Blade"
+  },
+  {
+   "fieldname": "column_break_b7yym",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ett",
+   "fieldtype": "Data",
+   "label": "ETT"
+  },
+  {
+   "fieldname": "bbs",
+   "fieldtype": "Data",
+   "label": "BBS"
+  },
+  {
+   "fieldname": "cuf",
+   "fieldtype": "Data",
+   "label": "CUF"
+  },
+  {
+   "fieldname": "atraumatic_section",
+   "fieldtype": "Section Break",
+   "label": "ATRAUMATIC"
+  },
+  {
+   "default": "0",
+   "fieldname": "atraumaticcheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "comments_section",
+   "fieldtype": "Section Break",
+   "label": "Comments"
+  },
+  {
+   "default": "0",
+   "fieldname": "commentscheck",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "eye_protection_section",
+   "fieldtype": "Section Break",
+   "label": "Eye Protection"
+  },
+  {
+   "fieldname": "anesth_start",
+   "fieldtype": "Data",
+   "label": "Anesth Start"
+  },
+  {
+   "fieldname": "anesth_induc",
+   "fieldtype": "Data",
+   "label": "Anesth Induc"
+  },
+  {
+   "fieldname": "surg_start",
+   "fieldtype": "Data",
+   "label": "Surg start"
+  },
+  {
+   "fieldname": "surg_end",
+   "fieldtype": "Data",
+   "label": "Surg end"
+  },
+  {
+   "fieldname": "anesth_net",
+   "fieldtype": "Data",
+   "label": "Anesth Net"
+  },
+  {
+   "fieldname": "column_break_pwieo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4tzpu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "recovery_room_section",
+   "fieldtype": "Section Break",
+   "label": "Recovery Room"
+  },
+  {
+   "fieldname": "bp2",
+   "fieldtype": "Data",
+   "label": "BP2"
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Data",
+   "label": "P"
+  },
+  {
+   "fieldname": "column_break_dsxgp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rr2",
+   "fieldtype": "Data",
+   "label": "RR2"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "02sat",
+   "fieldtype": "Data",
+   "label": "02Sat"
+  },
+  {
+   "fieldname": "section_break_qezyk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Data",
+   "label": "Condition"
+  },
+  {
+   "fetch_from": "patientid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "signed_resident",
+   "fieldtype": "Data",
+   "label": "Signed Resident"
+  },
+  {
+   "fieldname": "signed_staff",
+   "fieldtype": "Data",
+   "label": "Signed Staff"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "of",
+   "fieldtype": "Data",
+   "label": "OF"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-05 09:43:15.980094",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "DIH Aneshesia Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

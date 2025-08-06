@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Hospital</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <style>
+    .section_1 {
+      max-width: 1110px;
+      margin: 0 auto;
+    }
+    .section_1 img{
+      width: 752px !important;
+    }
+    .date {
+      display: flex; 
+      justify-content: end;
+      margin-right: 20px;
+    }
+    .heading h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .divided_two {
+      /* display: grid;
+        grid-template-columns: repeat(2,1fr); */
+      display: flex;
+      /* margin-left: 300px; */
+    }
+    .sec_1 {
+      /* margin-left: 40px; */
+    }
+    .table {
+      margin: 20px 0px;
+    }
+    table,
+    th,
+    td {
+      border: 1px solid gray;
+      border-collapse: collapse;
+      padding: 4px;
+    }
+
+    .sec_2 {
+      margin-left: 30px;
+    }
+    .sec_1 td {
+      width: 250px;
+      height: 30px;
+    }
+
+    .sec_2 td {
+      display: flex;
+      flex-direction: row;
+      width: 340px;
+      height: 30px;
+    }
+
+    /* ...................  table three */
+    .right_side {
+      display: flex;
+      /* justify-content: center;
+  margin-left: 370px; */
+      margin-top: 20px;
+    }
+    .right_side th {
+      width: 110px;
+    }
+    .right_side td {
+      height: 30px;
+      width: 110px;
+    }
+
+    /* .......................... table four........... */
+    .table_four {
+      /* margin-left: 275px; */
+      margin-top: 10px;
+    }
+    .table_four th {
+      width: 130px;
+      height: 10px;
+      font-weight: bold;
+    }
+
+    .tr_td_wid td {
+      height: 20px;
+    }
+
+    /* ............................... responsitive mobile  */
+  </style>
+  <body>
+    <section class="section_1">
+      <div class="date">
+        <h3>Date: {{ _("{0}").format(date_time) }}</h3>
+      </div>
+      <div id="header-html">
+        {% if letter_head %}
+        <div class="letter-head">
+          {{ letter_head }}
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="heading">
+        <h2>PARTNER STATEMENT</h2>
+      </div>
+      <!-- ................ table one containin two table  -->
+      <div class="divided_two">
+        <!-- ........one  -->
+        <div class="sec_1">
+          <table>
+            <tr>
+              <th>ID</th>
+              <td>{{ filters['party'][0] }}</td>
+            </tr>
+
+            <tr>
+              <th>Name</th>
+              <td>
+                {{ frappe.db.get_value("Customer", filters['party'][0],
+                "customer_name") }}
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- ......... two -->
+        <div class="sec_2">
+          <table>
+            <tr>
+              <th>Date From</th>
+              <td>
+                {{ frappe.format(filters['from_date'] , {'fieldtype': 'Date'})}}
+              </td>
+            </tr>
+
+            <tr>
+              <th>Date To</th>
+              <td>
+                {{ frappe.format(filters['to_date'] , {'fieldtype': 'Date'})}}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+     
+      <div class="table_four">
+        <table>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Reference</th>
+            <th>Group</th>
+            <th>Debit</th>
+            <th>Credit</th>
+            <th>Balance</th>
+          </tr>
+          {% for row in data %} {% if(row.posting_date) %}
+          <tr>
+            <td>{{row.posting_date }}</td>
+
+            <td>
+              {% if row.voucher_type == "Sales Invoice" %}
+              <span style="font-size: 14px">Sales</span><br>
+              <span style="font-size: 10px">{{frappe.db.get_value("Sales Invoice" , row.voucher_no , "patient_name")}}</span>
+
+              {% endif %} {% if row.voucher_type == "Payment Entry" %}
+              <span style="font-size: 14px">Reciept</span><br>
+              <span style="font-size: 10px ; font-style: italic;">Paid by {{row.remarks}}</span>
+
+              {% endif %}
+            </td>
+            {% if row.voucher_type == "Payment Entry" %}
+            {% set p_d = frappe.get_doc("Payment Entry" , row.voucher_no) %}
+            <td> 
+              <span style="font-size: 12px ; font-style: italic;">  Paid Amount :</span> {{ frappe.utils.fmt_money(p_d.paid_amount  ,currency=currency)}} <br>
+              <span style="font-size: 12px ; font-style: italic;">  Discount : </span>{{ frappe.utils.fmt_money(row.credit - p_d.paid_amount ,currency=currency) }}
+
+
+            </td>
+
+            {% else %}
+              <td> 
+                  <a href="/{{row.voucher_type}}/{{row.voucher_no}}"> {{row.voucher_no }}</a>
+              </td>
+            {% endif %}
+            <td>
+              {% if row.voucher_type == "Sales Invoice" %} {% set sales_doc =
+              frappe.get_doc("Sales Invoice" , row.voucher_no) %}<br />
+              {% set item_group = [] %} {% for item in sales_doc.items %} {% if
+              item.item_group %} {% if item.item_group not in item_group %} {%
+              set item_group = item_group.append(item.item_group) %}
+
+              <span style="font-size: 14px">{{item.item_group }}</span>
+
+              {% endif %} {% endif %} {% endfor %} {% endif %} 
+              {% if row.voucher_type == "Payment Entry" %}
+              <span style="font-size: 14px"></span>
+              {% endif %}
+            </td>
+            <td>{{frappe.utils.fmt_money(row.debit, currency=currency)}}</td>
+            <td>{{frappe.utils.fmt_money(row.credit, currency=currency)}}</td>
+            <td>{{frappe.utils.fmt_money(row.balance, currency=currency)}}</td>
+          </tr>
+          {% endif %} {% endfor %}
+        </table>
+      </div>
+      <!-- ..............table four ............ -->
+
+       <!-- .................... table three  -->
+       <div class="right_side">
+        <table>
+          <tr>
+            <th>Begining</th>
+            <th>Total Depit</th>
+            <th>Total Credit</th>
+            <th>Total Balance</th>
+          </tr>
+          <tr>
+            <td>{{  frappe.utils.fmt_money(data[0].balance , currency=currency)}}</td>
+            <td>{{  frappe.utils.fmt_money(data[-1].debit , currency=currency)}}</td>
+            <td>{{ frappe.utils.fmt_money(data[-1].credit , currency=currency)}}</td>
+            <td>{{ frappe.utils.fmt_money( data[-1].balance , currency=currency)}}</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>

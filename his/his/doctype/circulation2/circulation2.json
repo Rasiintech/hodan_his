@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 11:47:47.667739",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stable_hemodynamics",
+  "yesterday_balance",
+  "c_balance",
+  "fluids",
+  "iv",
+  "pong"
+ ],
+ "fields": [
+  {
+   "fieldname": "yesterday_balance",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Yesterday balance"
+  },
+  {
+   "fieldname": "c_balance",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cummulative balance"
+  },
+  {
+   "fieldname": "iv",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IV Fluids"
+  },
+  {
+   "fieldname": "pong",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Oraly/Nasogastric feeding"
+  },
+  {
+   "fieldname": "stable_hemodynamics",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Stable hemodynamics",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "fluids",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Daily Fluids Requirement"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-02 12:52:06.406303",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Circulation2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

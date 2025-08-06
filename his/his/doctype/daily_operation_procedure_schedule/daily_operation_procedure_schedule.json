@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Daily-.####",
+ "creation": "2024-11-23 09:23:18.424719",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_3tran",
+  "date",
+  "section_break_2t0yj",
+  "room_1",
+  "column_break_cbotu",
+  "nurse_scrub_assigning",
+  "section_break_olrnn",
+  "daily_operation_procedure_schedule_data",
+  "section_break_h8plh",
+  "room_2",
+  "column_break_cutcy",
+  "nurse_scrub_assigning2",
+  "section_break_psgof",
+  "daily_operation_procedure_schedule_data_room_2",
+  "section_break_wp55b",
+  "room_3",
+  "column_break_ywnbi",
+  "nurs_3",
+  "section_break_ev6xg",
+  "daily_operation_procedure_schedule_data_room_3",
+  "section_break_velyq",
+  "room_4",
+  "column_break_hmuh9",
+  "nurse4",
+  "section_break_isvxq",
+  "daily_operation_procedure_schedule_data_room_4"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_3tran",
+   "fieldtype": "Section Break",
+   "label": "Daily Operation PROCEDURE SCHEDULE"
+  },
+  {
+   "fieldname": "daily_operation_procedure_schedule_data",
+   "fieldtype": "Table",
+   "options": "Daily Operation PROCEDURE SCHEDULE Data"
+  },
+  {
+   "fieldname": "section_break_h8plh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "daily_operation_procedure_schedule_data_room_2",
+   "fieldtype": "Table",
+   "options": "Daily Operation PROCEDURE SCHEDULE Data Room"
+  },
+  {
+   "fieldname": "nurse_scrub_assigning",
+   "fieldtype": "Data",
+   "label": "Scrub Nurse Assigned"
+  },
+  {
+   "fieldname": "nurse_scrub_assigning2",
+   "fieldtype": "Data",
+   "label": "Scrub Nurse Assigned"
+  },
+  {
+   "fieldname": "room_1",
+   "fieldtype": "Heading",
+   "label": "Room 1"
+  },
+  {
+   "fieldname": "column_break_cbotu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_olrnn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "room_2",
+   "fieldtype": "Heading",
+   "label": "Room 2"
+  },
+  {
+   "fieldname": "column_break_cutcy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_psgof",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_2t0yj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wp55b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "room_3",
+   "fieldtype": "Heading",
+   "label": "Room 3"
+  },
+  {
+   "fieldname": "column_break_ywnbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nurs_3",
+   "fieldtype": "Data",
+   "label": "Scrub Nurse Assigned"
+  },
+  {
+   "fieldname": "section_break_ev6xg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "daily_operation_procedure_schedule_data_room_3",
+   "fieldtype": "Table",
+   "options": "Daily Operation PROCEDURE SCHEDULE Data Room3"
+  },
+  {
+   "fieldname": "section_break_velyq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "room_4",
+   "fieldtype": "Heading",
+   "label": "Room 4"
+  },
+  {
+   "fieldname": "column_break_hmuh9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nurse4",
+   "fieldtype": "Data",
+   "label": "Scrub Nurse Assigned"
+  },
+  {
+   "fieldname": "section_break_isvxq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "daily_operation_procedure_schedule_data_room_4",
+   "fieldtype": "Table",
+   "options": "Daily Operation PROCEDURE SCHEDULE Data Room4"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-18 14:52:23.590525",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Daily Operation PROCEDURE SCHEDULE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

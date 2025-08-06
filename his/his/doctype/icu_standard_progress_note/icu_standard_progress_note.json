@@ -1,0 +1,1339 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 14:19:55.035048",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "column_break_uocfe",
+  "sex",
+  "age",
+  "section_break_jpywe",
+  "mrp_2",
+  "column_break_uix1y",
+  "day",
+  "section_break_lz75h",
+  "lines_central_day",
+  "column_break_act3k",
+  "central_day",
+  "column_break_zvsx3",
+  "arterial_day",
+  "column_break_f3wox",
+  "peripheral_day",
+  "column_break_iozqq",
+  "others_1",
+  "column_break_hk7hj",
+  "others_2",
+  "section_break_o7v73",
+  "neuro_total_gcs",
+  "column_break_tgilu",
+  "total_gcs",
+  "column_break_epkel",
+  "sedation",
+  "column_break_ged6v",
+  "ph_ex_1",
+  "section_break_n1pw0",
+  "cv",
+  "column_break_o8ut8",
+  "p",
+  "column_break_a6542",
+  "rhythm",
+  "column_break_q6zcq",
+  "bp",
+  "section_break_qos6u",
+  "perfusion_of_the_extremities",
+  "column_break_0blov",
+  "good",
+  "column_break_gijlm",
+  "poor",
+  "section_break_itzrg",
+  "vasoactive_infusions",
+  "column_break_oknhu",
+  "dopamine",
+  "column_break_y94k7",
+  "epinephrine",
+  "column_break_kyrvh",
+  "norepinehrine",
+  "column_break_37a9b",
+  "dobutamine",
+  "column_break_nqr4z",
+  "nitrate",
+  "section_break_4d5yu",
+  "pulm",
+  "column_break_khwhj",
+  "rr",
+  "column_break_2rijt",
+  "sp02",
+  "column_break_66ow1",
+  "sat",
+  "section_break_glefm",
+  "ph_ex",
+  "section_break_jwltw",
+  "breathing",
+  "column_break_dxd4g",
+  "room_air",
+  "column_break_qdrhw",
+  "o2",
+  "column_break_dj3bk",
+  "nasal_cannula",
+  "column_break_hgxbp",
+  "fm",
+  "column_break_tigw7",
+  "t_piece",
+  "column_break_hl6ui",
+  "ni_vent",
+  "column_break_rdg8b",
+  "invasive_ventilation",
+  "section_break_mjtvh",
+  "airways_ett",
+  "column_break_wooi7",
+  "ett",
+  "column_break_ybq9r",
+  "tracheostomy_tube_suction",
+  "section_break_km8u2",
+  "ventilator_settings_bipap",
+  "column_break_b9gdf",
+  "bipap",
+  "column_break_zmvum",
+  "cpap",
+  "section_break_fvi8t",
+  "tev",
+  "column_break_y53vy",
+  "ml_rr",
+  "column_break_qyz0c",
+  "pm_fio2",
+  "column_break_iukwz",
+  "peep",
+  "column_break_laanm",
+  "pip",
+  "column_break_ppzyu",
+  "ps",
+  "section_break_vqbuy",
+  "bowel_motility",
+  "column_break_d9kwj",
+  "yes",
+  "column_break_d9pg3",
+  "chech__no",
+  "column_break_hkwf5",
+  "gu_prophylaxis",
+  "column_break_kvpyu",
+  "chech_no",
+  "column_break_s4oet",
+  "h2block",
+  "column_break_ypw2f",
+  "ppi",
+  "column_break_fessv",
+  "nutrition",
+  "column_break_roahh",
+  "normal",
+  "column_break_duu5n",
+  "artificial",
+  "column_break_izwc1",
+  "no_intake",
+  "section_break_zviwi",
+  "ph_ex_2",
+  "column_break_f4bvc",
+  "tube_feeds",
+  "column_break_r8fq2",
+  "kcal",
+  "column_break_zeuvw",
+  "low",
+  "column_break_qczuh",
+  "at_goal_column",
+  "column_break_hsfjn",
+  "suppertive_pn",
+  "column_break_ys5ny",
+  "total_pn",
+  "section_break_upbpy",
+  "renal",
+  "column_break_e4w0g",
+  "urine_output_last_hour",
+  "t",
+  "column_break_jwvmn",
+  "fluid_balance",
+  "column_break_cbiwl",
+  "positive",
+  "column_break_3rco6",
+  "negative",
+  "column_break_uggxt",
+  "ultrafiltration",
+  "section_break_bvna7",
+  "hem",
+  "column_break_mduwv",
+  "leu",
+  "column_break_bptqw",
+  "hb",
+  "column_break_3vzmd",
+  "plts",
+  "column_break_e8j2b",
+  "aptt_inr",
+  "section_break_fpfry",
+  "bleeding",
+  "column_break_yh3nl",
+  "coagulopathy",
+  "column_break_cvct1",
+  "hemolysis",
+  "column_break_hkok6",
+  "antibiotics",
+  "column_break_dvul1",
+  "prophylaxsis",
+  "column_break_rkubw",
+  "treatment",
+  "section_break_d8y1j",
+  "transfusion",
+  "column_break_j9rxw",
+  "rbc",
+  "column_break_hskbq",
+  "ffp",
+  "section_break_jfjuc",
+  "dvt_prophylaxis",
+  "column_break_6icvk",
+  "stockings",
+  "column_break_kthcq",
+  "enoxaparin",
+  "column_break_zrjfs",
+  "warfarin",
+  "column_break_njc0d",
+  "coagulopathic",
+  "column_break_e2t5v",
+  "n_i",
+  "section_break_nw7am",
+  "skin_ulcers_or_wounds",
+  "column_break_p6hwk",
+  "yes___",
+  "column_break_wfedt",
+  "no",
+  "column_break_oeggd",
+  "ulcer_stage",
+  "section_break_yi7cw",
+  "skin_and_other_investigation",
+  "section_break_lrprs",
+  "summary",
+  "section_break_yjxx1",
+  "therapeutic_and_diagnostic_plan",
+  "section_break_t30wx",
+  "date_1",
+  "column_break_amorb",
+  "time_1",
+  "section_break_ydiwk",
+  "date_2",
+  "column_break_zk15h",
+  "time_2",
+  "column_break_utm4u",
+  "notes",
+  "section_break_pd4z3"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp_2",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Data",
+   "label": "DAY"
+  },
+  {
+   "fieldname": "lines_central_day",
+   "fieldtype": "HTML",
+   "label": "LINES",
+   "options": "LINES Central day"
+  },
+  {
+   "default": "0",
+   "fieldname": "arterial_day",
+   "fieldtype": "Check",
+   "label": "Arterial day"
+  },
+  {
+   "default": "0",
+   "fieldname": "peripheral_day",
+   "fieldtype": "Check",
+   "label": "Peripheral day"
+  },
+  {
+   "default": "0",
+   "fieldname": "others_1",
+   "fieldtype": "Check",
+   "label": "others"
+  },
+  {
+   "default": "0",
+   "fieldname": "others_2",
+   "fieldtype": "Check",
+   "label": "others"
+  },
+  {
+   "fieldname": "neuro_total_gcs",
+   "fieldtype": "HTML",
+   "label": "NEURO ",
+   "options": "NEURO "
+  },
+  {
+   "fieldname": "sedation",
+   "fieldtype": "Column Break",
+   "label": "Sedation"
+  },
+  {
+   "fieldname": "ph_ex_1",
+   "fieldtype": "Data",
+   "label": "Ph Ex"
+  },
+  {
+   "fieldname": "cv",
+   "fieldtype": "Data",
+   "label": "CV"
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Data",
+   "label": "P"
+  },
+  {
+   "fieldname": "rhythm",
+   "fieldtype": "Data",
+   "label": "Rhythm"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "perfusion_of_the_extremities",
+   "fieldtype": "HTML",
+   "label": "Perfusion of the extremities",
+   "options": "Perfusion of the extremities"
+  },
+  {
+   "default": "0",
+   "fieldname": "good",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "vasoactive_infusions",
+   "fieldtype": "HTML",
+   "label": "Vasoactive infusions",
+   "options": "Vasoactive infusions"
+  },
+  {
+   "default": "0",
+   "fieldname": "dopamine",
+   "fieldtype": "Check",
+   "label": "Dopamine"
+  },
+  {
+   "default": "0",
+   "fieldname": "epinephrine",
+   "fieldtype": "Check",
+   "label": "Epinephrine"
+  },
+  {
+   "default": "0",
+   "fieldname": "norepinehrine",
+   "fieldtype": "Check",
+   "label": "Norepinehrine"
+  },
+  {
+   "default": "0",
+   "fieldname": "dobutamine",
+   "fieldtype": "Check",
+   "label": "Dobutamine"
+  },
+  {
+   "default": "0",
+   "fieldname": "nitrate",
+   "fieldtype": "Check",
+   "label": "Nitrate"
+  },
+  {
+   "fieldname": "pulm",
+   "fieldtype": "HTML",
+   "label": "PULM",
+   "options": "PULM"
+  },
+  {
+   "default": "0",
+   "fieldname": "rr",
+   "fieldtype": "Check",
+   "label": "RR"
+  },
+  {
+   "default": "0",
+   "fieldname": "sp02",
+   "fieldtype": "Check",
+   "label": "Sp02"
+  },
+  {
+   "default": "0",
+   "fieldname": "sat",
+   "fieldtype": "Check",
+   "label": "Sat"
+  },
+  {
+   "fieldname": "ph_ex",
+   "fieldtype": "Data",
+   "label": "Ph Ex"
+  },
+  {
+   "default": "0",
+   "fieldname": "room_air",
+   "fieldtype": "Check",
+   "label": "Room Air"
+  },
+  {
+   "default": "0",
+   "fieldname": "o2",
+   "fieldtype": "Check",
+   "label": "O2"
+  },
+  {
+   "default": "0",
+   "fieldname": "nasal_cannula",
+   "fieldtype": "Check",
+   "label": "Nasal cannula"
+  },
+  {
+   "default": "0",
+   "fieldname": "fm",
+   "fieldtype": "Check",
+   "label": "FM"
+  },
+  {
+   "default": "0",
+   "fieldname": "t_piece",
+   "fieldtype": "Check",
+   "label": "T piece"
+  },
+  {
+   "default": "0",
+   "fieldname": "ni_vent",
+   "fieldtype": "Check",
+   "label": "NI Vent"
+  },
+  {
+   "default": "0",
+   "fieldname": "invasive_ventilation",
+   "fieldtype": "Check",
+   "label": "Invasive ventilation"
+  },
+  {
+   "fieldname": "airways_ett",
+   "fieldtype": "HTML",
+   "label": "Airways ",
+   "options": "Airways "
+  },
+  {
+   "fieldname": "tracheostomy_tube_suction",
+   "fieldtype": "Data",
+   "label": "Tracheostomy tube Suction"
+  },
+  {
+   "fieldname": "ventilator_settings_bipap",
+   "fieldtype": "HTML",
+   "label": "Ventilator settings ",
+   "options": "Ventilator setting"
+  },
+  {
+   "default": "0",
+   "fieldname": "cpap",
+   "fieldtype": "Check",
+   "label": "CPAP "
+  },
+  {
+   "fieldname": "tev",
+   "fieldtype": "Data",
+   "label": "TeV"
+  },
+  {
+   "fieldname": "ml_rr",
+   "fieldtype": "Data",
+   "label": "ml RR"
+  },
+  {
+   "fieldname": "pm_fio2",
+   "fieldtype": "Data",
+   "label": " pm FiO2"
+  },
+  {
+   "fieldname": "peep",
+   "fieldtype": "Data",
+   "label": "PEEP"
+  },
+  {
+   "fieldname": "pip",
+   "fieldtype": "Data",
+   "label": "PIP"
+  },
+  {
+   "fieldname": "ps",
+   "fieldtype": "Data",
+   "label": "PS"
+  },
+  {
+   "fieldname": "bowel_motility",
+   "fieldtype": "HTML",
+   "label": "GI Bowel motility",
+   "options": "GI Bowel motility"
+  },
+  {
+   "fieldname": "gu_prophylaxis",
+   "fieldtype": "HTML",
+   "label": "GU prophylaxis",
+   "options": "GU prophylaxis"
+  },
+  {
+   "fieldname": "nutrition",
+   "fieldtype": "HTML",
+   "label": "Nutrition",
+   "options": "Nutrition"
+  },
+  {
+   "fieldname": "ph_ex_2",
+   "fieldtype": "HTML",
+   "label": "Ph Ex",
+   "options": "Ph Ex"
+  },
+  {
+   "fieldname": "tube_feeds",
+   "fieldtype": "Data",
+   "label": "Tube Feeds"
+  },
+  {
+   "fieldname": "renal",
+   "fieldtype": "Data",
+   "label": "RENAL "
+  },
+  {
+   "fieldname": "t",
+   "fieldtype": "Data",
+   "label": "T"
+  },
+  {
+   "fieldname": "fluid_balance",
+   "fieldtype": "HTML",
+   "label": "Fluid balance",
+   "options": "Fluid balance"
+  },
+  {
+   "fieldname": "ultrafiltration",
+   "fieldtype": "Data",
+   "label": "Ultrafiltration"
+  },
+  {
+   "fieldname": "hem",
+   "fieldtype": "Data",
+   "label": "HEM"
+  },
+  {
+   "fieldname": "leu",
+   "fieldtype": "Data",
+   "label": "Leu"
+  },
+  {
+   "fieldname": "hb",
+   "fieldtype": "Data",
+   "label": "Hb"
+  },
+  {
+   "fieldname": "plts",
+   "fieldtype": "Data",
+   "label": "Plts"
+  },
+  {
+   "fieldname": "aptt_inr",
+   "fieldtype": "Data",
+   "label": "APTT INR"
+  },
+  {
+   "fieldname": "antibiotics",
+   "fieldtype": "HTML",
+   "label": "Antibiotics",
+   "options": "Antibiotics"
+  },
+  {
+   "default": "0",
+   "fieldname": "treatment",
+   "fieldtype": "Check",
+   "label": "Treatment"
+  },
+  {
+   "fieldname": "transfusion",
+   "fieldtype": "Data",
+   "label": "Transfusion"
+  },
+  {
+   "fieldname": "dvt_prophylaxis",
+   "fieldtype": "HTML",
+   "label": "DVT prophylaxis",
+   "options": "DVT prophylaxis"
+  },
+  {
+   "fieldname": "skin_ulcers_or_wounds",
+   "fieldtype": "Data",
+   "label": "Skin ulcers or wounds"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Data",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "therapeutic_and_diagnostic_plan",
+   "fieldtype": "Data",
+   "label": "Therapeutic and diagnostic plan"
+  },
+  {
+   "fieldname": "date_1",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time_1",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "date_2",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time_2",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_uocfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jpywe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uix1y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lz75h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_act3k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "central_day",
+   "fieldtype": "Check",
+   "label": " Central day"
+  },
+  {
+   "fieldname": "column_break_zvsx3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_f3wox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iozqq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hk7hj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_o7v73",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tgilu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_gcs",
+   "fieldtype": "Check",
+   "label": "Total GCS"
+  },
+  {
+   "fieldname": "column_break_epkel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_n1pw0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ged6v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_o8ut8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_a6542",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_q6zcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qos6u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_0blov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gijlm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_itzrg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_oknhu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_y94k7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kyrvh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_37a9b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nqr4z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4d5yu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_khwhj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2rijt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_66ow1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_glefm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_jwltw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "breathing",
+   "fieldtype": "HTML",
+   "label": "Breathing",
+   "options": "Breathing"
+  },
+  {
+   "fieldname": "column_break_dxd4g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qdrhw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dj3bk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hgxbp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tigw7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hl6ui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rdg8b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mjtvh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wooi7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ett",
+   "fieldtype": "Check",
+   "label": "ETT "
+  },
+  {
+   "fieldname": "column_break_ybq9r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_km8u2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_b9gdf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bipap",
+   "fieldtype": "Check",
+   "label": "BiPAP"
+  },
+  {
+   "fieldname": "column_break_zmvum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fvi8t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_y53vy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qyz0c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iukwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_laanm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ppzyu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vqbuy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_d9kwj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_d9pg3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "chech__no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_hkwf5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kvpyu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "chech_no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_s4oet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "h2block",
+   "fieldtype": "Check",
+   "label": "H2Block"
+  },
+  {
+   "fieldname": "column_break_ypw2f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ppi",
+   "fieldtype": "Check",
+   "label": "PPI"
+  },
+  {
+   "fieldname": "column_break_fessv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_roahh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "column_break_duu5n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "artificial",
+   "fieldtype": "Check",
+   "label": "Artificial"
+  },
+  {
+   "fieldname": "column_break_izwc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_intake",
+   "fieldtype": "Check",
+   "label": "No intake"
+  },
+  {
+   "fieldname": "section_break_zviwi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_f4bvc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_r8fq2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kcal",
+   "fieldtype": "HTML",
+   "label": "kcal",
+   "options": "kcal"
+  },
+  {
+   "fieldname": "column_break_zeuvw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "low",
+   "fieldtype": "Check",
+   "label": "low"
+  },
+  {
+   "fieldname": "column_break_qczuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "at_goal_column",
+   "fieldtype": "Check",
+   "label": "at goal"
+  },
+  {
+   "fieldname": "column_break_hsfjn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "suppertive_pn",
+   "fieldtype": "Check",
+   "label": "Suppertive Pn"
+  },
+  {
+   "fieldname": "column_break_ys5ny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_pn",
+   "fieldtype": "Check",
+   "label": "Total pn"
+  },
+  {
+   "fieldname": "section_break_upbpy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_e4w0g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "urine_output_last_hour",
+   "fieldtype": "Data",
+   "label": "urine output last hour"
+  },
+  {
+   "fieldname": "column_break_jwvmn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cbiwl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "positive",
+   "fieldtype": "Check",
+   "label": "Positive"
+  },
+  {
+   "fieldname": "column_break_3rco6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "negative",
+   "fieldtype": "Check",
+   "label": "Negative"
+  },
+  {
+   "fieldname": "column_break_uggxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bvna7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mduwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bptqw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3vzmd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_e8j2b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fpfry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bleeding",
+   "fieldtype": "Check",
+   "label": "Bleeding"
+  },
+  {
+   "fieldname": "column_break_yh3nl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "coagulopathy",
+   "fieldtype": "Check",
+   "label": "Coagulopathy"
+  },
+  {
+   "fieldname": "column_break_cvct1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "hemolysis",
+   "fieldtype": "Check",
+   "label": "Hemolysis"
+  },
+  {
+   "fieldname": "column_break_hkok6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "prophylaxsis",
+   "fieldtype": "Check",
+   "label": "prophylaxsis"
+  },
+  {
+   "fieldname": "column_break_dvul1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rkubw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_d8y1j",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_j9rxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rbc",
+   "fieldtype": "Data",
+   "label": "RBC"
+  },
+  {
+   "fieldname": "column_break_hskbq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ffp",
+   "fieldtype": "Data",
+   "label": "FFP"
+  },
+  {
+   "fieldname": "section_break_jfjuc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_6icvk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "stockings",
+   "fieldtype": "Check",
+   "label": "Stockings"
+  },
+  {
+   "fieldname": "column_break_kthcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enoxaparin",
+   "fieldtype": "Check",
+   "label": "Enoxaparin"
+  },
+  {
+   "fieldname": "column_break_zrjfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "warfarin",
+   "fieldtype": "Check",
+   "label": "Warfarin"
+  },
+  {
+   "fieldname": "column_break_njc0d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "coagulopathic",
+   "fieldtype": "Check",
+   "label": "Coagulopathic"
+  },
+  {
+   "fieldname": "column_break_e2t5v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "n_i",
+   "fieldtype": "Check",
+   "label": "N I"
+  },
+  {
+   "fieldname": "section_break_nw7am",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_p6hwk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes___",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_wfedt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_oeggd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ulcer_stage",
+   "fieldtype": "Data",
+   "label": "Ulcer stage"
+  },
+  {
+   "fieldname": "section_break_yi7cw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "skin_and_other_investigation",
+   "fieldtype": "Data",
+   "label": "skin and other investigation"
+  },
+  {
+   "fieldname": "section_break_lrprs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_yjxx1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_t30wx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_amorb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ydiwk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zk15h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_utm4u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pd4z3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:15:45.537482",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ICU Standard progress note",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

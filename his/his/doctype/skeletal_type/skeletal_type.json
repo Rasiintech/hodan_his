@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-03 12:13:33.961636",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "soft_tissue",
+  "value",
+  "normal"
+ ],
+ "fields": [
+  {
+   "fieldname": "soft_tissue",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skeletal"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "VALUE"
+  },
+  {
+   "fieldname": "normal",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NORMAL"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-03 12:13:33.961636",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Skeletal Type",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

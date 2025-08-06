@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-23 08:57:25.476482",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "patient_name",
+  "dob",
+  "mrp",
+  "column_break_75gch",
+  "date",
+  "fluid_balance",
+  "mls",
+  "section_break_gihdi",
+  "fluid_balance_record_data",
+  "section_break_rb9vg",
+  "total_output",
+  "total_intake"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "Patient ID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "pid.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Link",
+   "label": "MRP",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "fluid_balance",
+   "fieldtype": "Data",
+   "label": "Fluid Balance"
+  },
+  {
+   "fieldname": "section_break_gihdi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fluid_balance_record_data",
+   "fieldtype": "Table",
+   "label": "Fluid Balance Record Data",
+   "options": "Fluid Balance Record Data"
+  },
+  {
+   "fieldname": "total_output",
+   "fieldtype": "Data",
+   "label": "Total Output"
+  },
+  {
+   "fieldname": "total_intake",
+   "fieldtype": "Data",
+   "label": "Total Intake"
+  },
+  {
+   "fieldname": "section_break_rb9vg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_75gch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mls",
+   "fieldtype": "Data",
+   "label": "Mis"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-13 11:50:05.087274",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Fluid Balance Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

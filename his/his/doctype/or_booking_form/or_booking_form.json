@@ -1,0 +1,365 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OR-.##### ",
+ "creation": "2024-04-27 11:10:28.661826",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "mrp",
+  "column_break_psgku",
+  "date",
+  "practitioner",
+  "department",
+  "section_break_zoxw8",
+  "sex",
+  "column_break_7q6in",
+  "weight",
+  "column_break_pfkde",
+  "ward",
+  "section_break_rkvlc",
+  "diagnosis",
+  "column_break_oeagt",
+  "procedure",
+  "column_break_tuiwk",
+  "surgeon",
+  "section_break_4yjkz",
+  "proposed_date_of_surgury",
+  "column_break_mvu9t",
+  "surgery_lenght_of_time",
+  "column_break_qtywc",
+  "type_of_anesthesis",
+  "section_break_oyrqm",
+  "special_need_section",
+  "c_arm",
+  "column_break_2rpi9",
+  "blood_units_needed",
+  "section_break_abdwa",
+  "frozen_suction",
+  "column_break_sbqbb",
+  "icu_bed",
+  "section_break_rtngv",
+  "blood_products",
+  "others",
+  "section_break_7ft6n",
+  "booked_by",
+  "column_break_co3jr",
+  "time",
+  "signature",
+  "section_break_bbcew",
+  "received_by",
+  "column_break_jsmyo",
+  "date_received",
+  "time_received",
+  "singature",
+  "section_break_ui1xw",
+  "surgery_type"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Link",
+   "label": "MRP",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "weight"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Data",
+   "label": "ward"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "diagnosis"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "procedure",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "proposed_date_of_surgury",
+   "fieldtype": "Data",
+   "label": "Proposed Date of Surgury"
+  },
+  {
+   "fieldname": "surgery_lenght_of_time",
+   "fieldtype": "Data",
+   "label": "Surgery Lenght of Time"
+  },
+  {
+   "fieldname": "type_of_anesthesis",
+   "fieldtype": "Data",
+   "label": "Type of Anesthesis"
+  },
+  {
+   "fieldname": "c_arm",
+   "fieldtype": "Data",
+   "label": "C Arm"
+  },
+  {
+   "fieldname": "blood_units_needed",
+   "fieldtype": "Data",
+   "label": "Blood Units Needed"
+  },
+  {
+   "fieldname": "frozen_suction",
+   "fieldtype": "Data",
+   "label": "Frozen Section"
+  },
+  {
+   "fieldname": "icu_bed",
+   "fieldtype": "Link",
+   "label": "ICU Bed",
+   "options": "Healthcare Service Unit"
+  },
+  {
+   "fieldname": "blood_products",
+   "fieldtype": "Data",
+   "label": "Blood Products"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "booked_by",
+   "fieldtype": "Data",
+   "label": "Booked By"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "singature",
+   "fieldtype": "Data",
+   "label": "Singature"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received By"
+  },
+  {
+   "fieldname": "date_received",
+   "fieldtype": "Data",
+   "label": "Date Received"
+  },
+  {
+   "fieldname": "time_received",
+   "fieldtype": "Data",
+   "label": "Time Received"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_7q6in",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pfkde",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rkvlc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "special_need_section",
+   "fieldtype": "Section Break",
+   "label": "Special Need"
+  },
+  {
+   "fieldname": "column_break_2rpi9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_abdwa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sbqbb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rtngv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_co3jr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7ft6n",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_bbcew",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ui1xw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jsmyo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zoxw8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_psgku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Medical Department"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_oeagt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tuiwk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4yjkz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mvu9t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qtywc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_oyrqm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Link",
+   "label": "Surgeon",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "surgery_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Surgery Type",
+   "options": "\nSurgery\nOT Procedure\nOPD Procedure"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-04 19:15:58.208728",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OR BOOKING FORM",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient_name"
+}

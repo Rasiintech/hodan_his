@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-15 15:19:02.876813",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "admission_date",
+  "reff",
+  "date",
+  "section_break_4",
+  "patient",
+  "continuation",
+  "table",
+  "section_break_7",
+  "diagnosis",
+  "data_9",
+  "procedure",
+  "data_11",
+  "anesthesia_type",
+  "data_13",
+  "explained",
+  "warqada_ogolaanshaha_qalliinka_section",
+  "patient2",
+  "continuation2",
+  "table2",
+  "mahadsanid",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "admission_date",
+   "fieldtype": "Date",
+   "label": "Addmision Date"
+  },
+  {
+   "fieldname": "reff",
+   "fieldtype": "Data",
+   "label": "Reff"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "We are the family of the patient",
+   "options": "Patient"
+  },
+  {
+   "bold": 1,
+   "default": "We accept to be carried out a surgical intervention with Anesthesia [ Local or general] to above named patient.  I also accept the risk and consequence of the operation while I am fully aware of and understand the situation.  I will accept any result of the operation and I will not blame to anyone.",
+   "fieldname": "continuation",
+   "fieldtype": "Long Text",
+   "label": " "
+  },
+  {
+   "fieldname": "table",
+   "fieldtype": "Table",
+   "label": "Consent Form Table",
+   "options": "Consent Form Table"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "data_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Link",
+   "label": "Procedure",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "data_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anesthesia_type",
+   "fieldtype": "Select",
+   "label": "Kind of Anesthesia"
+  },
+  {
+   "fieldname": "data_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "explained",
+   "fieldtype": "Data",
+   "label": "Explained"
+  },
+  {
+   "fieldname": "warqada_ogolaanshaha_qalliinka_section",
+   "fieldtype": "Section Break",
+   "label": "  Warqada Ogolaanshaha Qalliinka "
+  },
+  {
+   "fieldname": "patient2",
+   "fieldtype": "Link",
+   "label": "Anigo ah ehelka dhibanaha lagu magacabo",
+   "options": "Patient"
+  },
+  {
+   "bold": 1,
+   "default": "Waxaan ogolnahay in qalliin lagu sameyo dhibanaha lana siiyo dawada suuxinta (qeyb ama guud) ka dib markey no cadeyeen dhakhaatirtu inuu u baahan yahay qalliin lagu sameyo bukaanka .\nWaxaan cadaynayaa inaysan wax eed  ah ku yeelan doniin dhakhaatirta fulinaysa qalliinka hadii uu dhib ku yimaado bukaanka.  Waxaan saxiixnay qoralkaan annago miyir qabna raalina ku ah qalliinka fahansanna waxa ku qoran warqadda waana ku qanci doonaa natijada qallinka Inshaa Allaah.",
+   "fieldname": "continuation2",
+   "fieldtype": "Long Text",
+   "label": " "
+  },
+  {
+   "fieldname": "table2",
+   "fieldtype": "Table",
+   "label": "Consent Form Table",
+   "options": "Consent Form Table"
+  },
+  {
+   "bold": 1,
+   "default": "Mahadsanidiin",
+   "fieldname": "mahadsanid",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Consent Form",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-02-21 10:15:02.876458",
+ "modified_by": "Administrator",
+ "module": "his",
+ "name": "Consent Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

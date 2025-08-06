@@ -1,0 +1,52 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-11-18 11:00:00.908507",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2024-12-30 09:02:06.935811",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Que Time Management",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    DATE(q.time) AS \"Date:Date:100\", \r\n    q.patient AS \"Patient:Data:80\",\r\n    q.patient_name AS \"Patient Name:Data:150\",\r\n    q.practitioner AS \"Doctor:Data:150\",\r\n    SUBSTRING(CAST(q.time AS CHAR), 1, 8) AS \"Que Time\",\r\n    IFNULL(SUBSTRING(CAST(pe.encounter_time AS CHAR), 1, 8), 'Not Not Yet') AS \"Encounter Time\",\r\n    IFNULL(SUBSTRING(CAST(sc.time AS CHAR), 1, 8), 'Not Yet') AS \"Sample Collection Time\",\r\n    IFNULL(SUBSTRING(CAST(lr.time AS CHAR), 1, 8), 'Not Yet') AS \"Lab Result Time\",\r\n    IFNULL(\r\n        IF(TIMESTAMPDIFF(MINUTE, q.time, pe.encounter_time) > 60,\r\n           CONCAT(FLOOR(TIMESTAMPDIFF(MINUTE, q.time, pe.encounter_time) / 60), ' hour(s)'),\r\n           CONCAT(TIMESTAMPDIFF(MINUTE, q.time, pe.encounter_time), ' minute(s)')),\r\n        'Not Yet'\r\n    ) AS \"Time Diff Queue to Encounter\",\r\n    IFNULL(\r\n        IF(TIMESTAMPDIFF(MINUTE, pe.encounter_time, sc.time) > 60,\r\n           CONCAT(FLOOR(TIMESTAMPDIFF(MINUTE, pe.encounter_time, sc.time) / 60), ' hour(s)'),\r\n           CONCAT(TIMESTAMPDIFF(MINUTE, pe.encounter_time, sc.time), ' minute(s)')),\r\n        'Not Yet'\r\n    ) AS \"Time Diff Encounter to Collection\",\r\n    IFNULL(\r\n        IF(TIMESTAMPDIFF(MINUTE, sc.time, lr.time) > 60,\r\n           CONCAT(FLOOR(TIMESTAMPDIFF(MINUTE, sc.time, lr.time) / 60), ' hour(s)'),\r\n           CONCAT(TIMESTAMPDIFF(MINUTE, sc.time, lr.time), ' minute(s)')),\r\n        'Not Yet'\r\n    ) AS \"Time Diff Collection to Result\"\r\nFROM \r\n    tabQue q\r\nLEFT JOIN \r\n    (SELECT patient, encounter_time FROM `tabPatient Encounter` WHERE encounter_date = %(date)s)  pe \r\n    ON q.patient = pe.patient\r\nLEFT JOIN \r\n    (SELECT patient, time FROM `tabSample Collection` WHERE date = %(date)s) sc \r\n    ON q.patient = sc.patient\r\nLEFT JOIN \r\n    (SELECT patient, time FROM `tabLab Result` WHERE date = %(date)s) lr \r\n    ON q.patient = lr.patient    \r\nWHERE \r\n    q.date = %(date)s\r\n    \r\nGROUP BY \r\n    q.date, q.patient\r\nORDER BY \r\n    q.time DESC",
+ "ref_doctype": "Que",
+ "report_name": "Que Time Management",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Cashier"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Nursing User"
+  },
+  {
+   "role": "Laboratory User"
+  }
+ ]
+}

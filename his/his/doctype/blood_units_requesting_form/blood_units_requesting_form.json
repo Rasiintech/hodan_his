@@ -1,0 +1,404 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-19 11:25:18.147607",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "age",
+  "patient_blood_group",
+  "hospital_departmentward",
+  "physician",
+  "clinical_diagnosis_of_patient",
+  "section_break_ey4yv",
+  "history_of_blood_transfusion",
+  "column_break_wvybt",
+  "yes",
+  "column_break_95y2z",
+  "no",
+  "column_break_ivg9m",
+  "column_break_qeehl",
+  "column_break_xxtxs",
+  "section_break_81rn6",
+  "frequency",
+  "column_break_on8k2",
+  "only_one_time",
+  "column_break_jgswl",
+  "two_times",
+  "column_break_hng7v",
+  "three_times",
+  "column_break_nbsk6",
+  "section_break_3dfs2",
+  "blood_transfusion_reaction_recorded_before",
+  "column_break_wnhkj",
+  "yes2",
+  "column_break_runqv",
+  "no2",
+  "column_break_rqu14",
+  "column_break_u6b9g",
+  "section_break_ut6mo",
+  "no_of_units_requesting",
+  "column_break_5xqhl",
+  "1_unit",
+  "column_break_4xoou",
+  "2_unit",
+  "column_break_3yoj4",
+  "column_break_buqsz",
+  "3_unit",
+  "column_break_pkvhm",
+  "4_unit",
+  "column_break_n7ort",
+  "section_break_ejgkx",
+  "requst_status",
+  "column_break_wtxr6",
+  "urgent",
+  "column_break_8e7py",
+  "ordinary",
+  "column_break_wz3ji",
+  "column_break_phndg",
+  "column_break_ul3po",
+  "time",
+  "column_break_ozbin",
+  "section_break_nf0c4",
+  "nurse_name",
+  "telephone_number",
+  "signuture",
+  "lab_staff"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "patient_blood_group",
+   "fieldtype": "Data",
+   "label": "Patient blood group"
+  },
+  {
+   "fieldname": "hospital_departmentward",
+   "fieldtype": "Data",
+   "label": "Hospital department/ward"
+  },
+  {
+   "fieldname": "physician",
+   "fieldtype": "Data",
+   "label": "Physician"
+  },
+  {
+   "fieldname": "clinical_diagnosis_of_patient",
+   "fieldtype": "Small Text",
+   "label": "Clinical diagnosis of patient"
+  },
+  {
+   "fieldname": "section_break_ey4yv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "history_of_blood_transfusion",
+   "fieldtype": "Heading",
+   "label": "History of blood transfusion"
+  },
+  {
+   "fieldname": "column_break_wvybt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_81rn6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Heading",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "column_break_on8k2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "only_one_time",
+   "fieldtype": "Check",
+   "label": "Only one time"
+  },
+  {
+   "default": "0",
+   "fieldname": "two_times",
+   "fieldtype": "Check",
+   "label": "Two Times"
+  },
+  {
+   "fieldname": "column_break_hng7v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "three_times",
+   "fieldtype": "Check",
+   "label": "Three Times"
+  },
+  {
+   "fieldname": "section_break_3dfs2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_95y2z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ivg9m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qeehl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xxtxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jgswl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nbsk6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blood_transfusion_reaction_recorded_before",
+   "fieldtype": "Heading",
+   "label": "Blood transfusion reaction recorded before"
+  },
+  {
+   "fieldname": "column_break_wnhkj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes2",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_runqv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_rqu14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_u6b9g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ut6mo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "no_of_units_requesting",
+   "fieldtype": "Heading",
+   "label": "No of units requesting"
+  },
+  {
+   "fieldname": "column_break_5xqhl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "1_unit",
+   "fieldtype": "Check",
+   "label": "1 unit"
+  },
+  {
+   "default": "0",
+   "fieldname": "2_unit",
+   "fieldtype": "Check",
+   "label": "2 unit"
+  },
+  {
+   "fieldname": "column_break_buqsz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "3_unit",
+   "fieldtype": "Check",
+   "label": "3 unit"
+  },
+  {
+   "default": "0",
+   "fieldname": "4_unit",
+   "fieldtype": "Check",
+   "label": "4 unit"
+  },
+  {
+   "fieldname": "column_break_4xoou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3yoj4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pkvhm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ejgkx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requst_status",
+   "fieldtype": "Heading",
+   "label": "Requst Status"
+  },
+  {
+   "fieldname": "column_break_wtxr6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "urgent",
+   "fieldtype": "Check",
+   "label": "Urgent"
+  },
+  {
+   "fieldname": "column_break_8e7py",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ordinary",
+   "fieldtype": "Check",
+   "label": "Ordinary"
+  },
+  {
+   "fieldname": "column_break_wz3ji",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_phndg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ul3po",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ozbin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nf0c4",
+   "fieldtype": "Section Break",
+   "label": "Blood Receiver Info "
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "nurse_name",
+   "fieldtype": "Data",
+   "label": "Nurse Name"
+  },
+  {
+   "fieldname": "telephone_number",
+   "fieldtype": "Data",
+   "label": "Telephone Number"
+  },
+  {
+   "fieldname": "lab_staff",
+   "fieldtype": "Data",
+   "label": "Lab staff"
+  },
+  {
+   "fieldname": "column_break_n7ort",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signuture",
+   "fieldtype": "Data",
+   "label": "Signuture"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:11:55.368509",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Blood units requesting form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

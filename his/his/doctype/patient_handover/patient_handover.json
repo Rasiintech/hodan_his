@@ -1,0 +1,282 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PHO-.#####",
+ "creation": "2022-02-17 12:12:15.707853",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "patient",
+  "patient_name",
+  "gender",
+  "location",
+  "column_break_ofhjr",
+  "status",
+  "admitted_date",
+  "ward",
+  "date",
+  "shifts_tab",
+  "section_break_8",
+  "current_shift",
+  "current_shift_leader",
+  "column_break_11",
+  "next_shift",
+  "next_shift_leader",
+  "situation_section",
+  "current_condition",
+  "recent_action",
+  "current_medication",
+  "special_note",
+  "other_info",
+  "assesment_section",
+  "risks",
+  "needs2",
+  "recommendations_section",
+  "future_actions",
+  "column_break_30",
+  "by_when",
+  "section_break_32",
+  "required_medication",
+  "column_break_34",
+  "by_when2",
+  "section_break_36",
+  "signature1",
+  "signature2",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "admitted_date",
+   "fieldtype": "Date",
+   "label": "Date admitted"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Link",
+   "label": "Ward",
+   "options": "Healthcare Service Unit"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "current_shift",
+   "fieldtype": "Data",
+   "label": "Current Shift"
+  },
+  {
+   "fieldname": "current_shift_leader",
+   "fieldtype": "Data",
+   "label": "Current Shift Leader"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_shift",
+   "fieldtype": "Data",
+   "label": "Next Shift"
+  },
+  {
+   "fieldname": "next_shift_leader",
+   "fieldtype": "Data",
+   "label": "Next Shift Leader"
+  },
+  {
+   "fieldname": "situation_section",
+   "fieldtype": "Section Break",
+   "label": "Situation"
+  },
+  {
+   "fieldname": "current_condition",
+   "fieldtype": "Data",
+   "label": "Current Condition"
+  },
+  {
+   "fieldname": "recent_action",
+   "fieldtype": "Data",
+   "label": "Recent Action"
+  },
+  {
+   "fieldname": "current_medication",
+   "fieldtype": "Link",
+   "label": "Current medication",
+   "options": "Item"
+  },
+  {
+   "fieldname": "special_note",
+   "fieldtype": "Data",
+   "label": "Special Note"
+  },
+  {
+   "fieldname": "other_info",
+   "fieldtype": "Data",
+   "label": "Any Other Info"
+  },
+  {
+   "fieldname": "assesment_section",
+   "fieldtype": "Section Break",
+   "label": "Assesment"
+  },
+  {
+   "fieldname": "risks",
+   "fieldtype": "Data",
+   "label": "Current issues /risks / concerns"
+  },
+  {
+   "fieldname": "needs2",
+   "fieldtype": "Data",
+   "label": "Current and anticipated needs"
+  },
+  {
+   "fieldname": "recommendations_section",
+   "fieldtype": "Section Break",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "future_actions",
+   "fieldtype": "Data",
+   "label": "Required /recommended future actions"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "by_when",
+   "fieldtype": "Date",
+   "label": "By When"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "required_medication",
+   "fieldtype": "Link",
+   "label": "Required medication",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "by_when2",
+   "fieldtype": "Date",
+   "label": "By When"
+  },
+  {
+   "fieldname": "section_break_36",
+   "fieldtype": "Section Break",
+   "label": "Signatures"
+  },
+  {
+   "fieldname": "signature1",
+   "fieldtype": "Data",
+   "label": "Shift leader (signature)"
+  },
+  {
+   "fieldname": "signature2",
+   "fieldtype": "Data",
+   "label": "Shift leader taking over (signature)"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PATIENT HANDOVER",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "shifts_tab",
+   "fieldtype": "Tab Break",
+   "label": "Shifts"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "column_break_ofhjr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Inpatient Record"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-05 09:21:52.282962",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "PATIENT HANDOVER",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

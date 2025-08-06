@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-06 16:05:25.826558",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_nmae",
+  "column_break_2cno2",
+  "sex",
+  "age",
+  "section_break_23rvd",
+  "date",
+  "column_break_ljwxs",
+  "time",
+  "section_break_4bsue",
+  "rbs",
+  "column_break_50ugl",
+  "insulin",
+  "column_break_p8rge",
+  "unit",
+  "section_break_poaxm",
+  "nurse",
+  "nurse_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_nmae",
+   "fieldtype": "Data",
+   "label": "Patient Nmae"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rbs",
+   "fieldtype": "Data",
+   "label": "RBS"
+  },
+  {
+   "fieldname": "insulin",
+   "fieldtype": "Data",
+   "label": "Insulin"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "default": "User",
+   "fieldname": "nurse",
+   "fieldtype": "Link",
+   "label": "Nurse",
+   "options": "User"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Diabetic Chart",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "nurse.full_name",
+   "fieldname": "nurse_name",
+   "fieldtype": "Data",
+   "label": "Nurse Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_2cno2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_23rvd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ljwxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4bsue",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_50ugl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_p8rge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_poaxm",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-06 16:34:22.648470",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Diabetic Chart",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

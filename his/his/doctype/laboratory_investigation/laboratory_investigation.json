@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 08:36:45.178549",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "pid",
+  "dob",
+  "a"
+ ],
+ "fields": [
+  {
+   "fieldname": "a",
+   "fieldtype": "Data",
+   "options": "Laboratory Investigation ch"
+  },
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DoB"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-29 08:39:27.296971",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Laboratory Investigation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

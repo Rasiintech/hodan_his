@@ -1,0 +1,241 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "NICU-.##### ",
+ "creation": "2023-06-03 10:40:18.389911",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "gender",
+  "age",
+  "mobile",
+  "practitioner",
+  "onset_of_symptoms",
+  "onset_of_dyspneahypoxia",
+  "column_break_x5dlh",
+  "spo2_on_o2",
+  "spo2_on_ra",
+  "rr",
+  "bp",
+  "temperature",
+  "rbg",
+  "chest_examination_notes",
+  "tab_break_zov2a",
+  "section_break_k4t2x",
+  "drug",
+  "tab_break_dfjea",
+  "section_break_yvrrt",
+  "ventilation_sheet",
+  "investigation_tab",
+  "section_break_8lof6",
+  "investigation",
+  "present_history",
+  "final_diagnosis_comorbidities",
+  "medication_so",
+  "services_so"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age"
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "onset_of_symptoms",
+   "fieldtype": "Data",
+   "label": "Onset of symptoms"
+  },
+  {
+   "fieldname": "onset_of_dyspneahypoxia",
+   "fieldtype": "Data",
+   "label": "Onset of dyspnea/hypoxia"
+  },
+  {
+   "fieldname": "column_break_x5dlh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "spo2_on_o2",
+   "fieldtype": "Data",
+   "label": "Spo2 on O2%"
+  },
+  {
+   "fieldname": "spo2_on_ra",
+   "fieldtype": "Data",
+   "label": "Spo2 on RA%"
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "label": "RR"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "rbg",
+   "fieldtype": "Data",
+   "label": "RBG"
+  },
+  {
+   "fieldname": "chest_examination_notes",
+   "fieldtype": "Data",
+   "label": "Chest Examination notes"
+  },
+  {
+   "fieldname": "tab_break_zov2a",
+   "fieldtype": "Tab Break",
+   "label": "Drug"
+  },
+  {
+   "fieldname": "section_break_k4t2x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "drug",
+   "fieldtype": "Table",
+   "label": "Drug",
+   "options": "Treatment received Duration"
+  },
+  {
+   "fieldname": "tab_break_dfjea",
+   "fieldtype": "Tab Break",
+   "label": " Ventilation sheet"
+  },
+  {
+   "fieldname": "section_break_yvrrt",
+   "fieldtype": "Section Break",
+   "label": "Ventilation sheet"
+  },
+  {
+   "fieldname": "ventilation_sheet",
+   "fieldtype": "Table",
+   "label": "Ventilation sheet",
+   "options": "Ventilation sheet"
+  },
+  {
+   "fieldname": "investigation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Investigation"
+  },
+  {
+   "fieldname": "section_break_8lof6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "investigation",
+   "fieldtype": "Table",
+   "label": "Investigation",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "present_history",
+   "fieldtype": "Small Text",
+   "label": "Present History"
+  },
+  {
+   "fieldname": "final_diagnosis_comorbidities",
+   "fieldtype": "Small Text",
+   "label": "Final Diagnosis & Comorbidities"
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "medication_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "services_so",
+   "options": "Sales Order"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-03 11:15:30.915090",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "NICU",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

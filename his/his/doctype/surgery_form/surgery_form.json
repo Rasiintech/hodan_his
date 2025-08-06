@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-23 21:23:59.785405",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "column_break_4kft2",
+  "number",
+  "section_break_ebiqu",
+  "coming_from",
+  "column_break_skddz",
+  "sex",
+  "column_break_2zgzm",
+  "age",
+  "section_break_ih8gw",
+  "date",
+  "column_break_gyrr9",
+  "gswmi",
+  "column_break_xbqnm",
+  "shell",
+  "column_break_xwq4l",
+  "bomb",
+  "column_break_m4n6w",
+  "burn",
+  "column_break_hcfzn",
+  "others",
+  "section_break_zxhbu",
+  "time_since_injury",
+  "section_break_0td4s",
+  "general_condition",
+  "column_break_jvkwf",
+  "pulse",
+  "column_break_fihhv",
+  "bp",
+  "column_break_lhckf",
+  "resp",
+  "column_break_6o3vy",
+  "temp"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_4kft2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "label": "Number"
+  },
+  {
+   "fieldname": "section_break_ebiqu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "coming_from",
+   "fieldtype": "Data",
+   "label": "Coming From"
+  },
+  {
+   "fieldname": "column_break_skddz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_2zgzm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "section_break_ih8gw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "gswmi",
+   "fieldtype": "Data",
+   "label": "GSW:MI"
+  },
+  {
+   "fieldname": "shell",
+   "fieldtype": "Data",
+   "label": "SHELL"
+  },
+  {
+   "fieldname": "bomb",
+   "fieldtype": "Data",
+   "label": "BOMB"
+  },
+  {
+   "fieldname": "burn",
+   "fieldtype": "Data",
+   "label": "BURN"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "OTHERS"
+  },
+  {
+   "fieldname": "column_break_gyrr9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xbqnm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xwq4l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_m4n6w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hcfzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zxhbu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "time_since_injury",
+   "fieldtype": "Data",
+   "label": "Time Since Injury"
+  },
+  {
+   "fieldname": "general_condition",
+   "fieldtype": "HTML",
+   "label": "General Condition",
+   "options": "General Condition"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Data",
+   "label": "Pulse"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "resp",
+   "fieldtype": "Data",
+   "label": "RESP"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "TEMP"
+  },
+  {
+   "fieldname": "column_break_fihhv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lhckf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6o3vy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_0td4s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jvkwf",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-23 21:32:34.793687",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Surgery Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

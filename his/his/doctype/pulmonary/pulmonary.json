@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-13 15:12:30.173857",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rr",
+  "type_of_breathing",
+  "o2_sat",
+  "on__fio2_of",
+  "if_on_mechanical_ventilator_fio2",
+  "peep",
+  "pressure_support",
+  "tidal_volume",
+  "added_sounds"
+ ],
+ "fields": [
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RR          "
+  },
+  {
+   "fieldname": "type_of_breathing",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "type of breathing"
+  },
+  {
+   "fieldname": "o2_sat",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "O2 sat           "
+  },
+  {
+   "fieldname": "on__fio2_of",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Negative presure ventation FIO2     ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "if_on_mechanical_ventilator_fio2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Chest deformity         ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "peep",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Symmetrical chest movement            ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pressure_support",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Normal on percussion           ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "tidal_volume",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "centeral trachea          ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "added_sounds",
+   "fieldtype": "Data",
+   "label": "Added sounds"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-23 10:15:08.456360",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Pulmonary",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,62 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-07-22 10:31:21.364404",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "options": "",
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "options": "",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2025-07-22 11:01:47.772888",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Sales by Queue Type",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    s.ref_practitioner AS \"Referring Practitioner:Data:200\",\r\n\r\n    ROUND(SUM(CASE WHEN q.que_type = 'New Patient' THEN s.total ELSE 0 END), 2) AS \"New Patient:Currency:130\",\r\n    ROUND(SUM(CASE WHEN q.que_type = 'Refer' THEN s.total ELSE 0 END), 2) AS \"Refer:Currency:130\",\r\n    ROUND(SUM(CASE WHEN q.que_type = 'Follow Up' THEN s.total ELSE 0 END), 2) AS \"Follow Up:Currency:130\",\r\n    ROUND(SUM(CASE WHEN q.que_type = 'Refer With Payment' THEN s.total ELSE 0 END), 2) AS \"Refer with Payment:Currency:150\",\r\n\r\n    ROUND(SUM(s.total), 2) AS \"Total:Currency:130\",\r\n    ROUND(SUM(s.discount_amount), 2) AS \"Discount:Currency:130\",\r\n    ROUND(SUM(s.grand_total), 2) AS \"Grand Total:Currency:130\"\r\nFROM \r\n    `tabSales Invoice` s\r\nJOIN \r\n    `tabPatient Encounter` en \r\n    ON en.name = s.custom_patient_encounter\r\nLEFT JOIN \r\n    `tabQue` q \r\n    ON q.name = en.que\r\nWHERE \r\n    s.posting_date BETWEEN %(from_date)s AND %(to_date)s\r\nGROUP BY \r\n    s.ref_practitioner;\r\n",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Sales by Queue Type",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "Cashier"
+  },
+  {
+   "role": "OT"
+  },
+  {
+   "role": "Doctor"
+  }
+ ]
+}

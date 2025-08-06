@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DARESSING-.##### ",
+ "creation": "2023-06-13 10:42:19.008263",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_no",
+  "bed_no",
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "column_break_wtszw",
+  "date",
+  "practitioner",
+  "section_break_34bku",
+  "dressing_details",
+  "section_break_tplyr",
+  "dressing"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sex",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wtszw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_34bku",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dressing",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "dressing_details",
+   "fieldtype": "Table",
+   "label": "Dressing Details",
+   "options": "Dressing Details"
+  },
+  {
+   "fieldname": "section_break_tplyr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "room_no",
+   "fieldtype": "Data",
+   "label": "Room No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bed_no",
+   "fieldtype": "Data",
+   "label": "Bed No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Consultant",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-04 14:54:03.291338",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Dressing",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

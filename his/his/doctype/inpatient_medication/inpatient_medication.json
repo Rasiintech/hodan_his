@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "IPM.####",
+ "creation": "2021-12-06 08:22:59.972548",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "gender",
+  "age",
+  "practitioner",
+  "doctor_plan",
+  "inpatient_record",
+  "treatment_sheet_section",
+  "treatment_sheet",
+  "nuse_user",
+  "nurse_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pid.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "default": "pid.age_html",
+   "fieldname": "age",
+   "fieldtype": "HTML",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "treatment_sheet_section",
+   "fieldtype": "Section Break",
+   "label": "Treatment Sheet"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "treatment_sheet",
+   "fieldtype": "Table",
+   "label": "Treatment Sheet",
+   "options": "Treatment Sheet"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "default": "User",
+   "fieldname": "nuse_user",
+   "fieldtype": "Link",
+   "label": "Nuse User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "nuse_user.full_name",
+   "fieldname": "nurse_name",
+   "fieldtype": "Data",
+   "label": "Nurse Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Inpatient Medication",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pid.inpatient_record",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Data",
+   "label": "Inpatient ID"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "doctor_plan",
+   "fieldtype": "Link",
+   "label": "Doctor Plan",
+   "options": "Doctor Plan",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-27 01:18:33.378113",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Inpatient Medication",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maternity",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "patient",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

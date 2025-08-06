@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-15 10:58:22.019396",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "o2_therapy",
+  "mv_setting",
+  "o2_sat",
+  "feeding",
+  "iv_fluids",
+  "antimicrobial",
+  "blood_products",
+  "albumin",
+  "ppi",
+  "dvt_prophylaxis"
+ ],
+ "fields": [
+  {
+   "fieldname": "o2_therapy",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "O2 therapy"
+  },
+  {
+   "fieldname": "mv_setting",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "MV setting"
+  },
+  {
+   "fieldname": "o2_sat",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "O2 sat"
+  },
+  {
+   "fieldname": "feeding",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Feeding"
+  },
+  {
+   "fieldname": "iv_fluids",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IV Fluids"
+  },
+  {
+   "fieldname": "antimicrobial",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Antimicrobial"
+  },
+  {
+   "fieldname": "blood_products",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Blood products"
+  },
+  {
+   "fieldname": "albumin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Albumin"
+  },
+  {
+   "fieldname": "ppi",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PPI"
+  },
+  {
+   "fieldname": "dvt_prophylaxis",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Anti coagulants "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-05 09:53:05.869318",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Plan of management for admission",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

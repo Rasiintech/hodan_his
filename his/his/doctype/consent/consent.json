@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:patient",
+ "creation": "2023-03-27 14:00:14.193615",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "date",
+  "practitioner",
+  "practitioner_name",
+  "operation_name",
+  "column_break_nl8e2",
+  "patient_name",
+  "sex",
+  "operation_amount",
+  "imaging_amount",
+  "place_of_operation",
+  "patient_signature",
+  "column_break_8pvno",
+  "relative_signature",
+  "section_break_20knc",
+  "doctor_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operation_name",
+   "fieldtype": "Data",
+   "label": "Operation Name"
+  },
+  {
+   "fieldname": "operation_amount",
+   "fieldtype": "Currency",
+   "label": "Operation Amount"
+  },
+  {
+   "fieldname": "imaging_amount",
+   "fieldtype": "Currency",
+   "label": "Imaging Amount"
+  },
+  {
+   "fieldname": "place_of_operation",
+   "fieldtype": "Section Break",
+   "label": "Place of Operation"
+  },
+  {
+   "fieldname": "patient_signature",
+   "fieldtype": "Signature",
+   "label": "Patient Signature"
+  },
+  {
+   "fieldname": "relative_signature",
+   "fieldtype": "Signature",
+   "label": "Relative Signature"
+  },
+  {
+   "fieldname": "doctor_signature",
+   "fieldtype": "Signature",
+   "label": "Doctor Signature"
+  },
+  {
+   "fieldname": "column_break_nl8e2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "section_break_20knc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8pvno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "practitioner.first_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Practitioner Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-27 14:36:35.392474",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Consent",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

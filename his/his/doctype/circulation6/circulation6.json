@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 14:25:19.531862",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "arrhythmia",
+  "ischemia",
+  "anti_ischemicarrhythmicfailure"
+ ],
+ "fields": [
+  {
+   "fieldname": "arrhythmia",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Arrhythmia",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "ischemia",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Need of anti arrhythmic",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "anti_ischemicarrhythmicfailure",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Adjustments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 10:18:19.083946",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Circulation6",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

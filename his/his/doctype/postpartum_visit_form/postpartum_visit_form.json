@@ -1,0 +1,287 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-30 11:03:28.913327",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_jyp7b",
+  "dob",
+  "date",
+  "section_break_uj5ie",
+  "hgb_hc",
+  "column_break_isqak",
+  "medications_contraception",
+  "column_break_a0q1i",
+  "last_pap_smear__date",
+  "section_break_drafr",
+  "interim_history",
+  "column_break_jtosb",
+  "feeding_method",
+  "column_break_dsnjv",
+  "contraceptive_method",
+  "section_break_auxfj",
+  "for_reproductive_health_promotion",
+  "column_break_ls5ch",
+  "referrals",
+  "column_break_lxiyp",
+  "return_visit__date",
+  "section_break_cxscl",
+  "examined_by",
+  "column_break_7yrg3",
+  "bp",
+  "column_break_i8xl0",
+  "weight",
+  "section_break_qimtl",
+  "pap_smear",
+  "section_break_lqvir",
+  "item",
+  "column_break_ynjcl",
+  "normal",
+  "column_break_77emz",
+  "abnormal",
+  "section_break_mu4i2",
+  "comments",
+  "column_break_jprl5",
+  "doctors_name",
+  "column_break_mvfaz",
+  "date_time",
+  "section_break_o7qgo"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "hgb_hc",
+   "fieldtype": "Data",
+   "label": "HGB HC"
+  },
+  {
+   "fieldname": "medications_contraception",
+   "fieldtype": "Data",
+   "label": "MEDICATIONS CONTRACEPTION"
+  },
+  {
+   "fieldname": "last_pap_smear__date",
+   "fieldtype": "Data",
+   "label": "LAST PAP SMEAR  date"
+  },
+  {
+   "fieldname": "interim_history",
+   "fieldtype": "Data",
+   "label": "INTERIM HISTORy"
+  },
+  {
+   "fieldname": "feeding_method",
+   "fieldtype": "Data",
+   "label": "FEEDING METHOD"
+  },
+  {
+   "fieldname": "contraceptive_method",
+   "fieldtype": "Data",
+   "label": "CONTRACEPTIVE METHOD"
+  },
+  {
+   "fieldname": "for_reproductive_health_promotion",
+   "fieldtype": "Data",
+   "label": "FOR REPRODUCTIVE HEALTH PROMOTION"
+  },
+  {
+   "fieldname": "referrals",
+   "fieldtype": "Data",
+   "label": "REFERRALs"
+  },
+  {
+   "fieldname": "return_visit__date",
+   "fieldtype": "Data",
+   "label": "RETURN VISIT  DATE"
+  },
+  {
+   "fieldname": "examined_by",
+   "fieldtype": "Data",
+   "label": "EXAMINED BY"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": " WEIGHT "
+  },
+  {
+   "fieldname": "pap_smear",
+   "fieldtype": "Data",
+   "label": "PAP SMEAR"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Data",
+   "label": "ITEM"
+  },
+  {
+   "fieldname": "normal",
+   "fieldtype": "Data",
+   "label": "NORMAL"
+  },
+  {
+   "fieldname": "abnormal",
+   "fieldtype": "Data",
+   "label": "ABNORMAL"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "label": "COMMENTS"
+  },
+  {
+   "fieldname": "doctors_name",
+   "fieldtype": "Data",
+   "label": "DOCTORS NAMe"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Date",
+   "label": "Date time"
+  },
+  {
+   "fieldname": "column_break_jyp7b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uj5ie",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_isqak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_a0q1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_drafr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jtosb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dsnjv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_auxfj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ls5ch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lxiyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cxscl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7yrg3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_i8xl0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qimtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lqvir",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ynjcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_77emz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mu4i2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jprl5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mvfaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_o7qgo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-15 12:43:29.546537",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Postpartum Visit Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

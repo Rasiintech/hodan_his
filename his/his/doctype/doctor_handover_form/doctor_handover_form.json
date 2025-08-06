@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-27 10:56:13.648710",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "departmentunit",
+  "total_no_of_patients",
+  "new_patients_admissions_section",
+  "new_patients_admissions",
+  "section_break_2v3jr",
+  "total_number_of_discharge_patients",
+  "problems",
+  "recommendations",
+  "endorsed_by",
+  "sho",
+  "column_break_e4oi1",
+  "specialist",
+  "received_by",
+  "supervisor",
+  "time"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "departmentunit",
+   "fieldtype": "Data",
+   "label": "Department/Unit"
+  },
+  {
+   "fieldname": "total_no_of_patients",
+   "fieldtype": "Data",
+   "label": "Total No. of Patients"
+  },
+  {
+   "fieldname": "new_patients_admissions_section",
+   "fieldtype": "Section Break",
+   "label": "New Patients Admissions"
+  },
+  {
+   "fieldname": "new_patients_admissions",
+   "fieldtype": "Table",
+   "label": "New Patients Admissions",
+   "options": "New Patients Admissions"
+  },
+  {
+   "fieldname": "section_break_2v3jr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_number_of_discharge_patients",
+   "fieldtype": "Data",
+   "label": "Total Number of Discharge Patients"
+  },
+  {
+   "fieldname": "problems",
+   "fieldtype": "Data",
+   "label": "Problems"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Data",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "endorsed_by",
+   "fieldtype": "Data",
+   "label": "Endorsed by"
+  },
+  {
+   "fieldname": "sho",
+   "fieldtype": "Data",
+   "label": "SHO"
+  },
+  {
+   "fieldname": "column_break_e4oi1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "specialist",
+   "fieldtype": "Data",
+   "label": "Specialist"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received by"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Data",
+   "label": "Supervisor "
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-27 10:59:16.981316",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Doctor Handover Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

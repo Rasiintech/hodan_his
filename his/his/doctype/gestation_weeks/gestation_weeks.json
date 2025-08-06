@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 08:22:56.781076",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gestation_weeks",
+  "length_of_labor",
+  "birth_weigt",
+  "type_of_delivery",
+  "anesthesia",
+  "place_of_delivery",
+  "preterm",
+  "yes",
+  "no",
+  "comments"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "gestation_weeks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gestation Weeks"
+  },
+  {
+   "columns": 1,
+   "fieldname": "length_of_labor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Length of Labor"
+  },
+  {
+   "columns": 1,
+   "fieldname": "birth_weigt",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BIRTH WEIGT"
+  },
+  {
+   "columns": 1,
+   "fieldname": "type_of_delivery",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type of Delivery"
+  },
+  {
+   "columns": 1,
+   "fieldname": "anesthesia",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Anesthesia"
+  },
+  {
+   "columns": 1,
+   "fieldname": "place_of_delivery",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Place of Delivery"
+  },
+  {
+   "columns": 1,
+   "fieldname": "preterm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PRETERM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "yes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "YES"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NO"
+  },
+  {
+   "columns": 1,
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-13 16:21:47.024951",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Gestation Weeks",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

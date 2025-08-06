@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-07 10:33:34.728517",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "entry_date_time",
+  "reptured_membrance_time_hrs",
+  "decent_of_head",
+  "cervical_dilation_cm",
+  "fetal_heart_rate_bpm",
+  "decent_5th",
+  "contracctions_per_10_min",
+  "pulse_bpm",
+  "bp_mmhg",
+  "tem",
+  "oxytocin_u_l",
+  "iv_fluids",
+  "drugs_given",
+  "urine_protien",
+  "urine_acetone",
+  "urine_output_ml"
+ ],
+ "fields": [
+  {
+   "fieldname": "entry_date_time",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Entry date time"
+  },
+  {
+   "fieldname": "reptured_membrance_time_hrs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reptured membrance time hrs"
+  },
+  {
+   "fieldname": "decent_of_head",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Decent of head"
+  },
+  {
+   "fieldname": "cervical_dilation_cm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cervical dilation cm"
+  },
+  {
+   "fieldname": "fetal_heart_rate_bpm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fetal heart rate bpm"
+  },
+  {
+   "fieldname": "decent_5th",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Decent 5th"
+  },
+  {
+   "fieldname": "contracctions_per_10_min",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contracctions per 10 min"
+  },
+  {
+   "fieldname": "pulse_bpm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pulse bpm"
+  },
+  {
+   "fieldname": "bp_mmhg",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BP mmhg"
+  },
+  {
+   "fieldname": "tem",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tem "
+  },
+  {
+   "fieldname": "oxytocin_u_l",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "OXytocin u l"
+  },
+  {
+   "fieldname": "iv_fluids",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IV fluids"
+  },
+  {
+   "fieldname": "drugs_given",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Drugs given"
+  },
+  {
+   "fieldname": "urine_protien",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Urine protien"
+  },
+  {
+   "fieldname": "urine_acetone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Urine acetone"
+  },
+  {
+   "fieldname": "urine_output_ml",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Urine output ml"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-07 10:34:03.605378",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Partograph Data",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-14 14:44:55.994497",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "tissue_source",
+  "accession",
+  "age",
+  "gender",
+  "column_break_6",
+  "access_date",
+  "doctor",
+  "dep",
+  "district",
+  "section_break_12",
+  "clinical_diagnosis",
+  "clinical_and_lab_findings",
+  "section_break_15",
+  "macroscopic",
+  "microscopic",
+  "diagnosis",
+  "section_break_19",
+  "report_date",
+  "column_break_21",
+  "reported_doctor",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "tissue_source",
+   "fieldtype": "Data",
+   "label": "Tissue source "
+  },
+  {
+   "fieldname": "accession",
+   "fieldtype": "Data",
+   "label": "Accession"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age (yrs)"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender ",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "default": "Today",
+   "fieldname": "access_date",
+   "fieldtype": "Date",
+   "label": "Access Date"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Data",
+   "label": "Doctor"
+  },
+  {
+   "fieldname": "dep",
+   "fieldtype": "Data",
+   "label": "Department/ Hospital"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "DISTRICT "
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "clinical_diagnosis",
+   "fieldtype": "Data",
+   "label": "Clinical diagnosis"
+  },
+  {
+   "fieldname": "clinical_and_lab_findings",
+   "fieldtype": "Data",
+   "label": "Clinical and lab findings"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "macroscopic",
+   "fieldtype": "Small Text",
+   "label": "Macroscopic"
+  },
+  {
+   "fieldname": "microscopic",
+   "fieldtype": "Small Text",
+   "label": "Microscopic"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Small Text",
+   "label": " DIAGNOSIS"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Report Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reported_doctor",
+   "fieldtype": "Link",
+   "label": "Reported Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pathology Report Sheet",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-04 09:56:03.867112",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Pathology Report Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

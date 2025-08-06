@@ -1,0 +1,60 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-06-12 15:03:15.471407",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "Start_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "End_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Submitted",
+   "fieldname": "Status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "mandatory": 1,
+   "options": "Submitted\nDraft\nCanceled",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2024-06-12 15:03:15.471407",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Employee Receivable Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \nCONCAT(\n        MONTHNAME(payroll_date), \n        ' ', \n        YEAR(payroll_date)\n    ) as \"Month:Data:120\",\n    employee as \"Employee ID:Data:120\",\n    employee_name as \"Employee Name:Data:300\",\n    \n    SUM(amount) AS \"Amount:Currency:120\"\nFROM \n    `tabAdditional Salary`\nWHERE \n    payroll_date BETWEEN %(Start_date)s \n    AND %(End_date)s\n    \n    AND type= \"Deduction\"\n    AND CASE\n        WHEN %(Status)s = 'Submitted' THEN docstatus = 1\n        WHEN %(Status)s = 'Draft' THEN docstatus = 0\n        ELSE docstatus = 0 -- Default value if status is neither \"Submitted\" nor \"Draft\"\n    END\nGROUP BY \n    employee, CONCAT(MONTHNAME(payroll_date), ' ', YEAR(payroll_date));\n",
+ "ref_doctype": "Additional Salary",
+ "report_name": "Employee Receivable Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "HR User"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ]
+}

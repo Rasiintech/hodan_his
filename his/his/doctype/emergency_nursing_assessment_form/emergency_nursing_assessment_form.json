@@ -1,0 +1,1643 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ENA-.#####",
+ "creation": "2024-05-13 12:28:53.959216",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "column_break_kcpwj",
+  "pts_name",
+  "column_break_ohl1d",
+  "dob",
+  "column_break_iijiu",
+  "mrp",
+  "section_break_nibyx",
+  "emergency_nursing_assignment_form",
+  "section_break_2jtgu",
+  "airway",
+  "section_break_4t5up",
+  "patient",
+  "column_break_mjdkh",
+  "oral_airway_size",
+  "column_break_f1gtd",
+  "bvm",
+  "section_break_bbm0l",
+  "ett_size",
+  "column_break_8kckn",
+  "inserted_by",
+  "section_break_qpewj",
+  "urinary",
+  "section_break_pte3f",
+  "na_1",
+  "column_break_vbkid",
+  "dysuria",
+  "column_break_gqqug",
+  "hematuria",
+  "column_break_8wqxc",
+  "anuria",
+  "section_break_ahzm8",
+  "distended__bladder",
+  "column_break_llx1c",
+  "foley_cather",
+  "column_break_um0bp",
+  "number",
+  "section_break_zfyia",
+  "urine_color",
+  "column_break_emdjn",
+  "normal",
+  "column_break_skt64",
+  "dark",
+  "column_break_zywdh",
+  "turbid",
+  "column_break_3omgk",
+  "other",
+  "column_break_pozlr",
+  "comments",
+  "column_break_qau2y",
+  "section_break_hmmxh",
+  "breathing",
+  "section_break_soxz6",
+  "rate",
+  "column_break_0bnlk",
+  "regular",
+  "column_break_cuuy9",
+  "irregular",
+  "column_break_trlpl",
+  "rapid",
+  "column_break_sgbtt",
+  "shallow",
+  "section_break_rsa9h",
+  "o2_sat",
+  "column_break_nhfn0",
+  "on",
+  "column_break_w1hwt",
+  "o2_ltmin",
+  "section_break_amxo0",
+  "oxygen_applied",
+  "column_break_enyct",
+  "np",
+  "column_break_39oim",
+  "mask",
+  "column_break_5dxnn",
+  "nrp",
+  "column_break_vbwpe",
+  "ambubag",
+  "section_break_qk3fj",
+  "gyne",
+  "section_break_kznly",
+  "na",
+  "column_break_caciy",
+  "pregnancy",
+  "column_break_6jrdz",
+  "para",
+  "column_break_jhmwm",
+  "abortion",
+  "column_break_tcwez",
+  "err",
+  "section_break_tqokn",
+  "discharge",
+  "column_break_kzj8t",
+  "bleeding",
+  "column_break_vom7k",
+  "amount",
+  "column_break_db7z6",
+  "contractions",
+  "column_break_nkn4y",
+  "abdominal_pain",
+  "section_break_b16ru",
+  "comments_2",
+  "section_break_38opr",
+  "pediatrics",
+  "section_break_5hcef",
+  "fontanels",
+  "column_break_r02vc",
+  "normal_2",
+  "column_break_kprvs",
+  "sunken",
+  "column_break_opcs0",
+  "bulging",
+  "column_break_x3lwz",
+  "normal_3",
+  "column_break_rkzvy",
+  "absent",
+  "section_break_vtdki",
+  "comments_3",
+  "section_break_mtfgb",
+  "behavior",
+  "section_break_2rmud",
+  "cooperative",
+  "column_break_eavwq",
+  "agitated",
+  "column_break_cjpza",
+  "drowsy",
+  "column_break_kymq5",
+  "irritable",
+  "column_break_wl8lp",
+  "restless",
+  "section_break_jwl2v",
+  "g_i",
+  "section_break_xnql4",
+  "na_3",
+  "column_break_mjoqq",
+  "abdomen",
+  "column_break_qz0cx",
+  "soft",
+  "column_break_mynqc",
+  "tender",
+  "column_break_nta3a",
+  "distended",
+  "section_break_wdp1n",
+  "bowel_sounds",
+  "section_break_kwa6w",
+  "present",
+  "column_break_fdu6k",
+  "absence",
+  "column_break_foz1b",
+  "hyperactive",
+  "section_break_pp1me",
+  "vomiting",
+  "column_break_q5q0g",
+  "amout_1",
+  "section_break_6mejl",
+  "constipation",
+  "column_break_uh8kc",
+  "lbm",
+  "section_break_ndt72",
+  "wound_assessment",
+  "section_break_zel3l",
+  "location_put_x_to_mark_on_body_diagram",
+  "section_break_jwfna",
+  "shape",
+  "column_break_cr5qw",
+  "irregular_2",
+  "column_break_rk1ys",
+  "linear",
+  "section_break_a53h0",
+  "round",
+  "column_break_uuv71",
+  "other_2",
+  "column_break_elv59",
+  "size",
+  "column_break_eczej",
+  "_2cm",
+  "column_break_4a1w4",
+  "_4cm",
+  "section_break_p4elw",
+  "_6cm",
+  "column_break_jklrq",
+  "_8cm",
+  "section_break_2ri9v",
+  "commerts",
+  "section_break_f1qei",
+  "nurse_name",
+  "column_break_qsljb",
+  "date",
+  "section_break_xvye0",
+  "medication",
+  "section_break_8fqm8",
+  "intake",
+  "section_break_tixnx",
+  "fall_safety_assessment_modified_for_ed",
+  "section_break_8mo5a",
+  "age__65",
+  "section_break_ch0o5",
+  "confusion_disorientation",
+  "section_break_84liy",
+  "non_compliant__impaired_judgment",
+  "section_break_dstdh",
+  "decreased_mobility_i_strength",
+  "section_break_jw2pd",
+  "impaired_circulation_i_decreased_sensation_tolirnbs",
+  "section_break_iquvd",
+  "seisures_i_syncope",
+  "section_break_rc8ui",
+  "receiving_sedatives__hypnotics__under_influence_of_alcohol",
+  "section_break_jvpp5",
+  "impaired_vision_i_hearing_i_understanding",
+  "section_break_lcedm",
+  "nocturia",
+  "section_break_icfxb",
+  "no_risk",
+  "section_break_ylrju",
+  "nurses_notes",
+  "section_break_3xx9y",
+  "disposition",
+  "section_break_pm4jp",
+  "home",
+  "column_break_52elm",
+  "clinic",
+  "column_break_bwq1l",
+  "ama",
+  "column_break_ilfuc",
+  "lwbs",
+  "section_break_wtbnm",
+  "morgue",
+  "column_break_daxgu",
+  "transferred_to",
+  "column_break_eapkl",
+  "admit_to",
+  "section_break_5pwzd",
+  "report_given_to",
+  "column_break_f3x63",
+  "ama__against_medical_advice",
+  "section_break_xhcad",
+  "lwct__leave_without_continuing_treatment",
+  "column_break_ytq4m",
+  "lvvbs__leave_without_being_seen",
+  "section_break_ppllb",
+  "follow_up_1",
+  "section_break_be9iq",
+  "where_eligible",
+  "column_break_5o1ol",
+  "clinic_2",
+  "column_break_bro1g",
+  "other_3",
+  "section_break_mov2f",
+  "follow_up_2",
+  "section_break_4yrrv",
+  "instructions_given_re",
+  "column_break_h4zyx",
+  "verbal_1",
+  "column_break_u17zv",
+  "verbal_2",
+  "section_break_yaqvx",
+  "verbalized_understanding_of_discharge_instructions",
+  "section_break_sdbhi",
+  "yes",
+  "column_break_lp6fc",
+  "no",
+  "section_break_moigk",
+  "commnets_4",
+  "section_break_iyvpf",
+  "ed_staff_nurses",
+  "section_break_hmryd",
+  "endorsed_toojnits_staff_nurses"
+ ],
+ "fields": [
+  {
+   "fetch_from": "pid.patient_name",
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_kcpwj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_ohl1d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "pid.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_iijiu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_nibyx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "emergency_nursing_assignment_form",
+   "fieldtype": "HTML",
+   "label": "Emergency Nursing Assignment Form",
+   "options": "Emergency Nursing Assignment Form"
+  },
+  {
+   "fieldname": "section_break_2jtgu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "airway",
+   "fieldtype": "HTML",
+   "label": "AirWay",
+   "options": "AirWay"
+  },
+  {
+   "fieldname": "section_break_4t5up",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "patient",
+   "fieldtype": "Check",
+   "label": "Patient"
+  },
+  {
+   "fieldname": "column_break_mjdkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "oral_airway_size",
+   "fieldtype": "Check",
+   "label": "Oral Airway size"
+  },
+  {
+   "fieldname": "column_break_f1gtd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bvm",
+   "fieldtype": "Check",
+   "label": "BVM"
+  },
+  {
+   "fieldname": "section_break_bbm0l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ett_size",
+   "fieldtype": "Check",
+   "label": "ETT size"
+  },
+  {
+   "fieldname": "column_break_8kckn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "inserted_by",
+   "fieldtype": "Check",
+   "label": "Inserted by"
+  },
+  {
+   "fieldname": "section_break_qpewj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "urinary",
+   "fieldtype": "HTML",
+   "label": "Urinary",
+   "options": "Urinary"
+  },
+  {
+   "fieldname": "section_break_pte3f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "na",
+   "fieldtype": "Check",
+   "label": "N/A "
+  },
+  {
+   "fieldname": "column_break_vbkid",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dysuria",
+   "fieldtype": "Check",
+   "label": "Dysuria"
+  },
+  {
+   "fieldname": "column_break_gqqug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "hematuria",
+   "fieldtype": "Check",
+   "label": "Hematuria"
+  },
+  {
+   "fieldname": "column_break_8wqxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "anuria",
+   "fieldtype": "Check",
+   "label": "Anuria"
+  },
+  {
+   "fieldname": "section_break_ahzm8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "distended__bladder",
+   "fieldtype": "Check",
+   "label": "Distended  Bladder"
+  },
+  {
+   "fieldname": "column_break_llx1c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "foley_cather",
+   "fieldtype": "Check",
+   "label": "Foley cather"
+  },
+  {
+   "fieldname": "column_break_um0bp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "label": "Number"
+  },
+  {
+   "fieldname": "section_break_zfyia",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "urine_color",
+   "fieldtype": "Check",
+   "label": "Urine Color"
+  },
+  {
+   "fieldname": "column_break_emdjn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "column_break_skt64",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dark",
+   "fieldtype": "Check",
+   "label": "Dark"
+  },
+  {
+   "fieldname": "column_break_zywdh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "turbid",
+   "fieldtype": "Check",
+   "label": "Turbid"
+  },
+  {
+   "fieldname": "column_break_3omgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "section_break_hmmxh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_pozlr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "breathing",
+   "fieldtype": "HTML",
+   "label": "BREATHING",
+   "options": "BREATHING"
+  },
+  {
+   "fieldname": "section_break_soxz6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qau2y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rate",
+   "fieldtype": "Check",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_0bnlk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "regular",
+   "fieldtype": "Check",
+   "label": "Regular"
+  },
+  {
+   "fieldname": "column_break_cuuy9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "irregular",
+   "fieldtype": "Check",
+   "label": "Irregular"
+  },
+  {
+   "fieldname": "column_break_trlpl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rapid",
+   "fieldtype": "Check",
+   "label": "Rapid"
+  },
+  {
+   "fieldname": "column_break_sgbtt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "shallow",
+   "fieldtype": "Check",
+   "label": "Shallow"
+  },
+  {
+   "fieldname": "section_break_rsa9h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "o2_sat",
+   "fieldtype": "Check",
+   "label": "O2 Sat"
+  },
+  {
+   "fieldname": "column_break_nhfn0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "on",
+   "fieldtype": "Data",
+   "label": "on"
+  },
+  {
+   "fieldname": "column_break_w1hwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "o2_ltmin",
+   "fieldtype": "Check",
+   "label": "O2 lt/min"
+  },
+  {
+   "fieldname": "section_break_amxo0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "oxygen_applied",
+   "fieldtype": "Check",
+   "label": "Oxygen Applied"
+  },
+  {
+   "fieldname": "column_break_enyct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "np",
+   "fieldtype": "Check",
+   "label": "NP"
+  },
+  {
+   "fieldname": "column_break_39oim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "mask",
+   "fieldtype": "Check",
+   "label": "Mask"
+  },
+  {
+   "fieldname": "column_break_5dxnn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "nrp",
+   "fieldtype": "Check",
+   "label": "NRP"
+  },
+  {
+   "fieldname": "column_break_vbwpe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ambubag",
+   "fieldtype": "Check",
+   "label": "Ambubag"
+  },
+  {
+   "fieldname": "section_break_qk3fj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "na_1",
+   "fieldtype": "Check",
+   "label": "N/A"
+  },
+  {
+   "fieldname": "gyne",
+   "fieldtype": "HTML",
+   "label": "GYNE",
+   "options": "GYNE"
+  },
+  {
+   "fieldname": "section_break_kznly",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_caciy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pregnancy",
+   "fieldtype": "Data",
+   "label": "Pregnancy"
+  },
+  {
+   "fieldname": "column_break_6jrdz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "para",
+   "fieldtype": "Data",
+   "label": "Para"
+  },
+  {
+   "fieldname": "column_break_jhmwm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "abortion",
+   "fieldtype": "Data",
+   "label": "Abortion"
+  },
+  {
+   "fieldname": "column_break_tcwez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "err",
+   "fieldtype": "Data",
+   "label": "ERR"
+  },
+  {
+   "fieldname": "section_break_tqokn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "discharge",
+   "fieldtype": "Check",
+   "label": "Discharge"
+  },
+  {
+   "fieldname": "column_break_kzj8t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bleeding",
+   "fieldtype": "Check",
+   "label": "Bleeding"
+  },
+  {
+   "fieldname": "column_break_vom7k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_db7z6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "contractions",
+   "fieldtype": "Check",
+   "label": "Contractions"
+  },
+  {
+   "fieldname": "column_break_nkn4y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "abdominal_pain",
+   "fieldtype": "Check",
+   "label": "Abdominal Pain"
+  },
+  {
+   "fieldname": "section_break_b16ru",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments_2",
+   "fieldtype": "Text",
+   "label": "Comments: "
+  },
+  {
+   "fieldname": "section_break_38opr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pediatrics",
+   "fieldtype": "HTML",
+   "label": "PEDIATRICS",
+   "options": "PEDIATRICS"
+  },
+  {
+   "fieldname": "section_break_5hcef",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fontanels",
+   "fieldtype": "Check",
+   "label": "Fontanel's"
+  },
+  {
+   "fieldname": "column_break_r02vc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal_2",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "column_break_kprvs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sunken",
+   "fieldtype": "Check",
+   "label": "Sunken"
+  },
+  {
+   "fieldname": "column_break_opcs0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bulging",
+   "fieldtype": "Check",
+   "label": "Bulging"
+  },
+  {
+   "fieldname": "column_break_x3lwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal_3",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "column_break_rkzvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "absent",
+   "fieldtype": "Check",
+   "label": "Absent"
+  },
+  {
+   "fieldname": "section_break_vtdki",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments_3",
+   "fieldtype": "Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "section_break_mtfgb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "behavior",
+   "fieldtype": "HTML",
+   "label": "BEHAVIOR",
+   "options": "BEHAVIOR"
+  },
+  {
+   "fieldname": "section_break_2rmud",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cooperative",
+   "fieldtype": "Check",
+   "label": "Cooperative"
+  },
+  {
+   "fieldname": "column_break_eavwq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "agitated",
+   "fieldtype": "Check",
+   "label": "Agitated"
+  },
+  {
+   "fieldname": "column_break_cjpza",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "drowsy",
+   "fieldtype": "Check",
+   "label": "Drowsy"
+  },
+  {
+   "fieldname": "column_break_kymq5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "irritable",
+   "fieldtype": "Check",
+   "label": "Irritable"
+  },
+  {
+   "fieldname": "column_break_wl8lp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "restless",
+   "fieldtype": "Check",
+   "label": "Restless"
+  },
+  {
+   "fieldname": "section_break_jwl2v",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "g_i",
+   "fieldtype": "HTML",
+   "label": "G I",
+   "options": "G I"
+  },
+  {
+   "fieldname": "section_break_xnql4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "na_3",
+   "fieldtype": "Check",
+   "label": "N / A"
+  },
+  {
+   "fieldname": "column_break_mjoqq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "HTML",
+   "label": "Abdomen",
+   "options": "Abdomen"
+  },
+  {
+   "fieldname": "column_break_qz0cx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "soft",
+   "fieldtype": "Check",
+   "label": "Soft"
+  },
+  {
+   "fieldname": "column_break_mynqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tender",
+   "fieldtype": "Check",
+   "label": "Tender"
+  },
+  {
+   "fieldname": "column_break_nta3a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "distended",
+   "fieldtype": "Check",
+   "label": "Distended"
+  },
+  {
+   "fieldname": "section_break_wdp1n",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bowel_sounds",
+   "fieldtype": "HTML",
+   "label": "Bowel Sounds",
+   "options": "Bowel Sounds"
+  },
+  {
+   "fieldname": "section_break_kwa6w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "present",
+   "fieldtype": "Check",
+   "label": "Present"
+  },
+  {
+   "fieldname": "column_break_fdu6k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "absence",
+   "fieldtype": "Check",
+   "label": "Absence"
+  },
+  {
+   "fieldname": "column_break_foz1b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "hyperactive",
+   "fieldtype": "Check",
+   "label": "Hyperactive"
+  },
+  {
+   "fieldname": "section_break_pp1me",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "vomiting",
+   "fieldtype": "Check",
+   "label": "Vomiting"
+  },
+  {
+   "fieldname": "column_break_q5q0g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amout_1",
+   "fieldtype": "Data",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "section_break_6mejl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "constipation",
+   "fieldtype": "Check",
+   "label": "Constipation"
+  },
+  {
+   "fieldname": "column_break_uh8kc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lbm",
+   "fieldtype": "Data",
+   "label": " LBM"
+  },
+  {
+   "fieldname": "section_break_ndt72",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wound_assessment",
+   "fieldtype": "HTML",
+   "label": "WOUND ASSESSMENT",
+   "options": "WOUND ASSESSMENT"
+  },
+  {
+   "fieldname": "section_break_zel3l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "location_put_x_to_mark_on_body_diagram",
+   "fieldtype": "HTML",
+   "label": "Location Put X to mark on Body Diagram ",
+   "options": "Location: Put X to mark on Body Diagram "
+  },
+  {
+   "fieldname": "section_break_jwfna",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "shape",
+   "fieldtype": "Check",
+   "label": "Shape"
+  },
+  {
+   "fieldname": "column_break_cr5qw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "irregular_2",
+   "fieldtype": "Check",
+   "label": "Irregular"
+  },
+  {
+   "fieldname": "column_break_rk1ys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "linear",
+   "fieldtype": "Check",
+   "label": " Linear"
+  },
+  {
+   "fieldname": "section_break_a53h0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "round",
+   "fieldtype": "Check",
+   "label": "Round"
+  },
+  {
+   "fieldname": "column_break_uuv71",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_2",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "column_break_elv59",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "HTML",
+   "label": "Size",
+   "options": "Size"
+  },
+  {
+   "fieldname": "column_break_eczej",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "_2cm",
+   "fieldtype": "Check",
+   "label": "< 2cm"
+  },
+  {
+   "fieldname": "column_break_4a1w4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "_4cm",
+   "fieldtype": "Check",
+   "label": "< 4cm"
+  },
+  {
+   "fieldname": "section_break_p4elw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "_6cm",
+   "fieldtype": "Check",
+   "label": "< 6cm"
+  },
+  {
+   "fieldname": "column_break_jklrq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "_8cm",
+   "fieldtype": "Check",
+   "label": "< 8cm"
+  },
+  {
+   "fieldname": "section_break_2ri9v",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commerts",
+   "fieldtype": "Text",
+   "label": "Commerts"
+  },
+  {
+   "fieldname": "section_break_f1qei",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nurse_name",
+   "fieldtype": "Data",
+   "label": "Nurse Name"
+  },
+  {
+   "fieldname": "column_break_qsljb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_xvye0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Table",
+   "label": "Medication",
+   "options": "mediacation"
+  },
+  {
+   "fieldname": "section_break_8fqm8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "intake",
+   "fieldtype": "Table",
+   "label": "Intake",
+   "options": "Intake DIH"
+  },
+  {
+   "fieldname": "section_break_tixnx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fall_safety_assessment_modified_for_ed",
+   "fieldtype": "HTML",
+   "label": "Fall Safety Assessment (Modified for ED)",
+   "options": "Fall Safety Assessment (Modified for ED)"
+  },
+  {
+   "fieldname": "section_break_8mo5a",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "age__65",
+   "fieldtype": "Check",
+   "label": "Age > 65"
+  },
+  {
+   "fieldname": "section_break_ch0o5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "confusion_disorientation",
+   "fieldtype": "Check",
+   "label": "Confusion, Disorientation"
+  },
+  {
+   "fieldname": "section_break_84liy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "non_compliant__impaired_judgment",
+   "fieldtype": "Check",
+   "label": "Non Compliant / Impaired Judgment"
+  },
+  {
+   "fieldname": "section_break_dstdh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "decreased_mobility_i_strength",
+   "fieldtype": "Check",
+   "label": "Decreased mobility I Strength"
+  },
+  {
+   "fieldname": "section_break_jw2pd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "impaired_circulation_i_decreased_sensation_tolirnbs",
+   "fieldtype": "Check",
+   "label": "Impaired circulation I decreased sensation tolirnbs"
+  },
+  {
+   "fieldname": "section_break_iquvd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "seisures_i_syncope",
+   "fieldtype": "Check",
+   "label": "Seisures I syncope"
+  },
+  {
+   "fieldname": "section_break_rc8ui",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "receiving_sedatives__hypnotics__under_influence_of_alcohol",
+   "fieldtype": "Check",
+   "label": "Receiving sedatives / hypnotics / under influence of alcohol"
+  },
+  {
+   "fieldname": "section_break_jvpp5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "impaired_vision_i_hearing_i_understanding",
+   "fieldtype": "Check",
+   "label": "Impaired vision I hearing I understanding"
+  },
+  {
+   "fieldname": "section_break_lcedm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "nocturia",
+   "fieldtype": "Check",
+   "label": "Nocturia"
+  },
+  {
+   "fieldname": "section_break_icfxb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_risk",
+   "fieldtype": "Check",
+   "label": "No Risk"
+  },
+  {
+   "fieldname": "section_break_ylrju",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nurses_notes",
+   "fieldtype": "Table",
+   "label": "Nurses Notes",
+   "options": "nurses notes"
+  },
+  {
+   "fieldname": "section_break_3xx9y",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "disposition",
+   "fieldtype": "HTML",
+   "label": "DISPOSITION",
+   "options": "DISPOSITION"
+  },
+  {
+   "fieldname": "section_break_pm4jp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "home",
+   "fieldtype": "Check",
+   "label": "Home"
+  },
+  {
+   "fieldname": "column_break_52elm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "clinic",
+   "fieldtype": "Check",
+   "label": "Clinic"
+  },
+  {
+   "fieldname": "column_break_bwq1l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ama",
+   "fieldtype": "Check",
+   "label": "AMA"
+  },
+  {
+   "fieldname": "column_break_ilfuc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "lwbs",
+   "fieldtype": "Check",
+   "label": "LWBS"
+  },
+  {
+   "fieldname": "section_break_wtbnm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "morgue",
+   "fieldtype": "Check",
+   "label": "Morgue "
+  },
+  {
+   "fieldname": "column_break_daxgu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transferred_to",
+   "fieldtype": "Data",
+   "label": "Transferred to"
+  },
+  {
+   "fieldname": "column_break_eapkl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admit_to",
+   "fieldtype": "Data",
+   "label": "Admit to"
+  },
+  {
+   "fieldname": "section_break_5pwzd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "report_given_to",
+   "fieldtype": "Data",
+   "label": "Report Given to"
+  },
+  {
+   "fieldname": "column_break_f3x63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ama__against_medical_advice",
+   "fieldtype": "HTML",
+   "label": "AMA  Against Medical Advice",
+   "options": "AMA  Against Medical Advice"
+  },
+  {
+   "fieldname": "section_break_xhcad",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lwct__leave_without_continuing_treatment",
+   "fieldtype": "HTML",
+   "label": "LWCT  Leave Without Continuing Treatment ",
+   "options": "LWCT - Leave Without Continuing Treatment "
+  },
+  {
+   "fieldname": "column_break_ytq4m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lvvbs__leave_without_being_seen",
+   "fieldtype": "HTML",
+   "label": "LVVBS  Leave Without Being Seen",
+   "options": "LVVBS - Leave Without Being Seen"
+  },
+  {
+   "fieldname": "section_break_ppllb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "follow_up_1",
+   "fieldtype": "HTML",
+   "label": "Follow UP",
+   "options": "Follow UP"
+  },
+  {
+   "fieldname": "section_break_be9iq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "where_eligible",
+   "fieldtype": "Check",
+   "label": "Where Eligible"
+  },
+  {
+   "fieldname": "column_break_5o1ol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "clinic_2",
+   "fieldtype": "Check",
+   "label": "Clinic"
+  },
+  {
+   "fieldname": "column_break_bro1g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_3",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "section_break_mov2f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "follow_up_2",
+   "fieldtype": "HTML",
+   "label": "Follow up",
+   "options": "Follow up"
+  },
+  {
+   "fieldname": "section_break_4yrrv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "instructions_given_re",
+   "fieldtype": "Check",
+   "label": "Instructions given re"
+  },
+  {
+   "fieldname": "column_break_h4zyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "verbal_1",
+   "fieldtype": "Check",
+   "label": "verbal"
+  },
+  {
+   "fieldname": "column_break_u17zv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "verbal_2",
+   "fieldtype": "Check",
+   "label": "verbal"
+  },
+  {
+   "fieldname": "section_break_yaqvx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "verbalized_understanding_of_discharge_instructions",
+   "fieldtype": "Check",
+   "label": "Verbalized understanding of discharge instructions"
+  },
+  {
+   "fieldname": "section_break_sdbhi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_lp6fc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_moigk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commnets_4",
+   "fieldtype": "Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "section_break_iyvpf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ed_staff_nurses",
+   "fieldtype": "Table",
+   "label": "ED STAFF NURSES",
+   "options": "ED STAFF NURSES"
+  },
+  {
+   "fieldname": "section_break_hmryd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "endorsed_toojnits_staff_nurses",
+   "fieldtype": "Table",
+   "label": " ENDORSED TOOJNITS STAFF NURSES",
+   "options": "ENDORSED TOOJNITS STAFF NURSES"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-05 11:41:41.118242",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Emergency Nursing Assessment form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

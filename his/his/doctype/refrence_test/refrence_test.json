@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-28 10:51:54.605696",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "test_template",
+  "test",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Test Template",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Test",
+   "options": "test_template"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Not Ready\nReady\nCancelled\nOthers"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-28 10:55:04.819085",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Refrence Test",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

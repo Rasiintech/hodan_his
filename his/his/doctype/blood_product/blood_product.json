@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-15 11:42:33.668169",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "blood_product",
+  "number",
+  "blood_product_number",
+  "expirationdate"
+ ],
+ "fields": [
+  {
+   "fieldname": "blood_product",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Blood Product"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Number"
+  },
+  {
+   "fieldname": "blood_product_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Blood Product Number"
+  },
+  {
+   "fieldname": "expirationdate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ExpirationDate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-15 12:14:34.469005",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "BLOOD PRODUCT",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

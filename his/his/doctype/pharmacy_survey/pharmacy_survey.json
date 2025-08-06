@@ -1,0 +1,267 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PharSUR-.#####",
+ "creation": "2025-05-06 10:11:55.673950",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gender",
+  "age",
+  "date_of_visit",
+  "section_break_vqzzz",
+  "name_002",
+  "why_1",
+  "section_break_ldnv7",
+  "did_you_find_all_the_medications_or_products_you_needed",
+  "why_2",
+  "section_break_r2zyk",
+  "name_003",
+  "why_3",
+  "section_break_cohy2",
+  "name_004",
+  "why_4",
+  "section_break_h5vsw",
+  "were_you_greeted_in_a_friendly_and_professional_manner",
+  "why_5",
+  "section_break_mvcyu",
+  "name_6600",
+  "why_6",
+  "section_break_i4dlc",
+  "how_would_you_rate_the_helpfulness_of_our_staff",
+  "why_7",
+  "section_break_aljvt",
+  "did_the_staff_explain_how_to_take_your_medication_properly",
+  "why_8",
+  "section_break_c1zrn",
+  "how_likely_are_you_to_recommend_our_pharmacy_to_others",
+  "why_9",
+  "section_break_mvntj",
+  "name_001",
+  "why_10"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "patient.age_type",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_vqzzz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_001",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "10. How satisfied are you with your overall experience at our pharmacy?",
+   "options": "\nPoor\nFair\nVery good\nN/A",
+   "reqd": 1
+  },
+  {
+   "fieldname": "how_likely_are_you_to_recommend_our_pharmacy_to_others",
+   "fieldtype": "Select",
+   "label": "9. How likely are you to recommend our pharmacy to others?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_002",
+   "fieldtype": "Select",
+   "label": "1. How would you rate the cleanliness and organization of the store?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "did_you_find_all_the_medications_or_products_you_needed",
+   "fieldtype": "Select",
+   "label": "2. Were you able to get all the medicines or products you needed during your visit?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_003",
+   "fieldtype": "Select",
+   "label": "3. If a medicine or product was not available, did the staff offer you another option or tell you when it would be available again?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_004",
+   "fieldtype": "Select",
+   "label": "4. Were you satisfied with the amount of time you had to wait to receive care or service?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "were_you_greeted_in_a_friendly_and_professional_manner",
+   "fieldtype": "Select",
+   "label": "5. Were you greeted in a friendly and professional manner by the staff?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "how_would_you_rate_the_helpfulness_of_our_staff",
+   "fieldtype": "Select",
+   "label": "7. How would you rate the helpfulness of our staff?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "did_the_staff_explain_how_to_take_your_medication_properly",
+   "fieldtype": "Select",
+   "label": "8. Did the staff clearly explain how to take your medication properly?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "why_1",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_ldnv7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_2",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_r2zyk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_3",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_cohy2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_4",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_h5vsw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_5",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_mvcyu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_6600",
+   "fieldtype": "Select",
+   "label": "6. Did the staff clearly explain how to take your medication properly?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "why_6",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_i4dlc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_7",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_aljvt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_8",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_c1zrn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_9",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_mvntj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_10",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-15 14:37:05.646572",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Pharmacy Survey",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

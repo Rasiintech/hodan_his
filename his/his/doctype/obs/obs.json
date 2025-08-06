@@ -1,0 +1,360 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OBS-.##### ",
+ "creation": "2023-05-09 11:21:37.525338",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "column_break_7hdmn",
+  "practitioner",
+  "date",
+  "section_break_wb4id",
+  "lmp",
+  "status",
+  "g",
+  "column_break_dngfi",
+  "p",
+  "column_break_itipb",
+  "abortion",
+  "column_break_gru4z",
+  "alive",
+  "details_tab",
+  "section_break_ruuxq",
+  "bleeding",
+  "contractions",
+  "weight",
+  "bp",
+  "edeme",
+  "vomiting",
+  "nausea",
+  "symptoms",
+  "diagnosis",
+  "finally_diagnosis",
+  "comment",
+  "investigations_tab",
+  "select_lab_tests",
+  "lab_test_prescription",
+  "imaging_tab",
+  "select_imaging",
+  "radiology_prescription",
+  "procedure_tab",
+  "procedure_prescription",
+  "medication_tab",
+  "drug_prescription",
+  "que",
+  "medication_so",
+  "services_so",
+  "amended_from",
+  "lab_result_tab",
+  "lab"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "lmp",
+   "fieldtype": "Date",
+   "label": "LMP"
+  },
+  {
+   "default": "0",
+   "fieldname": "contractions",
+   "fieldtype": "Check",
+   "label": "Contractions"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "edeme",
+   "fieldtype": "Data",
+   "label": "Edeme"
+  },
+  {
+   "fieldname": "vomiting",
+   "fieldtype": "Data",
+   "label": "Vomiting"
+  },
+  {
+   "fieldname": "nausea",
+   "fieldtype": "Data",
+   "label": "Nausea"
+  },
+  {
+   "fieldname": "symptoms",
+   "fieldtype": "Table MultiSelect",
+   "label": "Symptoms",
+   "options": "Patient Encounter Symptom"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table MultiSelect",
+   "label": "Primary Diagnosis",
+   "options": "Patient Encounter Diagnosis"
+  },
+  {
+   "fieldname": "finally_diagnosis",
+   "fieldtype": "HTML",
+   "label": "Finally Diagnosis",
+   "options": "Patient Encounter Diagnosis"
+  },
+  {
+   "default": "0",
+   "fieldname": "bleeding",
+   "fieldtype": "Check",
+   "label": "Bleeding"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "g",
+   "fieldtype": "Select",
+   "label": "G:",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15"
+  },
+  {
+   "fieldname": "column_break_dngfi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Select",
+   "label": "P:",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15"
+  },
+  {
+   "fieldname": "abortion",
+   "fieldtype": "Select",
+   "label": "Abortion",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15"
+  },
+  {
+   "fieldname": "column_break_itipb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gru4z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alive",
+   "fieldtype": "Select",
+   "label": "ALive",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15"
+  },
+  {
+   "fieldname": "section_break_ruuxq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wb4id",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7hdmn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "investigations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "lab_test_prescription",
+   "fieldtype": "Table",
+   "label": "Lab test",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "imaging_tab",
+   "fieldtype": "Tab Break",
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "radiology_prescription",
+   "fieldtype": "Table",
+   "label": "Imaging",
+   "options": "Radiology Prescription"
+  },
+  {
+   "fieldname": "procedure_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procedure"
+  },
+  {
+   "fieldname": "procedure_prescription",
+   "fieldtype": "Table",
+   "label": "Procedure Prescription",
+   "options": "Procedure Prescription"
+  },
+  {
+   "fieldname": "medication_tab",
+   "fieldtype": "Tab Break",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Drug Prescription",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "que",
+   "fieldtype": "Data",
+   "label": "Que",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "label": "medication_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "label": "services_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OBS",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_lab_tests",
+   "fieldtype": "Button",
+   "label": "Select Lab Tests"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "lab_result_tab",
+   "fieldtype": "Tab Break",
+   "label": "Lab Result"
+  },
+  {
+   "fieldname": "lab",
+   "fieldtype": "HTML",
+   "label": "lab",
+   "options": "<div id=\"labs\">  </div>"
+  },
+  {
+   "fieldname": "select_imaging",
+   "fieldtype": "Button",
+   "label": "Select Imaging"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-29 13:29:00.654395",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OBS",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

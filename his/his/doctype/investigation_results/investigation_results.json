@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-15 10:36:51.428591",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "twpcs",
+  "plate",
+  "crp",
+  "urea",
+  "creatinine",
+  "differential",
+  "hb"
+ ],
+ "fields": [
+  {
+   "fieldname": "twpcs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WBCs trend and differential"
+  },
+  {
+   "fieldname": "plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plate  "
+  },
+  {
+   "fieldname": "crp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CRP   "
+  },
+  {
+   "fieldname": "urea",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Urea          "
+  },
+  {
+   "fieldname": "creatinine",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "creatinine          "
+  },
+  {
+   "fieldname": "differential",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Differential"
+  },
+  {
+   "fieldname": "hb",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "HB%"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-05 09:33:53.174786",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Investigation results",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-22 11:22:35.462612",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "from_nurse_user",
+  "nurse_name",
+  "to_nurse",
+  "to_nurse_name",
+  "sub",
+  "handover_items",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_nurse_user",
+   "fieldtype": "Link",
+   "label": "From Nurse User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "from_nurse_user.full_name",
+   "fieldname": "nurse_name",
+   "fieldtype": "Data",
+   "label": "From Nurse Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "handover_items",
+   "fieldtype": "Table",
+   "label": "Handover Items",
+   "options": "Materials Handover Items",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "to_nurse",
+   "fieldtype": "Link",
+   "label": "To Nurse",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sub",
+   "fieldtype": "Small Text",
+   "label": "Sub"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "to_nurse.full_name",
+   "fieldname": "to_nurse_name",
+   "fieldtype": "Data",
+   "label": "To Nurse Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Materials Handover",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MAT-HO-.YYYY.-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-05 09:22:12.035602",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Materials Handover",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

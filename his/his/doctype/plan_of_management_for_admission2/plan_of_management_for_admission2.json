@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-15 11:02:32.782926",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "anti8ischemics",
+  "anti_arrhythmia",
+  "anti_inflammatory",
+  "antipyretics",
+  "vitamins",
+  "nutritional_support",
+  "trace_elements",
+  "electrolytes",
+  "mucolytic"
+ ],
+ "fields": [
+  {
+   "fieldname": "anti8ischemics",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Anti ischemics"
+  },
+  {
+   "fieldname": "anti_arrhythmia",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "anti arrhythmia"
+  },
+  {
+   "fieldname": "anti_inflammatory",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Anti inflammatory"
+  },
+  {
+   "fieldname": "antipyretics",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Anti pyretics "
+  },
+  {
+   "fieldname": "vitamins",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vitamins"
+  },
+  {
+   "fieldname": "nutritional_support",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "nutritional support"
+  },
+  {
+   "fieldname": "trace_elements",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Trace elements"
+  },
+  {
+   "fieldname": "electrolytes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "electrolytes"
+  },
+  {
+   "fieldname": "mucolytic",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mucolytic"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-15 11:02:32.782926",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Plan of management for admission2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

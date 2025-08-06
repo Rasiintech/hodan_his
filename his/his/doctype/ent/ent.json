@@ -1,0 +1,1246 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ENT-.##### ",
+ "creation": "2023-05-13 11:55:10.964935",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "age",
+  "gender",
+  "status",
+  "column_break_od599",
+  "practitioner",
+  "department",
+  "date",
+  "section_break_lngvw",
+  "symptoms_tab",
+  "section_break_cmebs",
+  "larynx_symptoms",
+  "hoarseness",
+  "difficullty_speaking",
+  "irritating_cough",
+  "sore_throat",
+  "larynx_pain",
+  "dry_throat",
+  "tickling_sensation_in_throat",
+  "dry_cough",
+  "sysphagia",
+  "cartilage_fracture",
+  "column_break_mtuqw",
+  "otic_symptoms",
+  "runny_nose",
+  "stuffy_nose",
+  "post",
+  "facial_pain",
+  "facial_pressure",
+  "so",
+  "cough",
+  "bad_breath",
+  "nosebleeds",
+  "deviated_septoum",
+  "nasal_polyp",
+  "blocked_nose",
+  "otic_symptoms_column",
+  "obtic_s",
+  "ear_ache",
+  "rt",
+  "lt",
+  "malodor_exudate",
+  "rt1",
+  "lt1",
+  "sp",
+  "fever",
+  "da",
+  "hearing_loss",
+  "rt2",
+  "lf2",
+  "column_break_smyad",
+  "discharge_of_pus",
+  "rt3",
+  "lt3",
+  "sp4",
+  "headache",
+  "tr12",
+  "itching_of_outer_ear",
+  "rt4",
+  "lt4",
+  "space3",
+  "column_break_irlb7",
+  "sensation_thate_sound_is_muffled",
+  "rt5",
+  "lt7",
+  "space7",
+  "tinnitus",
+  "rt8",
+  "lt8",
+  "feeling_of_pressure_inside_the_ear",
+  "rt10",
+  "lt10",
+  "dps",
+  "dizziness",
+  "feeling_a_spinning_sensation",
+  "rt9",
+  "lt9",
+  "problems_with_walking",
+  "rtt",
+  "ltt",
+  "space",
+  "nausea",
+  "column_break_hkmlh",
+  "impacted_cerumen",
+  "rttt",
+  "lttt",
+  "otorrhea",
+  "rtttt",
+  "lfff",
+  "swollen_ear",
+  "r1",
+  "l1",
+  "red_ear",
+  "r2",
+  "l2",
+  "pinna_hematoma",
+  "r3",
+  "l4",
+  "pinna_ulcer",
+  "r5",
+  "l5",
+  "column_break_ctpxk",
+  "neck_symptoms",
+  "thyroid_mass",
+  "neck_mass",
+  "neck_abscess",
+  "neck_pain",
+  "section_break_n6lyr",
+  "additional_symptoms",
+  "examination_tab",
+  "section_break_r9cbz",
+  "pure_tone_audiometry_pta",
+  "rtt1",
+  "ltt1",
+  "tympanometry",
+  "rtt2",
+  "ltt2",
+  "direct_flexible_laryngoscopy",
+  "rtt4",
+  "ltt4",
+  "additional_diagnosis",
+  "diagnosis_tab",
+  "section_break_gk3tq",
+  "tonsillitis_acute",
+  "tonsillitis_chronic",
+  "acute_sinusitis",
+  "chronic_sinusitis",
+  "otitis_media",
+  "otitis_externa",
+  "cholesteatoma",
+  "menieres_disease",
+  "nos",
+  "sleep_apnea",
+  "gastric_reflux",
+  "mastoiditis",
+  "column_break_kvrbv",
+  "epiglottitis",
+  "ethmoiditis",
+  "colds_and_flu",
+  "chronic_suppurative_otitis_media",
+  "allergic_rhinitis",
+  "pharyngitis",
+  "laryngitis_acutechronic",
+  "enlarged_adenoids",
+  "nasal_polyps",
+  "nasal_fractures",
+  "parotitis",
+  "parotid_mass",
+  "aphthous_ulcer",
+  "sialolithiasis",
+  "sialadenitis",
+  "vocal_nodules",
+  "vocal_cord_palsy",
+  "bells",
+  "additional_diagnose",
+  "investigations_tab",
+  "section_break_glmn0",
+  "select_lab_tests",
+  "lab_test_prescription",
+  "imaging_tab",
+  "radiology_prescription",
+  "procedures_tab",
+  "procedure_prescription",
+  "medication_tab",
+  "drug_prescription",
+  "que",
+  "medication_so",
+  "services_so",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_od599",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_lngvw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "symptoms_tab",
+   "fieldtype": "Tab Break",
+   "label": "Symptoms"
+  },
+  {
+   "fieldname": "section_break_cmebs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "larynx_symptoms",
+   "fieldtype": "HTML",
+   "label": "Larynx symptoms",
+   "options": "<b>Larynx symptoms</b>"
+  },
+  {
+   "default": "0",
+   "fieldname": "hoarseness",
+   "fieldtype": "Check",
+   "label": "Hoarseness"
+  },
+  {
+   "default": "0",
+   "fieldname": "difficullty_speaking",
+   "fieldtype": "Check",
+   "label": "difficullty speaking"
+  },
+  {
+   "default": "0",
+   "fieldname": "irritating_cough",
+   "fieldtype": "Check",
+   "label": "irritating cough"
+  },
+  {
+   "default": "0",
+   "fieldname": "sore_throat",
+   "fieldtype": "Check",
+   "label": "Sore throat"
+  },
+  {
+   "default": "0",
+   "fieldname": "larynx_pain",
+   "fieldtype": "Check",
+   "label": "larynx pain"
+  },
+  {
+   "default": "0",
+   "fieldname": "dry_throat",
+   "fieldtype": "Check",
+   "label": "Dry throat"
+  },
+  {
+   "default": "0",
+   "fieldname": "tickling_sensation_in_throat",
+   "fieldtype": "Check",
+   "label": "tickling sensation in throat"
+  },
+  {
+   "default": "0",
+   "fieldname": "dry_cough",
+   "fieldtype": "Check",
+   "label": "Dry cough"
+  },
+  {
+   "default": "0",
+   "fieldname": "sysphagia",
+   "fieldtype": "Check",
+   "label": "Sysphagia"
+  },
+  {
+   "default": "0",
+   "fieldname": "cartilage_fracture",
+   "fieldtype": "Check",
+   "label": "Cartilage fracture"
+  },
+  {
+   "fieldname": "column_break_mtuqw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "runny_nose",
+   "fieldtype": "Check",
+   "label": "Runny nose"
+  },
+  {
+   "default": "0",
+   "fieldname": "stuffy_nose",
+   "fieldtype": "Check",
+   "label": "Stuffy nose"
+  },
+  {
+   "default": "0",
+   "fieldname": "post",
+   "fieldtype": "Check",
+   "label": "post-nasal drip"
+  },
+  {
+   "default": "0",
+   "fieldname": "facial_pain",
+   "fieldtype": "Check",
+   "label": "facial pain"
+  },
+  {
+   "default": "0",
+   "fieldname": "facial_pressure",
+   "fieldtype": "Check",
+   "label": "facial pressure"
+  },
+  {
+   "default": "0",
+   "fieldname": "so",
+   "fieldtype": "Check",
+   "label": "sore throat"
+  },
+  {
+   "default": "0",
+   "fieldname": "cough",
+   "fieldtype": "Check",
+   "label": "cough"
+  },
+  {
+   "default": "0",
+   "fieldname": "bad_breath",
+   "fieldtype": "Check",
+   "label": "bad breath"
+  },
+  {
+   "default": "0",
+   "fieldname": "nosebleeds",
+   "fieldtype": "Check",
+   "label": "nosebleeds"
+  },
+  {
+   "default": "0",
+   "fieldname": "deviated_septoum",
+   "fieldtype": "Check",
+   "label": "deviated septoum"
+  },
+  {
+   "default": "0",
+   "fieldname": "nasal_polyp",
+   "fieldtype": "Check",
+   "label": "nasal polyp"
+  },
+  {
+   "default": "0",
+   "fieldname": "blocked_nose",
+   "fieldtype": "Check",
+   "label": "blocked nose"
+  },
+  {
+   "fieldname": "otic_symptoms_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "otic_symptoms",
+   "fieldtype": "HTML",
+   "label": "Otic symptoms",
+   "options": "<b>Nasal samptoms</b>"
+  },
+  {
+   "fieldname": "obtic_s",
+   "fieldtype": "HTML",
+   "label": "Otic symptoms",
+   "options": "<b>Otic symptoms</b>"
+  },
+  {
+   "default": "0",
+   "fieldname": "ear_ache",
+   "fieldtype": "HTML",
+   "label": "Ear ache",
+   "options": " <br>Ear ache "
+  },
+  {
+   "default": "0",
+   "fieldname": "malodor_exudate",
+   "fieldtype": "HTML",
+   "label": "Malodor exudate",
+   "options": "<br>Malodor exudate "
+  },
+  {
+   "default": "0",
+   "fieldname": "fever",
+   "fieldtype": "Check",
+   "label": "fever"
+  },
+  {
+   "default": "0",
+   "fieldname": "hearing_loss",
+   "fieldtype": "HTML",
+   "label": "Hearing loss",
+   "options": "<br>Hearing loss"
+  },
+  {
+   "default": "0",
+   "fieldname": "discharge_of_pus",
+   "fieldtype": "HTML",
+   "label": "discharge of pus",
+   "options": "<br>discharge of pus"
+  },
+  {
+   "default": "0",
+   "fieldname": "headache",
+   "fieldtype": "Check",
+   "label": "headache"
+  },
+  {
+   "default": "0",
+   "fieldname": "itching_of_outer_ear",
+   "fieldtype": "HTML",
+   "label": "Itching of outer ear",
+   "options": "<br>Itching of outer ear"
+  },
+  {
+   "default": "0",
+   "fieldname": "sensation_thate_sound_is_muffled",
+   "fieldtype": "HTML",
+   "label": "Sensation thate sound is muffled",
+   "options": "<br>Sensation thate sound is muffled"
+  },
+  {
+   "default": "0",
+   "fieldname": "tinnitus",
+   "fieldtype": "HTML",
+   "label": "tinnitus",
+   "options": "<br>Tinnitus"
+  },
+  {
+   "default": "0",
+   "fieldname": "feeling_of_pressure_inside_the_ear",
+   "fieldtype": "HTML",
+   "label": "Feeling of pressure inside the ear",
+   "options": "<br> Feeling of pressure inside the ear"
+  },
+  {
+   "default": "0",
+   "fieldname": "dizziness",
+   "fieldtype": "Check",
+   "label": "dizziness"
+  },
+  {
+   "default": "0",
+   "fieldname": "feeling_a_spinning_sensation",
+   "fieldtype": "HTML",
+   "label": "Feeling a spinning sensation",
+   "options": "<br> Feeling a spinning sensation"
+  },
+  {
+   "default": "0",
+   "fieldname": "problems_with_walking",
+   "fieldtype": "HTML",
+   "label": "Problems with walking",
+   "options": "<br>Problems with walking"
+  },
+  {
+   "default": "0",
+   "fieldname": "nausea",
+   "fieldtype": "Check",
+   "label": "nausea"
+  },
+  {
+   "default": "0",
+   "fieldname": "impacted_cerumen",
+   "fieldtype": "HTML",
+   "label": "Impacted cerumen ",
+   "options": "<br>Impacted cerumen "
+  },
+  {
+   "default": "0",
+   "fieldname": "otorrhea",
+   "fieldtype": "HTML",
+   "label": "otorrhea",
+   "options": "<br> otorrhea"
+  },
+  {
+   "default": "0",
+   "fieldname": "swollen_ear",
+   "fieldtype": "HTML",
+   "label": "Swollen ear",
+   "options": "<br> Swollen ear"
+  },
+  {
+   "default": "0",
+   "fieldname": "red_ear",
+   "fieldtype": "HTML",
+   "label": "Red ear",
+   "options": "<br> Red ear"
+  },
+  {
+   "default": "0",
+   "fieldname": "pinna_hematoma",
+   "fieldtype": "HTML",
+   "label": "Pinna hematoma",
+   "options": "<br> Pinna hematoma"
+  },
+  {
+   "default": "0",
+   "fieldname": "pinna_ulcer",
+   "fieldtype": "HTML",
+   "label": "Pinna ulcer",
+   "options": "<br> Pinna ulcer"
+  },
+  {
+   "fieldname": "column_break_ctpxk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "neck_symptoms",
+   "fieldtype": "HTML",
+   "label": "Neck symptoms",
+   "options": "<b>Neck symptoms</b>"
+  },
+  {
+   "default": "0",
+   "fieldname": "thyroid_mass",
+   "fieldtype": "Check",
+   "label": "Thyroid mass"
+  },
+  {
+   "default": "0",
+   "fieldname": "neck_mass",
+   "fieldtype": "Check",
+   "label": "Neck mass"
+  },
+  {
+   "default": "0",
+   "fieldname": "neck_abscess",
+   "fieldtype": "Check",
+   "label": "Neck abscess"
+  },
+  {
+   "default": "0",
+   "fieldname": "neck_pain",
+   "fieldtype": "Check",
+   "label": "Neck pain"
+  },
+  {
+   "fieldname": "examination_tab",
+   "fieldtype": "Tab Break",
+   "label": "Examination"
+  },
+  {
+   "fieldname": "section_break_r9cbz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pure_tone_audiometry_pta",
+   "fieldtype": "HTML",
+   "label": "Pure tone audiometry PTA",
+   "options": "Pure tone audiometry PTA <br>"
+  },
+  {
+   "fieldname": "tympanometry",
+   "fieldtype": "HTML",
+   "label": "Tympanometry",
+   "options": "<br>Tympanometry <br>"
+  },
+  {
+   "fieldname": "direct_flexible_laryngoscopy",
+   "fieldtype": "HTML",
+   "label": "Direct flexible laryngoscopy",
+   "options": "<br>Direct flexible laryngoscopy<br>"
+  },
+  {
+   "fieldname": "diagnosis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "section_break_gk3tq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tonsillitis_acute",
+   "fieldtype": "HTML",
+   "label": "Tonsillitis acute",
+   "options": "<b>Tonsillitis acute: </b>"
+  },
+  {
+   "default": "0",
+   "fieldname": "tonsillitis_chronic",
+   "fieldtype": "Check",
+   "label": "Tonsillitis chronic"
+  },
+  {
+   "default": "0",
+   "fieldname": "acute_sinusitis",
+   "fieldtype": "Check",
+   "label": "Acute sinusitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "chronic_sinusitis",
+   "fieldtype": "Check",
+   "label": "Chronic sinusitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "otitis_media",
+   "fieldtype": "Check",
+   "label": "Otitis media"
+  },
+  {
+   "default": "0",
+   "fieldname": "otitis_externa",
+   "fieldtype": "Check",
+   "label": "Otitis externa"
+  },
+  {
+   "default": "0",
+   "fieldname": "cholesteatoma",
+   "fieldtype": "Check",
+   "label": "Cholesteatoma"
+  },
+  {
+   "default": "0",
+   "fieldname": "menieres_disease",
+   "fieldtype": "Check",
+   "label": "Menieres disease"
+  },
+  {
+   "default": "0",
+   "fieldname": "nos",
+   "fieldtype": "Check",
+   "label": "Nosebleeds"
+  },
+  {
+   "default": "0",
+   "fieldname": "sleep_apnea",
+   "fieldtype": "Check",
+   "label": "Sleep Apnea"
+  },
+  {
+   "default": "0",
+   "fieldname": "gastric_reflux",
+   "fieldtype": "Check",
+   "label": "Gastric reflux"
+  },
+  {
+   "default": "0",
+   "fieldname": "mastoiditis",
+   "fieldtype": "Check",
+   "label": "Mastoiditis"
+  },
+  {
+   "fieldname": "column_break_kvrbv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "epiglottitis",
+   "fieldtype": "Check",
+   "label": "epiglottitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "ethmoiditis",
+   "fieldtype": "Check",
+   "label": "ethmoiditis"
+  },
+  {
+   "default": "0",
+   "fieldname": "colds_and_flu",
+   "fieldtype": "Check",
+   "label": "Colds and flu"
+  },
+  {
+   "default": "0",
+   "fieldname": "chronic_suppurative_otitis_media",
+   "fieldtype": "Check",
+   "label": "Chronic suppurative otitis media"
+  },
+  {
+   "default": "0",
+   "fieldname": "allergic_rhinitis",
+   "fieldtype": "Check",
+   "label": "Allergic rhinitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "pharyngitis",
+   "fieldtype": "Check",
+   "label": "pharyngitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "laryngitis_acutechronic",
+   "fieldtype": "Check",
+   "label": "Laryngitis acute..chronic"
+  },
+  {
+   "default": "0",
+   "fieldname": "enlarged_adenoids",
+   "fieldtype": "Check",
+   "label": "Enlarged adenoids"
+  },
+  {
+   "default": "0",
+   "fieldname": "nasal_polyps",
+   "fieldtype": "Check",
+   "label": "Nasal polyps"
+  },
+  {
+   "default": "0",
+   "fieldname": "nasal_fractures",
+   "fieldtype": "Check",
+   "label": "Nasal fractures"
+  },
+  {
+   "default": "0",
+   "fieldname": "parotitis",
+   "fieldtype": "Check",
+   "label": "parotitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "parotid_mass",
+   "fieldtype": "Check",
+   "label": "Parotid mass"
+  },
+  {
+   "default": "0",
+   "fieldname": "aphthous_ulcer",
+   "fieldtype": "Check",
+   "label": "Aphthous ulcer"
+  },
+  {
+   "default": "0",
+   "fieldname": "sialolithiasis",
+   "fieldtype": "Check",
+   "label": "Sialolithiasis"
+  },
+  {
+   "default": "0",
+   "fieldname": "sialadenitis",
+   "fieldtype": "Check",
+   "label": "Sialadenitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "vocal_nodules",
+   "fieldtype": "Check",
+   "label": "Vocal nodules"
+  },
+  {
+   "default": "0",
+   "fieldname": "vocal_cord_palsy",
+   "fieldtype": "Check",
+   "label": "Vocal cord palsy"
+  },
+  {
+   "default": "0",
+   "fieldname": "bells",
+   "fieldtype": "Check",
+   "label": "Belll`s palsy"
+  },
+  {
+   "fieldname": "additional_diagnose",
+   "fieldtype": "Table MultiSelect",
+   "label": "Additional Diagnose",
+   "options": "Patient Encounter Diagnosis"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt1",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt1",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "sp",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "da",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt2",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lf2",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "column_break_smyad",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt3",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt3",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "sp4",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "tr12",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt4",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt4",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "space3",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt5",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt7",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "space7",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt8",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt8",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "column_break_irlb7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt9",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt9",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "dps",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt10",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt10",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "rtt",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "ltt",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "space",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "column_break_hkmlh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rttt",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lttt",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "rtttt",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lfff",
+   "fieldtype": "Check",
+   "label": "Lf"
+  },
+  {
+   "default": "0",
+   "fieldname": "r1",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "l1",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "r2",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "l2",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "r3",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "l4",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "r5",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "l5",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "rtt1",
+   "fieldtype": "Data",
+   "label": "Rt"
+  },
+  {
+   "fieldname": "ltt1",
+   "fieldtype": "Data",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "rtt2",
+   "fieldtype": "Data",
+   "label": "Rt"
+  },
+  {
+   "fieldname": "ltt2",
+   "fieldtype": "Data",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "rtt4",
+   "fieldtype": "Data",
+   "label": "Rt"
+  },
+  {
+   "fieldname": "ltt4",
+   "fieldtype": "Data",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "investigations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "section_break_glmn0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lab_test_prescription",
+   "fieldtype": "Table",
+   "label": "Lab Test",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "imaging_tab",
+   "fieldtype": "Tab Break",
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "radiology_prescription",
+   "fieldtype": "Table",
+   "label": "Imaging",
+   "options": "Radiology Prescription"
+  },
+  {
+   "fieldname": "procedures_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procedures"
+  },
+  {
+   "fieldname": "procedure_prescription",
+   "fieldtype": "Table",
+   "label": "Procedure Prescription",
+   "options": "Procedure Prescription"
+  },
+  {
+   "fieldname": "medication_tab",
+   "fieldtype": "Tab Break",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Drug Prescription",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "que",
+   "fieldtype": "Data",
+   "label": "Que",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Data",
+   "label": "medication_so",
+   "read_only": 1
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Data",
+   "label": "services_so",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ENT",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_lab_tests",
+   "fieldtype": "Button",
+   "label": "Select Lab Tests"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_n6lyr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_symptoms",
+   "fieldtype": "Table MultiSelect",
+   "label": "Additional Symptoms",
+   "options": "Patient Encounter Symptom"
+  },
+  {
+   "fieldname": "additional_diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Additional Examination"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-18 09:09:05.938124",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ENT",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

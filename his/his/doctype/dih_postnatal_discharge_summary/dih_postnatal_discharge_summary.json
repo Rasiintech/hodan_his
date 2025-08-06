@@ -1,0 +1,582 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-30 10:53:13.601377",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_fmffq",
+  "dob",
+  "section_break_msdfw",
+  "mrp",
+  "column_break_871ev",
+  "date",
+  "column_break_izfjk",
+  "time",
+  "section_break_naci3",
+  "obstetrician",
+  "column_break_gzubv",
+  "midwife",
+  "column_break_dwtlf",
+  "pediatrican",
+  "column_break_rnfyx",
+  "labour_birth_and_postnatal_period",
+  "section_break_jn36f",
+  "gravida",
+  "column_break_zpbed",
+  "para",
+  "column_break_elc49",
+  "onset_of_labour",
+  "section_break_dab7n",
+  "spontaneous",
+  "column_break_5cwkv",
+  "indicaton",
+  "column_break_zgfiu",
+  "mode_of_delivery",
+  "section_break_bysed",
+  "on_1",
+  "column_break_8ibsd",
+  "day",
+  "column_break_dpu9y",
+  "at",
+  "column_break_3n3lr",
+  "sex",
+  "section_break_lkcny",
+  "indication",
+  "column_break_rhjrh",
+  "presentation",
+  "column_break_ycefg",
+  "live_birth_stillbirth_gestation",
+  "section_break_utjig",
+  "birth_weight",
+  "column_break_is5oh",
+  "blood_loss",
+  "column_break_hgv0x",
+  "apgars",
+  "section_break_jvpgv",
+  "placenta_membranes",
+  "column_break_j2lzd",
+  "perineum_abdominal_wound",
+  "column_break_qbn54",
+  "sutures",
+  "section_break_iahsz",
+  "haemoglobin",
+  "column_break_tbqdv",
+  "on_2",
+  "column_break_t35sb",
+  "repeat_not_needed",
+  "column_break_eoefn",
+  "due_on",
+  "section_break_tufli",
+  "blood_group",
+  "column_break_cgns5",
+  "anti_d_needed",
+  "column_break_tmnbe",
+  "anti_d_given_on",
+  "section_break_gbmvw",
+  "rubella_status",
+  "column_break_rryfm",
+  "vaccination_needed",
+  "column_break_xhw75",
+  "vaccinated_on",
+  "section_break_p0on5",
+  "contraception_sexual_health_needs_discussed",
+  "column_break_xpt3k",
+  "details",
+  "column_break_28cya",
+  "cervical_smear",
+  "section_break_drogm",
+  "discharge_medication",
+  "column_break_bchl7",
+  "postnatal_check_with",
+  "column_break_jxfpb",
+  "arranged_for",
+  "column_break_lfboz",
+  "mother_to_arrange",
+  "column_break_otos1",
+  "problems_identified_during_pregnancy_labour_birth",
+  "column_break_1wkua",
+  "problems_in_the_postnatal_period_referrals",
+  "section_break_5lrae"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_fmffq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "section_break_msdfw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "column_break_871ev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_izfjk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "section_break_naci3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "obstetrician",
+   "fieldtype": "Data",
+   "label": "Obstetrician "
+  },
+  {
+   "fieldname": "column_break_gzubv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "midwife",
+   "fieldtype": "Data",
+   "label": "Midwife "
+  },
+  {
+   "fieldname": "column_break_dwtlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pediatrican",
+   "fieldtype": "Data",
+   "label": "  Pediatrican"
+  },
+  {
+   "fieldname": "column_break_rnfyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "labour_birth_and_postnatal_period",
+   "fieldtype": "Data",
+   "label": "Labour birth and postnatal period"
+  },
+  {
+   "fieldname": "section_break_jn36f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gravida",
+   "fieldtype": "Data",
+   "label": " Gravida "
+  },
+  {
+   "fieldname": "column_break_zpbed",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "para",
+   "fieldtype": "Data",
+   "label": " Para "
+  },
+  {
+   "fieldname": "column_break_elc49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "onset_of_labour",
+   "fieldtype": "Data",
+   "label": "Onset of labour "
+  },
+  {
+   "fieldname": "section_break_dab7n",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "spontaneous",
+   "fieldtype": "Data",
+   "label": "Spontaneous  "
+  },
+  {
+   "fieldname": "column_break_5cwkv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "indicaton",
+   "fieldtype": "Data",
+   "label": "indicaton  "
+  },
+  {
+   "fieldname": "column_break_zgfiu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mode_of_delivery",
+   "fieldtype": "Data",
+   "label": "Mode of delivery"
+  },
+  {
+   "fieldname": "section_break_bysed",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "on_1",
+   "fieldtype": "Data",
+   "label": "  on "
+  },
+  {
+   "fieldname": "column_break_8ibsd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Data",
+   "label": "day"
+  },
+  {
+   "fieldname": "column_break_dpu9y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "at",
+   "fieldtype": "Data",
+   "label": "At"
+  },
+  {
+   "fieldname": "column_break_3n3lr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": " Sex  "
+  },
+  {
+   "fieldname": "section_break_lkcny",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "indication",
+   "fieldtype": "Data",
+   "label": "Indication"
+  },
+  {
+   "fieldname": "column_break_rhjrh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "presentation",
+   "fieldtype": "Data",
+   "label": "Presentation"
+  },
+  {
+   "fieldname": "column_break_ycefg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "live_birth_stillbirth_gestation",
+   "fieldtype": "Data",
+   "label": "Live birth Stillbirth Gestation"
+  },
+  {
+   "fieldname": "section_break_utjig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "birth_weight",
+   "fieldtype": "Data",
+   "label": "Birth weight"
+  },
+  {
+   "fieldname": "column_break_is5oh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blood_loss",
+   "fieldtype": "Data",
+   "label": "Blood loss "
+  },
+  {
+   "fieldname": "column_break_hgv0x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apgars",
+   "fieldtype": "Data",
+   "label": "APGARs"
+  },
+  {
+   "fieldname": "section_break_jvpgv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "placenta_membranes",
+   "fieldtype": "Data",
+   "label": "Placenta membranes"
+  },
+  {
+   "fieldname": "column_break_j2lzd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "perineum_abdominal_wound",
+   "fieldtype": "Data",
+   "label": "Perineum abdominal wound "
+  },
+  {
+   "fieldname": "column_break_qbn54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sutures",
+   "fieldtype": "Data",
+   "label": "Sutures"
+  },
+  {
+   "fieldname": "section_break_iahsz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "haemoglobin",
+   "fieldtype": "Data",
+   "label": " Haemoglobin"
+  },
+  {
+   "fieldname": "column_break_tbqdv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "on_2",
+   "fieldtype": "Data",
+   "label": "On"
+  },
+  {
+   "fieldname": "column_break_t35sb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "repeat_not_needed",
+   "fieldtype": "Data",
+   "label": "Repeat Not needed"
+  },
+  {
+   "fieldname": "column_break_eoefn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_on",
+   "fieldtype": "Data",
+   "label": "Due On"
+  },
+  {
+   "fieldname": "section_break_tufli",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood group"
+  },
+  {
+   "fieldname": "column_break_cgns5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anti_d_needed",
+   "fieldtype": "Select",
+   "label": "anti D needed",
+   "options": "Yes\nYes"
+  },
+  {
+   "fieldname": "column_break_tmnbe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anti_d_given_on",
+   "fieldtype": "Data",
+   "label": "anti D given on"
+  },
+  {
+   "fieldname": "section_break_gbmvw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rubella_status",
+   "fieldtype": "Data",
+   "label": "Rubella status"
+  },
+  {
+   "fieldname": "column_break_rryfm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vaccination_needed",
+   "fieldtype": "Select",
+   "label": "Vaccination needed",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_xhw75",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vaccinated_on",
+   "fieldtype": "Data",
+   "label": "Vaccinated on"
+  },
+  {
+   "fieldname": "section_break_p0on5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contraception_sexual_health_needs_discussed",
+   "fieldtype": "Select",
+   "label": "Contraception sexual health needs discussed",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_xpt3k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Data",
+   "label": "Details"
+  },
+  {
+   "fieldname": "column_break_28cya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cervical_smear",
+   "fieldtype": "Select",
+   "label": "Cervical smear",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "section_break_drogm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "discharge_medication",
+   "fieldtype": "Data",
+   "label": "Discharge medication"
+  },
+  {
+   "fieldname": "column_break_bchl7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "postnatal_check_with",
+   "fieldtype": "Data",
+   "label": "Postnatal check with"
+  },
+  {
+   "fieldname": "column_break_jxfpb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "arranged_for",
+   "fieldtype": "Data",
+   "label": "Arranged for"
+  },
+  {
+   "fieldname": "column_break_lfboz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mother_to_arrange",
+   "fieldtype": "Data",
+   "label": "Mother to arrange"
+  },
+  {
+   "fieldname": "column_break_otos1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "problems_identified_during_pregnancy_labour_birth",
+   "fieldtype": "Data",
+   "label": "Problems identified during pregnancy labour birth"
+  },
+  {
+   "fieldname": "column_break_1wkua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "problems_in_the_postnatal_period_referrals",
+   "fieldtype": "Data",
+   "label": "Problems in the postnatal period referrals  "
+  },
+  {
+   "fieldname": "section_break_5lrae",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-16 11:28:00.865644",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "DIH Postnatal Discharge Summary",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

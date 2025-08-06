@@ -1,0 +1,271 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HISTORY-.#####",
+ "creation": "2024-04-30 10:00:19.938170",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "column_break_2ig87",
+  "pts_name",
+  "column_break_iffom",
+  "date",
+  "column_break_xeyza",
+  "practitioner",
+  "section_break_9a9ky",
+  "chief_complaint",
+  "column_break_nbzoq",
+  "history_of_the_present_illness",
+  "column_break_6kfdq",
+  "menstrual_history",
+  "section_break_cwjsk",
+  "obstetric_and_gynecological_history",
+  "column_break_yvov6",
+  "medical_and_surgical_history",
+  "column_break_imfhj",
+  "family_history",
+  "column_break_8uk6e",
+  "allergies",
+  "section_break_mttru",
+  "bp",
+  "column_break_iksgl",
+  "temp",
+  "column_break_zpzzl",
+  "respiratory_rate",
+  "column_break_kjawp",
+  "wt_kg",
+  "column_break_5axgh",
+  "height",
+  "section_break_rtucr",
+  "pelvic_exam",
+  "column_break_7wr1d",
+  "assessment_and_plan",
+  "column_break_wtgt1",
+  "attending_physician_name",
+  "section_break_i0dyo"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Data",
+   "label": "Chief Complaint"
+  },
+  {
+   "fieldname": "history_of_the_present_illness",
+   "fieldtype": "Data",
+   "label": "History of the Present Illness"
+  },
+  {
+   "fieldname": "menstrual_history",
+   "fieldtype": "Data",
+   "label": "Menstrual History"
+  },
+  {
+   "fieldname": "obstetric_and_gynecological_history",
+   "fieldtype": "Data",
+   "label": "Obstetric and Gynecological History"
+  },
+  {
+   "fieldname": "medical_and_surgical_history",
+   "fieldtype": "Data",
+   "label": "Medical and Surgical History"
+  },
+  {
+   "fieldname": "family_history",
+   "fieldtype": "Data",
+   "label": "Family History"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "Temp"
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Data",
+   "label": "Respiratory rate"
+  },
+  {
+   "fieldname": "wt_kg",
+   "fieldtype": "Data",
+   "label": "Wt Kg"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "pelvic_exam",
+   "fieldtype": "Data",
+   "label": "Pelvic Exam"
+  },
+  {
+   "fieldname": "assessment_and_plan",
+   "fieldtype": "Data",
+   "label": "Assessment and Plan"
+  },
+  {
+   "fieldname": "attending_physician_name",
+   "fieldtype": "Data",
+   "label": "Attending Physician Name"
+  },
+  {
+   "fieldname": "column_break_kjawp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iksgl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zpzzl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5axgh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mttru",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_rtucr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_2ig87",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iffom",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9a9ky",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nbzoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6kfdq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cwjsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yvov6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_imfhj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8uk6e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7wr1d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wtgt1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_i0dyo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_xeyza",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-16 11:32:12.667176",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "History and Physical Exam Outpatient",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

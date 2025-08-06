@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 10:42:04.474855",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "same_antibiotics_plan",
+  "add",
+  "stop",
+  "another_cs"
+ ],
+ "fields": [
+  {
+   "fieldname": "stop",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stop"
+  },
+  {
+   "fieldname": "same_antibiotics_plan",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Same antibiotics plan",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "add",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Add"
+  },
+  {
+   "fieldname": "another_cs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Another C/s"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 11:56:18.152927",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Sepsis3",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

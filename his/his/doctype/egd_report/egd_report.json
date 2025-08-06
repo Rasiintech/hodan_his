@@ -1,0 +1,411 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EGD-RE-.#####",
+ "creation": "2023-04-17 11:53:59.763992",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "egd",
+  "column_break_srldk",
+  "practitioner",
+  "department",
+  "section_break_9dphy",
+  "endo_indication",
+  "indo_consent",
+  "indo_prepararion",
+  "indo_instrument",
+  "indo_anesthesia",
+  "indo_procedure",
+  "indo_finding",
+  "oropharynx",
+  "esophagus",
+  "fundus",
+  "body",
+  "antrum",
+  "pylorus",
+  "duodenum_bulb",
+  "2nd_portion",
+  "3rd_portion",
+  "indo_impression",
+  "indo_plan",
+  "section_break_osob8",
+  "indication",
+  "consent",
+  "preparation",
+  "instrument",
+  "anesthesia",
+  "procedure",
+  "findings",
+  "anal_canal",
+  "rectum",
+  "sigmoid_colon",
+  "descending_colon",
+  "splenic_flexure",
+  "transverse_colon",
+  "hepatic_flexure",
+  "ascending_colon",
+  "cecum",
+  "ileocecal_valve",
+  "ileum",
+  "impression",
+  "plan",
+  "cpt_codes",
+  "amended_from",
+  "reff_invoice",
+  "source_order"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "egd",
+   "fieldtype": "Link",
+   "label": "EGD",
+   "options": "EGD Templete"
+  },
+  {
+   "fieldname": "column_break_srldk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department",
+   "read_only": 1
+  },
+  {
+   "default": "Patient with altered bowel habit with intermittent constipation with low abdominal pain. Colonoscopy to evaluate possible colitis and colorectal CA screening.",
+   "fieldname": "indication",
+   "fieldtype": "Small Text",
+   "label": "INDICATION"
+  },
+  {
+   "default": "Informed consent was obtained from the patient after providing opportunity for questions.",
+   "fieldname": "consent",
+   "fieldtype": "Small Text",
+   "label": "CONSENT"
+  },
+  {
+   "default": "EKG pulse. blood pressure and oxygen saturation monitored. Bowel preparation was given by half-lytely. Patient has no bleeding tendency. Has not used ASA or anticoagulation drugs for last 5 days",
+   "fieldname": "preparation",
+   "fieldtype": "Small Text",
+   "label": "PREPARATION"
+  },
+  {
+   "default": "Olyntpus CFHQ190L 2303317",
+   "fieldname": "instrument",
+   "fieldtype": "Data",
+   "label": "INSTRUMENT"
+  },
+  {
+   "default": "As Per Anesthesia",
+   "fieldname": "anesthesia",
+   "fieldtype": "Data",
+   "label": "ANESTHESIA"
+  },
+  {
+   "default": "Follow-up for OVs",
+   "fieldname": "endo_indication",
+   "fieldtype": "Data",
+   "label": "INDICATION"
+  },
+  {
+   "depends_on": "eval: doc.egd==\"CONDOSCOPY\";",
+   "fieldname": "section_break_9dphy",
+   "fieldtype": "Section Break",
+   "label": "Endoscopy"
+  },
+  {
+   "depends_on": "eval: doc.egd==\"ENDOSCOPY- UPPER\" || doc.egd==\"ENDOSCOPY- INTERVENTION\";",
+   "fieldname": "section_break_osob8",
+   "fieldtype": "Section Break",
+   "label": "Colonoscopy"
+  },
+  {
+   "default": "Alder placing the patient in the left lateral decubitus position, the colonoseope was gently inserted into the rectum and tinder direct visualization advanced to the cecum which was identified by trans illumination in the right lower quadrant, identification of the ileum, appendiceal orifice, cecal strap. Color, texture, mucosa and anatomy of the colon were carefully examined with the scope. The patient tolerated the procedure well and there were no complications. After completion of the examination, patient was transferred to the recovery room",
+   "fieldname": "procedure",
+   "fieldtype": "Small Text",
+   "label": "PROCEDURE"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Data",
+   "label": "FINDINGS"
+  },
+  {
+   "default": "Anoscopy performed showed moderate hemorrhoids",
+   "fieldname": "anal_canal",
+   "fieldtype": "Data",
+   "label": "Anal canal"
+  },
+  {
+   "default": "Mild rectal colitis noted. Biopsy obtained.\nFlat Polyp of size 0.4 cm. Polypectomy done using biopsy forceps.Sessile Polyp of size 0.6 cm. Polypectomy done using biopsy forceps.",
+   "fieldname": "rectum",
+   "fieldtype": "Small Text",
+   "label": "Rectum"
+  },
+  {
+   "default": "Normal mucosa",
+   "fieldname": "sigmoid_colon",
+   "fieldtype": "Data",
+   "label": "Sigmoid colon"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "descending_colon",
+   "fieldtype": "Data",
+   "label": "Descending Colon"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "splenic_flexure",
+   "fieldtype": "Data",
+   "label": "Splenic Flexure"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "transverse_colon",
+   "fieldtype": "Data",
+   "label": "Transverse Colon"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "hepatic_flexure",
+   "fieldtype": "Data",
+   "label": "Hepatic Flexure"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "ascending_colon",
+   "fieldtype": "Data",
+   "label": "Ascending Colon"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "cecum",
+   "fieldtype": "Data",
+   "label": "Cecum"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "ileocecal_valve",
+   "fieldtype": "Data",
+   "label": "Ileocecal Valve"
+  },
+  {
+   "default": "Not Seen",
+   "fieldname": "ileum",
+   "fieldtype": "Data",
+   "label": "Ileum"
+  },
+  {
+   "default": "Hemorrhoids, moderate\nMild rectal colitis Rectal Polyps (small)",
+   "fieldname": "impression",
+   "fieldtype": "Small Text",
+   "label": "IMPRESSION"
+  },
+  {
+   "default": "Wait for Pathology Report\nRepeat colonoscopy after 3-5 years for continue routine colorectal CA screening.Sitz bath. Lidocaine ointment PR, Canasa supp 1000mg PR Q1 IS PRN. Colace 100 mg TID Hemorrhoid treatment with IRC to be scheduled",
+   "fieldname": "plan",
+   "fieldtype": "Small Text",
+   "label": "PLAN"
+  },
+  {
+   "default": "45383 - Colonoscopy with polypectomy",
+   "fieldname": "cpt_codes",
+   "fieldtype": "Small Text",
+   "label": "CPT CODES"
+  },
+  {
+   "default": "Informed consent was obtained from the patient after providing\u00a0\nany opportunity for questions.",
+   "fieldname": "indo_consent",
+   "fieldtype": "Small Text",
+   "label": "CONSENT"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EGD Report",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "EKG pulse, pulse oximetry and blood pressure monitored",
+   "fieldname": "indo_prepararion",
+   "fieldtype": "Small Text",
+   "label": "PREPARATION"
+  },
+  {
+   "default": "Pentax EG-3490k 3.8",
+   "fieldname": "indo_instrument",
+   "fieldtype": "Data",
+   "label": "INSTRUMENT"
+  },
+  {
+   "default": "midozalam-5Mg slowly IV.",
+   "fieldname": "indo_anesthesia",
+   "fieldtype": "Data",
+   "label": "ANESTHESIA"
+  },
+  {
+   "default": "Appropriate time-out protocol was followed: the correct patient, the correct procedure, and the correct equipment in the room were confirmed. The Gastroscope was gently passed through the incisoral orifice into the oral cavity and under direct visualization the esophagus was intubated. The endoscope was passed down the esophagus, through the stomach and into the 3rd Portion.\nRetroflexion was performed at the gastroesophageal junction. Color, texture, mucosa and anatomy of Esophagus. Stomach and Duodenum were carefully examined with the scope. The patient tolerated the procedure well and there were no complications. After completion of the examination, patient was transferred to the recovery room",
+   "fieldname": "indo_procedure",
+   "fieldtype": "Small Text",
+   "label": "PROCEDURE"
+  },
+  {
+   "fieldname": "indo_finding",
+   "fieldtype": "Data",
+   "label": "FINDINGS"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "oropharynx",
+   "fieldtype": "Data",
+   "label": "Oropharynx"
+  },
+  {
+   "default": "EVL\u00a0EBL of 3 OVs\u00a0 1F2 , 2F1 by 4 rings at multiple levels\nRemnants of OVs Incompetent cardia\u00a0",
+   "fieldname": "esophagus",
+   "fieldtype": "Small Text",
+   "label": "Esophagus"
+  },
+  {
+   "default": "No IGVx",
+   "fieldname": "fundus",
+   "fieldtype": "Data",
+   "label": "Fundus"
+  },
+  {
+   "default": "PHG Free",
+   "fieldname": "body",
+   "fieldtype": "Data",
+   "label": "Body"
+  },
+  {
+   "default": "PHG Free",
+   "fieldname": "antrum",
+   "fieldtype": "Data",
+   "label": "Antrum"
+  },
+  {
+   "fieldname": "pylorus",
+   "fieldtype": "Data",
+   "label": "Pylorus"
+  },
+  {
+   "default": "Free Mild Duodenitis",
+   "fieldname": "duodenum_bulb",
+   "fieldtype": "Data",
+   "label": "Duodenum Bulb"
+  },
+  {
+   "fieldname": "2nd_portion",
+   "fieldtype": "Data",
+   "label": "2nd Portion"
+  },
+  {
+   "fieldname": "3rd_portion",
+   "fieldtype": "Data",
+   "label": "3rd Portion"
+  },
+  {
+   "default": "For PPI\u00a0, NBBS , INDERAL\u00a0\nFor\u00a0INDERAL\u00a0 \u00a0 \u00a0 40 mg\u00a0 \u00a0t\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \n\u00a0 \u00a0 \u00a0 \u00a0ANTOPRAL\u00a0 40 mg\u00a0 \u00a0t\u00a0 \u00a0",
+   "fieldname": "indo_impression",
+   "fieldtype": "Data",
+   "label": "IMPRESSION"
+  },
+  {
+   "default": "fellow up",
+   "fieldname": "indo_plan",
+   "fieldtype": "Data",
+   "label": "PLAN"
+  },
+  {
+   "fieldname": "reff_invoice",
+   "fieldtype": "Link",
+   "label": "reff_invoice",
+   "options": "Sales Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_order",
+   "fieldtype": "Data",
+   "label": "source_order",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-23 14:48:21.587311",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "EGD Report",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,464 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-27 17:11:07.443966",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "newborn_s_identification",
+  "date",
+  "department__room",
+  "mother_mrn",
+  "occupation",
+  "place_of_birth",
+  "id_no",
+  "address__mobile_no",
+  "father_s_name",
+  "date_of_admission",
+  "date_of_birth",
+  "time",
+  "type_of_delivery",
+  "babys_date",
+  "gender",
+  "height",
+  "weight",
+  "skin_color",
+  "hair_color",
+  "types_of_birth",
+  "wrist_band_no",
+  "congenital_anomalies",
+  "mother_s_left_thumb_mark",
+  "nameofsatf",
+  "sign1",
+  "nameofsecured",
+  "sign2",
+  "mother",
+  "baby_s_footprints_and_delivery_1",
+  "letf1",
+  "rt3",
+  "l",
+  "name1",
+  "sign3",
+  "dat",
+  "baby_s_footprints_at_delivery_2",
+  "letf2",
+  "tr5",
+  "name_of_the_staff_who_secured_babys_footprint",
+  "name2",
+  "sign4",
+  "date2",
+  "lop",
+  "sign5",
+  "laaa",
+  "sign6",
+  "name_of_staff_who_delivered_the_baby",
+  "sign7",
+  "oi",
+  "sign8",
+  "mother_s_mrn",
+  "baby_s_footprints_and_delivery_3",
+  "letf3",
+  "rt1",
+  "name_of_staff_who_secured_the_babys_footprint",
+  "name3",
+  "sign9",
+  "dat3",
+  "baby_s_footprints_at_delivery_4",
+  "letf4",
+  "rt2",
+  "hghh",
+  "name4",
+  "sign10",
+  "dat5",
+  "doctor_s_name_on_duty",
+  "sign11",
+  "charge_nurse_name",
+  "sign12"
+ ],
+ "fields": [
+  {
+   "fieldname": "newborn_s_identification",
+   "fieldtype": "Data",
+   "label": "NEWBORN S IDENTIFICATION"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "department__room",
+   "fieldtype": "Data",
+   "label": "Department / Room"
+  },
+  {
+   "fieldname": "mother_mrn",
+   "fieldtype": "Data",
+   "label": "Mother MRN"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "place_of_birth",
+   "fieldtype": "Data",
+   "label": "Place of Birth"
+  },
+  {
+   "fieldname": "id_no",
+   "fieldtype": "Data",
+   "label": "ID NO."
+  },
+  {
+   "fieldname": "address__mobile_no",
+   "fieldtype": "Data",
+   "label": "Address  Mobile no."
+  },
+  {
+   "fieldname": "father_s_name",
+   "fieldtype": "Data",
+   "label": "Father s Name"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Data",
+   "label": "Date of Admission"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "type_of_delivery",
+   "fieldtype": "Data",
+   "label": "Type of Delivery"
+  },
+  {
+   "fieldname": "babys_date",
+   "fieldtype": "Data",
+   "label": "Babys Date"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "skin_color",
+   "fieldtype": "Data",
+   "label": "Skin color "
+  },
+  {
+   "fieldname": "hair_color",
+   "fieldtype": "Data",
+   "label": "Hair color"
+  },
+  {
+   "fieldname": "types_of_birth",
+   "fieldtype": "Select",
+   "label": "Types of Birth  ",
+   "options": "Single\nTwin\nTriplets\netc"
+  },
+  {
+   "fieldname": "wrist_band_no",
+   "fieldtype": "Data",
+   "label": "Wrist Band No."
+  },
+  {
+   "fieldname": "congenital_anomalies",
+   "fieldtype": "Data",
+   "label": "Congenital Anomalies "
+  },
+  {
+   "fieldname": "mother_s_left_thumb_mark",
+   "fieldtype": "Data",
+   "label": "Mother s Left Thumb Mark "
+  },
+  {
+   "fieldname": "nameofsatf",
+   "fieldtype": "Data",
+   "label": "Name of Staff who delivered the Baby"
+  },
+  {
+   "fieldname": "sign1",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "nameofsecured",
+   "fieldtype": "Data",
+   "label": "Name of Staff who completed this form and has secured thumb mark of mother"
+  },
+  {
+   "fieldname": "sign2",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "mother",
+   "fieldtype": "Data",
+   "label": "Mother s MRN"
+  },
+  {
+   "fieldname": "baby_s_footprints_and_delivery_1",
+   "fieldtype": "Data",
+   "label": "Baby s footprints and Delivery (1)"
+  },
+  {
+   "fieldname": "letf1",
+   "fieldtype": "Data",
+   "label": "Left footprint "
+  },
+  {
+   "fieldname": "rt3",
+   "fieldtype": "Data",
+   "label": "Right footprint"
+  },
+  {
+   "fieldname": "l",
+   "fieldtype": "Data",
+   "label": "Name of staff who secured the Babys footprint"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "sign3",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "dat",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "baby_s_footprints_at_delivery_2",
+   "fieldtype": "Data",
+   "label": "Baby s Footprints at Delivery 2"
+  },
+  {
+   "fieldname": "letf2",
+   "fieldtype": "Data",
+   "label": "Left Footprint "
+  },
+  {
+   "fieldname": "tr5",
+   "fieldtype": "Data",
+   "label": "Right footprint"
+  },
+  {
+   "fieldname": "name_of_the_staff_who_secured_babys_footprint",
+   "fieldtype": "Data",
+   "label": "Name of the staff who secured Babys Footprint"
+  },
+  {
+   "fieldname": "name2",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "sign4",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "date2",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "lop",
+   "fieldtype": "Data",
+   "label": "Doctor s Name on Duty"
+  },
+  {
+   "fieldname": "sign5",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "laaa",
+   "fieldtype": "Data",
+   "label": "Charge Nurse Name"
+  },
+  {
+   "fieldname": "sign6",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "name_of_staff_who_delivered_the_baby",
+   "fieldtype": "Data",
+   "label": "Name of Staff who delivered the Baby"
+  },
+  {
+   "fieldname": "sign7",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "oi",
+   "fieldtype": "Data",
+   "label": "Name  of Staff who completed this form and has secured thumb mark of mother"
+  },
+  {
+   "fieldname": "sign8",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "mother_s_mrn",
+   "fieldtype": "Data",
+   "label": "Mother s MRN"
+  },
+  {
+   "fieldname": "baby_s_footprints_and_delivery_3",
+   "fieldtype": "Data",
+   "label": "Baby s footprints and Delivery 3"
+  },
+  {
+   "fieldname": "letf3",
+   "fieldtype": "Data",
+   "label": "Left footprint "
+  },
+  {
+   "fieldname": "rt1",
+   "fieldtype": "Data",
+   "label": "Right footprint"
+  },
+  {
+   "fieldname": "name_of_staff_who_secured_the_babys_footprint",
+   "fieldtype": "Data",
+   "label": "Name of staff who secured the Babys footprint"
+  },
+  {
+   "fieldname": "name3",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "sign9",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "dat3",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "baby_s_footprints_at_delivery_4",
+   "fieldtype": "Data",
+   "label": "Baby s Footprints at Delivery 4"
+  },
+  {
+   "fieldname": "letf4",
+   "fieldtype": "Data",
+   "label": "Left Footprint "
+  },
+  {
+   "fieldname": "rt2",
+   "fieldtype": "Data",
+   "label": "Right footprint"
+  },
+  {
+   "fieldname": "hghh",
+   "fieldtype": "Data",
+   "label": "Name of the staff who secured Babys Footprint"
+  },
+  {
+   "fieldname": "name4",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "sign10",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "dat5",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "doctor_s_name_on_duty",
+   "fieldtype": "Data",
+   "label": "Doctor s Name on Duty"
+  },
+  {
+   "fieldname": "sign11",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "charge_nurse_name",
+   "fieldtype": "Data",
+   "label": "Charge Nurse Name"
+  },
+  {
+   "fieldname": "sign12",
+   "fieldtype": "Data",
+   "label": "Signature"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-16 11:54:02.799890",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "NEWBORN  IDENTIFICATION",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

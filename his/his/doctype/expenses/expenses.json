@@ -1,0 +1,153 @@
+{
+    "actions": [],
+    "autoname": "naming_series:",
+    "creation": "2021-12-17 15:31:06.381437",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+     "naming_series",
+     "account",
+     "amount",
+     "paid_from",
+     "remark",
+     "date",
+     "source_order",
+     "cost_center",
+     "amended_from",
+     "journal_entry"
+    ],
+    "fields": [
+     {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Amount",
+      "reqd": 1
+     },
+     {
+      "fieldname": "paid_from",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Paid From",
+      "options": "Account",
+      "reqd": 1
+     },
+     {
+      "fieldname": "remark",
+      "fieldtype": "Small Text",
+      "in_list_view": 1,
+      "label": "Remark",
+      "reqd": 1
+     },
+     {
+      "default": "Today",
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "label": "Date"
+     },
+     {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "no_copy": 1,
+      "options": "Expenses",
+      "print_hide": 1,
+      "read_only": 1
+     },
+     {
+      "fetch_from": "expense_type.account",
+      "fieldname": "account",
+      "fieldtype": "Link",
+      "label": "Account",
+      "options": "Account",
+      "reqd": 1
+     },
+     {
+      "allow_on_submit": 1,
+      "fieldname": "journal_entry",
+      "fieldtype": "Link",
+      "label": "Journal Entry",
+      "options": "Journal Entry",
+      "read_only": 1
+     },
+     {
+      "fieldname": "source_order",
+      "fieldtype": "Link",
+      "label": "Source Order",
+      "options": "Source Order"
+     },
+     {
+      "fieldname": "cost_center",
+      "fieldtype": "Link",
+      "label": "Cost Center",
+      "options": "Cost Center"
+     },
+     {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "ACC-EXP-.YYYY.-"
+     }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 1,
+    "links": [],
+    "modified": "2025-02-05 17:34:44.495136",
+    "modified_by": "Administrator",
+    "module": "HIS",
+    "name": "Expenses",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+     {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+     },
+     {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Cashier",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+     },
+     {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "All",
+      "select": 1,
+      "share": 1,
+      "submit": 1,
+      "write": 1
+     }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+   }

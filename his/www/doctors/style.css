@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  padding: 10px 30px;
+  background-color: yellow;
+  /* justify-content: space-between; */
+  gap: 3em;
+  align-items: center;
+}
+.logo {
+  max-width: 160px;
+}
+.links ul {
+  display: flex;
+  gap: 30px;
+}
+
+/*  */
+:root {
+  --e-global-color-bd25d4b: #f1a01f; /* Your first color's hex code */
+  --e-global-color-e0f4f1e: #3b444a; /* Your second color's hex code */
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.image_slider img {
+  width: 100%;
+  max-height: 600px;
+  display: block;
+  object-fit: cover;
+}
+
+.textContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.contentBTN {
+  margin-top: 40px;
+}
+.btn1 {
+  background-color: #f1a01f;
+  color: white;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  padding: 20px 40px 20px 40px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.btn2 {
+  background-color: white;
+  color: #f1a01f;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  padding: 20px 40px 20px 40px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.gradient_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    60deg,
+    var(--e-global-color-bd25d4b) 0%,
+    var(--e-global-color-e0f4f1e) 70%
+  );
+  opacity: 0.7;
+  z-index: 5;
+}
+.text h1 {
+  color: white;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.2em;
+  width: 400px;
+}
+.text span {
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  /* header {
+    flex-direction: column;
+    padding: 10px; 
+  } */
+  /* .links ul {
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px; 
+  } */
+  .text h1 {
+    font-size: 36px;
+    width: auto;
+  }
+  .text span {
+    font-size: 16px;
+  }
+  .logo {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h1 {
+    font-size: 28px;
+  }
+  .text span {
+    font-size: 14px;
+  }
+  .image_slider img {
+    max-height: 400px;
+  }
+}
+
+/* the gridd  */
+.header {
+  text-align: center;
+  padding: 20px;
+}
+.header h1 {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+}
+.header p {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding: 0 0.5rem;
+  /* background: ./doctor.htmlfff; */
+  /* border: 1px solid ./doctor.htmlfff; */
+  padding: 16px 10px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 36px rgb(16 40 81 / 12%);
+}
+
+@media (min-width: 992px) {
+  .col-lg-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .flex_gride {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .row {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .col {
+    flex: 0 0 calc(33.333% - 16px);
+    max-width: calc(33.333% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+  }
+}
+
+.g-2 {
+  gap: 0.5rem;
+}
+
+.g-lg-4 {
+  gap: 1.5rem;
+}
+
+.pg_widget {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.col:hover {
+  border: 1px solid orange;
+}
+.pg_widget img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.pg_widget h5 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.team-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+.flex_gride {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 40px;
+}
+
+/* imge slider style  */
+#sliderImage {
+  width: 100%;
+  height: auto;
+  transition: opacity 2s ease-in-out;
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0;
+}
+
+/*  card doctores style */

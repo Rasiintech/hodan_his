@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2023-05-30 08:14:45.185451",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-05-30 08:14:45.185451",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "pharmacy-orders",
+ "owner": "Administrator",
+ "page_name": "pharmacy-orders",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Pharmacy Orders"
+}

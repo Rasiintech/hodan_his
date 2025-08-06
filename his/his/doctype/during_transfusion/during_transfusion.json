@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-15 12:15:24.037300",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "during_transfusion",
+  "before_start",
+  "15th_min",
+  "30rd_min",
+  "60th_min",
+  "90th_min",
+  "2_hour",
+  "25_hour",
+  "3_hour"
+ ],
+ "fields": [
+  {
+   "fieldname": "before_start",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Before Start"
+  },
+  {
+   "fieldname": "15th_min",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "15th Min"
+  },
+  {
+   "fieldname": "30rd_min",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "30rd Min."
+  },
+  {
+   "fieldname": "60th_min",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "60th Min"
+  },
+  {
+   "fieldname": "90th_min",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "90th Min"
+  },
+  {
+   "fieldname": "during_transfusion",
+   "fieldtype": "Data",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "2_hour",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "2. Hour"
+  },
+  {
+   "fieldname": "25_hour",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "2.5 Hour"
+  },
+  {
+   "fieldname": "3_hour",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "3. Hour"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-17 11:15:43.659814",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "DURING TRANSFUSION",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

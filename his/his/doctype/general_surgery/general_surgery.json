@@ -1,0 +1,1976 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GS-.##### ",
+ "creation": "2023-05-10 13:55:46.816725",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "status",
+  "date",
+  "column_break_jlr9x",
+  "practitioner",
+  "department",
+  "history_tab",
+  "past_medical_history",
+  "drug_history",
+  "social_history",
+  "family_history",
+  "complaint_tab",
+  "abdominal_pain_section",
+  "column_break_lrkxr",
+  "site",
+  "rt_hypochondrial",
+  "rt_iliac_fossa",
+  "epigastric",
+  "column_break_wclk6",
+  "onset",
+  "acute",
+  "subacute",
+  "chronic",
+  "column_break_qikpb",
+  "column_break_iazga",
+  "radiation",
+  "to_rt_shoulder_angle_of_scapula",
+  "to_rt_thigh",
+  "to_back",
+  "section_break_b3uqf",
+  "complaint",
+  "nausea",
+  "vomiting",
+  "fever",
+  "jaundice",
+  "appetite",
+  "urinary_symptoms",
+  "column_break_ssmma",
+  "increase_with",
+  "fatty_foods",
+  "fasting",
+  "movement",
+  "lying_supine",
+  "column_break_orz6f",
+  "decrease_with",
+  "fast",
+  "leaning_forward",
+  "swelling_section",
+  "site1",
+  "umbilical",
+  "inguinal",
+  "incisional",
+  "epigastric1",
+  "column_break_eeakk",
+  "increase_with1",
+  "cough",
+  "straining",
+  "lifting_heavy_objects",
+  "column_break_ela1t",
+  "disappear_when_lying_supine",
+  "space1",
+  "painf",
+  "painless",
+  "painful",
+  "ana",
+  "anal_symptoms_section",
+  "space2",
+  "swelling",
+  "prolapsed_with_defecation",
+  "painl",
+  "reduced_spontaneously",
+  "reduced_manually",
+  "column_break_dlw6d",
+  "space3",
+  "pains",
+  "pain_pink",
+  "throbbing",
+  "bleeding_per_rectum",
+  "discharge",
+  "offensive",
+  "section_break_mqzwg",
+  "site2",
+  "central",
+  "lateral",
+  "parotid",
+  "submandibular",
+  "associating_symptoms_column",
+  "palpitations_tachycardia_heat_intolerance_sweating",
+  "bradycardia_cold_intolerance",
+  "pain_with_eating_and_drinking",
+  "others_section",
+  "scrotal",
+  "pain",
+  "swellin",
+  "uncircumcised",
+  "testes",
+  "column_break_yij8y",
+  "ingrowing",
+  "rt_ing",
+  "lt_ing",
+  "column_break_gwte0",
+  "lower_back_discharge",
+  "vv",
+  "space4",
+  "column_break_uyi1h",
+  "sw",
+  "extremities",
+  "face",
+  "scalp",
+  "nape",
+  "trunk",
+  "diabetic_foot_column",
+  "side",
+  "rt",
+  "lt",
+  "column_break_10ezv",
+  "site3",
+  "toes",
+  "heel__sole",
+  "examination_tab",
+  "abdominal_section",
+  "hypochondrial",
+  "murphy",
+  "fossa",
+  "rebound",
+  "localization",
+  "shifting",
+  "psoas",
+  "obturator",
+  "cullen",
+  "turner",
+  "column_break_i6fkx",
+  "swellinge",
+  "impulse_on_cough",
+  "easily_reduced",
+  "irreducible",
+  "strangulated",
+  "column_break_rcrkd",
+  "anal",
+  "pi",
+  "fiss",
+  "perianal_swelling",
+  "opening",
+  "column_break_wlskw",
+  "neck",
+  "cent",
+  "goiter",
+  "diffuse",
+  "column_break_gm2fz",
+  "space7",
+  "solitary",
+  "r",
+  "l",
+  "fim",
+  "column_break_qvsdb",
+  "space5",
+  "moves_up__down_with_deglutition",
+  "with",
+  "column_break_rqxvo",
+  "space8",
+  "parotid1",
+  "rt5",
+  "lt5",
+  "submandibular1",
+  "rt6",
+  "lt6",
+  "column_break_mp6vc",
+  "scrotal1",
+  "rt7",
+  "lt7",
+  "tenderness",
+  "bag_of_worms",
+  "ve_transillumination_test",
+  "empty",
+  "uncircumcision",
+  "column_break_6cjdq",
+  "sapace9",
+  "visible__palpable_tortuous_vein_of_lower_limb",
+  "rt8",
+  "lt8",
+  "column_break_08s2x",
+  "space01",
+  "swelling8",
+  "rts",
+  "lts",
+  "others",
+  "sca",
+  "na",
+  "trun",
+  "firm",
+  "soft",
+  "column_break_kvc6o",
+  "space02",
+  "sacral",
+  "multiple_openings",
+  "offensive_discharge",
+  "ingrowing_toenail_di",
+  "rt_ing_ex",
+  "rt_left_ex",
+  "diagnosis_tab",
+  "abdoninal",
+  "chronic_calcular_cholecystitis",
+  "acute_appendicitis",
+  "acute_pancreatitis",
+  "swe",
+  "paraumbilical_hernia",
+  "incisional_hernia",
+  "epigastric_hernia",
+  "inguinal_hernia",
+  "rt1",
+  "lt1",
+  "bilateral",
+  "column_break_4azao",
+  "anal3",
+  "piles",
+  "g2",
+  "g3",
+  "g4",
+  "fissure",
+  "posterior",
+  "anterior",
+  "kissing",
+  "perianal_abscess",
+  "perianal_fistula",
+  "column_break_wbxpy",
+  "n",
+  "multinodular_goiter",
+  "solitary_thyroid_nodule",
+  "rt2",
+  "lt2",
+  "pituitary_adenoma",
+  "rt3",
+  "lt3",
+  "submandibular_sialadenitis",
+  "rt4",
+  "lt4",
+  "thyroglossal_cyst",
+  "cervical_lymphadenopathy",
+  "column_break_maokk",
+  "sc3",
+  "varicocele",
+  "rtt",
+  "ltt",
+  "hydrocele",
+  "rttt",
+  "lttt",
+  "undescended_testes",
+  "rt11",
+  "lt11",
+  "circumcision",
+  "column_break_1zqzf",
+  "lower_limb_varicose_vein",
+  "rtr",
+  "2",
+  "bilateral1",
+  "column_break_d1uad",
+  "lipoma",
+  "sebaceous_cyst",
+  "pilonidal_sinus",
+  "space03",
+  "ingrowing_nail",
+  "rting",
+  "lt66",
+  "space12",
+  "diabetic_foot",
+  "rt45",
+  "ltyy",
+  "investigations_tab",
+  "select_lab_tests",
+  "lab_test_prescription",
+  "imaging_tab",
+  "radiology_prescription",
+  "procedure_tab",
+  "procedure_prescription",
+  "medication_tab",
+  "drug_prescription",
+  "follow_up_tab",
+  "fallow_up_days",
+  "services_so",
+  "medication_so",
+  "que",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "complaint_tab",
+   "fieldtype": "Tab Break",
+   "label": "Complaint"
+  },
+  {
+   "fieldname": "abdominal_pain_section",
+   "fieldtype": "Section Break",
+   "label": "Abdominal pain"
+  },
+  {
+   "fieldname": "complaint",
+   "fieldtype": "HTML",
+   "label": "Associating symptoms",
+   "options": "Associating symptoms"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "HTML",
+   "label": "Site",
+   "options": "Site"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt_hypochondrial",
+   "fieldtype": "Check",
+   "label": "Rt hypochondrial"
+  },
+  {
+   "fieldname": "column_break_lrkxr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt_iliac_fossa",
+   "fieldtype": "Check",
+   "label": "Rt iliac fossa"
+  },
+  {
+   "default": "0",
+   "fieldname": "epigastric",
+   "fieldtype": "Check",
+   "label": "Epigastric"
+  },
+  {
+   "fieldname": "onset",
+   "fieldtype": "HTML",
+   "label": "Onset",
+   "options": "Onset"
+  },
+  {
+   "default": "0",
+   "fieldname": "acute",
+   "fieldtype": "Check",
+   "label": "Acute"
+  },
+  {
+   "default": "0",
+   "fieldname": "subacute",
+   "fieldtype": "Check",
+   "label": "Subacute"
+  },
+  {
+   "fieldname": "column_break_wclk6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qikpb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iazga",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "radiation",
+   "fieldtype": "HTML",
+   "label": "Radiation",
+   "options": "Radiation"
+  },
+  {
+   "default": "0",
+   "fieldname": "to_rt_shoulder_angle_of_scapula",
+   "fieldtype": "Check",
+   "label": "To Rt shoulder & angle of scapula"
+  },
+  {
+   "default": "0",
+   "fieldname": "to_rt_thigh",
+   "fieldtype": "Check",
+   "label": "to Rt thigh"
+  },
+  {
+   "default": "0",
+   "fieldname": "to_back",
+   "fieldtype": "Check",
+   "label": "to Back"
+  },
+  {
+   "fieldname": "section_break_b3uqf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "chronic",
+   "fieldtype": "Check",
+   "label": "Chronic"
+  },
+  {
+   "fieldname": "increase_with",
+   "fieldtype": "HTML",
+   "label": "Increase with",
+   "options": "Increase with"
+  },
+  {
+   "fieldname": "decrease_with",
+   "fieldtype": "HTML",
+   "label": "Decrease with",
+   "options": "Decrease with"
+  },
+  {
+   "fieldname": "swelling_section",
+   "fieldtype": "Section Break",
+   "label": "Swelling"
+  },
+  {
+   "fieldname": "site1",
+   "fieldtype": "HTML",
+   "label": "site",
+   "options": "Site:"
+  },
+  {
+   "default": "0",
+   "fieldname": "umbilical",
+   "fieldtype": "Check",
+   "label": "Umbilical"
+  },
+  {
+   "default": "0",
+   "fieldname": "inguinal",
+   "fieldtype": "Check",
+   "label": "Inguinal"
+  },
+  {
+   "default": "0",
+   "fieldname": "incisional",
+   "fieldtype": "Check",
+   "label": "Incisional"
+  },
+  {
+   "default": "0",
+   "fieldname": "epigastric1",
+   "fieldtype": "Check",
+   "label": "Epigastric"
+  },
+  {
+   "fieldname": "column_break_eeakk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "increase_with1",
+   "fieldtype": "HTML",
+   "label": "Increase with",
+   "options": "Increase with"
+  },
+  {
+   "bold": 1,
+   "fieldname": "anal_symptoms_section",
+   "fieldtype": "HTML",
+   "label": "Anal symptoms",
+   "options": "<h2><b>Anal symptoms</b></h2>"
+  },
+  {
+   "fieldname": "swelling",
+   "fieldtype": "HTML",
+   "label": "Swelling",
+   "options": "Swelling"
+  },
+  {
+   "fieldname": "discharge",
+   "fieldtype": "HTML",
+   "label": "Discharge",
+   "options": "Discharge :"
+  },
+  {
+   "fieldname": "section_break_mqzwg",
+   "fieldtype": "Section Break",
+   "label": "Neck swelling"
+  },
+  {
+   "fieldname": "site2",
+   "fieldtype": "HTML",
+   "label": "Site",
+   "options": "Site"
+  },
+  {
+   "default": "0",
+   "fieldname": "central",
+   "fieldtype": "Check",
+   "label": "Central"
+  },
+  {
+   "default": "0",
+   "fieldname": "lateral",
+   "fieldtype": "Check",
+   "label": "Lateral"
+  },
+  {
+   "default": "0",
+   "fieldname": "parotid",
+   "fieldtype": "Check",
+   "label": "Parotid"
+  },
+  {
+   "default": "0",
+   "fieldname": "submandibular",
+   "fieldtype": "Check",
+   "label": "Submandibular"
+  },
+  {
+   "fieldname": "associating_symptoms_column",
+   "fieldtype": "Column Break",
+   "label": "Associating symptoms"
+  },
+  {
+   "default": "0",
+   "fieldname": "palpitations_tachycardia_heat_intolerance_sweating",
+   "fieldtype": "Check",
+   "label": "Palpitations, Tachycardia, Heat intolerance, Sweating,Fatigue, Loss of weight, Nervousness & Irritability"
+  },
+  {
+   "default": "0",
+   "fieldname": "bradycardia_cold_intolerance",
+   "fieldtype": "Check",
+   "label": "Bradycardia, Cold intolerance"
+  },
+  {
+   "default": "0",
+   "fieldname": "pain_with_eating_and_drinking",
+   "fieldtype": "Check",
+   "label": "Pain with eating and drinking"
+  },
+  {
+   "fieldname": "others_section",
+   "fieldtype": "Section Break",
+   "label": "Others"
+  },
+  {
+   "fieldname": "scrotal",
+   "fieldtype": "HTML",
+   "label": "Scrotal",
+   "options": "Scrotal :"
+  },
+  {
+   "fieldname": "diabetic_foot_column",
+   "fieldtype": "Section Break",
+   "label": "Diabetic foot"
+  },
+  {
+   "fieldname": "side",
+   "fieldtype": "HTML",
+   "label": "Side",
+   "options": "Side"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "site3",
+   "fieldtype": "HTML",
+   "label": "Site",
+   "options": "Site"
+  },
+  {
+   "fieldname": "column_break_10ezv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "toes",
+   "fieldtype": "Check",
+   "label": "Toes"
+  },
+  {
+   "default": "0",
+   "fieldname": "heel__sole",
+   "fieldtype": "Check",
+   "label": "Heel & sole"
+  },
+  {
+   "fieldname": "examination_tab",
+   "fieldtype": "Tab Break",
+   "label": "Examination"
+  },
+  {
+   "fieldname": "abdominal_section",
+   "fieldtype": "HTML",
+   "label": "Abdominal",
+   "options": "<h2><b>Abdominal :</b></h2>"
+  },
+  {
+   "fieldname": "diagnosis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "swellinge",
+   "fieldtype": "HTML",
+   "label": "Swelling",
+   "options": "<h2><b>Swelling : </b></h2>"
+  },
+  {
+   "fieldname": "anal",
+   "fieldtype": "HTML",
+   "label": "Anal",
+   "options": "<h2><b>Anal :</b> </h2><h2></h2>"
+  },
+  {
+   "fieldname": "neck",
+   "fieldtype": "HTML",
+   "label": "Neck",
+   "options": "<h2><b>Neck : </b> </h2>"
+  },
+  {
+   "fieldname": "solitary",
+   "fieldtype": "HTML",
+   "label": "Solitary",
+   "options": "Solitary :"
+  },
+  {
+   "fieldname": "parotid1",
+   "fieldtype": "HTML",
+   "label": "Parotid",
+   "options": "Parotid"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt5",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt5",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "submandibular1",
+   "fieldtype": "HTML",
+   "label": "Submandibular",
+   "options": "Submandibular"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt6",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt6",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "scrotal1",
+   "fieldtype": "HTML",
+   "label": "Scrotal",
+   "options": "<h2><b>Other </b></h2><br> \nScrotal:"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt7",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt7",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "tenderness",
+   "fieldtype": "Check",
+   "label": "Tenderness"
+  },
+  {
+   "fieldname": "column_break_mp6vc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bag_of_worms",
+   "fieldtype": "Check",
+   "label": "Bag of worms"
+  },
+  {
+   "default": "0",
+   "fieldname": "ve_transillumination_test",
+   "fieldtype": "Check",
+   "label": "+ve transillumination test"
+  },
+  {
+   "default": "0",
+   "fieldname": "empty",
+   "fieldtype": "Check",
+   "label": "Empty"
+  },
+  {
+   "default": "0",
+   "fieldname": "uncircumcision",
+   "fieldtype": "Check",
+   "label": "Uncircumcision"
+  },
+  {
+   "fieldname": "visible__palpable_tortuous_vein_of_lower_limb",
+   "fieldtype": "HTML",
+   "label": "Visible & palpable tortuous vein of lower limb",
+   "options": "Visible & palpable tortuous vein of lower limb :"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt8",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt8",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "column_break_6cjdq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "swelling8",
+   "fieldtype": "HTML",
+   "label": "Swelling",
+   "options": "Swelling :"
+  },
+  {
+   "default": "0",
+   "fieldname": "rts",
+   "fieldtype": "Check",
+   "label": "Rt extremity"
+  },
+  {
+   "default": "0",
+   "fieldname": "lts",
+   "fieldtype": "Check",
+   "label": "Lt extremity "
+  },
+  {
+   "default": "0",
+   "fieldname": "firm",
+   "fieldtype": "Check",
+   "label": "Firm"
+  },
+  {
+   "default": "0",
+   "fieldname": "others",
+   "fieldtype": "Check",
+   "label": "Face "
+  },
+  {
+   "default": "0",
+   "fieldname": "soft",
+   "fieldtype": "Check",
+   "label": "Soft"
+  },
+  {
+   "fieldname": "sacral",
+   "fieldtype": "HTML",
+   "label": "Sacral",
+   "options": "Sacral"
+  },
+  {
+   "default": "0",
+   "fieldname": "multiple_openings",
+   "fieldtype": "Check",
+   "label": "multiple openings"
+  },
+  {
+   "default": "0",
+   "fieldname": "offensive_discharge",
+   "fieldtype": "Check",
+   "label": "Offensive discharge"
+  },
+  {
+   "default": "0",
+   "fieldname": "chronic_calcular_cholecystitis",
+   "fieldtype": "Check",
+   "label": "Chronic calcular cholecystitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "acute_appendicitis",
+   "fieldtype": "Check",
+   "label": "Acute appendicitis"
+  },
+  {
+   "default": "0",
+   "fieldname": "acute_pancreatitis",
+   "fieldtype": "Check",
+   "label": "Acute pancreatitis"
+  },
+  {
+   "fieldname": "inguinal_hernia",
+   "fieldtype": "HTML",
+   "label": "Inguinal hernia",
+   "options": "Inguinal hernia :"
+  },
+  {
+   "default": "0",
+   "fieldname": "paraumbilical_hernia",
+   "fieldtype": "Check",
+   "label": "Paraumbilical hernia"
+  },
+  {
+   "default": "0",
+   "fieldname": "incisional_hernia",
+   "fieldtype": "Check",
+   "label": "Incisional hernia."
+  },
+  {
+   "default": "0",
+   "fieldname": "epigastric_hernia",
+   "fieldtype": "Check",
+   "label": "Epigastric hernia"
+  },
+  {
+   "fieldname": "piles",
+   "fieldtype": "HTML",
+   "label": "Piles",
+   "options": "Piles : "
+  },
+  {
+   "fieldname": "fissure",
+   "fieldtype": "HTML",
+   "label": "Fissure",
+   "options": "Fissure :"
+  },
+  {
+   "default": "0",
+   "fieldname": "perianal_abscess",
+   "fieldtype": "Check",
+   "label": "Perianal abscess"
+  },
+  {
+   "default": "0",
+   "fieldname": "perianal_fistula",
+   "fieldtype": "Check",
+   "label": "Perianal fistula"
+  },
+  {
+   "default": "0",
+   "fieldname": "multinodular_goiter",
+   "fieldtype": "Check",
+   "label": "Multinodular goiter"
+  },
+  {
+   "fieldname": "solitary_thyroid_nodule",
+   "fieldtype": "HTML",
+   "label": "Solitary thyroid nodule",
+   "options": "Solitary thyroid nodule :"
+  },
+  {
+   "fieldname": "pituitary_adenoma",
+   "fieldtype": "HTML",
+   "label": "Pituitary adenoma",
+   "options": "Pituitary adenoma :"
+  },
+  {
+   "fieldname": "submandibular_sialadenitis",
+   "fieldtype": "HTML",
+   "label": "Submandibular sialadenitis",
+   "options": "Submandibular sialadenitis:"
+  },
+  {
+   "default": "0",
+   "fieldname": "thyroglossal_cyst",
+   "fieldtype": "Check",
+   "label": "Thyroglossal cyst"
+  },
+  {
+   "default": "0",
+   "fieldname": "cervical_lymphadenopathy",
+   "fieldtype": "Check",
+   "label": "Cervical lymphadenopathy"
+  },
+  {
+   "fieldname": "varicocele",
+   "fieldtype": "HTML",
+   "label": "Varicocele",
+   "options": "Varicocele :"
+  },
+  {
+   "fieldname": "hydrocele",
+   "fieldtype": "HTML",
+   "label": "Hydrocele",
+   "options": "Hydrocele :"
+  },
+  {
+   "fieldname": "undescended_testes",
+   "fieldtype": "HTML",
+   "label": "Undescended testes",
+   "options": "Undescended testes :"
+  },
+  {
+   "default": "0",
+   "fieldname": "circumcision",
+   "fieldtype": "Check",
+   "label": "Circumcision"
+  },
+  {
+   "fieldname": "lower_limb_varicose_vein",
+   "fieldtype": "HTML",
+   "label": "Lower limb varicose vein",
+   "options": "Lower limb varicose vein :"
+  },
+  {
+   "default": "0",
+   "fieldname": "lipoma",
+   "fieldtype": "Check",
+   "label": "Lipoma"
+  },
+  {
+   "default": "0",
+   "fieldname": "sebaceous_cyst",
+   "fieldtype": "Check",
+   "label": "Sebaceous cyst"
+  },
+  {
+   "default": "0",
+   "fieldname": "pilonidal_sinus",
+   "fieldtype": "Check",
+   "label": "Pilonidal sinus"
+  },
+  {
+   "fieldname": "diabetic_foot",
+   "fieldtype": "HTML",
+   "label": "Diabetic foot",
+   "options": "Diabetic foot :"
+  },
+  {
+   "default": "0",
+   "fieldname": "nausea",
+   "fieldtype": "Check",
+   "label": "Nausea"
+  },
+  {
+   "default": "0",
+   "fieldname": "vomiting",
+   "fieldtype": "Check",
+   "label": "Vomiting"
+  },
+  {
+   "default": "0",
+   "fieldname": "fever",
+   "fieldtype": "Check",
+   "label": "Fever"
+  },
+  {
+   "default": "0",
+   "fieldname": "jaundice",
+   "fieldtype": "Check",
+   "label": "Jaundice"
+  },
+  {
+   "default": "0",
+   "fieldname": "appetite",
+   "fieldtype": "Check",
+   "label": "Loss of appetite & weight"
+  },
+  {
+   "default": "0",
+   "fieldname": "urinary_symptoms",
+   "fieldtype": "Check",
+   "label": "Urinary symptoms"
+  },
+  {
+   "fieldname": "column_break_ssmma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fatty_foods",
+   "fieldtype": "Check",
+   "label": "Fatty foods"
+  },
+  {
+   "default": "0",
+   "fieldname": "fasting",
+   "fieldtype": "Check",
+   "label": "Fasting"
+  },
+  {
+   "default": "0",
+   "fieldname": "movement",
+   "fieldtype": "Check",
+   "label": "Movement"
+  },
+  {
+   "default": "0",
+   "fieldname": "lying_supine",
+   "fieldtype": "Check",
+   "label": "Lying supine"
+  },
+  {
+   "fieldname": "column_break_orz6f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fast",
+   "fieldtype": "Check",
+   "label": "Fasting"
+  },
+  {
+   "default": "0",
+   "fieldname": "leaning_forward",
+   "fieldtype": "Check",
+   "label": "Leaning forward"
+  },
+  {
+   "fieldname": "column_break_ela1t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cough",
+   "fieldtype": "Check",
+   "label": "Cough"
+  },
+  {
+   "default": "0",
+   "fieldname": "straining",
+   "fieldtype": "Check",
+   "label": "Straining"
+  },
+  {
+   "default": "0",
+   "fieldname": "lifting_heavy_objects",
+   "fieldtype": "Check",
+   "label": "Lifting heavy objects"
+  },
+  {
+   "fieldname": "disappear_when_lying_supine",
+   "fieldtype": "HTML",
+   "label": "Disappear when lying supine",
+   "options": "Disappear when lying supine"
+  },
+  {
+   "fieldname": "painf",
+   "fieldtype": "HTML",
+   "label": "Pain",
+   "options": "Pain"
+  },
+  {
+   "default": "0",
+   "fieldname": "painless",
+   "fieldtype": "Check",
+   "label": "Painless"
+  },
+  {
+   "default": "0",
+   "fieldname": "painful",
+   "fieldtype": "Check",
+   "label": "Painful"
+  },
+  {
+   "default": "0",
+   "fieldname": "prolapsed_with_defecation",
+   "fieldtype": "Check",
+   "label": "Prolapsed with defecation"
+  },
+  {
+   "default": "0",
+   "fieldname": "painl",
+   "fieldtype": "Check",
+   "label": "Painless"
+  },
+  {
+   "default": "0",
+   "fieldname": "reduced_spontaneously",
+   "fieldtype": "Check",
+   "label": "Reduced spontaneously"
+  },
+  {
+   "default": "0",
+   "fieldname": "reduced_manually",
+   "fieldtype": "Check",
+   "label": "Reduced manually"
+  },
+  {
+   "default": "0",
+   "fieldname": "ana",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pains",
+   "fieldtype": "HTML",
+   "label": "Pain",
+   "options": "Pain :"
+  },
+  {
+   "default": "0",
+   "fieldname": "pain_pink",
+   "fieldtype": "Check",
+   "label": "Pin-prick"
+  },
+  {
+   "default": "0",
+   "fieldname": "throbbing",
+   "fieldtype": "Check",
+   "label": "Throbbing"
+  },
+  {
+   "default": "0",
+   "fieldname": "bleeding_per_rectum",
+   "fieldtype": "Check",
+   "label": "Bleeding per rectum"
+  },
+  {
+   "default": "0",
+   "fieldname": "offensive",
+   "fieldtype": "Check",
+   "label": "offensive"
+  },
+  {
+   "default": "0",
+   "fieldname": "pain",
+   "fieldtype": "Check",
+   "label": "Pain"
+  },
+  {
+   "default": "0",
+   "fieldname": "swellin",
+   "fieldtype": "Check",
+   "label": "Swelling"
+  },
+  {
+   "default": "0",
+   "fieldname": "uncircumcised",
+   "fieldtype": "Check",
+   "label": "Uncircumcised"
+  },
+  {
+   "default": "0",
+   "fieldname": "testes",
+   "fieldtype": "Check",
+   "label": "Undescended testes"
+  },
+  {
+   "fieldname": "column_break_i6fkx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rcrkd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wlskw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cent",
+   "fieldtype": "Check",
+   "label": "Central."
+  },
+  {
+   "default": "0",
+   "fieldname": "goiter",
+   "fieldtype": "Check",
+   "label": "Goiter."
+  },
+  {
+   "default": "0",
+   "fieldname": "diffuse",
+   "fieldtype": "Check",
+   "label": "Diffuse."
+  },
+  {
+   "default": "0",
+   "fieldname": "hypochondrial",
+   "fieldtype": "Check",
+   "label": "Rt hypochondrial tenderness."
+  },
+  {
+   "default": "0",
+   "fieldname": "murphy",
+   "fieldtype": "Check",
+   "label": "+ve murphy sign."
+  },
+  {
+   "default": "0",
+   "fieldname": "fossa",
+   "fieldtype": "Check",
+   "label": "Rt iliac fossa tenderness."
+  },
+  {
+   "default": "0",
+   "fieldname": "localization",
+   "fieldtype": "Check",
+   "label": "Tenderness localization on coughing."
+  },
+  {
+   "default": "0",
+   "fieldname": "shifting",
+   "fieldtype": "Check",
+   "label": "+ve Rovsing sign (shifting tenderness)."
+  },
+  {
+   "default": "0",
+   "fieldname": "psoas",
+   "fieldtype": "Check",
+   "label": "+ve psoas sign."
+  },
+  {
+   "default": "0",
+   "fieldname": "obturator",
+   "fieldtype": "Check",
+   "label": "+ve obturator sign."
+  },
+  {
+   "default": "0",
+   "fieldname": "cullen",
+   "fieldtype": "Check",
+   "label": "+ve Cullen sign."
+  },
+  {
+   "default": "0",
+   "fieldname": "turner",
+   "fieldtype": "Check",
+   "label": "+ve Grey-turner sign."
+  },
+  {
+   "default": "0",
+   "fieldname": "impulse_on_cough",
+   "fieldtype": "Check",
+   "label": "Impulse on cough."
+  },
+  {
+   "default": "0",
+   "fieldname": "easily_reduced",
+   "fieldtype": "Check",
+   "label": "Easily reduced."
+  },
+  {
+   "default": "0",
+   "fieldname": "irreducible",
+   "fieldtype": "Check",
+   "label": "Irreducible."
+  },
+  {
+   "default": "0",
+   "fieldname": "strangulated",
+   "fieldtype": "Check",
+   "label": "Strangulated"
+  },
+  {
+   "default": "0",
+   "fieldname": "pi",
+   "fieldtype": "Check",
+   "label": "Piles."
+  },
+  {
+   "default": "0",
+   "fieldname": "fiss",
+   "fieldtype": "Check",
+   "label": "Fissure."
+  },
+  {
+   "default": "0",
+   "fieldname": "perianal_swelling",
+   "fieldtype": "Check",
+   "label": "Perianal swelling."
+  },
+  {
+   "default": "0",
+   "fieldname": "opening",
+   "fieldtype": "Check",
+   "label": "Perianal opening & track."
+  },
+  {
+   "fieldname": "column_break_qvsdb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "l",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "fim",
+   "fieldtype": "Check",
+   "label": "Firm"
+  },
+  {
+   "default": "0",
+   "fieldname": "moves_up__down_with_deglutition",
+   "fieldtype": "Check",
+   "label": "Moves up  down with deglutition."
+  },
+  {
+   "default": "0",
+   "fieldname": "with",
+   "fieldtype": "Check",
+   "label": "Moves up & down with tongue protrusion"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt1",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt1",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "bilateral",
+   "fieldtype": "Check",
+   "label": "Bilateral"
+  },
+  {
+   "default": "0",
+   "fieldname": "g2",
+   "fieldtype": "Check",
+   "label": "G2"
+  },
+  {
+   "default": "0",
+   "fieldname": "g3",
+   "fieldtype": "Check",
+   "label": "G3"
+  },
+  {
+   "default": "0",
+   "fieldname": "g4",
+   "fieldtype": "Check",
+   "label": "G4"
+  },
+  {
+   "default": "0",
+   "fieldname": "posterior",
+   "fieldtype": "Check",
+   "label": "Posterior"
+  },
+  {
+   "default": "0",
+   "fieldname": "anterior",
+   "fieldtype": "Check",
+   "label": "Anterior"
+  },
+  {
+   "default": "0",
+   "fieldname": "kissing",
+   "fieldtype": "Check",
+   "label": "Kissing"
+  },
+  {
+   "fieldname": "column_break_wbxpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt2",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt2",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt3",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt3",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt4",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt4",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "column_break_1zqzf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rtt",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "ltt",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "rttt",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lttt",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt11",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt11",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "rtr",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "2",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "default": "0",
+   "fieldname": "bilateral1",
+   "fieldtype": "Check",
+   "label": "Bilateral"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt45",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "ltyy",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "column_break_jlr9x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ingrowing",
+   "fieldtype": "HTML",
+   "label": "Ingrowing toenail",
+   "options": "Ingrowing toenail:"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt_ing",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt_ing",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "column_break_yij8y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ingrowing_toenail_di",
+   "fieldtype": "HTML",
+   "label": "Ingrowing toenail",
+   "options": "Ingrowing toenail:"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt_ing_ex",
+   "fieldtype": "Check",
+   "label": "Infected"
+  },
+  {
+   "default": "0",
+   "fieldname": "rt_left_ex",
+   "fieldtype": "Check",
+   "label": "Clean"
+  },
+  {
+   "fieldname": "space1",
+   "fieldtype": "Data",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "space2",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "column_break_dlw6d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "space3",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "column_break_gwte0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "vv",
+   "fieldtype": "Check",
+   "label": "Lower limb pain & disfigurement"
+  },
+  {
+   "fieldname": "space4",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "sw",
+   "fieldtype": "HTML",
+   "label": "Swellings",
+   "options": "<h2>Swellings</h2>"
+  },
+  {
+   "default": "0",
+   "fieldname": "extremities",
+   "fieldtype": "Check",
+   "label": "Extremities"
+  },
+  {
+   "default": "0",
+   "fieldname": "face",
+   "fieldtype": "Check",
+   "label": "Face"
+  },
+  {
+   "default": "0",
+   "fieldname": "scalp",
+   "fieldtype": "Check",
+   "label": "Scalp"
+  },
+  {
+   "default": "0",
+   "fieldname": "nape",
+   "fieldtype": "Check",
+   "label": "Nape"
+  },
+  {
+   "default": "0",
+   "fieldname": "trunk",
+   "fieldtype": "Check",
+   "label": "Trunk"
+  },
+  {
+   "default": "0",
+   "fieldname": "lower_back_discharge",
+   "fieldtype": "Check",
+   "label": "Lower back discharge"
+  },
+  {
+   "fieldname": "column_break_uyi1h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gm2fz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rqxvo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "space7",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "space5",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "space8",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "sapace9",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "column_break_08s2x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kvc6o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "space01",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "space02",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "sca",
+   "fieldtype": "Check",
+   "label": "Scalp"
+  },
+  {
+   "default": "0",
+   "fieldname": "na",
+   "fieldtype": "Check",
+   "label": "Nape"
+  },
+  {
+   "default": "0",
+   "fieldname": "trun",
+   "fieldtype": "Check",
+   "label": "Trunk"
+  },
+  {
+   "fieldname": "abdoninal",
+   "fieldtype": "HTML",
+   "options": "<h2><b>Abdominal: </b> </h2>"
+  },
+  {
+   "fieldname": "swe",
+   "fieldtype": "HTML",
+   "label": "Swelling",
+   "options": "<h2> <b> Swelling </b> </h2>"
+  },
+  {
+   "fieldname": "column_break_4azao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anal3",
+   "fieldtype": "HTML",
+   "label": "Anal",
+   "options": "<h2> <b> Anal:</b></h2>"
+  },
+  {
+   "fieldname": "n",
+   "fieldtype": "HTML",
+   "label": "Neck",
+   "options": "<h2><b> Neck </b></h2>"
+  },
+  {
+   "fieldname": "column_break_maokk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sc3",
+   "fieldtype": "HTML",
+   "label": "Scrotal",
+   "options": "<h2><b> Scrotal </b></h2>"
+  },
+  {
+   "default": "0",
+   "fieldname": "rebound",
+   "fieldtype": "Check",
+   "label": "+ve rebound tenderness"
+  },
+  {
+   "fieldname": "column_break_d1uad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "space12",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "space03",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "ingrowing_nail",
+   "fieldtype": "HTML",
+   "label": "Ingrowing nail",
+   "options": "Ingrowing nail"
+  },
+  {
+   "default": "0",
+   "fieldname": "rting",
+   "fieldtype": "Check",
+   "label": "Rt"
+  },
+  {
+   "default": "0",
+   "fieldname": "lt66",
+   "fieldtype": "Check",
+   "label": "Lt"
+  },
+  {
+   "fieldname": "investigations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "imaging_tab",
+   "fieldtype": "Tab Break",
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "medication_tab",
+   "fieldtype": "Tab Break",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "follow_up_tab",
+   "fieldtype": "Tab Break",
+   "label": "Follow Up"
+  },
+  {
+   "fieldname": "fallow_up_days",
+   "fieldtype": "Int",
+   "label": "Fallow up Days",
+   "options": "Follow up"
+  },
+  {
+   "fieldname": "history_tab",
+   "fieldtype": "Tab Break",
+   "label": "History"
+  },
+  {
+   "fieldname": "past_medical_history",
+   "fieldtype": "Data",
+   "label": "Past Medical History"
+  },
+  {
+   "fieldname": "drug_history",
+   "fieldtype": "Data",
+   "label": "Drug History"
+  },
+  {
+   "fieldname": "social_history",
+   "fieldtype": "Data",
+   "label": "Surgical History"
+  },
+  {
+   "fieldname": "family_history",
+   "fieldtype": "Data",
+   "label": "Family History"
+  },
+  {
+   "fieldname": "procedure_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procedure"
+  },
+  {
+   "fieldname": "procedure_prescription",
+   "fieldtype": "Table",
+   "label": "Procedure Prescription",
+   "options": "Procedure Prescription"
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "label": "services_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "label": "medication_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "que",
+   "fieldtype": "Data",
+   "label": "Que"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "General Surgery",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "lab_test_prescription",
+   "fieldtype": "Table",
+   "label": "Lab Test",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "radiology_prescription",
+   "fieldtype": "Table",
+   "label": "Imaging",
+   "options": "Radiology Prescription"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Medication",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "select_lab_tests",
+   "fieldtype": "Button",
+   "label": "Select Lab Tests"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-01 09:35:33.222451",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "General Surgery",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

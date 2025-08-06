@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-26 11:36:14.469606",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "requester",
+  "department_head",
+  "division_chief_or_director",
+  "chairman_med_ex_com"
+ ],
+ "fields": [
+  {
+   "fieldname": "requester",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Requester"
+  },
+  {
+   "fieldname": "department_head",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Department Head"
+  },
+  {
+   "fieldname": "division_chief_or_director",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Division Chief or Director"
+  },
+  {
+   "fieldname": "chairman_med_ex_com",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Chairman Med Ex Com"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-26 11:36:14.469606",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Approval for Request",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

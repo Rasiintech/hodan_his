@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-15 12:16:46.735355",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "age",
+  "type_of_blood",
+  "started_by",
+  "column_break_5",
+  "ward",
+  "diagnosis",
+  "column_break_8",
+  "bd_no",
+  "date",
+  "amount",
+  "observation_section",
+  "blood_table",
+  "blood_transfusion_chart_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "type_of_blood",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type of Blood Transfused"
+  },
+  {
+   "fieldname": "started_by",
+   "fieldtype": "Data",
+   "label": " Transfusion Started by:"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Data",
+   "label": "Ward"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bd_no",
+   "fieldtype": "Data",
+   "label": "BD NO"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": " Date of transfusion "
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount transfused"
+  },
+  {
+   "fieldname": "observation_section",
+   "fieldtype": "Section Break",
+   "label": "Observation"
+  },
+  {
+   "fieldname": "blood_table",
+   "fieldtype": "Table",
+   "options": "Blood Transfusion Table"
+  },
+  {
+   "fieldname": "blood_transfusion_chart_table",
+   "fieldtype": "Table",
+   "label": "Blood Transfusion Chart Table",
+   "options": "Blood Transfusion Chart Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "BLOOD TRANSFUSION OBSERVATION CHART",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Name of Patient",
+   "options": "Patient"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-15 10:28:59.305196",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "BLOOD TRANSFUSION OBSERVATION CHART",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Emergency Nurse",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,727 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "IPQ-.##### ",
+ "creation": "2023-09-20 11:17:00.689098",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "feedbackfrm",
+  "section_break_p4cy8",
+  "date",
+  "desc",
+  "column_break_qxqt1",
+  "section_break_t6blr",
+  "experience_aspects",
+  "section_break_wwkm0",
+  "nurse_treat",
+  "column_break_dc1uy",
+  "always_nurse_treat",
+  "column_break_nk5oz",
+  "usually_nurse_treat",
+  "column_break_qudf2",
+  "sometimes_nurse_treat",
+  "column_break_xre3n",
+  "never_nurse_treat",
+  "section_break_buk9w",
+  "explaination",
+  "column_break_p0mmf",
+  "always_explaination",
+  "column_break_pz6ol",
+  "usually_explaination",
+  "column_break_rmg3j",
+  "sometimes_explaination",
+  "column_break_ilm8w",
+  "never_explaination",
+  "section_break_lr7e9",
+  "listen",
+  "column_break_ltw7r",
+  "always_listen",
+  "column_break_zhcue",
+  "usually_listen",
+  "column_break_phr7e",
+  "sometimes_listen",
+  "column_break_pedfj",
+  "never_listen",
+  "section_break_54puq",
+  "medication_care",
+  "column_break_793bj",
+  "always_medication_care",
+  "column_break_thgri",
+  "usually_medication_care",
+  "column_break_zqh5s",
+  "sometimes_medication_care",
+  "column_break_fakfc",
+  "never_medication_care",
+  "section_break_mcbim",
+  "response",
+  "column_break_yvsfc",
+  "always_response",
+  "column_break_vmysm",
+  "usually_response",
+  "column_break_lj7xe",
+  "sometimes_response",
+  "column_break_xftja",
+  "never_response",
+  "section_break_sjidm",
+  "apt_reg",
+  "section_break_x2rzx",
+  "very_good_ease_of_getting_an_appointment",
+  "column_break_dwgwt",
+  "good_ease_of_getting_an_appointment",
+  "column_break_vnzvt",
+  "fair_ease_of_getting_an_appointment",
+  "column_break_xna6l",
+  "poor_ease_of_getting_an_appointment",
+  "column_break_tbzdr",
+  "very_poor_ease_of_getting_an_appointment",
+  "section_break_zbgfk",
+  "info_regarding_doctor",
+  "column_break_kcyls",
+  "very_god_info_regarding_doctor",
+  "column_break_qndri",
+  "good_info_regarding_doctor",
+  "column_break_0bfsg",
+  "fair_info_regarding_doctor",
+  "column_break_desas",
+  "poor_info_regarding_doctor",
+  "section_break_9hp1l",
+  "warmth_courtesy",
+  "column_break_ptkeb",
+  "very_good_warmth_courtesy",
+  "column_break_tej9q",
+  "good_warmth_courtesy",
+  "column_break_mu3qn",
+  "fair_warmth_courtesy",
+  "column_break_al0hf",
+  "poor_warmth_courtesy",
+  "section_break_uxjpc",
+  "communication_with_staff",
+  "column_break_e5ypq",
+  "very_good_communication_with_staff",
+  "column_break_nts5w",
+  "goodcommunication_with_staff",
+  "column_break_1qylt",
+  "fair_communication_with_staff",
+  "column_break_qhnlz",
+  "poor_communication_with_staff",
+  "section_break_txtab",
+  "aspects",
+  "column_break_mj9ly",
+  "very_good_aspects",
+  "column_break_nwatt",
+  "good_aspects",
+  "column_break_idyc1",
+  "fair_aspects",
+  "column_break_ihxe1",
+  "poor_aspects",
+  "section_break_swbtg",
+  "very_good_comfort_while_waiting_for_your_turn",
+  "column_break_m0pdp",
+  "good_comfort_while_waiting_for_your_turn",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "feedbackfrm",
+   "fieldtype": "HTML",
+   "options": "In-Patient Feedback Form"
+  },
+  {
+   "fieldname": "section_break_p4cy8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "desc",
+   "fieldtype": "HTML",
+   "options": "All doctors are expected to seek feedback on a regular basis from those they work with and treat. Information from patients, relatives and friends is an important part of this process. \n"
+  },
+  {
+   "fieldname": "column_break_qxqt1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_t6blr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "experience_aspects",
+   "fieldtype": "HTML",
+   "options": "Please rate the care from nurses:"
+  },
+  {
+   "fieldname": "section_break_wwkm0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nurse_treat",
+   "fieldtype": "HTML",
+   "options": "How often did nurses treat you with courtesy and respect?"
+  },
+  {
+   "fieldname": "column_break_dc1uy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always_nurse_treat",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_nk5oz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually_nurse_treat",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_qudf2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes_nurse_treat",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_xre3n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never_nurse_treat",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_buk9w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "explaination",
+   "fieldtype": "HTML",
+   "options": "How often did nurses explain things in a way you could understand?"
+  },
+  {
+   "fieldname": "column_break_p0mmf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always_explaination",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_pz6ol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually_explaination",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_rmg3j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes_explaination",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_ilm8w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never_explaination",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_lr7e9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "listen",
+   "fieldtype": "HTML",
+   "options": "How often did nurses listen carefully to you?"
+  },
+  {
+   "fieldname": "column_break_ltw7r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always_listen",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_zhcue",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually_listen",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_phr7e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes_listen",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_pedfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never_listen",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_54puq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "medication_care",
+   "fieldtype": "HTML",
+   "options": "Timely medication & care:"
+  },
+  {
+   "fieldname": "column_break_793bj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always_medication_care",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_thgri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually_medication_care",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_zqh5s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes_medication_care",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_fakfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never_medication_care",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_mcbim",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "HTML",
+   "options": "Response of staff to your Concerns or Complaints"
+  },
+  {
+   "fieldname": "column_break_yvsfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always_response",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_vmysm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually_response",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_lj7xe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes_response",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_xftja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never_response",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_sjidm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "apt_reg",
+   "fieldtype": "HTML",
+   "options": "How would you rate our operating rooms/patient wards?"
+  },
+  {
+   "fieldname": "section_break_x2rzx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_dwgwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_vnzvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_xna6l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_tbzdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_zbgfk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "info_regarding_doctor",
+   "fieldtype": "HTML",
+   "options": "Overall, how satisfied were you with the care you received?"
+  },
+  {
+   "fieldname": "column_break_kcyls",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_god_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Very satisfied"
+  },
+  {
+   "fieldname": "column_break_qndri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Fairly satisfied"
+  },
+  {
+   "fieldname": "column_break_0bfsg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Not really satisfied"
+  },
+  {
+   "fieldname": "column_break_desas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Not All satisfied"
+  },
+  {
+   "fieldname": "section_break_9hp1l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "warmth_courtesy",
+   "fieldtype": "HTML",
+   "options": "How satisfied are you with convenience of our discharge process:"
+  },
+  {
+   "fieldname": "column_break_ptkeb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Very satisfied"
+  },
+  {
+   "fieldname": "column_break_tej9q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Fairly satisfied"
+  },
+  {
+   "fieldname": "column_break_mu3qn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Not really satisfied"
+  },
+  {
+   "fieldname": "column_break_al0hf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Not All satisfied"
+  },
+  {
+   "fieldname": "section_break_uxjpc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "communication_with_staff",
+   "fieldtype": "HTML",
+   "options": "Please rate the overall cleanliness:"
+  },
+  {
+   "fieldname": "column_break_e5ypq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_nts5w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "goodcommunication_with_staff",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_1qylt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_qhnlz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_txtab",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "aspects",
+   "fieldtype": "HTML",
+   "options": "How often did the toilets appear clean?"
+  },
+  {
+   "fieldname": "column_break_mj9ly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_aspects",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_nwatt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_aspects",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_idyc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_aspects",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_ihxe1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_aspects",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_swbtg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "very_good_comfort_while_waiting_for_your_turn",
+   "fieldtype": "Text",
+   "label": "Please tell us the single most important action we took that make you feel better:"
+  },
+  {
+   "fieldname": "column_break_m0pdp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "good_comfort_while_waiting_for_your_turn",
+   "fieldtype": "Text",
+   "label": "What could we have done differently that might have made your experience more positive?"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "In-patient questionnaire",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-14 12:21:35.891033",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "In-patient questionnaire",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

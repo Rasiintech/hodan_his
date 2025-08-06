@@ -1,0 +1,337 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "IPDSUR-.#####",
+ "creation": "2025-05-06 09:21:00.655187",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gender",
+  "age",
+  "column_break_n0dhb",
+  "date_of_visit",
+  "section_break_vqzzz",
+  "how_was_your_experience_during_admission",
+  "why_1",
+  "section_break_e7rs4",
+  "how_satisfied_were_you_with_the_procedure_experience",
+  "why_2",
+  "section_break_5y3xr",
+  "name_1",
+  "why_3",
+  "section_break_7tkhm",
+  "name_2",
+  "why_4",
+  "section_break_vuv4l",
+  "name_3",
+  "why_5",
+  "section_break_4xefo",
+  "name_8",
+  "why_6",
+  "section_break_woagg",
+  "name_10",
+  "why_8",
+  "section_break_fjv5j",
+  "name_11",
+  "why_9",
+  "section_break_rglrk",
+  "name_13",
+  "why_10",
+  "section_break_gx6zu",
+  "name_12",
+  "why_11",
+  "section_break_hjhqa",
+  "12_did_the_staff_explain_clearly_how_to_take_your_medication",
+  "why_12",
+  "section_break_cfpvp",
+  "13_how_would_you_rate_the_helpfulness_of_our_staff",
+  "why_13",
+  "section_break_2x429",
+  "name_4",
+  "why_14"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "patient.age_type",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_n0dhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vqzzz",
+   "fieldtype": "Section Break",
+   "label": "Questions"
+  },
+  {
+   "fieldname": "how_was_your_experience_during_admission",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "1. How would you rate your experience during the admission process?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "how_satisfied_were_you_with_the_procedure_experience",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "2. How satisfied were you with your medical procedure experience?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "3. How were you treated by the staff during the admission process?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "4. How would you rate the tests and examinations done to find out what illness you have?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "5. How satisfied are you with the comfort of your room provided by the facility including bed, lines, etc.?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_4",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "13. Please rate your overall experience with your visit",
+   "options": "\nPoor\nFair\nVery good\nN/A",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_8",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "6. If you had a needle stick (blood draw), was it comfortable?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_10",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "7. Were you treated with courtesy and caring by the nursing?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_11",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "8. Were you treated with kindness and respect by the doctor?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_12",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "10. Was your primary health care doctor able to quickly diagnose your condition and prescribe the right medication?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "name_13",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "9. Were the medical staffs quick to respond to your ",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "why_1",
+   "fieldtype": "Small Text",
+   "label": "If you selected \"Poor,\" please briefly explain the reason:"
+  },
+  {
+   "fieldname": "section_break_e7rs4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_2",
+   "fieldtype": "Small Text",
+   "label": "If you selected \"Poor,\" please briefly explain the reason:"
+  },
+  {
+   "fieldname": "section_break_5y3xr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_3",
+   "fieldtype": "Small Text",
+   "label": "If you selected \"Poor,\" please briefly explain the reason:"
+  },
+  {
+   "fieldname": "section_break_7tkhm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_4",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_vuv4l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_5",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_4xefo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_6",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_woagg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_8",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_fjv5j",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_9",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_rglrk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_10",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_gx6zu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_11",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_hjhqa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "12_did_the_staff_explain_clearly_how_to_take_your_medication",
+   "fieldtype": "Select",
+   "label": "11. Did the staff explain clearly how to take your medication?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "why_12",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_cfpvp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "13_how_would_you_rate_the_helpfulness_of_our_staff",
+   "fieldtype": "Data",
+   "label": "12. How would you rate the helpfulness of our staff?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "why_13",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  },
+  {
+   "fieldname": "section_break_2x429",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "why_14",
+   "fieldtype": "Small Text",
+   "label": "If you answered \"Poor,\" please tell us why:"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-20 14:37:38.808333",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "IPD Survey",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

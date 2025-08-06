@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-13 17:12:38.948330",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "time",
+  "cervical_dilatation",
+  "membrane_intact_rupture",
+  "presentation",
+  "amniotic_fluid_color",
+  "contraction",
+  "vaginal_bleeding",
+  "fetal_doppler",
+  "done_by",
+  "fhr",
+  "fetal_head_engaged"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "TIME",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cervical_dilatation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cervical dilatation",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "membrane_intact_rupture",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Membrane: ",
+   "options": "Intact\nrupture",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "amniotic_fluid_color",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Amniotic fluid color",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "contraction",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "contraction",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "vaginal_bleeding",
+   "fieldtype": "Data",
+   "label": "Vaginal bleeding"
+  },
+  {
+   "columns": 1,
+   "fieldname": "fetal_doppler",
+   "fieldtype": "Data",
+   "label": "Fetal doppler",
+   "width": "1"
+  },
+  {
+   "fieldname": "done_by",
+   "fieldtype": "Data",
+   "label": "Done By",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "presentation",
+   "fieldtype": "Data",
+   "label": "Presentation"
+  },
+  {
+   "columns": 1,
+   "fieldname": "fhr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "FHR"
+  },
+  {
+   "columns": 1,
+   "fieldname": "fetal_head_engaged",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fetal Head engaged"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-24 14:25:24.662194",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "EXAMINATION Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

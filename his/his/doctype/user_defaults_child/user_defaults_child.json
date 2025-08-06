@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-20 11:07:51.587301",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "doctype_party",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctype_party",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doctype Party",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Value",
+   "options": "doctype_party",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-20 11:14:16.929221",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "User Defaults Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

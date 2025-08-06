@@ -1,0 +1,323 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-27 10:42:32.995280",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "patient_name",
+  "obstetrician",
+  "midwife",
+  "pediatrician",
+  "labour__birth_and_postnatal_period_gravida",
+  "para",
+  "onset_of_labour_spontaneous",
+  "induced_indication",
+  "mode_of_delivery",
+  "on1",
+  "sex",
+  "indication",
+  "presentation",
+  "live_birth_stillbirth_gestation",
+  "birth_weight",
+  "blood_loss",
+  "apgars",
+  "1minute",
+  "5_minutes",
+  "10_minutes",
+  "placenta_membranes",
+  "perineum_abdominalwound",
+  "sutures",
+  "haemoglobin",
+  "on2",
+  "repeat_not_needed",
+  "due_on",
+  "blood_group",
+  "anti_d_needed",
+  "anti__d_given_on",
+  "rubella_status",
+  "vaccination_needed",
+  "vaccinated_on",
+  "contraception__sexual_health_needs_discussed",
+  "details",
+  "cervical_smear",
+  "discharge_medication",
+  "postnatal_check_with",
+  "arranged_for",
+  "mother_to_arrange",
+  "problems_identified_during_pregnancy_labour_birth",
+  "problems_in_the_postnatal_period_investigations",
+  "summary_completed_by",
+  "date",
+  "signed",
+  "designation"
+ ],
+ "fields": [
+  {
+   "fieldname": "obstetrician",
+   "fieldtype": "Data",
+   "label": "Obstetrician "
+  },
+  {
+   "fieldname": "midwife",
+   "fieldtype": "Data",
+   "label": "Midwife"
+  },
+  {
+   "fieldname": "pediatrician",
+   "fieldtype": "Data",
+   "label": "Pediatrician"
+  },
+  {
+   "fieldname": "labour__birth_and_postnatal_period_gravida",
+   "fieldtype": "Data",
+   "label": "Labour  birth and postnatal period Gravida"
+  },
+  {
+   "fieldname": "para",
+   "fieldtype": "Data",
+   "label": "Para"
+  },
+  {
+   "fieldname": "onset_of_labour_spontaneous",
+   "fieldtype": "Data",
+   "label": "Onset of labour Spontaneous "
+  },
+  {
+   "fieldname": "induced_indication",
+   "fieldtype": "Data",
+   "label": "induced indication"
+  },
+  {
+   "fieldname": "mode_of_delivery",
+   "fieldtype": "Data",
+   "label": "Mode of delivery "
+  },
+  {
+   "fieldname": "on1",
+   "fieldtype": "Data",
+   "label": "on"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "indication",
+   "fieldtype": "Data",
+   "label": "Indication "
+  },
+  {
+   "fieldname": "presentation",
+   "fieldtype": "Data",
+   "label": "Presentation"
+  },
+  {
+   "fieldname": "live_birth_stillbirth_gestation",
+   "fieldtype": "Data",
+   "label": "Live birth Stillbirth Gestation "
+  },
+  {
+   "fieldname": "birth_weight",
+   "fieldtype": "Data",
+   "label": "Birth weight   "
+  },
+  {
+   "fieldname": "blood_loss",
+   "fieldtype": "Data",
+   "label": "Blood loss"
+  },
+  {
+   "fieldname": "apgars",
+   "fieldtype": "Data",
+   "label": "APGARS "
+  },
+  {
+   "fieldname": "1minute",
+   "fieldtype": "Data",
+   "label": "1minute "
+  },
+  {
+   "fieldname": "5_minutes",
+   "fieldtype": "Data",
+   "label": "5 minutes "
+  },
+  {
+   "fieldname": "10_minutes",
+   "fieldtype": "Data",
+   "label": "10 minutes "
+  },
+  {
+   "fieldname": "placenta_membranes",
+   "fieldtype": "Data",
+   "label": "Placenta membranes"
+  },
+  {
+   "fieldname": "perineum_abdominalwound",
+   "fieldtype": "Data",
+   "label": "Perineum abdominalwound "
+  },
+  {
+   "fieldname": "sutures",
+   "fieldtype": "Data",
+   "label": "Sutures"
+  },
+  {
+   "fieldname": "haemoglobin",
+   "fieldtype": "Data",
+   "label": "Haemoglobin "
+  },
+  {
+   "fieldname": "on2",
+   "fieldtype": "Data",
+   "label": "on"
+  },
+  {
+   "fieldname": "repeat_not_needed",
+   "fieldtype": "Data",
+   "label": "Repeat Not needed  "
+  },
+  {
+   "fieldname": "due_on",
+   "fieldtype": "Data",
+   "label": "due On"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood group "
+  },
+  {
+   "fieldname": "anti_d_needed",
+   "fieldtype": "Select",
+   "label": "anti D needed ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "anti__d_given_on",
+   "fieldtype": "Data",
+   "label": "anti  D given on"
+  },
+  {
+   "fieldname": "rubella_status",
+   "fieldtype": "Data",
+   "label": "Rubella status "
+  },
+  {
+   "fieldname": "vaccination_needed",
+   "fieldtype": "Select",
+   "label": "Vaccination needed ",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "vaccinated_on",
+   "fieldtype": "Data",
+   "label": "Vaccinated on"
+  },
+  {
+   "fieldname": "contraception__sexual_health_needs_discussed",
+   "fieldtype": "Select",
+   "label": "Contraception  sexual health needs discussed ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Data",
+   "label": "Details"
+  },
+  {
+   "fieldname": "cervical_smear",
+   "fieldtype": "Select",
+   "label": "Cervical smear ",
+   "options": "No\nyes"
+  },
+  {
+   "fieldname": "discharge_medication",
+   "fieldtype": "Data",
+   "label": "Discharge medication"
+  },
+  {
+   "fieldname": "postnatal_check_with",
+   "fieldtype": "Data",
+   "label": "Postnatal check with"
+  },
+  {
+   "fieldname": "arranged_for",
+   "fieldtype": "Data",
+   "label": "Arranged for"
+  },
+  {
+   "fieldname": "mother_to_arrange",
+   "fieldtype": "Data",
+   "label": "Mother to arrange"
+  },
+  {
+   "fieldname": "problems_identified_during_pregnancy_labour_birth",
+   "fieldtype": "Data",
+   "label": "Problems identified during pregnancy labour birth"
+  },
+  {
+   "fieldname": "problems_in_the_postnatal_period_investigations",
+   "fieldtype": "Data",
+   "label": "Problems in the postnatal period investigations"
+  },
+  {
+   "fieldname": "summary_completed_by",
+   "fieldtype": "Data",
+   "label": "Summary completed by "
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "signed",
+   "fieldtype": "Data",
+   "label": "Signed "
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-27 10:46:26.855994",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Postnatal Discharge Summarys",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

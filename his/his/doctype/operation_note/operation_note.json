@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-25 15:17:05.262424",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "column_break_9le3q",
+  "patient_name",
+  "column_break_yzvlc",
+  "date",
+  "time",
+  "section_break_wzzq1",
+  "operation_name",
+  "indication",
+  "operator",
+  "assistant",
+  "anesthetist",
+  "column_break_5o8yf",
+  "anesthesia_type",
+  "section_break_osxa9",
+  "note",
+  "instruction"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Operation Summery"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9le3q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wzzq1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "indication",
+   "fieldtype": "Data",
+   "label": "Indication"
+  },
+  {
+   "fieldname": "operation_name",
+   "fieldtype": "Link",
+   "label": "Operation Name",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "anesthesia_type",
+   "fieldtype": "Data",
+   "label": "Anesthesia Type"
+  },
+  {
+   "fieldname": "column_break_5o8yf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_osxa9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_yzvlc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assistant",
+   "fieldtype": "Data",
+   "label": "Assistant"
+  },
+  {
+   "fieldname": "anesthetist",
+   "fieldtype": "Data",
+   "label": "Anesthetist"
+  },
+  {
+   "fieldname": "instruction",
+   "fieldtype": "Small Text",
+   "label": "Instruction"
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Data",
+   "label": "Operator"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-15 14:55:03.028414",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Operation Note",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

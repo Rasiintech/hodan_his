@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": " CYT.#######",
+ "creation": "2022-03-28 09:57:40.199833",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "date",
+  "column_break_3",
+  "age",
+  "sex",
+  "practitioner",
+  "department",
+  "section_break_8",
+  "examination",
+  "specimen_type",
+  "location",
+  "clinical_history",
+  "adequacy",
+  "general_interpretation_category",
+  "diagnosis",
+  "note_and_comments",
+  "reported_doctor",
+  "reported_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Requested Doctor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "specimen_type",
+   "fieldtype": "Data",
+   "label": "Specimen Type"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "clinical_history",
+   "fieldtype": "Small Text",
+   "label": "Clinical History"
+  },
+  {
+   "fieldname": "adequacy",
+   "fieldtype": "Select",
+   "label": "Adequacy",
+   "options": "\nSatisfactory for evaluation\nUnsatisfactory for evaluation"
+  },
+  {
+   "fieldname": "general_interpretation_category",
+   "fieldtype": "Link",
+   "label": "General Interpretation Category",
+   "options": "General Interpretation Category"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "note_and_comments",
+   "fieldtype": "Small Text",
+   "label": "Note and Comments"
+  },
+  {
+   "fieldname": "reported_doctor",
+   "fieldtype": "Link",
+   "label": "Reported Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "reported_date",
+   "fieldtype": "Date",
+   "label": "Reported Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cytology",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "examination",
+   "fieldtype": "Data",
+   "label": "Examination",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-26 13:19:28.194134",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Cytology",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

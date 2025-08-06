@@ -1,0 +1,521 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-22 11:03:28.643405",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "que",
+  "patient",
+  "patient_name",
+  "patient_sex",
+  "patient_age",
+  "inpatient_record",
+  "inpatient_status",
+  "room",
+  "column_break_6",
+  "company",
+  "encounter_date",
+  "encounter_time",
+  "practitioner",
+  "practitioner_name",
+  "ref_practitioner",
+  "request",
+  "medical_department",
+  "emergency_impression_tab",
+  "section_break_lewwb",
+  "symptoms",
+  "column_break_cycjp",
+  "diagnosis",
+  "histrory_tab",
+  "section_break_iwlb2",
+  "presentation",
+  "history",
+  "section_break_wcoof",
+  "conscious_level",
+  "column_break_keiov",
+  "motor_power",
+  "section_break_fom0v",
+  "pain",
+  "column_break_lex0y",
+  "site",
+  "column_break_yz4qq",
+  "type",
+  "column_break_wmxe9",
+  "radiation",
+  "section_break_h9rsn",
+  "periodicity",
+  "column_break_4fco3",
+  "exaggerated_by",
+  "column_break_xcy0b",
+  "relived_by",
+  "section_break_zjqhw",
+  "vomiting",
+  "bowel_action",
+  "column_break_bjt3d",
+  "distension",
+  "urinary_symptoms",
+  "section_break_qlond",
+  "investigation_tab",
+  "section_break_sdrs1",
+  "select_lab_tests",
+  "lab_test_prescription",
+  "sb_procedures",
+  "section_break_j8acn",
+  "procedure_prescription",
+  "imaging_tab",
+  "section_break_7igtk",
+  "radiology_prescription",
+  "sb_drug_prescription",
+  "section_break_n9sry",
+  "drug_prescription",
+  "medication_so",
+  "services_so",
+  "amended_from",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "HLC-ENC-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "que",
+   "fieldtype": "Link",
+   "label": "Que",
+   "options": "Que",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "patient_sex",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "inpatient_status",
+   "fieldtype": "Data",
+   "label": "Inpatient Status",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "doctor_plan.room",
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Room",
+   "options": "Healthcare Service Unit Type"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Hospital",
+   "options": "Company"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ipd Order Date",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "encounter_time",
+   "fieldtype": "Time",
+   "label": "Ipd Order Time"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Healthcare Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Practitioner Name",
+   "options": "Healthcare Practitioner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ref_practitioner",
+   "fieldtype": "Data",
+   "label": "Ref Practitioner"
+  },
+  {
+   "fieldname": "request",
+   "fieldtype": "Small Text",
+   "label": "Request"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "medical_department",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Medical Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "emergency_impression_tab",
+   "fieldtype": "Tab Break",
+   "label": "Symptoms & Diagnosis"
+  },
+  {
+   "fieldname": "section_break_lewwb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "symptoms",
+   "fieldtype": "Table MultiSelect",
+   "label": "Symptoms",
+   "options": "Patient Encounter Symptom"
+  },
+  {
+   "fieldname": "column_break_cycjp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table MultiSelect",
+   "label": "Diagnosis",
+   "options": "Patient Encounter Diagnosis"
+  },
+  {
+   "fieldname": "histrory_tab",
+   "fieldtype": "Tab Break",
+   "label": "Histrory"
+  },
+  {
+   "fieldname": "section_break_iwlb2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "presentation",
+   "fieldtype": "Small Text",
+   "label": "Presentation "
+  },
+  {
+   "fieldname": "history",
+   "fieldtype": "Small Text",
+   "label": "History"
+  },
+  {
+   "fieldname": "section_break_wcoof",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "conscious_level",
+   "fieldtype": "Data",
+   "label": "Conscious level"
+  },
+  {
+   "fieldname": "column_break_keiov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "motor_power",
+   "fieldtype": "Data",
+   "label": "Motor power"
+  },
+  {
+   "fieldname": "section_break_fom0v",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pain",
+   "fieldtype": "Data",
+   "label": "Pain"
+  },
+  {
+   "fieldname": "column_break_lex0y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Data",
+   "label": "Site"
+  },
+  {
+   "fieldname": "column_break_yz4qq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "column_break_wmxe9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "radiation",
+   "fieldtype": "Data",
+   "label": "Radiation"
+  },
+  {
+   "fieldname": "section_break_h9rsn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "periodicity",
+   "fieldtype": "Data",
+   "label": "Periodicity   "
+  },
+  {
+   "fieldname": "column_break_4fco3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exaggerated_by",
+   "fieldtype": "Data",
+   "label": "exaggerated by"
+  },
+  {
+   "fieldname": "column_break_xcy0b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "relived_by",
+   "fieldtype": "Data",
+   "label": "relived by"
+  },
+  {
+   "fieldname": "section_break_zjqhw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vomiting",
+   "fieldtype": "Data",
+   "label": "Vomiting"
+  },
+  {
+   "fieldname": "bowel_action",
+   "fieldtype": "Data",
+   "label": "Bowel action"
+  },
+  {
+   "fieldname": "column_break_bjt3d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "distension",
+   "fieldtype": "Data",
+   "label": "Distension"
+  },
+  {
+   "fieldname": "urinary_symptoms",
+   "fieldtype": "Data",
+   "label": "Urinary symptoms"
+  },
+  {
+   "fieldname": "section_break_qlond",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "investigation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Investigation"
+  },
+  {
+   "fieldname": "section_break_sdrs1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lab_test_prescription",
+   "fieldtype": "Table",
+   "label": "Lab Tests",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "sb_procedures",
+   "fieldtype": "Tab Break",
+   "label": "Procedures"
+  },
+  {
+   "fieldname": "section_break_j8acn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "procedure_prescription",
+   "fieldtype": "Table",
+   "label": "Clinical Procedures",
+   "no_copy": 1,
+   "options": "Procedure Prescription"
+  },
+  {
+   "fieldname": "imaging_tab",
+   "fieldtype": "Tab Break",
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "section_break_7igtk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "radiology_prescription",
+   "fieldtype": "Table",
+   "label": "Radiology Prescription",
+   "options": "Radiology Prescription"
+  },
+  {
+   "fieldname": "sb_drug_prescription",
+   "fieldtype": "Tab Break",
+   "label": "Medications"
+  },
+  {
+   "fieldname": "section_break_n9sry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Drug Prescription",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "label": "medication_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "label": "services_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Emergency",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_lab_tests",
+   "fieldtype": "Button",
+   "label": "Select Lab Tests"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-23 19:29:27.978118",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Emergency",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Healthcare",
+ "search_fields": "patient, practitioner, medical_department, encounter_date, encounter_time",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}

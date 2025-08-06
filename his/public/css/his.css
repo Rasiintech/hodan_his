@@ -1,0 +1,132 @@
+
+/* Customer section */
+.customer {
+    /* margin-block-start: 900px;
+    margin-inline: 25px; */
+  }
+  
+  .customer__head {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  .customer__head span {
+    color: var(--dark-black);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .customer__head span.active {
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+
+  /* Customer section */
+
+/* View Customer */
+.viewCustomer {
+    margin-inline: 25px;
+    margin-block-start: 50px;
+  }
+  
+  /* View Customer Table */
+  .tableWrap {
+    border-radius: 8px;
+    padding: 9px 22px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .recent_student {
+    margin-top: 20px;
+    padding-bottom: 6px;
+    color: var(--dark-black);
+  }
+  
+  .students {
+    border-collapse: collapse;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .succ {
+    background-color: #08ad6c;
+    color: var(--white);
+    padding: 0px 5px;
+    border-radius: 8px;
+  }
+  
+  .danger {
+    background-color: #ff3d57;
+    color: var(--white);
+    padding: 0px 5px;
+    border-radius: 8px;
+  }
+  
+  .students td {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .students th {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .students tr:hover {
+    background-color: #ddd;
+  }
+  .students hr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+  }
+  
+
+
+
+  .students {
+    border-collapse: collapse;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .tableWrap {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .date_ {
+    width: 100%;
+  }
+  .students tr th:nth-child(2) {
+    padding: 0px 99px 0px 99px;
+  }
+
+  .mdia {
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .mdcont {
+    height: auto !important;
+    min-height: 100% !important;
+    border-radius: 0 !important;
+  }

@@ -1,0 +1,554 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ADD-NOTE-.#####",
+ "creation": "2023-09-12 12:08:21.041494",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_eb1np",
+  "sex",
+  "admission_date",
+  "section_break_xu4ni",
+  "chief_complaint",
+  "primary_diagnose",
+  "column_break_zvose",
+  "no",
+  "yes",
+  "type_of_allergies",
+  "section_break_qh1z0",
+  "diabetic",
+  "hypertension",
+  "strock",
+  "column_break_il687",
+  "migraine",
+  "cancer",
+  "surgical_history",
+  "surgical_history_type",
+  "column_break_gjerm",
+  "current_medications",
+  "vital_signs_tab",
+  "section_break_gnzqy",
+  "vital_sign",
+  "physical_assessment_tab",
+  "section_break_3ibko",
+  "general_appearance",
+  "column_break_602bg",
+  "good",
+  "column_break_sm7xx",
+  "porr",
+  "section_break_k3kuh",
+  "neurological_status",
+  "column_break_mresi",
+  "good_1",
+  "column_break_ufxgw",
+  "poor_1",
+  "section_break_eyk9b",
+  "cardiovascular",
+  "column_break_wlgsv",
+  "good_2",
+  "column_break_sfiz0",
+  "poor",
+  "section_break_t80gv",
+  "respiratory",
+  "column_break_bb7cg",
+  "good_5",
+  "column_break_bhkcq",
+  "poor_6",
+  "section_break_oeft0",
+  "gastrointestinal",
+  "column_break_q3wda",
+  "good_3",
+  "column_break_whd2b",
+  "poor_3",
+  "section_break_nai15",
+  "pain_level",
+  "column_break_qm5x5",
+  "good_4",
+  "column_break_tl31p",
+  "poor_5",
+  "section_break_maeoh",
+  "diagnostic_tests_tab",
+  "section_break_phcrw",
+  "diagnostic_tests",
+  "plan_of_care_tab",
+  "section_break_tfsnr",
+  "plan_of_care",
+  "patient_and_family_education_tab",
+  "section_break_z0dsb",
+  "patient_and_family_education",
+  "additional_notes_tab",
+  "section_break_vwleu",
+  "additional_notes",
+  "amended_from",
+  "medication_tab",
+  "section_break_hf1kw",
+  "drug_prescription"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_eb1np",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "default": "Today",
+   "fieldname": "admission_date",
+   "fieldtype": "Data",
+   "label": "Admission Date"
+  },
+  {
+   "fieldname": "section_break_xu4ni",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Table MultiSelect",
+   "label": "Chief complaint",
+   "options": "Patient Encounter Symptom"
+  },
+  {
+   "bold": 1,
+   "fieldname": "column_break_zvose",
+   "fieldtype": "Column Break",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "section_break_qh1z0",
+   "fieldtype": "Section Break",
+   "label": "Medical history"
+  },
+  {
+   "fieldname": "column_break_gjerm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 3,
+   "fieldname": "current_medications",
+   "fieldtype": "Small Text",
+   "label": "Current medications"
+  },
+  {
+   "fieldname": "vital_signs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Vital Signs"
+  },
+  {
+   "fieldname": "section_break_gnzqy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vital_sign",
+   "fieldtype": "Table",
+   "label": "VITAL SIGN",
+   "options": "VITAL SIGN"
+  },
+  {
+   "fieldname": "physical_assessment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Physical Assessment"
+  },
+  {
+   "fieldname": "section_break_3ibko",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "general_appearance",
+   "fieldtype": "HTML",
+   "label": "General Appearance",
+   "options": "<p>General Appearance</p>"
+  },
+  {
+   "fieldname": "column_break_602bg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_sm7xx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "porr",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "section_break_k3kuh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "neurological_status",
+   "fieldtype": "HTML",
+   "label": "Neurological Status",
+   "options": "Neurological Status"
+  },
+  {
+   "fieldname": "column_break_mresi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_1",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_ufxgw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_1",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "section_break_eyk9b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cardiovascular",
+   "fieldtype": "HTML",
+   "label": "Cardiovascular",
+   "options": "<p>Cardiovascular</p>"
+  },
+  {
+   "fieldname": "column_break_wlgsv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_2",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_sfiz0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "section_break_t80gv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "respiratory",
+   "fieldtype": "HTML",
+   "label": "Respiratory",
+   "options": "Respiratory"
+  },
+  {
+   "fieldname": "column_break_bb7cg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_5",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_bhkcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_6",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "section_break_oeft0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gastrointestinal",
+   "fieldtype": "HTML",
+   "label": "Gastrointestinal",
+   "options": "Gastrointestinal"
+  },
+  {
+   "fieldname": "column_break_q3wda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_3",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_whd2b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_3",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "section_break_nai15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pain_level",
+   "fieldtype": "HTML",
+   "label": "Pain Level",
+   "options": "Pain Level"
+  },
+  {
+   "fieldname": "column_break_qm5x5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_4",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_tl31p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_5",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "section_break_maeoh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "diagnostic_tests_tab",
+   "fieldtype": "Tab Break",
+   "label": "Diagnostic tests"
+  },
+  {
+   "fieldname": "section_break_phcrw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "diagnostic_tests",
+   "fieldtype": "Text",
+   "label": "Diagnostic tests"
+  },
+  {
+   "fieldname": "plan_of_care_tab",
+   "fieldtype": "Tab Break",
+   "label": "Plan of Care"
+  },
+  {
+   "fieldname": "section_break_tfsnr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "plan_of_care",
+   "fieldtype": "Text",
+   "label": "Plan of Care"
+  },
+  {
+   "fieldname": "patient_and_family_education_tab",
+   "fieldtype": "Tab Break",
+   "label": "Patient and Family Education"
+  },
+  {
+   "fieldname": "section_break_z0dsb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient_and_family_education",
+   "fieldtype": "Text",
+   "label": "Patient and Family Education"
+  },
+  {
+   "fieldname": "additional_notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Additional notes"
+  },
+  {
+   "fieldname": "section_break_vwleu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Text",
+   "label": "Additional notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Admission Note",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "depends_on": "eval:doc.yes==\"1\"",
+   "fieldname": "type_of_allergies",
+   "fieldtype": "Data",
+   "label": "Type of Allergies"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "diabetic",
+   "fieldtype": "Check",
+   "label": "Diabetic"
+  },
+  {
+   "default": "0",
+   "fieldname": "hypertension",
+   "fieldtype": "Check",
+   "label": "Hypertension"
+  },
+  {
+   "default": "0",
+   "fieldname": "strock",
+   "fieldtype": "Check",
+   "label": "Strock"
+  },
+  {
+   "fieldname": "column_break_il687",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 3,
+   "default": "0",
+   "fieldname": "migraine",
+   "fieldtype": "Check",
+   "label": "Migraine "
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "cancer",
+   "fieldtype": "Check",
+   "label": "Cancer"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "surgical_history",
+   "fieldtype": "Check",
+   "label": "Surgical history "
+  },
+  {
+   "depends_on": "eval:doc.surgical_history==\"1\"",
+   "fieldname": "surgical_history_type",
+   "fieldtype": "Data",
+   "label": "Surgical history Type"
+  },
+  {
+   "fieldname": "medication_tab",
+   "fieldtype": "Tab Break",
+   "label": "Medications"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Drug Prescription",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "section_break_hf1kw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "primary_diagnose",
+   "fieldtype": "Link",
+   "label": "Primary Diagnose",
+   "options": "primery diagonose"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-19 17:13:01.532898",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Admission Note",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

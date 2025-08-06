@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-26 13:13:57.212040",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_descriptions_justification",
+  "quantity",
+  "urgent",
+  "non_urgent",
+  "cost_each",
+  "cost_total",
+  "ceo_remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_descriptions_justification",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Descriptions Justification "
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "urgent",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Urgent"
+  },
+  {
+   "fieldname": "non_urgent",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Non Urgent"
+  },
+  {
+   "fieldname": "cost_each",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " cost each"
+  },
+  {
+   "fieldname": "cost_total",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " cost total"
+  },
+  {
+   "fieldname": "ceo_remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CEO remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-26 13:13:57.212040",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Request for Quote child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 11:08:19.642179",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "mrp",
+  "babys_name",
+  "fathers_name",
+  "gender",
+  "ambiguous",
+  "date_of_birth",
+  "date_of_discharge",
+  "weight_at_birth",
+  "weight_on_discharge",
+  "head_circumference",
+  "length",
+  "apgars",
+  "oxygen",
+  "intubation_1",
+  "bag__mask",
+  "intubation_2",
+  "narcan",
+  "column_break_2jufm",
+  "consultant",
+  "umbilical_catheterization",
+  "suction",
+  "non_required",
+  "mode_of_delivery",
+  "general_examination",
+  "appearance",
+  "systemic_examination",
+  "diagnoses",
+  "management",
+  "relevant_investigations",
+  "discharge_suggestions",
+  "medications",
+  "doctors_name",
+  "signature"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB "
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "babys_name",
+   "fieldtype": "Data",
+   "label": "Babys Name"
+  },
+  {
+   "fieldname": "fathers_name",
+   "fieldtype": "Data",
+   "label": "Fathers Name"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "ambiguous",
+   "fieldtype": "Data",
+   "label": "Ambiguous"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "date_of_discharge",
+   "fieldtype": "Date",
+   "label": "Date of Discharge"
+  },
+  {
+   "fieldname": "weight_at_birth",
+   "fieldtype": "Data",
+   "label": "Weight at Birth  "
+  },
+  {
+   "fieldname": "weight_on_discharge",
+   "fieldtype": "Data",
+   "label": "Weight on discharge"
+  },
+  {
+   "fieldname": "head_circumference",
+   "fieldtype": "Data",
+   "label": "Head Circumference"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length"
+  },
+  {
+   "fieldname": "apgars",
+   "fieldtype": "Data",
+   "label": " APGARS"
+  },
+  {
+   "fieldname": "oxygen",
+   "fieldtype": "Data",
+   "label": "oxygen"
+  },
+  {
+   "fieldname": "intubation_1",
+   "fieldtype": "Data",
+   "label": "Intubation"
+  },
+  {
+   "fieldname": "bag__mask",
+   "fieldtype": "Data",
+   "label": "Bag  Mask"
+  },
+  {
+   "fieldname": "intubation_2",
+   "fieldtype": "Data",
+   "label": "Intubation"
+  },
+  {
+   "fieldname": "narcan",
+   "fieldtype": "Data",
+   "label": "Narcan"
+  },
+  {
+   "fieldname": "umbilical_catheterization",
+   "fieldtype": "Data",
+   "label": "Umbilical Catheterization "
+  },
+  {
+   "fieldname": "suction",
+   "fieldtype": "Data",
+   "label": "Suction"
+  },
+  {
+   "fieldname": "non_required",
+   "fieldtype": "Data",
+   "label": "Non required"
+  },
+  {
+   "fieldname": "mode_of_delivery",
+   "fieldtype": "Data",
+   "label": "Mode of Delivery"
+  },
+  {
+   "fieldname": "general_examination",
+   "fieldtype": "Data",
+   "label": "General Examination "
+  },
+  {
+   "fieldname": "appearance",
+   "fieldtype": "Data",
+   "label": "Appearance"
+  },
+  {
+   "fieldname": "systemic_examination",
+   "fieldtype": "Data",
+   "label": "Systemic Examination"
+  },
+  {
+   "fieldname": "diagnoses",
+   "fieldtype": "Data",
+   "label": "Diagnoses"
+  },
+  {
+   "fieldname": "management",
+   "fieldtype": "Data",
+   "label": "Management"
+  },
+  {
+   "fieldname": "relevant_investigations",
+   "fieldtype": "Data",
+   "label": "Relevant Investigations"
+  },
+  {
+   "fieldname": "discharge_suggestions",
+   "fieldtype": "Data",
+   "label": "Discharge Suggestions"
+  },
+  {
+   "fieldname": "medications",
+   "fieldtype": "Data",
+   "label": "Medications"
+  },
+  {
+   "fieldname": "doctors_name",
+   "fieldtype": "Data",
+   "label": "Doctors Name"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID ",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_2jufm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Link",
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:40:12.530856",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "NEWBORN NURSERY DISCHARGE SUMMARY",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

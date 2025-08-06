@@ -1,0 +1,1341 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-19 14:22:21.736975",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "facility_name",
+  "column_break_hjek0",
+  "facility_type",
+  "mfl_code",
+  "section_break_scxkd",
+  "district_1",
+  "column_break_lyvmv",
+  "region",
+  "column_break_ugg5i",
+  "column_break_nhfs1",
+  "section_break_yy50p",
+  "start_date_1",
+  "column_break_c6aq6",
+  "end_date",
+  "column_break_73c2y",
+  "column_break_kdvh9",
+  "section_break_kvpen",
+  "version_1",
+  "labour_delivery_maternity_register_r_09_a",
+  "serial_number",
+  "column_break_mhffm",
+  "date_of_admission",
+  "column_break_3q6il",
+  "full_names_mobile",
+  "column_break_8j48r",
+  "section_break_y0kq4",
+  "age",
+  "column_break_wmmll",
+  "village___town_idp_camp",
+  "column_break_cjfax",
+  "gravidae",
+  "column_break_msikc",
+  "section_break_jdkpa",
+  "parity",
+  "column_break_blmn0",
+  "gestation_at_delivery_weeks",
+  "column_break_563ul",
+  "pregnancy_delivery_complications",
+  "section_break_vc558",
+  "hb_gdl",
+  "column_break_tjhru",
+  "partograph_used_yn",
+  "column_break_ayjjn",
+  "date_of_delivery_dd_mm_yy",
+  "section_break_mnizl",
+  "time_of_delivery_hh__mm",
+  "column_break_18mum",
+  "type_of_delivery_normalinstrumentalcs",
+  "column_break_kc7zo",
+  "presentation",
+  "section_break_ynbdo",
+  "delivery_conducted_by_name_designation",
+  "column_break_yedau",
+  "uterotonic_for_pph",
+  "column_break_l25ju",
+  "emergency_obstretric_care",
+  "section_break_j3wb8",
+  "placenta_complete_yn",
+  "column_break_bmizb",
+  "alive__normal",
+  "normal",
+  "column_break_1qlzs",
+  "alive_newborn_resusitation_for_asphyxia",
+  "column_break_akjja",
+  "column_break_hlmdr",
+  "column_break_cvvxs",
+  "section_break_1z8jb",
+  "dead__fsb",
+  "column_break_qrgvq",
+  "dead_msb",
+  "column_break_p9hf8",
+  "column_break_lnyw1",
+  "column_break_ubczd",
+  "section_break_6s5pp",
+  "neonatal_death",
+  "section_break_51fln",
+  "congenital_abnormality",
+  "column_break_0oluy",
+  "apgar_score_0___10",
+  "column_break_gliod",
+  "sex_of_baby_fm",
+  "section_break_x1v7r",
+  "baby_weight_grams",
+  "column_break_euyic",
+  "breast_feeding_bf_within_1_hour_of_birth_yn",
+  "column_break_wkwmq",
+  "birth_notification_number",
+  "section_break_eejbj",
+  "bcg_at_birth_yn",
+  "column_break_4g3tj",
+  "opv_at_birth_yn",
+  "column_break_czqyt",
+  "live_birth_hiv_positive_mother_status_knownnew",
+  "section_break_zhq7s",
+  "hiv_testing_known_positive",
+  "column_break_ksxsy",
+  "column_break_k6ztr",
+  "hiv_testing_counselled_yn",
+  "column_break_mlzsf",
+  "hiv_testing_tested_yn",
+  "column_break_wmdfq",
+  "hiv_testing__results_pn",
+  "section_break_dvyh3",
+  "art_therapy_mother_option_b_plus",
+  "column_break_vx7hj",
+  "art_therapy_mother_haart",
+  "column_break_u3jml",
+  "column_break_sypaq",
+  "column_break_6etgm",
+  "section_break_lvtks",
+  "art_prophylaxis_infant_yn",
+  "column_break_d3ebp",
+  "date_of_discharge_dd_mm_yy",
+  "column_break_ntap4",
+  "condition_of_mother_at_discharge_ad",
+  "section_break_xxzdt",
+  "condition_of_baby_at_discharge_ad",
+  "column_break_cb582",
+  "health_education_ipc_iycf_yn",
+  "column_break_q9v0f",
+  "health_education_ipc__postpartum_bs_yn",
+  "section_break_dnehh",
+  "date_of_next_visit",
+  "column_break_jgwir",
+  "referrals_yn_mother_in",
+  "column_break_ydvdz",
+  "referrals_yn_mother_out",
+  "column_break_n5gk3",
+  "referrals_yn_infant_out",
+  "column_break_maisi",
+  "section_break_7xcbv",
+  "remarks",
+  "delivery_by_cadres_section",
+  "delivery_by_sba_column",
+  "column_break_lanvt",
+  "delivery_by_other_cadre",
+  "column_break_f8htp",
+  "partograph_used",
+  "column_break_4bqnz",
+  "uteronic_used_for_prevention",
+  "delivery_type_3",
+  "delivery_type_4",
+  "section_break_5kcnc",
+  "neonatal_death_born_alive_but_died_after_birth_0_ilaa_28_days",
+  "column_break_fqoqt",
+  "congenital_anomaly",
+  "section_break_sdpgh",
+  "apgar0_ilaa_10",
+  "column_break_69jff",
+  "baby_sex_2",
+  "column_break_k2hcz",
+  "m_2",
+  "column_break_geunr",
+  "f_2",
+  "column_break_rgl5g",
+  "baby_weight_grams_2",
+  "column_break_okexl",
+  "bf_within_1_hr_yn_section",
+  "column_break_qax3m",
+  "y",
+  "column_break_rvzto",
+  "n",
+  "section_break_oflda",
+  "birth_notification_number_b001mmyyy",
+  "column_break_aev6n",
+  "bcgddmmyy",
+  "column_break_ux4au",
+  "opv_0_ddmmyy",
+  "section_break_qakf8",
+  "hiv_testing_and_results",
+  "column_break_jlgqb",
+  "known_pos_kpu",
+  "column_break_emni8",
+  "counselledyn",
+  "s",
+  "testedyn",
+  "column_break_uhmsw",
+  "results_pos__neg",
+  "column_break_br3vf",
+  "column_break_daoil",
+  "live_birth_hiv_plus__mother_status_knownnew",
+  "labour_delivery__maternity_register_r_09_a_section",
+  "facility_name_3",
+  "section_break_acaee",
+  "district_3",
+  "column_break_qisb3",
+  "start_date",
+  "column_break_d327u",
+  "version",
+  "column_break_woezr",
+  "respiration",
+  "sign",
+  "skin_color",
+  "column_break_hqrvo",
+  "reflex_irritability",
+  "column_break_4n0lq",
+  "muscle_tone",
+  "column_break_xnxvj",
+  "respiratory_effort",
+  "section_break_x45ve",
+  "section_break_qrbit",
+  "gestation_at_delivery",
+  "column_break_crmdw",
+  "location_and_type_of_delivery",
+  "column_break_h4hme",
+  "partograph",
+  "section_break_acrlz",
+  "anemia_and_early_breastfeeding",
+  "section_break_gcy3x",
+  "maternal_complications",
+  "column_break_lvwrr",
+  "apgar_score_2",
+  "column_break_azbva",
+  "baby_sex",
+  "column_break_xnqlf",
+  "birth_weight",
+  "column_break_luzgz",
+  "section_break_l0wig",
+  "infant_outcome",
+  "column_break_dvpzy",
+  "immunization",
+  "column_break_8phhd",
+  "mother_at_discharge",
+  "column_break_fqc3x",
+  "baby_at_discharge",
+  "section_break_rmnaf",
+  "pmtct_summary",
+  "column_break_5l3v7",
+  "art_prophylaxis",
+  "column_break_6tunh",
+  "referral_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "facility_name",
+   "fieldtype": "Data",
+   "label": "Facility Name"
+  },
+  {
+   "fieldname": "facility_type",
+   "fieldtype": "Data",
+   "label": "Facility Type"
+  },
+  {
+   "fieldname": "mfl_code",
+   "fieldtype": "Data",
+   "label": "MFL Code"
+  },
+  {
+   "fieldname": "column_break_hjek0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_scxkd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lyvmv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
+  },
+  {
+   "fieldname": "column_break_ugg5i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nhfs1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yy50p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start date"
+  },
+  {
+   "fieldname": "column_break_c6aq6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_73c2y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kdvh9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kvpen",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "column_break_mhffm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "label": "Date of Admission"
+  },
+  {
+   "fieldname": "column_break_3q6il",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_names_mobile",
+   "fieldtype": "Data",
+   "label": "Full Names Mobile"
+  },
+  {
+   "fieldname": "column_break_8j48r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_wmmll",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "village___town_idp_camp",
+   "fieldtype": "Data",
+   "label": "Village   Town IDP camp"
+  },
+  {
+   "fieldname": "column_break_cjfax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_y0kq4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "labour_delivery_maternity_register_r_09_a",
+   "fieldtype": "Section Break",
+   "label": "Labour Delivery Maternity Register R 09 A"
+  },
+  {
+   "fieldname": "gravidae",
+   "fieldtype": "Data",
+   "label": "Gravidae"
+  },
+  {
+   "fieldname": "column_break_msikc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jdkpa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "parity",
+   "fieldtype": "Data",
+   "label": "Parity"
+  },
+  {
+   "fieldname": "column_break_blmn0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gestation_at_delivery_weeks",
+   "fieldtype": "Data",
+   "label": "Gestation at Delivery (weeks)"
+  },
+  {
+   "fieldname": "column_break_563ul",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pregnancy_delivery_complications",
+   "fieldtype": "Data",
+   "label": "Pregnancy/ Delivery Complications"
+  },
+  {
+   "fieldname": "section_break_vc558",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hb_gdl",
+   "fieldtype": "Data",
+   "label": "Hb (g/dL)"
+  },
+  {
+   "fieldname": "column_break_tjhru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "partograph_used_yn",
+   "fieldtype": "Data",
+   "label": "Partograph used (Y/N)"
+  },
+  {
+   "fieldname": "column_break_ayjjn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_delivery_dd_mm_yy",
+   "fieldtype": "Date",
+   "label": "Date of Delivery (DD MM YY)"
+  },
+  {
+   "fieldname": "section_break_mnizl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "time_of_delivery_hh__mm",
+   "fieldtype": "Time",
+   "label": "Time of Delivery (HH  MM)"
+  },
+  {
+   "fieldname": "column_break_18mum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_delivery_normalinstrumentalcs",
+   "fieldtype": "Data",
+   "label": "Type of delivery (Normal/Instrumental/CS)"
+  },
+  {
+   "fieldname": "column_break_kc7zo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "presentation",
+   "fieldtype": "Data",
+   "label": "Presentation"
+  },
+  {
+   "fieldname": "section_break_ynbdo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "delivery_conducted_by_name_designation",
+   "fieldtype": "Data",
+   "label": "Delivery conducted by (Name Designation)"
+  },
+  {
+   "fieldname": "column_break_yedau",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uterotonic_for_pph",
+   "fieldtype": "Data",
+   "label": "Uterotonic for PPH"
+  },
+  {
+   "fieldname": "column_break_l25ju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "emergency_obstretric_care",
+   "fieldtype": "Data",
+   "label": "Emergency obstretric care"
+  },
+  {
+   "fieldname": "section_break_j3wb8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "placenta_complete_yn",
+   "fieldtype": "Data",
+   "label": "Placenta Complete (Y/N)"
+  },
+  {
+   "fieldname": "column_break_bmizb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alive__normal",
+   "fieldtype": "Section Break",
+   "label": "Alive  "
+  },
+  {
+   "fieldname": "column_break_1qlzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "alive_newborn_resusitation_for_asphyxia",
+   "fieldtype": "Check",
+   "label": "Alive Newborn resusitation for Asphyxia"
+  },
+  {
+   "fieldname": "section_break_1z8jb",
+   "fieldtype": "Section Break",
+   "label": "Dead  "
+  },
+  {
+   "default": "0",
+   "fieldname": "dead__fsb",
+   "fieldtype": "Check",
+   "label": "FSB"
+  },
+  {
+   "fieldname": "column_break_qrgvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dead_msb",
+   "fieldtype": "Check",
+   "label": "MSB"
+  },
+  {
+   "fieldname": "column_break_ubczd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "neonatal_death",
+   "fieldtype": "Data",
+   "label": "Neonatal death"
+  },
+  {
+   "fieldname": "section_break_6s5pp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "congenital_abnormality",
+   "fieldtype": "Data",
+   "label": "Congenital abnormality"
+  },
+  {
+   "fieldname": "column_break_0oluy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apgar_score_0___10",
+   "fieldtype": "Data",
+   "label": "APGAR Score (0   10)"
+  },
+  {
+   "fieldname": "column_break_gliod",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sex_of_baby_fm",
+   "fieldtype": "Data",
+   "label": "Sex of Baby (F/M)"
+  },
+  {
+   "fieldname": "section_break_x1v7r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "baby_weight_grams",
+   "fieldtype": "Data",
+   "label": "Baby weight (grams)"
+  },
+  {
+   "fieldname": "column_break_euyic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "breast_feeding_bf_within_1_hour_of_birth_yn",
+   "fieldtype": "Data",
+   "label": "Breast Feeding (BF) within 1 hour of birth (Y/N) "
+  },
+  {
+   "fieldname": "column_break_wkwmq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "birth_notification_number",
+   "fieldtype": "Data",
+   "label": "Birth notification number"
+  },
+  {
+   "fieldname": "section_break_eejbj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bcg_at_birth_yn",
+   "fieldtype": "Data",
+   "label": "BCG at Birth (Y/N)"
+  },
+  {
+   "fieldname": "column_break_4g3tj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opv_at_birth_yn",
+   "fieldtype": "Data",
+   "label": "OPV at Birth (Y/N)"
+  },
+  {
+   "fieldname": "column_break_czqyt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "live_birth_hiv_positive_mother_status_knownnew",
+   "fieldtype": "Data",
+   "label": "Live birth HIV positive mother (status known/new)"
+  },
+  {
+   "fieldname": "section_break_zhq7s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hiv_testing_known_positive",
+   "fieldtype": "Section Break",
+   "label": "HIV testing "
+  },
+  {
+   "default": "0",
+   "fieldname": "column_break_ksxsy",
+   "fieldtype": "Check",
+   "label": "Known Positive"
+  },
+  {
+   "default": "0",
+   "fieldname": "hiv_testing_counselled_yn",
+   "fieldtype": "Check",
+   "label": "Counselled (Y/N)"
+  },
+  {
+   "fieldname": "column_break_k6ztr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "hiv_testing_tested_yn",
+   "fieldtype": "Check",
+   "label": "Tested (Y/N)"
+  },
+  {
+   "fieldname": "section_break_dvyh3",
+   "fieldtype": "Section Break",
+   "label": "ART Therapy"
+  },
+  {
+   "default": "0",
+   "fieldname": "hiv_testing__results_pn",
+   "fieldtype": "Check",
+   "label": "Results (P/N)"
+  },
+  {
+   "default": "0",
+   "fieldname": "art_therapy_mother_option_b_plus",
+   "fieldtype": "Check",
+   "label": " Mother Option B plus"
+  },
+  {
+   "fieldname": "column_break_vx7hj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "art_therapy_mother_haart",
+   "fieldtype": "Check",
+   "label": " Mother HAART"
+  },
+  {
+   "fieldname": "section_break_lvtks",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "art_prophylaxis_infant_yn",
+   "fieldtype": "Data",
+   "label": "ART prophylaxis Infant (Y/N)"
+  },
+  {
+   "fieldname": "column_break_d3ebp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_discharge_dd_mm_yy",
+   "fieldtype": "Date",
+   "label": "Date of discharge (DD MM YY)"
+  },
+  {
+   "fieldname": "column_break_ntap4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "condition_of_mother_at_discharge_ad",
+   "fieldtype": "Data",
+   "label": "Condition of Mother at Discharge (A/D)"
+  },
+  {
+   "fieldname": "section_break_xxzdt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "condition_of_baby_at_discharge_ad",
+   "fieldtype": "Data",
+   "label": "Condition of Baby at Discharge (A/D)"
+  },
+  {
+   "fieldname": "column_break_cb582",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "health_education_ipc_iycf_yn",
+   "fieldtype": "Data",
+   "label": "Health Education (IPC) IYCF (Y/N)"
+  },
+  {
+   "fieldname": "column_break_q9v0f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "health_education_ipc__postpartum_bs_yn",
+   "fieldtype": "Data",
+   "label": "Health Education (IPC)  Postpartum BS (Y/N)"
+  },
+  {
+   "fieldname": "section_break_dnehh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_next_visit",
+   "fieldtype": "Date",
+   "label": "Date of next visit"
+  },
+  {
+   "fieldname": "column_break_jgwir",
+   "fieldtype": "Section Break",
+   "label": "Referrals (Y/N)"
+  },
+  {
+   "default": "0",
+   "fieldname": "referrals_yn_mother_in",
+   "fieldtype": "Check",
+   "label": " Mother IN"
+  },
+  {
+   "fieldname": "column_break_n5gk3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "referrals_yn_mother_out",
+   "fieldtype": "Check",
+   "label": "Mother OUT"
+  },
+  {
+   "fieldname": "section_break_7xcbv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "referrals_yn_infant_out",
+   "fieldtype": "Check",
+   "label": " Infant OUT"
+  },
+  {
+   "fieldname": "column_break_maisi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "facility_name_3",
+   "fieldtype": "Heading",
+   "label": "Facility Name"
+  },
+  {
+   "fieldname": "district_1",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "start_date_1",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "version_1",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "district_3",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "column_break_qisb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_d327u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_woezr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "respiration",
+   "fieldtype": "Data",
+   "label": "Respiration"
+  },
+  {
+   "fieldname": "sign",
+   "fieldtype": "Section Break",
+   "label": "Sign"
+  },
+  {
+   "fieldname": "skin_color",
+   "fieldtype": "Data",
+   "label": "Skin color"
+  },
+  {
+   "fieldname": "column_break_hqrvo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reflex_irritability",
+   "fieldtype": "Data",
+   "label": "Reflex irritability"
+  },
+  {
+   "fieldname": "column_break_4n0lq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "muscle_tone",
+   "fieldtype": "Data",
+   "label": "Muscle tone"
+  },
+  {
+   "fieldname": "column_break_xnxvj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "respiratory_effort",
+   "fieldtype": "Data",
+   "label": "Respiratory effort"
+  },
+  {
+   "fieldname": "section_break_x45ve",
+   "fieldtype": "Section Break",
+   "label": "Labour Delivery  Maternity Register (R 09 A)"
+  },
+  {
+   "fieldname": "gestation_at_delivery",
+   "fieldtype": "Data",
+   "label": "Gestation at Delivery"
+  },
+  {
+   "fieldname": "column_break_crmdw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_and_type_of_delivery",
+   "fieldtype": "Data",
+   "label": "Location and Type of Delivery"
+  },
+  {
+   "fieldname": "column_break_h4hme",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "partograph",
+   "fieldtype": "Data",
+   "label": "Partograph"
+  },
+  {
+   "fieldname": "anemia_and_early_breastfeeding",
+   "fieldtype": "Data",
+   "label": "Anemia and Early Breastfeeding"
+  },
+  {
+   "fieldname": "maternal_complications",
+   "fieldtype": "Data",
+   "label": "Maternal Complications"
+  },
+  {
+   "fieldname": "section_break_gcy3x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lvwrr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apgar_score_2",
+   "fieldtype": "Data",
+   "label": "APGAR Score"
+  },
+  {
+   "fieldname": "column_break_azbva",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "baby_sex",
+   "fieldtype": "Data",
+   "label": "Baby Sex"
+  },
+  {
+   "fieldname": "column_break_xnqlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "birth_weight",
+   "fieldtype": "Data",
+   "label": "Birth Weight"
+  },
+  {
+   "fieldname": "column_break_luzgz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_l0wig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "infant_outcome",
+   "fieldtype": "Data",
+   "label": "Infant Outcome"
+  },
+  {
+   "fieldname": "column_break_dvpzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "immunization",
+   "fieldtype": "Data",
+   "label": "Immunization"
+  },
+  {
+   "fieldname": "column_break_8phhd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mother_at_discharge",
+   "fieldtype": "Data",
+   "label": "Mother at Discharge"
+  },
+  {
+   "fieldname": "column_break_fqc3x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "baby_at_discharge",
+   "fieldtype": "Data",
+   "label": "Baby at Discharge"
+  },
+  {
+   "fieldname": "section_break_rmnaf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_acrlz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pmtct_summary",
+   "fieldtype": "Data",
+   "label": "PMTCT Summary"
+  },
+  {
+   "fieldname": "column_break_5l3v7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "art_prophylaxis",
+   "fieldtype": "Data",
+   "label": "ART Prophylaxis"
+  },
+  {
+   "fieldname": "column_break_6tunh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "referral_summary",
+   "fieldtype": "Data",
+   "label": "Referral Summary"
+  },
+  {
+   "fieldname": "section_break_qrbit",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "labour_delivery__maternity_register_r_09_a_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_acaee",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "column_break_akjja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hlmdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_p9hf8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lnyw1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cvvxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_51fln",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mlzsf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wmdfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_u3jml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sypaq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6etgm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ydvdz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_by_cadres_section",
+   "fieldtype": "Section Break",
+   "label": "Delivery by Cadres"
+  },
+  {
+   "fieldname": "delivery_by_sba_column",
+   "fieldtype": "Data",
+   "label": "Delivery by SBA"
+  },
+  {
+   "fieldname": "delivery_by_other_cadre",
+   "fieldtype": "Data",
+   "label": "Delivery by other cadre"
+  },
+  {
+   "fieldname": "column_break_f8htp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "partograph_used",
+   "fieldtype": "Data",
+   "label": "Partograph used"
+  },
+  {
+   "fieldname": "column_break_4bqnz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uteronic_used_for_prevention",
+   "fieldtype": "Data",
+   "label": "Uteronic used for prevention"
+  },
+  {
+   "fieldname": "column_break_lanvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_type_3",
+   "fieldtype": "Section Break",
+   "label": "Delivery Type / Mode by Age"
+  },
+  {
+   "fieldname": "delivery_type_4",
+   "fieldtype": "Table",
+   "options": "delivery_type"
+  },
+  {
+   "fieldname": "section_break_5kcnc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "neonatal_death_born_alive_but_died_after_birth_0_ilaa_28_days",
+   "fieldtype": "Data",
+   "label": "Neonatal Death born alive but died after birth (0 ilaa 28 days)"
+  },
+  {
+   "fieldname": "column_break_fqoqt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "congenital_anomaly",
+   "fieldtype": "Data",
+   "label": "Congenital Anomaly"
+  },
+  {
+   "fieldname": "section_break_sdpgh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "apgar0_ilaa_10",
+   "fieldtype": "Data",
+   "label": "APGAR(0 ilaa 10)"
+  },
+  {
+   "fieldname": "column_break_69jff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "baby_sex_2",
+   "fieldtype": "Section Break",
+   "label": "Baby Sex"
+  },
+  {
+   "fieldname": "column_break_k2hcz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_geunr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "m_2",
+   "fieldtype": "Check",
+   "label": "M"
+  },
+  {
+   "default": "0",
+   "fieldname": "f_2",
+   "fieldtype": "Check",
+   "label": "F"
+  },
+  {
+   "fieldname": "column_break_rgl5g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "baby_weight_grams_2",
+   "fieldtype": "Data",
+   "label": "Baby weight grams"
+  },
+  {
+   "fieldname": "column_break_okexl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bf_within_1_hr_yn_section",
+   "fieldtype": "Heading",
+   "label": "BF within 1 hr (Y/N)"
+  },
+  {
+   "fieldname": "column_break_qax3m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "y",
+   "fieldtype": "Check",
+   "label": "Y"
+  },
+  {
+   "fieldname": "column_break_rvzto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "n",
+   "fieldtype": "Check",
+   "label": "N"
+  },
+  {
+   "fieldname": "section_break_oflda",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "birth_notification_number_b001mmyyy",
+   "fieldtype": "Date",
+   "label": "Birth Notification Number (B001/MM/YYY)"
+  },
+  {
+   "fieldname": "column_break_aev6n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bcgddmmyy",
+   "fieldtype": "Date",
+   "label": "BCG(DD/MM/YY)"
+  },
+  {
+   "fieldname": "column_break_ux4au",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opv_0_ddmmyy",
+   "fieldtype": "Data",
+   "label": "OPV 0 (DD/MM/YY)"
+  },
+  {
+   "fieldname": "column_break_daoil",
+   "fieldtype": "Heading",
+   "label": "ART Therapy"
+  },
+  {
+   "fieldname": "live_birth_hiv_plus__mother_status_knownnew",
+   "fieldtype": "Data",
+   "label": "Live Birth HIV plus  mother (status known/new"
+  },
+  {
+   "fieldname": "section_break_qakf8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hiv_testing_and_results",
+   "fieldtype": "Heading",
+   "label": "HIV Testing and Results"
+  },
+  {
+   "fieldname": "column_break_jlgqb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "known_pos_kpu",
+   "fieldtype": "Check",
+   "label": "Known Pos (KP/U)"
+  },
+  {
+   "fieldname": "column_break_emni8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "counselledyn",
+   "fieldtype": "Check",
+   "label": "Counselled(Y/N)"
+  },
+  {
+   "fieldname": "column_break_br3vf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "testedyn",
+   "fieldtype": "Check",
+   "label": "Tested(Y/N)"
+  },
+  {
+   "fieldname": "s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uhmsw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "results_pos__neg",
+   "fieldtype": "Data",
+   "label": "Results (Pos / Neg)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-23 15:02:44.767196",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "LABOUR DELIVERY  MATERNITY REGISTER",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

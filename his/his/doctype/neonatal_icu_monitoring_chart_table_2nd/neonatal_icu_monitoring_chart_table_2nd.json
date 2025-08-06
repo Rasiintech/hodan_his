@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-01 14:27:42.704635",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hourly_time",
+  "amount",
+  "residual",
+  "vomit",
+  "tube_placement",
+  "checked",
+  "meconium_pass",
+  "urine_pass"
+ ],
+ "fields": [
+  {
+   "fieldname": "hourly_time",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Hourly time",
+   "options": "\n8A\n9A\n10A\n11A\n12A\n1P\n2P\n3P\n4P\n5P\n6P\n7P\n8P\n9P\n10P\n11P\n12P\n1A\n2A\n3A\n4A\n5A\n6A\n7A"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "residual",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Residual"
+  },
+  {
+   "fieldname": "vomit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vomit"
+  },
+  {
+   "fieldname": "tube_placement",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tube Placement"
+  },
+  {
+   "fieldname": "checked",
+   "fieldtype": "Data",
+   "label": "Checked"
+  },
+  {
+   "fieldname": "meconium_pass",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Meconium pass"
+  },
+  {
+   "fieldname": "urine_pass",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Urine pass"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-01 14:29:33.051516",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "NEONATAL ICU MONITORING CHART TABLE 2nd",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

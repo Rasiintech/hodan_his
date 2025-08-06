@@ -1,0 +1,1244 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OPQ-.##### ",
+ "creation": "2023-09-20 09:50:39.845238",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "feedbackfrm",
+  "section_break_njnjp",
+  "date",
+  "section_break_p4cy8",
+  "desc",
+  "column_break_qxqt1",
+  "section_break_t6blr",
+  "experience_aspects",
+  "section_break_wwkm0",
+  "consultant_doctor",
+  "column_break_dc1uy",
+  "very_good",
+  "column_break_nk5oz",
+  "good",
+  "column_break_qudf2",
+  "fair",
+  "column_break_xre3n",
+  "poor",
+  "column_break_ysdxq",
+  "very_poor",
+  "amended_from",
+  "section_break_buk9w",
+  "pharmacy",
+  "column_break_51taa",
+  "very_good_pharma",
+  "column_break_pz6ol",
+  "good_pharma",
+  "column_break_rmg3j",
+  "fair_pharma",
+  "column_break_ilm8w",
+  "poor_pharma",
+  "column_break_mwjyr",
+  "very_poor_pharma",
+  "section_break_lr7e9",
+  "blood_collection",
+  "column_break_ltw7r",
+  "very_good_blood_collection",
+  "column_break_zhcue",
+  "good_blood_collection",
+  "column_break_phr7e",
+  "fair_blood_collection",
+  "column_break_pedfj",
+  "poor_blood_collection",
+  "column_break_enccg",
+  "very_poor_blood_collection",
+  "section_break_54puq",
+  "er",
+  "column_break_793bj",
+  "very_good_er",
+  "column_break_thgri",
+  "good_er",
+  "column_break_zqh5s",
+  "fair_er",
+  "column_break_fakfc",
+  "poor_er",
+  "column_break_orafk",
+  "very_poor_er",
+  "section_break_mcbim",
+  "maternity_department",
+  "column_break_yvsfc",
+  "very_good_maternity_department",
+  "column_break_vmysm",
+  "good_maternity_department",
+  "column_break_lj7xe",
+  "fair_maternity_department",
+  "column_break_xftja",
+  "poor_maternity_department",
+  "column_break_sm1vy",
+  "very_poor_maternity_department",
+  "section_break_sjidm",
+  "apt_reg",
+  "section_break_x2rzx",
+  "ease_of_getting_an_appointment",
+  "column_break_jlyan",
+  "very_good_ease_of_getting_an_appointment",
+  "column_break_dwgwt",
+  "good_ease_of_getting_an_appointment",
+  "column_break_vnzvt",
+  "fair_ease_of_getting_an_appointment",
+  "column_break_xna6l",
+  "poor_ease_of_getting_an_appointment",
+  "column_break_tbzdr",
+  "very_poor_ease_of_getting_an_appointment",
+  "section_break_zbgfk",
+  "info_regarding_doctor",
+  "column_break_kcyls",
+  "very_god_info_regarding_doctor",
+  "column_break_qndri",
+  "good_info_regarding_doctor",
+  "column_break_0bfsg",
+  "fair_info_regarding_doctor",
+  "column_break_desas",
+  "poor_info_regarding_doctor",
+  "column_break_ddjf1",
+  "very_poor_info_regarding_doctor",
+  "section_break_9hp1l",
+  "warmth_courtesy",
+  "column_break_ptkeb",
+  "very_good_warmth_courtesy",
+  "column_break_tej9q",
+  "good_warmth_courtesy",
+  "column_break_mu3qn",
+  "fair_warmth_courtesy",
+  "column_break_al0hf",
+  "poor_warmth_courtesy",
+  "column_break_jp8iz",
+  "very_poor_warmth_courtesy",
+  "section_break_uxjpc",
+  "communication_with_staff",
+  "column_break_e5ypq",
+  "very_good_communication_with_staff",
+  "column_break_nts5w",
+  "goodcommunication_with_staff",
+  "column_break_1qylt",
+  "fair_communication_with_staff",
+  "column_break_qhnlz",
+  "poor_communication_with_staff",
+  "column_break_rn2ku",
+  "very_poor_communication_with_staff",
+  "section_break_txtab",
+  "aspects",
+  "column_break_mj9ly",
+  "very_good_aspects",
+  "column_break_nwatt",
+  "good_aspects",
+  "column_break_idyc1",
+  "fair_aspects",
+  "column_break_ihxe1",
+  "poor_aspects",
+  "column_break_uneuh",
+  "very_poor_aspects",
+  "section_break_swbtg",
+  "comfort_while_waiting_for_your_turn",
+  "column_break_xya6r",
+  "very_good_comfort_while_waiting_for_your_turn",
+  "column_break_m0pdp",
+  "good_comfort_while_waiting_for_your_turn",
+  "column_break_yhkmm",
+  "fair_comfort_while_waiting_for_your_turn",
+  "column_break_dmukp",
+  "poor_comfort_while_waiting_for_your_turn",
+  "column_break_skrcz",
+  "very_poor_comfort_while_waiting_for_your_turn",
+  "section_break_ugmm0",
+  "time_taken_while_waiting_for_ur_turn",
+  "column_break_tocng",
+  "very_good_time_taken_while_waiting_for_ur_turn",
+  "column_break_nf4b3",
+  "good_time_taken_while_waiting_for_ur_turn",
+  "column_break_lxonk",
+  "fair_time_taken_while_waiting_for_ur_turn",
+  "column_break_iius3",
+  "poor_time_taken_while_waiting_for_ur_turn",
+  "column_break_sy0lv",
+  "very_poor_time_taken_while_waiting_for_ur_turn",
+  "section_break_r6hz1",
+  "infor_of_ur_position_in_the_que",
+  "column_break_zact7",
+  "very_good_infor_of_ur_position_in_the_que",
+  "column_break_xi0bx",
+  "good_infor_of_ur_position_in_the_que",
+  "column_break_y14st",
+  "fair_infor_of_ur_position_in_the_que",
+  "column_break_bu8au",
+  "poor_infor_of_ur_position_in_the_que",
+  "column_break_nnwln",
+  "very_poor_infor_of_ur_position_in_the_que",
+  "section_break_eshdk",
+  "rate",
+  "section_break_s4rl1",
+  "clean",
+  "column_break_ynufe",
+  "always",
+  "column_break_ql6q1",
+  "usually",
+  "column_break_8ar4f",
+  "sometimes",
+  "column_break_ndilf",
+  "never",
+  "section_break_fxnpb",
+  "toilets",
+  "column_break_fhvlb",
+  "always_toilets",
+  "column_break_gi3si",
+  "usually_toilets",
+  "column_break_ijcui",
+  "sometimes_toilets",
+  "column_break_vqf9c",
+  "never_toilets",
+  "section_break_gehvo",
+  "recomendation",
+  "column_break_kx4uw",
+  "definitely_yes",
+  "column_break_i3tla",
+  "probably__yes",
+  "column_break_p4doh",
+  "definitely_no",
+  "column_break_6quhi",
+  "probably_no",
+  "column_break_xcaxf",
+  "no_why"
+ ],
+ "fields": [
+  {
+   "fieldname": "feedbackfrm",
+   "fieldtype": "HTML",
+   "options": "Out-patient Feedback Form"
+  },
+  {
+   "fieldname": "section_break_p4cy8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "desc",
+   "fieldtype": "HTML",
+   "options": "All doctors are expected to seek feedback on a regular basis from those they work with and treat. Information from patients, relatives and friends is an important part of this process. \n"
+  },
+  {
+   "fieldname": "column_break_qxqt1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_t6blr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "experience_aspects",
+   "fieldtype": "HTML",
+   "options": "Please rate your experience with the following aspects of your visit:"
+  },
+  {
+   "fieldname": "section_break_wwkm0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "consultant_doctor",
+   "fieldtype": "HTML",
+   "options": "Consultant doctor"
+  },
+  {
+   "fieldname": "column_break_dc1uy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_nk5oz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_qudf2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_xre3n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_ysdxq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Out-patient questionnaire",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_buk9w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pharmacy",
+   "fieldtype": "HTML",
+   "options": "Pharmacy"
+  },
+  {
+   "fieldname": "column_break_51taa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_pharma",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_pz6ol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_pharma",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_rmg3j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_pharma",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_ilm8w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_pharma",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_mwjyr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_pharma",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_lr7e9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "blood_collection",
+   "fieldtype": "HTML",
+   "options": "Blood collection and Laboratory"
+  },
+  {
+   "fieldname": "column_break_ltw7r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_blood_collection",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_zhcue",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_blood_collection",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_phr7e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_blood_collection",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_pedfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_blood_collection",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_enccg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_blood_collection",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_54puq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "er",
+   "fieldtype": "HTML",
+   "options": "ER"
+  },
+  {
+   "fieldname": "column_break_793bj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_er",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_thgri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_er",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_zqh5s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_er",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_fakfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_er",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_orafk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_er",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_mcbim",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "maternity_department",
+   "fieldtype": "HTML",
+   "options": "Maternity Department"
+  },
+  {
+   "fieldname": "column_break_yvsfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_maternity_department",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_vmysm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_maternity_department",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_lj7xe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_maternity_department",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_xftja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_maternity_department",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_sm1vy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_maternity_department",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_sjidm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "apt_reg",
+   "fieldtype": "HTML",
+   "options": "Please rate your experience with the following aspects of appointment & registration:"
+  },
+  {
+   "fieldname": "section_break_x2rzx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ease_of_getting_an_appointment",
+   "fieldtype": "HTML",
+   "options": "Ease of getting an appointment "
+  },
+  {
+   "fieldname": "column_break_jlyan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_dwgwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_vnzvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_xna6l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_tbzdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_zbgfk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "info_regarding_doctor",
+   "fieldtype": "HTML",
+   "options": "Information regarding doctor"
+  },
+  {
+   "fieldname": "column_break_kcyls",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_god_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_qndri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_0bfsg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_desas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_ddjf1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_9hp1l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "warmth_courtesy",
+   "fieldtype": "HTML",
+   "options": "Warmth & courtesy at registration desk"
+  },
+  {
+   "fieldname": "column_break_ptkeb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_tej9q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_mu3qn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_al0hf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_jp8iz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_uxjpc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "communication_with_staff",
+   "fieldtype": "HTML",
+   "options": "Communication with Counter Staff / Patient Service Associates"
+  },
+  {
+   "fieldname": "column_break_e5ypq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_nts5w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "goodcommunication_with_staff",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_1qylt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_qhnlz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_rn2ku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_txtab",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "aspects",
+   "fieldtype": "HTML",
+   "options": "Please rate your experience with the following aspects of waiting period:"
+  },
+  {
+   "fieldname": "column_break_mj9ly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_aspects",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_nwatt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_aspects",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_idyc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_aspects",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_ihxe1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_aspects",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_uneuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_aspects",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_swbtg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comfort_while_waiting_for_your_turn",
+   "fieldtype": "HTML",
+   "options": "Comfort while waiting for your turn."
+  },
+  {
+   "fieldname": "column_break_xya6r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_comfort_while_waiting_for_your_turn",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_m0pdp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_comfort_while_waiting_for_your_turn",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_yhkmm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_comfort_while_waiting_for_your_turn",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_dmukp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_comfort_while_waiting_for_your_turn",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_skrcz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_comfort_while_waiting_for_your_turn",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_ugmm0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "time_taken_while_waiting_for_ur_turn",
+   "fieldtype": "HTML",
+   "options": "Time taken while waiting \nfor your turn."
+  },
+  {
+   "fieldname": "column_break_tocng",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_time_taken_while_waiting_for_ur_turn",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_nf4b3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_time_taken_while_waiting_for_ur_turn",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_lxonk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_time_taken_while_waiting_for_ur_turn",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_iius3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_time_taken_while_waiting_for_ur_turn",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_sy0lv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_time_taken_while_waiting_for_ur_turn",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_r6hz1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "infor_of_ur_position_in_the_que",
+   "fieldtype": "HTML",
+   "options": "Information of your position in the queue"
+  },
+  {
+   "fieldname": "column_break_zact7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_infor_of_ur_position_in_the_que",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "fieldname": "column_break_xi0bx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_infor_of_ur_position_in_the_que",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "fieldname": "column_break_y14st",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_infor_of_ur_position_in_the_que",
+   "fieldtype": "Check",
+   "label": "Fair"
+  },
+  {
+   "fieldname": "column_break_bu8au",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_infor_of_ur_position_in_the_que",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "fieldname": "column_break_nnwln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_poor_infor_of_ur_position_in_the_que",
+   "fieldtype": "Check",
+   "label": "Very Poor"
+  },
+  {
+   "fieldname": "section_break_eshdk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "HTML",
+   "options": "Please rate the overall cleanliness:"
+  },
+  {
+   "fieldname": "section_break_s4rl1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "clean",
+   "fieldtype": "HTML",
+   "options": "How often did the areas around you appear clean?"
+  },
+  {
+   "fieldname": "column_break_ynufe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_ql6q1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_8ar4f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_ndilf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_fxnpb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "toilets",
+   "fieldtype": "HTML",
+   "options": "How often did the toilets appear clean?"
+  },
+  {
+   "fieldname": "column_break_fhvlb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always_toilets",
+   "fieldtype": "Check",
+   "label": "Always"
+  },
+  {
+   "fieldname": "column_break_gi3si",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually_toilets",
+   "fieldtype": "Check",
+   "label": "Usually"
+  },
+  {
+   "fieldname": "column_break_ijcui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes_toilets",
+   "fieldtype": "Check",
+   "label": "Sometimes"
+  },
+  {
+   "fieldname": "column_break_vqf9c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never_toilets",
+   "fieldtype": "Check",
+   "label": "Never"
+  },
+  {
+   "fieldname": "section_break_gehvo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recomendation",
+   "fieldtype": "HTML",
+   "options": "Would you recommend this hospital to your friends and family if they needed treatment?"
+  },
+  {
+   "fieldname": "column_break_kx4uw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "definitely_yes",
+   "fieldtype": "Check",
+   "label": "Definitely YES"
+  },
+  {
+   "fieldname": "column_break_i3tla",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "probably__yes",
+   "fieldtype": "Check",
+   "label": "Probably  YES"
+  },
+  {
+   "fieldname": "column_break_p4doh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "definitely_no",
+   "fieldtype": "Check",
+   "label": "Definitely NO"
+  },
+  {
+   "fieldname": "column_break_6quhi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "probably_no",
+   "fieldtype": "Check",
+   "label": "Probably NO"
+  },
+  {
+   "fieldname": "column_break_xcaxf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_why",
+   "fieldtype": "Text",
+   "label": "NO Why"
+  },
+  {
+   "fieldname": "section_break_njnjp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-16 11:36:50.064442",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Out-patient questionnaire",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1
+}

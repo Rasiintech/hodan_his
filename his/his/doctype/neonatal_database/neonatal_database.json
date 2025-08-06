@@ -1,0 +1,674 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-19 09:48:39.109536",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "pid",
+  "dob",
+  "mrp",
+  "department_ward",
+  "romm_no",
+  "date_1",
+  "consultant_name",
+  "age_1",
+  "column_break_l1oxi",
+  "livebirths",
+  "still_births",
+  "abortions",
+  "live_children",
+  "father_rank",
+  "comments_1",
+  "toxoplasmosis",
+  "rubella",
+  "hepatitis_b",
+  "cmv",
+  "treponema",
+  "lmp_date",
+  "booking_date",
+  "scan_1_date_wks",
+  "scan_iugr",
+  "edd",
+  "section_break_ku52d",
+  "blood_group",
+  "rh_antibody",
+  "other_problems",
+  "induced",
+  "indication_1",
+  "ro_membranes_hrs",
+  "pyrexia_c",
+  "abnormal_liquor",
+  "delivery",
+  "monitored_1",
+  "tachycardia",
+  "bradycardia",
+  "loss_variation",
+  "dips_early_1",
+  "late_2",
+  "variable",
+  "column_break_rn4du",
+  "mecomium",
+  "drugs_in",
+  "date_2",
+  "time_1",
+  "type",
+  "indication_2",
+  "placenta_g",
+  "abnormality_1",
+  "cord_vessels",
+  "cord_bloods",
+  "section_break_ph0ze",
+  "comments_2",
+  "monitored_2",
+  "analgesia",
+  "pethidine",
+  "epidural",
+  "other_1",
+  "anaesthetic",
+  "antibiotic",
+  "other_2",
+  "infant",
+  "sex",
+  "number_order",
+  "weight_g_1",
+  "apgar_1",
+  "gestation_wks",
+  "sga_aga_lga",
+  "vitamin_k",
+  "abnormality_2",
+  "comments_3",
+  "midwife",
+  "simple",
+  "ippv_mask",
+  "ippv__ett",
+  "cardiac",
+  "massage",
+  "drugs_naloxone",
+  "comments_4",
+  "doctors",
+  "column_break_qrhlp",
+  "normal",
+  "doubtful",
+  "abnormal",
+  "date_3",
+  "colour",
+  "posture",
+  "movement",
+  "hs_murmurs",
+  "skin_nutrition",
+  "face",
+  "head_and_neck",
+  "eyes",
+  "ears",
+  "mouth_palate",
+  "chest",
+  "umbilicus",
+  "abdomen",
+  "genitalia",
+  "anus",
+  "femoral_pulses",
+  "hips"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "department_ward",
+   "fieldtype": "Data",
+   "label": "Department Ward "
+  },
+  {
+   "fieldname": "romm_no",
+   "fieldtype": "Data",
+   "label": "Romm No"
+  },
+  {
+   "fieldname": "date_1",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "consultant_name",
+   "fieldtype": "Data",
+   "label": "Consultant Name"
+  },
+  {
+   "fieldname": "age_1",
+   "fieldtype": "Data",
+   "label": "Age "
+  },
+  {
+   "fieldname": "livebirths",
+   "fieldtype": "Data",
+   "label": "Livebirths "
+  },
+  {
+   "fieldname": "still_births",
+   "fieldtype": "Data",
+   "label": "Still births "
+  },
+  {
+   "fieldname": "abortions",
+   "fieldtype": "Data",
+   "label": "Abortions"
+  },
+  {
+   "fieldname": "live_children",
+   "fieldtype": "Data",
+   "label": "Live Children "
+  },
+  {
+   "fieldname": "father_rank",
+   "fieldtype": "Data",
+   "label": "Father rank "
+  },
+  {
+   "fieldname": "comments_1",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "toxoplasmosis",
+   "fieldtype": "Data",
+   "label": "Toxoplasmosis "
+  },
+  {
+   "fieldname": "rubella",
+   "fieldtype": "Data",
+   "label": "Rubella "
+  },
+  {
+   "fieldname": "hepatitis_b",
+   "fieldtype": "Data",
+   "label": "Hepatitis B "
+  },
+  {
+   "fieldname": "cmv",
+   "fieldtype": "Data",
+   "label": "CMV"
+  },
+  {
+   "fieldname": "treponema",
+   "fieldtype": "Data",
+   "label": "Treponema"
+  },
+  {
+   "fieldname": "lmp_date",
+   "fieldtype": "Data",
+   "label": "LMP date "
+  },
+  {
+   "fieldname": "booking_date",
+   "fieldtype": "Data",
+   "label": "Booking date "
+  },
+  {
+   "fieldname": "scan_1_date_wks",
+   "fieldtype": "Data",
+   "label": "Scan 1 date wks"
+  },
+  {
+   "fieldname": "scan_iugr",
+   "fieldtype": "Data",
+   "label": "Scan IUGR "
+  },
+  {
+   "fieldname": "edd",
+   "fieldtype": "Data",
+   "label": "EDD"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood Group"
+  },
+  {
+   "fieldname": "rh_antibody",
+   "fieldtype": "Data",
+   "label": "Rh Antibody "
+  },
+  {
+   "fieldname": "other_problems",
+   "fieldtype": "Data",
+   "label": "Other Problems"
+  },
+  {
+   "fieldname": "induced",
+   "fieldtype": "Data",
+   "label": "Induced"
+  },
+  {
+   "fieldname": "indication_1",
+   "fieldtype": "Data",
+   "label": "Indication"
+  },
+  {
+   "fieldname": "ro_membranes_hrs",
+   "fieldtype": "Data",
+   "label": "RO Membranes, hrs "
+  },
+  {
+   "fieldname": "pyrexia_c",
+   "fieldtype": "Data",
+   "label": "Pyrexia C"
+  },
+  {
+   "fieldname": "abnormal_liquor",
+   "fieldtype": "Data",
+   "label": "Abnormal liquor"
+  },
+  {
+   "fieldname": "delivery",
+   "fieldtype": "Data",
+   "label": "DELIVERY"
+  },
+  {
+   "fieldname": "monitored_1",
+   "fieldtype": "Data",
+   "label": "Monitored "
+  },
+  {
+   "fieldname": "tachycardia",
+   "fieldtype": "Data",
+   "label": "Tachycardia "
+  },
+  {
+   "fieldname": "bradycardia",
+   "fieldtype": "Data",
+   "label": "Bradycardia "
+  },
+  {
+   "fieldname": "loss_variation",
+   "fieldtype": "Data",
+   "label": "Loss Variation "
+  },
+  {
+   "fieldname": "dips_early_1",
+   "fieldtype": "Data",
+   "label": "Dips Early 1"
+  },
+  {
+   "fieldname": "late_2",
+   "fieldtype": "Data",
+   "label": "Late 2"
+  },
+  {
+   "fieldname": "variable",
+   "fieldtype": "Data",
+   "label": "Variable"
+  },
+  {
+   "fieldname": "mecomium",
+   "fieldtype": "Data",
+   "label": "Mecomium"
+  },
+  {
+   "fieldname": "drugs_in",
+   "fieldtype": "Data",
+   "label": "DRUGS IN "
+  },
+  {
+   "fieldname": "date_2",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time_1",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type "
+  },
+  {
+   "fieldname": "indication_2",
+   "fieldtype": "Data",
+   "label": "Indication "
+  },
+  {
+   "fieldname": "placenta_g",
+   "fieldtype": "Data",
+   "label": "Placenta, g. "
+  },
+  {
+   "fieldname": "abnormality_1",
+   "fieldtype": "Data",
+   "label": "Abnormality "
+  },
+  {
+   "fieldname": "cord_vessels",
+   "fieldtype": "Data",
+   "label": "Cord vessels "
+  },
+  {
+   "fieldname": "cord_bloods",
+   "fieldtype": "Data",
+   "label": "Cord bloods "
+  },
+  {
+   "fieldname": "comments_2",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "monitored_2",
+   "fieldtype": "Data",
+   "label": "Monitored "
+  },
+  {
+   "fieldname": "analgesia",
+   "fieldtype": "Data",
+   "label": "Analgesia"
+  },
+  {
+   "fieldname": "pethidine",
+   "fieldtype": "Data",
+   "label": "Pethidine "
+  },
+  {
+   "fieldname": "epidural",
+   "fieldtype": "Data",
+   "label": "Epidural "
+  },
+  {
+   "fieldname": "other_1",
+   "fieldtype": "Data",
+   "label": "Other "
+  },
+  {
+   "fieldname": "anaesthetic",
+   "fieldtype": "Data",
+   "label": "Anaesthetic "
+  },
+  {
+   "fieldname": "antibiotic",
+   "fieldtype": "Data",
+   "label": "Antibiotic "
+  },
+  {
+   "fieldname": "other_2",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "infant",
+   "fieldtype": "Data",
+   "label": "INFANT"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex "
+  },
+  {
+   "fieldname": "number_order",
+   "fieldtype": "Data",
+   "label": "Number order "
+  },
+  {
+   "fieldname": "weight_g_1",
+   "fieldtype": "Data",
+   "label": "Weight g"
+  },
+  {
+   "fieldname": "apgar_1",
+   "fieldtype": "Data",
+   "label": "Apgar 1"
+  },
+  {
+   "fieldname": "gestation_wks",
+   "fieldtype": "Data",
+   "label": "Gestation wks "
+  },
+  {
+   "fieldname": "sga_aga_lga",
+   "fieldtype": "Data",
+   "label": "SGA AGA LGA "
+  },
+  {
+   "fieldname": "vitamin_k",
+   "fieldtype": "Data",
+   "label": "Vitamin K "
+  },
+  {
+   "fieldname": "abnormality_2",
+   "fieldtype": "Data",
+   "label": "Abnormality "
+  },
+  {
+   "fieldname": "comments_3",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "midwife",
+   "fieldtype": "Data",
+   "label": "Midwife"
+  },
+  {
+   "fieldname": "simple",
+   "fieldtype": "Data",
+   "label": "Simple"
+  },
+  {
+   "fieldname": "ippv_mask",
+   "fieldtype": "Data",
+   "label": "IPPV Mask "
+  },
+  {
+   "fieldname": "ippv__ett",
+   "fieldtype": "Data",
+   "label": "IPPV  ETT"
+  },
+  {
+   "fieldname": "cardiac",
+   "fieldtype": "Data",
+   "label": "Cardiac"
+  },
+  {
+   "fieldname": "massage",
+   "fieldtype": "Data",
+   "label": "Massage"
+  },
+  {
+   "fieldname": "drugs_naloxone",
+   "fieldtype": "Data",
+   "label": "Drugs Naloxone"
+  },
+  {
+   "fieldname": "comments_4",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "doctors",
+   "fieldtype": "Data",
+   "label": "Doctors"
+  },
+  {
+   "fieldname": "normal",
+   "fieldtype": "Data",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "doubtful",
+   "fieldtype": "Data",
+   "label": "Doubtful"
+  },
+  {
+   "fieldname": "abnormal",
+   "fieldtype": "Data",
+   "label": "Abnormal"
+  },
+  {
+   "fieldname": "date_3",
+   "fieldtype": "Data",
+   "label": "Date "
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Colour"
+  },
+  {
+   "fieldname": "posture",
+   "fieldtype": "Data",
+   "label": "Posture "
+  },
+  {
+   "fieldname": "movement",
+   "fieldtype": "Data",
+   "label": "movement"
+  },
+  {
+   "fieldname": "hs_murmurs",
+   "fieldtype": "Data",
+   "label": "HS murmurs "
+  },
+  {
+   "fieldname": "skin_nutrition",
+   "fieldtype": "Data",
+   "label": "Skin nutrition "
+  },
+  {
+   "fieldname": "face",
+   "fieldtype": "Data",
+   "label": "Face"
+  },
+  {
+   "fieldname": "head_and_neck",
+   "fieldtype": "Data",
+   "label": "Head and neck "
+  },
+  {
+   "fieldname": "eyes",
+   "fieldtype": "Data",
+   "label": "Eyes"
+  },
+  {
+   "fieldname": "ears",
+   "fieldtype": "Data",
+   "label": "Ears"
+  },
+  {
+   "fieldname": "mouth_palate",
+   "fieldtype": "Data",
+   "label": "Mouth, palate "
+  },
+  {
+   "fieldname": "chest",
+   "fieldtype": "Data",
+   "label": "Chest"
+  },
+  {
+   "fieldname": "umbilicus",
+   "fieldtype": "Data",
+   "label": "Umbilicus "
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Data",
+   "label": "Abdomen "
+  },
+  {
+   "fieldname": "genitalia",
+   "fieldtype": "Data",
+   "label": "Genitalia"
+  },
+  {
+   "fieldname": "anus",
+   "fieldtype": "Data",
+   "label": "Anus"
+  },
+  {
+   "fieldname": "femoral_pulses",
+   "fieldtype": "Data",
+   "label": "Femoral pulses "
+  },
+  {
+   "fieldname": "hips",
+   "fieldtype": "Data",
+   "label": "Hips"
+  },
+  {
+   "fieldname": "column_break_l1oxi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ku52d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rn4du",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ph0ze",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qrhlp",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-19 09:50:31.320355",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Neonatal database",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

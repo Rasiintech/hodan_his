@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "N-M-R-.#####",
+ "creation": "2023-06-07 09:45:54.480643",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nurse",
+  "section_break_wlobc",
+  "from",
+  "column_break_g2tit",
+  "to",
+  "section_break_9iavi",
+  "monthly"
+ ],
+ "fields": [
+  {
+   "fieldname": "monthly",
+   "fieldtype": "Table",
+   "label": "Monthly",
+   "options": "Monthly"
+  },
+  {
+   "default": "User",
+   "fieldname": "nurse",
+   "fieldtype": "Link",
+   "label": "Nurse",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_wlobc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9iavi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_g2tit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-07 11:03:08.432152",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Nurses Monthly Report",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

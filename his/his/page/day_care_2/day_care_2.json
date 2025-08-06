@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2025-03-01 15:59:19.882122",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2025-03-01 15:59:19.882122",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "day-care-2",
+ "owner": "Administrator",
+ "page_name": "day-care-2",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

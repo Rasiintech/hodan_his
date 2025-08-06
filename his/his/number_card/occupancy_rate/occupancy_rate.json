@@ -1,0 +1,23 @@
+{
+ "creation": "2025-05-26 11:36:31.293525",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{\"from_date\":\"\",\"to_date\":\"\"}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Occupancy Rate",
+ "modified": "2025-05-26 13:43:25.273832",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Occupancy Rate",
+ "owner": "Administrator",
+ "report_field": "occupancy_rate",
+ "report_function": "Average",
+ "report_name": "Occupancy Rate",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

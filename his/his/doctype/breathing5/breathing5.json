@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 11:17:31.615460",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rows_fields",
+  "e",
+  "saturation",
+  "respiratory_type",
+  "acid_base_balance_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "rows_fields",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "e",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RR"
+  },
+  {
+   "fieldname": "saturation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "saturation"
+  },
+  {
+   "fieldname": "respiratory_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Breathing type"
+  },
+  {
+   "fieldname": "acid_base_balance_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Acid base balance status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-06 11:14:38.230004",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "breathing5",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

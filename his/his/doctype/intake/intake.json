@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-22 10:12:10.979425",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "time",
+  "intake_amount",
+  "type_of_intake"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date "
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "intake_amount",
+   "fieldtype": "Data",
+   "label": "Intake Amount"
+  },
+  {
+   "fieldname": "type_of_intake",
+   "fieldtype": "Data",
+   "label": "Type of Intake"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-22 10:12:10.979425",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Intake",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

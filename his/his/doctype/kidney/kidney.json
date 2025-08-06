@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 15:01:44.525243",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "previous_kidney_disease",
+  "risk_of_aki",
+  "baseline_creatinine",
+  "need_of_fluid_adjustment"
+ ],
+ "fields": [
+  {
+   "fieldname": "previous_kidney_disease",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Chronic Kidney Disease ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "risk_of_aki",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Baseline urea"
+  },
+  {
+   "fieldname": "need_of_fluid_adjustment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Urine output status",
+   "options": "\nNormal\nUnric\nOligu uric\nPoly uric"
+  },
+  {
+   "fieldname": "baseline_creatinine",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Baseline creatinine"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-02 12:56:07.264782",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Kidney",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

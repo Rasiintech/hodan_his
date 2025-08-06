@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-13 15:30:15.282028",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "normal_genitalia",
+  "adequate_urine_output",
+  "fluid_balanced",
+  "adequate_intake"
+ ],
+ "fields": [
+  {
+   "fieldname": "normal_genitalia",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Normal genitalia             ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "adequate_urine_output",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "urine amount"
+  },
+  {
+   "fieldname": "fluid_balanced",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "urine color"
+  },
+  {
+   "fieldname": "adequate_intake",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "adequate Intake",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-23 10:17:08.640571",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Genitourinary",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

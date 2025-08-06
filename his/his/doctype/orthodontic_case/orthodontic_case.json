@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-24 11:21:49.888305",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "upper_acrh",
+  "mechanics_of_upper_arch",
+  "lower_arch",
+  "mechanics_of_lower_arch"
+ ],
+ "fields": [
+  {
+   "fieldname": "upper_acrh",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Upper acrh"
+  },
+  {
+   "fieldname": "mechanics_of_upper_arch",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mechanics of upper arch"
+  },
+  {
+   "fieldname": "lower_arch",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lower arch"
+  },
+  {
+   "fieldname": "mechanics_of_lower_arch",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mechanics of lower arch"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-24 11:27:39.553297",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Orthodontic Case",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

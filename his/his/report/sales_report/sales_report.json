@@ -1,0 +1,23 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2023-03-08 10:48:46.670920",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2023-03-08 12:12:55.396426",
+ "modified_by": "Administrator",
+ "module": "His",
+ "name": "Sales Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Sales Report",
+ "report_type": "Script Report",
+ "roles": []
+}

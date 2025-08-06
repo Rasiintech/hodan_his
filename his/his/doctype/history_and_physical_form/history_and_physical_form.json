@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 19:28:52.128556",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "pid",
+  "dob",
+  "history_and_physical_form",
+  "chief_complaint",
+  "history_of_the_present_illness",
+  "menstrual_history",
+  "obstetric_and_gynecological_history",
+  "medical_and_surgical_history",
+  "family_history",
+  "allergies",
+  "physical_exam",
+  "bp",
+  "temp",
+  "respiratory_rate",
+  "wtkg",
+  "height",
+  "pelvic_exam",
+  "assessment_and_plan",
+  "attending_physician_name",
+  "signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DoB"
+  },
+  {
+   "fieldname": "history_and_physical_form",
+   "fieldtype": "Data",
+   "label": "History and Physical Form"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Data",
+   "label": "Chief Complaint"
+  },
+  {
+   "fieldname": "history_of_the_present_illness",
+   "fieldtype": "Data",
+   "label": "History of the Present Illness "
+  },
+  {
+   "fieldname": "menstrual_history",
+   "fieldtype": "Data",
+   "label": "Menstrual History"
+  },
+  {
+   "fieldname": "obstetric_and_gynecological_history",
+   "fieldtype": "Data",
+   "label": "Obstetric and Gynecological History"
+  },
+  {
+   "fieldname": "medical_and_surgical_history",
+   "fieldtype": "Data",
+   "label": "Medical and Surgical History"
+  },
+  {
+   "fieldname": "family_history",
+   "fieldtype": "Data",
+   "label": "Family History "
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "physical_exam",
+   "fieldtype": "Data",
+   "label": "Physical Exam"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "Temp "
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Data",
+   "label": "Respiratory rate"
+  },
+  {
+   "fieldname": "wtkg",
+   "fieldtype": "Data",
+   "label": "WtKg"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height "
+  },
+  {
+   "fieldname": "pelvic_exam",
+   "fieldtype": "Data",
+   "label": "Pelvic Exam"
+  },
+  {
+   "fieldname": "assessment_and_plan",
+   "fieldtype": "Data",
+   "label": "Assessment and Plan "
+  },
+  {
+   "fieldname": "attending_physician_name",
+   "fieldtype": "Data",
+   "label": "Attending Physician Name "
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-29 19:28:52.128556",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "History and Physical Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

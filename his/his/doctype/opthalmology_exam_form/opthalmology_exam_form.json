@@ -1,0 +1,886 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OPTH-.##### ",
+ "creation": "2024-05-12 15:08:34.561866",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "column_break_yfvgj",
+  "practitioner",
+  "department",
+  "history",
+  "date",
+  "do_you_any_history_of",
+  "section_break_qhh8j",
+  "decreased_vision",
+  "column_break_qhsmc",
+  "yes_1",
+  "column_break_t1uj5",
+  "no_1",
+  "column_break_tfrsf",
+  "loss_of_vision",
+  "column_break_tq87e",
+  "yes_2",
+  "column_break_qj5el",
+  "no_2",
+  "section_break_5garg",
+  "double_vision",
+  "column_break_e901c",
+  "yes",
+  "column_break_caxrd",
+  "no",
+  "section_break_ya9iv",
+  "amblyopia_lazy_eye",
+  "column_break_t3yxl",
+  "yes_3",
+  "column_break_eyask",
+  "no_3",
+  "column_break_p06hj",
+  "crossed_eyes",
+  "column_break_fspzr",
+  "yes_4",
+  "column_break_zetjq",
+  "no_4",
+  "column_break_vwheh",
+  "eye_or_orbital_injury",
+  "column_break_3u2yz",
+  "yes_5",
+  "column_break_hqpgl",
+  "no_5",
+  "section_break_kml9t",
+  "light_flashes_andor_floating_spots",
+  "column_break_lbvz8",
+  "yes_6",
+  "column_break_kjwie",
+  "no_6",
+  "column_break_jz4jf",
+  "any_other_ocular_or_orbital_condition",
+  "column_break_1ky8r",
+  "yes_7",
+  "column_break_zal5d",
+  "no_7",
+  "section_break_wcrue",
+  "ophthalmological_exam",
+  "section_break_netvv",
+  "visual_acuity",
+  "column_break_zhqs4",
+  "r_1",
+  "column_break_iaztr",
+  "l_1",
+  "section_break_ex52l",
+  "without_correction",
+  "column_break_2qghg",
+  "r_2",
+  "column_break_z5gnt",
+  "l_2",
+  "section_break_eb1gr",
+  "with_correction",
+  "column_break_lahjl",
+  "r_3",
+  "column_break_asjez",
+  "l_3",
+  "column_break_lbzfj",
+  "visual_field",
+  "column_break_qoxvr",
+  "r_4",
+  "column_break_x5t1s",
+  "l_4",
+  "section_break_ksu9y",
+  "external_exam",
+  "column_break_cu0tc",
+  "r_5",
+  "column_break_lx5v8",
+  "l_5",
+  "column_break_cgvo1",
+  "anterior_segment_exam",
+  "column_break_kvxrn",
+  "r_6",
+  "column_break_93dep",
+  "l_6",
+  "section_break_x7nbp",
+  "dilated_retinal_exam",
+  "column_break_zjwwe",
+  "r_7",
+  "column_break_0igym",
+  "l_7",
+  "column_break_inz4s",
+  "optic_nerve",
+  "column_break_wxhl8",
+  "r_8",
+  "column_break_f2iz4",
+  "l_8",
+  "section_break_efsiu",
+  "extraocular_muscles",
+  "column_break_qsxkv",
+  "r_9",
+  "column_break_amesv",
+  "l_9",
+  "column_break_odisz",
+  "gonioscopy_angle_recession",
+  "column_break_snemq",
+  "r_10",
+  "column_break_cvmht",
+  "l_10",
+  "section_break_1yq4s",
+  "intraocular_pressure",
+  "column_break_rupaj",
+  "r_11",
+  "column_break_xz5yh",
+  "l_11",
+  "section_break_ubb6o",
+  "please_comment_on_any_and_all_abnormal_findings",
+  "section_break_lyz06",
+  "allow_to_box",
+  "column_break_zz9lc",
+  "r_12",
+  "column_break_dxudo",
+  "conditional",
+  "column_break_alsda",
+  "l_12",
+  "section_break_vhozo",
+  "opthalmology"
+ ],
+ "fields": [
+  {
+   "fieldname": "history",
+   "fieldtype": "Data",
+   "label": "History"
+  },
+  {
+   "fieldname": "column_break_yfvgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "do_you_any_history_of",
+   "fieldtype": "HTML",
+   "label": "Do you any History of",
+   "options": "ophthalmology exam form"
+  },
+  {
+   "fieldname": "section_break_qhh8j",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "decreased_vision",
+   "fieldtype": "HTML",
+   "label": "Decreased Vision",
+   "options": "Decreased Vision"
+  },
+  {
+   "fieldname": "column_break_qhsmc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_t1uj5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_1",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_tfrsf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loss_of_vision",
+   "fieldtype": "HTML",
+   "label": "Loss of vision ",
+   "options": "Loss of vision "
+  },
+  {
+   "fieldname": "column_break_tq87e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_2",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_qj5el",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_5garg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "double_vision",
+   "fieldtype": "HTML",
+   "label": "Double vision ",
+   "options": "Double vision "
+  },
+  {
+   "fieldname": "column_break_e901c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_caxrd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_ya9iv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amblyopia_lazy_eye",
+   "fieldtype": "HTML",
+   "label": "Amblyopia (lazy eye)",
+   "options": "Amblyopia (lazy eye)"
+  },
+  {
+   "fieldname": "column_break_t3yxl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_3",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_eyask",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_3",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_p06hj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "crossed_eyes",
+   "fieldtype": "HTML",
+   "label": "Crossed eyes",
+   "options": "Crossed eyes"
+  },
+  {
+   "fieldname": "column_break_fspzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_4",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_zetjq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_4",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_vwheh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "eye_or_orbital_injury",
+   "fieldtype": "HTML",
+   "label": "Eye or orbital injury",
+   "options": "Eye or orbital injury"
+  },
+  {
+   "fieldname": "column_break_3u2yz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_5",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_hqpgl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_5",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_kml9t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "light_flashes_andor_floating_spots",
+   "fieldtype": "HTML",
+   "label": "Light flashes and/or floating spots",
+   "options": "Light flashes and/or floating spots"
+  },
+  {
+   "fieldname": "column_break_lbvz8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_6",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_kjwie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_6",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_jz4jf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "any_other_ocular_or_orbital_condition",
+   "fieldtype": "HTML",
+   "label": "Any other ocular or orbital condition",
+   "options": "Any other ocular or orbital condition"
+  },
+  {
+   "fieldname": "column_break_1ky8r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_7",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_zal5d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_7",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_wcrue",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ophthalmological_exam",
+   "fieldtype": "HTML",
+   "label": "OPHTHALMOLOGICAL EXAM",
+   "options": "OPHTHALMOLOGICAL EXAM"
+  },
+  {
+   "fieldname": "section_break_netvv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "visual_acuity",
+   "fieldtype": "HTML",
+   "label": "VISUAL ACUITY",
+   "options": "VISUAL ACUITY"
+  },
+  {
+   "fieldname": "column_break_zhqs4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_1",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_iaztr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_1",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "section_break_ex52l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "without_correction",
+   "fieldtype": "HTML",
+   "label": "Without Correction ",
+   "options": "Without Correction "
+  },
+  {
+   "fieldname": "column_break_2qghg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_2",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_z5gnt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_2",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "section_break_eb1gr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "with_correction",
+   "fieldtype": "HTML",
+   "label": "With Correction",
+   "options": "With Correction"
+  },
+  {
+   "fieldname": "column_break_lahjl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_3",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_asjez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_3",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "column_break_lbzfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visual_field",
+   "fieldtype": "HTML",
+   "label": "VISUAL FIELD",
+   "options": "VISUAL FIELD"
+  },
+  {
+   "fieldname": "column_break_qoxvr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_4",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_x5t1s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_4",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "section_break_ksu9y",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "external_exam",
+   "fieldtype": "HTML",
+   "label": "EXTERNAL EXAM",
+   "options": "EXTERNAL EXAM"
+  },
+  {
+   "fieldname": "column_break_cu0tc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_5",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_lx5v8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_5",
+   "fieldtype": "Check",
+   "label": "left"
+  },
+  {
+   "fieldname": "column_break_cgvo1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anterior_segment_exam",
+   "fieldtype": "HTML",
+   "label": "ANTERIOR SEGMENT EXAM ",
+   "options": "ANTERIOR SEGMENT EXAM "
+  },
+  {
+   "fieldname": "column_break_kvxrn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_6",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_93dep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_6",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "section_break_x7nbp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dilated_retinal_exam",
+   "fieldtype": "HTML",
+   "label": "DILATED RETINAL EXAM ",
+   "options": "DILATED RETINAL EXAM "
+  },
+  {
+   "fieldname": "column_break_zjwwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_7",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_0igym",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_7",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "column_break_inz4s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "optic_nerve",
+   "fieldtype": "HTML",
+   "label": "OPTIC NERVE",
+   "options": "OPTIC NERVE"
+  },
+  {
+   "fieldname": "column_break_wxhl8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_8",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_f2iz4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_8",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "section_break_efsiu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "extraocular_muscles",
+   "fieldtype": "HTML",
+   "label": "EXTRAOCULAR MUSCLES ",
+   "options": "EXTRAOCULAR MUSCLES "
+  },
+  {
+   "fieldname": "column_break_qsxkv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_9",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_amesv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_9",
+   "fieldtype": "Check",
+   "label": "left"
+  },
+  {
+   "fieldname": "column_break_odisz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gonioscopy_angle_recession",
+   "fieldtype": "HTML",
+   "label": "GONIOSCOPY (Angle Recession) ",
+   "options": "GONIOSCOPY (Angle Recession) "
+  },
+  {
+   "fieldname": "column_break_snemq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_10",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_cvmht",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_10",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "section_break_1yq4s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "intraocular_pressure",
+   "fieldtype": "HTML",
+   "label": "INTRAOCULAR PRESSURE",
+   "options": "INTRAOCULAR PRESSURE"
+  },
+  {
+   "fieldname": "column_break_rupaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_11",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "fieldname": "column_break_xz5yh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_11",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "fieldname": "section_break_ubb6o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "please_comment_on_any_and_all_abnormal_findings",
+   "fieldtype": "HTML",
+   "label": "PLEASE COMMENT ON ANY AND ALL ABNORMAL FINDINGS",
+   "options": "PLEASE COMMENT ON ANY AND ALL ABNORMAL FINDINGS"
+  },
+  {
+   "fieldname": "section_break_lyz06",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "allow_to_box",
+   "fieldtype": "HTML",
+   "label": "ALLOW TO BOX ",
+   "options": "ALLOW TO BOX "
+  },
+  {
+   "fieldname": "column_break_zz9lc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "r_12",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_dxudo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "conditional",
+   "fieldtype": "Check",
+   "label": " CONDITIONAL"
+  },
+  {
+   "fieldname": "column_break_alsda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_12",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_vhozo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sex"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "opthalmology",
+   "fieldtype": "Data",
+   "label": "opthalmology",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-13 15:31:30.041630",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "opthalmology exam form",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

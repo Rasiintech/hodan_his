@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 08:32:19.542245",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "a",
+  "b",
+  "c",
+  "d"
+ ],
+ "fields": [
+  {
+   "fieldname": "a",
+   "fieldtype": "Data",
+   "label": "Pregnancy Weight:"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "Present Weight:"
+  },
+  {
+   "fieldname": "c",
+   "fieldtype": "Data",
+   "label": "Height:"
+  },
+  {
+   "fieldname": "d",
+   "fieldtype": "Data",
+   "label": "BP:"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-29 08:32:19.542245",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Physical Examination ch",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 10:47:14.093021",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source",
+  "other_site",
+  "another_cs"
+ ],
+ "fields": [
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Source"
+  },
+  {
+   "fieldname": "other_site",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Other site  "
+  },
+  {
+   "fieldname": "another_cs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Another C/s "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-12 10:47:14.093021",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Sepsis4",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

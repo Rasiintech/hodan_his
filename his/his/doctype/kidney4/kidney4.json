@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 15:36:39.521774",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "need_of_fluid_adjustment",
+  "need_of_drug_adjustment",
+  "conservative_management",
+  "renal_replacement_therapy"
+ ],
+ "fields": [
+  {
+   "fieldname": "renal_replacement_therapy",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Renal replacement therapy",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_fluid_adjustment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Need of fluid adjustment",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_drug_adjustment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Need of drug adjustment",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "conservative_management",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Conservative management",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 11:08:22.545182",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Kidney4",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

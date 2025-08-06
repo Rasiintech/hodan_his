@@ -1,0 +1,837 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-27 11:48:43.835052",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "patient_name",
+  "column_break_pxy27",
+  "age",
+  "dept",
+  "section_break_vwe5v",
+  "surgical_procedure",
+  "height",
+  "weight",
+  "diagnosis",
+  "proposed_date_of_surgury",
+  "lenght_of_stay",
+  "surgeon",
+  "offasprinanti_plateletdrugs",
+  "airway_asessment",
+  "column_break_jmtj9",
+  "allergies",
+  "mouth_opening",
+  "teeth",
+  "neck_movements",
+  "blood_group",
+  "emergency_yn",
+  "complications_of_previous_anesthesia_if_any",
+  "patient_and_family_history_of_anesthesia_complication",
+  "section_break_weipn",
+  "asthma",
+  "copd",
+  "pneumonia",
+  "expectoration",
+  "cough",
+  "edema",
+  "dyspnoea",
+  "column_break_d8adn",
+  "orthopnoea",
+  "recenturti",
+  "smoker",
+  "xray_chest",
+  "pulmonary_function_test",
+  "abg",
+  "cardio_vascular_system_section",
+  "hypertension",
+  "cadmi",
+  "angina",
+  "pace_maker",
+  "chf",
+  "column_break_qbrgr",
+  "cyanosis",
+  "echo",
+  "lvef_",
+  "rwma",
+  "cnsmusculo_skeletal_system_section",
+  "cva_stroke",
+  "sezuires",
+  "paraplegia",
+  "neuro_muscular_disorder",
+  "head_injury",
+  "column_break_vnze4",
+  "spinal_injury",
+  "others",
+  "mri",
+  "ct_scan",
+  "hepatic_girenal_endo_section",
+  "jaundice",
+  "hepatic_failure",
+  "splenomegaly",
+  "chronic_renal_failure",
+  "diabetes",
+  "oliguria",
+  "acid_peptic_disease",
+  "blood_sugar",
+  "random",
+  "column_break_kdb6m",
+  "pp",
+  "sgot",
+  "sgpt_m",
+  "alp",
+  "blood_uria",
+  "na_plus",
+  "albumin",
+  "creatinine",
+  "cl___hcc",
+  "tlc",
+  "others_section",
+  "bleeding_disorder",
+  "cancer_or_chemo_therapy",
+  "steroid_therapy",
+  "anemia",
+  "pregnancy",
+  "hb",
+  "pcv",
+  "column_break_bhjsa",
+  "fsp",
+  "bt",
+  "ct",
+  "pt",
+  "inr",
+  "examination_section",
+  "pulse",
+  "nbp",
+  "chest",
+  "cvs",
+  "column_break_mngys",
+  "mo",
+  "mr_grade",
+  "neck_movement",
+  "denition",
+  "section_break_hptry",
+  "lab_results_complete",
+  "previous_pac_reviewed",
+  "seen_by_anesthetist",
+  "fasting_status_checked",
+  "reports_reviewed",
+  "anesthesia_paln",
+  "column_break_xhnui",
+  "change_in_anesthesia_plan",
+  "pac_fitness",
+  "date",
+  "time",
+  "name_of_the_anesthetist",
+  "signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "pid.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_pxy27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "surgeon.department",
+   "fieldname": "dept",
+   "fieldtype": "Data",
+   "label": "Dept"
+  },
+  {
+   "fieldname": "section_break_vwe5v",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "surgical_procedure",
+   "fieldtype": "Data",
+   "label": "Surgical Procedure"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Height"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "offasprinanti_plateletdrugs",
+   "fieldtype": "Data",
+   "label": "offAsprin/Anti PlateletDrugs"
+  },
+  {
+   "fieldname": "airway_asessment",
+   "fieldtype": "Data",
+   "label": "Airway Asessment"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "mouth_opening",
+   "fieldtype": "Data",
+   "label": "Mouth Opening"
+  },
+  {
+   "fieldname": "teeth",
+   "fieldtype": "Data",
+   "label": "Teeth"
+  },
+  {
+   "fieldname": "neck_movements",
+   "fieldtype": "Data",
+   "label": "Neck Movements"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood Group"
+  },
+  {
+   "fieldname": "emergency_yn",
+   "fieldtype": "Data",
+   "label": "Emergency Y/N"
+  },
+  {
+   "fieldname": "complications_of_previous_anesthesia_if_any",
+   "fieldtype": "Data",
+   "label": "Complications of Previous Anesthesia if any"
+  },
+  {
+   "fieldname": "patient_and_family_history_of_anesthesia_complication",
+   "fieldtype": "Data",
+   "label": "Patient and Family History of Anesthesia complication"
+  },
+  {
+   "fieldname": "section_break_weipn",
+   "fieldtype": "Section Break",
+   "label": "Respiratory System"
+  },
+  {
+   "fieldname": "asthma",
+   "fieldtype": "Select",
+   "label": " Asthma",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "copd",
+   "fieldtype": "Select",
+   "label": "COPD",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pneumonia",
+   "fieldtype": "Select",
+   "label": "Pneumonia ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "expectoration",
+   "fieldtype": "Select",
+   "label": "Expectoration ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cough",
+   "fieldtype": "Select",
+   "label": "Cough",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cardio_vascular_system_section",
+   "fieldtype": "Section Break",
+   "label": "Cardio Vascular system "
+  },
+  {
+   "fieldname": "column_break_d8adn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hypertension",
+   "fieldtype": "Select",
+   "label": "Hypertension",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cadmi",
+   "fieldtype": "Select",
+   "label": "CAD/MI",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "angina",
+   "fieldtype": "Select",
+   "label": "Angina",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pace_maker",
+   "fieldtype": "Select",
+   "label": "Pace Maker ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cnsmusculo_skeletal_system_section",
+   "fieldtype": "Section Break",
+   "label": "CNS/Musculo Skeletal System "
+  },
+  {
+   "fieldname": "cva_stroke",
+   "fieldtype": "Select",
+   "label": "CVA /Stroke ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "sezuires",
+   "fieldtype": "Select",
+   "label": "Sezuires",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "paraplegia",
+   "fieldtype": "Select",
+   "label": "Paraplegia ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "neuro_muscular_disorder",
+   "fieldtype": "Select",
+   "label": "Neuro Muscular disorder ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hepatic_girenal_endo_section",
+   "fieldtype": "Section Break",
+   "label": "Hepatic /GI/Renal /Endo "
+  },
+  {
+   "fieldname": "jaundice",
+   "fieldtype": "Select",
+   "label": "Jaundice",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hepatic_failure",
+   "fieldtype": "Select",
+   "label": "Hepatic Failure ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "splenomegaly",
+   "fieldtype": "Select",
+   "label": "Splenomegaly",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "chronic_renal_failure",
+   "fieldtype": "Select",
+   "label": "Chronic Renal Failure ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "diabetes",
+   "fieldtype": "Select",
+   "label": "Diabetes",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "others_section",
+   "fieldtype": "Section Break",
+   "label": "Others"
+  },
+  {
+   "fieldname": "bleeding_disorder",
+   "fieldtype": "Select",
+   "label": "Bleeding Disorder ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cancer_or_chemo_therapy",
+   "fieldtype": "Select",
+   "label": "Cancer Or Chemo therapy ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "steroid_therapy",
+   "fieldtype": "Select",
+   "label": "Steroid therapy ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "anemia",
+   "fieldtype": "Select",
+   "label": "Anemia ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_jmtj9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "examination_section",
+   "fieldtype": "Section Break",
+   "label": "Examination"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Data",
+   "label": "Pulse"
+  },
+  {
+   "fieldname": "nbp",
+   "fieldtype": "Data",
+   "label": "NBP"
+  },
+  {
+   "fieldname": "chest",
+   "fieldtype": "Data",
+   "label": "Chest"
+  },
+  {
+   "fieldname": "cvs",
+   "fieldtype": "Data",
+   "label": "CVS"
+  },
+  {
+   "fieldname": "mo",
+   "fieldtype": "Data",
+   "label": "MO"
+  },
+  {
+   "fieldname": "mr_grade",
+   "fieldtype": "Data",
+   "label": "MR Grade"
+  },
+  {
+   "fieldname": "neck_movement",
+   "fieldtype": "Data",
+   "label": "Neck Movement "
+  },
+  {
+   "fieldname": "denition",
+   "fieldtype": "Data",
+   "label": "Denition"
+  },
+  {
+   "fieldname": "section_break_hptry",
+   "fieldtype": "Section Break",
+   "label": "Informed Anesthesia Consent "
+  },
+  {
+   "fieldname": "previous_pac_reviewed",
+   "fieldtype": "Data",
+   "label": "Previous PAC Reviewed"
+  },
+  {
+   "fieldname": "fasting_status_checked",
+   "fieldtype": "Data",
+   "label": "Fasting Status checked "
+  },
+  {
+   "fieldname": "reports_reviewed",
+   "fieldtype": "Data",
+   "label": "Reports Reviewed"
+  },
+  {
+   "fieldname": "anesthesia_paln",
+   "fieldtype": "Select",
+   "label": "Anesthesia Paln",
+   "options": "\nGeneral\nSpinal\nOther"
+  },
+  {
+   "fieldname": "change_in_anesthesia_plan",
+   "fieldtype": "Select",
+   "label": "Change In Anesthesia Plan",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pac_fitness",
+   "fieldtype": "Select",
+   "label": "PAC Fitness",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "name_of_the_anesthetist",
+   "fieldtype": "Data",
+   "label": "Name of the Anesthetist"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature "
+  },
+  {
+   "default": "0",
+   "fieldname": "lab_results_complete",
+   "fieldtype": "Check",
+   "label": "Lab results complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "seen_by_anesthetist",
+   "fieldtype": "Check",
+   "label": "Seen by Anesthetist"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "diagnosis"
+  },
+  {
+   "fieldname": "proposed_date_of_surgury",
+   "fieldtype": "Date",
+   "label": "Proposed Date of Surgury"
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Link",
+   "label": "Surgeon",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "lenght_of_stay",
+   "fieldtype": "Data",
+   "label": "Lenght Of Stay"
+  },
+  {
+   "fieldname": "edema",
+   "fieldtype": "Select",
+   "label": "Edema",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "dyspnoea",
+   "fieldtype": "Select",
+   "label": "Dyspnoea",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "orthopnoea",
+   "fieldtype": "Select",
+   "label": "Orthopnoea",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "recenturti",
+   "fieldtype": "Select",
+   "label": "RecentURTI",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "smoker",
+   "fieldtype": "Select",
+   "label": "Smoker",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "xray_chest",
+   "fieldtype": "Select",
+   "label": "Xray Chest ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pulmonary_function_test",
+   "fieldtype": "Select",
+   "label": "Pulmonary Function Test ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "abg",
+   "fieldtype": "Select",
+   "label": "ABG",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "chf",
+   "fieldtype": "Select",
+   "label": "CHF",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cyanosis",
+   "fieldtype": "Select",
+   "label": "Cyanosis",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "echo",
+   "fieldtype": "Select",
+   "label": "Echo",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "lvef_",
+   "fieldtype": "Select",
+   "label": "LVEF %",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "rwma",
+   "fieldtype": "Select",
+   "label": "RWMA",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_qbrgr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "head_injury",
+   "fieldtype": "Select",
+   "label": "Head Injury ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "spinal_injury",
+   "fieldtype": "Select",
+   "label": "Spinal Injury ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Select",
+   "label": "Others ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "mri",
+   "fieldtype": "Select",
+   "label": "MRI",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "ct_scan",
+   "fieldtype": "Select",
+   "label": "CT Scan ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_vnze4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "oliguria",
+   "fieldtype": "Select",
+   "label": "Oliguria",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "acid_peptic_disease",
+   "fieldtype": "Select",
+   "label": "Acid Peptic Disease",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "blood_sugar",
+   "fieldtype": "Select",
+   "label": "Blood sugar ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "random",
+   "fieldtype": "Select",
+   "label": "Random",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pp",
+   "fieldtype": "Select",
+   "label": "P.P",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "sgot",
+   "fieldtype": "Select",
+   "label": "SGOT",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "sgpt_m",
+   "fieldtype": "Select",
+   "label": "SGPT m",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "alp",
+   "fieldtype": "Select",
+   "label": "ALP",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "blood_uria",
+   "fieldtype": "Select",
+   "label": "Blood Uria",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "na_plus",
+   "fieldtype": "Select",
+   "label": "NA+ ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "albumin",
+   "fieldtype": "Select",
+   "label": "Albumin",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "creatinine",
+   "fieldtype": "Select",
+   "label": "Creatinine",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cl___hcc",
+   "fieldtype": "Select",
+   "label": "Cl   HCC ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_kdb6m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pregnancy",
+   "fieldtype": "Select",
+   "label": "Pregnancy",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hb",
+   "fieldtype": "Select",
+   "label": "Hb",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pcv",
+   "fieldtype": "Select",
+   "label": "PCV",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "tlc",
+   "fieldtype": "Select",
+   "label": "TLC",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "fsp",
+   "fieldtype": "Select",
+   "label": "FSP",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bt",
+   "fieldtype": "Select",
+   "label": "BT",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "ct",
+   "fieldtype": "Select",
+   "label": "CT",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pt",
+   "fieldtype": "Select",
+   "label": "PT",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "inr",
+   "fieldtype": "Select",
+   "label": "INR",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_bhjsa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mngys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xhnui",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-23 10:13:48.790620",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Pre Anesthesia Evaluation and Re Evaluation Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient_name"
+}

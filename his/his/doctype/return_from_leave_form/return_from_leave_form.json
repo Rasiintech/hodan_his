@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-01 11:21:18.901796",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "return_from",
+  "section_break_rqdli",
+  "annual_leave",
+  "column_break_kcnyt",
+  "sick_leave",
+  "column_break_xeryg",
+  "unpaid_leave",
+  "column_break_pbyc0",
+  "maternity_leave",
+  "column_break_0dory",
+  "others",
+  "section_break_sxjwn",
+  "name1",
+  "column_break_cm4v8",
+  "emp_no",
+  "column_break_78cdi",
+  "position",
+  "section_break_jjjwn",
+  "department",
+  "column_break_66fvd",
+  "resumed_work_on",
+  "column_break_infua",
+  "employee_signature_date",
+  "section_break_nnbji",
+  "department_head_or_manager_or_date",
+  "column_break_isyxm",
+  "remarks",
+  "column_break_7rjgl",
+  "please_return_to",
+  "section_break_g42oa"
+ ],
+ "fields": [
+  {
+   "fieldname": "return_from",
+   "fieldtype": "HTML",
+   "label": "RETURN FROM",
+   "options": "RETURN FROM"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "emp_no",
+   "fieldtype": "Data",
+   "label": "EMP NO"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": " Department"
+  },
+  {
+   "fieldname": "resumed_work_on",
+   "fieldtype": "Data",
+   "label": "Resumed Work on"
+  },
+  {
+   "fieldname": "employee_signature_date",
+   "fieldtype": "Data",
+   "label": "Employee Signature Date"
+  },
+  {
+   "fieldname": "department_head_or_manager_or_date",
+   "fieldtype": "Data",
+   "label": "Department Head Or Manager or Date"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "please_return_to",
+   "fieldtype": "Data",
+   "label": "Please return to"
+  },
+  {
+   "fieldname": "section_break_rqdli",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "annual_leave",
+   "fieldtype": "Check",
+   "label": "ANNUAL LEAVE"
+  },
+  {
+   "fieldname": "column_break_kcnyt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sick_leave",
+   "fieldtype": "Check",
+   "label": "SICK LEAVE "
+  },
+  {
+   "fieldname": "column_break_xeryg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "unpaid_leave",
+   "fieldtype": "Check",
+   "label": "UNPAID LEAVE "
+  },
+  {
+   "fieldname": "column_break_pbyc0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "maternity_leave",
+   "fieldtype": "Check",
+   "label": "MATERNITY LEAVE"
+  },
+  {
+   "fieldname": "column_break_0dory",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "OTHERS "
+  },
+  {
+   "fieldname": "section_break_sxjwn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cm4v8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_78cdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jjjwn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_66fvd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_infua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nnbji",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_isyxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7rjgl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_g42oa",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-26 13:53:49.554401",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Return from leave Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

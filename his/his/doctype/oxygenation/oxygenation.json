@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-05 11:21:24.150261",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "conc",
+  "start",
+  "change",
+  "end",
+  "air_way",
+  "size",
+  "time_removed"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type"
+  },
+  {
+   "fieldname": "conc",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CONC"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Start"
+  },
+  {
+   "fieldname": "change",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Change"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "End"
+  },
+  {
+   "fieldname": "air_way",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Air way"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Size"
+  },
+  {
+   "fieldname": "time_removed",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Time Removed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-05 11:21:24.150261",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OXYGENATION",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

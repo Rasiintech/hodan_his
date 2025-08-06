@@ -1,0 +1,772 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-30 12:03:46.885051",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "column_break_8fega",
+  "age",
+  "dob_1",
+  "column_break_rrz4p",
+  "section_break_szexj",
+  "date_1",
+  "column_break_9ams3",
+  "time_1",
+  "column_break_achap",
+  "chief_complaint",
+  "section_break_ynuey",
+  "lmp",
+  "column_break_mia5w",
+  "edd_1",
+  "column_break_a3vxv",
+  "earliest_ultrasound",
+  "section_break_7axt5",
+  "hpi",
+  "column_break_sknze",
+  "ega",
+  "column_break_zfxl6",
+  "on",
+  "section_break_kjcp6",
+  "edd_2",
+  "column_break_keham",
+  "best_edd",
+  "column_break_azuom",
+  "current_ega",
+  "section_break_vwyoj",
+  "prenatal_care_site",
+  "column_break_mkg2x",
+  "pmhx",
+  "column_break_kiugl",
+  "pshx",
+  "section_break_p30ns",
+  "allergies",
+  "column_break_spczi",
+  "medications",
+  "column_break_fi51v",
+  "blood_type__rh",
+  "section_break_z13ux",
+  "antibody_screen",
+  "column_break_4lgsb",
+  "rubella",
+  "column_break_t51xq",
+  "vdrl",
+  "column_break_ggatv",
+  "hbsag",
+  "section_break_nhsxm",
+  "hiv",
+  "column_break_7esrv",
+  "hgb_hct",
+  "column_break_jxkmn",
+  "pap_date",
+  "column_break_jcdoi",
+  "chlamydia",
+  "section_break_ogrru",
+  "pdtc_scan",
+  "column_break_uece5",
+  "1_hour_gtt",
+  "column_break_cqjl9",
+  "3_hour_gtt",
+  "column_break_6gxf7",
+  "other_tests",
+  "section_break_f4nhj",
+  "gbs_date",
+  "section_break_yc6ef",
+  "pts_name_2",
+  "column_break_8h9up",
+  "pid_2",
+  "column_break_izet2",
+  "dob_2",
+  "column_break_rn4sd",
+  "gynhx",
+  "column_break_tx9j3",
+  "prior_abnormal_pap_prior_stds",
+  "section_break_amm5o",
+  "obhx",
+  "section_break_nk7dm",
+  "g1",
+  "column_break_2pft6",
+  "g2",
+  "column_break_ispim",
+  "g3",
+  "column_break_s5xlf",
+  "g5",
+  "column_break_dznys",
+  "g4",
+  "column_break_mzzmu",
+  "g6",
+  "section_break_hnfgj",
+  "pe",
+  "section_break_5tasi",
+  "baseline_fhr",
+  "column_break_5eik5",
+  "variability",
+  "column_break_54rrt",
+  "contractions",
+  "section_break_m2h3n",
+  "head",
+  "column_break_ogdwg",
+  "neck",
+  "column_break_3kucg",
+  "lungs",
+  "column_break_u98tt",
+  "heart",
+  "column_break_z0ppb",
+  "abdomen",
+  "column_break_qf8e2",
+  "pelvic",
+  "column_break_bjdwn",
+  "external_genitalia",
+  "column_break_snaaa",
+  "vagina",
+  "section_break_ysv4r",
+  "bedside_ultrasound",
+  "column_break_bat65",
+  "social_history",
+  "column_break_5ydms",
+  "family_hx",
+  "section_break_vfp3h",
+  "assessment_plan",
+  "column_break_lyljt",
+  "date_2",
+  "column_break_ehgao",
+  "time_2"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob_1",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "date_1",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time_1",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Data",
+   "label": "Chief Complaint"
+  },
+  {
+   "fieldname": "lmp",
+   "fieldtype": "Data",
+   "label": "LMP"
+  },
+  {
+   "fieldname": "edd_1",
+   "fieldtype": "Data",
+   "label": "EDD"
+  },
+  {
+   "fieldname": "earliest_ultrasound",
+   "fieldtype": "Data",
+   "label": "Earliest Ultrasound"
+  },
+  {
+   "fieldname": "hpi",
+   "fieldtype": "Data",
+   "label": "HPI"
+  },
+  {
+   "fieldname": "ega",
+   "fieldtype": "Data",
+   "label": "EGA"
+  },
+  {
+   "fieldname": "on",
+   "fieldtype": "Data",
+   "label": "On"
+  },
+  {
+   "fieldname": "edd_2",
+   "fieldtype": "Data",
+   "label": "EDD"
+  },
+  {
+   "fieldname": "best_edd",
+   "fieldtype": "Data",
+   "label": "BEST EDD"
+  },
+  {
+   "fieldname": "current_ega",
+   "fieldtype": "Data",
+   "label": "Current EGA"
+  },
+  {
+   "fieldname": "prenatal_care_site",
+   "fieldtype": "Data",
+   "label": "Prenatal care site"
+  },
+  {
+   "fieldname": "pmhx",
+   "fieldtype": "Data",
+   "label": "PMHx"
+  },
+  {
+   "fieldname": "pshx",
+   "fieldtype": "Data",
+   "label": "PSHx"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "ALLERGIES"
+  },
+  {
+   "fieldname": "medications",
+   "fieldtype": "Data",
+   "label": "Medications"
+  },
+  {
+   "fieldname": "blood_type__rh",
+   "fieldtype": "Data",
+   "label": "Blood type  Rh"
+  },
+  {
+   "fieldname": "antibody_screen",
+   "fieldtype": "Data",
+   "label": "Antibody screen"
+  },
+  {
+   "fieldname": "rubella",
+   "fieldtype": "Data",
+   "label": "Rubella"
+  },
+  {
+   "fieldname": "vdrl",
+   "fieldtype": "Data",
+   "label": "VDRL"
+  },
+  {
+   "fieldname": "hbsag",
+   "fieldtype": "Data",
+   "label": "HBsAg"
+  },
+  {
+   "fieldname": "hiv",
+   "fieldtype": "Data",
+   "label": "HIV"
+  },
+  {
+   "fieldname": "hgb_hct",
+   "fieldtype": "Data",
+   "label": "Hgb Hct"
+  },
+  {
+   "fieldname": "pap_date",
+   "fieldtype": "Date",
+   "label": "Pap date"
+  },
+  {
+   "fieldname": "chlamydia",
+   "fieldtype": "Data",
+   "label": "Chlamydia"
+  },
+  {
+   "fieldname": "pdtc_scan",
+   "fieldtype": "Data",
+   "label": "PDTC scan"
+  },
+  {
+   "fieldname": "1_hour_gtt",
+   "fieldtype": "Data",
+   "label": "1 hour GTT"
+  },
+  {
+   "fieldname": "3_hour_gtt",
+   "fieldtype": "Data",
+   "label": "3 hour GTT"
+  },
+  {
+   "fieldname": "other_tests",
+   "fieldtype": "Data",
+   "label": "Other Tests"
+  },
+  {
+   "fieldname": "gbs_date",
+   "fieldtype": "Date",
+   "label": "GBS date"
+  },
+  {
+   "fieldname": "pts_name_2",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid_2",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob_2",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "gynhx",
+   "fieldtype": "Data",
+   "label": "GynHx"
+  },
+  {
+   "fieldname": "prior_abnormal_pap_prior_stds",
+   "fieldtype": "Data",
+   "label": "Prior abnormal Pap Prior STDs"
+  },
+  {
+   "fieldname": "obhx",
+   "fieldtype": "HTML",
+   "label": "OBHx",
+   "options": "OBHX"
+  },
+  {
+   "fieldname": "g1",
+   "fieldtype": "Data",
+   "label": "G1"
+  },
+  {
+   "fieldname": "g2",
+   "fieldtype": "Data",
+   "label": "G2"
+  },
+  {
+   "fieldname": "g3",
+   "fieldtype": "Data",
+   "label": "G3"
+  },
+  {
+   "fieldname": "g4",
+   "fieldtype": "Data",
+   "label": "G4"
+  },
+  {
+   "fieldname": "g5",
+   "fieldtype": "Data",
+   "label": "G5"
+  },
+  {
+   "fieldname": "g6",
+   "fieldtype": "Data",
+   "label": "G6"
+  },
+  {
+   "fieldname": "pe",
+   "fieldtype": "HTML",
+   "label": "PE",
+   "options": "PE"
+  },
+  {
+   "fieldname": "baseline_fhr",
+   "fieldtype": "Data",
+   "label": "Baseline FHR"
+  },
+  {
+   "fieldname": "variability",
+   "fieldtype": "Data",
+   "label": "Variability"
+  },
+  {
+   "fieldname": "contractions",
+   "fieldtype": "Data",
+   "label": "Contractions"
+  },
+  {
+   "fieldname": "head",
+   "fieldtype": "Data",
+   "label": "Head"
+  },
+  {
+   "fieldname": "neck",
+   "fieldtype": "Data",
+   "label": "Neck"
+  },
+  {
+   "fieldname": "lungs",
+   "fieldtype": "Data",
+   "label": "Lungs"
+  },
+  {
+   "fieldname": "heart",
+   "fieldtype": "Data",
+   "label": "Heart"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Data",
+   "label": "Abdomen"
+  },
+  {
+   "fieldname": "pelvic",
+   "fieldtype": "Data",
+   "label": "Pelvic"
+  },
+  {
+   "fieldname": "external_genitalia",
+   "fieldtype": "Data",
+   "label": "External Genitalia"
+  },
+  {
+   "fieldname": "vagina",
+   "fieldtype": "Data",
+   "label": "Vagina"
+  },
+  {
+   "fieldname": "bedside_ultrasound",
+   "fieldtype": "Data",
+   "label": "Bedside ultrasound"
+  },
+  {
+   "fieldname": "social_history",
+   "fieldtype": "Data",
+   "label": "Social History"
+  },
+  {
+   "fieldname": "family_hx",
+   "fieldtype": "Data",
+   "label": "Family HX"
+  },
+  {
+   "fieldname": "assessment_plan",
+   "fieldtype": "Data",
+   "label": "Assessment Plan"
+  },
+  {
+   "fieldname": "date_2",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time_2",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "column_break_rrz4p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_szexj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9ams3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_achap",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ynuey",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mia5w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_a3vxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7axt5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sknze",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zfxl6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kjcp6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_keham",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_azuom",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vwyoj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mkg2x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kiugl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_p30ns",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_spczi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fi51v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_z13ux",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4lgsb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_t51xq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ggatv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nhsxm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7esrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jxkmn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jcdoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ogrru",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uece5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cqjl9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6gxf7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_f4nhj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yc6ef",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8h9up",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_izet2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rn4sd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tx9j3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_amm5o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_nk7dm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_2pft6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ispim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_s5xlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dznys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mzzmu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hnfgj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_5tasi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_5eik5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_54rrt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_m2h3n",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ogdwg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3kucg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_u98tt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_z0ppb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qf8e2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bjdwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_snaaa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ysv4r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bat65",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5ydms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vfp3h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lyljt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ehgao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_8fega",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:59:04.060600",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OBs and Gyne Outpatient Admission and physical History form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 14:53:36.015500",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "need_of_analgesia",
+  "need_of_sedation",
+  "need_of_muscle_relaxants",
+  "need_of_sedation_vacation"
+ ],
+ "fields": [
+  {
+   "fieldname": "need_of_muscle_relaxants",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Need of muscle relaxants"
+  },
+  {
+   "fieldname": "need_of_analgesia",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Need of analgesia"
+  },
+  {
+   "fieldname": "need_of_sedation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Need of sedation"
+  },
+  {
+   "fieldname": "need_of_sedation_vacation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Need of sedation vacation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 10:47:24.286050",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Nervous System3",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

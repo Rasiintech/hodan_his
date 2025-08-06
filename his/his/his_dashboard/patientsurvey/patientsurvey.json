@@ -1,0 +1,58 @@
+{
+ "cards": [
+  {
+   "card": "Happy IPD"
+  },
+  {
+   "card": "Unhappy IPD"
+  },
+  {
+   "card": "Happy OPD"
+  },
+  {
+   "card": "Unhappy OPD"
+  },
+  {
+   "card": "Pharmacy Feedback +"
+  },
+  {
+   "card": "Pharmacy Feedback -"
+  },
+  {
+   "card": "Laboratory And Radiology +"
+  },
+  {
+   "card": "Laboratory And Radiology -"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "IPD Survey",
+   "width": "Half"
+  },
+  {
+   "chart": "OPD Survey",
+   "width": "Half"
+  },
+  {
+   "chart": "Pharmacy Survey",
+   "width": "Half"
+  },
+  {
+   "chart": "Laboratory And Radiology Survey",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-05-06 09:44:14.567219",
+ "dashboard_name": "PatientSurvey",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-05-17 10:42:27.132841",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "PatientSurvey",
+ "owner": "Administrator"
+}

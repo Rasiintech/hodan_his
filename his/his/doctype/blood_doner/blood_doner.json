@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DONER-.##### ",
+ "creation": "2023-05-12 14:17:41.317201",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_7ruon",
+  "age",
+  "mobile",
+  "p",
+  "section_break_ndbvl",
+  "paid_amount",
+  "column_break_fjqqz",
+  "is_inpatient",
+  "reff_patient",
+  "p_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doner ",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Doner  Name"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age"
+  },
+  {
+   "fetch_from": "patient.mobile_no",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "column_break_7ruon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ndbvl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Float",
+   "label": "Paid Amount",
+   "mandatory_depends_on": "!is_inpatient"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "label": "For Patient",
+   "read_only_depends_on": "paid_amount"
+  },
+  {
+   "fieldname": "column_break_fjqqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reff_patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "mandatory_depends_on": "is_inpatient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Blood Doner",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Patient ",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "reff_patient.patient_name",
+   "fieldname": "p_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-04 09:31:00.825871",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Blood Doner",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

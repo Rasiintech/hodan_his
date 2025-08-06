@@ -1,0 +1,238 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PN.#####",
+ "creation": "2022-04-18 15:22:32.457511",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "date_of_admission",
+  "marital_status",
+  "column_break_5",
+  "age",
+  "district",
+  "condition_of_mother_section",
+  "date_of_delivery",
+  "placenta",
+  "perinium",
+  "column_break_12",
+  "time_of_delivery",
+  "type_of_delivery",
+  "column_break_15",
+  "bp",
+  "drug_given",
+  "condition_of_baby_section",
+  "date_of_birth",
+  "weight",
+  "drugs_given",
+  "date_of_discharge",
+  "column_break_23",
+  "time_of_birth",
+  "length",
+  "column_break_26",
+  "sex",
+  "apgar_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date of admission"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Data",
+   "label": "Marital status"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "District"
+  },
+  {
+   "fieldname": "condition_of_mother_section",
+   "fieldtype": "Section Break",
+   "label": "CONDITION OF MOTHER"
+  },
+  {
+   "fieldname": "date_of_delivery",
+   "fieldtype": "Date",
+   "label": "Date Of Delivery"
+  },
+  {
+   "fieldname": "placenta",
+   "fieldtype": "Data",
+   "label": "Placenta"
+  },
+  {
+   "fieldname": "perinium",
+   "fieldtype": "Data",
+   "label": "Perinium"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_of_delivery",
+   "fieldtype": "Time",
+   "label": "Time of delivery"
+  },
+  {
+   "fieldname": "type_of_delivery",
+   "fieldtype": "Data",
+   "label": "Type of delivery"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "B/P"
+  },
+  {
+   "fieldname": "drug_given",
+   "fieldtype": "Data",
+   "label": "Drug given"
+  },
+  {
+   "fieldname": "condition_of_baby_section",
+   "fieldtype": "Section Break",
+   "label": "CONDITION OF BABY "
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "drugs_given",
+   "fieldtype": "Data",
+   "label": "Drugs Given"
+  },
+  {
+   "fieldname": "date_of_discharge",
+   "fieldtype": "Data",
+   "label": "Date of discharge"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_of_birth",
+   "fieldtype": "Time",
+   "label": "Time of birth"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "apgar_score",
+   "fieldtype": "Data",
+   "label": "Apgar score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Vital Signs",
+   "link_fieldname": "patient"
+  },
+  {
+   "link_doctype": "Inpatient Medication",
+   "link_fieldname": "patient"
+  },
+  {
+   "link_doctype": "Patient Encounter",
+   "link_fieldname": "patient"
+  }
+ ],
+ "modified": "2023-05-14 13:14:34.615343",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Postnatal",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maternity",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

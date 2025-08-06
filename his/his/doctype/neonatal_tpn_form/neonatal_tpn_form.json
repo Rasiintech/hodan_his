@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 10:52:47.536387",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "dob",
+  "nationality",
+  "department_ward",
+  "room_no",
+  "date",
+  "practitioner",
+  "section_break_btg06",
+  "day_month",
+  "tpn_day",
+  "total_suppl",
+  "route",
+  "weight_used_kg",
+  "iv_fluid",
+  "electrolytes",
+  "carbohydrates",
+  "protein",
+  "fat",
+  "column_break_ikfym",
+  "heparin",
+  "energy",
+  "nitrogen",
+  "fluid",
+  "tpn_fluid",
+  "intralipid",
+  "doctor__bleep",
+  "nurse",
+  "technician__pharmacist"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department_ward",
+   "fieldtype": "Data",
+   "label": "Department ward"
+  },
+  {
+   "fieldname": "room_no",
+   "fieldtype": "Data",
+   "label": "Room No"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "day_month",
+   "fieldtype": "Data",
+   "label": "Day Month"
+  },
+  {
+   "fieldname": "tpn_day",
+   "fieldtype": "Data",
+   "label": "TPN Day"
+  },
+  {
+   "fieldname": "total_suppl",
+   "fieldtype": "Data",
+   "label": "Total suppl"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "weight_used_kg",
+   "fieldtype": "Data",
+   "label": "Weight Used kg"
+  },
+  {
+   "fieldname": "iv_fluid",
+   "fieldtype": "Data",
+   "label": "IV fluid"
+  },
+  {
+   "fieldname": "electrolytes",
+   "fieldtype": "Data",
+   "label": "ELECTROLYTES"
+  },
+  {
+   "fieldname": "carbohydrates",
+   "fieldtype": "Data",
+   "label": "CARBOHYDRATES"
+  },
+  {
+   "fieldname": "protein",
+   "fieldtype": "Data",
+   "label": "PROTEIN"
+  },
+  {
+   "fieldname": "fat",
+   "fieldtype": "Data",
+   "label": "FAT"
+  },
+  {
+   "fieldname": "heparin",
+   "fieldtype": "Data",
+   "label": "HEPARIN"
+  },
+  {
+   "fieldname": "energy",
+   "fieldtype": "Data",
+   "label": "ENERGY"
+  },
+  {
+   "fieldname": "nitrogen",
+   "fieldtype": "Data",
+   "label": "NITROGEN"
+  },
+  {
+   "fieldname": "fluid",
+   "fieldtype": "Data",
+   "label": "FLUID"
+  },
+  {
+   "fieldname": "tpn_fluid",
+   "fieldtype": "Data",
+   "label": "TPN FLUID"
+  },
+  {
+   "fieldname": "intralipid",
+   "fieldtype": "Data",
+   "label": "INTRALIPID"
+  },
+  {
+   "fieldname": "doctor__bleep",
+   "fieldtype": "Data",
+   "label": "DOCTOR  BLEEP"
+  },
+  {
+   "fieldname": "nurse",
+   "fieldtype": "Data",
+   "label": "NURSE"
+  },
+  {
+   "fieldname": "technician__pharmacist",
+   "fieldtype": "Data",
+   "label": "Technician  Pharmacist"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "section_break_btg06",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ikfym",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-30 12:29:35.077276",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Neonatal TPN Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

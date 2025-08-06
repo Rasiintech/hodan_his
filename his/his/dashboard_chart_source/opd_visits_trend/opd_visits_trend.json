@@ -1,0 +1,13 @@
+{
+ "creation": "2025-05-19 13:41:33.960382",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2025-05-19 13:41:33.960382",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OPD Visits Trend",
+ "owner": "Administrator",
+ "source_name": "OPD Visits Trend",
+ "timeseries": 1
+}

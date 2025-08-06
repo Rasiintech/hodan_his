@@ -1,0 +1,393 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SSC-.#####",
+ "creation": "2023-04-29 10:10:07.569517",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_lacuv",
+  "age",
+  "gender",
+  "section_break_zbcan",
+  "patient_confirm",
+  "yes",
+  "surgical",
+  "yes_not_applicable",
+  "aneathesia",
+  "anea_yes",
+  "allergy",
+  "allergy_check",
+  "airway",
+  "answer",
+  "chil",
+  "risk",
+  "pre",
+  "assessment",
+  "before_start_of_surgical_intervention_column",
+  "members",
+  "yes_memebers",
+  "verbally",
+  "what_is_the_patients_name",
+  "what_proceuder_site_and_position_are_planned",
+  "critical",
+  "loos",
+  "investigations",
+  "team",
+  "anaesthetist",
+  "speci\ufb01c",
+  "patientasa",
+  "monitoring",
+  "nusre_opd",
+  "sterility",
+  "issues",
+  "surgical_site",
+  "infection",
+  "undertaken",
+  "prophylaxis",
+  "imaging",
+  "notapplicible",
+  "member",
+  "con\ufb01rms",
+  "recorded",
+  "specimens",
+  "equipment_problems",
+  "registered",
+  "concerns",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_lacuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zbcan",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient_confirm",
+   "fieldtype": "HTML",
+   "options": "Has the patient con\ufb01rmed his/her identity, site, procedure and consent?"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "Is the surgical site marked?",
+   "fieldname": "surgical",
+   "fieldtype": "HTML",
+   "options": "Is the surgical site marked?"
+  },
+  {
+   "fieldname": "yes_not_applicable",
+   "fieldtype": "Select",
+   "label": "Answer",
+   "options": "\nYes\nNo\nnot applicable"
+  },
+  {
+   "fieldname": "aneathesia",
+   "fieldtype": "HTML",
+   "options": "Is the anaesthesia machine and medication check complete?"
+  },
+  {
+   "default": "0",
+   "fieldname": "anea_yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "allergy",
+   "fieldtype": "HTML",
+   "options": "Does the patient have a:\nKnown allergy?"
+  },
+  {
+   "fieldname": "allergy_check",
+   "fieldtype": "Select",
+   "label": "Answer",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "airway",
+   "fieldtype": "HTML",
+   "options": "Di\ufb03cult airway/aspiration risk?"
+  },
+  {
+   "fieldname": "answer",
+   "fieldtype": "Select",
+   "label": "Answer",
+   "options": "Yes\nequipment\nassistance available"
+  },
+  {
+   "fieldname": "chil",
+   "fieldtype": "HTML",
+   "options": "Risk of >500 ml blood loss (7 ml/kg in children)?"
+  },
+  {
+   "fieldname": "risk",
+   "fieldtype": "Select",
+   "label": "Answer",
+   "options": "No\nYes\nadequate IV access\n\ufb02uids planned"
+  },
+  {
+   "fieldname": "pre",
+   "fieldtype": "HTML",
+   "options": "Has Pre-Operative VTE assessment been undertaken?"
+  },
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Select",
+   "label": "Answer",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "before_start_of_surgical_intervention_column",
+   "fieldtype": "Column Break",
+   "label": "Before start of surgical intervention"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "HTML",
+   "options": "Have all team members introduced themselves by name and role?"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_memebers",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "verbally",
+   "fieldtype": "HTML",
+   "options": "Surgeon, Anaesthetist and Registered Practitioner verbally con\ufb01rm"
+  },
+  {
+   "default": "0",
+   "fieldname": "what_is_the_patients_name",
+   "fieldtype": "Check",
+   "label": "Are You Sure patients name?"
+  },
+  {
+   "default": "0",
+   "fieldname": "what_proceuder_site_and_position_are_planned",
+   "fieldtype": "Check",
+   "label": "What proceuder site and position are planned?"
+  },
+  {
+   "fieldname": "critical",
+   "fieldtype": "HTML",
+   "options": "Anticipated critical events Surgeon"
+  },
+  {
+   "default": "0",
+   "fieldname": "loos",
+   "fieldtype": "Check",
+   "label": "How much blood loos is anticipated?"
+  },
+  {
+   "default": "0",
+   "fieldname": "investigations",
+   "fieldtype": "Check",
+   "label": "Are there any speci\ufb01c equipment requirements or special investigations"
+  },
+  {
+   "default": "0",
+   "fieldname": "team",
+   "fieldtype": "Check",
+   "label": "Are there any critical or unexpected steps you want the team to know about?"
+  },
+  {
+   "fieldname": "anaesthetist",
+   "fieldtype": "HTML",
+   "options": "Anaesthetist"
+  },
+  {
+   "default": "0",
+   "fieldname": "speci\ufb01c",
+   "fieldtype": "Check",
+   "label": "Are there any patient speci\ufb01c concerns? "
+  },
+  {
+   "default": "0",
+   "fieldname": "patientasa",
+   "fieldtype": "Check",
+   "label": "What is the patient\u2019s ASA grade?"
+  },
+  {
+   "default": "0",
+   "fieldname": "monitoring",
+   "fieldtype": "Check",
+   "label": "What monitoring equipment and other speci\ufb01c levels of support are required, for example blood?"
+  },
+  {
+   "fieldname": "nusre_opd",
+   "fieldtype": "HTML",
+   "options": "Nurse/ODP:"
+  },
+  {
+   "default": "0",
+   "fieldname": "sterility",
+   "fieldtype": "Check",
+   "label": "Has the sterility of the instrumentation been con\ufb01rmed (including indicator results)?"
+  },
+  {
+   "default": "0",
+   "fieldname": "issues",
+   "fieldtype": "Check",
+   "label": "Are there any equipment issues or concerns?"
+  },
+  {
+   "fieldname": "surgical_site",
+   "fieldtype": "HTML",
+   "options": "Has the surgical site infection (SSI) bundle been undertaken?"
+  },
+  {
+   "fieldname": "infection",
+   "fieldtype": "Select",
+   "label": "Answer",
+   "options": "Yes\nnot applicable"
+  },
+  {
+   "fieldname": "undertaken",
+   "fieldtype": "HTML",
+   "options": "Has VTE prophylaxis been undertaken?"
+  },
+  {
+   "fieldname": "prophylaxis",
+   "fieldtype": "Select",
+   "label": "Answer",
+   "options": "Yes\nnot applicable"
+  },
+  {
+   "fieldname": "imaging",
+   "fieldtype": "HTML",
+   "options": "Is essential imaging displayed?"
+  },
+  {
+   "fieldname": "notapplicible",
+   "fieldtype": "Select",
+   "label": "Answer",
+   "options": "Yes\nnot applicable"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Column Break",
+   "label": "Before any member of the team leaves"
+  },
+  {
+   "fieldname": "con\ufb01rms",
+   "fieldtype": "HTML",
+   "options": "Registered Practitioner verbally con\ufb01rms with the team"
+  },
+  {
+   "default": "0",
+   "fieldname": "recorded",
+   "fieldtype": "Check",
+   "label": "Has the name of the procedure been recorded?"
+  },
+  {
+   "default": "0",
+   "fieldname": "specimens",
+   "fieldtype": "Check",
+   "label": "Have the specimens been labelled (including patient name)?"
+  },
+  {
+   "default": "0",
+   "fieldname": "equipment_problems",
+   "fieldtype": "Check",
+   "label": "Have any equipment problems been identi\ufb01ed that Need to be addressed?"
+  },
+  {
+   "fieldname": "registered",
+   "fieldtype": "HTML",
+   "options": "Surgeon, Anaesthetist and Registered Practitioner"
+  },
+  {
+   "default": "0",
+   "fieldname": "concerns",
+   "fieldtype": "Check",
+   "label": "What are the key concerns for recovery and management of this patient?"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Surgical Safety Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-25 16:24:24.292543",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Surgical Safety Checklist",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,366 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PD-.#####",
+ "creation": "2024-04-29 11:22:05.127388",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "bob",
+  "mrp",
+  "department__ward",
+  "date",
+  "consultant",
+  "time",
+  "referred_from",
+  "history_from",
+  "by",
+  "main_complaints",
+  "present_history",
+  "birth_history",
+  "past_history",
+  "family_history",
+  "atient_no_1",
+  "abdomen",
+  "rectal",
+  "genitalia",
+  "limbs",
+  "spine",
+  "meningeal_signs",
+  "reflexes",
+  "further_remarks",
+  "diagnosis_and_main_problem_on_admission",
+  "atient_no_2",
+  "motor_development",
+  "adaptive",
+  "language",
+  "social_emotional",
+  "physical_examination",
+  "general",
+  "skin",
+  "nodes",
+  "head",
+  "eyes",
+  "mouth",
+  "ent",
+  "ches",
+  "heart",
+  "atient_no_3",
+  "discharge_date",
+  "weight",
+  "diagnosis_for_coding",
+  "diet",
+  "other_problems",
+  "drugs_at_discharge",
+  "frequency",
+  "duration_days_weeks",
+  "practitioner",
+  "signature",
+  "date_sign"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "bob",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "department__ward",
+   "fieldtype": "Data",
+   "label": "Department  Ward"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "referred_from",
+   "fieldtype": "Data",
+   "label": "REFERRED FROM"
+  },
+  {
+   "fieldname": "history_from",
+   "fieldtype": "Data",
+   "label": "HISTORY FROM"
+  },
+  {
+   "fieldname": "by",
+   "fieldtype": "Data",
+   "label": "BY"
+  },
+  {
+   "fieldname": "main_complaints",
+   "fieldtype": "Data",
+   "label": "MAIN COMPLAINTs"
+  },
+  {
+   "fieldname": "present_history",
+   "fieldtype": "Data",
+   "label": "PRESENT HISTORY"
+  },
+  {
+   "fieldname": "birth_history",
+   "fieldtype": "Data",
+   "label": "BIRTH HISTORY"
+  },
+  {
+   "fieldname": "past_history",
+   "fieldtype": "Data",
+   "label": "PAST HISTORY"
+  },
+  {
+   "fieldname": "family_history",
+   "fieldtype": "Data",
+   "label": "FAMILY HISTORY"
+  },
+  {
+   "fieldname": "atient_no_1",
+   "fieldtype": "Data",
+   "label": "Patient No"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Data",
+   "label": "ABDOMEN"
+  },
+  {
+   "fieldname": "rectal",
+   "fieldtype": "Data",
+   "label": "RECTAL"
+  },
+  {
+   "fieldname": "genitalia",
+   "fieldtype": "Data",
+   "label": "GENITALIA"
+  },
+  {
+   "fieldname": "limbs",
+   "fieldtype": "Data",
+   "label": "LIMBS"
+  },
+  {
+   "fieldname": "spine",
+   "fieldtype": "Data",
+   "label": "SPINE"
+  },
+  {
+   "fieldname": "meningeal_signs",
+   "fieldtype": "Data",
+   "label": "MENINGEAL SIGNS"
+  },
+  {
+   "fieldname": "reflexes",
+   "fieldtype": "Data",
+   "label": "REFLEXES"
+  },
+  {
+   "fieldname": "further_remarks",
+   "fieldtype": "Data",
+   "label": "FURTHER REMARKS"
+  },
+  {
+   "fieldname": "diagnosis_and_main_problem_on_admission",
+   "fieldtype": "Data",
+   "label": "DIAGNOSIS AND MAIN PROBLEM ON ADMISSION"
+  },
+  {
+   "fieldname": "atient_no_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "motor_development",
+   "fieldtype": "Data",
+   "label": "MOTOR DEVELOPMENT"
+  },
+  {
+   "fieldname": "adaptive",
+   "fieldtype": "Data",
+   "label": "ADAPTIVE"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "LANGUAGE"
+  },
+  {
+   "fieldname": "social_emotional",
+   "fieldtype": "Data",
+   "label": "SOCIAL EMOTIONAL"
+  },
+  {
+   "fieldname": "physical_examination",
+   "fieldtype": "Data",
+   "label": "PHYSICAL EXAMINATION"
+  },
+  {
+   "fieldname": "general",
+   "fieldtype": "Data",
+   "label": "GENERAL"
+  },
+  {
+   "fieldname": "skin",
+   "fieldtype": "Data",
+   "label": "SKIN"
+  },
+  {
+   "fieldname": "nodes",
+   "fieldtype": "Data",
+   "label": "NODES"
+  },
+  {
+   "fieldname": "head",
+   "fieldtype": "Data",
+   "label": "HEAD"
+  },
+  {
+   "fieldname": "eyes",
+   "fieldtype": "Data",
+   "label": "EYES"
+  },
+  {
+   "fieldname": "mouth",
+   "fieldtype": "Data",
+   "label": "MOUTH"
+  },
+  {
+   "fieldname": "ent",
+   "fieldtype": "Data",
+   "label": "ENT"
+  },
+  {
+   "fieldname": "ches",
+   "fieldtype": "Data",
+   "label": "CHES"
+  },
+  {
+   "fieldname": "heart",
+   "fieldtype": "Data",
+   "label": "HEART"
+  },
+  {
+   "fieldname": "atient_no_3",
+   "fieldtype": "Data",
+   "label": "Patient No"
+  },
+  {
+   "fieldname": "discharge_date",
+   "fieldtype": "Date",
+   "label": "DISCHARGE DATE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "WEIGHT"
+  },
+  {
+   "fieldname": "diagnosis_for_coding",
+   "fieldtype": "Data",
+   "label": "DIAGNOSIS FOR CODING"
+  },
+  {
+   "fieldname": "diet",
+   "fieldtype": "Data",
+   "label": "DIET"
+  },
+  {
+   "fieldname": "other_problems",
+   "fieldtype": "Data",
+   "label": "OTHER PROBLEMS"
+  },
+  {
+   "fieldname": "drugs_at_discharge",
+   "fieldtype": "Data",
+   "label": "DRUGS AT DISCHARGE"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "FREQUENCY"
+  },
+  {
+   "fieldname": "duration_days_weeks",
+   "fieldtype": "Data",
+   "label": "DURATION DAYS WEEKS"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "date_sign",
+   "fieldtype": "Date",
+   "label": "Date Sign"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Link",
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Doctors Name",
+   "options": "Healthcare Practitioner"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-30 15:28:16.211960",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "PEDIATRIC DATABASE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

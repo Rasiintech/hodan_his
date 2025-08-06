@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 10:08:50.168337",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "blood_cs",
+  "urine_cs",
+  "sputum_cs",
+  "other_site_cs"
+ ],
+ "fields": [
+  {
+   "fieldname": "blood_cs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Blood C/S"
+  },
+  {
+   "fieldname": "urine_cs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Urine C/S"
+  },
+  {
+   "fieldname": "sputum_cs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Sputum C/S"
+  },
+  {
+   "fieldname": "other_site_cs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Other site C/S "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 11:51:41.275293",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Sepsis2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

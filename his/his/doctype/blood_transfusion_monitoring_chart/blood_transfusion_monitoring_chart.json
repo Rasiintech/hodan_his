@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-21 14:09:18.553858",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "h",
+  "date",
+  "name_receive_blood_transfusion",
+  "names_of_blood_taken",
+  "section_break_ewwvd",
+  "differential_dx",
+  "reason_for_transfusion",
+  "cross_matched_circle",
+  "section_break_6exmw",
+  "pre",
+  "section_break_miqmj",
+  "start_time",
+  "finished_time",
+  "column_break_zqpjr",
+  "target_volume",
+  "volume_transfused",
+  "section_break_r102u",
+  "blood",
+  "section_break_bc5xa",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "h",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "name_receive_blood_transfusion",
+   "fieldtype": "Data",
+   "label": "Name receive blood transfusion"
+  },
+  {
+   "fieldname": "section_break_ewwvd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "differential_dx",
+   "fieldtype": "Data",
+   "label": "Differential Dx"
+  },
+  {
+   "fieldname": "reason_for_transfusion",
+   "fieldtype": "Data",
+   "label": "Reason for transfusion"
+  },
+  {
+   "fieldname": "section_break_6exmw",
+   "fieldtype": "Section Break",
+   "label": "Pres-transfusion Medication "
+  },
+  {
+   "fieldname": "pre",
+   "fieldtype": "Table",
+   "options": "Pre-transfusion Medication Child"
+  },
+  {
+   "fieldname": "section_break_miqmj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "finished_time",
+   "fieldtype": "Time",
+   "label": "Finished Time"
+  },
+  {
+   "fieldname": "column_break_zqpjr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_volume",
+   "fieldtype": "Data",
+   "label": "Target Volume"
+  },
+  {
+   "fieldname": "volume_transfused",
+   "fieldtype": "Data",
+   "label": "Volume Transfused"
+  },
+  {
+   "fieldname": "section_break_r102u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "blood",
+   "fieldtype": "Table",
+   "options": "Blood Trunsfusion Child"
+  },
+  {
+   "fieldname": "section_break_bc5xa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "names_of_blood_taken",
+   "fieldtype": "Data",
+   "label": "Names of Blood Taken"
+  },
+  {
+   "fieldname": "cross_matched_circle",
+   "fieldtype": "Select",
+   "label": "Cross Matched (Circle)",
+   "options": "\nMatched\nNot-Perfumed\nAgglutinated"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:28:59.246604",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Blood Transfusion Monitoring Chart",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 08:36:41.500699",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "investigations",
+  "results",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "investigations",
+   "fieldtype": "Data",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Data",
+   "label": "Results"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "label": "Comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-29 08:36:41.500699",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Laboratory Investigation ch",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

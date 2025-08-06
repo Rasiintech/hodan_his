@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 11:48:39.038993",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_klkvb",
+  "date",
+  "physicians_name",
+  "section_break_7q6bn",
+  "personal_data",
+  "clinical_background",
+  "column_break_mgpau",
+  "situation__personaldiagnosis",
+  "section_break_tr2le",
+  "assessment_investigations",
+  "column_break_xbk1n",
+  "icu_care_recommendation_consultation",
+  "section_break_vldic"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "physicians_name",
+   "fieldtype": "Data",
+   "label": "Physicians Name"
+  },
+  {
+   "fieldname": "personal_data",
+   "fieldtype": "Data",
+   "label": "Personal Data"
+  },
+  {
+   "fieldname": "situation__personaldiagnosis",
+   "fieldtype": "Data",
+   "label": "Situation & Provisional Diagnosis"
+  },
+  {
+   "fieldname": "clinical_background",
+   "fieldtype": "Data",
+   "label": "Clinical Background "
+  },
+  {
+   "fieldname": "assessment_investigations",
+   "fieldtype": "Data",
+   "label": "Assessment Investigations "
+  },
+  {
+   "fieldname": "icu_care_recommendation_consultation",
+   "fieldtype": "Data",
+   "label": "ICU Care Recommendation Consultation"
+  },
+  {
+   "fieldname": "section_break_7q6bn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_klkvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mgpau",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tr2le",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xbk1n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vldic",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-03 09:33:13.865263",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "DAILY HANDOVER SHEET",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

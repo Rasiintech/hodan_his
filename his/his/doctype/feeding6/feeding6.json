@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 16:45:55.760816",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rbs",
+  "hba1c",
+  "glucose_control_plan",
+  "insulin"
+ ],
+ "fields": [
+  {
+   "fieldname": "rbs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RBS"
+  },
+  {
+   "fieldname": "hba1c",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "HbA1C"
+  },
+  {
+   "fieldname": "glucose_control_plan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Glucose control Plan"
+  },
+  {
+   "fieldname": "insulin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insulin"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-11 16:45:55.760816",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Feeding6",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

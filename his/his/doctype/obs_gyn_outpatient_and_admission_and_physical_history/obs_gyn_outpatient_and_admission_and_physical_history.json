@@ -1,0 +1,583 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-27 14:21:21.044962",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "pid",
+  "dob",
+  "hgbhc",
+  "abgyn",
+  "date",
+  "time",
+  "pregnancy_dating_criteria",
+  "lmp",
+  "ed",
+  "earliest_ultrasound",
+  "ega",
+  "on_date",
+  "edd",
+  "chief_complaint",
+  "hpi_year_old",
+  "p_t_a_l",
+  "prenatal_care_site",
+  "pmhx",
+  "pshx",
+  "allergies",
+  "medications",
+  "best_edd",
+  "current_ega",
+  "prenatal_lab_summary",
+  "blood_typerh",
+  "antibody_screen",
+  "rubella",
+  "vdrl",
+  "hbsag",
+  "hiv",
+  "hgbhct",
+  "urine_cs",
+  "papdate",
+  "chlamydia",
+  "pdtc_scan",
+  "1_hour_gtt",
+  "3_hour_gtt",
+  "other_tests",
+  "gbsdate",
+  "gynhx",
+  "menarche_age",
+  "cycles_regular__irregular_every",
+  "prior_abnormal_pap_prior_stds",
+  "obhx",
+  "g1",
+  "g2",
+  "g3",
+  "g4",
+  "g5",
+  "g6",
+  "pe",
+  "ht",
+  "wt",
+  "bp",
+  "p",
+  "rr",
+  "t",
+  "baseline_fhr",
+  "variability",
+  "abs",
+  "minimal",
+  "moderate",
+  "marked",
+  "contractions",
+  "absent",
+  "present",
+  "frequency",
+  "head",
+  "neck",
+  "lungs",
+  "heart",
+  "abdomen",
+  "pelvic",
+  "external_genitalia",
+  "vagina",
+  "cervix",
+  "bedside_ultrasound",
+  "social_history",
+  "pre_pregnancy_drugs",
+  "tobacco",
+  "family_hx",
+  "diabetes",
+  "hypertension",
+  "congenital_anomalies",
+  "hereditary_disorders",
+  "assessmentplan",
+  "resident_physician_signature",
+  "attending_physician_signature",
+  "date2",
+  "time2"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name   "
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID   "
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DoB"
+  },
+  {
+   "fieldname": "hgbhc",
+   "fieldtype": "Data",
+   "label": "HGB/HC "
+  },
+  {
+   "fieldname": "abgyn",
+   "fieldtype": "Data",
+   "label": "OB/GYN OUTPATIENT and ADMISSION  PHYSICAL HISTORY "
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date  "
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time  "
+  },
+  {
+   "fieldname": "pregnancy_dating_criteria",
+   "fieldtype": "Data",
+   "label": "PREGNANCY DATING CRITERIA "
+  },
+  {
+   "fieldname": "lmp",
+   "fieldtype": "Data",
+   "label": "LMP "
+  },
+  {
+   "fieldname": "ed",
+   "fieldtype": "Data",
+   "label": "EDD  "
+  },
+  {
+   "fieldname": "earliest_ultrasound",
+   "fieldtype": "Data",
+   "label": "Earliest Ultrasound  "
+  },
+  {
+   "fieldname": "ega",
+   "fieldtype": "Data",
+   "label": "EGA "
+  },
+  {
+   "fieldname": "on_date",
+   "fieldtype": "Data",
+   "label": "on date  "
+  },
+  {
+   "fieldname": "edd",
+   "fieldtype": "Data",
+   "label": "EDD "
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Data",
+   "label": "Chief Complaint"
+  },
+  {
+   "fieldname": "hpi_year_old",
+   "fieldtype": "Data",
+   "label": "HPI year old"
+  },
+  {
+   "fieldname": "p_t_a_l",
+   "fieldtype": "Data",
+   "label": "P T A L "
+  },
+  {
+   "fieldname": "prenatal_care_site",
+   "fieldtype": "Data",
+   "label": "Prenatal care site  "
+  },
+  {
+   "fieldname": "pmhx",
+   "fieldtype": "Data",
+   "label": "PMHx  "
+  },
+  {
+   "fieldname": "pshx",
+   "fieldtype": "Data",
+   "label": "PSHx  "
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "ALLERGIES "
+  },
+  {
+   "fieldname": "medications",
+   "fieldtype": "Data",
+   "label": "Medications  "
+  },
+  {
+   "fieldname": "best_edd",
+   "fieldtype": "Data",
+   "label": "BEST EDD  "
+  },
+  {
+   "fieldname": "current_ega",
+   "fieldtype": "Data",
+   "label": "Current EGA "
+  },
+  {
+   "fieldname": "prenatal_lab_summary",
+   "fieldtype": "Data",
+   "label": "PRENATAL LAB SUMMARY "
+  },
+  {
+   "fieldname": "blood_typerh",
+   "fieldtype": "Data",
+   "label": "Blood type/Rh  "
+  },
+  {
+   "fieldname": "antibody_screen",
+   "fieldtype": "Data",
+   "label": "Antibody screen "
+  },
+  {
+   "fieldname": "rubella",
+   "fieldtype": "Data",
+   "label": "Rubella "
+  },
+  {
+   "fieldname": "vdrl",
+   "fieldtype": "Data",
+   "label": "VDRL  "
+  },
+  {
+   "fieldname": "hbsag",
+   "fieldtype": "Data",
+   "label": "HBsAg "
+  },
+  {
+   "fieldname": "hiv",
+   "fieldtype": "Data",
+   "label": "HIV   "
+  },
+  {
+   "fieldname": "hgbhct",
+   "fieldtype": "Data",
+   "label": "Hgb/Hct  "
+  },
+  {
+   "fieldname": "urine_cs",
+   "fieldtype": "Data",
+   "label": "Urine CS "
+  },
+  {
+   "fieldname": "papdate",
+   "fieldtype": "Data",
+   "label": "Pap/date  "
+  },
+  {
+   "fieldname": "chlamydia",
+   "fieldtype": "Data",
+   "label": "Chlamydia  "
+  },
+  {
+   "fieldname": "pdtc_scan",
+   "fieldtype": "Data",
+   "label": "PDTC scan "
+  },
+  {
+   "fieldname": "1_hour_gtt",
+   "fieldtype": "Data",
+   "label": "1 hour GTT   "
+  },
+  {
+   "fieldname": "3_hour_gtt",
+   "fieldtype": "Data",
+   "label": "3 hour GTT "
+  },
+  {
+   "fieldname": "other_tests",
+   "fieldtype": "Data",
+   "label": "Other Tests"
+  },
+  {
+   "fieldname": "gbsdate",
+   "fieldtype": "Data",
+   "label": "GBS/date"
+  },
+  {
+   "fieldname": "gynhx",
+   "fieldtype": "Data",
+   "label": "GynHx "
+  },
+  {
+   "fieldname": "menarche_age",
+   "fieldtype": "Data",
+   "label": "menarche age "
+  },
+  {
+   "fieldname": "cycles_regular__irregular_every",
+   "fieldtype": "Data",
+   "label": "cycles regular / irregular every"
+  },
+  {
+   "fieldname": "prior_abnormal_pap_prior_stds",
+   "fieldtype": "Data",
+   "label": "Prior abnormal Pap Prior STDs"
+  },
+  {
+   "fieldname": "obhx",
+   "fieldtype": "Data",
+   "label": "OBHx"
+  },
+  {
+   "fieldname": "g1",
+   "fieldtype": "Data",
+   "label": "G1"
+  },
+  {
+   "fieldname": "g2",
+   "fieldtype": "Data",
+   "label": "G2"
+  },
+  {
+   "fieldname": "g3",
+   "fieldtype": "Data",
+   "label": "G3"
+  },
+  {
+   "fieldname": "g4",
+   "fieldtype": "Data",
+   "label": "G4"
+  },
+  {
+   "fieldname": "g5",
+   "fieldtype": "Data",
+   "label": "G5"
+  },
+  {
+   "fieldname": "g6",
+   "fieldtype": "Data",
+   "label": "G6"
+  },
+  {
+   "fieldname": "pe",
+   "fieldtype": "Data",
+   "label": "PE "
+  },
+  {
+   "fieldname": "ht",
+   "fieldtype": "Data",
+   "label": "HT "
+  },
+  {
+   "fieldname": "wt",
+   "fieldtype": "Data",
+   "label": "WT "
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP "
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Data",
+   "label": "P "
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "label": "RR "
+  },
+  {
+   "fieldname": "t",
+   "fieldtype": "Data",
+   "label": "T"
+  },
+  {
+   "fieldname": "baseline_fhr",
+   "fieldtype": "Data",
+   "label": "Baseline FHR"
+  },
+  {
+   "fieldname": "variability",
+   "fieldtype": "Data",
+   "label": "Variability "
+  },
+  {
+   "fieldname": "abs",
+   "fieldtype": "Data",
+   "label": "absent "
+  },
+  {
+   "fieldname": "minimal",
+   "fieldtype": "Data",
+   "label": "minimal "
+  },
+  {
+   "fieldname": "moderate",
+   "fieldtype": "Data",
+   "label": "moderate "
+  },
+  {
+   "fieldname": "marked",
+   "fieldtype": "Data",
+   "label": "marked"
+  },
+  {
+   "fieldname": "contractions",
+   "fieldtype": "Data",
+   "label": "Contractions"
+  },
+  {
+   "fieldname": "absent",
+   "fieldtype": "Data",
+   "label": "absent "
+  },
+  {
+   "fieldname": "present",
+   "fieldtype": "Data",
+   "label": "present "
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "frequency"
+  },
+  {
+   "fieldname": "head",
+   "fieldtype": "Data",
+   "label": "Head"
+  },
+  {
+   "fieldname": "neck",
+   "fieldtype": "Data",
+   "label": "Neck"
+  },
+  {
+   "fieldname": "lungs",
+   "fieldtype": "Data",
+   "label": "Lungs"
+  },
+  {
+   "fieldname": "heart",
+   "fieldtype": "Data",
+   "label": "Heart"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Data",
+   "label": "Abdomen"
+  },
+  {
+   "fieldname": "pelvic",
+   "fieldtype": "Data",
+   "label": "Pelvic"
+  },
+  {
+   "fieldname": "external_genitalia",
+   "fieldtype": "Data",
+   "label": "External Genitalia"
+  },
+  {
+   "fieldname": "vagina",
+   "fieldtype": "Data",
+   "label": "Vagina"
+  },
+  {
+   "fieldname": "cervix",
+   "fieldtype": "Data",
+   "label": "Cervix"
+  },
+  {
+   "fieldname": "bedside_ultrasound",
+   "fieldtype": "Data",
+   "label": "Bedside ultrasound"
+  },
+  {
+   "fieldname": "social_history",
+   "fieldtype": "Data",
+   "label": "Social History"
+  },
+  {
+   "fieldname": "pre_pregnancy_drugs",
+   "fieldtype": "Data",
+   "label": "Pre pregnancy Drugs "
+  },
+  {
+   "fieldname": "tobacco",
+   "fieldtype": "Data",
+   "label": "Tobacco"
+  },
+  {
+   "fieldname": "family_hx",
+   "fieldtype": "Data",
+   "label": "Family Hx "
+  },
+  {
+   "fieldname": "diabetes",
+   "fieldtype": "Data",
+   "label": "diabetes "
+  },
+  {
+   "fieldname": "hypertension",
+   "fieldtype": "Data",
+   "label": "hypertension "
+  },
+  {
+   "fieldname": "congenital_anomalies",
+   "fieldtype": "Data",
+   "label": "congenital anomalies "
+  },
+  {
+   "fieldname": "hereditary_disorders",
+   "fieldtype": "Data",
+   "label": "hereditary disorders"
+  },
+  {
+   "fieldname": "assessmentplan",
+   "fieldtype": "Data",
+   "label": "Assessment/Plan"
+  },
+  {
+   "fieldname": "resident_physician_signature",
+   "fieldtype": "Data",
+   "label": "Resident Physician Signature"
+  },
+  {
+   "fieldname": "attending_physician_signature",
+   "fieldtype": "Data",
+   "label": "Attending Physician Signature"
+  },
+  {
+   "fieldname": "date2",
+   "fieldtype": "Data",
+   "label": "Date "
+  },
+  {
+   "fieldname": "time2",
+   "fieldtype": "Data",
+   "label": "Time  "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-27 14:21:21.044962",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OBS GYN OUTPATIENT and ADMISSION and PHYSICAL HISTORY",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

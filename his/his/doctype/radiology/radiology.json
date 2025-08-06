@@ -1,0 +1,335 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RAD-.#####",
+ "creation": "2022-03-27 14:06:17.095655",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_3",
+  "age",
+  "sex",
+  "practitioner",
+  "company",
+  "department",
+  "eximination",
+  "item_group",
+  "section",
+  "date",
+  "section_break_10",
+  "indication",
+  "section_break_8",
+  "section_break_zqj39",
+  "section_break_ylrya",
+  "section_break_15",
+  "findings",
+  "conclusion",
+  "title",
+  "invoiced",
+  "report_preference",
+  "source_order",
+  "reff_invoice",
+  "patient_encounter",
+  "att",
+  "amended_from",
+  "atta",
+  "token_no",
+  "new_status",
+  "order",
+  "mobile_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "eximination",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Eximination",
+   "options": "Radiology Template",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "findings",
+   "fieldtype": "Text Editor",
+   "label": "Report"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "conclusion",
+   "fieldtype": "Text Editor",
+   "label": "CONCLUSION"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": "0",
+   "fieldname": "invoiced",
+   "fieldtype": "Check",
+   "label": "Invoiced",
+   "read_only": 1
+  },
+  {
+   "fieldname": "indication",
+   "fieldtype": "Data",
+   "label": "Indication"
+  },
+  {
+   "fieldname": "report_preference",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Report Preference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reff_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "reff_invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "source_order",
+   "fieldtype": "Data",
+   "label": "source_order",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "att",
+   "fieldtype": "HTML",
+   "label": "Att"
+  },
+  {
+   "fieldname": "section_break_zqj39",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ylrya",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Radiology",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter",
+   "read_only": 1
+  },
+  {
+   "fieldname": "atta",
+   "fieldtype": "Attach",
+   "label": "Atta"
+  },
+  {
+   "fieldname": "token_no",
+   "fieldtype": "Int",
+   "label": "Toke No"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "eximination.section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Imaging Sections"
+  },
+  {
+   "fieldname": "new_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "New Status",
+   "options": "Draft\nCompleted\nCanceled"
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Data",
+   "label": "Order"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fetch_from": "eximination.item_group",
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item Group",
+   "options": "Item Group",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "mobile_no",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-31 14:06:20.810544",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Radiology",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Imaging",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Completed"
+  },
+  {
+   "color": "Red",
+   "title": "Draft"
+  },
+  {
+   "color": "Red",
+   "title": "Canceled"
+  }
+ ],
+ "title_field": "patient_name"
+}

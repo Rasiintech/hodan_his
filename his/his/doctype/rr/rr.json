@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-05 12:04:46.902274",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "aline",
+  "paspad",
+  "cvp",
+  "pcwp",
+  "coci",
+  "svr",
+  "icp"
+ ],
+ "fields": [
+  {
+   "fieldname": "aline",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ALINE"
+  },
+  {
+   "fieldname": "paspad",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAS/PAD"
+  },
+  {
+   "fieldname": "cvp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CVP"
+  },
+  {
+   "fieldname": "pcwp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PCWP"
+  },
+  {
+   "fieldname": "coci",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CO/CI"
+  },
+  {
+   "fieldname": "svr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SVR"
+  },
+  {
+   "fieldname": "icp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ICP"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-05 12:04:46.902274",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "RR",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

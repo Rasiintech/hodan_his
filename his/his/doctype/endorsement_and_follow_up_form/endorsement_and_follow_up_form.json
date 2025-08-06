@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-19 10:57:46.790298",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "departmentunit",
+  "total_no_of_patients",
+  "section_break_hlwfh",
+  "new_patients_admissions",
+  "section_break_xip8y",
+  "total_number_of_discharge_patients",
+  "problems",
+  "recommendations",
+  "section_break_u4yrk",
+  "endorsed_by",
+  "section_break_cre50",
+  "received_by",
+  "supervisor",
+  "date__time"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "departmentunit",
+   "fieldtype": "Data",
+   "label": "Department/Unit "
+  },
+  {
+   "fieldname": "total_no_of_patients",
+   "fieldtype": "Data",
+   "label": "Total No. of Patients"
+  },
+  {
+   "fieldname": "section_break_hlwfh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "new_patients_admissions",
+   "fieldtype": "Table",
+   "label": "New Patients Admissions",
+   "options": "New Patients Admissions"
+  },
+  {
+   "fieldname": "section_break_xip8y",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_number_of_discharge_patients",
+   "fieldtype": "Data",
+   "label": "Total Number of Discharge Patients"
+  },
+  {
+   "fieldname": "problems",
+   "fieldtype": "Data",
+   "label": "Problems"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Data",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "section_break_u4yrk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "endorsed_by",
+   "fieldtype": "Table",
+   "label": "Endorsed by",
+   "options": "Endorsed by"
+  },
+  {
+   "fieldname": "section_break_cre50",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Table",
+   "label": "Received by",
+   "options": "Received by"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Data",
+   "label": "Supervisor"
+  },
+  {
+   "fieldname": "date__time",
+   "fieldtype": "Date",
+   "label": "Date  Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-19 11:09:34.550739",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ENDORSEMENT AND FOLLOW-UP FORM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

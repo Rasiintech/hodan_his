@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 11:10:56.606575",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mouth_care_plan",
+  "ear_care_plan",
+  "eye_care_plan",
+  "skin_care_plan",
+  "physiotherapy"
+ ],
+ "fields": [
+  {
+   "fieldname": "mouth_care_plan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mouth care plan"
+  },
+  {
+   "fieldname": "ear_care_plan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ear care plan"
+  },
+  {
+   "fieldname": "eye_care_plan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Eye care plan"
+  },
+  {
+   "fieldname": "skin_care_plan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skin care plan"
+  },
+  {
+   "fieldname": "physiotherapy",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Physiotherapy"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 12:12:58.480628",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Patient Care3",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

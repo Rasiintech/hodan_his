@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CL-EV-.##### ",
+ "creation": "2023-04-17 17:01:13.275856",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_2imw5",
+  "sex",
+  "age",
+  "section_break_xd1od",
+  "general",
+  "conscious_level",
+  "blo",
+  "column_break_lhjav",
+  "section_break_ikari",
+  "pulse",
+  "column_break_gntog",
+  "min",
+  "column_break_esdch",
+  "resp_re",
+  "column_break_llmva",
+  "temp",
+  "section_break_wmpun",
+  "regional",
+  "head_neck",
+  "chest_heart",
+  "abdomen",
+  "nervous_system",
+  "locomotors_system",
+  "section_break_dmysr",
+  "unitary_system",
+  "others",
+  "diagnosis",
+  "investigation_done",
+  "investigation_required",
+  "recommendations",
+  "doctor_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "general",
+   "fieldtype": "Data",
+   "label": "General"
+  },
+  {
+   "fieldname": "conscious_level",
+   "fieldtype": "Data",
+   "label": "Conscious level"
+  },
+  {
+   "fieldname": "blo",
+   "fieldtype": "Data",
+   "label": "BL..O"
+  },
+  {
+   "fieldname": "column_break_lhjav",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Data",
+   "label": "Pulse"
+  },
+  {
+   "fieldname": "min",
+   "fieldtype": "Data",
+   "label": "min"
+  },
+  {
+   "fieldname": "resp_re",
+   "fieldtype": "Data",
+   "label": "Resp re"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "temp"
+  },
+  {
+   "fieldname": "section_break_ikari",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_esdch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gntog",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_llmva",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "regional",
+   "fieldtype": "Data",
+   "label": "Regional"
+  },
+  {
+   "fieldname": "section_break_wmpun",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "head_neck",
+   "fieldtype": "Data",
+   "label": "Head &neck"
+  },
+  {
+   "fieldname": "chest_heart",
+   "fieldtype": "Data",
+   "label": "Chest &heart"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Data",
+   "label": "Abdomen"
+  },
+  {
+   "fieldname": "nervous_system",
+   "fieldtype": "Data",
+   "label": "Nervous system"
+  },
+  {
+   "fieldname": "locomotors_system",
+   "fieldtype": "Data",
+   "label": "Locomotors system"
+  },
+  {
+   "fieldname": "unitary_system",
+   "fieldtype": "Data",
+   "label": "Unitary system"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "investigation_done",
+   "fieldtype": "Data",
+   "label": "Investigation done"
+  },
+  {
+   "fieldname": "investigation_required",
+   "fieldtype": "Data",
+   "label": "Investigation required"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Small Text",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor name"
+  },
+  {
+   "fieldname": "section_break_dmysr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_2imw5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xd1od",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-18 10:27:18.916220",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "clinical evaluation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

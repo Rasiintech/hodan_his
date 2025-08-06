@@ -1,0 +1,59 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-06-17 10:51:10.074297",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "mandatory": 1,
+   "options": "User",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "",
+ "modified": "2024-06-17 11:08:46.659116",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Detailed Cash Report By User",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "select \n    s.name as `SR:Data:150`,\n    \"Invoice\" as `Type:Data:100`,\n    s.posting_date as `Date:Date:100`,\n    s.customer_name as `Customer:Data:200`,\n    m.account as `Account:Link/Account:200`,\n    m.amount as 'Amount:Currency:150'\nfrom \n    `tabSales Invoice` s \nleft join \n    `tabSales Invoice Payment` m on s.name = m.parent\nleft join \n    `tabSales Invoice Item` i on s.name = i.parent\nwhere \n    s.docstatus = 1 \n    and s.posting_date between %(from)s and %(to)s \n    and s.owner = %(user)s\n    and s.paid_amount>0\n\nUNION ALL\n\nselect \n    p.name, \n    \"Receipt\" as `Type:Data:100`, \n    p.posting_date, \n    p.party_name, \n    p.paid_to, \n    p.paid_amount \nfrom \n    `tabPayment Entry` p \nwhere \n    p.docstatus = 1 \n    and p.owner = %(user)s \n    and p.posting_date between %(from)s and %(to)s\n    AND p.payment_type= \"Receive\"\n\nUNION ALL\n\nselect \n    e.name, \n    \"Expenses\" as `Type:Data:100`, \n    e.date, \n    e.remark as jj, \n    e.paid_from, \n    -1 * e.amount\nfrom \n    `tabExpenses` e \nwhere \n    e.docstatus = 1 \n    and e.owner = %(user)s \n    and e.date between %(from)s and %(to)s\n\nUNION ALL\n\nselect \n    e.name, \n    \"Transfred from\" as `Type:Data:100`, \n    e.date, \n    e.remark as jj, \n    e.from_account, \n    -1 * e.transferred_amount\nfrom \n    `tabInternal Transfer` e \nwhere \n    e.docstatus = 1 \n    and e.from_user = %(user)s \n    and e.date between %(from)s and %(to)s\nUNION ALL\n\nselect \n    e.name, \n    \"Transfred To\" as `Type:Data:100`, \n    e.date, \n    e.remark as jj, \n    e.to_account, \n    e.transferred_amount\nfrom \n    `tabInternal Transfer` e \nwhere \n    e.docstatus = 1 \n    and e.to_user = %(user)s \n    and e.date between %(from)s and %(to)s;",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Detailed Cash Report By User",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ]
+}

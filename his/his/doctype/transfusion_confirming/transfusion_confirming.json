@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-20 20:36:35.835766",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "recieving_nurse",
+  "administering_nurse",
+  "confirming_doctor",
+  "type",
+  "started",
+  "finished"
+ ],
+ "fields": [
+  {
+   "fieldname": "recieving_nurse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Recieving Nurse",
+   "options": "User"
+  },
+  {
+   "fieldname": "administering_nurse",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Administering Nurse"
+  },
+  {
+   "fieldname": "confirming_doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Confirming doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "columns": 1,
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type"
+  },
+  {
+   "columns": 1,
+   "fieldname": "started",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Started"
+  },
+  {
+   "columns": 1,
+   "fieldname": "finished",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Finished"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-20 20:40:33.937633",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Transfusion confirming",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

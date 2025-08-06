@@ -1,0 +1,60 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-05-18 11:02:33.987069",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2025-05-18 12:11:09.250217",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OPD Summary Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    date as Date,\r\n    \r\n    SUM(CASE WHEN gender = 'Male' AND patient_age >= 18 THEN 1 ELSE 0 END) AS `Adult Male Patients`,\r\n    SUM(CASE WHEN gender = 'Female' AND patient_age >= 18 THEN 1 ELSE 0 END) AS `Adult Female Patients`,\r\n    \r\n    SUM(CASE WHEN patient_age <= 17 THEN 1 ELSE 0 END) AS `Total Child`,\r\n    COUNT(*) AS `Total Patients`\r\nFROM `tabQue`\r\nWHERE date BETWEEN %(from)s AND %(to)s\r\nAND que_type != 'Refer'\r\nAND status != 'Canceled'\r\ngroup by date;\r\n",
+ "ref_doctype": "Que",
+ "report_name": "OPD Summary Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Cashier"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Nursing User"
+  },
+  {
+   "role": "Laboratory User"
+  }
+ ]
+}

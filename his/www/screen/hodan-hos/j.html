@@ -1,0 +1,338 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Hodan Hospital - Doctor Queue</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #001a33;
+            color: white;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+       .branding-header {
+            background: #FFFF;
+            padding: 2vh 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3vw;
+            border-bottom: 0.5vh solid #00b4d8;
+        }
+
+        .hospital-logo {
+            width: 40vh; /* Adjust as needed */
+            height: 15vh; /* Adjust as needed */
+            /*background: #00b4d8;*/ /* Remove background */
+            border-radius: 0; /* Remove border-radius */
+            display: grid;
+            place-items: center;
+            /*font-weight: bold;
+            font-size: 5vh;
+            box-shadow: 0 0 2vh rgba(0,180,216,0.5);*/ /* Remove styles for image */
+        }
+
+        .hospital-logo img {
+            max-width: 100%; /* Make the image responsive within its container */
+            max-height: 100%;
+            display: block; /* Remove extra space below image */
+            object-fit: contain; /* scale logo to fit */
+        }
+
+        .branding-text {
+            text-align: center;
+        }
+
+        .hospital-name {
+            font-size: 6vh;
+            letter-spacing: 0.2vh;
+            margin-bottom: 1vh;
+        }
+
+        .doctor-header {
+            background: #003366;
+            padding: 2.5vh 4vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .doctor-info {
+            display: flex;
+            gap: 4vw;
+            align-items: baseline;
+        }
+
+        .doctor-name {
+            font-size: 4.5vh;
+            color: #00e1ff;
+        }
+
+        .room-number {
+            font-size: 4vh;
+            color: #ffd700;
+        }
+
+        .current-patient {
+            padding: 4vh 4vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: pulse 2s infinite;
+        }
+
+        .current-number {
+            font-size: 25vh;
+            font-weight: 900;
+            color: #00ff88;
+            line-height: 0.8;
+            text-shadow: 0 0 3vh rgba(0,255,136,0.3);
+            margin-bottom: 3vh;
+        }
+
+        .current-name {
+            font-size: 6vh;
+            text-align: center;
+            color: #fff;
+            max-width: 90vw;
+            word-wrap: break-word;
+        }
+
+        .queue-container {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .queue-list {
+            flex: 1;
+            padding: 0 4vw 4vh 4vw;
+            overflow-y: auto; /* Restore scrollbar for more than 5 items */
+            display: flex;
+            flex-direction: column;
+            /*height: 48vh;*/ /* Remove fixed height */
+        }
+
+        /* Responsive Table Styling */
+        .queue-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed; /* Keep columns equal width */
+        }
+
+        .queue-table th, .queue-table td {
+            padding: 1.5vh;
+            text-align: left;
+            border-bottom: 0.2vh solid #003366;
+            word-break: break-word;
+            font-size: 3vh;
+            min-height: 10vh;
+        }
+
+        .queue-table th {
+            background-color: #003366;
+            color: #90e0ef;
+        }
+
+        .queue-table td {
+            color: #fff;
+            /* height: 12vh;*//* Ensure each row has a minimum height */
+        }
+
+
+        .news-ticker {
+            background: #002b55;
+            padding: 2vh 4vw;
+            border-top: 0.5vh solid #00b4d8;
+        }
+
+        .ticker-content {
+            font-size: 3vh;
+            white-space: nowrap;
+            animation: marquee 30s linear infinite;
+            color: #90e0ef;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Responsive Font Sizes */
+        .current-number {
+            font-size: 18vh; /* Adjusted for smaller screens */
+        }
+        .current-name {
+            font-size: 4vh; /* Adjusted for smaller screens */
+        }
+
+        .queue-table td, .queue-table th {
+            font-size: 2vh; /* Responsive table text */
+        }
+        @media (max-width: 768px) {
+            .current-number {
+                font-size: 12vh;
+            }
+            .current-name {
+                font-size: 3vh; /* Adjusted for smaller screens */
+            }
+            .queue-table td, .queue-table th {
+                font-size: 1.5vh; /* Responsive table text */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="branding-header">
+        <div class="hospital-logo">
+            <img id="hodanLogo" src="/files/logo hodan.png" alt="Hodan Hospital Logo">
+        </div>
+    </div>
+
+    <div class="doctor-header">
+        <div class="doctor-info">
+            <div class="doctor-name" id="doctorName"></div>
+            <div class="room-number" id="roomNumber"></div>
+        </div>
+        <div style="font-size: 3vh; color: #90e0ef;">
+            Bukaanka sugaya: <span id="queueCount"></span>
+        </div>
+    </div>
+
+    <div class="current-patient">
+        <div class="current-number"></div>
+        <div class="current-name"></div>
+    </div>
+
+    <div class="queue-container">
+        <div class="queue-list" id="queueList">
+            <table class="queue-table">
+                <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Name</th>
+                </tr>
+                </thead>
+                <tbody id="queueBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="news-ticker">
+        <div class="ticker-content">
+            📢 Tixraac Degdeg ah: 555-1234 • Saacadaha Booqashada: 8sbh - 8galab • Xarunta Jirro ee Qaabilsan 24 Saac •
+        </div>
+    </div>
+    <script>
+        let queueList = [];
+        let doctors = [];
+        let calledQueue = {};
+        let currentPatient = null;
+        const updateInterval = 5000; // Every 5 seconds for near real-time updates
+    
+        const url = window.location.href;
+        let room = url.split("/").pop();
+        const baseUrl = `${window.location.protocol}//${window.location.host}`;
+    
+        // Function to fetch updated data
+        const fetchQuePatients = async () => {
+            try {
+                const options = {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json;charset=UTF-8',
+                        'Authorization': 'token f1b0999ded9c60e:6be56860a830176'
+                    },
+                };
+    
+                const response = await fetch(`${baseUrl}/api/method/his.www.screen.screen.get_doctors?room=${room}`, options);
+                const data = await response.json();
+    
+                if (data && data.message) {
+                    // Only update UI if data has changed
+                    if (JSON.stringify(queueList) !== JSON.stringify(data.message.que) ||
+                        JSON.stringify(doctors) !== JSON.stringify(data.message.doctors) ||
+                        JSON.stringify(calledQueue) !== JSON.stringify(data.message.by_doc_call)) {
+                        
+                        queueList = data.message.que || [];
+                        doctors = data.message.doctors || [];
+                        calledQueue = data.message.by_doc_call || {};
+                        
+                        updateDisplay(); // Update only if there is a change
+                    }
+                } else {
+                    console.warn("No patient data received from API.");
+                }
+            } catch (error) {
+                console.error("Error fetching patient data:", error);
+            }   
+        };
+    
+        // Function to create a queue row
+        function createQueueRow(patient) {
+            let doctor = doctors[0] || {};
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${doctor.doctor_room.toUpperCase()}${patient.token_no}</td><td>${patient.patient_name}</td>`;
+            return tr;
+        }
+    
+        // Function to update the UI without refreshing
+        function updateDisplay() {
+            const queueBody = document.getElementById('queueBody');
+            queueBody.innerHTML = ''; // Clear existing queue
+    
+            let doctor = doctors[0] || {};
+            let calledPatient = null;
+    
+            // Check if doctor has called a patient
+            if (doctor.practitioner_name && calledQueue[doctor.practitioner_name]?.que_steps === "Called") {
+                calledPatient = calledQueue[doctor.practitioner_name];
+            }
+    
+            // Determine the current patient (prioritize called patient, otherwise first in queue)
+            currentPatient = calledPatient || queueList[0] || null;
+    
+            // Update the current patient display
+            document.querySelector('.current-number').textContent = currentPatient ? `${doctor.doctor_room.toUpperCase()}${currentPatient.token_no}` : '-';
+            document.querySelector('.current-name').textContent = currentPatient ? currentPatient.patient_name : 'Sug bukaanka koowaad';
+    
+            // Populate the queue list (Show all patients)
+            queueList.forEach(patient => {
+                const queueRow = createQueueRow(patient);
+                queueBody.appendChild(queueRow);
+            });
+    
+            // Update queue count
+            document.getElementById('queueCount').textContent = queueList.length;
+    
+            // Update doctor details
+            document.getElementById('doctorName').textContent = doctor.practitioner_name || "Unknown Doctor";
+            document.getElementById('roomNumber').textContent = doctor.doctor_room ? `Qolka ${doctor.doctor_room}` : "Unknown Room";
+        }
+    
+        // Fetch and update without refreshing
+        fetchQuePatients(); // Initial load
+        setInterval(fetchQuePatients, updateInterval); // Fetch new data every 5 seconds
+    </script>
+    
+</body></html>

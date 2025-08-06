@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OPS-.#####",
+ "creation": "2024-05-13 22:09:08.305333",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "age",
+  "date",
+  "time",
+  "ward",
+  "procedure",
+  "column_break_qrr63",
+  "anesthetist",
+  "surgeon",
+  "assistant_surgeon",
+  "scrub_nurse"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Procedure",
+   "options": "Clinical Procedure Template",
+   "read_only": 1
+  },
+  {
+   "fieldname": "anesthetist",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Anesthetist"
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Surgeon",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "assistant_surgeon",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Assistant Surgeon"
+  },
+  {
+   "fieldname": "scrub_nurse",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Scrub Nurse"
+  },
+  {
+   "fieldname": "column_break_qrr63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Link",
+   "label": "Ward",
+   "options": "Healthcare Service Unit"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-18 10:19:48.521345",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OPERATION PROCEDURE SCHEDULE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

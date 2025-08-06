@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-08 09:43:41.771136",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "able_to_move_voluntarily_or_on_command",
+  "four_extremities",
+  "two_extremities"
+ ],
+ "fields": [
+  {
+   "fieldname": "able_to_move_voluntarily_or_on_command",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Blood pressure 20 mm of preanesthetic level",
+   "options": "\n2\n1\n0"
+  },
+  {
+   "fieldname": "four_extremities",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Blood pressure 20-50 mm of preanesthesia level",
+   "options": "\n2\n1\n0"
+  },
+  {
+   "fieldname": "two_extremities",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Blood pressure \u221250 mm of preanesthesia level",
+   "options": "\n2\n1\n0"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-08 09:43:41.771136",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Circulation PACU",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

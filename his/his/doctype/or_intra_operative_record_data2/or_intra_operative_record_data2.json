@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-30 09:49:13.424575",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "swap_count",
+  "initial",
+  "additions",
+  "total",
+  "1st_count",
+  "2nd_count",
+  "3rd_count",
+  "final_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "swap_count",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Swap count"
+  },
+  {
+   "fieldname": "initial",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Initial"
+  },
+  {
+   "fieldname": "additions",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Additions"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total"
+  },
+  {
+   "fieldname": "1st_count",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "1st count"
+  },
+  {
+   "fieldname": "2nd_count",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "2nd count"
+  },
+  {
+   "fieldname": "3rd_count",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "3rd count"
+  },
+  {
+   "fieldname": "final_count",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Final count"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-30 09:49:13.424575",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OR INTRA OPERATIVE RECORD Data2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

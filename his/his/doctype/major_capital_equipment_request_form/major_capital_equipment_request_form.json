@@ -1,0 +1,984 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 14:01:51.994033",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "capital_equipment_request_form",
+  "section_break_vledh",
+  "prepared_by",
+  "column_break_qee3z",
+  "department",
+  "column_break_2la30",
+  "item_specification_and_accessories",
+  "section_break_f9fxs",
+  "quantity",
+  "column_break_o7acc",
+  "location",
+  "column_break_yd85j",
+  "estimated_cost",
+  "section_break_44xpy",
+  "criteria",
+  "section_break_5fes9",
+  "equipment_to_be_for_one_of_the_six_centers_of_excellence",
+  "column_break_t9xvn",
+  "areas_with_sound_business_model_high_patient_volume",
+  "section_break_s4gpl",
+  "improve_quality__performance",
+  "column_break_ybxmn",
+  "clinical_services_unable_to_operate_due_to_lack_of_equipment",
+  "column_break_xpxia",
+  "patient_safety",
+  "section_break_dauxf",
+  "expected_utilization",
+  "section_break_ovxyo",
+  "daily",
+  "column_break_himrz",
+  "24__7",
+  "column_break_lesod",
+  "1__7",
+  "column_break_cswoc",
+  "other",
+  "section_break_mjcu4",
+  "life_expectancy",
+  "section_break_ufkxj",
+  "greater_3_yrs",
+  "column_break_rfenm",
+  "3_to_5_yrs",
+  "column_break_vlibp",
+  "5_to_7_yrs",
+  "column_break_oxulk",
+  "other_2",
+  "section_break_iszsv",
+  "training_required",
+  "section_break_b5et3",
+  "yes",
+  "column_break_acwoc",
+  "no",
+  "column_break_zekfn",
+  "other_3",
+  "section_break_q9pzt",
+  "if_yes",
+  "section_break_ogywe",
+  "for_users",
+  "column_break_soxtm",
+  "other_4",
+  "section_break_ummot",
+  "consequences_of_request",
+  "section_break_1mb7w",
+  "staffing_2",
+  "column_break_n5dy1",
+  "increase",
+  "column_break_cmbsr",
+  "descrease",
+  "section_break_ccjbt",
+  "consumables_1",
+  "column_break_yn5d2",
+  "increase_2",
+  "column_break_g8dpr",
+  "descrease_2",
+  "section_break_vwqrw",
+  "purpose_of_purchase",
+  "section_break_cdvck",
+  "scheduled_replacemen",
+  "column_break_ot7gw",
+  "current_equipment_obsolete",
+  "column_break_r4eeg",
+  "replace_out_of_order_equipment",
+  "column_break_dtv36",
+  "section_break_tbgko",
+  "upgrade_for_an_existing_equipment",
+  "column_break_nxf9p",
+  "essential_new_item",
+  "column_break_3p6wm",
+  "expansion_of_services",
+  "column_break_p5xva",
+  "other_6",
+  "section_break_ks4hz",
+  "justification_for_request",
+  "section_break_txxel",
+  "capital_2",
+  "section_break_gstal",
+  "approval_for_request",
+  "section_break_yrcn5",
+  "itemized_cost_estimates",
+  "section_break_5o7si",
+  "a",
+  "ss",
+  "section_break_ub4us",
+  "ggggg",
+  "column_break_k6qnn",
+  "submition_date",
+  "column_break_o8wgm",
+  "completed_date",
+  "section_break_5xdf4",
+  "capital_equipment_committee_meeting",
+  "section_break_45kgo",
+  "date_discussed",
+  "section_break_wfvh3",
+  "decision",
+  "column_break_0088e",
+  "rejected",
+  "section_break_lhhzp",
+  "comments__",
+  "column_break_gk4eo",
+  "returned_for_further_info",
+  "column_break_oonox",
+  "differed",
+  "column_break_zcqtw",
+  "approved",
+  "section_break_c17km",
+  "capital_equipment_committee",
+  "section_break_48ggx",
+  "date_received",
+  "column_break_3ook9",
+  "received_by",
+  "column_break_7nlk8",
+  "solicitation_date",
+  "column_break_u38f4",
+  "solicitation_no",
+  "section_break_4ftca",
+  "date_evaluation_started",
+  "column_break_yewzc",
+  "date_evaluation_completed",
+  "column_break_ayke4",
+  "supplier_selected",
+  "column_break_gyfi8",
+  "yes_2",
+  "column_break_7cjxn",
+  "no_2",
+  "section_break_s4n28",
+  "purchase_order__date_issued",
+  "column_break_nf82o",
+  "date_received_by_supplier",
+  "column_break_pgvkz",
+  "po_copy_to",
+  "column_break_l0ags",
+  "receiving",
+  "column_break_zscfv",
+  "finance",
+  "section_break_dhrrz",
+  "equipment_receiving_process",
+  "section_break_quwdk",
+  "item_delivery_date",
+  "column_break_efupc",
+  "date_of_transfer_to_requesting_department",
+  "section_break_hquyi",
+  "installation_date",
+  "column_break_d8yna",
+  "installation_completion_certificate_issued_o"
+ ],
+ "fields": [
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Data",
+   "label": "Prepared By"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "item_specification_and_accessories",
+   "fieldtype": "Data",
+   "label": "Item specification and accessories"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Data",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "criteria",
+   "fieldtype": "HTML",
+   "label": "Criteria",
+   "options": "Criteria"
+  },
+  {
+   "fieldname": "expected_utilization",
+   "fieldtype": "HTML",
+   "label": "Expected Utilization",
+   "options": "Expected Utilization"
+  },
+  {
+   "fieldname": "life_expectancy",
+   "fieldtype": "HTML",
+   "label": "Life Expectancy",
+   "options": "Life Expectancy"
+  },
+  {
+   "fieldname": "training_required",
+   "fieldtype": "HTML",
+   "label": "Training Required",
+   "options": "Training Required"
+  },
+  {
+   "fieldname": "if_yes",
+   "fieldtype": "HTML",
+   "label": "If Yes",
+   "options": "If Yes"
+  },
+  {
+   "fieldname": "consequences_of_request",
+   "fieldtype": "Data",
+   "label": "Consequences of Request"
+  },
+  {
+   "fieldname": "purpose_of_purchase",
+   "fieldtype": "Data",
+   "label": "Purpose of Purchase"
+  },
+  {
+   "fieldname": "justification_for_request",
+   "fieldtype": "Data",
+   "label": "Justification for Request"
+  },
+  {
+   "fieldname": "capital_equipment_request_form",
+   "fieldtype": "HTML",
+   "label": " capital equipment request Form"
+  },
+  {
+   "fieldname": "section_break_vledh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qee3z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2la30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_f9fxs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_o7acc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yd85j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_44xpy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_5fes9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "equipment_to_be_for_one_of_the_six_centers_of_excellence",
+   "fieldtype": "Check",
+   "label": "Equipment to be for one of the six centers of excellence"
+  },
+  {
+   "fieldname": "column_break_t9xvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "areas_with_sound_business_model_high_patient_volume",
+   "fieldtype": "Check",
+   "label": "Areas with sound business model/ high patient volume "
+  },
+  {
+   "fieldname": "section_break_s4gpl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "improve_quality__performance",
+   "fieldtype": "Check",
+   "label": "Improve quality  performance"
+  },
+  {
+   "fieldname": "column_break_ybxmn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "clinical_services_unable_to_operate_due_to_lack_of_equipment",
+   "fieldtype": "Check",
+   "label": "Clinical services unable to operate due to lack of equipment"
+  },
+  {
+   "fieldname": "column_break_xpxia",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "patient_safety",
+   "fieldtype": "Check",
+   "label": "Patient safety"
+  },
+  {
+   "fieldname": "section_break_dauxf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ovxyo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "daily",
+   "fieldtype": "Check",
+   "label": "Daily"
+  },
+  {
+   "fieldname": "column_break_himrz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "24__7",
+   "fieldtype": "Check",
+   "label": "24 / 7"
+  },
+  {
+   "fieldname": "column_break_lesod",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "1__7",
+   "fieldtype": "Check",
+   "label": "1 / 7"
+  },
+  {
+   "fieldname": "column_break_cswoc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "section_break_mjcu4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ufkxj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "greater_3_yrs",
+   "fieldtype": "Check",
+   "label": "greater 3 yrs"
+  },
+  {
+   "fieldname": "column_break_rfenm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "3_to_5_yrs",
+   "fieldtype": "Check",
+   "label": "3 to 5 yrs"
+  },
+  {
+   "fieldname": "column_break_vlibp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "5_to_7_yrs",
+   "fieldtype": "Check",
+   "label": "5 to 7 yrs"
+  },
+  {
+   "fieldname": "column_break_oxulk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_2",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "section_break_iszsv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_b5et3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_acwoc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_zekfn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_3",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "section_break_q9pzt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ogywe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "for_users",
+   "fieldtype": "Check",
+   "label": "For users"
+  },
+  {
+   "fieldname": "column_break_soxtm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_4",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "section_break_ummot",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_1mb7w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "staffing_2",
+   "fieldtype": "HTML",
+   "label": "Staffing",
+   "options": "Staffing"
+  },
+  {
+   "fieldname": "column_break_n5dy1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "increase",
+   "fieldtype": "Check",
+   "label": "Increase"
+  },
+  {
+   "fieldname": "column_break_cmbsr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "descrease",
+   "fieldtype": "Check",
+   "label": "Descrease"
+  },
+  {
+   "fieldname": "section_break_ccjbt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "consumables_1",
+   "fieldtype": "HTML",
+   "label": "Consumables",
+   "options": "Consumables"
+  },
+  {
+   "fieldname": "column_break_yn5d2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "increase_2",
+   "fieldtype": "Check",
+   "label": "Increase"
+  },
+  {
+   "fieldname": "column_break_g8dpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "descrease_2",
+   "fieldtype": "Check",
+   "label": "Descrease"
+  },
+  {
+   "fieldname": "section_break_vwqrw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_cdvck",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "scheduled_replacemen",
+   "fieldtype": "Check",
+   "label": "Scheduled Replacemen"
+  },
+  {
+   "fieldname": "column_break_ot7gw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "current_equipment_obsolete",
+   "fieldtype": "Check",
+   "label": "Current Equipment Obsolete"
+  },
+  {
+   "fieldname": "column_break_r4eeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "replace_out_of_order_equipment",
+   "fieldtype": "Check",
+   "label": "Replace Out of Order Equipment"
+  },
+  {
+   "fieldname": "column_break_dtv36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tbgko",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "upgrade_for_an_existing_equipment",
+   "fieldtype": "Check",
+   "label": "Upgrade for An Existing Equipment"
+  },
+  {
+   "fieldname": "column_break_nxf9p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "essential_new_item",
+   "fieldtype": "Check",
+   "label": "Essential New Item"
+  },
+  {
+   "fieldname": "column_break_3p6wm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "expansion_of_services",
+   "fieldtype": "Check",
+   "label": "Expansion of Services"
+  },
+  {
+   "fieldname": "column_break_p5xva",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_6",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "section_break_ks4hz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_txxel",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "capital_2",
+   "fieldtype": "Table",
+   "label": "capital equipment request Form ",
+   "options": "capital equipment request Form child 1"
+  },
+  {
+   "fieldname": "section_break_gstal",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "approval_for_request",
+   "fieldtype": "Table",
+   "label": "Approval for Request ",
+   "options": "Approval for Request"
+  },
+  {
+   "fieldname": "section_break_yrcn5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "itemized_cost_estimates",
+   "fieldtype": "Data",
+   "label": "Itemized Cost Estimates"
+  },
+  {
+   "fieldname": "section_break_5o7si",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "a",
+   "fieldtype": "Table",
+   "label": "a",
+   "options": "capital equipment request Form child 2"
+  },
+  {
+   "fieldname": "ss",
+   "fieldtype": "HTML",
+   "label": "Request Processing Progress and Tracking",
+   "options": "Request Processing Progress and Tracking"
+  },
+  {
+   "fieldname": "section_break_ub4us",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ggggg",
+   "fieldtype": "Data",
+   "label": "Process"
+  },
+  {
+   "fieldname": "column_break_k6qnn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "submition_date",
+   "fieldtype": "Date",
+   "label": "submition date"
+  },
+  {
+   "fieldname": "column_break_o8wgm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "completed_date",
+   "fieldtype": "Date",
+   "label": "Completed date"
+  },
+  {
+   "fieldname": "section_break_5xdf4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "capital_equipment_committee_meeting",
+   "fieldtype": "HTML",
+   "label": "Capital Equipment Committee Meeting",
+   "options": "Capital Equipment Committee Meeting"
+  },
+  {
+   "fieldname": "section_break_45kgo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_discussed",
+   "fieldtype": "Date",
+   "label": "Date Discussed"
+  },
+  {
+   "fieldname": "section_break_wfvh3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "HTML",
+   "label": "Decision",
+   "options": "Decision"
+  },
+  {
+   "fieldname": "column_break_0088e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rejected",
+   "fieldtype": "Check",
+   "label": "Rejected"
+  },
+  {
+   "fieldname": "section_break_lhhzp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments__",
+   "fieldtype": "HTML",
+   "label": "Comments",
+   "options": "Comments"
+  },
+  {
+   "fieldname": "column_break_gk4eo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "returned_for_further_info",
+   "fieldtype": "Check",
+   "label": "Returned for further info"
+  },
+  {
+   "fieldname": "column_break_oonox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "differed",
+   "fieldtype": "Check",
+   "label": "Differed "
+  },
+  {
+   "fieldname": "column_break_zcqtw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved"
+  },
+  {
+   "fieldname": "section_break_c17km",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "capital_equipment_committee",
+   "fieldtype": "Table",
+   "label": "Capital Equipment Committee ",
+   "options": "Capital Equipment Committee child"
+  },
+  {
+   "fieldname": "section_break_48ggx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_received",
+   "fieldtype": "Date",
+   "label": "Date Received"
+  },
+  {
+   "fieldname": "column_break_3ook9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received By"
+  },
+  {
+   "fieldname": "column_break_7nlk8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "solicitation_date",
+   "fieldtype": "Date",
+   "label": "Solicitation Date"
+  },
+  {
+   "fieldname": "column_break_u38f4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "solicitation_no",
+   "fieldtype": "Data",
+   "label": "Solicitation No"
+  },
+  {
+   "fieldname": "section_break_4ftca",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_evaluation_started",
+   "fieldtype": "Data",
+   "label": "Date Evaluation Started"
+  },
+  {
+   "fieldname": "column_break_yewzc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_evaluation_completed",
+   "fieldtype": "Data",
+   "label": "Date Evaluation Completed"
+  },
+  {
+   "fieldname": "column_break_ayke4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supplier_selected",
+   "fieldtype": "HTML",
+   "label": "Supplier Selected",
+   "options": "Supplier Selected"
+  },
+  {
+   "fieldname": "column_break_gyfi8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_2",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_7cjxn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_s4n28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "purchase_order__date_issued",
+   "fieldtype": "Date",
+   "label": "Purchase Order  Date Issued"
+  },
+  {
+   "fieldname": "column_break_nf82o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_received_by_supplier",
+   "fieldtype": "Data",
+   "label": "Date Received by Supplier"
+  },
+  {
+   "fieldname": "column_break_pgvkz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "po_copy_to",
+   "fieldtype": "HTML",
+   "label": "PO Copy to",
+   "options": "PO Copy to"
+  },
+  {
+   "fieldname": "column_break_l0ags",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "receiving",
+   "fieldtype": "Check",
+   "label": "Receiving "
+  },
+  {
+   "fieldname": "column_break_zscfv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "finance",
+   "fieldtype": "Check",
+   "label": "Finance"
+  },
+  {
+   "fieldname": "section_break_dhrrz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "equipment_receiving_process",
+   "fieldtype": "HTML",
+   "label": "Equipment Receiving Process",
+   "options": "Equipment Receiving Process"
+  },
+  {
+   "fieldname": "section_break_quwdk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_delivery_date",
+   "fieldtype": "Date",
+   "label": "Item Delivery Date"
+  },
+  {
+   "fieldname": "column_break_efupc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_transfer_to_requesting_department",
+   "fieldtype": "Date",
+   "label": "Date of Transfer to Requesting Department"
+  },
+  {
+   "fieldname": "section_break_hquyi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "installation_date",
+   "fieldtype": "Date",
+   "label": "Installation Date"
+  },
+  {
+   "fieldname": "column_break_d8yna",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "installation_completion_certificate_issued_o",
+   "fieldtype": "Data",
+   "label": "Installation Completion Certificate Issued o"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-26 12:03:29.704150",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "major capital equipment request Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

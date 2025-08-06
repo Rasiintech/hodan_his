@@ -1,0 +1,271 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 11:59:04.188815",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mh_employee_name",
+  "id",
+  "pid",
+  "mobile_no",
+  "job_title",
+  "age",
+  "gender_1",
+  "nationality",
+  "date_of_injury",
+  "time_of_injury",
+  "status__file_no",
+  "gender_2",
+  "hiv_1",
+  "hbs_ag",
+  "hcv_1",
+  "description_of_the_exposure_incident",
+  "job_classification",
+  "department_location",
+  "procedure",
+  "did_the_exposure_incident_occur",
+  "body_sites",
+  "identify_sharp_involved",
+  "did_the_device_being_used",
+  "exposed_employee",
+  "explain",
+  "screening",
+  "mr",
+  "hiv_2",
+  "hbv_1",
+  "hcv_2",
+  "screening_date_1",
+  "baseline_screening",
+  "hiv_3",
+  "hbv_2",
+  "hcv_3",
+  "screening_date_2",
+  "follow_up_screening_of_exposed__3_months_and_6_month",
+  "physicians_signature_or_comment",
+  "concluding_statement_by_physician"
+ ],
+ "fields": [
+  {
+   "fieldname": "mh_employee_name",
+   "fieldtype": "Data",
+   "label": "MH EMPLOYEE NAME"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "gender_1",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": " Nationality"
+  },
+  {
+   "fieldname": "date_of_injury",
+   "fieldtype": "Data",
+   "label": "DATE OF INJURY"
+  },
+  {
+   "fieldname": "time_of_injury",
+   "fieldtype": "Data",
+   "label": "TIME OF INJURY"
+  },
+  {
+   "fieldname": "status__file_no",
+   "fieldtype": "Data",
+   "label": "STATUS  File No"
+  },
+  {
+   "fieldname": "gender_2",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "hiv_1",
+   "fieldtype": "Data",
+   "label": "HIV"
+  },
+  {
+   "fieldname": "hbs_ag",
+   "fieldtype": "Data",
+   "label": "HBs Ag"
+  },
+  {
+   "fieldname": "hcv_1",
+   "fieldtype": "Data",
+   "label": "HCV"
+  },
+  {
+   "fieldname": "description_of_the_exposure_incident",
+   "fieldtype": "Data",
+   "label": "DESCRIPTION OF THE EXPOSURE INCIDENT"
+  },
+  {
+   "fieldname": "job_classification",
+   "fieldtype": "Data",
+   "label": "JOB CLASSIFICATION"
+  },
+  {
+   "fieldname": "department_location",
+   "fieldtype": "Data",
+   "label": "DEPARTMENT LOCATION"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Data",
+   "label": "PROCEDURE"
+  },
+  {
+   "fieldname": "did_the_exposure_incident_occur",
+   "fieldtype": "Data",
+   "label": "DID THE EXPOSURE INCIDENT OCCUR"
+  },
+  {
+   "fieldname": "body_sites",
+   "fieldtype": "Data",
+   "label": "BODY SITES"
+  },
+  {
+   "fieldname": "identify_sharp_involved",
+   "fieldtype": "Data",
+   "label": "IDENTIFY SHARP INVOLVED"
+  },
+  {
+   "fieldname": "did_the_device_being_used",
+   "fieldtype": "Data",
+   "label": "Did the device being used "
+  },
+  {
+   "fieldname": "exposed_employee",
+   "fieldtype": "Data",
+   "label": "Exposed employee"
+  },
+  {
+   "fieldname": "explain",
+   "fieldtype": "Data",
+   "label": "Explain"
+  },
+  {
+   "fieldname": "screening",
+   "fieldtype": "Data",
+   "label": "Screening"
+  },
+  {
+   "fieldname": "mr",
+   "fieldtype": "Data",
+   "label": "MR"
+  },
+  {
+   "fieldname": "hiv_2",
+   "fieldtype": "Data",
+   "label": "HIV"
+  },
+  {
+   "fieldname": "hbv_1",
+   "fieldtype": "Data",
+   "label": "HBV"
+  },
+  {
+   "fieldname": "hcv_2",
+   "fieldtype": "Data",
+   "label": "HCV"
+  },
+  {
+   "fieldname": "screening_date_1",
+   "fieldtype": "Data",
+   "label": "Screening Date"
+  },
+  {
+   "fieldname": "baseline_screening",
+   "fieldtype": "Data",
+   "label": "Baseline Screening"
+  },
+  {
+   "fieldname": "hiv_3",
+   "fieldtype": "Data",
+   "label": "HIV"
+  },
+  {
+   "fieldname": "hbv_2",
+   "fieldtype": "Data",
+   "label": "HBV"
+  },
+  {
+   "fieldname": "hcv_3",
+   "fieldtype": "Data",
+   "label": "HCV"
+  },
+  {
+   "fieldname": "screening_date_2",
+   "fieldtype": "Data",
+   "label": "Screening Date"
+  },
+  {
+   "fieldname": "follow_up_screening_of_exposed__3_months_and_6_month",
+   "fieldtype": "Data",
+   "label": "Follow up Screening of Exposed  3 months and 6 month"
+  },
+  {
+   "fieldname": "physicians_signature_or_comment",
+   "fieldtype": "Data",
+   "label": "Physicians Signature or Comment"
+  },
+  {
+   "fieldname": "concluding_statement_by_physician",
+   "fieldtype": "Data",
+   "label": " Concluding Statement by Physician"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-29 11:59:04.188815",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "NEEDLESTICK INJURY FORM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

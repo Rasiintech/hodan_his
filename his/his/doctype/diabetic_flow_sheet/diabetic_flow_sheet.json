@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-19 10:30:12.469603",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "patient_name",
+  "dob",
+  "mrp",
+  "column_break_r78e3",
+  "physician",
+  "blood_type",
+  "allergies",
+  "admdate",
+  "section_break_t8jmi",
+  "diabetic_flow_sheet_data",
+  "section_break_aotmd",
+  "sliding_scale",
+  "section_break_oiyjk",
+  "injection_locations",
+  "section_break_rzbfy",
+  "transcribing_nurse",
+  "witnessed_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "pid.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fetch_from": "pid.medical_history",
+   "fieldname": "mrp",
+   "fieldtype": "Link",
+   "label": "MRP",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "physician",
+   "fieldtype": "Data",
+   "label": "Physician"
+  },
+  {
+   "fieldname": "blood_type",
+   "fieldtype": "Data",
+   "label": "Blood Type"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "admdate",
+   "fieldtype": "Data",
+   "label": "ADM.Date"
+  },
+  {
+   "fieldname": "diabetic_flow_sheet_data",
+   "fieldtype": "Table",
+   "label": "Diabetic Flow Sheet Data",
+   "options": "Diabetic Flow Sheet Data"
+  },
+  {
+   "fieldname": "section_break_t8jmi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_r78e3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_aotmd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "injection_locations",
+   "fieldtype": "Table",
+   "label": "Injection Locations",
+   "options": "Injection Locations"
+  },
+  {
+   "fieldname": "section_break_oiyjk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transcribing_nurse",
+   "fieldtype": "Data",
+   "label": "Transcribing Nurse"
+  },
+  {
+   "fieldname": "witnessed_by",
+   "fieldtype": "Data",
+   "label": "Witnessed by"
+  },
+  {
+   "fieldname": "section_break_rzbfy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sliding_scale",
+   "fieldtype": "Table",
+   "label": "Sliding scale",
+   "options": "Sliding scale"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-29 09:28:33.673788",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Diabetic Flow Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-23 09:49:14.871576",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "from",
+  "to",
+  "section_break_w07as",
+  "hh_emergency_daily_census_data",
+  "section_break_gnjhl",
+  "total_number_of_patient_seen",
+  "total_number_of_patient_admitted",
+  "total_number_of_patient_went_home",
+  "total_number_of_patient_transfer_to_other_hospital",
+  "total_number_of_patient_died",
+  "section_break_bcejq",
+  "prepared_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From "
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "section_break_w07as",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hh_emergency_daily_census_data",
+   "fieldtype": "Table",
+   "label": "HH Emergency Daily Census Data",
+   "options": "HH Emergency Daily Census Data"
+  },
+  {
+   "fieldname": "section_break_gnjhl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_number_of_patient_seen",
+   "fieldtype": "Data",
+   "label": "Total Number of Patient Seen"
+  },
+  {
+   "fieldname": "total_number_of_patient_admitted",
+   "fieldtype": "Data",
+   "label": "Total Number of Patient Admitted"
+  },
+  {
+   "fieldname": "total_number_of_patient_went_home",
+   "fieldtype": "Data",
+   "label": "Total Number of Patient went Home"
+  },
+  {
+   "fieldname": "total_number_of_patient_transfer_to_other_hospital",
+   "fieldtype": "Data",
+   "label": "Total number of Patient Transfer to other hospital"
+  },
+  {
+   "fieldname": "total_number_of_patient_died",
+   "fieldtype": "Data",
+   "label": "Total Number of Patient Died"
+  },
+  {
+   "fieldname": "section_break_bcejq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Data",
+   "label": "Prepared by"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-23 10:18:46.594047",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "HH Emergency Daily Census",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

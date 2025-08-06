@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-12 14:18:50.135361",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_name",
+  "patient",
+  "date_of_birth",
+  "sex",
+  "age",
+  "column_break_eoeeh",
+  "admission_ordering_reques",
+  "section_break_0nkdj",
+  "column_break_xzgbk",
+  "column_break_we33j",
+  "diagnosis",
+  "section_break_dc0nv",
+  "date_of_admission",
+  "column_break_wythr",
+  "planned_procedure",
+  "column_break_7io5q",
+  "date_of_procedure",
+  "column_break_8ppys",
+  "length_of_stay",
+  "section_break_2o8ao",
+  "physicians_order",
+  "column_break_v7hdy",
+  "physicians_nam",
+  "column_break_5cchg",
+  "date",
+  "column_break_llko0",
+  "discharge_department",
+  "section_break_csmlj"
+ ],
+ "fields": [
+  {
+   "fieldname": "admission_ordering_reques",
+   "fieldtype": "HTML",
+   "label": "ADMISSION ORDERING REQUES",
+   "options": "ADMISSION ORDERING REQUES"
+  },
+  {
+   "fieldname": "section_break_0nkdj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_eoeeh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_xzgbk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_we33j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "section_break_dc0nv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "label": "Date of Admission"
+  },
+  {
+   "fieldname": "column_break_wythr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "planned_procedure",
+   "fieldtype": "Data",
+   "label": "Planned Procedure"
+  },
+  {
+   "fieldname": "column_break_7io5q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_procedure",
+   "fieldtype": "Data",
+   "label": "Date of Procedure"
+  },
+  {
+   "fieldname": "column_break_8ppys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "length_of_stay",
+   "fieldtype": "Data",
+   "label": "Length of Stay"
+  },
+  {
+   "fieldname": "section_break_2o8ao",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "physicians_order",
+   "fieldtype": "Data",
+   "label": "Physicians Order"
+  },
+  {
+   "fieldname": "column_break_v7hdy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "physicians_nam",
+   "fieldtype": "Data",
+   "label": "Physicians Nam"
+  },
+  {
+   "fieldname": "column_break_5cchg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "DATE"
+  },
+  {
+   "fieldname": "column_break_llko0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discharge_department",
+   "fieldtype": "Data",
+   "label": "Discharge Department"
+  },
+  {
+   "fieldname": "section_break_csmlj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "Patient ID No"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-13 09:19:00.583895",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Admission ORDERING Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "beta": 1,
+ "creation": "2022-03-22 14:39:08.527146",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "image",
+  "invoiced",
+  "column_break_4",
+  "lab_test_comment",
+  "template_created",
+  "status",
+  "qty",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "image",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Imaging",
+   "options": "Radiology Template",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "invoiced",
+   "fieldtype": "Check",
+   "label": "Invoiced",
+   "no_copy": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lab_test_comment",
+   "fieldtype": "Small Text",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Comments"
+  },
+  {
+   "default": "0",
+   "fieldname": "template_created",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Test Created",
+   "no_copy": 1,
+   "print_hide": 1,
+   "report_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "options": "Ordered\nBilled\nCompleted"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fetch_from": "image.rate",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-19 10:50:14.509000",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Radiology Prescription",
+ "owner": "Administrator",
+ "permissions": [],
+ "restrict_to_domain": "Healthcare",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,538 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 15:58:54.527491",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "column_break_jxmnc",
+  "pid",
+  "column_break_a6ycd",
+  "dob",
+  "column_break_5mu0w",
+  "mrp",
+  "section_break_e2yzz",
+  "discharge_summary_medical_report",
+  "section_break_llsjo",
+  "consultant",
+  "section_break_2hdyu",
+  "date__of_admission",
+  "column_break_cuxlo",
+  "date_of_discharge",
+  "section_break_grsig",
+  "date_time",
+  "column_break_ydalh",
+  "discharge_vital_sings",
+  "section_break_pnxzk",
+  "1",
+  "section_break_vdhwq",
+  "bp",
+  "column_break_bk2rt",
+  "p",
+  "column_break_btnlh",
+  "r",
+  "column_break_r9pft",
+  "t",
+  "section_break_rogb6",
+  "yes",
+  "column_break_gfusr",
+  "no",
+  "column_break_suyzw",
+  "planned_discharge",
+  "section_break_ss5m1",
+  "yes_2",
+  "column_break_bgmkm",
+  "no_2",
+  "column_break_0oxm3",
+  "expired",
+  "section_break_qng0o",
+  "yes_3",
+  "column_break_f74dy",
+  "no_3",
+  "column_break_l4jgx",
+  "triage_discharge",
+  "section_break_8q7nw",
+  "yes_4",
+  "column_break_usc43",
+  "no_4",
+  "column_break_exgla",
+  "ama_against_medical_advice",
+  "section_break_tmndx",
+  "discharge",
+  "column_break_a53ip",
+  "yers_5",
+  "column_break_tskun",
+  "no_5",
+  "section_break_qim9g",
+  "to_hospital",
+  "section_break_freae",
+  "ventilation",
+  "column_break_yp1sj",
+  "chronic",
+  "column_break_piszb",
+  "spontaneous",
+  "section_break_ulq1p",
+  "airway",
+  "column_break_0edkq",
+  "normal",
+  "column_break_4crhf",
+  "tracheostomy",
+  "column_break_tthgz",
+  "tube_type_or_size",
+  "section_break_boqlu",
+  "additional_secondry_diagnosis__and_problem_list",
+  "section_break_ldd09",
+  "history_of_presenting_illness",
+  "section_break_xzcbn",
+  "physical_examination",
+  "section_break_wixl0",
+  "investigations",
+  "section_break_skxid",
+  "hospital_course_and_treatments",
+  "section_break_kjgwt",
+  "discharge_summary_completed_by",
+  "section_break_zml9c"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts name"
+  },
+  {
+   "fieldname": "column_break_jxmnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "column_break_a6ycd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_5mu0w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_e2yzz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "discharge_summary_medical_report",
+   "fieldtype": "HTML",
+   "label": "Discharge summary medical report",
+   "options": "Discharge summary medical report-"
+  },
+  {
+   "fieldname": "section_break_llsjo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Data",
+   "label": "Consultant"
+  },
+  {
+   "fieldname": "section_break_2hdyu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date__of_admission",
+   "fieldtype": "Data",
+   "label": "Date  of admission"
+  },
+  {
+   "fieldname": "column_break_cuxlo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_discharge",
+   "fieldtype": "Data",
+   "label": "Date of Discharge"
+  },
+  {
+   "fieldname": "section_break_grsig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date time"
+  },
+  {
+   "fieldname": "column_break_ydalh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discharge_vital_sings",
+   "fieldtype": "Data",
+   "label": "Discharge vital sings"
+  },
+  {
+   "fieldname": "section_break_pnxzk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "1",
+   "fieldtype": "HTML",
+   "label": "Outcome",
+   "options": "Outcome"
+  },
+  {
+   "fieldname": "section_break_vdhwq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "column_break_bk2rt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Data",
+   "label": "P"
+  },
+  {
+   "fieldname": "column_break_btnlh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "r",
+   "fieldtype": "Data",
+   "label": "R"
+  },
+  {
+   "fieldname": "column_break_r9pft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "t",
+   "fieldtype": "Data",
+   "label": "T"
+  },
+  {
+   "fieldname": "section_break_rogb6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "yes",
+   "fieldtype": "HTML",
+   "label": "Yes",
+   "options": "Yes"
+  },
+  {
+   "fieldname": "column_break_gfusr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no",
+   "fieldtype": "HTML",
+   "label": "No",
+   "options": "No"
+  },
+  {
+   "fieldname": "column_break_suyzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "planned_discharge",
+   "fieldtype": "HTML",
+   "label": "Planned Discharge",
+   "options": "Planned Discharge"
+  },
+  {
+   "fieldname": "section_break_ss5m1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_2",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "column_break_bgmkm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_2",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "column_break_0oxm3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expired",
+   "fieldtype": "HTML",
+   "label": "Expired",
+   "options": "Expired"
+  },
+  {
+   "fieldname": "section_break_qng0o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_3",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "column_break_f74dy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_3",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "column_break_l4jgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "triage_discharge",
+   "fieldtype": "HTML",
+   "label": "Triage Discharge",
+   "options": "Triage Discharge"
+  },
+  {
+   "fieldname": "section_break_8q7nw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_4",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "column_break_usc43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_4",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "column_break_exgla",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ama_against_medical_advice",
+   "fieldtype": "HTML",
+   "label": "A.M.A (Against medical advice)",
+   "options": "A.M.A (Against medical advice)"
+  },
+  {
+   "fieldname": "section_break_tmndx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "discharge",
+   "fieldtype": "Data",
+   "label": "Discharge"
+  },
+  {
+   "fieldname": "column_break_a53ip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yers_5",
+   "fieldtype": "Check",
+   "label": "Yes "
+  },
+  {
+   "fieldname": "column_break_tskun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_5",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "section_break_qim9g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "to_hospital",
+   "fieldtype": "Data",
+   "label": "To hospital"
+  },
+  {
+   "fieldname": "section_break_freae",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ventilation",
+   "fieldtype": "HTML",
+   "label": "Ventilation",
+   "options": "Ventilation"
+  },
+  {
+   "fieldname": "column_break_yp1sj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "chronic",
+   "fieldtype": "Check",
+   "label": "Chronic"
+  },
+  {
+   "fieldname": "column_break_piszb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "spontaneous",
+   "fieldtype": "Check",
+   "label": "Spontaneous"
+  },
+  {
+   "fieldname": "section_break_ulq1p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "airway",
+   "fieldtype": "HTML",
+   "label": "Airway",
+   "options": "Airway"
+  },
+  {
+   "fieldname": "column_break_0edkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "column_break_4crhf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tracheostomy",
+   "fieldtype": "Check",
+   "label": "Tracheostomy"
+  },
+  {
+   "fieldname": "column_break_tthgz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tube_type_or_size",
+   "fieldtype": "Data",
+   "label": "Tube type or size"
+  },
+  {
+   "fieldname": "section_break_boqlu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_secondry_diagnosis__and_problem_list",
+   "fieldtype": "Table",
+   "label": "Additional secondry Diagnosis  and problem list ",
+   "options": "diagnose child table"
+  },
+  {
+   "fieldname": "section_break_ldd09",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "history_of_presenting_illness",
+   "fieldtype": "Text",
+   "label": "History of presenting illness"
+  },
+  {
+   "fieldname": "section_break_xzcbn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "physical_examination",
+   "fieldtype": "Text",
+   "label": "Physical examination"
+  },
+  {
+   "fieldname": "section_break_wixl0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "investigations",
+   "fieldtype": "Text",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "section_break_skxid",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hospital_course_and_treatments",
+   "fieldtype": "Text",
+   "label": "Hospital course and treatments"
+  },
+  {
+   "fieldname": "section_break_kjgwt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "discharge_summary_completed_by",
+   "fieldtype": "Data",
+   "label": "Discharge summary completed by"
+  },
+  {
+   "fieldname": "section_break_zml9c",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-21 16:28:07.012956",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Discharge Summary Medical Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

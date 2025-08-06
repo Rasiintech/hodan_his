@@ -1,0 +1,765 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-30 10:26:26.526975",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "date_1",
+  "column_break_xydln",
+  "department_or_room",
+  "column_break_ih3ld",
+  "mother_mrn",
+  "column_break_psj68",
+  "occupation",
+  "section_break_wfxb7",
+  "place_of_birth",
+  "column_break_ik8ib",
+  "id_no",
+  "column_break_cee8b",
+  "address_mobile_no",
+  "column_break_wbntv",
+  "fathers_name",
+  "section_break_yjaq5",
+  "date_of_admission",
+  "column_break_rdnw9",
+  "date_of_birth",
+  "column_break_gerhb",
+  "time",
+  "column_break_gpwwa",
+  "type_of_delivery",
+  "section_break_5slr3",
+  "babys_date",
+  "column_break_1edaf",
+  "gender",
+  "column_break_zyeab",
+  "height",
+  "column_break_wif6m",
+  "weight",
+  "section_break_2rkma",
+  "skin_color",
+  "column_break_wij68",
+  "hair_color",
+  "column_break_mf3rc",
+  "types_of_birth",
+  "column_break_3uhsx",
+  "wrist_band_no",
+  "section_break_bxwj9",
+  "congenital_anomalies",
+  "column_break_cqrfy",
+  "mothers_left_thumb_mark",
+  "section_break_mpjra",
+  "name_of_staff_secured_1",
+  "column_break_ozfwy",
+  "name_1",
+  "column_break_dk3s9",
+  "signature_1",
+  "section_break_fq6u5",
+  "date_2",
+  "section_break_g1tyd",
+  "babys_footprints_and_delivery_1",
+  "column_break_qwdcl",
+  "left_footprint_1",
+  "column_break_nwkgz",
+  "right_footprint_1",
+  "section_break_pathd",
+  "name_of_staff_secured_2",
+  "column_break_13xhm",
+  "name_2",
+  "column_break_zspnt",
+  "signature_2",
+  "column_break_kcrrc",
+  "date_3",
+  "section_break_c5ax9",
+  "babys_footprints_at_delivery_2",
+  "column_break_se2ru",
+  "left_footprint_2",
+  "column_break_ubig3",
+  "right_footprint_2",
+  "section_break_nlu5g",
+  "name_of_staff_secured_3",
+  "column_break_ipm2e",
+  "name_3",
+  "column_break_2uqn9",
+  "signature_3",
+  "column_break_hpo6b",
+  "date_4",
+  "section_break_twkp5",
+  "doctors_name_on_duty_1",
+  "column_break_fvbge",
+  "signature_4",
+  "column_break_tutgp",
+  "charge_nurse_name_1",
+  "column_break_dxisv",
+  "signature_5",
+  "section_break_zcryf",
+  "name_of_staff_secured_4",
+  "column_break_rfuwb",
+  "signature_6",
+  "column_break_vxiig",
+  "mothers_mrn",
+  "section_break_pbpok",
+  "babys_footprints_and_delivery_3",
+  "column_break_ewako",
+  "left_footprint_3",
+  "column_break_bxmbp",
+  "right_footprint_3",
+  "section_break_o7nwc",
+  "name_of_staff_secured_5",
+  "column_break_vrj4t",
+  "name_4",
+  "column_break_zhsty",
+  "signature_7",
+  "section_break_aoa8t",
+  "date_5",
+  "section_break_4j9he",
+  "babys_footprints_at_delivery_4",
+  "column_break_qwntt",
+  "left_footprint_4",
+  "column_break_nfwhc",
+  "right_footprint_4",
+  "section_break_aib6z",
+  "name_of_staff_secured_6",
+  "column_break_ujmy0",
+  "name_5",
+  "column_break_ie6dt",
+  "signature_8",
+  "column_break_flfsc",
+  "date_6",
+  "column_break_pqe9l",
+  "doctors_name_on_duty_2",
+  "section_break_ikgic",
+  "signature_9",
+  "charge_nurse_name_2",
+  "signature_10"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_1",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_xydln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department_or_room",
+   "fieldtype": "Data",
+   "label": "Department or Room"
+  },
+  {
+   "fieldname": "column_break_ih3ld",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mother_mrn",
+   "fieldtype": "Data",
+   "label": "Mother MRN"
+  },
+  {
+   "fieldname": "column_break_psj68",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "section_break_wfxb7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "place_of_birth",
+   "fieldtype": "Data",
+   "label": "Place of Birth"
+  },
+  {
+   "fieldname": "column_break_ik8ib",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_no",
+   "fieldtype": "Data",
+   "label": "ID NO"
+  },
+  {
+   "fieldname": "column_break_cee8b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_mobile_no",
+   "fieldtype": "Data",
+   "label": "Address Mobile no"
+  },
+  {
+   "fieldname": "column_break_wbntv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fathers_name",
+   "fieldtype": "Data",
+   "label": "Fathers Name"
+  },
+  {
+   "fieldname": "section_break_yjaq5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "label": "Date of Admission"
+  },
+  {
+   "fieldname": "column_break_rdnw9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_gerhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "column_break_gpwwa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_delivery",
+   "fieldtype": "Data",
+   "label": "Type of Delivery"
+  },
+  {
+   "fieldname": "section_break_5slr3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "babys_date",
+   "fieldtype": "Date",
+   "label": "Babys Date"
+  },
+  {
+   "fieldname": "column_break_1edaf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "column_break_zyeab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "column_break_wif6m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "section_break_2rkma",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "skin_color",
+   "fieldtype": "Data",
+   "label": "Skin color"
+  },
+  {
+   "fieldname": "column_break_wij68",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hair_color",
+   "fieldtype": "Data",
+   "label": "Hair color"
+  },
+  {
+   "fieldname": "column_break_mf3rc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "types_of_birth",
+   "fieldtype": "Data",
+   "label": "Types of Birth"
+  },
+  {
+   "fieldname": "column_break_3uhsx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wrist_band_no",
+   "fieldtype": "Data",
+   "label": "Wrist Band No"
+  },
+  {
+   "fieldname": "section_break_bxwj9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "congenital_anomalies",
+   "fieldtype": "Data",
+   "label": "Congenital Anomalies"
+  },
+  {
+   "fieldname": "column_break_cqrfy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mothers_left_thumb_mark",
+   "fieldtype": "Data",
+   "label": " Mothers Left Thumb Mark"
+  },
+  {
+   "fieldname": "section_break_mpjra",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_of_staff_secured_1",
+   "fieldtype": "Data",
+   "label": "Name of Staff who delivered the Baby"
+  },
+  {
+   "fieldname": "column_break_ozfwy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_dk3s9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_1",
+   "fieldtype": "Data",
+   "label": "Name of Staff who completed this form"
+  },
+  {
+   "fieldname": "section_break_fq6u5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_2",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_g1tyd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "babys_footprints_and_delivery_1",
+   "fieldtype": "Data",
+   "label": "Babys footprints and Delivery 1"
+  },
+  {
+   "fieldname": "column_break_qwdcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "left_footprint_1",
+   "fieldtype": "Data",
+   "label": "Left footprint"
+  },
+  {
+   "fieldname": "column_break_nwkgz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "right_footprint_1",
+   "fieldtype": "Data",
+   "label": "Right footprint"
+  },
+  {
+   "fieldname": "section_break_pathd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_of_staff_secured_2",
+   "fieldtype": "Data",
+   "label": "Name of staff who secured the Babys footprint"
+  },
+  {
+   "fieldname": "column_break_13xhm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_2",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_zspnt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_2",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_kcrrc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_3",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_c5ax9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "babys_footprints_at_delivery_2",
+   "fieldtype": "Data",
+   "label": "Babys Footprints at Delivery 2"
+  },
+  {
+   "fieldname": "column_break_se2ru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "left_footprint_2",
+   "fieldtype": "Data",
+   "label": "Left Footprint "
+  },
+  {
+   "fieldname": "column_break_ubig3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "right_footprint_2",
+   "fieldtype": "Data",
+   "label": "Right footprint"
+  },
+  {
+   "fieldname": "section_break_nlu5g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_of_staff_secured_3",
+   "fieldtype": "Data",
+   "label": "Name of the staff who secured Babys Footprint"
+  },
+  {
+   "fieldname": "column_break_ipm2e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_3",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_2uqn9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_3",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_hpo6b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_4",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_twkp5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "doctors_name_on_duty_1",
+   "fieldtype": "Data",
+   "label": "Doctors Name on Duty"
+  },
+  {
+   "fieldname": "column_break_fvbge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_4",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_tutgp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charge_nurse_name_1",
+   "fieldtype": "Data",
+   "label": "Charge Nurse Name"
+  },
+  {
+   "fieldname": "column_break_dxisv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_5",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "section_break_zcryf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_of_staff_secured_4",
+   "fieldtype": "Data",
+   "label": "Name of Staff who completed this form"
+  },
+  {
+   "fieldname": "column_break_rfuwb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_6",
+   "fieldtype": "Data",
+   "label": "Signature  "
+  },
+  {
+   "fieldname": "column_break_vxiig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mothers_mrn",
+   "fieldtype": "Data",
+   "label": "Mothers MRN"
+  },
+  {
+   "fieldname": "section_break_pbpok",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "babys_footprints_and_delivery_3",
+   "fieldtype": "Data",
+   "label": "Babys footprints and Delivery 3"
+  },
+  {
+   "fieldname": "column_break_ewako",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "left_footprint_3",
+   "fieldtype": "Data",
+   "label": "Left footprint "
+  },
+  {
+   "fieldname": "column_break_bxmbp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "right_footprint_3",
+   "fieldtype": "Data",
+   "label": "Right footprint"
+  },
+  {
+   "fieldname": "section_break_o7nwc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_of_staff_secured_5",
+   "fieldtype": "Data",
+   "label": "Name of staff who secured the Babys footprint"
+  },
+  {
+   "fieldname": "column_break_vrj4t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_4",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_zhsty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_7",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "section_break_aoa8t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_5",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_4j9he",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "babys_footprints_at_delivery_4",
+   "fieldtype": "Data",
+   "label": "Babys Footprints at Delivery 4"
+  },
+  {
+   "fieldname": "column_break_qwntt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "left_footprint_4",
+   "fieldtype": "Data",
+   "label": "Left Footprint "
+  },
+  {
+   "fieldname": "column_break_nfwhc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "right_footprint_4",
+   "fieldtype": "Data",
+   "label": "Right footprint"
+  },
+  {
+   "fieldname": "section_break_aib6z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_of_staff_secured_6",
+   "fieldtype": "Data",
+   "label": "Name of the staff who secured Babys Footprint"
+  },
+  {
+   "fieldname": "column_break_ujmy0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_5",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_ie6dt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_8",
+   "fieldtype": "Data",
+   "label": "Signature "
+  },
+  {
+   "fieldname": "column_break_flfsc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_6",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_pqe9l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "doctors_name_on_duty_2",
+   "fieldtype": "Data",
+   "label": "Doctors Name on Duty"
+  },
+  {
+   "fieldname": "section_break_ikgic",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signature_9",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "charge_nurse_name_2",
+   "fieldtype": "Data",
+   "label": "Charge Nurse Name"
+  },
+  {
+   "fieldname": "signature_10",
+   "fieldtype": "Data",
+   "label": "Signature"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-16 11:26:53.235313",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "DIH Newborn identification",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1
+}

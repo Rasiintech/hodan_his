@@ -1,0 +1,300 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Sales Invoice",
+  "is_active": 0,
+  "modified": "2021-08-18 12:23:26.977915",
+  "name": "Sales Invoice Discount Approval",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Cashier",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Draft",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Accounts Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Discount Approval Pending",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Accounts Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Discount Rejected",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Cashier",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Cashier",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Submitted",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Submit",
+    "allow_self_approval": 1,
+    "allowed": "Cashier",
+    "condition": "doc.percentage <= get_allowed_discount()",
+    "next_state": "Submitted",
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   },
+   {
+    "action": "Request Review",
+    "allow_self_approval": 1,
+    "allowed": "Cashier",
+    "condition": "doc.percentage > get_allowed_discount()",
+    "next_state": "Discount Approval Pending",
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": "doc.percentage <= get_allowed_discount()",
+    "next_state": "Approved",
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Discount Approval Pending"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": "doc.percentage <= get_allowed_discount()",
+    "next_state": "Discount Rejected",
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Discount Approval Pending"
+   },
+   {
+    "action": "Submit",
+    "allow_self_approval": 1,
+    "allowed": "Cashier",
+    "condition": "",
+    "next_state": "Submitted",
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Approved"
+   },
+   {
+    "action": "Submit",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": "doc.percentage <= get_allowed_discount()",
+    "next_state": "Submitted",
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Discount Rejected"
+   },
+   {
+    "action": "Request Review",
+    "allow_self_approval": 1,
+    "allowed": "Cashier",
+    "condition": "doc.percentage > get_allowed_discount()",
+    "next_state": "Discount Approval Pending",
+    "parent": "Sales Invoice Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Discount Rejected"
+   }
+  ],
+  "workflow_name": "Sales Invoice Discount Approval",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Patient Appointment",
+  "is_active": 0,
+  "modified": "2021-09-07 15:24:40.161605",
+  "name": "Patient Appointment Discount Approval",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Accounts User",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Draft",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Accounts User",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Discount Approval Pending",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Accounts User",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Discount Rejected",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Accounts User",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Accounts User",
+    "condition": "doc.discount_percentage <= get_allowed_discount()",
+    "next_state": "Approved",
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   },
+   {
+    "action": "Request Review",
+    "allow_self_approval": 1,
+    "allowed": "Accounts User",
+    "condition": "doc.discount_percentage > get_allowed_discount()",
+    "next_state": "Discount Approval Pending",
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Accounts User",
+    "condition": "doc.discount_percentage <= get_allowed_discount()",
+    "next_state": "Approved",
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Discount Approval Pending"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "Accounts User",
+    "condition": "doc.discount_percentage <= get_allowed_discount()",
+    "next_state": "Discount Rejected",
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Discount Approval Pending"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Accounts User",
+    "condition": "doc.discount_percentage <= get_allowed_discount()",
+    "next_state": "Approved",
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Discount Rejected"
+   },
+   {
+    "action": "Request Review",
+    "allow_self_approval": 1,
+    "allowed": "Accounts User",
+    "condition": "doc.discount_percentage > get_allowed_discount()",
+    "next_state": "Discount Approval Pending",
+    "parent": "Patient Appointment Discount Approval",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Discount Rejected"
+   }
+  ],
+  "workflow_name": "Patient Appointment Discount Approval",
+  "workflow_state_field": "workflow_state"
+ }
+]

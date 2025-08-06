@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-26 11:15:28.249911",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "patient",
+  "room_no",
+  "present_on_admit_or_in_house",
+  "location_of_wound",
+  "type_of_wound",
+  "stage_pressure_previous_week",
+  "stage_pressure_current_week",
+  "treatments",
+  "treatment_changed",
+  "improved_i_worsening_w_comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient"
+  },
+  {
+   "fieldname": "room_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room No."
+  },
+  {
+   "fieldname": "present_on_admit_or_in_house",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Present on Admit or In House"
+  },
+  {
+   "fieldname": "location_of_wound",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location of Wound"
+  },
+  {
+   "fieldname": "type_of_wound",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type of Wound"
+  },
+  {
+   "fieldname": "stage_pressure_previous_week",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stage Pressure Previous Week"
+  },
+  {
+   "fieldname": "stage_pressure_current_week",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stage Pressure Current Week"
+  },
+  {
+   "fieldname": "treatments",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Treatments"
+  },
+  {
+   "fieldname": "treatment_changed",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Treatment Changed"
+  },
+  {
+   "fieldname": "improved_i_worsening_w_comments",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Improved (I) Worsening (W) Comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-26 11:26:52.041032",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Wound Tracking Form Data",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

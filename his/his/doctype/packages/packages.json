@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PACKAGE.#####",
+ "creation": "2023-03-15 16:11:39.215149",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "column_break_37v6n",
+  "date",
+  "section_break_l8b3r",
+  "practitioner",
+  "column_break_keqze",
+  "practioner_name",
+  "column_break_2czkj",
+  "doctor_number",
+  "column_break_agxkk",
+  "package",
+  "section_break_jjmra",
+  "without_practitioner",
+  "column_break_k0b7l",
+  "package_amount",
+  "column_break_hwayq",
+  "total",
+  "column_break_1d1sf",
+  "paid_amount",
+  "sales_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_37v6n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_l8b3r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "without_practitioner",
+   "fieldtype": "Check",
+   "label": "Without Practitioner"
+  },
+  {
+   "fieldname": "column_break_2czkj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.without_practitioner==0",
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_keqze",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jjmra",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.without_practitioner==0",
+   "fetch_from": "practitioner.first_name",
+   "fieldname": "practioner_name",
+   "fieldtype": "Data",
+   "label": "Practioner Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_agxkk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.without_practitioner==0",
+   "fetch_from": "practitioner.op_consulting_charge",
+   "fieldname": "doctor_number",
+   "fieldtype": "Currency",
+   "label": "Doctor Number",
+   "read_only": 1
+  },
+  {
+   "depends_on": "package",
+   "fieldname": "paid_amount",
+   "fieldtype": "Data",
+   "label": "Paid Amount",
+   "mandatory_depends_on": "package"
+  },
+  {
+   "fieldname": "column_break_k0b7l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "package",
+   "fieldtype": "Link",
+   "label": "Package",
+   "options": "Package Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hwayq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "package.rate",
+   "fieldname": "package_amount",
+   "fieldtype": "Currency",
+   "label": "Package Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1d1sf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-03 13:05:27.692849",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Packages",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-22 13:16:59.457810",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "column_break_op3mt",
+  "mrp",
+  "section_break_hldlw",
+  "medication_administration_form",
+  "section_break_kqtj7",
+  "allergies",
+  "column_break_mezan",
+  "weight",
+  "section_break_nhkev",
+  "medication_administration"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_op3mt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_hldlw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "medication_administration_form",
+   "fieldtype": "Table",
+   "label": "medication administration form ",
+   "options": "medication administration form child_table 1"
+  },
+  {
+   "fieldname": "section_break_kqtj7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "column_break_mezan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "section_break_nhkev",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "medication_administration",
+   "fieldtype": "Table",
+   "label": "medication administration ",
+   "options": "medication administration form child_table 2"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Pts  Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-25 15:43:36.666258",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "medication administration form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

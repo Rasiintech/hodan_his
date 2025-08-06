@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-13 09:19:49.939706",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bp",
+  "pr",
+  "normal___s1",
+  "normal_s2",
+  "any_added_sounds"
+ ],
+ "fields": [
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BP            "
+  },
+  {
+   "fieldname": "pr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PR              "
+  },
+  {
+   "fieldname": "normal___s1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rhythm "
+  },
+  {
+   "fieldname": "normal_s2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Normal S1 S2            ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "any_added_sounds",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Any added sounds "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-23 09:57:20.141772",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "CVS",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

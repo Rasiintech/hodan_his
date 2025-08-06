@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MSH-COB/MGU/.####.-.YYYY.-.MM.-.DD",
+ "creation": "2023-06-19 14:45:36.237276",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "child_name",
+  "sex",
+  "type_of_birth",
+  "weight",
+  "midwifery",
+  "column_break_lu3lz",
+  "date",
+  "time",
+  "father",
+  "mother"
+ ],
+ "fields": [
+  {
+   "fieldname": "child_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Child Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sex",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_birth",
+   "fieldtype": "Link",
+   "label": "Type of Birth",
+   "options": "Birth Type"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "column_break_lu3lz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "father",
+   "fieldtype": "Data",
+   "label": "Father"
+  },
+  {
+   "fieldname": "mother",
+   "fieldtype": "Data",
+   "label": "Mother"
+  },
+  {
+   "fieldname": "midwifery",
+   "fieldtype": "Link",
+   "label": "Midwifery/Doctor",
+   "options": "midwife",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-25 12:24:23.970232",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Birth Certificate",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

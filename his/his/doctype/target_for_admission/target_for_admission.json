@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-15 11:12:30.378366",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "target_o2_sat",
+  "target_uop",
+  "target_hb_10gd",
+  "target_temp_365_375",
+  "target_map_65_125",
+  "target_motion_3_5",
+  "target_rbg_140_180",
+  "target_rass"
+ ],
+ "fields": [
+  {
+   "fieldname": "target_o2_sat",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "target O2 saT"
+  },
+  {
+   "fieldname": "target_uop",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target UOP"
+  },
+  {
+   "fieldname": "target_hb_10gd",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target HB"
+  },
+  {
+   "fieldname": "target_temp_365_375",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target Temp "
+  },
+  {
+   "fieldname": "target_map_65_125",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target MAP "
+  },
+  {
+   "fieldname": "target_motion_3_5",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target motion"
+  },
+  {
+   "fieldname": "target_rbg_140_180",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target RBG "
+  },
+  {
+   "fieldname": "target_rass",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target RASS"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-15 11:12:30.378366",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Target for admission",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

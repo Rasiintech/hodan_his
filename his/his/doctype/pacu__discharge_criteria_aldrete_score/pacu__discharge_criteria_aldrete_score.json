@@ -1,0 +1,235 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PACU-.#####",
+ "creation": "2025-05-07 11:59:25.479003",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "gender",
+  "age",
+  "column_break_iebtq",
+  "date_of_creation",
+  "date_of_discharge",
+  "activity_section",
+  "activity_pacu",
+  "respiration_section",
+  "respiration_pacu",
+  "circulation_section",
+  "circulation_pacu",
+  "consciousness_section",
+  "consciousness_pacu",
+  "o2_saturation_section",
+  "o2_saturation_pacu",
+  "total_score_section",
+  "name1",
+  "column_break_quexg",
+  "signature_of_pacu_nurse",
+  "section_break_ualyw",
+  "aldrete_score",
+  "column_break_b8g2a",
+  "patient_discharge_from_pacu"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "options": " "
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_iebtq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_creation",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Creation"
+  },
+  {
+   "fieldname": "date_of_discharge",
+   "fieldtype": "Date",
+   "label": "Date of discharge "
+  },
+  {
+   "fieldname": "activity_section",
+   "fieldtype": "Section Break",
+   "label": "Activity"
+  },
+  {
+   "fieldname": "activity_pacu",
+   "fieldtype": "Table",
+   "options": "Activity PACU"
+  },
+  {
+   "fieldname": "respiration_section",
+   "fieldtype": "Section Break",
+   "label": "Respiration"
+  },
+  {
+   "fieldname": "respiration_pacu",
+   "fieldtype": "Table",
+   "options": "Respiration PACU"
+  },
+  {
+   "fieldname": "circulation_section",
+   "fieldtype": "Section Break",
+   "label": "Circulation"
+  },
+  {
+   "fieldname": "circulation_pacu",
+   "fieldtype": "Table",
+   "options": "Circulation PACU"
+  },
+  {
+   "fieldname": "consciousness_section",
+   "fieldtype": "Section Break",
+   "label": "Consciousness"
+  },
+  {
+   "fieldname": "consciousness_pacu",
+   "fieldtype": "Table",
+   "options": "Consciousness PACU"
+  },
+  {
+   "fieldname": "o2_saturation_section",
+   "fieldtype": "Section Break",
+   "label": "O2 saturation"
+  },
+  {
+   "fieldname": "o2_saturation_pacu",
+   "fieldtype": "Table",
+   "options": "O2 saturation PACU"
+  },
+  {
+   "fieldname": "total_score_section",
+   "fieldtype": "Section Break",
+   "label": "Total score"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Nurse Name"
+  },
+  {
+   "fieldname": "signature_of_pacu_nurse",
+   "fieldtype": "Data",
+   "label": "Signature of PACU Nurse"
+  },
+  {
+   "fieldname": "column_break_quexg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "aldrete_score",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Aldrete Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ualyw",
+   "fieldtype": "Section Break",
+   "label": "Aldrete Score: (9-10: Yes), (8 & Lower: No)"
+  },
+  {
+   "fieldname": "column_break_b8g2a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient_discharge_from_pacu",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient discharge from PACU"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-01 09:45:23.560862",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "PACU  Discharge criteria Aldrete score",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nurse",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

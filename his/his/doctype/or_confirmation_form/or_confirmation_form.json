@@ -1,0 +1,283 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": " ORCF-.#####",
+ "creation": "2024-04-26 19:14:22.459675",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "column_break_gsudh",
+  "patient_name",
+  "column_break_2rq5g",
+  "sex",
+  "column_break_t7fwt",
+  "dob",
+  "section_break_f2ent",
+  "mrp",
+  "diagnose",
+  "lenght_of_stay",
+  "column_break_eloll",
+  "surgeon",
+  "column_break_kljcl",
+  "planned_procedure",
+  "section_break_p57zh",
+  "date_of_procedure",
+  "section_break_jniew",
+  "details_column",
+  "lab_results_complete",
+  "blood_availability",
+  "units_of_blood",
+  "seen_by_anesthetist",
+  "anesthetist_name",
+  "signature",
+  "fit_for_surgery",
+  "section_break_ctalj",
+  "financially_cleared",
+  "column_break_yslvr",
+  "or_informed",
+  "column_break_nuuj4",
+  "column_break_gjfgk",
+  "section_break_oky4o",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "surgeon",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Surgeon ",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planned_procedure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Planned Procedure ",
+   "options": "Clinical Procedure Template",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_of_procedure",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date of Procedure ",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "lab_results_complete",
+   "fieldtype": "Check",
+   "label": "Lab results complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "blood_availability",
+   "fieldtype": "Check",
+   "label": "Blood availability"
+  },
+  {
+   "fieldname": "units_of_blood",
+   "fieldtype": "Data",
+   "label": "units of blood"
+  },
+  {
+   "default": "1",
+   "fieldname": "seen_by_anesthetist",
+   "fieldtype": "Check",
+   "label": "Seen by Anesthetist"
+  },
+  {
+   "fieldname": "anesthetist_name",
+   "fieldtype": "Data",
+   "label": "Anesthetist Name"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "HTML",
+   "label": "Signature",
+   "options": "Signature _________________"
+  },
+  {
+   "fieldname": "fit_for_surgery",
+   "fieldtype": "Select",
+   "label": "Fit for Surgery",
+   "options": "Yes\nNo",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "financially_cleared",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Financially Cleared"
+  },
+  {
+   "default": "0",
+   "fieldname": "or_informed",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "OR informed"
+  },
+  {
+   "fieldname": "details_column",
+   "fieldtype": "Column Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gsudh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2rq5g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_t7fwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_f2ent",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_eloll",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kljcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_p57zh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jniew",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ctalj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yslvr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_oky4o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nuuj4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gjfgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OR Confirmation Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "diagnose",
+   "fieldtype": "Data",
+   "label": "Diagnose"
+  },
+  {
+   "fieldname": "lenght_of_stay",
+   "fieldtype": "Data",
+   "label": "Lenght Of Stay"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-09 16:32:32.573312",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OR Confirmation Form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient_name"
+}

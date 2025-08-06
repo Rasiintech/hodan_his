@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-25 14:39:42.486202",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_vrzaw",
+  "ref",
+  "column_break_lthza",
+  "to",
+  "column_break_6ylyh",
+  "attn",
+  "column_break_ufcog",
+  "from",
+  "section_break_yrrnn",
+  "attachments",
+  "section_break_6oixp",
+  "copy_of_catalogue",
+  "column_break_dhwse",
+  "quatation",
+  "column_break_juxas",
+  "sample",
+  "section_break_hnd99",
+  "subject",
+  "section_break_kacig",
+  "item_evaluation_form",
+  "section_break_auh7z",
+  "comments",
+  "section_break_o6m0d",
+  "evaluated_by",
+  "column_break_tgtgw",
+  "sig",
+  "column_break_mn70x",
+  "position",
+  "column_break_w6wkq",
+  "dept",
+  "section_break_rt0uy"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_vrzaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ref",
+   "fieldtype": "Data",
+   "label": "Ref"
+  },
+  {
+   "fieldname": "column_break_lthza",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "column_break_6ylyh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attn",
+   "fieldtype": "Data",
+   "label": "Attn"
+  },
+  {
+   "fieldname": "column_break_ufcog",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "section_break_yrrnn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "HTML",
+   "label": "Attachments",
+   "options": "Attachments"
+  },
+  {
+   "fieldname": "section_break_6oixp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "copy_of_catalogue",
+   "fieldtype": "Check",
+   "label": "Copy of catalogue"
+  },
+  {
+   "fieldname": "column_break_dhwse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "quatation",
+   "fieldtype": "Check",
+   "label": "Quatation"
+  },
+  {
+   "fieldname": "column_break_juxas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sample",
+   "fieldtype": "Check",
+   "label": "Sample"
+  },
+  {
+   "fieldname": "section_break_hnd99",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "section_break_kacig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_evaluation_form",
+   "fieldtype": "Table",
+   "label": "Item Evaluation Form ",
+   "options": "Item Evaluation Form child table"
+  },
+  {
+   "fieldname": "section_break_auh7z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "section_break_o6m0d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "evaluated_by",
+   "fieldtype": "Data",
+   "label": "Evaluated By"
+  },
+  {
+   "fieldname": "column_break_tgtgw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sig",
+   "fieldtype": "Data",
+   "label": "Sig"
+  },
+  {
+   "fieldname": "column_break_mn70x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "column_break_w6wkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dept",
+   "fieldtype": "Data",
+   "label": "Dept"
+  },
+  {
+   "fieldname": "section_break_rt0uy",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-25 14:51:36.849460",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Item Evaluation Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

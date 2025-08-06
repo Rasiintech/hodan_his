@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 15:47:26.180286",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "abd___distension",
+  "vomitingresidual",
+  "residual_volume",
+  "abd___tenderness",
+  "hard__abd",
+  "tense_abd",
+  "bs",
+  "bm",
+  "gi_bleeding",
+  "organomegaly"
+ ],
+ "fields": [
+  {
+   "fieldname": "abd___distension",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Abd   distension",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "vomitingresidual",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vomiting",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "residual_volume",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "residual volume",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "abd___tenderness",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Abd   tenderness ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hard__abd",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "hard  Abd ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "tense_abd",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "tense Abd ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bs",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "BS",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bm",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "BM",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "gi_bleeding",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "GI bleeding",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "organomegaly",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Organomegaly",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 11:21:01.571247",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Feeding",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

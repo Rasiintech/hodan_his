@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Admission-.#####",
+ "creation": "2024-04-28 10:10:55.667678",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "diagnose",
+  "date",
+  "column_break_0rqhg",
+  "practitioner",
+  "department",
+  "planned_procedure",
+  "date_of_procedure",
+  "type",
+  "lenght_of_stay",
+  "physician_order",
+  "physician_name",
+  "physician_signature",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "DOB"
+  },
+  {
+   "fieldname": "diagnose",
+   "fieldtype": "Data",
+   "label": "Diagnose"
+  },
+  {
+   "fieldname": "planned_procedure",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Planned Procedure",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "date_of_procedure",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date of Procedure"
+  },
+  {
+   "fieldname": "lenght_of_stay",
+   "fieldtype": "Data",
+   "label": "Lenght Of Stay"
+  },
+  {
+   "fieldname": "physician_order",
+   "fieldtype": "Small Text",
+   "label": "Physician Order"
+  },
+  {
+   "fieldname": "physician_name",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Physician Name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "physician_signature",
+   "fieldtype": "HTML",
+   "label": "Physician Signature",
+   "options": "Physician Signature \n ______________________"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date of Admission"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_0rqhg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Department"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Admission Ordering Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Physician Name",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "In Patient Type",
+   "options": "Inpatient Type",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-20 10:21:04.198642",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Admission Ordering Request",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

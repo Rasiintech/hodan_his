@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-28 10:15:29.364193",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hour",
+  "bp",
+  "temperature",
+  "uf"
+ ],
+ "fields": [
+  {
+   "fieldname": "hour",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hour"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BP"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Temperature  "
+  },
+  {
+   "fieldname": "uf",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Uf"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-28 10:18:17.307262",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Blood Pressure",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

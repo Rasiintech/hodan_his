@@ -1,0 +1,1085 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "OPQR1-.##### ",
+ "creation": "2023-10-23 13:06:49.738406",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "feedbackfrm",
+  "section_break_njnjp",
+  "date",
+  "section_break_p4cy8",
+  "descr",
+  "column_break_qxqt1",
+  "section_break_t6blr",
+  "su_kowaad",
+  "section_break_wwkm0",
+  "bukan_socod",
+  "column_break_dc1uy",
+  "aad_ufiican_bukan",
+  "column_break_nk5oz",
+  "fiican_bukan",
+  "column_break_qudf2",
+  "caadi_buakn",
+  "column_break_xre3n",
+  "waliita_bukan",
+  "column_break_ysdxq",
+  "section_break_buk9w",
+  "pharmacy",
+  "column_break_51taa",
+  "aad_fiican_pharma",
+  "column_break_pz6ol",
+  "fiican_pharma",
+  "column_break_rmg3j",
+  "caadi_pharma",
+  "column_break_ilm8w",
+  "wallita_pharma",
+  "column_break_mwjyr",
+  "section_break_lr7e9",
+  "lab",
+  "column_break_ltw7r",
+  "aadfican_lab",
+  "column_break_zhcue",
+  "fiican_lab",
+  "column_break_phr7e",
+  "caadi_lab",
+  "column_break_pedfj",
+  "waliita_lab",
+  "column_break_enccg",
+  "section_break_54puq",
+  "er",
+  "column_break_793bj",
+  "very_good_er",
+  "column_break_thgri",
+  "good_er",
+  "column_break_zqh5s",
+  "fair_er",
+  "column_break_fakfc",
+  "poor_er",
+  "column_break_orafk",
+  "section_break_mcbim",
+  "maternity_department",
+  "column_break_yvsfc",
+  "very_good_maternity_department",
+  "column_break_vmysm",
+  "good_maternity_department",
+  "column_break_lj7xe",
+  "fair_maternity_department",
+  "column_break_xftja",
+  "poor_maternity_department",
+  "column_break_sm1vy",
+  "section_break_sjidm",
+  "computerka",
+  "column_break_79yun",
+  "very_good_com",
+  "column_break_6muhr",
+  "good_com",
+  "column_break_lfihl",
+  "fair_com",
+  "column_break_18lco",
+  "poor_com",
+  "column_break_7fezh",
+  "section_break_kmci1",
+  "apt_reg",
+  "section_break_x2rzx",
+  "ease_of_getting_an_appointment",
+  "column_break_jlyan",
+  "very_good_ease_of_getting_an_appointment",
+  "column_break_dwgwt",
+  "good_ease_of_getting_an_appointment",
+  "column_break_vnzvt",
+  "fair_ease_of_getting_an_appointment",
+  "column_break_xna6l",
+  "poor_ease_of_getting_an_appointment",
+  "column_break_tbzdr",
+  "section_break_zbgfk",
+  "info_regarding_doctor",
+  "column_break_kcyls",
+  "very_god_info_regarding_doctor",
+  "column_break_qndri",
+  "good_info_regarding_doctor",
+  "column_break_0bfsg",
+  "fair_info_regarding_doctor",
+  "column_break_desas",
+  "poor_info_regarding_doctor",
+  "column_break_ddjf1",
+  "section_break_9hp1l",
+  "warmth_courtesy",
+  "column_break_ptkeb",
+  "very_good_warmth_courtesy",
+  "column_break_tej9q",
+  "good_warmth_courtesy",
+  "column_break_mu3qn",
+  "fair_warmth_courtesy",
+  "column_break_al0hf",
+  "poor_warmth_courtesy",
+  "column_break_jp8iz",
+  "section_break_uxjpc",
+  "communication_with_staff",
+  "column_break_e5ypq",
+  "very_good_communication_with_staff",
+  "column_break_nts5w",
+  "goodcommunication_with_staff",
+  "column_break_1qylt",
+  "fair_communication_with_staff",
+  "column_break_qhnlz",
+  "poor_communication_with_staff",
+  "column_break_rn2ku",
+  "section_break_txtab",
+  "su_sadxad",
+  "section_break_ovvbg",
+  "waiting",
+  "column_break_mj9ly",
+  "very_good_wait",
+  "column_break_nwatt",
+  "good_wait",
+  "column_break_idyc1",
+  "fair_wait",
+  "column_break_ihxe1",
+  "poor_wait",
+  "column_break_uneuh",
+  "section_break_swbtg",
+  "service",
+  "column_break_xya6r",
+  "very_good_service",
+  "column_break_m0pdp",
+  "good_service",
+  "column_break_yhkmm",
+  "fair_service",
+  "column_break_dmukp",
+  "poor_service",
+  "column_break_skrcz",
+  "section_break_ugmm0",
+  "rate",
+  "section_break_s4rl1",
+  "clean",
+  "column_break_ynufe",
+  "always",
+  "column_break_ql6q1",
+  "usually",
+  "column_break_8ar4f",
+  "sometimes",
+  "column_break_ndilf",
+  "never",
+  "section_break_fxnpb",
+  "toilets",
+  "column_break_fhvlb",
+  "always_toilets",
+  "column_break_gi3si",
+  "usually_toilets",
+  "column_break_ijcui",
+  "sometimes_toilets",
+  "column_break_vqf9c",
+  "never_toilets",
+  "section_break_gehvo",
+  "recomendation",
+  "column_break_kx4uw",
+  "haa",
+  "column_break_i3tla",
+  "lagayba",
+  "column_break_p4doh",
+  "definitely_no",
+  "column_break_6quhi",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "feedbackfrm",
+   "fieldtype": "HTML",
+   "options": "Xogwaraysiga Bukaan-Socodka"
+  },
+  {
+   "fieldname": "section_break_njnjp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_p4cy8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "descr",
+   "fieldtype": "HTML",
+   "options": "Looma Bahna Warqada In aad Magac Ku Qorto ,Waa Xog uu Maamulka isbitaalka Dib U Eegi Doono."
+  },
+  {
+   "fieldname": "column_break_qxqt1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_t6blr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "su_kowaad",
+   "fieldtype": "HTML",
+   "options": "1.Fadlan ku qiimee khibradaada dhinacyada soo socda ee booqashadaada isbitaalka Ka Siduu Ahaa? "
+  },
+  {
+   "fieldname": "section_break_wwkm0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bukan_socod",
+   "fieldtype": "HTML",
+   "options": "Bukaan Socod."
+  },
+  {
+   "fieldname": "column_break_dc1uy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "aad_ufiican_bukan",
+   "fieldtype": "Check",
+   "label": "Aad ufiican"
+  },
+  {
+   "fieldname": "column_break_nk5oz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fiican_bukan",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "fieldname": "column_break_qudf2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "caadi_buakn",
+   "fieldtype": "Check",
+   "label": "Caadi  "
+  },
+  {
+   "fieldname": "column_break_xre3n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "waliita_bukan",
+   "fieldtype": "Check",
+   "label": " wa Liita"
+  },
+  {
+   "fieldname": "column_break_ysdxq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_buk9w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pharmacy",
+   "fieldtype": "HTML",
+   "options": "Farmashiga."
+  },
+  {
+   "fieldname": "column_break_51taa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pz6ol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rmg3j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ilm8w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mwjyr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lr7e9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ltw7r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zhcue",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_phr7e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pedfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_enccg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_54puq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "er",
+   "fieldtype": "HTML",
+   "options": "Gargaarka degdegga."
+  },
+  {
+   "fieldname": "column_break_793bj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_er",
+   "fieldtype": "Check",
+   "label": "Aad ufiican"
+  },
+  {
+   "fieldname": "column_break_thgri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_er",
+   "fieldtype": "Check",
+   "label": "fiican"
+  },
+  {
+   "fieldname": "column_break_zqh5s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_er",
+   "fieldtype": "Check",
+   "label": "caadi"
+  },
+  {
+   "fieldname": "column_break_fakfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_er",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "column_break_orafk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mcbim",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "maternity_department",
+   "fieldtype": "HTML",
+   "options": "Qeybta Dhalmada."
+  },
+  {
+   "fieldname": "column_break_yvsfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_maternity_department",
+   "fieldtype": "Check",
+   "label": "Aaad ufiican"
+  },
+  {
+   "fieldname": "column_break_vmysm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_maternity_department",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "fieldname": "column_break_lj7xe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_maternity_department",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "fieldname": "column_break_xftja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_maternity_department",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "column_break_sm1vy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_sjidm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "apt_reg",
+   "fieldtype": "HTML",
+   "options": "2.Fadlan ku qiimee khibradaada dhinacyada soo socda ee ballanta & diiwaangelinta:"
+  },
+  {
+   "fieldname": "section_break_x2rzx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ease_of_getting_an_appointment",
+   "fieldtype": "HTML",
+   "options": "Fududeynta nambarka?"
+  },
+  {
+   "fieldname": "column_break_jlyan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Aad ufiican"
+  },
+  {
+   "fieldname": "column_break_dwgwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "fieldname": "column_break_vnzvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "fieldname": "column_break_xna6l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_ease_of_getting_an_appointment",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "column_break_tbzdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zbgfk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "info_regarding_doctor",
+   "fieldtype": "HTML",
+   "options": "Xogta Ku Saabsan Dhaqtarka?"
+  },
+  {
+   "fieldname": "column_break_kcyls",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_god_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Aad ufiican"
+  },
+  {
+   "fieldname": "column_break_qndri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "fieldname": "column_break_0bfsg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "fieldname": "column_break_desas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_info_regarding_doctor",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "column_break_ddjf1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9hp1l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "warmth_courtesy",
+   "fieldtype": "HTML",
+   "options": "Si Wacan Oo Xushmad Leh \nMalgu Soo Dhaweeyey?"
+  },
+  {
+   "fieldname": "column_break_ptkeb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Aaad ufiican"
+  },
+  {
+   "fieldname": "column_break_tej9q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "fieldname": "column_break_mu3qn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "fieldname": "column_break_al0hf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_warmth_courtesy",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "column_break_jp8iz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uxjpc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "communication_with_staff",
+   "fieldtype": "HTML",
+   "options": "Tilmaamta Dhaqtarka Si Saxan \nMalaguugu Tilmaamay?"
+  },
+  {
+   "fieldname": "column_break_e5ypq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Aaad  ufiican"
+  },
+  {
+   "fieldname": "column_break_nts5w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "goodcommunication_with_staff",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "fieldname": "column_break_1qylt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "fieldname": "column_break_qhnlz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_communication_with_staff",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "column_break_rn2ku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_txtab",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mj9ly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nwatt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_idyc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ihxe1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uneuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_swbtg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xya6r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_m0pdp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yhkmm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dmukp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_skrcz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ugmm0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "HTML",
+   "options": "4.Fadlan Qiime Nadaafada Guud. Had iyo jeer"
+  },
+  {
+   "fieldname": "section_break_s4rl1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "clean",
+   "fieldtype": "HTML",
+   "options": "Side Ahayd Qeybaha Aad              \nGashey isbitaalka Nadaafadooda?"
+  },
+  {
+   "fieldname": "column_break_ynufe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always",
+   "fieldtype": "Check",
+   "label": "Markasta "
+  },
+  {
+   "fieldname": "column_break_ql6q1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually",
+   "fieldtype": "Check",
+   "label": "Badanaa"
+  },
+  {
+   "fieldname": "column_break_8ar4f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes",
+   "fieldtype": "Check",
+   "label": "Mararka qaar"
+  },
+  {
+   "fieldname": "column_break_ndilf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never",
+   "fieldtype": "Check",
+   "label": "Marna"
+  },
+  {
+   "fieldname": "section_break_fxnpb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "toilets",
+   "fieldtype": "HTML",
+   "options": "Suuliga Nadaafadooda Sidee \nBay Kula Aheyd?"
+  },
+  {
+   "fieldname": "column_break_fhvlb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "always_toilets",
+   "fieldtype": "Check",
+   "label": "Markasta "
+  },
+  {
+   "fieldname": "column_break_gi3si",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "usually_toilets",
+   "fieldtype": "Check",
+   "label": "Badanaa"
+  },
+  {
+   "fieldname": "column_break_ijcui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sometimes_toilets",
+   "fieldtype": "Check",
+   "label": "Mararka qaar"
+  },
+  {
+   "fieldname": "column_break_vqf9c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "never_toilets",
+   "fieldtype": "Check",
+   "label": "Marna"
+  },
+  {
+   "fieldname": "section_break_gehvo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recomendation",
+   "fieldtype": "HTML",
+   "options": "Makula Talin Laheyd Hadii Ay Ubaahdaan Caafimaad Asxaabtaada/Qoyskaaga/Qaraabadaada Inee Imaadaan?"
+  },
+  {
+   "fieldname": "column_break_kx4uw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_i3tla",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_p4doh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "definitely_no",
+   "fieldtype": "Check",
+   "label": "Maya"
+  },
+  {
+   "fieldname": "column_break_6quhi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "aad_fiican_pharma",
+   "fieldtype": "Check",
+   "label": "Aad ufiican"
+  },
+  {
+   "default": "0",
+   "fieldname": "fiican_pharma",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "default": "0",
+   "fieldname": "caadi_pharma",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "default": "0",
+   "fieldname": "wallita_pharma",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "lab",
+   "fieldtype": "HTML",
+   "options": "Sheybaarka."
+  },
+  {
+   "default": "0",
+   "fieldname": "aadfican_lab",
+   "fieldtype": "Check",
+   "label": "Aad ufiican"
+  },
+  {
+   "default": "0",
+   "fieldname": "fiican_lab",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "default": "0",
+   "fieldname": "caadi_lab",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "default": "0",
+   "fieldname": "waliita_lab",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "computerka",
+   "fieldtype": "HTML",
+   "options": "Kumbuyutarada"
+  },
+  {
+   "fieldname": "column_break_79yun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_com",
+   "fieldtype": "Check",
+   "label": "Aaad ufiican"
+  },
+  {
+   "fieldname": "column_break_6muhr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_com",
+   "fieldtype": "Check",
+   "label": "Ficaan"
+  },
+  {
+   "fieldname": "column_break_lfihl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_com",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "fieldname": "column_break_18lco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_com",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "column_break_7fezh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kmci1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "su_sadxad",
+   "fieldtype": "HTML",
+   "options": "3.Adigo Mahadsan Ku Qiime Khibradaada Dhinacyada Soo Socda Ee Sugitaanka Dhaqtarka/Qofka Ka Horeeye."
+  },
+  {
+   "fieldname": "section_break_ovvbg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "waiting",
+   "fieldtype": "HTML",
+   "options": "Qofki Kaa Horeeye Intu Ku Jiray\n Ma Daahsatay?"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_wait",
+   "fieldtype": "Check",
+   "label": "Aaad ufiican"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_wait",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_wait",
+   "fieldtype": "Check",
+   "label": "Caaadi"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_wait",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "HTML",
+   "options": "Maku Qanacday Adeega Caafimad ee\nIsbitaalku  Kuu Qabtay?"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good_service",
+   "fieldtype": "Check",
+   "label": "Aad ufiican"
+  },
+  {
+   "default": "0",
+   "fieldname": "good_service",
+   "fieldtype": "Check",
+   "label": "Fiican"
+  },
+  {
+   "default": "0",
+   "fieldname": "fair_service",
+   "fieldtype": "Check",
+   "label": "Caadi"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_service",
+   "fieldtype": "Check",
+   "label": "Waliita"
+  },
+  {
+   "default": "0",
+   "fieldname": "haa",
+   "fieldtype": "Check",
+   "label": "Haa"
+  },
+  {
+   "default": "0",
+   "fieldname": "lagayba",
+   "fieldtype": "Check",
+   "label": "Lagayaba"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Xogwaraysiga Bukaan socodka",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-31 10:08:37.088956",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Xogwaraysiga Bukaan socodka",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "set_user_permissions": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1
+}

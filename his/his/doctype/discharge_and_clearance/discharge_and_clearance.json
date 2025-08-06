@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DIS-CL-.#####",
+ "creation": "2023-03-26 09:45:55.788386",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "customer",
+  "patient_balance",
+  "sex",
+  "reason",
+  "inpatient_record",
+  "column_break_uzkox",
+  "practitioner",
+  "practitioner_name",
+  "department",
+  "section_break_ijiev",
+  "patient_receivables",
+  "status",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sex",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_uzkox",
+   "fieldtype": "Column Break",
+   "label": "`",
+   "read_only": 1
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "practitioner.first_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "label": "Practitioner Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ijiev",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient_receivables",
+   "fieldtype": "Table",
+   "label": "Patient Receivables",
+   "options": "Patient Clearance"
+  },
+  {
+   "fetch_from": "patient.inpatient_record",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Order",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fetch_from": "patient.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "patient_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Patient Balance",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Uncleared",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nCleared\nUncleared"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 10:46:17.726716",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Discharge And Clearance",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Cleared"
+  },
+  {
+   "color": "Red",
+   "title": "Uncleared"
+  }
+ ]
+}

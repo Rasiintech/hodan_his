@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PHE-.#####",
+ "creation": "2024-02-19 10:57:17.742967",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "age",
+  "column_break_r7lcp",
+  "date",
+  "doctor",
+  "section_break_p7wdl",
+  "main_complaint",
+  "column_break_l9jaz",
+  "hpi",
+  "column_break_8rmut",
+  "section_break_tmfp1",
+  "systemic_review",
+  "column_break_mwvbw",
+  "pmh",
+  "section_break_dcaxc",
+  "fh",
+  "column_break_jr1zv",
+  "dh",
+  "section_break_pdqx8",
+  "social_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_r7lcp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "section_break_p7wdl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "main_complaint",
+   "fieldtype": "Small Text",
+   "label": "Main Complaint"
+  },
+  {
+   "fieldname": "column_break_l9jaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hpi",
+   "fieldtype": "Small Text",
+   "label": "HPI"
+  },
+  {
+   "fieldname": "column_break_8rmut",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tmfp1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "systemic_review",
+   "fieldtype": "Small Text",
+   "label": "Systemic Review"
+  },
+  {
+   "fieldname": "column_break_mwvbw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pmh",
+   "fieldtype": "Small Text",
+   "label": "PMH"
+  },
+  {
+   "fieldname": "section_break_dcaxc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fh",
+   "fieldtype": "Small Text",
+   "label": "FH"
+  },
+  {
+   "fieldname": "column_break_jr1zv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dh",
+   "fieldtype": "Small Text",
+   "label": "DH"
+  },
+  {
+   "fieldname": "section_break_pdqx8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "social_history",
+   "fieldtype": "Data",
+   "label": "Social History"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-21 12:22:18.962238",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Patient History And Physical Examination",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

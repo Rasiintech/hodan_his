@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 16:35:02.674464",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "laxatives",
+  "enema",
+  "ppi",
+  "need_of_ppi",
+  "need_of_prokinetics",
+  "need_of_trace_elements",
+  "need_of_anti_emetics",
+  "need_of_vitamins",
+  "need_of_tpn",
+  "need_of_peg"
+ ],
+ "fields": [
+  {
+   "fieldname": "laxatives",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": " Protein formula",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "enema",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Laxatives",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "ppi",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "enema",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_ppi",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "PPI",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_prokinetics",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Prokinetics",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_trace_elements",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "trace elements ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_anti_emetics",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "anti emetics",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_vitamins",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "vitamins",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_tpn",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "TPN",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "need_of_peg",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "PEG",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 11:30:17.917145",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Feeding3",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-09 13:38:12.149485",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "column_break_iywej",
+  "pid",
+  "column_break_hcbf8",
+  "dob",
+  "column_break_rsova",
+  "mrp",
+  "section_break_z4clo",
+  "date__time",
+  "column_break_8ma1d",
+  "allergies",
+  "column_break_rra0f",
+  "yes",
+  "column_break_1dks2",
+  "no",
+  "column_break_d9xcq",
+  "weight",
+  "column_break_tjrsj",
+  "height",
+  "section_break_q3pqt",
+  "daignosis",
+  "section_break_furgq",
+  "plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts name"
+  },
+  {
+   "fieldname": "column_break_iywej",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID "
+  },
+  {
+   "fieldname": "column_break_hcbf8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_rsova",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_z4clo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date__time",
+   "fieldtype": "Datetime",
+   "label": "Date / Time"
+  },
+  {
+   "fieldname": "column_break_8ma1d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "HTML",
+   "label": "ALLERGIES",
+   "options": "ALLERGIES"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_1dks2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_rra0f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "column_break_tjrsj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "section_break_q3pqt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "daignosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "section_break_furgq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_d9xcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Data",
+   "label": "Doctor's Plan & Orders"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 16:26:27.097825",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "physician orders form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

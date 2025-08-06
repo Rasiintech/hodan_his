@@ -1,0 +1,330 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EGD-.#####",
+ "creation": "2023-04-17 09:49:36.498517",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "age",
+  "mobile",
+  "special__habits",
+  "marital_tatus",
+  "column_break_caglb",
+  "practitioner",
+  "practitioner_name",
+  "medical_department",
+  "medical__history_section",
+  "diseases",
+  "column_break_qrph2",
+  "drugs",
+  "surgical_history_tab",
+  "surgical_history_section",
+  "previous",
+  "column_break_7keiz",
+  "operation",
+  "column_break_iwbu9",
+  "blood_transfusion",
+  "section_break_zesxq",
+  "indication",
+  "previous_endoscopies",
+  "laboratory_results_tab",
+  "laboratory_results_section",
+  "virology",
+  "cbc",
+  "column_break_tysvb",
+  "inr",
+  "others",
+  "radiology_tab",
+  "section_break_ngaia",
+  "ultra_sound",
+  "ct",
+  "othres",
+  "finding",
+  "egd_tab",
+  "section_break_dk3ln",
+  "egd_prescription",
+  "medication_so",
+  "services_so",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_caglb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.mobile_no",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "marital_tatus",
+   "fieldtype": "Select",
+   "label": "Marital tatus",
+   "options": "\nSingle\nMarried"
+  },
+  {
+   "fieldname": "special__habits",
+   "fieldtype": "Data",
+   "label": "Special  Habits"
+  },
+  {
+   "fieldname": "medical__history_section",
+   "fieldtype": "Section Break",
+   "label": "Medical  history "
+  },
+  {
+   "fieldname": "diseases",
+   "fieldtype": "Data",
+   "label": "Diseases "
+  },
+  {
+   "fieldname": "column_break_qrph2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "drugs",
+   "fieldtype": "Data",
+   "label": "Drugs"
+  },
+  {
+   "fieldname": "surgical_history_section",
+   "fieldtype": "Section Break",
+   "label": "Surgical history "
+  },
+  {
+   "fieldname": "previous",
+   "fieldtype": "Data",
+   "label": "Previous "
+  },
+  {
+   "fieldname": "column_break_7keiz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operation",
+   "fieldtype": "Data",
+   "label": "Operation "
+  },
+  {
+   "fieldname": "column_break_iwbu9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blood_transfusion",
+   "fieldtype": "Data",
+   "label": "Blood transfusion"
+  },
+  {
+   "fieldname": "section_break_zesxq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "indication",
+   "fieldtype": "Data",
+   "label": "Indication"
+  },
+  {
+   "fieldname": "previous_endoscopies",
+   "fieldtype": "Data",
+   "label": "Previous endoscopies"
+  },
+  {
+   "fieldname": "laboratory_results_section",
+   "fieldtype": "Section Break",
+   "label": "Laboratory results"
+  },
+  {
+   "fieldname": "virology",
+   "fieldtype": "Data",
+   "label": "Virology"
+  },
+  {
+   "fieldname": "cbc",
+   "fieldtype": "Data",
+   "label": "CBC "
+  },
+  {
+   "fieldname": "column_break_tysvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inr",
+   "fieldtype": "Data",
+   "label": "INR"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "laboratory_results_tab",
+   "fieldtype": "Tab Break",
+   "label": "Laboratory results"
+  },
+  {
+   "fieldname": "surgical_history_tab",
+   "fieldtype": "Tab Break",
+   "label": "Surgical history"
+  },
+  {
+   "fieldname": "radiology_tab",
+   "fieldtype": "Tab Break",
+   "label": "Radiology "
+  },
+  {
+   "fieldname": "ultra_sound",
+   "fieldtype": "Data",
+   "label": "Ultra sound "
+  },
+  {
+   "fieldname": "ct",
+   "fieldtype": "Data",
+   "label": "CT  "
+  },
+  {
+   "fieldname": "othres",
+   "fieldtype": "Data",
+   "label": "OTHRES "
+  },
+  {
+   "fieldname": "finding",
+   "fieldtype": "Text Editor",
+   "label": "finding"
+  },
+  {
+   "fieldname": "section_break_ngaia",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "egd_tab",
+   "fieldtype": "Tab Break",
+   "label": "EGD"
+  },
+  {
+   "fieldname": "egd_prescription",
+   "fieldtype": "Table",
+   "label": "EGD Prescription",
+   "options": "EGD Prescription"
+  },
+  {
+   "fieldname": "section_break_dk3ln",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "practitioner.first_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "label": "Practitioner Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "medical_department",
+   "fieldtype": "Link",
+   "label": "Medical Department",
+   "options": "Medical Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "medication_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "services_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EGD",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-11 09:23:31.359219",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "EGD",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

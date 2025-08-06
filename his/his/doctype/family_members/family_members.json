@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-20 14:15:11.458676",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_type",
+  "full_name",
+  "sex",
+  "age",
+  "age_type",
+  "mobile",
+  "dr",
+  "visited",
+  "create_patient"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "member_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member Type",
+   "options": "Member Type"
+  },
+  {
+   "columns": 2,
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name"
+  },
+  {
+   "columns": 1,
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "columns": 1,
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "columns": 1,
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile"
+  },
+  {
+   "columns": 1,
+   "fieldname": "dr",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District\\Region",
+   "options": "Territory"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "default": "0",
+   "fieldname": "visited",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Registered"
+  },
+  {
+   "columns": 1,
+   "fieldname": "create_patient",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Register"
+  },
+  {
+   "columns": 1,
+   "fieldname": "age_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Age Type",
+   "options": "Year\nMonth\nDay"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-05 12:15:15.109385",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Family Members",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

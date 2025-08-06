@@ -1,0 +1,256 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 08:58:55.065569",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "dob",
+  "age",
+  "column_break_uqtgr",
+  "d",
+  "mrp",
+  "name1",
+  "consultant",
+  "taken",
+  "section_break_gji7d",
+  "bone_marrow_request_form",
+  "lab_no",
+  "clinical_details",
+  "wbc",
+  "hb",
+  "mcv",
+  "platelet_count",
+  "performed_by_particles",
+  "aspiration_site",
+  "ease_of_aspiration",
+  "particles",
+  "column_break_stgo4",
+  "cellularity",
+  "m_e_ratio",
+  "erythropoiesis",
+  "granulopoiesis",
+  "other_cells",
+  "storage_iron",
+  "sidercticgranules",
+  "other_tests_to_follow",
+  "conclusion",
+  "authorized_by",
+  "date"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Link",
+   "label": "Consultant",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "d",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "taken",
+   "fieldtype": "Data",
+   "label": "taken"
+  },
+  {
+   "fieldname": "bone_marrow_request_form",
+   "fieldtype": "Data",
+   "label": "Bone Marrow Request Form "
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "lab_no",
+   "fieldtype": "Data",
+   "label": "Lab No"
+  },
+  {
+   "fieldname": "clinical_details",
+   "fieldtype": "Data",
+   "label": "Clinical details "
+  },
+  {
+   "fieldname": "wbc",
+   "fieldtype": "Data",
+   "label": "WBC "
+  },
+  {
+   "fieldname": "hb",
+   "fieldtype": "Data",
+   "label": "hb "
+  },
+  {
+   "fieldname": "mcv",
+   "fieldtype": "Data",
+   "label": "MCV "
+  },
+  {
+   "fieldname": "platelet_count",
+   "fieldtype": "Data",
+   "label": "Platelet count "
+  },
+  {
+   "fieldname": "performed_by_particles",
+   "fieldtype": "Data",
+   "label": "Performed by Particles"
+  },
+  {
+   "fieldname": "aspiration_site",
+   "fieldtype": "Data",
+   "label": "Aspiration Site"
+  },
+  {
+   "fieldname": "ease_of_aspiration",
+   "fieldtype": "Data",
+   "label": "Ease of aspiration"
+  },
+  {
+   "fieldname": "particles",
+   "fieldtype": "Data",
+   "label": "Particles"
+  },
+  {
+   "fieldname": "cellularity",
+   "fieldtype": "Data",
+   "label": "Cellularity"
+  },
+  {
+   "fieldname": "m_e_ratio",
+   "fieldtype": "Data",
+   "label": "M E Ratio"
+  },
+  {
+   "fieldname": "erythropoiesis",
+   "fieldtype": "Data",
+   "label": "Erythropoiesis"
+  },
+  {
+   "fieldname": "granulopoiesis",
+   "fieldtype": "Data",
+   "label": "Granulopoiesis"
+  },
+  {
+   "fieldname": "other_cells",
+   "fieldtype": "Data",
+   "label": "Other Cells"
+  },
+  {
+   "fieldname": "storage_iron",
+   "fieldtype": "Data",
+   "label": "Storage iron"
+  },
+  {
+   "fieldname": "sidercticgranules",
+   "fieldtype": "Data",
+   "label": "Sidercticgranules"
+  },
+  {
+   "fieldname": "other_tests_to_follow",
+   "fieldtype": "Data",
+   "label": "Other tests to follow"
+  },
+  {
+   "fieldname": "conclusion",
+   "fieldtype": "Data",
+   "label": "Conclusion "
+  },
+  {
+   "fieldname": "authorized_by",
+   "fieldtype": "Data",
+   "label": "Authorized By"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_uqtgr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gji7d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_stgo4",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-29 14:23:12.233852",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Bone Marrow Request Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

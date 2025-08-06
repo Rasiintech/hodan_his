@@ -1,0 +1,361 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 13:40:07.469908",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_6zuwb",
+  "sex",
+  "nationality",
+  "section_break_ai6cd",
+  "bop",
+  "mrp_1",
+  "allergies",
+  "mrp_2",
+  "chief_complaint",
+  "diagnoses_impression",
+  "date_admitted",
+  "unit_ward_or_room_no",
+  "height",
+  "weight",
+  "bmi",
+  "service",
+  "column_break_h8wf7",
+  "assessment",
+  "date_ordered_1",
+  "name_of_drug_1",
+  "route_1",
+  "timing_1",
+  "date_d_c_1",
+  "vital_signs",
+  "pains_core",
+  "i_o",
+  "rbs",
+  "section_break_se5f9",
+  "other_special_monitoring",
+  "iv_site",
+  "intravenous_infusions",
+  "main_fluid",
+  "date_ordered_2",
+  "name_of_drug_2",
+  "route_2",
+  "timing_2",
+  "date_d_c_2",
+  "datetime_started",
+  "column_break_n8lpd",
+  "type_of_blood_given_unit",
+  "datetime_finished",
+  "diet",
+  "datetime",
+  "laboratory_wokrs",
+  "done",
+  "in",
+  "to_follow",
+  "diagnostics",
+  "special_endorcements"
+ ],
+ "fields": [
+  {
+   "fieldname": "bop",
+   "fieldtype": "Data",
+   "label": "BOP"
+  },
+  {
+   "fieldname": "mrp_1",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex ",
+   "options": "Gender"
+  },
+  {
+   "default": "Somali",
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "mrp_2",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Data",
+   "label": "Chief Complaint"
+  },
+  {
+   "fieldname": "diagnoses_impression",
+   "fieldtype": "Data",
+   "label": "Diagnoses Impression"
+  },
+  {
+   "fieldname": "date_admitted",
+   "fieldtype": "Date",
+   "label": "Date admitted"
+  },
+  {
+   "fieldname": "unit_ward_or_room_no",
+   "fieldtype": "Data",
+   "label": "Unit ward or Room No"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Data",
+   "label": "Service"
+  },
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Data",
+   "label": "Assessment"
+  },
+  {
+   "fieldname": "date_ordered_1",
+   "fieldtype": "Date",
+   "label": "Date Ordered"
+  },
+  {
+   "fieldname": "name_of_drug_1",
+   "fieldtype": "Data",
+   "label": "Name of drug and strength"
+  },
+  {
+   "fieldname": "route_1",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "timing_1",
+   "fieldtype": "Data",
+   "label": "Timing "
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_d_c_1",
+   "fieldtype": "Date",
+   "label": "Date D C"
+  },
+  {
+   "fieldname": "vital_signs",
+   "fieldtype": "Data",
+   "label": "Vital Signs"
+  },
+  {
+   "fieldname": "pains_core",
+   "fieldtype": "Data",
+   "label": "Pains core"
+  },
+  {
+   "fieldname": "i_o",
+   "fieldtype": "Data",
+   "label": "I O"
+  },
+  {
+   "fieldname": "rbs",
+   "fieldtype": "Data",
+   "label": "RBS"
+  },
+  {
+   "fieldname": "other_special_monitoring",
+   "fieldtype": "Data",
+   "label": "other special monitoring"
+  },
+  {
+   "fieldname": "iv_site",
+   "fieldtype": "Data",
+   "label": "IV site"
+  },
+  {
+   "fieldname": "intravenous_infusions",
+   "fieldtype": "Data",
+   "label": "Intravenous Infusions"
+  },
+  {
+   "fieldname": "main_fluid",
+   "fieldtype": "Data",
+   "label": "Main Fluid"
+  },
+  {
+   "fieldname": "date_ordered_2",
+   "fieldtype": "Date",
+   "label": "Date ordered"
+  },
+  {
+   "fieldname": "name_of_drug_2",
+   "fieldtype": "Data",
+   "label": "Name of drug and strength"
+  },
+  {
+   "fieldname": "route_2",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "timing_2",
+   "fieldtype": "Data",
+   "label": "Timing "
+  },
+  {
+   "fieldname": "date_d_c_2",
+   "fieldtype": "Date",
+   "label": "Date D C"
+  },
+  {
+   "fieldname": "datetime_started",
+   "fieldtype": "Datetime",
+   "label": "DateTime started"
+  },
+  {
+   "fieldname": "type_of_blood_given_unit",
+   "fieldtype": "Data",
+   "label": "Type of blood given unit"
+  },
+  {
+   "fieldname": "datetime_finished",
+   "fieldtype": "Datetime",
+   "label": "DateTime Finished"
+  },
+  {
+   "fieldname": "diet",
+   "fieldtype": "Data",
+   "label": "Diet"
+  },
+  {
+   "default": "Now",
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "DateTime"
+  },
+  {
+   "fieldname": "laboratory_wokrs",
+   "fieldtype": "Data",
+   "label": "Laboratory Wokrs"
+  },
+  {
+   "fieldname": "done",
+   "fieldtype": "Data",
+   "label": "Done"
+  },
+  {
+   "fieldname": "in",
+   "fieldtype": "Data",
+   "label": "IN"
+  },
+  {
+   "fieldname": "to_follow",
+   "fieldtype": "Data",
+   "label": "To Follow"
+  },
+  {
+   "fieldname": "diagnostics",
+   "fieldtype": "Data",
+   "label": "Diagnostics"
+  },
+  {
+   "fieldname": "special_endorcements",
+   "fieldtype": "Data",
+   "label": "Special endorcements"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_6zuwb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ai6cd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_h8wf7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_se5f9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_n8lpd",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:18:11.974519",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "INPATIENT KARDEX",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

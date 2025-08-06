@@ -1,0 +1,430 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 10:51:25.406832",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_name",
+  "column_break_rl2ic",
+  "patient",
+  "column_break_dtjzs",
+  "dob",
+  "column_break_katft",
+  "site_marking_completed_by_the_consultantspecialist_surgeon",
+  "section_break_2oyt6",
+  "datetime",
+  "column_break_luuds",
+  "procedure",
+  "reviewd",
+  "site_mark__i_have_verified_the_operative_site",
+  "inforation",
+  "site",
+  "column_break_qk0r7",
+  "level",
+  "column_break_wq49d",
+  "site_marked_by",
+  "column_break_k70bm",
+  "date_time_2",
+  "section_break_cipkf",
+  "surgeon__consultant_signature",
+  "column_break_1ogwi",
+  "specialist_surgeon",
+  "section_break_zntja",
+  "pre_op",
+  "section_break_8thos",
+  "date",
+  "column_break_xoilu",
+  "procedure_2",
+  "column_break_wohb6",
+  "time",
+  "section_break_macwp",
+  "el_p",
+  "section_break_qricq",
+  "time_out_process",
+  "the_surgical",
+  "section_break_9fvzg",
+  "correct_patient",
+  "column_break_nsael",
+  "procedure_to_be_performed",
+  "column_break_8dyek",
+  "site_of_the_procedure",
+  "column_break_xwzho",
+  "patient_properly_positioned",
+  "section_break_kafix",
+  "required_implantsequipment",
+  "column_break_aby2y",
+  "correct_radiology_images_displayed",
+  "column_break_lyxim",
+  "section_break_hqyd5",
+  "surgical_procedural_team_members",
+  "section_break_qkobn",
+  "consultant_surgeon",
+  "column_break_ueiiy",
+  "nurse",
+  "column_break_wknpr",
+  "anesthetist",
+  "column_break_okxoc",
+  "other",
+  "section_break_tjurb",
+  "discrepancy_resolution",
+  "section_break_jyush",
+  "signature",
+  "column_break_wrkqd",
+  "id_number",
+  "column_break_vrde1",
+  "stamp"
+ ],
+ "fields": [
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "pid.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "site_marking_completed_by_the_consultantspecialist_surgeon",
+   "fieldtype": "Data",
+   "label": "SITE MARKING (completed by the Consultant/Specialist Surgeon)"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "DateTime"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Data",
+   "label": "Procedure"
+  },
+  {
+   "fieldname": "reviewd",
+   "fieldtype": "Column Break",
+   "options": "I have reviewed the following information sources and all are consistent with regard to the patient identity, procedure, and the site/side: Patient name. medical record number, consent form, history and physical, pathology reports, radiology reports and images (films/ PCS)."
+  },
+  {
+   "fieldname": "inforation",
+   "fieldtype": "Section Break",
+   "options": "Information as stated by the patient/legal representative is consistent with the relevant Documentation . "
+  },
+  {
+   "default": "0",
+   "fieldname": "site_mark__i_have_verified_the_operative_site",
+   "fieldtype": "Check",
+   "label": "SITE MARK  I have verified the operative site"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Data",
+   "label": "Site"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Data",
+   "label": "Level"
+  },
+  {
+   "fieldname": "site_marked_by",
+   "fieldtype": "Data",
+   "label": "Site Marked by"
+  },
+  {
+   "fieldname": "date_time_2",
+   "fieldtype": "Data",
+   "label": "DateTime"
+  },
+  {
+   "fieldname": "surgeon__consultant_signature",
+   "fieldtype": "Data",
+   "label": "Surgeon  Consultant Signature"
+  },
+  {
+   "fieldname": "specialist_surgeon",
+   "fieldtype": "Data",
+   "label": "Specialist Surgeon"
+  },
+  {
+   "fieldname": "pre_op",
+   "fieldtype": "HTML",
+   "options": "PRE OPERATIVE PROCEDURE VERIFICATION Complete and signed by the circulating Nurse"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "procedure_2",
+   "fieldtype": "Data",
+   "label": "Procedure"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "el_p",
+   "fieldtype": "HTML",
+   "options": "El Patient identity and procedural/surgical site verified and consistent with all relevant Documentation"
+  },
+  {
+   "fieldname": "time_out_process",
+   "fieldtype": "Data",
+   "label": "TIME OUT PROCESS"
+  },
+  {
+   "fieldname": "the_surgical",
+   "fieldtype": "HTML",
+   "options": "The Surgical/Procedural Team members verbally verify their agreement with the following"
+  },
+  {
+   "default": "0",
+   "fieldname": "correct_patient",
+   "fieldtype": "Check",
+   "label": "Correct Patient"
+  },
+  {
+   "default": "0",
+   "fieldname": "procedure_to_be_performed",
+   "fieldtype": "Check",
+   "label": "Procedure to be performed "
+  },
+  {
+   "default": "0",
+   "fieldname": "site_of_the_procedure",
+   "fieldtype": "Check",
+   "label": "Site of the procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "patient_properly_positioned",
+   "fieldtype": "Check",
+   "label": "Patient Properly Positioned"
+  },
+  {
+   "default": "0",
+   "fieldname": "required_implantsequipment",
+   "fieldtype": "Check",
+   "label": "Required implants/equipment"
+  },
+  {
+   "default": "0",
+   "fieldname": "correct_radiology_images_displayed",
+   "fieldtype": "Check",
+   "label": "Correct radiology images Displayed "
+  },
+  {
+   "fieldname": "surgical_procedural_team_members",
+   "fieldtype": "HTML",
+   "label": "SURGICAL Procedural Team Members",
+   "options": "SURGICAL Procedural Team Members"
+  },
+  {
+   "fieldname": "consultant_surgeon",
+   "fieldtype": "Data",
+   "label": "Consultant Surgeon "
+  },
+  {
+   "fieldname": "nurse",
+   "fieldtype": "Data",
+   "label": "Nurse"
+  },
+  {
+   "fieldname": "anesthetist",
+   "fieldtype": "Data",
+   "label": "Anesthetist"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "discrepancy_resolution",
+   "fieldtype": "Data",
+   "label": "Discrepancy Resolution"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "label": "ID Number"
+  },
+  {
+   "fieldname": "stamp",
+   "fieldtype": "Data",
+   "label": "Stamp"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_rl2ic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dtjzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_katft",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_2oyt6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_luuds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qk0r7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wq49d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_k70bm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cipkf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_1ogwi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zntja",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xoilu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wohb6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_macwp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_8thos",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_qricq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_9fvzg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nsael",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8dyek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xwzho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kafix",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_aby2y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hqyd5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lyxim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qkobn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ueiiy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wknpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_okxoc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tjurb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_jyush",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wrkqd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vrde1",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-29 11:48:20.797005",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "SURGICAL PROCEDURE VERIFICATION FORM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

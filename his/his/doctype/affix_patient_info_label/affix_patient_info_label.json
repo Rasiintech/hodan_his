@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-07 09:48:33.522007",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "post_anesthesia_recovery_score",
+  "admin",
+  "15",
+  "30",
+  "1_hr",
+  "discharge",
+  "vent_settings",
+  "abgs"
+ ],
+ "fields": [
+  {
+   "fieldname": "post_anesthesia_recovery_score",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Post Anesthesia Recovery Score"
+  },
+  {
+   "fieldname": "admin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Admin"
+  },
+  {
+   "fieldname": "15",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "15"
+  },
+  {
+   "fieldname": "30",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "30"
+  },
+  {
+   "fieldname": "1_hr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "1 hr"
+  },
+  {
+   "fieldname": "discharge",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Discharge"
+  },
+  {
+   "fieldname": "vent_settings",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vent Settings"
+  },
+  {
+   "fieldname": "abgs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ABGs"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-07 09:48:33.522007",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Affix Patient Info Label",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

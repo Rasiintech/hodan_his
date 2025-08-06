@@ -1,0 +1,871 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-05 10:57:29.779344",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patientid",
+  "patient_name",
+  "mr",
+  "column_break_gl7wy",
+  "date",
+  "time",
+  "anesthesiologist",
+  "surgeon",
+  "on_section",
+  "onbracletcheck",
+  "onalarms_section",
+  "onalarmscheck",
+  "sec",
+  "warmblanketcheck",
+  "bairhagercheck",
+  "overheadwarmercheck",
+  "section_break_qcib1",
+  "oxygenationdata",
+  "section_break_5grli",
+  "anesthesia_signature",
+  "allergies",
+  "column_break_kuxwl",
+  "post_op_condition",
+  "history",
+  "section_break_wdgp4",
+  "anesthetic_agents",
+  "generalscheck",
+  "regionalcheck",
+  "spinalcheck",
+  "epiduralcheck",
+  "caudalcheck",
+  "localblockcheck",
+  "maccheck",
+  "pain_intensity_section",
+  "pain_intensity",
+  "rr_section",
+  "rr",
+  "foleycbi_section",
+  "na",
+  "clear_amber",
+  "hematuria",
+  "dark_amber",
+  "other",
+  "abdomen_section",
+  "soft",
+  "distended",
+  "abdomen_other",
+  "nasea_section",
+  "yes",
+  "no",
+  "drsg_dry_intact_section",
+  "yes_drsg_dry_intact",
+  "no_drsg_dry_intact",
+  "na_drsg_dry_intact",
+  "reinforced_section",
+  "yes_reinforced",
+  "no_reinforced",
+  "drainage_section",
+  "none",
+  "serious",
+  "sanguineous",
+  "purulent",
+  "iv_sites_section",
+  "patient",
+  "na_iv_sites",
+  "other_iv_sites",
+  "gyn_section",
+  "gyn_na",
+  "vaginal_bleeding_section",
+  "scant",
+  "small",
+  "mod",
+  "large",
+  "none_vaginalbleeding",
+  "neuro_section",
+  "fully_awake",
+  "drowsy",
+  "lethargic",
+  "none_responsive",
+  "moves_extremities_section",
+  "all_4",
+  "2",
+  "0",
+  "check",
+  "able_to_feel_section",
+  "all_4_able_to_feel",
+  "2_able_to_feel",
+  "0_able_to_feel",
+  "na_able_to_feel",
+  "respiration_section",
+  "normal",
+  "deep",
+  "shallow",
+  "laboured",
+  "vented",
+  "breath_sounds_section",
+  "clear",
+  "crackles",
+  "rhonchi",
+  "dim_absent",
+  "wheeze",
+  "colors_section",
+  "normal_pink",
+  "pale",
+  "flushed",
+  "dusky",
+  "cyanotic",
+  "jaundiced",
+  "section_break_7ztnk",
+  "affix_patient_info_label",
+  "section_break_kzfvf",
+  "intake",
+  "column_break_8flks",
+  "outpt",
+  "section_break_hq90h",
+  "pacu_total",
+  "section_break_gquxv",
+  "pacu_intervention",
+  "section_break_s4mkn",
+  "accu_check_time",
+  "lab_result",
+  "data_collection",
+  "section_break_ed25i",
+  "weight_in_kg",
+  "titrated_infusions",
+  "section_break_fg356",
+  "nurse_narrative",
+  "full_signature",
+  "init"
+ ],
+ "fields": [
+  {
+   "fieldname": "patientid",
+   "fieldtype": "Link",
+   "label": "PatientID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patientid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "anesthesiologist",
+   "fieldtype": "Data",
+   "label": "Anesthesiologist"
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Data",
+   "label": "Surgeon"
+  },
+  {
+   "fieldname": "on_section",
+   "fieldtype": "Section Break",
+   "label": "ID Braclet"
+  },
+  {
+   "default": "0",
+   "fieldname": "onbracletcheck",
+   "fieldtype": "Check",
+   "label": "On "
+  },
+  {
+   "fieldname": "onalarms_section",
+   "fieldtype": "Section Break",
+   "label": "Alarms"
+  },
+  {
+   "default": "0",
+   "fieldname": "onalarmscheck",
+   "fieldtype": "Check",
+   "label": "On "
+  },
+  {
+   "default": "0",
+   "fieldname": "warmblanketcheck",
+   "fieldtype": "Check",
+   "label": "Warm Blanket"
+  },
+  {
+   "default": "0",
+   "fieldname": "bairhagercheck",
+   "fieldtype": "Check",
+   "label": "Bair hager"
+  },
+  {
+   "default": "0",
+   "fieldname": "overheadwarmercheck",
+   "fieldtype": "Check",
+   "label": "OverHead Warmer"
+  },
+  {
+   "fieldname": "section_break_qcib1",
+   "fieldtype": "Section Break",
+   "label": "OXYGENATION"
+  },
+  {
+   "fieldname": "mr",
+   "fieldtype": "Data",
+   "label": "MR"
+  },
+  {
+   "fieldname": "column_break_gl7wy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "oxygenationdata",
+   "fieldtype": "Table",
+   "options": "OXYGENATION"
+  },
+  {
+   "fieldname": "section_break_5grli",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "anesthesia_signature",
+   "fieldtype": "Data",
+   "label": "Anesthesia Signature"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "post_op_condition",
+   "fieldtype": "Data",
+   "label": "Post OP Condition"
+  },
+  {
+   "fieldname": "history",
+   "fieldtype": "Data",
+   "label": "History"
+  },
+  {
+   "fieldname": "column_break_kuxwl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wdgp4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "anesthetic_agents",
+   "fieldtype": "Section Break",
+   "label": "Anesthetic Agents"
+  },
+  {
+   "default": "0",
+   "fieldname": "generalscheck",
+   "fieldtype": "Check",
+   "label": "Generals"
+  },
+  {
+   "default": "0",
+   "fieldname": "regionalcheck",
+   "fieldtype": "Check",
+   "label": "Regional"
+  },
+  {
+   "default": "0",
+   "fieldname": "spinalcheck",
+   "fieldtype": "Check",
+   "label": "Spinal"
+  },
+  {
+   "default": "0",
+   "fieldname": "epiduralcheck",
+   "fieldtype": "Check",
+   "label": "Epidural"
+  },
+  {
+   "default": "0",
+   "fieldname": "caudalcheck",
+   "fieldtype": "Check",
+   "label": "Caudal"
+  },
+  {
+   "default": "0",
+   "fieldname": "localblockcheck",
+   "fieldtype": "Check",
+   "label": "Local Block"
+  },
+  {
+   "default": "0",
+   "fieldname": "maccheck",
+   "fieldtype": "Check",
+   "label": "MAC"
+  },
+  {
+   "fieldname": "pain_intensity_section",
+   "fieldtype": "Section Break",
+   "label": "Pain Intensity"
+  },
+  {
+   "fieldname": "pain_intensity",
+   "fieldtype": "Table",
+   "options": "Pain Intensity"
+  },
+  {
+   "fieldname": "rr_section",
+   "fieldtype": "Section Break",
+   "label": "RR"
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Table",
+   "options": "RR"
+  },
+  {
+   "fieldname": "foleycbi_section",
+   "fieldtype": "Section Break",
+   "label": "Foley/CBI"
+  },
+  {
+   "default": "0",
+   "fieldname": "na",
+   "fieldtype": "Check",
+   "label": "NA"
+  },
+  {
+   "default": "0",
+   "fieldname": "clear_amber",
+   "fieldtype": "Check",
+   "label": "Clear Amber"
+  },
+  {
+   "default": "0",
+   "fieldname": "hematuria",
+   "fieldtype": "Check",
+   "label": "Hematuria"
+  },
+  {
+   "default": "0",
+   "fieldname": "dark_amber",
+   "fieldtype": "Check",
+   "label": "Dark Amber"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "abdomen_section",
+   "fieldtype": "Section Break",
+   "label": "Abdomen"
+  },
+  {
+   "default": "0",
+   "fieldname": "soft",
+   "fieldtype": "Check",
+   "label": "Soft"
+  },
+  {
+   "default": "0",
+   "fieldname": "distended",
+   "fieldtype": "Check",
+   "label": "Distended"
+  },
+  {
+   "fieldname": "abdomen_other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "nasea_section",
+   "fieldtype": "Section Break",
+   "label": "Nasea"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "drsg_dry_intact_section",
+   "fieldtype": "Section Break",
+   "label": "DRSG DRY INTACT"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_drsg_dry_intact",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_drsg_dry_intact",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "default": "0",
+   "fieldname": "na_drsg_dry_intact",
+   "fieldtype": "Check",
+   "label": "NA"
+  },
+  {
+   "fieldname": "reinforced_section",
+   "fieldtype": "Section Break",
+   "label": "Reinforced"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_reinforced",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_reinforced",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "drainage_section",
+   "fieldtype": "Section Break",
+   "label": "Drainage"
+  },
+  {
+   "default": "0",
+   "fieldname": "none",
+   "fieldtype": "Check",
+   "label": "None"
+  },
+  {
+   "default": "0",
+   "fieldname": "serious",
+   "fieldtype": "Check",
+   "label": "Serious"
+  },
+  {
+   "default": "0",
+   "fieldname": "sanguineous",
+   "fieldtype": "Check",
+   "label": "Sanguineous"
+  },
+  {
+   "default": "0",
+   "fieldname": "purulent",
+   "fieldtype": "Check",
+   "label": "Purulent"
+  },
+  {
+   "fieldname": "iv_sites_section",
+   "fieldtype": "Section Break",
+   "label": "IV sites"
+  },
+  {
+   "default": "0",
+   "fieldname": "patient",
+   "fieldtype": "Check",
+   "label": "Patient"
+  },
+  {
+   "default": "0",
+   "fieldname": "na_iv_sites",
+   "fieldtype": "Check",
+   "label": "NA"
+  },
+  {
+   "fieldname": "other_iv_sites",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "gyn_section",
+   "fieldtype": "Section Break",
+   "label": "GYN"
+  },
+  {
+   "default": "0",
+   "fieldname": "gyn_na",
+   "fieldtype": "Check",
+   "label": "NA"
+  },
+  {
+   "fieldname": "vaginal_bleeding_section",
+   "fieldtype": "Section Break",
+   "label": "Vaginal Bleeding"
+  },
+  {
+   "default": "0",
+   "fieldname": "scant",
+   "fieldtype": "Check",
+   "label": "Scant"
+  },
+  {
+   "default": "0",
+   "fieldname": "small",
+   "fieldtype": "Check",
+   "label": "Small"
+  },
+  {
+   "default": "0",
+   "fieldname": "mod",
+   "fieldtype": "Check",
+   "label": "MOD"
+  },
+  {
+   "default": "0",
+   "fieldname": "large",
+   "fieldtype": "Check",
+   "label": "Large"
+  },
+  {
+   "default": "0",
+   "fieldname": "none_vaginalbleeding",
+   "fieldtype": "Check",
+   "label": "None"
+  },
+  {
+   "fieldname": "neuro_section",
+   "fieldtype": "Section Break",
+   "label": "Neuro"
+  },
+  {
+   "default": "0",
+   "fieldname": "fully_awake",
+   "fieldtype": "Check",
+   "label": "Fully Awake"
+  },
+  {
+   "default": "0",
+   "fieldname": "drowsy",
+   "fieldtype": "Check",
+   "label": "Drowsy"
+  },
+  {
+   "default": "0",
+   "fieldname": "lethargic",
+   "fieldtype": "Check",
+   "label": "Lethargic"
+  },
+  {
+   "fieldname": "none_responsive",
+   "fieldtype": "Data",
+   "label": "None Responsive"
+  },
+  {
+   "fieldname": "moves_extremities_section",
+   "fieldtype": "Section Break",
+   "label": "Moves Extremities"
+  },
+  {
+   "default": "0",
+   "fieldname": "all_4",
+   "fieldtype": "Check",
+   "label": "All 4"
+  },
+  {
+   "default": "0",
+   "fieldname": "2",
+   "fieldtype": "Check",
+   "label": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "0",
+   "fieldtype": "Check",
+   "label": "0"
+  },
+  {
+   "default": "0",
+   "fieldname": "check",
+   "fieldtype": "Check",
+   "label": "NA"
+  },
+  {
+   "fieldname": "able_to_feel_section",
+   "fieldtype": "Section Break",
+   "label": "Able to feel"
+  },
+  {
+   "default": "0",
+   "fieldname": "all_4_able_to_feel",
+   "fieldtype": "Check",
+   "label": "All 4"
+  },
+  {
+   "default": "0",
+   "fieldname": "2_able_to_feel",
+   "fieldtype": "Check",
+   "label": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "0_able_to_feel",
+   "fieldtype": "Check",
+   "label": "0"
+  },
+  {
+   "default": "0",
+   "fieldname": "na_able_to_feel",
+   "fieldtype": "Check",
+   "label": "NA"
+  },
+  {
+   "fieldname": "respiration_section",
+   "fieldtype": "Section Break",
+   "label": "Respiration"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "default": "0",
+   "fieldname": "deep",
+   "fieldtype": "Check",
+   "label": "Deep"
+  },
+  {
+   "default": "0",
+   "fieldname": "shallow",
+   "fieldtype": "Check",
+   "label": "Shallow"
+  },
+  {
+   "default": "0",
+   "fieldname": "laboured",
+   "fieldtype": "Check",
+   "label": "Laboured"
+  },
+  {
+   "default": "0",
+   "fieldname": "vented",
+   "fieldtype": "Check",
+   "label": "Vented"
+  },
+  {
+   "fieldname": "breath_sounds_section",
+   "fieldtype": "Section Break",
+   "label": "Breath Sounds"
+  },
+  {
+   "default": "0",
+   "fieldname": "clear",
+   "fieldtype": "Check",
+   "label": "Clear"
+  },
+  {
+   "default": "0",
+   "fieldname": "crackles",
+   "fieldtype": "Check",
+   "label": "Crackles"
+  },
+  {
+   "default": "0",
+   "fieldname": "rhonchi",
+   "fieldtype": "Check",
+   "label": "Rhonchi"
+  },
+  {
+   "default": "0",
+   "fieldname": "dim_absent",
+   "fieldtype": "Check",
+   "label": "DIM Absent"
+  },
+  {
+   "default": "0",
+   "fieldname": "wheeze",
+   "fieldtype": "Check",
+   "label": "Wheeze"
+  },
+  {
+   "fieldname": "colors_section",
+   "fieldtype": "Section Break",
+   "label": "Colors"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal_pink",
+   "fieldtype": "Check",
+   "label": "Normal pink"
+  },
+  {
+   "default": "0",
+   "fieldname": "pale",
+   "fieldtype": "Check",
+   "label": "Pale"
+  },
+  {
+   "default": "0",
+   "fieldname": "flushed",
+   "fieldtype": "Check",
+   "label": "Flushed"
+  },
+  {
+   "default": "0",
+   "fieldname": "dusky",
+   "fieldtype": "Check",
+   "label": "Dusky"
+  },
+  {
+   "default": "0",
+   "fieldname": "cyanotic",
+   "fieldtype": "Check",
+   "label": "Cyanotic"
+  },
+  {
+   "default": "0",
+   "fieldname": "jaundiced",
+   "fieldtype": "Check",
+   "label": "Jaundiced"
+  },
+  {
+   "fieldname": "sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_7ztnk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "affix_patient_info_label",
+   "fieldtype": "Table",
+   "label": "Affix Patient Info Label",
+   "options": "Affix Patient Info Label"
+  },
+  {
+   "fieldname": "section_break_kzfvf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "intake",
+   "fieldtype": "Table",
+   "label": "Intake",
+   "options": "Recovery Room PACU Record Intake"
+  },
+  {
+   "fieldname": "outpt",
+   "fieldtype": "Table",
+   "label": "Outpt",
+   "options": "Recovery Room PACU Record Output"
+  },
+  {
+   "fieldname": "column_break_8flks",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hq90h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pacu_total",
+   "fieldtype": "Table",
+   "label": "Pacu total",
+   "options": "Pacu total"
+  },
+  {
+   "fieldname": "section_break_gquxv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pacu_intervention",
+   "fieldtype": "Table",
+   "label": "Pacu Intervention",
+   "options": "Pacu Intervention"
+  },
+  {
+   "fieldname": "section_break_s4mkn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "accu_check_time",
+   "fieldtype": "Time",
+   "label": "Accu check time"
+  },
+  {
+   "fieldname": "lab_result",
+   "fieldtype": "Data",
+   "label": "Lab result"
+  },
+  {
+   "fieldname": "data_collection",
+   "fieldtype": "Table",
+   "label": "Data Collection",
+   "options": "Data Collection"
+  },
+  {
+   "fieldname": "section_break_ed25i",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "titrated_infusions",
+   "fieldtype": "Table",
+   "label": "Titrated infusions",
+   "options": "Titrated infusions"
+  },
+  {
+   "fieldname": "weight_in_kg",
+   "fieldtype": "Data",
+   "label": "Weight in KG"
+  },
+  {
+   "fieldname": "section_break_fg356",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nurse_narrative",
+   "fieldtype": "Data",
+   "label": "Nurse Narrative"
+  },
+  {
+   "fieldname": "full_signature",
+   "fieldtype": "Data",
+   "label": "Full signature"
+  },
+  {
+   "fieldname": "init",
+   "fieldtype": "Data",
+   "label": "INIT"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-07 10:12:05.339694",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Recovery Room PACU Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

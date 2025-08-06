@@ -1,0 +1,51 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-06-09 10:25:26.937253",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "Start_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "End_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2024-12-30 09:01:19.310117",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Emergency Depart Daily Revenue Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    S.patient_name AS \"Patient Name:Data:300\",\n    SUM(S.paid_amount) AS \"Cash:Currency:100\",\n    SUM(S.outstanding_amount) AS \"Credit:Currency:100\",\n    SUM(CASE WHEN I.item_group != 'Drug' THEN I.net_amount * I.qty ELSE 0 END) AS \"Service Income:Currency:130\",\n    SUM(CASE WHEN I.item_group = 'Drug' THEN I.net_amount * I.qty ELSE 0 END) AS \"Drug Income:Currency:100\",\n     SUM(S.grand_total) AS \"Total Income:Currency:100\"\nFROM \n    `tabSales Invoice` S\nJOIN \n    `tabSales Invoice Item` I\nON \n    S.name = I.parent\nWHERE  \n    S.docstatus = 1\nAND \n    S.posting_date BETWEEN %(Start_date)s AND %(End_date)s\nAND \n    S.source_order=\"E.R\"\nGROUP BY \n    S.patient_name\n    \n",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Emergency Depart Daily Revenue Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ]
+}

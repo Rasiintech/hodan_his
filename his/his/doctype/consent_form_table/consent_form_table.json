@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-27 23:47:41.929727",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "magac",
+  "xariirka_qarabonimo",
+  "saxiisa"
+ ],
+ "fields": [
+  {
+   "fieldname": "magac",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Magac"
+  },
+  {
+   "fieldname": "xariirka_qarabonimo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Xariirka Qarabonimo"
+  },
+  {
+   "fieldname": "saxiisa",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Saxiisa",
+   "options": "____________________"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-27 23:48:51.508504",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Consent Form Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

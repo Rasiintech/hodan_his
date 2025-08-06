@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2023-06-11 08:35:28.550745",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-06-11 08:35:34.252616",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "canteen-orders",
+ "owner": "Administrator",
+ "page_name": "canteen-orders",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

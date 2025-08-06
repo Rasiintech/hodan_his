@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:patient_name",
+ "creation": "2024-02-22 10:21:38.811883",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_id",
+  "column_break_m2w2v",
+  "patient_name",
+  "column_break_l0flb",
+  "date_of_admission",
+  "section_break_guxxm",
+  "in",
+  "column_break_gtcad",
+  "ou",
+  "section_break_sclf9",
+  "total_input",
+  "column_break_jfa5u",
+  "total_output",
+  "column_break_gxz8h",
+  "difference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_id",
+   "fieldtype": "Link",
+   "label": "Patient ID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_m2w2v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient_id.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_l0flb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "label": "Date of Admission "
+  },
+  {
+   "fieldname": "section_break_guxxm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "in",
+   "fieldtype": "Table",
+   "options": "Intake"
+  },
+  {
+   "fieldname": "column_break_gtcad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ou",
+   "fieldtype": "Table",
+   "options": "Output"
+  },
+  {
+   "fieldname": "section_break_sclf9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_input",
+   "fieldtype": "Data",
+   "label": "Total Input"
+  },
+  {
+   "fieldname": "column_break_jfa5u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_output",
+   "fieldtype": "Data",
+   "label": "Total Output"
+  },
+  {
+   "fieldname": "column_break_gxz8h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "difference",
+   "fieldtype": "Data",
+   "label": "Difference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Intake and Output Record",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-22 12:15:14.980058",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Intake and Output Record",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maternity",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

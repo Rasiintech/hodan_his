@@ -1,0 +1,354 @@
+{
+ "actions": [],
+ "autoname": "SP-.##### ",
+ "creation": "2023-05-26 10:04:38.988499",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "represent",
+  "procedure",
+  "inpatient_record",
+  "column_break_urecj",
+  "consultant",
+  "ipd_doctor",
+  "department",
+  "date",
+  "time",
+  "vitals_tab",
+  "view_as_chart",
+  "vitals",
+  "drug_sheet_tab",
+  "drug",
+  "lab_tab",
+  "lab",
+  "imaging",
+  "imaging_html",
+  "surgery_tab",
+  "surgery",
+  "progress_note_tab",
+  "progress_note",
+  "blood_transfusion_tab",
+  "blood_transfusion",
+  "procedures_tab",
+  "procedures",
+  "news_action_chart_tab",
+  "news_action__chart",
+  "prescription_tab",
+  "med",
+  "other_requirements_tab",
+  "requirements",
+  "consent_form_tab",
+  "consent",
+  "consent_form",
+  "consent_surgery_form",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "vitals_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Vitals"
+  },
+  {
+   "fieldname": "view_as_chart",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "View As Chart"
+  },
+  {
+   "fieldname": "vitals",
+   "fieldtype": "HTML",
+   "label": "Vitals",
+   "options": "<div id=\"vitals\">  </div>"
+  },
+  {
+   "fieldname": "drug_sheet_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Drug Sheet"
+  },
+  {
+   "fieldname": "drug",
+   "fieldtype": "HTML",
+   "label": "drug",
+   "options": "<div id=\"drug_sheet\">  </div>"
+  },
+  {
+   "fieldname": "lab_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Labs"
+  },
+  {
+   "fieldname": "lab",
+   "fieldtype": "HTML",
+   "label": "lab",
+   "options": "<div id=\"labs\">  </div>"
+  },
+  {
+   "fieldname": "imaging",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "imaging_html",
+   "fieldtype": "HTML",
+   "label": "Imaging_html",
+   "options": "<div id=\"imaging\">  </div>"
+  },
+  {
+   "fieldname": "surgery_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Surgery"
+  },
+  {
+   "fieldname": "surgery",
+   "fieldtype": "HTML",
+   "label": "Surgery",
+   "options": "<div id=\"surgery\">  </div>"
+  },
+  {
+   "fieldname": "progress_note_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Progress Note"
+  },
+  {
+   "fieldname": "progress_note",
+   "fieldtype": "HTML",
+   "label": "Progress Note",
+   "options": "<div id=\"progress_note\">  </div>"
+  },
+  {
+   "fieldname": "blood_transfusion_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Blood Transfusion"
+  },
+  {
+   "fieldname": "blood_transfusion",
+   "fieldtype": "HTML",
+   "label": "Blood Transfusion",
+   "options": "<div id=\"blood_transfusion\">  </div>"
+  },
+  {
+   "fieldname": "procedures_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Procedures"
+  },
+  {
+   "fieldname": "procedures",
+   "fieldtype": "HTML",
+   "label": "Procedures",
+   "options": "<div id=\"procedures\">  </div>"
+  },
+  {
+   "fieldname": "news_action_chart_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "News Action  Chart"
+  },
+  {
+   "fieldname": "news_action__chart",
+   "fieldtype": "HTML",
+   "label": "News Action  Chart",
+   "options": "<div id=\"news_action_chart\">  </div>"
+  },
+  {
+   "fieldname": "prescription_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Prescription",
+   "read_only": 1
+  },
+  {
+   "fieldname": "med",
+   "fieldtype": "HTML",
+   "label": "med",
+   "options": "<div id=\"med\">  </div>"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Link",
+   "label": "Procedure",
+   "options": "Clinical Procedure Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_urecj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "consultant.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "other_requirements_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Other Requirements"
+  },
+  {
+   "fieldname": "requirements",
+   "fieldtype": "Table",
+   "label": "Requirements",
+   "options": "Requirements"
+  },
+  {
+   "fieldname": "consent_form_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Consent Form"
+  },
+  {
+   "fieldname": "consent",
+   "fieldtype": "HTML",
+   "label": "Consent",
+   "options": "<style>\nhtml {\n    font-size: 100%;\n    box-sizing: border-box\n}\n\n*,\n*::before,\n*::after {\n    box-sizing: inherit\n}\n\nbody {\n    padding: 0;\n    margin: 0;\n    font-family: \"Public Sans\", sans-serif;\n    font-size: .875rem;\n    font-weight: 300;\n    color: #000\n}\n\nh1,\nh2,\nh3 {\n    font-weight: 300;\n    color: #000;\n    margin-top: 0\n}\n\np {\n    margin-top: 0\n}\n\na,\na:visited,\na:hover {\n    text-decoration: none\n}\n\n.marginX {\n    margin-inline: 50px\n}\n\n\n\n.header__top {\n    display: flex;\n    align-items: center;\n    gap: 9px\n}\n\n.header__logo {\n    width: 70px;\n    height: 70px;\n    -o-object-fit: contain;\n    object-fit: contain;\n    padding-bottom: 9px\n}\n\n.header__title {\n    font-weight: bold;\n    text-transform: uppercase\n}\n\n.header__midd {\n    display: flex;\n    align-items: center;\n    margin-left: 39px\n}\n\n.header__phone {\n    font-size: 1.125rem\n}\n\n.header__bottom {\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n    margin-left: 59px\n}\n\n.header__gmail {\n    font-size: 1.125rem\n}\n\n.header__country {\n    font-size: 1.125rem;\n    text-align: center\n}\n\n.banner {\n    display: flex;\n    flex-direction: column;\n    -webkit-margin-before: 10px;\n    margin-block-start: 10px;\n    gap: 8px\n}\n\n.banner__title {\n    text-align: center;\n    font-weight: bold;\n    font-size: 1.0rem;\n    text-transform: uppercase\n}\n\n.banner__top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between\n}\n\n.banner__left {\n    border: 1px solid #000\n}\n\n.banner__no {\n    text-transform: uppercase;\n    font-weight: bold;\n    padding-left: 8px\n}\n\n.banner__id {\n    text-transform: uppercase;\n    border-left: 1px solid #000;\n    padding-left: 8px;\n    padding-right: 16px;\n    font-weight: bold\n}\n\n.banner__right {\n    font-weight: bold\n}\n\n.banner__date {\n    font-weight: bold\n}\n\n.banner__midd {\n    display: flex;\n    align-items: center;\n    gap: 18px\n}\n\n.banner__client {\n    font-weight: 400\n}\n\n.banner__clientname {\n    font-weight: bold;\n    text-transform: uppercase\n}\n\n.banner__bottom {\n    display: flex;\n    flex-direction: column;\n    gap: 3px\n}\n\n.banner__contact {\n    font-weight: 400\n}\n\n.banner__country {\n    font-weight: 400\n}\n\n.table {\n    border-collapse: collapse;\n    border-top: 1px solid #000;\n    border-left: 1px solid #000;\n    border-right: 1px solid #000;\n    -webkit-margin-before: 15px;\n    margin-block-start: 15px\n}\n\n.table__tb {\n    width: 100%\n}\n\n.table__tb thead tr th {\n    border-left: 1px solid #000 !important;\n    text-align: left\n}\n.table__tb thead tr th:last-child {\n    text-align: right\n}\n\n.table__tb thead tr {\n     border-bottom: 1px solid #000 !important;\n}\n\n.table__tb tbody tr td {\n    text-align: left;\n    border-bottom: 1px solid #000\n}\n\n.table__tb tbody tr td:not(:first-child) {\n    border-left: 1px solid #000\n}\n\n.table__tb tbody tr td:last-child {\n    text-align: right\n}\n\n.footer {\n    display: flex;\n    flex-direction: column;\n    -webkit-margin-before: 30px;\n    margin-block-start: 30px;\n    color: #000;\n    gap: 46px\n}\n\n.footer__note {\n    font-weight: 500\n}\n\n.footer__thanks {\n    font-weight: 500\n}\n\n.footer__bottom {\n    display: flex;\n    align-items: center;\n    justify-content: space-between\n}\n\n.footer__left {\n    display: flex;\n    flex-direction: column;\n    gap: 15px\n}\n\n.footer__authSig {\n    font-weight: bold;\n    text-transform: uppercase\n}\n\n.footer__line {\n    background: #000;\n    height: 1px;\n    width: 100%\n}\n\n</style>   \n    \n\n    <section class=\"banner marginX\" style=\"\">\n      <h3 class=\"banner__title\">Formka Ogolaashaha qaliinka (Consent Surgery Form)</h3>\n\n   \n\n      <div class=\"banner__midd\">\n        <h4 class=\"banner__client\">Anigoo Ah Bukaanka:</h4>\n        {% if doc.patient_name %}\n        <h4 class=\"banner__clientname\">{{ doc.patient_name}}</h4>\n        {% else %}\n         <h4 class=\"banner__clientname\">___________________________</h4>\n        {% endif %}\n      </div>\n      \n        <div class=\"banner__midd\">\n        <h4 class=\"banner__client\">Wakiilkana uu yahay: </h4>\n        {% if doc.represent %}\n        \n        <h4 class=\"banner__clientname\">{{doc.represent}}</h4>\n        {% else %}\n        \n         <h4 class=\"banner__clientname\">____________________________</h4>\n        {% endif %}\n      </div>\n\n\n      <div class=\"banner__bottom\">\n        <h4 class=\"banner__client\" style=\"line-height: 3;\"> Waxaan Cadeynayaa inan ogolalahay raalina ka ahay oo aan mas'uuliyadeeda cidna saareynin hadii ay wax ka yimaadaan in qaliinka la igu sameyo\n        nuuciisuna yahay: \n        {% if doc.procedure %}\n        <b>{{doc.procedure}}</b>  \n        {% else %}\n        \n         <b>__________________________</b>  \n        {% endif %}\n        \n        \n        \n        <br> Qaliinka Waxa ii sharaxay Masuulka isbitaalka:</h4>\n    </div>\n<br>\n     <br> <br>\n       <div class=\"banner__midd\">\n        <h4 class=\"banner__client\">Date</h4>\n        {% if doc.date %}\n        <h4 class=\"banner__clientname\">{{doc.date}}</h4>\n        {% else %}\n        <h4 class=\"banner__clientname\">_________________</h4>\n        \n        {% endif %}\n      </div>\n         \n    </section>\n    \n    \n  \n\n    <footer class=\"footer marginX\">\n     \n  \n\n      <div class=\"footer__bottom\">\n        <div class=\"footer__left\">\n          <span class=\"footer__authSig\">Saxiixa Maamulka Isbitaalka</span>\n          <br>\n          <div class=\"footer__line\"></div>\n        </div>\n        \n           <div class=\"footer__left\">\n          <span class=\"footer__authSig\">Saxiixa Bukaanka Ama wakiilka</span>\n          <br>\n          <div class=\"footer__line\"></div>\n          \n        </div>\n        \n        <!--     &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;div class=&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;footer__left&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n        <!--  &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;span class=&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;footer__authSig&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Saxiixa Bukaanka Ama wakiilka&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n        <!--  &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;br&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n        <!--  &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;div class=&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;footer__line&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/div&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n        <!--  &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;br&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n        <!--  &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;div class=&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;footer__line&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/div&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n        <!--  &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;br&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n        <!--  &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;div class=&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;footer__line&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;quot;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/div&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n        <!--&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/div&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;-->\n      </div>\n    </footer>"
+  },
+  {
+   "fieldname": "represent",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Represent"
+  },
+  {
+   "fetch_from": "patient.inpatient_status",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Data",
+   "label": "Inpatient Record",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ipd_doctor",
+   "fieldtype": "Link",
+   "label": "Prepared Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "consent_form",
+   "fieldtype": "Link",
+   "label": "Consent Form",
+   "options": "Consent Surgery Form",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "consent_surgery_form",
+   "fieldtype": "Link",
+   "label": "Consent Surgery Form",
+   "options": "Consent Surgery Form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Surgery Preparation",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-07 14:18:10.018074",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Surgery Preparation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "history",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

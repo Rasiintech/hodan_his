@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "fluid-.#####",
+ "creation": "2023-04-23 10:48:06.212629",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "gender",
+  "age",
+  "monitoring"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": " Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": " Patient Name"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": " Gender"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": " Age"
+  },
+  {
+   "fieldname": "monitoring",
+   "fieldtype": "Table",
+   "label": "Monitoring",
+   "options": "fluid monitoring"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-06 16:34:47.101150",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "fluid chart monitoring",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

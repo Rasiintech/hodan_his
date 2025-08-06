@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 13:34:48.248885",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "column_break_lkw8m",
+  "pid",
+  "column_break_zdrjn",
+  "dob",
+  "column_break_orao5",
+  "mrp",
+  "section_break_b6le7",
+  "adult_pain_assessment_form",
+  "section_break_8f9gi",
+  "assess_pain_routinely_record_observations_interventions",
+  "section_break_fveka",
+  "and_reports_on_this_form_continue_using_this_form_if_patient",
+  "section_break_8dkh3",
+  "transfer_to_different_patient_care_areas_document_pain_on_vital",
+  "section_break_nemha",
+  "signs_sheet_using_0_to_10_pain_scale",
+  "section_break_ox8gm",
+  "adult_pain",
+  "section_break_pqftl",
+  "section_break_npc93",
+  "p"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "column_break_lkw8m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "column_break_zdrjn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_orao5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_b6le7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "adult_pain_assessment_form",
+   "fieldtype": "HTML",
+   "label": "ADULT PAIN ASSESSMENT FORM",
+   "options": "ADULT PAIN ASSESSMENT FORM"
+  },
+  {
+   "fieldname": "section_break_8f9gi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assess_pain_routinely_record_observations_interventions",
+   "fieldtype": "HTML",
+   "label": "Assess pain routinely. Record observations, interventions,",
+   "options": "Assess pain routinely. Record observations, interventions,"
+  },
+  {
+   "fieldname": "section_break_fveka",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "and_reports_on_this_form_continue_using_this_form_if_patient",
+   "fieldtype": "HTML",
+   "label": "and reports on this form. Continue using this form if patient ",
+   "options": "and reports on this form. Continue using this form if patient "
+  },
+  {
+   "fieldname": "section_break_8dkh3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transfer_to_different_patient_care_areas_document_pain_on_vital",
+   "fieldtype": "HTML",
+   "label": "transfer to different patient care areas. Document pain on vital ",
+   "options": "transfer to different patient care areas. Document pain on vital "
+  },
+  {
+   "fieldname": "section_break_nemha",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signs_sheet_using_0_to_10_pain_scale",
+   "fieldtype": "HTML",
+   "label": "signs sheet using 0 to 10 pain scale",
+   "options": "signs sheet using 0-10 pain scale"
+  },
+  {
+   "fieldname": "section_break_ox8gm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "adult_pain",
+   "fieldtype": "Table",
+   "label": "Documentation Key",
+   "options": "ADULT PAIN child table"
+  },
+  {
+   "fieldname": "section_break_pqftl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_npc93",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Table",
+   "label": "p",
+   "options": "ADULT PAIN child table 2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-21 13:56:33.771385",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ADULT PAIN ASSESSMENT FORM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,999 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-09 11:40:41.796104",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "column_break_8tcuk",
+  "patient",
+  "column_break_5u4h8",
+  "dob",
+  "column_break_tvoyn",
+  "sex",
+  "column_break_d990r",
+  "age",
+  "mrp",
+  "section_break_fm2fe",
+  "clinical_chemistry_immunoassay_form",
+  "section_break_jny4x",
+  "routine",
+  "column_break_q2cyv",
+  "urgent",
+  "column_break_x5jva",
+  "stat",
+  "section_break_kv895",
+  "contsultan",
+  "column_break_toebs",
+  "referal",
+  "section_break_krg3f",
+  "requesting_physical_sign",
+  "column_break_n9zkv",
+  "request_date",
+  "section_break_rftrv",
+  "medication",
+  "column_break_dethp",
+  "clinical_data",
+  "section_break_jt1xz",
+  "thyroid_hormones",
+  "section_break_vwy2d",
+  "ft4",
+  "column_break_b6tvw",
+  "tsh",
+  "column_break_cgtpq",
+  "ft3",
+  "column_break_kfsjy",
+  "anti_tg",
+  "section_break_k3csl",
+  "anti_typo",
+  "column_break_wvpyp",
+  "thyroglobulin",
+  "column_break_2d38c",
+  "thyrotropin__receptor_ab",
+  "section_break_uz0n9",
+  "tumor_markers",
+  "section_break_rjjpd",
+  "psa",
+  "column_break_rynei",
+  "cea",
+  "column_break_v2coh",
+  "afp",
+  "column_break_e9sep",
+  "ca_153",
+  "column_break_ffneg",
+  "ca_125",
+  "column_break_r86pw",
+  "ca_199",
+  "column_break_6qmhg",
+  "bhcg",
+  "section_break_5kuld",
+  "anaemia_profile",
+  "section_break_aaxow",
+  "fe_serum_iron",
+  "column_break_7wnyu",
+  "transferrin_tibc",
+  "column_break_z26oy",
+  "ferritin",
+  "column_break_pffpt",
+  "vit_12_b",
+  "column_break_e9tst",
+  "serum_folate",
+  "section_break_ov7vw",
+  "pituitary_gonadal_axis_hormones",
+  "column_break_koukt",
+  "lh",
+  "column_break_fxtsl",
+  "fsh_prolactin",
+  "column_break_riqki",
+  "progesterone",
+  "column_break_a3hsn",
+  "estradiol",
+  "column_break_dgpq8",
+  "total_testosterone",
+  "column_break_j3nqx",
+  "free_testosterone",
+  "column_break_9dgq4",
+  "dheas",
+  "column_break_kjdcw",
+  "asd",
+  "column_break_gwc5s",
+  "17_oh_progesterone",
+  "section_break_wa54p",
+  "adrenal_axis_hormones",
+  "section_break_rj6te",
+  "cortisol__am_",
+  "column_break_ud5qe",
+  "cortisol__pm_",
+  "column_break_z9thh",
+  "acth",
+  "column_break_gfqzc",
+  "renin__supine_",
+  "column_break_fukre",
+  "renin__standing_",
+  "column_break_xxrst",
+  "aldosterone__supine_",
+  "column_break_audjc",
+  "aldosterone__standing_",
+  "section_break_k11eb",
+  "growth_hormone",
+  "section_break_paz4g",
+  "gh",
+  "column_break_6exfe",
+  "igf1",
+  "column_break_oswgw",
+  "igf_bp3",
+  "section_break_olykl",
+  "miscellaneous",
+  "section_break_s4rku",
+  "pth",
+  "column_break_pnl6c",
+  "25oh_vit",
+  "column_break_iklxp",
+  "insulin",
+  "column_break_yyuss",
+  "1_25oh2_vit_d",
+  "column_break_4u8bq",
+  "c_peptide",
+  "column_break_qan1u",
+  "gastrin",
+  "column_break_r59wf",
+  "erythropoeitin",
+  "column_break_o6q3m",
+  "others_specify",
+  "section_break_d4sgk",
+  "specimen_collected_by",
+  "column_break_0mmno",
+  "date__time",
+  "section_break_fm4um",
+  "received_by",
+  "column_break_aizzv",
+  "date_time",
+  "section_break_bvp4q",
+  "remarks",
+  "section_break_so2bq",
+  "hemolysed",
+  "column_break_xletz",
+  "lipemic",
+  "column_break_tasu9",
+  "icteric",
+  "column_break_kywlc",
+  "slightly_1",
+  "column_break_r58w7",
+  "slightly_2",
+  "column_break_ij7bg",
+  "slightly_3",
+  "column_break_gfjat",
+  "moderately",
+  "column_break_pxbgs",
+  "grossly",
+  "section_break_bobrt"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "pts Name"
+  },
+  {
+   "fieldname": "column_break_8tcuk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5u4h8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_d990r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_fm2fe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "clinical_chemistry_immunoassay_form",
+   "fieldtype": "HTML",
+   "label": "Clinical Chemistry Immunoassay Form",
+   "options": "Clinical Chemistry Immunoassay Form"
+  },
+  {
+   "fieldname": "section_break_jny4x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "routine",
+   "fieldtype": "Check",
+   "label": "Routine"
+  },
+  {
+   "fieldname": "column_break_q2cyv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "urgent",
+   "fieldtype": "Check",
+   "label": "Urgent"
+  },
+  {
+   "fieldname": "column_break_x5jva",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "stat",
+   "fieldtype": "Check",
+   "label": "Stat"
+  },
+  {
+   "fieldname": "section_break_kv895",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contsultan",
+   "fieldtype": "Data",
+   "label": "Contsultant"
+  },
+  {
+   "fieldname": "column_break_toebs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "referal",
+   "fieldtype": "Data",
+   "label": "Referal"
+  },
+  {
+   "fieldname": "section_break_krg3f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requesting_physical_sign",
+   "fieldtype": "Data",
+   "label": "Requesting physical sign"
+  },
+  {
+   "fieldname": "column_break_n9zkv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "section_break_rftrv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Data",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "column_break_dethp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "clinical_data",
+   "fieldtype": "Data",
+   "label": "clinical data"
+  },
+  {
+   "fieldname": "section_break_jt1xz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "thyroid_hormones",
+   "fieldtype": "HTML",
+   "label": "Thyroid Hormones",
+   "options": "Thyroid Hormones"
+  },
+  {
+   "fieldname": "section_break_vwy2d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ft4",
+   "fieldtype": "Check",
+   "label": "FT4"
+  },
+  {
+   "fieldname": "column_break_b6tvw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tsh",
+   "fieldtype": "Check",
+   "label": "TSH"
+  },
+  {
+   "fieldname": "column_break_cgtpq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ft3",
+   "fieldtype": "Check",
+   "label": "FT3"
+  },
+  {
+   "fieldname": "column_break_kfsjy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "anti_tg",
+   "fieldtype": "Check",
+   "label": "Anti Tg"
+  },
+  {
+   "fieldname": "section_break_k3csl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "anti_typo",
+   "fieldtype": "Check",
+   "label": "Anti typo"
+  },
+  {
+   "fieldname": "column_break_wvpyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "thyroglobulin",
+   "fieldtype": "Check",
+   "label": "Thyroglobulin"
+  },
+  {
+   "fieldname": "column_break_2d38c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "thyrotropin__receptor_ab",
+   "fieldtype": "Check",
+   "label": "Thyrotropin  Receptor AB"
+  },
+  {
+   "fieldname": "section_break_uz0n9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tumor_markers",
+   "fieldtype": "HTML",
+   "label": "Tumor markers",
+   "options": "Tumor markers"
+  },
+  {
+   "fieldname": "section_break_rjjpd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "psa",
+   "fieldtype": "Check",
+   "label": "PSA"
+  },
+  {
+   "fieldname": "column_break_rynei",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cea",
+   "fieldtype": "Check",
+   "label": "CEA"
+  },
+  {
+   "fieldname": "column_break_v2coh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "afp",
+   "fieldtype": "Check",
+   "label": "AFP"
+  },
+  {
+   "fieldname": "column_break_e9sep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ca_153",
+   "fieldtype": "Check",
+   "label": "CA 15.3"
+  },
+  {
+   "fieldname": "column_break_ffneg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ca_125",
+   "fieldtype": "Check",
+   "label": "CA 125"
+  },
+  {
+   "fieldname": "column_break_r86pw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ca_199",
+   "fieldtype": "Check",
+   "label": "CA 19.9"
+  },
+  {
+   "fieldname": "column_break_6qmhg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bhcg",
+   "fieldtype": "Check",
+   "label": "BHCG"
+  },
+  {
+   "fieldname": "section_break_5kuld",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "anaemia_profile",
+   "fieldtype": "HTML",
+   "label": "Anaemia Profile",
+   "options": "Anaemia Profile"
+  },
+  {
+   "fieldname": "section_break_aaxow",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fe_serum_iron",
+   "fieldtype": "Check",
+   "label": "FE serum iron"
+  },
+  {
+   "fieldname": "column_break_7wnyu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "transferrin_tibc",
+   "fieldtype": "Check",
+   "label": "Transferrin TIBC"
+  },
+  {
+   "fieldname": "column_break_z26oy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ferritin",
+   "fieldtype": "Check",
+   "label": "Ferritin"
+  },
+  {
+   "fieldname": "column_break_pffpt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "vit_12_b",
+   "fieldtype": "Check",
+   "label": "Vit 12 B"
+  },
+  {
+   "fieldname": "column_break_e9tst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "serum_folate",
+   "fieldtype": "Check",
+   "label": "Serum folate"
+  },
+  {
+   "fieldname": "section_break_ov7vw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pituitary_gonadal_axis_hormones",
+   "fieldtype": "HTML",
+   "label": "Pituitary Gonadal Axis Hormones",
+   "options": "Pituitary Gonadal Axis Hormones"
+  },
+  {
+   "fieldname": "column_break_koukt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "lh",
+   "fieldtype": "Check",
+   "label": "LH"
+  },
+  {
+   "fieldname": "column_break_fxtsl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fsh_prolactin",
+   "fieldtype": "Check",
+   "label": "FSH Prolactin"
+  },
+  {
+   "fieldname": "column_break_riqki",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "progesterone",
+   "fieldtype": "Check",
+   "label": "Progesterone"
+  },
+  {
+   "fieldname": "column_break_a3hsn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "estradiol",
+   "fieldtype": "Check",
+   "label": " Estradiol"
+  },
+  {
+   "fieldname": "column_break_dgpq8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_testosterone",
+   "fieldtype": "Check",
+   "label": "Total Testosterone"
+  },
+  {
+   "fieldname": "column_break_j3nqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "free_testosterone",
+   "fieldtype": "Check",
+   "label": "Free Testosterone"
+  },
+  {
+   "fieldname": "column_break_9dgq4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dheas",
+   "fieldtype": "Check",
+   "label": "DHEAS"
+  },
+  {
+   "fieldname": "column_break_kjdcw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "asd",
+   "fieldtype": "Check",
+   "label": "ASD"
+  },
+  {
+   "fieldname": "column_break_gwc5s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "17_oh_progesterone",
+   "fieldtype": "Check",
+   "label": "17 OH Progesterone"
+  },
+  {
+   "fieldname": "section_break_wa54p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "adrenal_axis_hormones",
+   "fieldtype": "HTML",
+   "label": "Adrenal Axis Hormones"
+  },
+  {
+   "fieldname": "section_break_rj6te",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cortisol__am_",
+   "fieldtype": "Check",
+   "label": "Cortisol ( am )"
+  },
+  {
+   "fieldname": "column_break_ud5qe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cortisol__pm_",
+   "fieldtype": "Check",
+   "label": "Cortisol ( pm )"
+  },
+  {
+   "fieldname": "column_break_z9thh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "acth",
+   "fieldtype": "Check",
+   "label": "ACTH"
+  },
+  {
+   "fieldname": "column_break_gfqzc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "renin__supine_",
+   "fieldtype": "Check",
+   "label": "Renin ( Supine )"
+  },
+  {
+   "fieldname": "column_break_fukre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "renin__standing_",
+   "fieldtype": "Check",
+   "label": "Renin ( Standing )"
+  },
+  {
+   "fieldname": "column_break_xxrst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "aldosterone__supine_",
+   "fieldtype": "Check",
+   "label": "Aldosterone ( Supine )"
+  },
+  {
+   "fieldname": "column_break_audjc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "aldosterone__standing_",
+   "fieldtype": "Check",
+   "label": "Aldosterone ( Standing )"
+  },
+  {
+   "fieldname": "section_break_k11eb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "growth_hormone",
+   "fieldtype": "HTML",
+   "label": "Growth Hormone",
+   "options": "Growth Hormone"
+  },
+  {
+   "fieldname": "section_break_paz4g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "gh",
+   "fieldtype": "Check",
+   "label": "GH"
+  },
+  {
+   "fieldname": "column_break_6exfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "igf1",
+   "fieldtype": "Check",
+   "label": "IGF1 "
+  },
+  {
+   "fieldname": "column_break_oswgw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "igf_bp3",
+   "fieldtype": "Check",
+   "label": "IGF BP3"
+  },
+  {
+   "fieldname": "section_break_olykl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "miscellaneous",
+   "fieldtype": "HTML",
+   "label": "Miscellaneous",
+   "options": "Miscellaneous"
+  },
+  {
+   "fieldname": "section_break_s4rku",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "pth",
+   "fieldtype": "Check",
+   "label": "PTH"
+  },
+  {
+   "fieldname": "column_break_pnl6c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "25oh_vit",
+   "fieldtype": "Check",
+   "label": "25(OH) Vit"
+  },
+  {
+   "fieldname": "column_break_iklxp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "insulin",
+   "fieldtype": "Check",
+   "label": "Insulin "
+  },
+  {
+   "fieldname": "column_break_yyuss",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "1_25oh2_vit_d",
+   "fieldtype": "Check",
+   "label": "1 25(OH)2 Vit D"
+  },
+  {
+   "fieldname": "column_break_4u8bq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "c_peptide",
+   "fieldtype": "Check",
+   "label": "C Peptide"
+  },
+  {
+   "fieldname": "column_break_qan1u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "gastrin",
+   "fieldtype": "Check",
+   "label": "Gastrin"
+  },
+  {
+   "fieldname": "column_break_r59wf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "erythropoeitin",
+   "fieldtype": "Check",
+   "label": "Erythropoeitin"
+  },
+  {
+   "fieldname": "column_break_o6q3m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "others_specify",
+   "fieldtype": "Check",
+   "label": "Others (Specify)"
+  },
+  {
+   "fieldname": "section_break_d4sgk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "specimen_collected_by",
+   "fieldtype": "Data",
+   "label": "Specimen collected by"
+  },
+  {
+   "fieldname": "column_break_0mmno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date__time",
+   "fieldtype": "Time",
+   "label": "Date  Time"
+  },
+  {
+   "fieldname": "section_break_fm4um",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received by"
+  },
+  {
+   "fieldname": "column_break_aizzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Time",
+   "label": "Date Time"
+  },
+  {
+   "fieldname": "section_break_bvp4q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "HTML",
+   "label": "Remarks",
+   "options": "Remarks"
+  },
+  {
+   "fieldname": "section_break_so2bq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "hemolysed",
+   "fieldtype": "Check",
+   "label": "Hemolysed"
+  },
+  {
+   "fieldname": "column_break_xletz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "lipemic",
+   "fieldtype": "Check",
+   "label": "Lipemic"
+  },
+  {
+   "fieldname": "column_break_tasu9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "icteric",
+   "fieldtype": "Check",
+   "label": "Icteric"
+  },
+  {
+   "fieldname": "column_break_kywlc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "slightly_1",
+   "fieldtype": "Check",
+   "label": "Slightly"
+  },
+  {
+   "fieldname": "column_break_r58w7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "slightly_2",
+   "fieldtype": "Check",
+   "label": "Slightly"
+  },
+  {
+   "fieldname": "column_break_ij7bg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "slightly_3",
+   "fieldtype": "Check",
+   "label": "Slightly"
+  },
+  {
+   "fieldname": "column_break_gfjat",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "moderately",
+   "fieldtype": "Check",
+   "label": " Moderately"
+  },
+  {
+   "fieldname": "column_break_pxbgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grossly",
+   "fieldtype": "Data",
+   "label": "Grossly"
+  },
+  {
+   "fieldname": "section_break_bobrt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_tvoyn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "PID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-13 09:17:44.420662",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Clinical Chemistry Immunoassay Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

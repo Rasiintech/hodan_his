@@ -1,0 +1,628 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "QUE.#####",
+ "creation": "2023-03-05 11:47:56.722515",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "mobile",
+  "gender",
+  "patient_age",
+  "age",
+  "sales_invoice",
+  "cost_center",
+  "sales_order",
+  "source_order",
+  "district",
+  "customer_group",
+  "company",
+  "family_head",
+  "member_card",
+  "refered_from",
+  "phone",
+  "column_break_dtetj",
+  "practitioner",
+  "practitioner_name",
+  "referring_practitioner",
+  "department",
+  "type",
+  "doctor_amount",
+  "bill_to",
+  "full_name",
+  "paid_amount",
+  "discount",
+  "mode_of_payment",
+  "is_free",
+  "is_refer",
+  "bill_to_employee",
+  "employee",
+  "employee_name",
+  "reference",
+  "debtor",
+  "customer",
+  "follow_up",
+  "is_package",
+  "date",
+  "time",
+  "que_steps",
+  "fee_validity",
+  "que_type",
+  "consulataion",
+  "status",
+  "patient_encounter",
+  "is_insurance",
+  "is_employee",
+  "employees",
+  "emergency",
+  "token_no",
+  "obs",
+  "gyn",
+  "diagnosis",
+  "do_type",
+  "refer_request",
+  "source",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient name",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dtetj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_free != 1 && !doc.is_insurance ",
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid amount",
+   "set_only_once": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.bill_to_insurance && !doc.bill_to_employee",
+   "fieldname": "is_free",
+   "fieldtype": "Check",
+   "label": "Free",
+   "set_only_once": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Date",
+   "set_only_once": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "hidden": 1,
+   "label": "Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "que_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Que Type",
+   "options": "New Patient\nFollow Up\nRevisit\nRenew\nRefer\nRefer With Payment"
+  },
+  {
+   "fetch_from": "doctor.op_consulting_charge_item",
+   "fieldname": "consulataion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Consulataion"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nCanceled\nClosed\nRefunded\nRenewed\nRevisit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fee_validity",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Fee validity",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Follow up",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_order",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Source Order",
+   "options": "Source Order"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_package",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Package"
+  },
+  {
+   "depends_on": "eval:doc.is_free != 1",
+   "fetch_from": "practitioner.op_consulting_charge",
+   "fieldname": "doctor_amount",
+   "fieldtype": "Currency",
+   "label": "Consultantion fee",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_insurance",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Insurance",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "doctor.first_name",
+   "fieldname": "referring_practitioner",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Referring Consultant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Encounter",
+   "options": "Patient Encounter",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Consultant Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "emergency",
+   "fieldtype": "Link",
+   "label": "Emergency",
+   "options": "Emergency",
+   "read_only": 1
+  },
+  {
+   "default": "Waiting",
+   "fieldname": "que_steps",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Que State",
+   "options": "Waiting\nCalled\nMissed",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_employee",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Employee",
+   "read_only": 1
+  },
+  {
+   "depends_on": "bill_to_employee",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "set_only_once": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "token_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Token No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.territory",
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "Territory",
+   "read_only": 1
+  },
+  {
+   "default": "OBS",
+   "depends_on": "eval: doc.department == 'OBS AND GYN'",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Type",
+   "mandatory_depends_on": "eval: doc.department == 'OBS AND GYN'",
+   "options": "\nOBS\nGYN"
+  },
+  {
+   "fieldname": "obs",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "OBS",
+   "options": "OBS"
+  },
+  {
+   "fieldname": "gyn",
+   "fieldtype": "Link",
+   "label": "GYN",
+   "options": "GYN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refered_from",
+   "fieldtype": "Link",
+   "label": "Refered From",
+   "options": "Refered From",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "refered_from.phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.bill == \"Debtor\"",
+   "fetch_from": "customer.customer_group",
+   "fieldname": "debtor",
+   "fieldtype": "Data",
+   "label": "Debtor",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: !doc.is_free",
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "mandatory_depends_on": "eval: doc.payable_amount > 0 && doc.is_free != 1 ",
+   "options": "Mode of Payment",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "is_free",
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Remark",
+   "mandatory_depends_on": "eval:doc.is_free == 1",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.is_free != 1",
+   "fieldname": "bill_to",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Bill To",
+   "options": "Customer",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.is_free != 1",
+   "fetch_from": "bill_to.customer_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_free != 1",
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount",
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "practitioner.doc_type",
+   "fieldname": "do_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Do Type",
+   "options": "Doctor Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refer_request",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Refer Request",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Appointment Source",
+   "options": "Walk-in\nMobile App\nWebsite\nCall Center\nClinic",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.is_free != 1 ",
+   "fieldname": "bill_to_employee",
+   "fieldtype": "Check",
+   "label": "Bill to Employee",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Data",
+   "label": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.customer_group",
+   "fieldname": "customer_group",
+   "fieldtype": "Data",
+   "label": "Customer Group",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.member_head",
+   "fieldname": "family_head",
+   "fieldtype": "Data",
+   "label": "Family Head",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.card",
+   "fieldname": "member_card",
+   "fieldtype": "Data",
+   "label": "Member Card",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Patient Age"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_refer",
+   "fieldtype": "Check",
+   "label": "Is Refer",
+   "set_only_once": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-22 12:38:15.528750",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Que",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cashier",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient_name",
+ "track_changes": 1
+}

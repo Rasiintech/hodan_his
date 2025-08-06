@@ -1,0 +1,264 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-29 14:43:49.911086",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "patient_name",
+  "sex",
+  "age",
+  "column_break_5urj7",
+  "ward",
+  "room",
+  "blood_group",
+  "section_break_fsb76",
+  "blood_component_transfused",
+  "whole_blood",
+  "packed_cell",
+  "ffp",
+  "column_break_4mzmt",
+  "amount_transfused",
+  "expiry_data",
+  "time_started",
+  "time_completed",
+  "tab_break_euieg",
+  "section_break_hajwq",
+  "blood_transfusion_monitoring_table",
+  "symptoms_tab",
+  "section_break_vt9vj",
+  "symptoms_or_signs_of_transfusions_observed",
+  "general",
+  "dermatotlogical",
+  "cardiacrespiratory",
+  "renal",
+  "hematological",
+  "others",
+  "intervention_tab",
+  "section_break_dchnt",
+  "interventiondrugs_given",
+  "drugs_given"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Link",
+   "label": "ID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "id.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "id.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Link",
+   "label": "Ward",
+   "options": "Healthcare Service Unit Type"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "Healthcare Service Unit"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood Group"
+  },
+  {
+   "fieldname": "column_break_5urj7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fsb76",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "blood_component_transfused",
+   "fieldtype": "HTML",
+   "label": "Blood component transfused",
+   "options": "<h2>Blood component transfused</h2><br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "whole_blood",
+   "fieldtype": "Check",
+   "label": "Whole blood"
+  },
+  {
+   "default": "0",
+   "fieldname": "packed_cell",
+   "fieldtype": "Check",
+   "label": "Packed cell"
+  },
+  {
+   "default": "0",
+   "fieldname": "ffp",
+   "fieldtype": "Check",
+   "label": "FFP"
+  },
+  {
+   "fieldname": "column_break_4mzmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_transfused",
+   "fieldtype": "Data",
+   "label": "Amount transfused"
+  },
+  {
+   "fieldname": "expiry_data",
+   "fieldtype": "Data",
+   "label": "Expiry Data"
+  },
+  {
+   "fieldname": "time_started",
+   "fieldtype": "Data",
+   "label": "Time started"
+  },
+  {
+   "fieldname": "time_completed",
+   "fieldtype": "Data",
+   "label": "Time completed"
+  },
+  {
+   "fieldname": "blood_transfusion_monitoring_table",
+   "fieldtype": "Table",
+   "label": "BLOOD TRANSFUSION MONITORING table",
+   "options": "BLOOD TRANSFUSION MONITORING table"
+  },
+  {
+   "fieldname": "section_break_hajwq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tab_break_euieg",
+   "fieldtype": "Tab Break",
+   "label": "VITAL SIGNS"
+  },
+  {
+   "fieldname": "symptoms_tab",
+   "fieldtype": "Tab Break",
+   "label": "SYMPTOMS "
+  },
+  {
+   "fieldname": "section_break_vt9vj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "symptoms_or_signs_of_transfusions_observed",
+   "fieldtype": "HTML",
+   "label": "SYMPTOMS OR SIGNS OF TRANSFUSIONS OBSERVED",
+   "options": "SYMPTOMS OR SIGNS OF TRANSFUSIONS OBSERVED"
+  },
+  {
+   "fieldname": "general",
+   "fieldtype": "Select",
+   "label": "General",
+   "options": "\nFever\nChills\nRigors\nFlushing\nNausea\nVomiting"
+  },
+  {
+   "fieldname": "dermatotlogical",
+   "fieldtype": "Select",
+   "label": "Dermatotlogical",
+   "options": "\nUrticaria\nOther skin rash"
+  },
+  {
+   "fieldname": "cardiacrespiratory",
+   "fieldtype": "Select",
+   "label": " Cardiac/Respiratory",
+   "options": "\nChest Pain\nDyspnea\nHypotension\nTachycardia"
+  },
+  {
+   "fieldname": "renal",
+   "fieldtype": "Select",
+   "label": "Renal",
+   "options": "\nHemoglobinuria\nOllguria\nAnuria"
+  },
+  {
+   "fieldname": "hematological",
+   "fieldtype": "Select",
+   "label": "Hematological",
+   "options": "Unexplained bleeding"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "intervention_tab",
+   "fieldtype": "Tab Break",
+   "label": "INTERVENTION"
+  },
+  {
+   "fieldname": "interventiondrugs_given",
+   "fieldtype": "HTML",
+   "label": "INTERVENTION/DRUGS GIVEN",
+   "options": "INTERVENTION/DRUGS GIVEN"
+  },
+  {
+   "fieldname": "drugs_given",
+   "fieldtype": "Data",
+   "label": "DRUGS GIVEN"
+  },
+  {
+   "fieldname": "section_break_dchnt",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-18 09:32:16.978446",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "BLOOD TRANSFUSION MONITORING FORM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

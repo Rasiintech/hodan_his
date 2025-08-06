@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-30 09:25:39.934957",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pos",
+  "diather",
+  "wound_class"
+ ],
+ "fields": [
+  {
+   "fieldname": "pos",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "POS"
+  },
+  {
+   "fieldname": "diather",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "DIATHER"
+  },
+  {
+   "fieldname": "wound_class",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WOUND CLASS"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-30 09:25:39.934957",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OR INTRA OPERATIVE RECORD Data",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

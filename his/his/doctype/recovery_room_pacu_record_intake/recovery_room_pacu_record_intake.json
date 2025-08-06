@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-07 09:51:58.362411",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "site_size",
+  "solution",
+  "amt",
+  "start",
+  "lib",
+  "abs"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Size"
+  },
+  {
+   "fieldname": "solution",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Solution"
+  },
+  {
+   "fieldname": "amt",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "AMT"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Start"
+  },
+  {
+   "fieldname": "lib",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lib"
+  },
+  {
+   "fieldname": "abs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ABS"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-07 09:51:58.362411",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Recovery Room PACU Record Intake",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Lab-Rad-.##### ",
+ "creation": "2025-05-13 11:05:14.205077",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "1_quality_of_care",
+  "overall_experience_rating",
+  "name_1",
+  "section_break_mra2o",
+  "2_interpersonal_skills_of_staff",
+  "name_2",
+  "name_5",
+  "section_break_9svws",
+  "3_communication",
+  "name_6",
+  "name_10",
+  "column_break_0pzuj",
+  "name_11",
+  "name_13",
+  "section_break_ds00e",
+  "4_wait_times",
+  "name_4",
+  "column_break_cxi9x",
+  "name_7",
+  "section_break_hnyp9",
+  "5_accessibility",
+  "name_8",
+  "column_break_oovcv",
+  "name_9",
+  "section_break_6potw",
+  "column_break_ej66y",
+  "name_3",
+  "section_break_0cndo",
+  "column_break_vnxbz"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "How would you rate the quality of care you received during your laboratory/radiology visit?",
+   "options": "\nPoor\nFair\nSatisfy\nN/A"
+  },
+  {
+   "fieldname": "name_2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "How would you describe the friendliness and professionalism of the laboratory/radiology staff? ",
+   "options": "\nPoor\nFair\nSatisfy\nN/A"
+  },
+  {
+   "fieldname": "section_break_mra2o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "1_quality_of_care",
+   "fieldtype": "Heading",
+   "label": "1. Quality of Care "
+  },
+  {
+   "fieldname": "2_interpersonal_skills_of_staff",
+   "fieldtype": "Heading",
+   "label": "2. Interpersonal Skills of Staff"
+  },
+  {
+   "fieldname": "name_3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Were your concerns addressed adequately by the staff during your visit? ",
+   "options": "\nPoor\nFair\nSatisfy\nN/A"
+  },
+  {
+   "fieldname": "section_break_9svws",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "3_communication",
+   "fieldtype": "Heading",
+   "label": "3. Communication"
+  },
+  {
+   "fieldname": "name_4",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Were you informed about what to expect during your laboratory/radiology procedures?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "name_5",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Did the staff explain the purpose of your tests clearly before conducting them? ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_0pzuj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ds00e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "4_wait_times",
+   "fieldtype": "Heading",
+   "label": "4. Wait Times "
+  },
+  {
+   "fieldname": "name_6",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "How satisfied were you with the wait time for your laboratory/radiology appointment? ",
+   "options": "\nPoor\nFair\nSatisfy\nN/A"
+  },
+  {
+   "fieldname": "name_7",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Did you feel that your appointment started on time?",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "column_break_cxi9x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hnyp9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "5_accessibility",
+   "fieldtype": "Heading",
+   "label": "5. Accessibility "
+  },
+  {
+   "fieldname": "name_8",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Was it easy to schedule an appointment for your laboratory/radiology tests?",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "fieldname": "name_9",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "How would you rate the accessibility of the facility?",
+   "options": "\nPoor\nFair\nSatisfy\nN/A"
+  },
+  {
+   "fieldname": "column_break_oovcv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6potw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_10",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Were you provided with clear instructions regarding follow-up after your laboratory/radiology tests?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_ej66y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_11",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Did you receive timely results from your tests, and were they communicated effectively? ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "section_break_0cndo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vnxbz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_13",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Would you recommend our hospital\u2019s laboratory/radiology services to others based on your experience?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "overall_experience_rating",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Overall, how satisfied are you with your experience in receiving laboratory/radiology services at our hospital?",
+   "options": "\nPoor\nFair\nSatisfy\nN/A"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-06 12:08:30.289589",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Laboratory And Radiology  Survey",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-27 11:44:04.595671",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "pid",
+  "dob",
+  "hgbhc",
+  "postpartum_visits_form",
+  "medicationscontraception",
+  "interim_history",
+  "last_pap_smear_date",
+  "medicationscontraception_dispensed",
+  "yes_no",
+  "feeding_method",
+  "contraceptive_method",
+  "interval_care_recommendations",
+  "for_reproductive_health_promotion",
+  "referrals",
+  "return_visit_date",
+  "examined_by",
+  "physical_exam",
+  "bp_weight",
+  "pap_smear",
+  "section_break_pdug3",
+  "postpartum",
+  "doctor_name",
+  "signature",
+  "date_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name   "
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID   "
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DoB"
+  },
+  {
+   "fieldname": "hgbhc",
+   "fieldtype": "Data",
+   "label": "HGB/HC "
+  },
+  {
+   "fieldname": "postpartum_visits_form",
+   "fieldtype": "Data",
+   "label": "POSTPARTUM VISITS FORM "
+  },
+  {
+   "fieldname": "medicationscontraception",
+   "fieldtype": "Data",
+   "label": "MEDICATIONS/CONTRACEPTION "
+  },
+  {
+   "fieldname": "interim_history",
+   "fieldtype": "Data",
+   "label": "INTERIM HISTORY "
+  },
+  {
+   "fieldname": "last_pap_smear_date",
+   "fieldtype": "Data",
+   "label": "LAST PAP SMEAR (Date) "
+  },
+  {
+   "fieldname": "medicationscontraception_dispensed",
+   "fieldtype": "Data",
+   "label": "MEDICATIONS/CONTRACEPTION DISPENSED "
+  },
+  {
+   "fieldname": "yes_no",
+   "fieldtype": "Data",
+   "label": "YES NO "
+  },
+  {
+   "fieldname": "feeding_method",
+   "fieldtype": "Data",
+   "label": "FEEDING METHOD "
+  },
+  {
+   "fieldname": "contraceptive_method",
+   "fieldtype": "Data",
+   "label": "CONTRACEPTIVE METHOD "
+  },
+  {
+   "fieldname": "interval_care_recommendations",
+   "fieldtype": "Data",
+   "label": "INTERVAL CARE RECOMMENDATIONS "
+  },
+  {
+   "fieldname": "for_reproductive_health_promotion",
+   "fieldtype": "Data",
+   "label": "FOR REPRODUCTIVE HEALTH PROMOTION "
+  },
+  {
+   "fieldname": "referrals",
+   "fieldtype": "Data",
+   "label": "REFERRALS "
+  },
+  {
+   "fieldname": "return_visit_date",
+   "fieldtype": "Data",
+   "label": "RETURN VISIT (Date) "
+  },
+  {
+   "fieldname": "examined_by",
+   "fieldtype": "Data",
+   "label": "EXAMINED BY "
+  },
+  {
+   "fieldname": "physical_exam",
+   "fieldtype": "Data",
+   "label": "PHYSICAL EXAM "
+  },
+  {
+   "fieldname": "bp_weight",
+   "fieldtype": "Data",
+   "label": "BP WEIGHT "
+  },
+  {
+   "fieldname": "pap_smear",
+   "fieldtype": "Select",
+   "label": "PAP SMEAR ",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "DOCTOR NAME"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "SIGNATURE"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Data",
+   "label": "DATE TIME "
+  },
+  {
+   "fieldname": "section_break_pdug3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "postpartum",
+   "fieldtype": "Table",
+   "label": "POSTPARTUM",
+   "options": "POSTPARTUM VISITS Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-27 11:49:29.714826",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Postpartums Visit Fo",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

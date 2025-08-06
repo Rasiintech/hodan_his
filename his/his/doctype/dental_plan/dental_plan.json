@@ -1,0 +1,225 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Dental-Plan-.#####",
+ "creation": "2024-11-23 10:24:53.651543",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "gender",
+  "column_break_ztazm",
+  "date",
+  "practitioner",
+  "medical_department",
+  "treatment_status",
+  "section_break_igphs",
+  "dental_plan_details",
+  "section_break_v4ej9",
+  "_",
+  "column_break_2xbyn",
+  "column_break_wgplj",
+  "_1",
+  "total",
+  "section_break_4gcny",
+  "column_break_q8dlm",
+  "test",
+  "column_break_u3fqb",
+  "_2",
+  "column_break_kocyt",
+  "discount",
+  "percentage_discount",
+  "grand_total",
+  "agreed_fee"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_ztazm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_igphs",
+   "fieldtype": "Section Break",
+   "label": "Plan"
+  },
+  {
+   "fieldname": "section_break_4gcny",
+   "fieldtype": "Section Break",
+   "label": "Agreement"
+  },
+  {
+   "fieldname": "column_break_q8dlm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "_"
+  },
+  {
+   "fieldname": "column_break_u3fqb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "agreed_fee",
+   "fieldtype": "Currency",
+   "label": "Agreed Fee"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "medical_department",
+   "fieldtype": "Link",
+   "label": "Medical Department",
+   "options": "Medical Department"
+  },
+  {
+   "default": "Planned",
+   "fieldname": "treatment_status",
+   "fieldtype": "Select",
+   "label": "Treatment Status",
+   "options": "Planned\nOngoing\nCompleted"
+  },
+  {
+   "fieldname": "percentage_discount",
+   "fieldtype": "Percent",
+   "label": "Percentage Discount"
+  },
+  {
+   "fieldname": "dental_plan_details",
+   "fieldtype": "Table",
+   "label": "Dental Plan Details",
+   "options": "Services Prescription",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_v4ej9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "_",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "_"
+  },
+  {
+   "fieldname": "column_break_2xbyn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wgplj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "_1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "_1"
+  },
+  {
+   "fieldname": "_2",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "_2"
+  },
+  {
+   "fieldname": "column_break_kocyt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-01 10:40:47.310810",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Dental Plan",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

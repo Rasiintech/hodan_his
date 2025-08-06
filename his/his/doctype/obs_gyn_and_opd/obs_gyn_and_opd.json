@@ -1,0 +1,574 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OBS-GYN-.##### ",
+ "creation": "2024-04-29 08:24:39.570459",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "mobile",
+  "column_break_2k36q",
+  "date",
+  "practitioner",
+  "department",
+  "section_break_jssap",
+  "prenatal_record",
+  "section_break_kymvm",
+  "husband_name",
+  "column_break_4j881",
+  "g",
+  "column_break_zxlqg",
+  "t",
+  "column_break_p206h",
+  "b",
+  "column_break_n4bek",
+  "a",
+  "column_break_timsf",
+  "l",
+  "section_break_8njxr",
+  "edd",
+  "section_break_1bqqp",
+  "past_pregnancies",
+  "gestation_weeks",
+  "bb",
+  "section_break_ryn1v",
+  "date_1",
+  "gestation_weeks_1",
+  "length_of_labor",
+  "birth__weigt",
+  "sex",
+  "type_of_delivery",
+  "anesthesia",
+  "place_of_delivery",
+  "preterm_2",
+  "comments_1",
+  "edd_determination",
+  "lmp_sure",
+  "early_ultrasound",
+  "18_to_20_wks_ultrasound",
+  "pts_name_2",
+  "pid_2",
+  "dob_2",
+  "item_1",
+  "detail_positive_remarks_1",
+  "allergies",
+  "item_2",
+  "detail_positive_remarks_2",
+  "medications",
+  "pts_name_3",
+  "pid_3",
+  "dob_3",
+  "pregnancy_weight",
+  "present_weight",
+  "height",
+  "bp",
+  "item_3",
+  "normal",
+  "abnormal",
+  "item_4",
+  "result_1",
+  "pts_name_4",
+  "pid_4",
+  "dob_4",
+  "investigations",
+  "result_2",
+  "comments_2",
+  "pts_name_5",
+  "pid_5",
+  "dob_5",
+  "date_2",
+  "gestation_weeks_2",
+  "fundal__heigh",
+  "presentation",
+  "fhr",
+  "fetal_movement",
+  "blood_pressure",
+  "edema",
+  "weight",
+  "urine_or_glucose_or_albumin",
+  "next_appointment",
+  "comments_3",
+  "obs"
+ ],
+ "fields": [
+  {
+   "fieldname": "prenatal_record",
+   "fieldtype": "HTML",
+   "label": "Prenatal Record",
+   "options": "Prenatal Recor"
+  },
+  {
+   "fieldname": "husband_name",
+   "fieldtype": "Data",
+   "label": "Husband Name"
+  },
+  {
+   "fieldname": "g",
+   "fieldtype": "Data",
+   "label": "G"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "P"
+  },
+  {
+   "fieldname": "t",
+   "fieldtype": "Data",
+   "label": "T"
+  },
+  {
+   "fieldname": "a",
+   "fieldtype": "Data",
+   "label": "A"
+  },
+  {
+   "fieldname": "l",
+   "fieldtype": "Data",
+   "label": "L"
+  },
+  {
+   "fieldname": "edd",
+   "fieldtype": "Data",
+   "label": "EDD"
+  },
+  {
+   "fieldname": "past_pregnancies",
+   "fieldtype": "Table",
+   "label": "Past Pregnancies",
+   "options": "Past Pregnancies"
+  },
+  {
+   "fieldname": "gestation_weeks",
+   "fieldtype": "Table",
+   "label": "Gestation Weeks",
+   "options": "Gestation Weeks"
+  },
+  {
+   "fieldname": "bb",
+   "fieldtype": "Table",
+   "label": "EDD",
+   "options": "EDD"
+  },
+  {
+   "fieldname": "date_1",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "gestation_weeks_1",
+   "fieldtype": "Data",
+   "label": "Gestation Weeks"
+  },
+  {
+   "fieldname": "length_of_labor",
+   "fieldtype": "Data",
+   "label": "Length Of Labor"
+  },
+  {
+   "fieldname": "birth__weigt",
+   "fieldtype": "Data",
+   "label": "BIRTH  WEIGT"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "SEX"
+  },
+  {
+   "fieldname": "type_of_delivery",
+   "fieldtype": "Data",
+   "label": "Type of Delivery"
+  },
+  {
+   "fieldname": "anesthesia",
+   "fieldtype": "Data",
+   "label": "Anesthesia"
+  },
+  {
+   "fieldname": "place_of_delivery",
+   "fieldtype": "Data",
+   "label": "Place of Delivery"
+  },
+  {
+   "fieldname": "preterm_2",
+   "fieldtype": "Data",
+   "label": "PRETERM"
+  },
+  {
+   "fieldname": "comments_1",
+   "fieldtype": "Data",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "edd_determination",
+   "fieldtype": "Data",
+   "label": "EDD Determination"
+  },
+  {
+   "fieldname": "lmp_sure",
+   "fieldtype": "Data",
+   "label": "LMP sure"
+  },
+  {
+   "fieldname": "early_ultrasound",
+   "fieldtype": "Data",
+   "label": "Early Ultrasound "
+  },
+  {
+   "fieldname": "18_to_20_wks_ultrasound",
+   "fieldtype": "Data",
+   "label": "18 to 20 Wks Ultrasound"
+  },
+  {
+   "fieldname": "pts_name_2",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid_2",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob_2",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "item_1",
+   "fieldtype": "Data",
+   "label": "ITEM"
+  },
+  {
+   "fieldname": "detail_positive_remarks_1",
+   "fieldtype": "Data",
+   "label": "DETAIL POSITIVE REMARKS"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "item_2",
+   "fieldtype": "Data",
+   "label": "ITEM"
+  },
+  {
+   "fieldname": "detail_positive_remarks_2",
+   "fieldtype": "Data",
+   "label": "DETAIL POSITIVE REMARKS"
+  },
+  {
+   "fieldname": "medications",
+   "fieldtype": "Data",
+   "label": "Medications"
+  },
+  {
+   "fieldname": "pts_name_3",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid_3",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob_3",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "pregnancy_weight",
+   "fieldtype": "Data",
+   "label": "Pregnancy Weight"
+  },
+  {
+   "fieldname": "present_weight",
+   "fieldtype": "Data",
+   "label": "Present Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "item_3",
+   "fieldtype": "Data",
+   "label": "ITEM "
+  },
+  {
+   "fieldname": "normal",
+   "fieldtype": "Data",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "abnormal",
+   "fieldtype": "Data",
+   "label": "Abnormal"
+  },
+  {
+   "fieldname": "item_4",
+   "fieldtype": "Data",
+   "label": "ITEM"
+  },
+  {
+   "fieldname": "result_1",
+   "fieldtype": "Data",
+   "label": "RESULTs"
+  },
+  {
+   "fieldname": "pts_name_4",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid_4",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob_4",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "investigations",
+   "fieldtype": "Data",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "result_2",
+   "fieldtype": "Data",
+   "label": "Results"
+  },
+  {
+   "fieldname": "comments_2",
+   "fieldtype": "Data",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "pts_name_5",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid_5",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob_5",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "date_2",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "gestation_weeks_2",
+   "fieldtype": "Data",
+   "label": "Weeks Gestation"
+  },
+  {
+   "fieldname": "fundal__heigh",
+   "fieldtype": "Data",
+   "label": "Fundal  Heigh"
+  },
+  {
+   "fieldname": "presentation",
+   "fieldtype": "Data",
+   "label": "Presentation"
+  },
+  {
+   "fieldname": "fhr",
+   "fieldtype": "Data",
+   "label": "FHR"
+  },
+  {
+   "fieldname": "fetal_movement",
+   "fieldtype": "Data",
+   "label": "Fetal Movement"
+  },
+  {
+   "fieldname": "blood_pressure",
+   "fieldtype": "Data",
+   "label": "Blood Pressure"
+  },
+  {
+   "fieldname": "edema",
+   "fieldtype": "Data",
+   "label": "Edema"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "urine_or_glucose_or_albumin",
+   "fieldtype": "Data",
+   "label": "Urine or Glucose or Albumin"
+  },
+  {
+   "fieldname": "next_appointment",
+   "fieldtype": "Data",
+   "label": "Next Appointment"
+  },
+  {
+   "fieldname": "comments_3",
+   "fieldtype": "Data",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "column_break_2k36q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jssap",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_kymvm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4j881",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zxlqg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_p206h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_n4bek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_timsf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8njxr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_1bqqp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.mobile_no",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "section_break_ryn1v",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "obs",
+   "fieldtype": "Data",
+   "label": "OBS",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-19 11:23:25.953273",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OBS-GYN AND OPD",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

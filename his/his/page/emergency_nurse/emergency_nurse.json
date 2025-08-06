@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2023-05-27 21:54:23.121388",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-05-27 21:54:28.805944",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "emergency-nurse",
+ "owner": "Administrator",
+ "page_name": "emergency-nurse",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

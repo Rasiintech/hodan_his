@@ -1,0 +1,763 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 09:26:10.174119",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "column_break_wopi8",
+  "date",
+  "time",
+  "mrp",
+  "a",
+  "column_break_ibpiy",
+  "planned_procedure",
+  "a1",
+  "a2",
+  "column_break_emhxj",
+  "b",
+  "b1",
+  "b2",
+  "section_break_4xo3o",
+  "emergency_procedure",
+  "c1",
+  "c2",
+  "section_break_xyo0d",
+  "c",
+  "d1",
+  "section_break_8hrij",
+  "dasa",
+  "d2",
+  "section_break_0swt1",
+  "the_procedure",
+  "section_break_l0nvy",
+  "e",
+  "e1",
+  "e2",
+  "section_break_9lemw",
+  "f",
+  "f1",
+  "f2",
+  "column_break_pdsmg",
+  "g",
+  "g1",
+  "g2",
+  "section_break_l3e13",
+  "number_of_skin_puncture",
+  "column_break_q3ft0",
+  "2",
+  "column_break_m6hvw",
+  "1",
+  "column_break_zrek7",
+  "0",
+  "column_break_vl9iq",
+  "j",
+  "section_break_wu99q",
+  "number_of_needle_passes",
+  "seek",
+  "column_break_p8xya",
+  "2a",
+  "column_break_8ozuq",
+  "3e",
+  "column_break_eqn9y",
+  "3w",
+  "column_break_lclwh",
+  "k",
+  "section_break_kmbpg",
+  "type_of_catheter",
+  "column_break_sehcl",
+  "cvc",
+  "column_break_udkgh",
+  "introducer",
+  "column_break_i2ddo",
+  "vascath",
+  "column_break_zmzzm",
+  "other",
+  "section_break_cs0pi",
+  "insertion_sit",
+  "column_break_yrwuk",
+  "uv",
+  "column_break_spukf",
+  "subcavian",
+  "column_break_ep7rm",
+  "femoral",
+  "l",
+  "column_break_x6wm6",
+  "slide_inserted",
+  "column_break_59zn5",
+  "right",
+  "column_break_uacqt",
+  "left",
+  "section_break_slnis",
+  "m",
+  "column_break_e1i6a",
+  "q1",
+  "column_break_viahe",
+  "q2",
+  "section_break_vgctt",
+  "n",
+  "column_break_l4ekr",
+  "t",
+  "column_break_xv1ac",
+  "u",
+  "section_break_7mt7j",
+  "o",
+  "column_break_d6eoj",
+  "x",
+  "column_break_u7dfb",
+  "y",
+  "section_break_kippu",
+  "p",
+  "column_break_7qwqs",
+  "v",
+  "column_break_pc7r3",
+  "w",
+  "section_break_et9bh",
+  "s",
+  "column_break_p3e1q",
+  "q",
+  "column_break_vtttf",
+  "r",
+  "section_break_nuylq"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "a",
+   "fieldtype": "Data",
+   "label": "Location NICU ICU ER OR Other Specify"
+  },
+  {
+   "fieldname": "planned_procedure",
+   "fieldtype": "HTML",
+   "label": "Planned Procedure",
+   "options": "Planned Procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "a1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "a2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "HTML",
+   "label": "Guide wire exchange not recommende ",
+   "options": "Guide wire exchange not recommende "
+  },
+  {
+   "default": "0",
+   "fieldname": "b1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "b2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "emergency_procedure",
+   "fieldtype": "HTML",
+   "label": "Emergency Procedure",
+   "options": "Emergency Procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "c1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "c2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "c",
+   "fieldtype": "HTML",
+   "label": "that i have completed an approved CVC education package and that I have Been signed off as being competent",
+   "options": "that i have completed an approved CVC education package and that I have Been signed off as being competent"
+  },
+  {
+   "default": "0",
+   "fieldname": "d1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "dasa",
+   "fieldtype": "HTML",
+   "label": "I have not completed the above package but consider myself to be competent in CVC Insertion Perform under supervision f operator has nserted",
+   "options": "I have not completed the above package but consider myself to be competent in CVC Insertion Perform under supervision f operator has nserted"
+  },
+  {
+   "default": "0",
+   "fieldname": "d2",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "the_procedure",
+   "fieldtype": "HTML",
+   "label": "The Procedure",
+   "options": "The Procedure"
+  },
+  {
+   "fieldname": "e",
+   "fieldtype": "HTML",
+   "label": "The operator performed a Surgical Scrub",
+   "options": "The operator performed a Surgical Scrub"
+  },
+  {
+   "default": "0",
+   "fieldname": "e1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "e2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "f",
+   "fieldtype": "HTML",
+   "label": "The operator wore, mask, sterile gown and sterile gloves",
+   "options": "The operator wore, mask, sterile gown and sterile gloves"
+  },
+  {
+   "default": "0",
+   "fieldname": "f1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "f2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "g",
+   "fieldtype": "HTML",
+   "label": "Chlorexidine 2.5% in alcohol was applied to the nsertion site and allowed to dry before the procedure was progressed",
+   "options": "Chlorexidine 2.5% in alcohol was applied to the nsertion site and allowed to dry before the procedure was progressed"
+  },
+  {
+   "default": "0",
+   "fieldname": "g1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "g2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "number_of_skin_puncture",
+   "fieldtype": "HTML",
+   "label": "Number of skin puncture",
+   "options": "Number of skin puncture"
+  },
+  {
+   "default": "0",
+   "fieldname": "2",
+   "fieldtype": "Check",
+   "label": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "1",
+   "fieldtype": "Check",
+   "label": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "0",
+   "fieldtype": "Check",
+   "label": "3"
+  },
+  {
+   "default": "0",
+   "fieldname": "j",
+   "fieldtype": "Check",
+   "label": ">4"
+  },
+  {
+   "fieldname": "number_of_needle_passes",
+   "fieldtype": "HTML",
+   "label": "Number of needle passes",
+   "options": "Number of needle passes"
+  },
+  {
+   "default": "0",
+   "fieldname": "2a",
+   "fieldtype": "Check",
+   "label": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "3e",
+   "fieldtype": "Check",
+   "label": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "3w",
+   "fieldtype": "Check",
+   "label": "3"
+  },
+  {
+   "default": "0",
+   "fieldname": "k",
+   "fieldtype": "Check",
+   "label": ">4"
+  },
+  {
+   "fieldname": "type_of_catheter",
+   "fieldtype": "HTML",
+   "label": "Type of Catheter ",
+   "options": "Type of Catheter "
+  },
+  {
+   "fieldname": "insertion_sit",
+   "fieldtype": "HTML",
+   "label": "Insertion Sit",
+   "options": "Insertion Sit"
+  },
+  {
+   "fieldname": "slide_inserted",
+   "fieldtype": "HTML",
+   "label": "Slide Inserted",
+   "options": "Slide Inserted"
+  },
+  {
+   "default": "0",
+   "fieldname": "cvc",
+   "fieldtype": "Check",
+   "label": "CVC"
+  },
+  {
+   "default": "0",
+   "fieldname": "uv",
+   "fieldtype": "Check",
+   "label": "UV"
+  },
+  {
+   "default": "0",
+   "fieldname": "right",
+   "fieldtype": "Check",
+   "label": "Right"
+  },
+  {
+   "default": "0",
+   "fieldname": "introducer",
+   "fieldtype": "Check",
+   "label": "Introducer"
+  },
+  {
+   "default": "0",
+   "fieldname": "subcavian",
+   "fieldtype": "Check",
+   "label": "Subcavian"
+  },
+  {
+   "default": "0",
+   "fieldname": "left",
+   "fieldtype": "Check",
+   "label": "Left"
+  },
+  {
+   "default": "0",
+   "fieldname": "vascath",
+   "fieldtype": "Check",
+   "label": "Vascath"
+  },
+  {
+   "default": "0",
+   "fieldname": "femoral",
+   "fieldtype": "Check",
+   "label": "Femoral"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "l",
+   "fieldtype": "HTML",
+   "label": "(if possible avoid using the femoral site)",
+   "options": "(if possible avoid using the femoral site)"
+  },
+  {
+   "fieldname": "m",
+   "fieldtype": "HTML",
+   "label": "A sterile field was maintained throughout the procedure",
+   "options": "A sterile field was maintained throughout the procedure"
+  },
+  {
+   "fieldname": "q1",
+   "fieldtype": "Data",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "q2",
+   "fieldtype": "Data",
+   "label": "No"
+  },
+  {
+   "fieldname": "n",
+   "fieldtype": "HTML",
+   "label": "X-Ray was performed in real time",
+   "options": "X-Ray was performed in real time"
+  },
+  {
+   "default": "0",
+   "fieldname": "t",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "u",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "o",
+   "fieldtype": "HTML",
+   "label": "Clean blood from the site using chlohexidene 2% in alcohol and dry site",
+   "options": "Clean blood from the site using chlohexidene 2% in alcohol and dry site"
+  },
+  {
+   "default": "0",
+   "fieldname": "x",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "y",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "HTML",
+   "label": "A sterile CVC dressing was placed over the nsertion site. (The dressing must be specifically designed for vascular catheter insetion site pr",
+   "options": "A sterile CVC dressing was placed over the nsertion site. (The dressing must be specifically designed for vascular catheter insetion site pr"
+  },
+  {
+   "fieldname": "v",
+   "fieldtype": "Data",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "w",
+   "fieldtype": "Data",
+   "label": "No"
+  },
+  {
+   "fieldname": "s",
+   "fieldtype": "Data",
+   "label": "Name of Operator:"
+  },
+  {
+   "fieldname": "q",
+   "fieldtype": "Data",
+   "label": "Name of Supervisor (if applicable)"
+  },
+  {
+   "fieldname": "r",
+   "fieldtype": "Data",
+   "label": "Name of Observer: "
+  },
+  {
+   "fieldname": "column_break_wopi8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_emhxj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ibpiy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_4xo3o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xyo0d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_8hrij",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_0swt1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_l0nvy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_9lemw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_pdsmg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_l3e13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wu99q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_q3ft0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_m6hvw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zrek7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vl9iq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_p8xya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8ozuq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_eqn9y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lclwh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kmbpg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "seek",
+   "fieldtype": "HTML",
+   "label": "(seek the help of a supervisor if more than 3 unsuccessful insertion)",
+   "options": "(seek the help of a supervisor if more than 3 unsuccessful insertion)"
+  },
+  {
+   "fieldname": "column_break_sehcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cs0pi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_udkgh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_i2ddo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zmzzm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yrwuk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_spukf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ep7rm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_x6wm6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_59zn5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uacqt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_slnis",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_e1i6a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_viahe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vgctt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_l4ekr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xv1ac",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7mt7j",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_d6eoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_u7dfb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kippu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7qwqs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pc7r3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_et9bh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_p3e1q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vtttf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nuylq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-05 10:14:31.367855",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "CENTRAL VENOUS CATHETER INSERTION CHECKLIST",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 13:55:56.577367",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date_and_time",
+  "pain_intensity",
+  "location",
+  "quality",
+  "alternative_interversion",
+  "pharmaceutical",
+  "sedation",
+  "adverse_effects",
+  "nurse_initail",
+  "reassessment_time",
+  "reassessment_pain_score",
+  "nurse_intail",
+  "time"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_and_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date and Time"
+  },
+  {
+   "fieldname": "pain_intensity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pain intensity"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Quality"
+  },
+  {
+   "fieldname": "alternative_interversion",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Alternative interversion"
+  },
+  {
+   "fieldname": "pharmaceutical",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pharmaceutical"
+  },
+  {
+   "fieldname": "sedation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sedation"
+  },
+  {
+   "fieldname": "adverse_effects",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Adverse Effects"
+  },
+  {
+   "fieldname": "nurse_initail",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nurse Initail"
+  },
+  {
+   "fieldname": "reassessment_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Reassessment Time"
+  },
+  {
+   "fieldname": "reassessment_pain_score",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reassessment Pain score"
+  },
+  {
+   "fieldname": "nurse_intail",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nurse Intail"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-21 13:55:56.577367",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ADULT PAIN child table 2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

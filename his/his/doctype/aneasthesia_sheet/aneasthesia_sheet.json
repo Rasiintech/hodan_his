@@ -1,0 +1,388 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ASH-.#####",
+ "creation": "2022-01-10 11:20:31.282588",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "ot_schedule",
+  "clinical_procedure",
+  "date",
+  "column_break_ydi3v",
+  "operative_doctor",
+  "type_of_operation",
+  "doctor_of_anesthesia",
+  "type_of_anesthesia",
+  "admission_service_unit_type",
+  "service_unit",
+  "time_of_anesthesia",
+  "time_of_operation",
+  "status",
+  "age",
+  "sex",
+  "assistant",
+  "assistant2",
+  "needle_size",
+  "intubation_size",
+  "pre_operative_care_tab",
+  "pre_operative_care_section",
+  "consent_form",
+  "bp",
+  "rr",
+  "cannula_size",
+  "column_break_21",
+  "screening_lab",
+  "pulse_rate",
+  "hb",
+  "column_break_25",
+  "sat",
+  "iv_fluids",
+  "catheterization",
+  "column_break_29",
+  "blood_groups",
+  "blood_transfusion",
+  "medications_used_during_the_operationdosage_and_gram_section",
+  "medication",
+  "intra_operative_care_tab",
+  "intra_operative_care_section",
+  "bp2",
+  "rr2",
+  "column_break_37",
+  "prhr",
+  "end_of_operation",
+  "column_break_40",
+  "oxsat",
+  "section_break_42",
+  "comments",
+  "email",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Operation",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "appointment.practitioner",
+   "fieldname": "operative_doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operative doctor",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_operation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type of operation"
+  },
+  {
+   "fieldname": "doctor_of_anesthesia",
+   "fieldtype": "Link",
+   "label": "Doctor of Anesthesia",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "type_of_anesthesia",
+   "fieldtype": "Data",
+   "label": "Type of Anesthesia"
+  },
+  {
+   "fieldname": "time_of_anesthesia",
+   "fieldtype": "Time",
+   "label": "Time of Anesthesia"
+  },
+  {
+   "fieldname": "time_of_operation",
+   "fieldtype": "Time",
+   "label": "Time of operation"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Select",
+   "label": "sex",
+   "options": "\nMale\nFemale"
+  },
+  {
+   "fieldname": "assistant",
+   "fieldtype": "Data",
+   "label": "Assistant"
+  },
+  {
+   "fieldname": "assistant2",
+   "fieldtype": "Data",
+   "label": "Assistant"
+  },
+  {
+   "fieldname": "needle_size",
+   "fieldtype": "Data",
+   "label": "Spinal needle size"
+  },
+  {
+   "fieldname": "intubation_size",
+   "fieldtype": "Data",
+   "label": "Intubation size"
+  },
+  {
+   "fieldname": "pre_operative_care_section",
+   "fieldtype": "Section Break",
+   "label": "Pre operative care"
+  },
+  {
+   "fieldname": "consent_form",
+   "fieldtype": "Data",
+   "label": "consent form"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "label": "RR"
+  },
+  {
+   "fieldname": "cannula_size",
+   "fieldtype": "Data",
+   "label": "cannula size"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "screening_lab",
+   "fieldtype": "Data",
+   "label": "screening lab"
+  },
+  {
+   "fieldname": "pulse_rate",
+   "fieldtype": "Data",
+   "label": "pulse rate"
+  },
+  {
+   "fieldname": "hb",
+   "fieldtype": "Data",
+   "label": "HB"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sat",
+   "fieldtype": "Data",
+   "label": "sat"
+  },
+  {
+   "fieldname": "iv_fluids",
+   "fieldtype": "Data",
+   "label": "IV fluids"
+  },
+  {
+   "fieldname": "catheterization",
+   "fieldtype": "Data",
+   "label": "Catheterization"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blood_groups",
+   "fieldtype": "Data",
+   "label": "Blood groups"
+  },
+  {
+   "fieldname": "blood_transfusion",
+   "fieldtype": "Data",
+   "label": "Blood transfusion Units"
+  },
+  {
+   "fieldname": "medications_used_during_the_operationdosage_and_gram_section",
+   "fieldtype": "Section Break",
+   "label": "Medications used during the operation(Dosage and Gram)"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "intra_operative_care_section",
+   "fieldtype": "Section Break",
+   "label": "Intra operative care"
+  },
+  {
+   "fieldname": "bp2",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "rr2",
+   "fieldtype": "Data",
+   "label": "RR"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prhr",
+   "fieldtype": "Data",
+   "label": "PR/HR"
+  },
+  {
+   "fieldname": "end_of_operation",
+   "fieldtype": "Data",
+   "label": "End of operation"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "oxsat",
+   "fieldtype": "Data",
+   "label": "OXSAT"
+  },
+  {
+   "fieldname": "section_break_42",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Aneasthesia Sheet",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "pre_operative_care_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pre operative care"
+  },
+  {
+   "fieldname": "intra_operative_care_tab",
+   "fieldtype": "Tab Break",
+   "label": "Intra operative care"
+  },
+  {
+   "fieldname": "admission_service_unit_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Admission Service Unit Type",
+   "options": "Healthcare Service Unit Type"
+  },
+  {
+   "fieldname": "service_unit",
+   "fieldtype": "Data",
+   "label": "Service Unit",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "appointment.procedure_template",
+   "fieldname": "clinical_procedure",
+   "fieldtype": "Link",
+   "label": "Clinical Procedure",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nAdmitted\nTransferred",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ot_schedule",
+   "fieldtype": "Link",
+   "label": "OT Schedule",
+   "options": "OT Schedule"
+  },
+  {
+   "fieldname": "column_break_ydi3v",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-10 00:42:17.693830",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Aneasthesia Sheet",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "OT",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

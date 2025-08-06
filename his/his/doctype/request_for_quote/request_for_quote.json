@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-26 13:14:37.946506",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "request_for_quotation",
+  "section_break_swh3q",
+  "date_request",
+  "column_break_wlc2d",
+  "department",
+  "section_break_wdtmv",
+  "request_for_quote"
+ ],
+ "fields": [
+  {
+   "fieldname": "request_for_quotation",
+   "fieldtype": "HTML",
+   "label": "REQUEST FOR QUOTATION",
+   "options": "REQUEST FOR QUOTATION"
+  },
+  {
+   "fieldname": "section_break_swh3q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_request",
+   "fieldtype": "Date",
+   "label": "Date Request"
+  },
+  {
+   "fieldname": "column_break_wlc2d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "section_break_wdtmv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "request_for_quote",
+   "fieldtype": "Table",
+   "label": " Request for Quote ",
+   "options": "Request for Quote child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-26 13:14:37.946506",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Request for Quote",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 09:42:33.989677",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "leave_cancellation_form",
+  "a",
+  "b",
+  "c",
+  "d",
+  "annual",
+  "study",
+  "unpaid",
+  "maternity",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "date",
+  "m"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave_cancellation_form",
+   "fieldtype": "Data",
+   "label": "Leave Cancellation Form "
+  },
+  {
+   "fieldname": "a",
+   "fieldtype": "Data",
+   "label": "Name of Staff:"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "Position:"
+  },
+  {
+   "fieldname": "c",
+   "fieldtype": "Data",
+   "label": "Department:"
+  },
+  {
+   "fieldname": "d",
+   "fieldtype": "Data",
+   "label": "Kind of Leave : "
+  },
+  {
+   "fieldname": "annual",
+   "fieldtype": "Data",
+   "label": "Annual "
+  },
+  {
+   "fieldname": "study",
+   "fieldtype": "Data",
+   "label": "Study "
+  },
+  {
+   "fieldname": "unpaid",
+   "fieldtype": "Data",
+   "label": "Unpaid"
+  },
+  {
+   "fieldname": "maternity",
+   "fieldtype": "Data",
+   "label": "Maternity "
+  },
+  {
+   "fieldname": "e",
+   "fieldtype": "Data",
+   "label": "Date of Leave to be cancelled:"
+  },
+  {
+   "fieldname": "f",
+   "fieldtype": "Data",
+   "label": "From:"
+  },
+  {
+   "fieldname": "g",
+   "fieldtype": "Data",
+   "label": "To:  "
+  },
+  {
+   "fieldname": "h",
+   "fieldtype": "Data",
+   "label": "Employee Signature:"
+  },
+  {
+   "fieldname": "i",
+   "fieldtype": "Data",
+   "label": "Date: "
+  },
+  {
+   "fieldname": "j",
+   "fieldtype": "Data",
+   "label": "DEPARTMENT HEAD NAME & SIGNATURE"
+  },
+  {
+   "fieldname": "k",
+   "fieldtype": "Data",
+   "label": "Date "
+  },
+  {
+   "fieldname": "l",
+   "fieldtype": "Data",
+   "label": "CMO Name & Signature"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date "
+  },
+  {
+   "fieldname": "m",
+   "fieldtype": "Data",
+   "label": "Note: Please attach approved leave to be cancelled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-28 09:42:33.989677",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Leave Cancellation Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

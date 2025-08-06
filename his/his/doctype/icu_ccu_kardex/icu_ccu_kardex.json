@@ -1,0 +1,400 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 13:26:20.746216",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "column_break_olpjq",
+  "sex",
+  "age",
+  "mrp_1",
+  "section_break_lhd5b",
+  "bed_no",
+  "column_break_rk7ju",
+  "allergy",
+  "column_break_xnvbz",
+  "column_break_d6leq",
+  "female",
+  "column_break_9ttys",
+  "male",
+  "column_break_byfjg",
+  "nationality",
+  "section_break_uggoy",
+  "chief_complaint",
+  "column_break_y2pzq",
+  "diagnosis",
+  "section_break_fvnhe",
+  "past_medical_history",
+  "column_break_p5hqj",
+  "past_surgical_history",
+  "section_break_9s3sh",
+  "mrp",
+  "column_break_sbrjm",
+  "date_time_admitted_to_icu",
+  "column_break_mslq8",
+  "pl_of_transfer",
+  "section_break_eku4q",
+  "blood_croup",
+  "column_break_e5mxi",
+  "height",
+  "column_break_ougbx",
+  "weigh",
+  "column_break_tpacd",
+  "bmi",
+  "section_break_gaqns",
+  "date_ordered",
+  "column_break_w73xx",
+  "peripheral_lines_date_inserted",
+  "column_break_iwjtm",
+  "main_iv_fluid",
+  "column_break_jzsuz",
+  "therapymech_vent_settings",
+  "section_break_fdzyu",
+  "prn_medications",
+  "column_break_aszjq",
+  "time_1",
+  "column_break_vrhya",
+  "blood_and_blood_products",
+  "section_break_tojvk",
+  "single_dose_medication",
+  "column_break_kknqv",
+  "time_2",
+  "column_break_wzd7g",
+  "diet",
+  "section_break_ulieh"
+ ],
+ "fields": [
+  {
+   "fieldname": "bed_no",
+   "fieldtype": "Data",
+   "label": "Bed No"
+  },
+  {
+   "fieldname": "allergy",
+   "fieldtype": "Data",
+   "label": "Allergy"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": " Nationality"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Data",
+   "label": "Chief complaint"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": " Diagnosis"
+  },
+  {
+   "fieldname": "past_medical_history",
+   "fieldtype": "Data",
+   "label": "Past Medical History"
+  },
+  {
+   "fieldname": "past_surgical_history",
+   "fieldtype": "Data",
+   "label": "Past Surgical History"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "date_time_admitted_to_icu",
+   "fieldtype": "Data",
+   "label": "Date Time Admitted to ICU  "
+  },
+  {
+   "fieldname": "pl_of_transfer",
+   "fieldtype": "Data",
+   "label": "PL of Transfer"
+  },
+  {
+   "fieldname": "blood_croup",
+   "fieldtype": "Data",
+   "label": "Blood Croup"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height "
+  },
+  {
+   "fieldname": "weigh",
+   "fieldtype": "Data",
+   "label": "Weigh"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "date_ordered",
+   "fieldtype": "Data",
+   "label": "Date ordered"
+  },
+  {
+   "fieldname": "peripheral_lines_date_inserted",
+   "fieldtype": "Data",
+   "label": "PERIPHERAL LINES DATE INSERTED"
+  },
+  {
+   "fieldname": "main_iv_fluid",
+   "fieldtype": "Data",
+   "label": "MAIN IV FLUID"
+  },
+  {
+   "fieldname": "therapymech_vent_settings",
+   "fieldtype": "Data",
+   "label": "THERAPY/MECH VENT settings"
+  },
+  {
+   "fieldname": "prn_medications",
+   "fieldtype": "Data",
+   "label": "PRN MEDICATIONS  "
+  },
+  {
+   "fieldname": "time_1",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "blood_and_blood_products",
+   "fieldtype": "Data",
+   "label": "BLOOD AND BLOOD PRODUCTS"
+  },
+  {
+   "fieldname": "single_dose_medication",
+   "fieldtype": "Data",
+   "label": "SINGLE DOSE MEDICATION "
+  },
+  {
+   "fieldname": "time_2",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "diet",
+   "fieldtype": "Data",
+   "label": "DIET"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp_1",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "column_break_olpjq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lhd5b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rk7ju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xnvbz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_d6leq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "female",
+   "fieldtype": "Check",
+   "label": "Female"
+  },
+  {
+   "fieldname": "column_break_9ttys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "male",
+   "fieldtype": "Check",
+   "label": "Male"
+  },
+  {
+   "fieldname": "column_break_byfjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uggoy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_y2pzq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fvnhe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_p5hqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9s3sh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sbrjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mslq8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_eku4q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_e5mxi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ougbx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tpacd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gaqns",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_w73xx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iwjtm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jzsuz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fdzyu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_aszjq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vrhya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tojvk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kknqv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wzd7g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ulieh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:14:56.609920",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ICU CCU Kardex",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

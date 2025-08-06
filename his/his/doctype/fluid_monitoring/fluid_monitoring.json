@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-23 11:10:56.037382",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "oral",
+  "iv",
+  "others",
+  "output",
+  "insensible_loss",
+  "total_input",
+  "total_output",
+  "result"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "oral",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Oral",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "iv",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IV",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Others",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "output",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Output",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "insensible_loss",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insensible loss",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_input",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total input",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_output",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total output",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "result",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "result"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-06 15:42:59.251689",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "fluid monitoring",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

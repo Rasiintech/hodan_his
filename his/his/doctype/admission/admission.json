@@ -1,0 +1,388 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-28 17:19:37.208438",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "pid",
+  "name1",
+  "age",
+  "gender",
+  "column_break_dbr9i",
+  "mrp",
+  "next_of_kin_contact_number",
+  "blood_group",
+  "height",
+  "weight",
+  "section_break_nqn3s",
+  "bmi",
+  "section_break_tahmn",
+  "past_medical_history",
+  "history_of_presenting_ilness",
+  "other_systems_inquiry",
+  "events_since_admission",
+  "examination_section",
+  "examination",
+  "examination2",
+  "primary_assessment_section",
+  "primary_assessment",
+  "systemic_review_section",
+  "systemic_review",
+  "systemic_review2",
+  "cvs_section",
+  "cvs",
+  "pulmonary_section",
+  "pulmonary",
+  "pulmonary2",
+  "abdomen_section",
+  "abdomen",
+  "genitourinary_section",
+  "genitourinary",
+  "locomotor_section",
+  "locomotor",
+  "skin_section",
+  "skin",
+  "investigation_results_section",
+  "investigation_results",
+  "investigation_results2",
+  "section_break_zc3e4",
+  "investigation",
+  "imaging",
+  "problem_list_section",
+  "problem_list_for_admission",
+  "to_do_list_section",
+  "to_do_list_for_admision",
+  "plan_of_management_section",
+  "plan_of_management_for_admission",
+  "plan_of_management_for_admission2",
+  "plan_of_management_for_admission3",
+  "plan_of_management_for_admission4",
+  "others",
+  "target_section",
+  "target_for_admission",
+  "doctor_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fetch_from": "pid.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fetch_from": "pid.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "column_break_dbr9i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "next_of_kin_contact_number",
+   "fieldtype": "Data",
+   "label": "Next of kin contact number"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood group"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Text",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "section_break_tahmn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "past_medical_history",
+   "fieldtype": "Small Text",
+   "label": "Past medical history"
+  },
+  {
+   "fieldname": "history_of_presenting_ilness",
+   "fieldtype": "Small Text",
+   "label": "History of presenting ilness"
+  },
+  {
+   "fieldname": "other_systems_inquiry",
+   "fieldtype": "Small Text",
+   "label": "Other systems inquiry"
+  },
+  {
+   "fieldname": "events_since_admission",
+   "fieldtype": "Small Text",
+   "label": "Events since admission"
+  },
+  {
+   "fieldname": "examination_section",
+   "fieldtype": "Section Break",
+   "label": "Examination"
+  },
+  {
+   "fieldname": "examination",
+   "fieldtype": "Table",
+   "options": "Examination"
+  },
+  {
+   "fieldname": "examination2",
+   "fieldtype": "Table",
+   "options": "Examination2"
+  },
+  {
+   "fieldname": "primary_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Primary assessment for"
+  },
+  {
+   "fieldname": "primary_assessment",
+   "fieldtype": "Table",
+   "options": "Primary assessment"
+  },
+  {
+   "fieldname": "systemic_review_section",
+   "fieldtype": "Section Break",
+   "label": "SNS examination "
+  },
+  {
+   "fieldname": "systemic_review",
+   "fieldtype": "Table",
+   "options": "Systemic review"
+  },
+  {
+   "fieldname": "systemic_review2",
+   "fieldtype": "Table",
+   "options": "Systemic review2"
+  },
+  {
+   "fieldname": "cvs_section",
+   "fieldtype": "Section Break",
+   "label": "CVS"
+  },
+  {
+   "fieldname": "cvs",
+   "fieldtype": "Table",
+   "options": "CVS"
+  },
+  {
+   "fieldname": "pulmonary_section",
+   "fieldtype": "Section Break",
+   "label": "Pulmonary"
+  },
+  {
+   "fieldname": "pulmonary",
+   "fieldtype": "Table",
+   "options": "Pulmonary"
+  },
+  {
+   "fieldname": "pulmonary2",
+   "fieldtype": "Table",
+   "options": "Pulmonary2"
+  },
+  {
+   "fieldname": "abdomen_section",
+   "fieldtype": "Section Break",
+   "label": "Abdomen"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Table",
+   "options": "Abdomen"
+  },
+  {
+   "fieldname": "genitourinary",
+   "fieldtype": "Table",
+   "options": "Genitourinary"
+  },
+  {
+   "fieldname": "genitourinary_section",
+   "fieldtype": "Section Break",
+   "label": "Genitourinary"
+  },
+  {
+   "fieldname": "locomotor_section",
+   "fieldtype": "Section Break",
+   "label": "Locomotor"
+  },
+  {
+   "fieldname": "locomotor",
+   "fieldtype": "Table",
+   "options": "Locomotor"
+  },
+  {
+   "fieldname": "skin_section",
+   "fieldtype": "Section Break",
+   "label": "Skin"
+  },
+  {
+   "fieldname": "skin",
+   "fieldtype": "Table",
+   "options": "Skin"
+  },
+  {
+   "fieldname": "investigation_results_section",
+   "fieldtype": "Section Break",
+   "label": "Investigation results"
+  },
+  {
+   "fieldname": "investigation_results",
+   "fieldtype": "Table",
+   "options": "Investigation results"
+  },
+  {
+   "fieldname": "investigation_results2",
+   "fieldtype": "Table",
+   "options": "Investigation results2"
+  },
+  {
+   "fieldname": "section_break_zc3e4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "investigation",
+   "fieldtype": "Small Text",
+   "label": "Other investigation results"
+  },
+  {
+   "fieldname": "imaging",
+   "fieldtype": "Small Text",
+   "label": "imaging findings"
+  },
+  {
+   "fieldname": "problem_list_section",
+   "fieldtype": "Section Break",
+   "label": "Problem list"
+  },
+  {
+   "fieldname": "problem_list_for_admission",
+   "fieldtype": "Table",
+   "options": "Problem list for admission"
+  },
+  {
+   "fieldname": "plan_of_management_section",
+   "fieldtype": "Section Break",
+   "label": "Plan of management"
+  },
+  {
+   "fieldname": "plan_of_management_for_admission",
+   "fieldtype": "Table",
+   "options": "Plan of management for admission"
+  },
+  {
+   "fieldname": "plan_of_management_for_admission2",
+   "fieldtype": "Table",
+   "options": "Plan of management for admission2"
+  },
+  {
+   "fieldname": "plan_of_management_for_admission3",
+   "fieldtype": "Table",
+   "options": "Plan of management for admission3"
+  },
+  {
+   "fieldname": "plan_of_management_for_admission4",
+   "fieldtype": "Table",
+   "options": "Plan of management for admission4"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Text",
+   "label": "Other drugs"
+  },
+  {
+   "fieldname": "target_section",
+   "fieldtype": "Section Break",
+   "label": "Target"
+  },
+  {
+   "fieldname": "target_for_admission",
+   "fieldtype": "Table",
+   "options": "Target for admission"
+  },
+  {
+   "fieldname": "to_do_list_section",
+   "fieldtype": "Section Break",
+   "label": "To do list "
+  },
+  {
+   "fieldname": "to_do_list_for_admision",
+   "fieldtype": "Table",
+   "options": "To do list for admision"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor name"
+  },
+  {
+   "fieldname": "section_break_nqn3s",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-07 09:15:52.436200",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Admission",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1"
+}

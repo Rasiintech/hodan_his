@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-26 11:16:01.141676",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "unit",
+  "section_break_qkfqf",
+  "wound_tracking_form_data",
+  "number_residents_with_facility_acquired_pressure_injuries",
+  "residents_with_facility_acquired_pressure_injury_a_b",
+  "total_number_of_all_residents_in_census"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "section_break_qkfqf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wound_tracking_form_data",
+   "fieldtype": "Table",
+   "label": "Wound Tracking Form Data",
+   "options": "Wound Tracking Form Data"
+  },
+  {
+   "fieldname": "number_residents_with_facility_acquired_pressure_injuries",
+   "fieldtype": "Data",
+   "label": "Number Residents with Facility Acquired Pressure Injuries"
+  },
+  {
+   "fieldname": "residents_with_facility_acquired_pressure_injury_a_b",
+   "fieldtype": "Data",
+   "label": "Residents with Facility Acquired Pressure Injury (A B)"
+  },
+  {
+   "fieldname": "total_number_of_all_residents_in_census",
+   "fieldtype": "Data",
+   "label": "Total Number of All Residents in Census"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-26 11:33:29.256775",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Wound Tracking Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

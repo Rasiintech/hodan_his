@@ -1,0 +1,269 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OPT-.#####",
+ "creation": "2023-04-24 15:58:42.647511",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "column_break_1z2lw",
+  "date",
+  "address",
+  "section_break_sr26b",
+  "column_break_zj3ge",
+  "d_v",
+  "od",
+  "os",
+  "column_break_eqeev",
+  "l1",
+  "a1",
+  "a2",
+  "axis_column",
+  "l2",
+  "axis1",
+  "axis2",
+  "section_break_o1sht",
+  "nv",
+  "od2",
+  "os2",
+  "cylindrical_column",
+  "a3",
+  "a4",
+  "column_break_ec59p",
+  "axis3",
+  "axis4",
+  "section_break_wvwqf",
+  "remark",
+  "column_break_g7n9u",
+  "pd",
+  "section_break_z8u8y",
+  "expiration",
+  "column_break_8xl06",
+  "dr"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "d_v",
+   "fieldtype": "HTML",
+   "label": "D . V",
+   "options": "D.V"
+  },
+  {
+   "fieldname": "column_break_zj3ge",
+   "fieldtype": "Column Break",
+   "label": "Spherical"
+  },
+  {
+   "fieldname": "od",
+   "fieldtype": "Data",
+   "label": "O.D"
+  },
+  {
+   "fieldname": "section_break_sr26b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "os",
+   "fieldtype": "Data",
+   "label": "O.S"
+  },
+  {
+   "fieldname": "section_break_o1sht",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nv",
+   "fieldtype": "HTML",
+   "label": "N.V",
+   "options": "N.V"
+  },
+  {
+   "fieldname": "od2",
+   "fieldtype": "Data",
+   "label": "O.D"
+  },
+  {
+   "fieldname": "os2",
+   "fieldtype": "Data",
+   "label": "O.S"
+  },
+  {
+   "fieldname": "cylindrical_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "a1",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "a2",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "a3",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "a4",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_eqeev",
+   "fieldtype": "Column Break",
+   "label": "Cylindrical"
+  },
+  {
+   "fieldname": "l1",
+   "fieldtype": "HTML",
+   "options": "."
+  },
+  {
+   "fieldname": "axis_column",
+   "fieldtype": "Column Break",
+   "label": "Axis"
+  },
+  {
+   "fieldname": "l2",
+   "fieldtype": "HTML",
+   "options": "."
+  },
+  {
+   "fieldname": "axis1",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "axis2",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_ec59p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "axis3",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "axis4",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "section_break_wvwqf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_g7n9u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pd",
+   "fieldtype": "Data",
+   "label": "PD"
+  },
+  {
+   "fieldname": "section_break_z8u8y",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "expiration",
+   "fieldtype": "Date",
+   "label": "Expiration"
+  },
+  {
+   "fieldname": "column_break_8xl06",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dr",
+   "fieldtype": "Link",
+   "label": "Dr",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_1z2lw",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-30 11:17:19.513309",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Ophthalmology",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

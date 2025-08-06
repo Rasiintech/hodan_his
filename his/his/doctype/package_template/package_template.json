@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:template_code",
+ "creation": "2023-03-15 12:34:08.851462",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template",
+  "item",
+  "template_code",
+  "item_group",
+  "column_break_3",
+  "disabled",
+  "is_billable",
+  "rate",
+  "result_legend_section",
+  "package_prescription",
+  "description",
+  "change_in_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "template",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Template",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "no_copy": 1,
+   "options": "Item",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "template_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "no_copy": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Item Group",
+   "options": "Item Group",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "default": "1",
+   "description": "If unchecked, the item will not be available in Sales Invoices for billing but can be used in group test creation. ",
+   "fieldname": "is_billable",
+   "fieldtype": "Check",
+   "label": "Is Billable",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.is_billable == 1",
+   "description": "This value is updated in the Default Sales Price List.",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "result_legend_section",
+   "fieldtype": "Section Break",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "package_prescription",
+   "fieldtype": "Table",
+   "label": "Package prescription",
+   "options": "Package prescription",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "change_in_item",
+   "fieldtype": "Check",
+   "label": "Change In Item"
+  }
+ ],
+ "links": [],
+ "modified": "2023-06-28 01:56:16.790445",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Package Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1
+  }
+ ],
+ "restrict_to_domain": "Healthcare",
+ "search_fields": "template_code , template",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "template",
+ "track_changes": 1
+}

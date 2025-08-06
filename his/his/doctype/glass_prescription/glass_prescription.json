@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-03 09:15:52.579518",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rows_fields",
+  "od",
+  "right_sph",
+  "right_axis",
+  "right_cyl",
+  "os",
+  "left_sph",
+  "left_cyl",
+  "left_axis"
+ ],
+ "fields": [
+  {
+   "fieldname": "od",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Right Eye OD : ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "os",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Left Eye OS",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rows_fields",
+   "fieldtype": "Data"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "right_sph",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SPH"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "right_axis",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "AXIS"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "right_cyl",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CYL"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "left_sph",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SPH"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "left_cyl",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CYL"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "left_axis",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "AXIS"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-11 10:42:24.058925",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Glass prescription",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

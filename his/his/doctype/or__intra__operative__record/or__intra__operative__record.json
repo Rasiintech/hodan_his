@@ -1,0 +1,517 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-30 09:05:24.257173",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "patient_name",
+  "age",
+  "column_break_tvwaa",
+  "gender",
+  "date",
+  "section_break_sgtpr",
+  "or_no",
+  "elect",
+  "emerg",
+  "ga",
+  "la",
+  "sedation",
+  "other1",
+  "mrn",
+  "m",
+  "column_break_aeq8c",
+  "f",
+  "allergies",
+  "anesthetist",
+  "patient_on_arrival",
+  "awake",
+  "sedated",
+  "sleeping",
+  "intubated",
+  "asa_1234e",
+  "section_break_6fqvx",
+  "time_in_or",
+  "anesth_start",
+  "surg_start",
+  "column_break_dyf0z",
+  "surg_end",
+  "anesth_end",
+  "time_out",
+  "section_break_oobdm",
+  "surgeon",
+  "assist1",
+  "assist2",
+  "anesth_tec",
+  "column_break_y20mp",
+  "scru_nur1",
+  "scru_nur2",
+  "circ_nur1",
+  "circ_nur2",
+  "section_break_mb4ns",
+  "procedure_booked",
+  "column_break_zypqz",
+  "procedure_performed",
+  "section_break_zy4pn",
+  "or_intra_operative_record_data01",
+  "catheter_section",
+  "fr",
+  "baloon",
+  "column_break_olwkd",
+  "inserted_by",
+  "medication_given",
+  "front_section",
+  "front_right",
+  "column_break_oqqid",
+  "front_left",
+  "back_section",
+  "back_right",
+  "column_break_hlmm8",
+  "back_left",
+  "section_break_ghfun",
+  "or_intra_operative_record_data02",
+  "section_break_qskwj",
+  "dressing",
+  "blood_loss",
+  "comments",
+  "section_break_79tzf",
+  "pt_transfered_to",
+  "rec_rm",
+  "ward",
+  "icu",
+  "column_break_ompu4",
+  "other",
+  "rr_nurse_sign",
+  "scrub_nurse_sign",
+  "circ_nurse_sign"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient name"
+  },
+  {
+   "fetch_from": "pid.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fetch_from": "pid.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "or_no",
+   "fieldtype": "Data",
+   "label": "O.R NO"
+  },
+  {
+   "fieldname": "elect",
+   "fieldtype": "Data",
+   "label": "Elect"
+  },
+  {
+   "fieldname": "emerg",
+   "fieldtype": "Data",
+   "label": "Emerg"
+  },
+  {
+   "fieldname": "ga",
+   "fieldtype": "Data",
+   "label": "GA"
+  },
+  {
+   "fieldname": "la",
+   "fieldtype": "Data",
+   "label": "LA"
+  },
+  {
+   "fieldname": "sedation",
+   "fieldtype": "Data",
+   "label": "Sedation"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "mrn",
+   "fieldtype": "Data",
+   "label": "MRN"
+  },
+  {
+   "fieldname": "section_break_sgtpr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "m",
+   "fieldtype": "Data",
+   "label": "M"
+  },
+  {
+   "fieldname": "f",
+   "fieldtype": "Data",
+   "label": "F"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "ALLERGIES"
+  },
+  {
+   "fieldname": "anesthetist",
+   "fieldtype": "Data",
+   "label": "ANESTHETIST"
+  },
+  {
+   "fieldname": "patient_on_arrival",
+   "fieldtype": "Data",
+   "label": "PATIENT ON ARRIVAL"
+  },
+  {
+   "fieldname": "column_break_tvwaa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "awake",
+   "fieldtype": "Data",
+   "label": "AWAKE"
+  },
+  {
+   "fieldname": "sedated",
+   "fieldtype": "Data",
+   "label": "SEDATED"
+  },
+  {
+   "fieldname": "sleeping",
+   "fieldtype": "Data",
+   "label": "SLEEPING"
+  },
+  {
+   "fieldname": "intubated",
+   "fieldtype": "Data",
+   "label": "INTUBATED"
+  },
+  {
+   "fieldname": "asa_1234e",
+   "fieldtype": "Data",
+   "label": "ASA 1234E"
+  },
+  {
+   "fieldname": "section_break_6fqvx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "time_in_or",
+   "fieldtype": "Data",
+   "label": "TIME IN OR"
+  },
+  {
+   "fieldname": "anesth_start",
+   "fieldtype": "Data",
+   "label": "ANESTH START"
+  },
+  {
+   "fieldname": "surg_start",
+   "fieldtype": "Data",
+   "label": "SURG START"
+  },
+  {
+   "fieldname": "surg_end",
+   "fieldtype": "Data",
+   "label": "SURG END"
+  },
+  {
+   "fieldname": "anesth_end",
+   "fieldtype": "Data",
+   "label": "ANESTH END"
+  },
+  {
+   "fieldname": "time_out",
+   "fieldtype": "Data",
+   "label": "TIME OUT"
+  },
+  {
+   "fieldname": "section_break_oobdm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_dyf0z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_aeq8c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Data",
+   "label": "SURGEON"
+  },
+  {
+   "fieldname": "assist1",
+   "fieldtype": "Data",
+   "label": "ASSIST1"
+  },
+  {
+   "fieldname": "assist2",
+   "fieldtype": "Data",
+   "label": "ASSIST2"
+  },
+  {
+   "fieldname": "anesth_tec",
+   "fieldtype": "Data",
+   "label": "ANESTH TEC"
+  },
+  {
+   "fieldname": "column_break_y20mp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scru_nur1",
+   "fieldtype": "Data",
+   "label": "SCRU NUR1"
+  },
+  {
+   "fieldname": "scru_nur2",
+   "fieldtype": "Data",
+   "label": "SCRU NUR2"
+  },
+  {
+   "fieldname": "circ_nur1",
+   "fieldtype": "Data",
+   "label": "CIRC NUR1"
+  },
+  {
+   "fieldname": "circ_nur2",
+   "fieldtype": "Data",
+   "label": "CIRC NUR2"
+  },
+  {
+   "fieldname": "section_break_mb4ns",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "procedure_booked",
+   "fieldtype": "Data",
+   "label": "PROCEDURE BOOKED"
+  },
+  {
+   "fieldname": "procedure_performed",
+   "fieldtype": "Data",
+   "label": "PROCEDURE PERFORMED"
+  },
+  {
+   "fieldname": "column_break_zypqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zy4pn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "catheter_section",
+   "fieldtype": "Section Break",
+   "label": "CATHETER"
+  },
+  {
+   "fieldname": "fr",
+   "fieldtype": "Data",
+   "label": "FR"
+  },
+  {
+   "fieldname": "baloon",
+   "fieldtype": "Data",
+   "label": "Baloon"
+  },
+  {
+   "fieldname": "inserted_by",
+   "fieldtype": "Data",
+   "label": "Inserted by"
+  },
+  {
+   "fieldname": "column_break_olwkd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "medication_given",
+   "fieldtype": "Small Text",
+   "label": "Medication given"
+  },
+  {
+   "fieldname": "front_section",
+   "fieldtype": "Section Break",
+   "label": "Front"
+  },
+  {
+   "fieldname": "front_right",
+   "fieldtype": "Data",
+   "label": "Right"
+  },
+  {
+   "fieldname": "front_left",
+   "fieldtype": "Data",
+   "label": "Left"
+  },
+  {
+   "fieldname": "back_section",
+   "fieldtype": "Section Break",
+   "label": "Back"
+  },
+  {
+   "fieldname": "back_right",
+   "fieldtype": "Data",
+   "label": "Right"
+  },
+  {
+   "fieldname": "back_left",
+   "fieldtype": "Data",
+   "label": "Left"
+  },
+  {
+   "fieldname": "column_break_oqqid",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hlmm8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ghfun",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_qskwj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dressing",
+   "fieldtype": "Data",
+   "label": "Dressing"
+  },
+  {
+   "fieldname": "blood_loss",
+   "fieldtype": "Data",
+   "label": "Blood loss"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "other1",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "or_intra_operative_record_data01",
+   "fieldtype": "Table",
+   "options": "OR INTRA OPERATIVE RECORD Data"
+  },
+  {
+   "fieldname": "or_intra_operative_record_data02",
+   "fieldtype": "Table",
+   "options": "OR INTRA OPERATIVE RECORD Data2"
+  },
+  {
+   "fieldname": "section_break_79tzf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pt_transfered_to",
+   "fieldtype": "Data",
+   "label": "PT transfered to"
+  },
+  {
+   "fieldname": "rec_rm",
+   "fieldtype": "Data",
+   "label": "Rec RM"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Data",
+   "label": "Ward"
+  },
+  {
+   "fieldname": "icu",
+   "fieldtype": "Data",
+   "label": "ICU"
+  },
+  {
+   "fieldname": "rr_nurse_sign",
+   "fieldtype": "Data",
+   "label": "RR Nurse Sign"
+  },
+  {
+   "fieldname": "scrub_nurse_sign",
+   "fieldtype": "Data",
+   "label": "Scrub nurse sign"
+  },
+  {
+   "fieldname": "circ_nurse_sign",
+   "fieldtype": "Data",
+   "label": "Circ nurse sign"
+  },
+  {
+   "fieldname": "column_break_ompu4",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-03 09:32:24.091149",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OR  INTRA  OPERATIVE  RECORD",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

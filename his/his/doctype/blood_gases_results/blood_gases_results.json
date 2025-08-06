@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 08:40:47.134193",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "column_break_9hmti",
+  "patient_name",
+  "column_break_4bgvv",
+  "dob",
+  "column_break_wyy5y",
+  "mrp",
+  "section_break_yykzx",
+  "blood_gases_results_ch"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "blood_gases_results_ch",
+   "fieldtype": "Table",
+   "label": "BLOOD GASES RESULTS Ch",
+   "options": "BLOOD GASES RESULTS Ch"
+  },
+  {
+   "fieldname": "column_break_9hmti",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4bgvv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wyy5y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yykzx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:10:15.532532",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "BLOOD GASES RESULTS",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

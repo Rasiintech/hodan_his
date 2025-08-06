@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-13 09:12:00.624110",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gcs",
+  "convulsing",
+  "agitated",
+  "abnormal_movement",
+  "eye_pupil_size",
+  "intact_brain_stem_reflexes"
+ ],
+ "fields": [
+  {
+   "fieldname": "gcs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "GCS           "
+  },
+  {
+   "fieldname": "convulsing",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "convulsing              ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "agitated",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Agitated            ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "abnormal_movement",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Abnormal movement ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "eye_pupil_size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Eye pupil size and reaction"
+  },
+  {
+   "fieldname": "intact_brain_stem_reflexes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Intact Brain stem reflexes",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-23 09:56:42.775128",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Systemic review",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

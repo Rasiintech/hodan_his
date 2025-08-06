@@ -1,0 +1,26 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-09-28 11:09:17.228479",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-10-08 11:23:19.299987",
+ "modified_by": "Administrator",
+ "module": "His",
+ "name": "Items Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Batch",
+ "report_name": "Items Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Item Manager"
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 14:20:12.718513",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contractility_problem",
+  "increase_cardiac_biomarkers",
+  "adjustment"
+ ],
+ "fields": [
+  {
+   "fieldname": "contractility_problem",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Contractility problem",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "increase_cardiac_biomarkers",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Need of inotropes",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "adjustment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Adjustment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 10:16:08.520012",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Circulation5",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

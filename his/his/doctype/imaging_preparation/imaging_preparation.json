@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-02 11:26:39.225823",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "examination",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "examination",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Examination",
+   "options": "Radiology Template"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-02 11:52:08.040909",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Imaging Preparation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

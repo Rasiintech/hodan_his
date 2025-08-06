@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-01 11:29:39.172559",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_name",
+  "column_break_h4lez",
+  "employee_number",
+  "column_break_e7otv",
+  "department",
+  "section_break_txgxx",
+  "position",
+  "column_break_lpq1l",
+  "date_of_hire",
+  "column_break_2dk4h",
+  "end_of_contract_date",
+  "section_break_7ospa",
+  "employee_sign",
+  "column_break_w8kto",
+  "department_request_for_approval",
+  "section_break_dahhs",
+  "to_1",
+  "column_break_l4twl",
+  "human_resource_remarks",
+  "section_break_2hn48",
+  "to",
+  "column_break_62w0j",
+  "attending_physician_recomendation",
+  "section_break_5me1p",
+  "to_2",
+  "column_break_lq0rk",
+  "signature__date",
+  "column_break_smiet",
+  "ick_report_approval",
+  "section_break_pkoop",
+  "to_3",
+  "column_break_k5pzn",
+  "and_resume_the_work_on",
+  "column_break_xrc4i",
+  "human_resource_manager_signature__date",
+  "section_break_vtqvk"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "employee_number",
+   "fieldtype": "Data",
+   "label": "Employee Number"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "date_of_hire",
+   "fieldtype": "Data",
+   "label": "Date of Hire"
+  },
+  {
+   "fieldname": "end_of_contract_date",
+   "fieldtype": "Data",
+   "label": " End of Contract Date"
+  },
+  {
+   "fieldname": "employee_sign",
+   "fieldtype": "Data",
+   "label": "Employee Sign"
+  },
+  {
+   "fieldname": "to_1",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "to_2",
+   "fieldtype": "Data",
+   "label": "Attending Physicians Name"
+  },
+  {
+   "fieldname": "signature__date",
+   "fieldtype": "Data",
+   "label": "Signature  Date"
+  },
+  {
+   "fieldname": "ick_report_approval",
+   "fieldtype": "Data",
+   "label": "Sick Report Approval"
+  },
+  {
+   "fieldname": "to_3",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "and_resume_the_work_on",
+   "fieldtype": "Data",
+   "label": "And resume the work on"
+  },
+  {
+   "fieldname": "human_resource_manager_signature__date",
+   "fieldtype": "Data",
+   "label": "Human Resource Manager Signature  Date"
+  },
+  {
+   "fieldname": "column_break_h4lez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_e7otv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_txgxx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lpq1l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2dk4h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7ospa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_w8kto",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_l4twl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "human_resource_remarks",
+   "fieldtype": "HTML",
+   "label": "Human Resource Remarks",
+   "options": "Human Resource Remarks"
+  },
+  {
+   "fieldname": "section_break_2hn48",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_62w0j",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "department_request_for_approval",
+   "fieldtype": "HTML",
+   "label": "Department Request for Approval",
+   "options": "Department Request for Approval"
+  },
+  {
+   "fieldname": "section_break_dahhs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attending_physician_recomendation",
+   "fieldtype": "Text",
+   "label": "Attending Physician Recomendation"
+  },
+  {
+   "fieldname": "section_break_5me1p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lq0rk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_smiet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pkoop",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_k5pzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xrc4i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vtqvk",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-26 14:06:28.337125",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Sick report Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

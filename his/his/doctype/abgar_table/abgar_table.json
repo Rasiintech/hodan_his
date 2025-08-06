@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-27 15:22:11.447517",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "abgar",
+  "1_min",
+  "5_min",
+  "10_min"
+ ],
+ "fields": [
+  {
+   "fieldname": "abgar",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Abgar",
+   "options": "Abgar Table list"
+  },
+  {
+   "fieldname": "1_min",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "1 min"
+  },
+  {
+   "fieldname": "5_min",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "5 min"
+  },
+  {
+   "fieldname": "10_min",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "10 min"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-27 15:26:34.684634",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Abgar Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

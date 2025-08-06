@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-22 16:25:58.401219",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lab_test",
+  "sample"
+ ],
+ "fields": [
+  {
+   "fieldname": "lab_test",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lab test",
+   "options": "Lab Test Template"
+  },
+  {
+   "fieldname": "sample",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sample",
+   "options": "Sample"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-08 10:50:16.346294",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Lab Sample",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

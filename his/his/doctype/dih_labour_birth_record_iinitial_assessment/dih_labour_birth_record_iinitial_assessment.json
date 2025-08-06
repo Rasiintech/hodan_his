@@ -1,0 +1,1084 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-30 08:57:13.189952",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_yo1ar",
+  "dob_1",
+  "section_break_jadkc",
+  "h",
+  "section_break_eff6r",
+  "date",
+  "column_break_fz1jh",
+  "time_1",
+  "section_break_yiz3i",
+  "lmp",
+  "column_break_ytexg",
+  "edd",
+  "section_break_fcns4",
+  "gestation_wks",
+  "section_break_yvlxt",
+  "history_of_contractions",
+  "column_break_xz1ex",
+  "yes_1",
+  "column_break_xtiqc",
+  "no_1",
+  "column_break_iedse",
+  "section_break_shrbh",
+  "contractions",
+  "column_break_vgxxl",
+  "strength",
+  "column_break_tmvep",
+  "duration",
+  "section_break_bl1ep",
+  "membranes_1",
+  "column_break_x5ypc",
+  "intact_1",
+  "column_break_dz72j",
+  "unsure",
+  "column_break_ksjaf",
+  "ruptured_1",
+  "section_break_dakzu",
+  "on",
+  "column_break_6uitn",
+  "time_2",
+  "column_break_9lpfg",
+  "column_break_u6ppi",
+  "section_break_zvqh1",
+  "liquor_colour",
+  "column_break_fjl3f",
+  "other_vaginal_loss",
+  "section_break_btcrr",
+  "pulse_1",
+  "column_break_x38sg",
+  "temp",
+  "section_break_8oxb8",
+  "urine_analysis",
+  "column_break_rhcck",
+  "glucose",
+  "column_break_iviba",
+  "oedema",
+  "section_break_kdhtd",
+  "fundal_ht",
+  "column_break_xceio",
+  "iie",
+  "column_break_4i2n7",
+  "presentation_1",
+  "column_break_utri7",
+  "presenting_part_5th_palpable",
+  "column_break_jw5an",
+  "length",
+  "column_break_lpbyl",
+  "fhr",
+  "column_break_ctghz",
+  "section_break_fhkoe",
+  "maternal_pulse",
+  "column_break_qu1zh",
+  "dilatation",
+  "column_break_75pg5",
+  "membranes_2",
+  "column_break_aoskk",
+  "ruptured_2",
+  "column_break_bvmgk",
+  "presenting_part",
+  "column_break_6u16w",
+  "liqour_seen",
+  "column_break_vc7rb",
+  "yes_2",
+  "column_break_g5eus",
+  "no_2",
+  "column_break_cumfp",
+  "position",
+  "column_break_yd9ib",
+  "relation_to_ischial_spines",
+  "column_break_0n1qp",
+  "moulding",
+  "section_break_i6w9q",
+  "pts_name_2",
+  "column_break_xizwm",
+  "pid_2",
+  "column_break_lgf1u",
+  "dob_2",
+  "section_break_o9dno",
+  "column_break_xjiu4",
+  "labour",
+  "section_break_szpgb",
+  "mode_of_delivery",
+  "column_break_fpqpg",
+  "on_day",
+  "section_break_pj2gq",
+  "indication",
+  "column_break_e3g6n",
+  "presentation_2",
+  "section_break_azs4z",
+  "live_birth_stillbirth",
+  "column_break_oast9",
+  "gest_ation_wks",
+  "section_break_q6mqo",
+  "birth_weight",
+  "column_break_hdfry",
+  "sex",
+  "section_break_8zgzz",
+  "apgar",
+  "activity",
+  "pulse_2",
+  "grimace",
+  "appearance",
+  "respiration",
+  "total_scores",
+  "column_break_ttydj",
+  "time_to_first_breath",
+  "first_stage",
+  "second_stage",
+  "third_stage",
+  "total_duration_of_labour",
+  "srm__arm",
+  "section_break_ltbc0",
+  "pts_name_3",
+  "column_break_6dk5p",
+  "pid_3",
+  "column_break_e6gkz",
+  "dob_3",
+  "section_break_xoo61",
+  "lobour_2",
+  "section_break_pe1hn",
+  "routine_oxytocic_drugs_given",
+  "column_break_ceqxs",
+  "dose",
+  "section_break_sbizc",
+  "placenta",
+  "section_break_5xw0l",
+  "controlled_cord_traction",
+  "column_break_bd1lr",
+  "blood_loss",
+  "column_break_8honj",
+  "maternal_effort",
+  "section_break_vtild",
+  "manual_removal",
+  "column_break_wl1is",
+  "placenta_appears",
+  "column_break_xlkqy",
+  "membranes_3",
+  "section_break_8zx6j",
+  "number_of_umbilical_vessels",
+  "column_break_m7cvt",
+  "perineum",
+  "column_break_f4s4a",
+  "intact_2",
+  "section_break_q77cn",
+  "episiotomy",
+  "1st_degree_tear",
+  "column_break_omro4",
+  "2st_degree_tear",
+  "column_break_q2s5e",
+  "3st_degree_tear",
+  "column_break_dtuhb",
+  "4st_degree_tear",
+  "section_break_hupjy",
+  "anaesthesia",
+  "column_break_6xbu6",
+  "technique",
+  "section_break_ver9s",
+  "haemostasis",
+  "rectal_exam",
+  "swabs_needles_and_instruments_complete",
+  "section_break_exfe7",
+  "checked_by",
+  "column_break_v5oco",
+  "attending_physician"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_yo1ar",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob_1",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "section_break_jadkc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "h",
+   "fieldtype": "HTML",
+   "options": "Labour and Birth Record: Initial Assessment"
+  },
+  {
+   "fieldname": "section_break_eff6r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_fz1jh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time_1",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "section_break_yiz3i",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lmp",
+   "fieldtype": "Data",
+   "label": "LMP"
+  },
+  {
+   "fieldname": "column_break_ytexg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "edd",
+   "fieldtype": "Data",
+   "label": "EDD"
+  },
+  {
+   "fieldname": "section_break_fcns4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gestation_wks",
+   "fieldtype": "Data",
+   "label": "Gestation Wks"
+  },
+  {
+   "fieldname": "section_break_yvlxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "history_of_contractions",
+   "fieldtype": "Data",
+   "label": "History of Contractions"
+  },
+  {
+   "fieldname": "column_break_xz1ex",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_1",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_xtiqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_1",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_iedse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_shrbh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contractions",
+   "fieldtype": "Data",
+   "label": "Contractions"
+  },
+  {
+   "fieldname": "column_break_vgxxl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "strength",
+   "fieldtype": "Data",
+   "label": "Strength"
+  },
+  {
+   "fieldname": "column_break_tmvep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "section_break_bl1ep",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "membranes_1",
+   "fieldtype": "Data",
+   "label": "Membranes"
+  },
+  {
+   "fieldname": "column_break_x5ypc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intact_1",
+   "fieldtype": "Data",
+   "label": "Intact"
+  },
+  {
+   "fieldname": "column_break_dz72j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unsure",
+   "fieldtype": "Data",
+   "label": "Unsure"
+  },
+  {
+   "fieldname": "column_break_ksjaf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ruptured_1",
+   "fieldtype": "Data",
+   "label": "Ruptured"
+  },
+  {
+   "fieldname": "section_break_dakzu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "on",
+   "fieldtype": "Date",
+   "label": "On"
+  },
+  {
+   "fieldname": "column_break_6uitn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_2",
+   "fieldtype": "Datetime",
+   "label": "Time"
+  },
+  {
+   "fieldname": "column_break_9lpfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_u6ppi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zvqh1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "liquor_colour",
+   "fieldtype": "Data",
+   "label": "Liquor colour"
+  },
+  {
+   "fieldname": "column_break_fjl3f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_vaginal_loss",
+   "fieldtype": "Data",
+   "label": "Other Vaginal loss"
+  },
+  {
+   "fieldname": "section_break_btcrr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pulse_1",
+   "fieldtype": "Data",
+   "label": "Pulse"
+  },
+  {
+   "fieldname": "column_break_x38sg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "Temp"
+  },
+  {
+   "fieldname": "section_break_8oxb8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "urine_analysis",
+   "fieldtype": "Data",
+   "label": "Urine Analysis"
+  },
+  {
+   "fieldname": "column_break_rhcck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "glucose",
+   "fieldtype": "Data",
+   "label": "Glucose"
+  },
+  {
+   "fieldname": "column_break_iviba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "oedema",
+   "fieldtype": "Data",
+   "label": "Oedema"
+  },
+  {
+   "fieldname": "section_break_kdhtd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fundal_ht",
+   "fieldtype": "Data",
+   "label": "Fundal Ht"
+  },
+  {
+   "fieldname": "column_break_xceio",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "iie",
+   "fieldtype": "Data",
+   "label": "Iie"
+  },
+  {
+   "fieldname": "column_break_4i2n7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "presentation_1",
+   "fieldtype": "Data",
+   "label": "Presentation"
+  },
+  {
+   "fieldname": "column_break_utri7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "presenting_part_5th_palpable",
+   "fieldtype": "Data",
+   "label": "Presenting Part 5th palpable"
+  },
+  {
+   "fieldname": "column_break_jw5an",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length"
+  },
+  {
+   "fieldname": "column_break_lpbyl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fhr",
+   "fieldtype": "Data",
+   "label": "FHR"
+  },
+  {
+   "fieldname": "column_break_ctghz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fhkoe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "maternal_pulse",
+   "fieldtype": "Data",
+   "label": "Maternal pulse"
+  },
+  {
+   "fieldname": "column_break_qu1zh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dilatation",
+   "fieldtype": "Data",
+   "label": "Dilatation"
+  },
+  {
+   "fieldname": "column_break_75pg5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membranes_2",
+   "fieldtype": "Data",
+   "label": "Membranes"
+  },
+  {
+   "fieldname": "column_break_aoskk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ruptured_2",
+   "fieldtype": "Data",
+   "label": "Ruptured"
+  },
+  {
+   "fieldname": "column_break_bvmgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "presenting_part",
+   "fieldtype": "Data",
+   "label": "Presenting Part"
+  },
+  {
+   "fieldname": "column_break_6u16w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "liqour_seen",
+   "fieldtype": "Data",
+   "label": "Liqour seen"
+  },
+  {
+   "fieldname": "column_break_vc7rb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_2",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_g5eus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_cumfp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "column_break_yd9ib",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "relation_to_ischial_spines",
+   "fieldtype": "Data",
+   "label": "Relation to ischial spines"
+  },
+  {
+   "fieldname": "column_break_0n1qp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "moulding",
+   "fieldtype": "Data",
+   "label": "Moulding"
+  },
+  {
+   "fieldname": "section_break_i6w9q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pts_name_2",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "column_break_xizwm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid_2",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "column_break_lgf1u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob_2",
+   "fieldtype": "Date",
+   "label": "DoB"
+  },
+  {
+   "fieldname": "section_break_o9dno",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xjiu4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "labour",
+   "fieldtype": "HTML",
+   "options": "Labour and birth summary 1"
+  },
+  {
+   "fieldname": "section_break_szpgb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mode_of_delivery",
+   "fieldtype": "Data",
+   "label": "Mode of delivery "
+  },
+  {
+   "fieldname": "column_break_fpqpg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "on_day",
+   "fieldtype": "Data",
+   "label": "on day"
+  },
+  {
+   "fieldname": "section_break_pj2gq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "indication",
+   "fieldtype": "Data",
+   "label": "Indication"
+  },
+  {
+   "fieldname": "column_break_e3g6n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "presentation_2",
+   "fieldtype": "Data",
+   "label": "Presentation"
+  },
+  {
+   "fieldname": "section_break_azs4z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "live_birth_stillbirth",
+   "fieldtype": "Data",
+   "label": "Live birth Stillbirth"
+  },
+  {
+   "fieldname": "column_break_oast9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gest_ation_wks",
+   "fieldtype": "Data",
+   "label": "Gest ation Wks"
+  },
+  {
+   "fieldname": "section_break_q6mqo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "birth_weight",
+   "fieldtype": "Data",
+   "label": "Birth weight"
+  },
+  {
+   "fieldname": "column_break_hdfry",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "section_break_8zgzz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "apgar",
+   "fieldtype": "Data",
+   "label": "APGAR"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "label": "Activity"
+  },
+  {
+   "fieldname": "pulse_2",
+   "fieldtype": "Data",
+   "label": "Pulse"
+  },
+  {
+   "fieldname": "grimace",
+   "fieldtype": "Data",
+   "label": "Grimace"
+  },
+  {
+   "fieldname": "appearance",
+   "fieldtype": "Data",
+   "label": "Appearance"
+  },
+  {
+   "fieldname": "respiration",
+   "fieldtype": "Data",
+   "label": "Respiration"
+  },
+  {
+   "fieldname": "total_scores",
+   "fieldtype": "Data",
+   "label": "Total scores"
+  },
+  {
+   "fieldname": "column_break_ttydj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_to_first_breath",
+   "fieldtype": "Data",
+   "label": "Time to first breath"
+  },
+  {
+   "fieldname": "first_stage",
+   "fieldtype": "Data",
+   "label": "First Stage"
+  },
+  {
+   "fieldname": "second_stage",
+   "fieldtype": "Data",
+   "label": "Second Stage"
+  },
+  {
+   "fieldname": "third_stage",
+   "fieldtype": "Data",
+   "label": "Third Stage"
+  },
+  {
+   "fieldname": "total_duration_of_labour",
+   "fieldtype": "Data",
+   "label": "Total Duration of Labour"
+  },
+  {
+   "fieldname": "srm__arm",
+   "fieldtype": "Data",
+   "label": "SRM  ARM"
+  },
+  {
+   "fieldname": "section_break_ltbc0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pts_name_3",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "column_break_6dk5p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid_3",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "column_break_e6gkz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob_3",
+   "fieldtype": "Data",
+   "label": "DoB"
+  },
+  {
+   "fieldname": "section_break_xoo61",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lobour_2",
+   "fieldtype": "HTML",
+   "options": "Labour and Birth Summary 2"
+  },
+  {
+   "fieldname": "section_break_pe1hn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "routine_oxytocic_drugs_given",
+   "fieldtype": "Data",
+   "label": "Routine oxytocic drugs given"
+  },
+  {
+   "fieldname": "column_break_ceqxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dose",
+   "fieldtype": "Data",
+   "label": "Dose"
+  },
+  {
+   "fieldname": "section_break_sbizc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "placenta",
+   "fieldtype": "Data",
+   "label": "Placenta"
+  },
+  {
+   "fieldname": "section_break_5xw0l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "controlled_cord_traction",
+   "fieldtype": "Data",
+   "label": "Controlled cord traction"
+  },
+  {
+   "fieldname": "column_break_bd1lr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blood_loss",
+   "fieldtype": "Data",
+   "label": "Blood Loss"
+  },
+  {
+   "fieldname": "column_break_8honj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maternal_effort",
+   "fieldtype": "Data",
+   "label": "Maternal Effort"
+  },
+  {
+   "fieldname": "section_break_vtild",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "manual_removal",
+   "fieldtype": "Data",
+   "label": "Manual Removal"
+  },
+  {
+   "fieldname": "column_break_wl1is",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "placenta_appears",
+   "fieldtype": "Data",
+   "label": "Placenta appears"
+  },
+  {
+   "fieldname": "column_break_xlkqy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membranes_3",
+   "fieldtype": "Data",
+   "label": "Membranes"
+  },
+  {
+   "fieldname": "section_break_8zx6j",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "number_of_umbilical_vessels",
+   "fieldtype": "Data",
+   "label": "Number of Umbilical vessels"
+  },
+  {
+   "fieldname": "column_break_m7cvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "perineum",
+   "fieldtype": "Data",
+   "label": "Perineum"
+  },
+  {
+   "fieldname": "column_break_f4s4a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intact_2",
+   "fieldtype": "Data",
+   "label": "Intact"
+  },
+  {
+   "fieldname": "section_break_q77cn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "episiotomy",
+   "fieldtype": "Data",
+   "label": "Episiotomy"
+  },
+  {
+   "fieldname": "1st_degree_tear",
+   "fieldtype": "Data",
+   "label": "1st degree tear"
+  },
+  {
+   "fieldname": "column_break_omro4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "2st_degree_tear",
+   "fieldtype": "Data",
+   "label": "2st degree tear"
+  },
+  {
+   "fieldname": "column_break_q2s5e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "3st_degree_tear",
+   "fieldtype": "Data",
+   "label": "3st degree tear"
+  },
+  {
+   "fieldname": "column_break_dtuhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "4st_degree_tear",
+   "fieldtype": "Data",
+   "label": "4st degree tear"
+  },
+  {
+   "fieldname": "section_break_hupjy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "anaesthesia",
+   "fieldtype": "Data",
+   "label": "Anaesthesia"
+  },
+  {
+   "fieldname": "column_break_6xbu6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technique",
+   "fieldtype": "Data",
+   "label": "Technique"
+  },
+  {
+   "fieldname": "section_break_ver9s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "haemostasis",
+   "fieldtype": "Data",
+   "label": "Haemostasis"
+  },
+  {
+   "fieldname": "rectal_exam",
+   "fieldtype": "Data",
+   "label": "Rectal Exam"
+  },
+  {
+   "fieldname": "swabs_needles_and_instruments_complete",
+   "fieldtype": "Data",
+   "label": "Swabs, needles and instruments complete"
+  },
+  {
+   "fieldname": "section_break_exfe7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checked_by",
+   "fieldtype": "Data",
+   "label": "Checked by"
+  },
+  {
+   "fieldname": "column_break_v5oco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attending_physician",
+   "fieldtype": "Data",
+   "label": "Attending Physician"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-16 11:25:34.896022",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "DIH Labour Birth Record IInitial Assessment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

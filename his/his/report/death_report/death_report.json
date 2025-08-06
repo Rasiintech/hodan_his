@@ -1,0 +1,51 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-06-25 11:13:03.284289",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "to_date To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2025-06-25 11:28:32.121596",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Death Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    ds.patient AS \"Patient ID:Data:100\", \r\n    ds.patient_name AS \"Patient Name:Data:200\", \r\n    ds.sex AS \"Gender:Data:100\", \r\n    ds.date_of_birth AS \"DOB:Data:100\", \r\n    ds.ref_practitioner AS \"Consultant:Data:250\", \r\n    ip.admitted_datetime AS \"Admitted Date:Data:200\",\r\n    ds.date AS \"Discharge Date:Data:100\", \r\n    ds.diagnosis_at_discharge AS \"Diagnosis at Discharge:Data:250\", \r\n    ds.operations_and_procedures AS \"Operations and Procedures:Data:250\",\r\n    ds.reason__admission_and_presenting_complaints AS \"Admitted Reason:Data:250\"\r\n    \r\nFROM `tabDischarge Summary` ds\r\nLEFT JOIN `tabInpatient Record` ip ON ip.name = ds.inpatient_record\r\nWHERE ds.date BETWEEN %(from_date)s AND %(to_date)s AND ds.docstatus = 1 AND ds.discharged_type = \"Death\";\r\n",
+ "ref_doctype": "Discharge Summary",
+ "report_name": "Death Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "All"
+  },
+  {
+   "role": "Doctor"
+  }
+ ]
+}

@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-28 17:00:37.784012",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "time",
+  "8am",
+  "9am",
+  "10am",
+  "11am",
+  "12pm",
+  "1_pm",
+  "2_pm",
+  "3_pm",
+  "4_pm",
+  "5_pm",
+  "6_pm",
+  "7_pm",
+  "8_pm",
+  "9_pm",
+  "10pm",
+  "11pm",
+  "12am",
+  "1_am",
+  "2_am",
+  "3_am",
+  "4_am",
+  "5_am",
+  "6_am",
+  "7_am"
+ ],
+ "fields": [
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "8am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "8am"
+  },
+  {
+   "fieldname": "9am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "9am"
+  },
+  {
+   "fieldname": "10am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "10am"
+  },
+  {
+   "fieldname": "11am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "11am"
+  },
+  {
+   "fieldname": "12pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "12pm"
+  },
+  {
+   "fieldname": "1_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "1 pm"
+  },
+  {
+   "fieldname": "2_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "2 pm"
+  },
+  {
+   "fieldname": "3_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "3 pm"
+  },
+  {
+   "fieldname": "4_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "4 pm"
+  },
+  {
+   "fieldname": "5_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "5 pm"
+  },
+  {
+   "fieldname": "6_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "6 pm"
+  },
+  {
+   "fieldname": "7_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "7 pm"
+  },
+  {
+   "fieldname": "8_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "8 pm"
+  },
+  {
+   "fieldname": "9_pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "9 pm"
+  },
+  {
+   "fieldname": "10pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "10pm"
+  },
+  {
+   "fieldname": "11pm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "11pm"
+  },
+  {
+   "fieldname": "12am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "12am"
+  },
+  {
+   "fieldname": "1_am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "1 am"
+  },
+  {
+   "fieldname": "2_am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "2 am"
+  },
+  {
+   "fieldname": "3_am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "3 am "
+  },
+  {
+   "fieldname": "4_am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "4 am"
+  },
+  {
+   "fieldname": "5_am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "5 am"
+  },
+  {
+   "fieldname": "6_am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "6 am"
+  },
+  {
+   "fieldname": "7_am",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "7 am"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-28 17:00:37.784012",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Data2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

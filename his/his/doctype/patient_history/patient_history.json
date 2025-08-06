@@ -1,0 +1,496 @@
+{
+ "actions": [],
+ "creation": "2023-05-23 20:15:24.625791",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "dob",
+  "column_break_zu1be",
+  "consultant",
+  "medical_department",
+  "diagnosis",
+  "date_of_admission",
+  "column_break_jguyf",
+  "type",
+  "floor",
+  "room",
+  "bed",
+  "column_break_xjat6",
+  "previous_history_tab",
+  "section_break_031gp",
+  "history",
+  "vitals_tab",
+  "section_break_6qzlz",
+  "view_as_chart",
+  "vitals",
+  "drug_sheet_tab",
+  "section_break_ribwz",
+  "drug",
+  "lab_tab",
+  "section_break_vqcw8",
+  "lab",
+  "imaging",
+  "section_break_opya1",
+  "imaging_html",
+  "operation_tab",
+  "section_break_isoej",
+  "surgery",
+  "doctor_progress_note",
+  "section_break_2p1wi",
+  "add_new_progress",
+  "progress_note",
+  "blood_transfusion_tab",
+  "section_break_00vnd",
+  "add_new_blood",
+  "blood_transfusion",
+  "blood_transfusion_form_tab",
+  "section_break_z8coc",
+  "add_new_blood_t_f",
+  "blood_transfusion_form",
+  "prescription_tab",
+  "section_break_x5bdp",
+  "med",
+  "history_taking_tab",
+  "add_history",
+  "nursing_progress_note",
+  "section_break_wlerb",
+  "add_new_nursing_note",
+  "nursing_note",
+  "doctor_plan_tab",
+  "drug_prescription_section",
+  "plan_drug_prescription",
+  "lab_prescription_section",
+  "plan_lab_prescription",
+  "imaging_prescription_section",
+  "plan_imaging_prescription",
+  "procedure_prescription_section",
+  "plan_procedure_prescription",
+  "note_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "vitals_tab",
+   "fieldtype": "Tab Break",
+   "label": "Vitals"
+  },
+  {
+   "fieldname": "vitals",
+   "fieldtype": "HTML",
+   "label": "Vitals",
+   "options": "<div id=\"vitals\">  </div>"
+  },
+  {
+   "fieldname": "drug_sheet_tab",
+   "fieldtype": "Tab Break",
+   "label": "Drug Sheet"
+  },
+  {
+   "fieldname": "drug",
+   "fieldtype": "HTML",
+   "label": "drug",
+   "options": "<div id=\"drug_sheet\">  </div>"
+  },
+  {
+   "fieldname": "lab_tab",
+   "fieldtype": "Tab Break",
+   "label": "Labs"
+  },
+  {
+   "fieldname": "lab",
+   "fieldtype": "HTML",
+   "label": "lab",
+   "options": "<div id=\"labs\">  </div>"
+  },
+  {
+   "fieldname": "imaging",
+   "fieldtype": "Tab Break",
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "imaging_html",
+   "fieldtype": "HTML",
+   "label": "Imaging_html",
+   "options": "<div id=\"imaging\">  </div>"
+  },
+  {
+   "fieldname": "surgery",
+   "fieldtype": "HTML",
+   "options": "<div id=\"operation\"></div>"
+  },
+  {
+   "fieldname": "progress_note",
+   "fieldtype": "HTML",
+   "label": "Progress Note",
+   "options": "<div id=\"doctor_progress_note\">  </div>"
+  },
+  {
+   "fieldname": "blood_transfusion_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Blood Transfusion"
+  },
+  {
+   "fieldname": "blood_transfusion",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "label": "Blood Transfusion",
+   "options": "<div id=\"blood_transfusion\">  </div>"
+  },
+  {
+   "fieldname": "view_as_chart",
+   "fieldtype": "Button",
+   "label": "View As Chart"
+  },
+  {
+   "fieldname": "prescription_tab",
+   "fieldtype": "Tab Break",
+   "label": "Prescription"
+  },
+  {
+   "fieldname": "med",
+   "fieldtype": "HTML",
+   "label": "med",
+   "options": "<div id=\"med\">  </div>"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jguyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zu1be",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xjat6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "add_new_progress",
+   "fieldtype": "Button",
+   "label": "Add New"
+  },
+  {
+   "fieldname": "add_new_blood",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Add New"
+  },
+  {
+   "fieldname": "history_taking_tab",
+   "fieldtype": "Tab Break",
+   "label": "History Taking"
+  },
+  {
+   "fieldname": "add_history",
+   "fieldtype": "Button",
+   "label": "Add New"
+  },
+  {
+   "fieldname": "section_break_6qzlz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ribwz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_vqcw8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_opya1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_isoej",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_2p1wi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_00vnd",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "section_break_x5bdp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "doctor_plan_tab",
+   "fieldtype": "Tab Break",
+   "label": "Doctor Plan"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "drug_prescription_section",
+   "fieldtype": "Section Break",
+   "label": "Treatment Plan"
+  },
+  {
+   "fieldname": "plan_drug_prescription",
+   "fieldtype": "HTML",
+   "label": "Plan Drug Prescription",
+   "options": "<div id=\"drug_doctor_plan\"> </div>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "lab_prescription_section",
+   "fieldtype": "Section Break",
+   "label": "Lab Prescription"
+  },
+  {
+   "fieldname": "plan_lab_prescription",
+   "fieldtype": "HTML",
+   "label": "Plan Lab Prescription",
+   "options": "<div id=\"lab_doctor_plan\"> </div>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "imaging_prescription_section",
+   "fieldtype": "Section Break",
+   "label": "Imaging Prescription"
+  },
+  {
+   "fieldname": "plan_imaging_prescription",
+   "fieldtype": "HTML",
+   "label": "Plan Imaging Prescription",
+   "options": "<div id=\"image_doctor_plan\"></div>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "procedure_prescription_section",
+   "fieldtype": "Section Break",
+   "label": "Procedure Prescription"
+  },
+  {
+   "fieldname": "plan_procedure_prescription",
+   "fieldtype": "HTML",
+   "label": "Plan Procedure Prescription",
+   "options": "<div id=\"procedure_doctor_plan\"></div>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "note_section",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "HTML",
+   "label": "Notes",
+   "options": "<div id=\"doctor_note\"> </div>"
+  },
+  {
+   "fieldname": "operation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Operation"
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "doctor_progress_note",
+   "fieldtype": "Tab Break",
+   "label": "Doctor Progress Note"
+  },
+  {
+   "fieldname": "section_break_wlerb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nursing_note",
+   "fieldtype": "HTML",
+   "label": "Nursing Note",
+   "options": "<div id=\"nursing_progress_note\">  </div>"
+  },
+  {
+   "fieldname": "add_new_nursing_note",
+   "fieldtype": "Button",
+   "label": "Add New"
+  },
+  {
+   "fieldname": "nursing_progress_note",
+   "fieldtype": "Tab Break",
+   "label": "Nursing Progress Note"
+  },
+  {
+   "fetch_from": "consultant.department",
+   "fieldname": "medical_department",
+   "fieldtype": "Link",
+   "label": "Medical Department",
+   "options": "Medical Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Data",
+   "label": "Floor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room",
+   "read_only": 1
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bed",
+   "fieldtype": "Data",
+   "label": "Bed",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "previous_history_tab",
+   "fieldtype": "Tab Break",
+   "label": "Previous History"
+  },
+  {
+   "fieldname": "section_break_031gp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "history",
+   "fieldtype": "HTML",
+   "label": "History",
+   "options": "<div id=\"history\"> </div>"
+  },
+  {
+   "fieldname": "blood_transfusion_form",
+   "fieldtype": "HTML",
+   "label": "Blood Transfusion Form",
+   "options": "<div id=\"blood_transfusion_form\">  </div>"
+  },
+  {
+   "fieldname": "blood_transfusion_form_tab",
+   "fieldtype": "Tab Break",
+   "label": "Blood Transfusion Form"
+  },
+  {
+   "fieldname": "add_new_blood_t_f",
+   "fieldtype": "Button",
+   "label": "Add New"
+  },
+  {
+   "fieldname": "section_break_z8coc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Datetime",
+   "label": "Date of Admission"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  }
+ ],
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-07-31 10:28:06.241831",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Patient History",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "ot/history",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

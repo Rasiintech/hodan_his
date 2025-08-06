@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 10:19:58.843817",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "dob",
+  "mrp",
+  "physicians_consultation_report",
+  "a",
+  "to_consultation_physician",
+  "section_break_oacxt",
+  "k",
+  "time",
+  "timing_of_consultatioin",
+  "emergency",
+  "urgent",
+  "routine",
+  "reason_for_referal",
+  "consultation_only",
+  "section_break_fjkpx",
+  "consultation_and_concurront_care",
+  "consultation_and_transfare_of_care",
+  "l",
+  "current_medication",
+  "referring_physician",
+  "signature",
+  "column_break_bv3me",
+  "b",
+  "yes",
+  "no",
+  "date",
+  "consultation_note",
+  "date_patient_seen"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "physicians_consultation_report",
+   "fieldtype": "Data",
+   "label": "PHYSICIAN'S CONSULTATION REPORT "
+  },
+  {
+   "fieldname": "a",
+   "fieldtype": "Link",
+   "label": "from: Referring Physician",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "to_consultation_physician",
+   "fieldtype": "Data",
+   "label": "To Consultation Physician"
+  },
+  {
+   "fieldname": "k",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "timing_of_consultatioin",
+   "fieldtype": "Data",
+   "label": "Timing of Consultatioin"
+  },
+  {
+   "fieldname": "emergency",
+   "fieldtype": "Data",
+   "label": "Emergency"
+  },
+  {
+   "fieldname": "urgent",
+   "fieldtype": "Data",
+   "label": "Urgent"
+  },
+  {
+   "fieldname": "routine",
+   "fieldtype": "Data",
+   "label": "Routine"
+  },
+  {
+   "fieldname": "reason_for_referal",
+   "fieldtype": "Data",
+   "label": "Reason for referal"
+  },
+  {
+   "fieldname": "consultation_only",
+   "fieldtype": "Data",
+   "label": "Consultation only"
+  },
+  {
+   "fieldname": "consultation_and_concurront_care",
+   "fieldtype": "Data",
+   "label": "Consultation and Concurront Care"
+  },
+  {
+   "fieldname": "consultation_and_transfare_of_care",
+   "fieldtype": "Data",
+   "label": "Consultation and transfare of Care"
+  },
+  {
+   "fieldname": "l",
+   "fieldtype": "Data",
+   "label": "Clinical information:"
+  },
+  {
+   "fieldname": "current_medication",
+   "fieldtype": "Data",
+   "label": "Current Medication"
+  },
+  {
+   "fieldname": "referring_physician",
+   "fieldtype": "Link",
+   "label": "Referring Physician",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "Consulting Physician has been spoken to"
+  },
+  {
+   "fieldname": "yes",
+   "fieldtype": "Data",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "no",
+   "fieldtype": "Data",
+   "label": "No"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "consultation_note",
+   "fieldtype": "Data",
+   "label": "Consultation Note"
+  },
+  {
+   "fieldname": "date_patient_seen",
+   "fieldtype": "Date",
+   "label": "Date Patient Seen"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_oacxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fjkpx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bv3me",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:58:24.260773",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "PHYSICIANS CONSULTATION REPORT",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

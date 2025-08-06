@@ -1,0 +1,643 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BLTF-.#####",
+ "creation": "2025-05-15 09:56:27.738207",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "name1",
+  "birthdate",
+  "gender",
+  "column_break_q2ett",
+  "service",
+  "file_number",
+  "blood_group",
+  "blood_number",
+  "reasonfor_blood_demand_section",
+  "surgery",
+  "exchange",
+  "coagulationdisorder",
+  "column_break_tdgn2",
+  "increase_hemoglobin",
+  "thrombocytepenia",
+  "section_break_v33c9",
+  "other_explain",
+  "before_transfusion_section",
+  "verify_the_identity_of_the_patient",
+  "section_break_bnrfi",
+  "check_blood_group_of_patient",
+  "section_break_rddcs",
+  "check_patient_blood_group_compliance_with_sent_blood_component",
+  "section_break_d3dcp",
+  "check_blood_component_appearance",
+  "section_break_vmvjl",
+  "name_01",
+  "section_break_hf4ag",
+  "get_the_patients_approval_for_transfusion",
+  "section_break_jwvhz",
+  "check_the_delivery_of_blood_components",
+  "column_break_c33xd",
+  "nurse_name7",
+  "attention_section",
+  "name_002",
+  "blood_product_section",
+  "blood_product",
+  "during_transfusion_section",
+  "during_transfusion",
+  "if_reaction_occurs_choose_the_following_symptoms_section",
+  "tremor",
+  "fever",
+  "urticaria",
+  "hypotension",
+  "dizziness",
+  "dyspnoea",
+  "tachypnea",
+  "column_break_ojcks",
+  "cyanosis",
+  "rally",
+  "cough",
+  "rrythema",
+  "nausea",
+  "vomiting",
+  "tachycardia",
+  "column_break_d9xdu",
+  "venousfullness",
+  "edema",
+  "anuria",
+  "hematuria",
+  "headache",
+  "chestpain",
+  "side_pain",
+  "column_break_pfz55",
+  "backache",
+  "pain_in_thefingers",
+  "abdominalcramps",
+  "loss_of_consciousness",
+  "shock",
+  "other",
+  "section_break_dg5db",
+  "amount_of_blood",
+  "there",
+  "section_break_0yly4",
+  "reqact_1",
+  "reqact_2",
+  "reqact_3",
+  "reqact_4",
+  "reqact_5",
+  "reqact_6",
+  "reqact_7",
+  "section_break_9tz73",
+  "nurse_name_one",
+  "column_break_xxwri",
+  "nurse_name_two"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient ID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient  Name"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "birthdate",
+   "fieldtype": "Data",
+   "label": "BirthDate"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gender"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service"
+  },
+  {
+   "fieldname": "file_number",
+   "fieldtype": "Data",
+   "label": "File Number"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BLOOD GROUP"
+  },
+  {
+   "fieldname": "blood_number",
+   "fieldtype": "Data",
+   "label": "BLOOD NUMBER"
+  },
+  {
+   "fieldname": "column_break_q2ett",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reasonfor_blood_demand_section",
+   "fieldtype": "Section Break",
+   "label": "Reasonfor Blood Demand"
+  },
+  {
+   "default": "0",
+   "fieldname": "surgery",
+   "fieldtype": "Check",
+   "label": "Surgery"
+  },
+  {
+   "default": "0",
+   "fieldname": "exchange",
+   "fieldtype": "Check",
+   "label": "Exchange"
+  },
+  {
+   "default": "0",
+   "fieldname": "coagulationdisorder",
+   "fieldtype": "Check",
+   "label": "CoagulationDisorder"
+  },
+  {
+   "default": "0",
+   "fieldname": "increase_hemoglobin",
+   "fieldtype": "Check",
+   "label": "Increase Hemoglobin"
+  },
+  {
+   "default": "0",
+   "fieldname": "thrombocytepenia",
+   "fieldtype": "Check",
+   "label": "Thrombocytepenia"
+  },
+  {
+   "fieldname": "other_explain",
+   "fieldtype": "Data",
+   "label": "Other (explain)"
+  },
+  {
+   "fieldname": "column_break_tdgn2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_v33c9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "before_transfusion_section",
+   "fieldtype": "Section Break",
+   "label": "BEFORE TRANSFUSION"
+  },
+  {
+   "default": "0",
+   "fieldname": "verify_the_identity_of_the_patient",
+   "fieldtype": "Check",
+   "label": "Verify the identity of the patient"
+  },
+  {
+   "fieldname": "section_break_bnrfi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_blood_group_of_patient",
+   "fieldtype": "Check",
+   "label": "Check blood group of patient"
+  },
+  {
+   "fieldname": "section_break_rddcs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_patient_blood_group_compliance_with_sent_blood_component",
+   "fieldtype": "Check",
+   "label": "Check patient blood group compliance with sent blood component"
+  },
+  {
+   "fieldname": "section_break_d3dcp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_blood_component_appearance",
+   "fieldtype": "Check",
+   "label": "Check blood component appearance "
+  },
+  {
+   "fieldname": "section_break_vmvjl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "name_01",
+   "fieldtype": "Check",
+   "label": "Check the patient\u2019s cross-match"
+  },
+  {
+   "fieldname": "section_break_hf4ag",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "get_the_patients_approval_for_transfusion",
+   "fieldtype": "Check",
+   "label": "Get the patient's approval for transfusion"
+  },
+  {
+   "fieldname": "section_break_jwvhz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_the_delivery_of_blood_components",
+   "fieldtype": "Check",
+   "label": "Check the delivery of blood components"
+  },
+  {
+   "fieldname": "column_break_c33xd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nurse_name7",
+   "fieldtype": "Data",
+   "label": "Nurse name"
+  },
+  {
+   "fieldname": "attention_section",
+   "fieldtype": "Section Break",
+   "label": "ATTENTION"
+  },
+  {
+   "default": "If there is any incompatibility or doubt about the information above,\nDO NOT definitely start TRANSFUSION until the problem is solved.",
+   "fieldname": "name_002",
+   "fieldtype": "Small Text",
+   "label": "ATTENTION"
+  },
+  {
+   "fieldname": "blood_product_section",
+   "fieldtype": "Section Break",
+   "label": "BLOOD PRODUCT"
+  },
+  {
+   "fieldname": "blood_product",
+   "fieldtype": "Table",
+   "options": "BLOOD PRODUCT"
+  },
+  {
+   "fieldname": "during_transfusion_section",
+   "fieldtype": "Section Break",
+   "label": "DURING TRANSFUSION"
+  },
+  {
+   "fieldname": "during_transfusion",
+   "fieldtype": "Table",
+   "options": "DURING TRANSFUSION"
+  },
+  {
+   "fieldname": "if_reaction_occurs_choose_the_following_symptoms_section",
+   "fieldtype": "Section Break",
+   "label": "IF REACTION OCCURS, CHOOSE THE FOLLOWING SYMPTOMS"
+  },
+  {
+   "default": "0",
+   "fieldname": "tremor",
+   "fieldtype": "Check",
+   "label": "Tremor"
+  },
+  {
+   "default": "0",
+   "fieldname": "fever",
+   "fieldtype": "Check",
+   "label": "Fever"
+  },
+  {
+   "default": "0",
+   "fieldname": "urticaria",
+   "fieldtype": "Check",
+   "label": "Urticaria"
+  },
+  {
+   "default": "0",
+   "fieldname": "hypotension",
+   "fieldtype": "Check",
+   "label": "Hypotension"
+  },
+  {
+   "default": "0",
+   "fieldname": "dizziness",
+   "fieldtype": "Check",
+   "label": "Dizziness"
+  },
+  {
+   "default": "0",
+   "fieldname": "dyspnoea",
+   "fieldtype": "Check",
+   "label": "Dyspnoea"
+  },
+  {
+   "default": "0",
+   "fieldname": "tachypnea",
+   "fieldtype": "Check",
+   "label": "Tachypnea"
+  },
+  {
+   "fieldname": "column_break_ojcks",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cyanosis",
+   "fieldtype": "Check",
+   "label": "Cyanosis"
+  },
+  {
+   "default": "0",
+   "fieldname": "rally",
+   "fieldtype": "Check",
+   "label": "Rally"
+  },
+  {
+   "default": "0",
+   "fieldname": "cough",
+   "fieldtype": "Check",
+   "label": "Cough"
+  },
+  {
+   "default": "0",
+   "fieldname": "rrythema",
+   "fieldtype": "Check",
+   "label": "Rrythema"
+  },
+  {
+   "default": "0",
+   "fieldname": "nausea",
+   "fieldtype": "Check",
+   "label": "Nausea"
+  },
+  {
+   "default": "0",
+   "fieldname": "vomiting",
+   "fieldtype": "Check",
+   "label": "Vomiting"
+  },
+  {
+   "default": "0",
+   "fieldname": "tachycardia",
+   "fieldtype": "Check",
+   "label": "Tachycardia"
+  },
+  {
+   "fieldname": "column_break_d9xdu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "venousfullness",
+   "fieldtype": "Check",
+   "label": "VenousFullness"
+  },
+  {
+   "default": "0",
+   "fieldname": "edema",
+   "fieldtype": "Check",
+   "label": "Edema"
+  },
+  {
+   "default": "0",
+   "fieldname": "anuria",
+   "fieldtype": "Check",
+   "label": "Anuria"
+  },
+  {
+   "default": "0",
+   "fieldname": "hematuria",
+   "fieldtype": "Check",
+   "label": "Hematuria"
+  },
+  {
+   "default": "0",
+   "fieldname": "headache",
+   "fieldtype": "Check",
+   "label": "Headache"
+  },
+  {
+   "default": "0",
+   "fieldname": "chestpain",
+   "fieldtype": "Check",
+   "label": "ChestPain"
+  },
+  {
+   "default": "0",
+   "fieldname": "side_pain",
+   "fieldtype": "Check",
+   "label": "Side Pain"
+  },
+  {
+   "fieldname": "column_break_pfz55",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "backache",
+   "fieldtype": "Check",
+   "label": "Backache"
+  },
+  {
+   "default": "0",
+   "fieldname": "pain_in_thefingers",
+   "fieldtype": "Check",
+   "label": "Pain in thefingers"
+  },
+  {
+   "default": "0",
+   "fieldname": "abdominalcramps",
+   "fieldtype": "Check",
+   "label": "Abdominalcramps"
+  },
+  {
+   "default": "0",
+   "fieldname": "loss_of_consciousness",
+   "fieldtype": "Check",
+   "label": "Loss of consciousness"
+  },
+  {
+   "default": "0",
+   "fieldname": "shock",
+   "fieldtype": "Check",
+   "label": "Shock"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "section_break_dg5db",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount_of_blood",
+   "fieldtype": "Data",
+   "label": "The amount of blood product given until the time of transfusion termination"
+  },
+  {
+   "fieldname": "there",
+   "fieldtype": "Data",
+   "label": "There ason for stopping transfusion excluding there action"
+  },
+  {
+   "fieldname": "section_break_0yly4",
+   "fieldtype": "Section Break",
+   "label": "IF REACTION OCCURS, FOLLOW THE BELOWS"
+  },
+  {
+   "default": "0",
+   "fieldname": "reqact_1",
+   "fieldtype": "Check",
+   "label": "Stop transfusion and apply intravenous0.9% NaCl (Saline)"
+  },
+  {
+   "default": "0",
+   "fieldname": "reqact_2",
+   "fieldtype": "Check",
+   "label": "Inform the doctor"
+  },
+  {
+   "default": "0",
+   "fieldname": "reqact_3",
+   "fieldtype": "Check",
+   "label": "Check the patient\u2019s identity"
+  },
+  {
+   "default": "0",
+   "fieldname": "reqact_4",
+   "fieldtype": "Check",
+   "label": "Check the blood product and the patient's ABO and Rh groups again."
+  },
+  {
+   "default": "0",
+   "fieldname": "reqact_5",
+   "fieldtype": "Check",
+   "label": "Do not dispose of the blood component, the blood set and the liquids that given together"
+  },
+  {
+   "default": "0",
+   "fieldname": "reqact_6",
+   "fieldtype": "Check",
+   "label": "Inform the blood bank about reaction."
+  },
+  {
+   "default": "0",
+   "fieldname": "reqact_7",
+   "fieldtype": "Check",
+   "label": "Record the name of the blood bank staff and the time of interview."
+  },
+  {
+   "fieldname": "section_break_9tz73",
+   "fieldtype": "Section Break",
+   "label": "Witnesses"
+  },
+  {
+   "fieldname": "nurse_name_one",
+   "fieldtype": "Data",
+   "label": "Nurse Name One"
+  },
+  {
+   "fieldname": "column_break_xxwri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nurse_name_two",
+   "fieldtype": "Data",
+   "label": "Nurse Name Two"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-20 10:01:59.013914",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "BLOOD TRANSFUSION FORM",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nurse",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPD",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NICU",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

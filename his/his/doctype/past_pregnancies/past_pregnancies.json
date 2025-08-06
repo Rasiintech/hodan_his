@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 08:17:24.294668",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "t_otal",
+  "full_term",
+  "preterm",
+  "abortins_inducted",
+  "abortions_spont",
+  "ectopics",
+  "multiple_births",
+  "living"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "t_otal",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "T OTAL"
+  },
+  {
+   "columns": 1,
+   "fieldname": "full_term",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "FULL TERM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "preterm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PRETERM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "abortins_inducted",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ABORTINS INDUCTED"
+  },
+  {
+   "columns": 1,
+   "fieldname": "abortions_spont",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ABORTIONS SPONT"
+  },
+  {
+   "columns": 1,
+   "fieldname": "ectopics",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ECTOPICS"
+  },
+  {
+   "columns": 1,
+   "fieldname": "multiple_births",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "MULTIPLE BIRTHS"
+  },
+  {
+   "columns": 1,
+   "fieldname": "living",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "LIVING"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-13 16:20:15.290361",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Past Pregnancies",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

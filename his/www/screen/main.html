@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Main Queue Display</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #001a33;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .branding {
+            text-align: center;
+            padding: 20px;
+            background: #002b55;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .current-calls {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+            height: 30vh;
+        }
+
+        .call-card {
+            background: #003366;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .room-number {
+            font-size: 2.5em;
+            color: #00b4d8;
+            margin-bottom: 10px;
+        }
+
+        .call-number {
+            font-size: 2em;
+            color: #00ff88;
+            margin: 10px 0;
+        }
+
+        .waiting-list {
+            flex-grow: 1;
+            background: #002b55;
+            border-radius: 10px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            overflow-y: auto;
+        }
+
+        .list-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="branding">
+        <h1>HODAN HOSPITAL - MAIN QUEUE DISPLAY</h1>
+        <p>Current Patient Calls</p>
+    </div>
+
+    <div class="current-calls" id="currentCalls">
+        <!-- Recent calls will be populated here -->
+    </div>
+
+    <div class="waiting-list" id="waitingList">
+        <!-- Waiting list items will be dynamically added -->
+    </div>
+
+    <script>
+        const baseUrl = `${window.location.protocol}//${window.location.host}`;
+        let ques = [];
+        let called_ques = [];
+        let doctors = [];
+
+        const fetchQuePatients = async () => {
+            try {
+                const options = {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json;charset=UTF-8',
+                        'Authorization': 'token f1b0999ded9c60e:6be56860a830176'
+                    },
+                };
+
+                const response = await fetch(`${baseUrl}/api/method/his.www.screen.screen.get_doctors`, options);
+                const data = await response.json();
+
+                if (data && data.message) {
+                    ques = data.message.ques || [];
+                    called_ques = data.message.called_ques || [];
+                    doctors = data.message.doctors || [];
+                    updateDisplay();
+                } else {
+                    console.warn("No patient data received from API.");
+                }
+            } catch (error) {
+                console.error("Error fetching patient data:", error);
+            }
+        };
+
+        function updateDisplay() {
+            updateCurrentCalls();
+            updateWaitingList();
+        }
+
+        function updateCurrentCalls() {
+            const currentCalls = document.getElementById('currentCalls');
+            currentCalls.innerHTML = called_ques.slice(0, 5).map(patient => `
+                <div class="call-card">
+                    <div class="room-number">Room ${patient.doctor_room}</div>
+                    <div class="call-number">${patient.doctor_room}${patient.token_no}</div>
+                    <div class="patient-name">${patient.patient_name}</div>
+                </div>
+            `).join('');
+        }
+
+        function updateWaitingList() {
+            const waitingList = document.getElementById('waitingList');
+            waitingList.innerHTML = ques.map(patient => `
+                <div class="list-item">
+                    <div class="patient-number">${patient.doctor_room}${patient.token_no}</div>
+                    <div class="patient-name">${patient.patient_name}</div>
+                    <div class="room-assignment">Room ${patient.doctor_room}</div>
+                </div>
+            `).join('');
+        }
+
+        // Initial setup
+        fetchQuePatients();
+
+        // Update calls every 5 seconds
+        setInterval(fetchQuePatients, 5000);
+    </script>
+</body>
+</html>

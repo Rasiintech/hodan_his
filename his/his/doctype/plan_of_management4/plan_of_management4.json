@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 13:53:38.390132",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "eye_mouth_skin_care",
+  "ear_care",
+  "mouth_care",
+  "skin_care",
+  "antipsychotic_and_anticonvulsants",
+  "anti_convulsants",
+  "sedatives_analgesia_muscle_relaxant",
+  "analgesia",
+  "paralytics"
+ ],
+ "fields": [
+  {
+   "fieldname": "eye_mouth_skin_care",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Eye care"
+  },
+  {
+   "fieldname": "antipsychotic_and_anticonvulsants",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Anti psychotics"
+  },
+  {
+   "fieldname": "sedatives_analgesia_muscle_relaxant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sedatives"
+  },
+  {
+   "fieldname": "ear_care",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ear care"
+  },
+  {
+   "fieldname": "mouth_care",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mouth care"
+  },
+  {
+   "fieldname": "skin_care",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skin care"
+  },
+  {
+   "fieldname": "anti_convulsants",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "anti convulsants"
+  },
+  {
+   "fieldname": "analgesia",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Analgesia"
+  },
+  {
+   "fieldname": "paralytics",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Paralytics"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-15 11:11:29.994825",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Plan of Management4",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,410 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-27 10:44:12.848845",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "column_break_lchbg",
+  "patient_name",
+  "column_break_gcu8m",
+  "dob",
+  "column_break_nxraw",
+  "mrp",
+  "post_operative_diagnosis",
+  "height",
+  "column_break_atibb",
+  "weight",
+  "column_break_nczgo",
+  "allergy",
+  "section_break_s8yuq",
+  "datetime",
+  "section_break_r2hot",
+  "tick_as_appropriate",
+  "column_break_bpsca",
+  "admit_the_patient_under_dr_care",
+  "column_break_lb0uy",
+  "keep_npo",
+  "column_break_x35uk",
+  "start_sips_of_water",
+  "column_break_kinrq",
+  "om_fluid_ml",
+  "section_break_9hfjw",
+  "antibiotics",
+  "column_break_7ykao",
+  "esomeprazole__nexium",
+  "column_break_ykczs",
+  "metoclorpromide",
+  "column_break_zizse",
+  "acetaminophen__paracetamol",
+  "section_break_xjnjb",
+  "hyosine_butylbromide__buscopan",
+  "column_break_qxt5w",
+  "tramadol_morphine_pethidine_mg",
+  "column_break_runyb",
+  "scd__sequential_compression_device",
+  "column_break_amcma",
+  "clexane_mg__sc_subcutaneous_twice_a_day",
+  "section_break_rlaoa",
+  "check_vital_signs",
+  "column_break_wyjjj",
+  "hourly_for_2_hours__if_stable_then",
+  "column_break_wgx3m",
+  "q2_hours_for_two_readings__then_if_stable",
+  "column_break_wituw",
+  "q4_hourly",
+  "section_break_tspqf",
+  "oxygen_via_nasal_cannula_2l__min",
+  "column_break_bbjjc",
+  "incentive_spirometry",
+  "column_break_iy9qc",
+  "early_mobilization_after_full_recovery_from_anesthesia",
+  "section_break_noam1",
+  "additional_order",
+  "section_break_rupoz",
+  "rn_signature",
+  "column_break_suypa",
+  "md",
+  "column_break_sfsfm",
+  "id"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "pid.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "post_operative_diagnosis",
+   "fieldtype": "Section Break",
+   "label": "Post Operative Diagnosis"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height  "
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "allergy",
+   "fieldtype": "Data",
+   "label": "Allergy"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Column Break",
+   "label": "DateTime"
+  },
+  {
+   "default": "0",
+   "fieldname": "tick_as_appropriate",
+   "fieldtype": "Check",
+   "label": "Tick as appropriate",
+   "options": "As appropriate"
+  },
+  {
+   "default": "0",
+   "fieldname": "admit_the_patient_under_dr_care",
+   "fieldtype": "Check",
+   "label": "Admit the patient under Dr Care",
+   "options": "Admit the patient under Dr Care"
+  },
+  {
+   "default": "0",
+   "fieldname": "keep_npo",
+   "fieldtype": "Check",
+   "label": "Keep NPO"
+  },
+  {
+   "default": "0",
+   "fieldname": "start_sips_of_water",
+   "fieldtype": "Check",
+   "label": "Start sips of water "
+  },
+  {
+   "default": "0",
+   "fieldname": "om_fluid_ml",
+   "fieldtype": "Check",
+   "label": "OM Fluid ml "
+  },
+  {
+   "default": "0",
+   "fieldname": "antibiotics",
+   "fieldtype": "Check",
+   "label": "Antibiotics"
+  },
+  {
+   "default": "0",
+   "fieldname": "esomeprazole__nexium",
+   "fieldtype": "Check",
+   "label": "Esomeprazole  Nexium  "
+  },
+  {
+   "default": "0",
+   "fieldname": "metoclorpromide",
+   "fieldtype": "Check",
+   "label": "Metoclorpromide  "
+  },
+  {
+   "default": "0",
+   "fieldname": "acetaminophen__paracetamol",
+   "fieldtype": "Check",
+   "label": "Acetaminophen  paracetamol "
+  },
+  {
+   "default": "0",
+   "fieldname": "hyosine_butylbromide__buscopan",
+   "fieldtype": "Check",
+   "label": "Hyosine Butylbromide  Buscopan "
+  },
+  {
+   "default": "0",
+   "fieldname": "tramadol_morphine_pethidine_mg",
+   "fieldtype": "Check",
+   "label": "Tramadol Morphine Pethidine mg "
+  },
+  {
+   "default": "0",
+   "fieldname": "scd__sequential_compression_device",
+   "fieldtype": "Check",
+   "label": "SCD  Sequential Compression Device "
+  },
+  {
+   "default": "0",
+   "fieldname": "clexane_mg__sc_subcutaneous_twice_a_day",
+   "fieldtype": "Check",
+   "label": "Clexane mg  SC Subcutaneous twice a day"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_vital_signs",
+   "fieldtype": "Check",
+   "label": "check vital signs "
+  },
+  {
+   "default": "0",
+   "fieldname": "hourly_for_2_hours__if_stable_then",
+   "fieldtype": "Check",
+   "label": "Hourly for 2 hours  if stable then"
+  },
+  {
+   "default": "0",
+   "fieldname": "q2_hours_for_two_readings__then_if_stable",
+   "fieldtype": "Check",
+   "label": "Q2 Hours for two readings  then if stable"
+  },
+  {
+   "default": "0",
+   "fieldname": "q4_hourly",
+   "fieldtype": "Check",
+   "label": "Q4 hourly"
+  },
+  {
+   "default": "0",
+   "fieldname": "oxygen_via_nasal_cannula_2l__min",
+   "fieldtype": "Check",
+   "label": "Oxygen via Nasal cannula 2L  Min"
+  },
+  {
+   "default": "0",
+   "fieldname": "incentive_spirometry",
+   "fieldtype": "Check",
+   "label": "Incentive Spirometry"
+  },
+  {
+   "default": "0",
+   "fieldname": "early_mobilization_after_full_recovery_from_anesthesia",
+   "fieldtype": "Check",
+   "label": "Early mobilization after full recovery from anesthesia"
+  },
+  {
+   "fieldname": "additional_order",
+   "fieldtype": "Data",
+   "label": "Additional Order"
+  },
+  {
+   "fieldname": "rn_signature",
+   "fieldtype": "Data",
+   "label": "RN Signature "
+  },
+  {
+   "fieldname": "md",
+   "fieldtype": "Data",
+   "label": "MD"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID"
+  },
+  {
+   "fieldname": "column_break_atibb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nczgo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_s8yuq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_suypa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sfsfm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rupoz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lchbg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gcu8m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nxraw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_r2hot",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bpsca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lb0uy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_x35uk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kinrq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9hfjw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7ykao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ykczs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zizse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xjnjb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qxt5w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_runyb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_amcma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rlaoa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wyjjj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wgx3m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wituw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tspqf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bbjjc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iy9qc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_noam1",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-28 14:14:02.706817",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "POST OPERATIVE STANDING ORDERS",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

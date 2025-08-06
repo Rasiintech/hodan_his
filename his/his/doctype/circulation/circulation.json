@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 11:42:48.916694",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pr",
+  "rhythm",
+  "bp",
+  "map",
+  "s1s2",
+  "crt",
+  "fluids"
+ ],
+ "fields": [
+  {
+   "fieldname": "pr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PR"
+  },
+  {
+   "fieldname": "rhythm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rhythm"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BP"
+  },
+  {
+   "fieldname": "fluids",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Fluids"
+  },
+  {
+   "fieldname": "map",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "MAP"
+  },
+  {
+   "fieldname": "s1s2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "S1S2"
+  },
+  {
+   "fieldname": "crt",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CRT"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-23 10:31:36.421429",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Circulation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

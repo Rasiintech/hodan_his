@@ -1,0 +1,60 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-12-01 11:29:51.737552",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today - 30",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2025-05-26 11:46:38.326250",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "IP-ALOS",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    patient_name,\r\n    admitted_datetime,\r\n    discharge_datetime,\r\n    DATEDIFF(discharge_datetime, admitted_datetime) AS total_days_stayed,\r\n    NULL AS total_discharges,\r\n    NULL AS total_length_of_stay,\r\n    NULL AS average_length_of_stay\r\nFROM \r\n    `tabInpatient Record`\r\nWHERE \r\n    discharge_datetime IS NOT NULL\r\n    AND status = 'Discharged'\r\n    AND admitted_datetime BETWEEN %(from_date)s AND %(to_date)s\r\n\r\nUNION ALL\r\n\r\nSELECT \r\n    NULL AS patient_name,\r\n    NULL AS admitted_datetime,\r\n    NULL AS discharge_datetime,\r\n    NULL AS total_days_stayed,\r\n    COUNT(patient_name) AS total_discharges,\r\n    SUM(DATEDIFF(discharge_datetime, admitted_datetime)) AS total_length_of_stay,\r\n    ROUND(SUM(DATEDIFF(discharge_datetime, admitted_datetime)) * 1.0 / COUNT(patient_name), 2) AS average_length_of_stay\r\nFROM \r\n    `tabInpatient Record`\r\nWHERE \r\n    discharge_datetime IS NOT NULL\r\n    AND status = 'Discharged'\r\n    AND admitted_datetime BETWEEN %(from_date)s AND %(to_date)s;\r\n",
+ "ref_doctype": "Inpatient Record",
+ "report_name": "IP-ALOS",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Cashier"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Nursing User"
+  },
+  {
+   "role": "Laboratory User"
+  }
+ ]
+}

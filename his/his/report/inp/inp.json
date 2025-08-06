@@ -1,0 +1,60 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-05-22 13:40:57.897588",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "Start_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "End_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2025-05-22 13:55:22.956759",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Inp",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    inp.name AS \"SN:Link/Inpatient Record:200\",\n    S.posting_date AS \"Date:Date:100\", \n    S.patient AS \"Patient:Data:100\", \n    S.patient_name AS \"Patient Name:Data:220\", \n    inp.room AS \"Room:Data:200\",\n    inp.bed AS \"Bed:Data:250\",\n    inp.admission_practitioner AS \"Doctor:Data:250\"\n\nFROM \n    `tabSales Invoice` S\nJOIN \n    `tabSales Invoice Item` I ON S.name = I.parent\nJOIN \n    `tabHealthcare Service Unit Type` R ON I.item_code = R.item  \nJOIN \n    `tabInpatient Record` inp ON S.inpatient_record = inp.name  \n\nWHERE \n    S.docstatus = 1\n    AND S.posting_date BETWEEN %(Start_date)s AND %(End_date)s;\n",
+ "ref_doctype": "Sales Order",
+ "report_name": "Inp",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Sales User"
+  },
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "Maintenance User"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "All"
+  }
+ ]
+}

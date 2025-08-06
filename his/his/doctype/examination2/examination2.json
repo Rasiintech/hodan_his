@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-13 08:54:30.220516",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "jaundiced",
+  "cyanosed",
+  "on_pain",
+  "dry_mucus_membranes",
+  "raised_jugular_venous_pressure",
+  "oral_hygiene",
+  "neck_mass"
+ ],
+ "fields": [
+  {
+   "fieldname": "jaundiced",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Jaundiced            ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cyanosed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Cyanosed                 ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "on_pain",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "On pain                         ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "dry_mucus_membranes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "dry mucus membranes ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "raised_jugular_venous_pressure",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "raised jugular venous pressure",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "oral_hygiene",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Oral hygiene               ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "neck_mass",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Neck mass",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 08:54:30.220516",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Examination2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

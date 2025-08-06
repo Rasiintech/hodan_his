@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "creation": "2023-03-25 09:04:19.547474",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "aneasthesia",
+  "amount",
+  "drug_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "aneasthesia",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Aneasthesia",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "drug_code.item_name",
+   "fieldname": "drug_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-25 09:10:42.562444",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Aneasthesia",
+ "owner": "Administrator",
+ "permissions": [],
+ "restrict_to_domain": "Healthcare",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

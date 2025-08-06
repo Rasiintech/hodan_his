@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 08:34:51.315538",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "a",
+  "b",
+  "c",
+  "d",
+  "item",
+  "results"
+ ],
+ "fields": [
+  {
+   "fieldname": "a",
+   "fieldtype": "Data",
+   "label": "ITEM"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "CHECK ONE"
+  },
+  {
+   "fieldname": "c",
+   "fieldtype": "Data",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "d",
+   "fieldtype": "Data",
+   "label": "Abnormal"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Data",
+   "label": "ITEM"
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Data",
+   "label": "RESULTS"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-29 08:34:51.315538",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Physical Examination ch1",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

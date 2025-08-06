@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-23 16:32:25.119093",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "allow_comm_doc",
+  "doctor_commission_account",
+  "doctor_exp_account",
+  "column_break_9s3vs",
+  "allow_bill_to_employee",
+  "employee_due",
+  "section_break_ezhz1",
+  "allow_transfer_balance",
+  "free_que_expense",
+  "free_que_expense_account",
+  "insurance_receivable_account",
+  "debtors_account",
+  "employee_receivable"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "allow_comm_doc",
+   "fieldtype": "Check",
+   "label": "Allow Commission for Doctor"
+  },
+  {
+   "depends_on": "eval:doc.allow_comm_doc",
+   "fieldname": "doctor_commission_account",
+   "fieldtype": "Link",
+   "label": "Doctor Commission Account ",
+   "mandatory_depends_on": "eval:doc.allow_comm_doc",
+   "options": "Account"
+  },
+  {
+   "depends_on": "eval:doc.allow_comm_doc",
+   "fieldname": "doctor_exp_account",
+   "fieldtype": "Link",
+   "label": "Doctor Exp Account",
+   "mandatory_depends_on": "eval:doc.allow_comm_doc",
+   "options": "Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_bill_to_employee",
+   "fieldtype": "Check",
+   "label": "Allow Bill to Employee"
+  },
+  {
+   "depends_on": "eval:doc.allow_bill_to_employee",
+   "fieldname": "employee_due",
+   "fieldtype": "Link",
+   "label": "Employee Due Account",
+   "mandatory_depends_on": "eval:doc.allow_bill_to_employee",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_9s3vs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ezhz1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "description": "Check this if you want to allow transfer balance from one customer to an other",
+   "fieldname": "allow_transfer_balance",
+   "fieldtype": "Check",
+   "label": "Allow Transfer Balance"
+  },
+  {
+   "default": "0",
+   "description": "Check this if you want to make free ques as Expense",
+   "fieldname": "free_que_expense",
+   "fieldtype": "Check",
+   "label": "Free Que Expense"
+  },
+  {
+   "depends_on": "eval:doc.free_que_expense",
+   "fieldname": "free_que_expense_account",
+   "fieldtype": "Link",
+   "label": "Free Que Expense Account",
+   "mandatory_depends_on": "eval:doc.free_que_expense",
+   "options": "Account"
+  },
+  {
+   "fieldname": "insurance_receivable_account",
+   "fieldtype": "Link",
+   "label": "Insurance Receivable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "debtors_account",
+   "fieldtype": "Link",
+   "label": "Debtors Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "employee_receivable",
+   "fieldtype": "Link",
+   "label": "Employee Receivable",
+   "options": "Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-07-20 10:38:32.114117",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "HIS Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

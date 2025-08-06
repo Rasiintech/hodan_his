@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2023-05-26 19:26:48.304532",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-05-26 19:26:48.304532",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "discharge-schaduling",
+ "owner": "Administrator",
+ "page_name": "discharge-schaduling",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

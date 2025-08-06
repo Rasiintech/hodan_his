@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-15 10:30:24.772565",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rash",
+  "hypo_pigmentation",
+  "hyper_pigmentation",
+  "bleeding_disorder",
+  "plisters",
+  "bed_sore"
+ ],
+ "fields": [
+  {
+   "fieldname": "rash",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Rash               ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hypo_pigmentation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "hypo pigmentation  ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hyper_pigmentation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "hyper pigmentation",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bleeding_disorder",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Bleeding disorder     ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "plisters",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "plisters ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bed_sore",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "bed sore   ",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-16 10:46:12.526670",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Skin",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

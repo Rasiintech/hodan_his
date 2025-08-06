@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ frappe.db.get_value("Customer", {"name" :customer_name}
+		, "customer_name") }}</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+		* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  margin-inline: 100px;
+  flex-direction: column;
+}
+
+/* ----------Styling top header start here----------- */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+/* ----------Styling top header enda here----------- */
+
+/* ----------Styling section one start here----------- */
+.secOne {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.patient_info {
+  display: flex;
+  flex-direction: column;
+}
+.invoice_info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+}
+/* ----------Styling section one ends here----------- */
+
+/* ----------Styling section Two start here----------- */
+
+.accd {
+  font-weight: bold;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* ----------Styling section Two Ends here----------- */
+/* Reset default margin and padding */
+
+/* _______________Styling  the table start here_________________ */
+.invoice-table {
+  border-collapse: collapse; /* Remove table borders */
+  width: 100%;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 0 30px 0px 0px; /* Add padding to cells */
+  text-align: left;
+
+  /* Align text to the left */
+}
+
+.invoice-table th {
+  font-weight: bold; /* Bold text for table headers */
+}
+
+/* Style for the Date column */
+.date {
+  font-weight: bold; /* Bold text for Date */
+}
+/* _______________Styling the table ends here _________________ */
+
+/* Style for the Section Title (ACCIDENT AND EMERGENCE) */
+.section-title {
+  font-weight: bold; /* Bold text for section title */
+  text-align: center; /* Center-align the section title */
+
+  border-top: 1px solid black; /* Add a horizontal line */
+  border-bottom: 1px solid black; /* Add a horizontal line */
+}
+
+.no_border {
+  border: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* ______________footer style start here________________ */
+footer {
+  margin-top: 20px;
+  width: 950px;
+  font-size: 1.125rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  margin-bottom: 100px;
+}
+/* ______________footer style ends here________________ */
+
+.break {
+  page-break-after: always;
+}
+/* section three styling here */
+
+.lines {
+  border-bottom: 1px solid black;
+}
+
+.line-top {
+  border-top: 1px solid black;
+}
+
+.btm-50 {
+  margin-top: 50%;
+}
+
+/* section three styling here */
+@media print {
+  .secOne {
+    display: flex;
+
+    justify-content: space-between;
+    gap: 260px;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <main class="main">
+		<div id="header-html">
+			<img src="/files/logo hodan.png" alt="Description" style="display: block; margin-left: auto; margin-right: auto;"
+			
+			/>
+				
+			</div>
+
+			<h2 class="text-center">{{ _("Patient Statement") }}</h2>
+			<h4 class="text-center">
+				{{ frappe.db.get_value("Patient", {"customer" :customer_name}
+				, "name") }}
+		</h4>
+			<h4 class="text-center">
+					{{ frappe.db.get_value("Customer", {"name" :customer_name}
+					, "customer_name") }}
+			</h4>
+
+			
+
+			<h5 class="text-center">
+				Statement for period:
+				{{ _("From Date") }} {{ from }} To Date {{ to }}
+			</h5>
+			<h5>Printed on {{frappe.utils.now()}}</h5>
+			<h5>Printed by: {{frappe.get_fullname()}}</h5>
+			<hr>
+        <!-- <div class="break"></div> -->
+        <section class="secThree">
+          {% set item_groups = {} %}
+          
+          
+		  <table class="invoice-table">
+			<tr class="lines">
+				<th>Date</th>
+				<th>Description</th>
+				<th>Qty</th>
+				<th>Ref</th>
+				<th>Rate</th>
+				<th>Amt</th>
+			
+				<th>Running</th>
+				
+			</tr>
+		
+		{% for group in data %}
+		
+		{% set runing = 3 %}
+		<tr class="section-title">
+			<td >
+					<h3>{{ group[-1].item_code }}</h3>
+					
+
+			
+
+			</td>
+		
+			{% if not detail %}
+			<td></td>
+			<td>{{  group[-1].stock_qty }}</td>
+			<td></td>
+			<td>{{ frappe.format(group[-1].amount , 'Currency') }}</td>
+			<td>{{ frappe.format(group[-1].grunning , 'Currency') }}</td>
+			{% endif %}
+		</tr>
+		{% if detail %}
+		{% for item in group[:-1] %} {% if item.item_code %}
+		
+		{% set updating_runing = runing + 1 %}
+		{% set runing = updating_runing %}
+		
+		<tr>
+			<td>{{ item.posting_date }}</td>
+			<td>{{ item.item_code }}</td>
+			<td>{{ item.stock_qty }}</td>
+			<td>{{ item.invoice }}</td>
+			<td>{{ frappe.format(item.rate , 'Currency') }}</td>
+			<td>{{ frappe.format(item.amount , 'Currency') }}</td>
+			{%if 'running' in item %}
+			<td>{{ frappe.format( item.running , 'Currency') }}</td>
+			{% endif %}
+		</tr>
+		
+					
+				{% endif %}
+			{% endfor %}
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td > <b>Gross</b></td>
+				<td><b>{{frappe.format( group[-1].amount, 'Currency')}}</b></td>
+				<td></td>
+			</tr>
+			{% endif %}
+			{% endfor %}
+
+	
+		
+			<tr class="lines">
+				<td class="bold">Invoice Amount</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="bold">{{ frappe.format( total_invoice , 'Currency')}}</td>
+			</tr>
+		
+			<tr>
+				<td class="bold">Receipts/Rebate</td>
+				
+				{% for row in payments %}
+			
+					
+						<td>{{ row.party }}</td>
+						<td>{{row.posting_date}}</td>
+						<td>{{row.name}}</td>
+						<td>{{frappe.format(  row.unallocated_amount , 'Currency')}}</td>
+						
+					</tr>
+
+				
+				{% endfor %}
+				{% for inv in paid_invoices %}
+				<tr>
+					<td class="bold">Paid Invoices</td>
+				<td>{{ inv.customer }}</td>
+				<td>{{inv.posting_date}}</td>
+				<td>{{inv.name}}</td>
+				<td>{{frappe.format(  inv.paid_amount , 'Currency')}}</td>
+				
+			</tr>
+			{% endfor %}
+			</tr>
+		
+			<tr class="lines">
+				<td></td>
+				<td></td>
+				<td class="bold">Total Receipts</td>
+				<td></td>
+				<td></td>
+				<td class="bold">{{ frappe.format( total_recipt , 'Currency')}}</td>
+			</tr>
+		
+			<tr class="lines">
+				<td></td>
+				<td></td>
+				<td class="bold">Net Amount</td>
+				<td></td>
+				<td></td>
+				<td class="bold">{{ frappe.format(  net_total , 'Currency') }}</td>
+			</tr>
+		</table>
+		
+		
+
+         
+        </section>
+    </main>
+</body>
+
+</html>

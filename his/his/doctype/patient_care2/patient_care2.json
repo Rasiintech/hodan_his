@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 11:02:28.981729",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ischemia",
+  "cellulites",
+  "dvt",
+  "g_periph_oedema",
+  "hyperpigmentation",
+  "hypopigmentation",
+  "normal_head_position",
+  "neutral_body_position"
+ ],
+ "fields": [
+  {
+   "fieldname": "g_periph_oedema",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "G/ Periph Oedema",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "ischemia",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ischemia",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cellulites",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "cellulites",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "dvt",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "DVT",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hyperpigmentation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Hyperpigmentation",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hypopigmentation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Hypopigmentation",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "normal_head_position",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Normal head position ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "neutral_body_position",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Neutral body position",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-13 12:07:36.723963",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Patient Care2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,574 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DF-.#####",
+ "creation": "2025-01-28 10:24:51.874051",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "pid",
+  "name1",
+  "age",
+  "weight",
+  "ideal_body_weight",
+  "column_break_x9xli",
+  "icu_day",
+  "mv_day",
+  "cvl_day",
+  "day",
+  "column_break_ulpcs",
+  "cause_of_admission_section",
+  "icu_diagnosis",
+  "primary_unit",
+  "consultation",
+  "section_break_8rxxz",
+  "p_m_h",
+  "hpi",
+  "section_break_mohix",
+  "airway1",
+  "airway2",
+  "airway3",
+  "airway4",
+  "breathing_section",
+  "breathing5",
+  "breathing9",
+  "breathing7",
+  "breathing6",
+  "breathing1",
+  "breathing2",
+  "breathing3",
+  "breathing4",
+  "circulation_section",
+  "circulation",
+  "circulation2",
+  "circulation3",
+  "circulation4",
+  "circulation5",
+  "circulation6",
+  "circulation8",
+  "circulation7",
+  "nervous_system_section",
+  "nervous_system",
+  "nervous_system2",
+  "nervous_system3",
+  "nervous_system4",
+  "kidney_section",
+  "kidney",
+  "kidney2",
+  "kidney3",
+  "kidney4",
+  "feeding_section",
+  "feeding2",
+  "feeding",
+  "feeding3",
+  "feeding4",
+  "hematology_section",
+  "hematology",
+  "hematology2",
+  "sepsis_section",
+  "sepsis",
+  "sepsis2",
+  "sepsis3",
+  "patient_care_section",
+  "patient_care",
+  "patient_care3",
+  "section_break_3ivga",
+  "patient_care2",
+  "section_break_rypxb",
+  "other_investigations",
+  "images",
+  "problem_list_section",
+  "problem_list",
+  "section_break_veuqo",
+  "to_do_list",
+  "events",
+  "plan_of_management_section",
+  "plan_of_management",
+  "plan_of_management2",
+  "plan_of_management3",
+  "plan_of_management4",
+  "others",
+  "target_section",
+  "target",
+  "section_break_hecgq"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.first_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fetch_from": "pid.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Actual body weight"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "icu_day",
+   "fieldtype": "Data",
+   "label": "ICU day"
+  },
+  {
+   "fieldname": "column_break_x9xli",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mv_day",
+   "fieldtype": "Data",
+   "label": "MV day"
+  },
+  {
+   "fieldname": "cvl_day",
+   "fieldtype": "Data",
+   "label": "CVL day"
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Data",
+   "label": "Day"
+  },
+  {
+   "fieldname": "cause_of_admission_section",
+   "fieldtype": "Data",
+   "label": "Cause of admission"
+  },
+  {
+   "fieldname": "icu_diagnosis",
+   "fieldtype": "Data",
+   "label": "ICU diagnosis"
+  },
+  {
+   "fieldname": "primary_unit",
+   "fieldtype": "Data",
+   "label": "Primary unit"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Data",
+   "label": "Consultation"
+  },
+  {
+   "fieldname": "column_break_ulpcs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8rxxz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "p_m_h",
+   "fieldtype": "Small Text",
+   "label": "P M H"
+  },
+  {
+   "fieldname": "hpi",
+   "fieldtype": "Small Text",
+   "label": "HPI"
+  },
+  {
+   "fieldname": "section_break_mohix",
+   "fieldtype": "Section Break",
+   "label": "Airway"
+  },
+  {
+   "fieldname": "airway1",
+   "fieldtype": "Table",
+   "options": "Airway"
+  },
+  {
+   "fieldname": "airway2",
+   "fieldtype": "Table",
+   "options": "Airway2"
+  },
+  {
+   "fieldname": "airway3",
+   "fieldtype": "Table",
+   "options": "Airway3"
+  },
+  {
+   "fieldname": "breathing_section",
+   "fieldtype": "Section Break",
+   "label": "Breathing"
+  },
+  {
+   "fieldname": "breathing1",
+   "fieldtype": "Table",
+   "options": "Breathing"
+  },
+  {
+   "fieldname": "breathing2",
+   "fieldtype": "Table",
+   "options": "Breathing2"
+  },
+  {
+   "fieldname": "breathing3",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "options": "Breathing3"
+  },
+  {
+   "fieldname": "breathing4",
+   "fieldtype": "Table",
+   "options": "Breathing4"
+  },
+  {
+   "fieldname": "airway4",
+   "fieldtype": "Table",
+   "options": "Airway 4"
+  },
+  {
+   "fieldname": "breathing5",
+   "fieldtype": "Table",
+   "options": "breathing5"
+  },
+  {
+   "fieldname": "breathing6",
+   "fieldtype": "Table",
+   "options": "Breathing6"
+  },
+  {
+   "fieldname": "circulation_section",
+   "fieldtype": "Section Break",
+   "label": "Circulation"
+  },
+  {
+   "fieldname": "circulation",
+   "fieldtype": "Table",
+   "options": "Circulation"
+  },
+  {
+   "fieldname": "circulation2",
+   "fieldtype": "Table",
+   "options": "Circulation2"
+  },
+  {
+   "fieldname": "circulation3",
+   "fieldtype": "Table",
+   "options": "Circulation3"
+  },
+  {
+   "fieldname": "circulation4",
+   "fieldtype": "Table",
+   "options": "Circulation4"
+  },
+  {
+   "fieldname": "circulation5",
+   "fieldtype": "Table",
+   "options": "Circulation5"
+  },
+  {
+   "fieldname": "circulation6",
+   "fieldtype": "Table",
+   "options": "Circulation6"
+  },
+  {
+   "fieldname": "circulation7",
+   "fieldtype": "Table",
+   "options": "Circulation7"
+  },
+  {
+   "fieldname": "nervous_system_section",
+   "fieldtype": "Section Break",
+   "label": "Nervous System"
+  },
+  {
+   "fieldname": "nervous_system",
+   "fieldtype": "Table",
+   "options": "Nervous System"
+  },
+  {
+   "fieldname": "nervous_system2",
+   "fieldtype": "Table",
+   "options": "Nervous System2"
+  },
+  {
+   "fieldname": "nervous_system3",
+   "fieldtype": "Table",
+   "options": "Nervous System3"
+  },
+  {
+   "fieldname": "nervous_system4",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "options": "Nervous System4"
+  },
+  {
+   "fieldname": "kidney_section",
+   "fieldtype": "Section Break",
+   "label": "Kidney"
+  },
+  {
+   "fieldname": "kidney",
+   "fieldtype": "Table",
+   "options": "Kidney"
+  },
+  {
+   "fieldname": "kidney2",
+   "fieldtype": "Table",
+   "options": "Kidney2"
+  },
+  {
+   "fieldname": "kidney3",
+   "fieldtype": "Table",
+   "options": "Kidney3"
+  },
+  {
+   "fieldname": "kidney4",
+   "fieldtype": "Table",
+   "options": "Kidney4"
+  },
+  {
+   "fieldname": "feeding_section",
+   "fieldtype": "Section Break",
+   "label": "Feeding"
+  },
+  {
+   "fieldname": "feeding",
+   "fieldtype": "Table",
+   "options": "Feeding"
+  },
+  {
+   "fieldname": "feeding2",
+   "fieldtype": "Table",
+   "options": "Feeding2"
+  },
+  {
+   "fieldname": "feeding3",
+   "fieldtype": "Table",
+   "options": "Feeding3"
+  },
+  {
+   "fieldname": "hematology_section",
+   "fieldtype": "Section Break",
+   "label": "Hematology"
+  },
+  {
+   "fieldname": "hematology",
+   "fieldtype": "Table",
+   "options": "Hematology"
+  },
+  {
+   "fieldname": "hematology2",
+   "fieldtype": "Table",
+   "options": "Hematology2"
+  },
+  {
+   "fieldname": "sepsis_section",
+   "fieldtype": "Section Break",
+   "label": "Sepsis"
+  },
+  {
+   "fieldname": "sepsis",
+   "fieldtype": "Table",
+   "options": "Sepsis"
+  },
+  {
+   "fieldname": "sepsis2",
+   "fieldtype": "Table",
+   "options": "Sepsis2"
+  },
+  {
+   "fieldname": "patient_care",
+   "fieldtype": "Table",
+   "options": "Patient Care"
+  },
+  {
+   "fieldname": "patient_care2",
+   "fieldtype": "Table",
+   "options": "Patient Care2"
+  },
+  {
+   "fieldname": "patient_care_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Care"
+  },
+  {
+   "fieldname": "section_break_rypxb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "other_investigations",
+   "fieldtype": "Small Text",
+   "label": "Other investigation results"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Small Text",
+   "label": "Image findings"
+  },
+  {
+   "fieldname": "problem_list_section",
+   "fieldtype": "Section Break",
+   "label": "Problem list"
+  },
+  {
+   "fieldname": "problem_list",
+   "fieldtype": "Table",
+   "options": "Problem list"
+  },
+  {
+   "fieldname": "section_break_veuqo",
+   "fieldtype": "Section Break",
+   "label": "To do list"
+  },
+  {
+   "fieldname": "to_do_list",
+   "fieldtype": "Table",
+   "options": "To do list"
+  },
+  {
+   "fieldname": "events",
+   "fieldtype": "Small Text",
+   "label": "Events"
+  },
+  {
+   "fieldname": "plan_of_management_section",
+   "fieldtype": "Section Break",
+   "label": "Plan of Management"
+  },
+  {
+   "fieldname": "plan_of_management",
+   "fieldtype": "Table",
+   "options": "Plan of Management"
+  },
+  {
+   "fieldname": "plan_of_management2",
+   "fieldtype": "Table",
+   "options": "Plan of Management2"
+  },
+  {
+   "fieldname": "plan_of_management3",
+   "fieldtype": "Table",
+   "options": "Plan of Management3"
+  },
+  {
+   "fieldname": "plan_of_management4",
+   "fieldtype": "Table",
+   "options": "Plan of Management4"
+  },
+  {
+   "fieldname": "target_section",
+   "fieldtype": "Section Break",
+   "label": "Target"
+  },
+  {
+   "fieldname": "target",
+   "fieldtype": "Table",
+   "options": "Target"
+  },
+  {
+   "fieldname": "breathing7",
+   "fieldtype": "Table",
+   "options": "breathing7"
+  },
+  {
+   "fieldname": "circulation8",
+   "fieldtype": "Table",
+   "options": "Circulation8"
+  },
+  {
+   "fieldname": "feeding4",
+   "fieldtype": "Table",
+   "options": "Feeding4"
+  },
+  {
+   "fieldname": "sepsis3",
+   "fieldtype": "Table",
+   "options": "Sepsis3"
+  },
+  {
+   "fieldname": "patient_care3",
+   "fieldtype": "Table",
+   "options": "Patient Care3"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Small Text",
+   "label": "Other drugs"
+  },
+  {
+   "fieldname": "ideal_body_weight",
+   "fieldtype": "Data",
+   "label": "Ideal body weight"
+  },
+  {
+   "fieldname": "breathing9",
+   "fieldtype": "Table",
+   "options": "breathing9"
+  },
+  {
+   "fieldname": "section_break_hecgq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_3ivga",
+   "fieldtype": "Section Break",
+   "label": "Muscloskeletal"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-06 22:00:46.389471",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Daily Follow Up",
+ "name_case": "Title Case",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1"
+}

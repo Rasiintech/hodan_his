@@ -1,0 +1,364 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 12:19:18.066675",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_gujpk",
+  "dob",
+  "mrp",
+  "section_break_tpeds",
+  "unsuccessful_cpr",
+  "full_support_no_cpr",
+  "modified_support_no_cpr",
+  "section_break_sl1el",
+  "cause_of_death",
+  "section_break_ymtkq",
+  "discharge",
+  "column_break_bhe9l",
+  "death_summary",
+  "section_break_bizgc",
+  "organ_donation_consent_obtained",
+  "if_yes_complete_the_following",
+  "section_break_fv8fp",
+  "by_whom_1",
+  "column_break_mdaxz",
+  "dr_no_1",
+  "column_break_quud6",
+  "date_time",
+  "section_break_mrdvi",
+  "indication_for_autopsy",
+  "column_break_5j8wh",
+  "none_indicated",
+  "column_break_i8ef3",
+  "education",
+  "column_break_ttzos",
+  "identify_cause_of_death",
+  "column_break_wtoxj",
+  "medico_legal",
+  "section_break_4wmyh",
+  "consent_for_autopsy_obtained",
+  "if_yes_complete_the_following_below",
+  "column_break_v0jpv",
+  "yes",
+  "column_break_gqyfb",
+  "no_yes_if_yes_complete_the_following_2",
+  "section_break_0gkir",
+  "by_whom_2",
+  "column_break_6opo7",
+  "dr_no_2",
+  "column_break_xnezz",
+  "datetime",
+  "section_break_6h08u",
+  "death_certificate_completed_by",
+  "section_break_sbdxc",
+  "dr_name",
+  "column_break_2rhux",
+  "dr_no_3"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "unsuccessful_cpr",
+   "fieldtype": "Data",
+   "label": "Unsuccessful CPR"
+  },
+  {
+   "fieldname": "full_support_no_cpr",
+   "fieldtype": "Data",
+   "label": "Full Support No CPR"
+  },
+  {
+   "fieldname": "modified_support_no_cpr",
+   "fieldtype": "Data",
+   "label": "Modified Support No CPR"
+  },
+  {
+   "fieldname": "cause_of_death",
+   "fieldtype": "Data",
+   "label": "CAUSE OF DEATH"
+  },
+  {
+   "default": "0",
+   "fieldname": "discharge",
+   "fieldtype": "Check",
+   "label": "DISCHARGE"
+  },
+  {
+   "default": "0",
+   "fieldname": "death_summary",
+   "fieldtype": "Check",
+   "label": "DEATH SUMMARY"
+  },
+  {
+   "fieldname": "organ_donation_consent_obtained",
+   "fieldtype": "HTML",
+   "label": "Organ donation consent obtained ",
+   "options": "Organ donation consent obtained "
+  },
+  {
+   "fieldname": "if_yes_complete_the_following",
+   "fieldtype": "HTML",
+   "label": "If Yes complete the following",
+   "options": "If Yes complete the following"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
+  },
+  {
+   "fieldname": "indication_for_autopsy",
+   "fieldtype": "HTML",
+   "label": "Indication for autopsy",
+   "options": "Indication for autopsy"
+  },
+  {
+   "default": "0",
+   "fieldname": "none_indicated",
+   "fieldtype": "Check",
+   "label": "None indicated"
+  },
+  {
+   "default": "0",
+   "fieldname": "education",
+   "fieldtype": "Check",
+   "label": "Education"
+  },
+  {
+   "default": "0",
+   "fieldname": "identify_cause_of_death",
+   "fieldtype": "Check",
+   "label": "Identify cause of death"
+  },
+  {
+   "default": "0",
+   "fieldname": "medico_legal",
+   "fieldtype": "Check",
+   "label": "Medico Legal"
+  },
+  {
+   "fieldname": "consent_for_autopsy_obtained",
+   "fieldtype": "HTML",
+   "label": "Consent for autopsy obtained ",
+   "options": "Consent for autopsy obtained "
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Data",
+   "label": "DateTime"
+  },
+  {
+   "fieldname": "death_certificate_completed_by",
+   "fieldtype": "HTML",
+   "label": "Death Certificate completed by",
+   "options": "Death Certificate completed by"
+  },
+  {
+   "fieldname": "dr_name",
+   "fieldtype": "Data",
+   "label": "Dr Name"
+  },
+  {
+   "fieldname": "by_whom_1",
+   "fieldtype": "Data",
+   "label": "By whom"
+  },
+  {
+   "fieldname": "dr_no_1",
+   "fieldtype": "Data",
+   "label": "Dr No "
+  },
+  {
+   "fieldname": "by_whom_2",
+   "fieldtype": "Data",
+   "label": "By whom "
+  },
+  {
+   "fieldname": "dr_no_2",
+   "fieldtype": "Data",
+   "label": "Dr No "
+  },
+  {
+   "fieldname": "dr_no_3",
+   "fieldtype": "Data",
+   "label": "Dr No "
+  },
+  {
+   "fieldname": "column_break_gujpk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tpeds",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_sl1el",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ymtkq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bhe9l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bizgc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_fv8fp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mdaxz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_quud6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mrdvi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_5j8wh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_i8ef3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ttzos",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wtoxj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4wmyh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "if_yes_complete_the_following_below",
+   "fieldtype": "HTML",
+   "label": " if Yes complete the following below",
+   "options": " if Yes complete the following below"
+  },
+  {
+   "fieldname": "column_break_v0jpv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_gqyfb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_yes_if_yes_complete_the_following_2",
+   "fieldtype": "Check",
+   "label": "No "
+  },
+  {
+   "fieldname": "section_break_0gkir",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_6opo7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xnezz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6h08u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_sbdxc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_2rhux",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-10 08:14:27.607759",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Discharge FROM ICU",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

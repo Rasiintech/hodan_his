@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2023-05-19 13:33:05.889949",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-05-19 13:33:05.889949",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "view-vital-signs",
+ "owner": "Administrator",
+ "page_name": "view-vital-signs",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

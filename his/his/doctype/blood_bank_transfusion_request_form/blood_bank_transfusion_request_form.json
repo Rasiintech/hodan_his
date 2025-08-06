@@ -1,0 +1,917 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-27 16:57:49.873758",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "column_break_hpajg",
+  "pts_name",
+  "column_break_bbgwn",
+  "date1",
+  "column_break_tcn8c",
+  "mrp",
+  "section_break_pmtdj",
+  "blood_bank_transfusion_request_form",
+  "section_break_i8crw",
+  "type_screen",
+  "column_break_jsmdx",
+  "type_cross_match",
+  "column_break_qx9i6",
+  "urgent",
+  "section_break_sla7p",
+  "medical_record",
+  "column_break_8tgnr",
+  "patient_name",
+  "section_break_8yt8c",
+  "date_of_birth",
+  "column_break_z6h1q",
+  "sex",
+  "column_break_z8str",
+  "nationality",
+  "column_break_xihzz",
+  "consultant",
+  "section_break_lngn2",
+  "wardclinic",
+  "section_break_78mee",
+  "requesting_physicians_sign",
+  "column_break_3kzhn",
+  "request_date",
+  "section_break_dicqb",
+  "clinical_data_indetails",
+  "section_break_84hhv",
+  "diagnosis__reason_for_transfusion",
+  "section_break_dlrmx",
+  "hb",
+  "column_break_ttwrf",
+  "plt_count",
+  "column_break_dk2nl",
+  "pt",
+  "column_break_jzyxc",
+  "aptt",
+  "column_break_lsuvt",
+  "weight",
+  "section_break_le3ha",
+  "previous_transfusions",
+  "column_break_9smt1",
+  "no",
+  "column_break_njrwn",
+  "yes",
+  "column_break_grnb3",
+  "date",
+  "section_break_jztxm",
+  "no_of_units",
+  "column_break_94tjl",
+  "previously_detected_ab",
+  "section_break_ypld1",
+  "for_pregnancy_patient",
+  "section_break_qfq4e",
+  "gestation",
+  "column_break_lsks5",
+  "weeks",
+  "column_break_duee2",
+  "grav",
+  "column_break_ktmfp",
+  "para",
+  "section_break_dyjfk",
+  "units_of_components_requested",
+  "section_break_inst2",
+  "packed_rbc",
+  "column_break_a4fg4",
+  "platelet_concentrate",
+  "column_break_ti7ft",
+  "fresh_frozen_plasma_ffp",
+  "section_break_3j9ra",
+  "cryoprecipitate",
+  "column_break_qlsmm",
+  "whole_blood",
+  "column_break_yfjvb",
+  "for_laboratory_use_only",
+  "column_break_e4gw8",
+  "date_required",
+  "section_break_3mi0f",
+  "time_required",
+  "column_break_ws2rt",
+  "others_specify",
+  "section_break_qimey",
+  "for_labortory_use_only",
+  "section_break_m9v6t",
+  "blood_group",
+  "column_break_hglg6",
+  "rh",
+  "section_break_gy2mw",
+  "antibody_screen",
+  "column_break_ea2dp",
+  "dat",
+  "column_break_lxolz",
+  "lab_tech_signature",
+  "section_break_mkw5g",
+  "category",
+  "column_break_utmov",
+  "routine_needed_date__time",
+  "column_break_5btms",
+  "urgent_available_in_45_minutes",
+  "section_break_rhkoe",
+  "specimen_collected_by",
+  "column_break_o05ya",
+  "date__time",
+  "column_break_8ju4l",
+  "sign",
+  "column_break_lmv6w",
+  "received_by",
+  "column_break_v24n6",
+  "date_time",
+  "column_break_gbhbl",
+  "signn",
+  "section_break_wicqk",
+  "remarks",
+  "column_break_68bkn",
+  "hemolysed",
+  "column_break_hqwsp",
+  "slightly",
+  "column_break_cvbgh",
+  "moderately",
+  "section_break_l1and",
+  "grossly",
+  "column_break_o058r",
+  "lipemic",
+  "column_break_nbn8p",
+  "slightly1",
+  "column_break_h29rp",
+  "moderately1",
+  "section_break_a934t",
+  "grossly1",
+  "column_break_8k1aw",
+  "icteric",
+  "column_break_7t8at",
+  "slightly2",
+  "column_break_ir5ly",
+  "moderately2",
+  "section_break_rns3q",
+  "grossly2",
+  "column_break_splrn",
+  "insufficient_sample",
+  "column_break_mdjzs",
+  "please",
+  "column_break_ui3h6",
+  "section_break_rulri",
+  "amended_from",
+  "column_break_et2kn"
+ ],
+ "fields": [
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "blood_bank_transfusion_request_form",
+   "fieldtype": "HTML",
+   "label": "BLOOD BANK TRANSFUSION REQUEST FORM ",
+   "options": "BLOOD BANK TRANSFUSION REQUEST FORM "
+  },
+  {
+   "default": "0",
+   "fieldname": "type_screen",
+   "fieldtype": "Check",
+   "label": "Type Screen"
+  },
+  {
+   "default": "0",
+   "fieldname": "type_cross_match",
+   "fieldtype": "Check",
+   "label": "Type Cross Match"
+  },
+  {
+   "default": "0",
+   "fieldname": "urgent",
+   "fieldtype": "Check",
+   "label": "Urgent"
+  },
+  {
+   "fieldname": "medical_record",
+   "fieldtype": "Data",
+   "label": "Medical Record"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Link",
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "wardclinic",
+   "fieldtype": "Data",
+   "label": "Ward/Clinic"
+  },
+  {
+   "fieldname": "requesting_physicians_sign",
+   "fieldtype": "Data",
+   "label": "Requesting Physician's Sign"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "clinical_data_indetails",
+   "fieldtype": "HTML",
+   "label": "Clinical data indetails ",
+   "options": "Clinical data indetails "
+  },
+  {
+   "fieldname": "diagnosis__reason_for_transfusion",
+   "fieldtype": "Data",
+   "label": "Diagnosis  reason for transfusion "
+  },
+  {
+   "fieldname": "hb",
+   "fieldtype": "Data",
+   "label": "Hb "
+  },
+  {
+   "fieldname": "plt_count",
+   "fieldtype": "Data",
+   "label": "Plt Count"
+  },
+  {
+   "fieldname": "pt",
+   "fieldtype": "Data",
+   "label": "PT "
+  },
+  {
+   "fieldname": "aptt",
+   "fieldtype": "Data",
+   "label": "APTT"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "previous_transfusions",
+   "fieldtype": "HTML",
+   "label": "Previous transfusions",
+   "options": "Previous transfusions"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "no_of_units",
+   "fieldtype": "Data",
+   "label": "No of Units"
+  },
+  {
+   "fieldname": "previously_detected_ab",
+   "fieldtype": "Data",
+   "label": "Previously detected Ab"
+  },
+  {
+   "fieldname": "for_pregnancy_patient",
+   "fieldtype": "HTML",
+   "label": "For pregnancy patient",
+   "options": "For pregnancy patient"
+  },
+  {
+   "fieldname": "gestation",
+   "fieldtype": "Data",
+   "label": "Gestation "
+  },
+  {
+   "fieldname": "weeks",
+   "fieldtype": "Data",
+   "label": "Weeks"
+  },
+  {
+   "fieldname": "grav",
+   "fieldtype": "Data",
+   "label": "GRAV"
+  },
+  {
+   "fieldname": "para",
+   "fieldtype": "Data",
+   "label": "PARA"
+  },
+  {
+   "fieldname": "units_of_components_requested",
+   "fieldtype": "HTML",
+   "label": "Units of Components Requested",
+   "options": "Units of Components Requested"
+  },
+  {
+   "default": "0",
+   "fieldname": "packed_rbc",
+   "fieldtype": "Check",
+   "label": "Packed RBC"
+  },
+  {
+   "default": "0",
+   "fieldname": "platelet_concentrate",
+   "fieldtype": "Check",
+   "label": "Platelet Concentrate"
+  },
+  {
+   "default": "0",
+   "fieldname": "fresh_frozen_plasma_ffp",
+   "fieldtype": "Check",
+   "label": "Fresh Frozen Plasma FFP"
+  },
+  {
+   "default": "0",
+   "fieldname": "cryoprecipitate",
+   "fieldtype": "Check",
+   "label": "Cryoprecipitate"
+  },
+  {
+   "fieldname": "whole_blood",
+   "fieldtype": "Data",
+   "label": "Whole Blood"
+  },
+  {
+   "fieldname": "date_required",
+   "fieldtype": "Date",
+   "label": "Date Required"
+  },
+  {
+   "fieldname": "time_required",
+   "fieldtype": "Data",
+   "label": "Time Required"
+  },
+  {
+   "fieldname": "others_specify",
+   "fieldtype": "Data",
+   "label": "Others specify"
+  },
+  {
+   "fieldname": "for_laboratory_use_only",
+   "fieldtype": "Data",
+   "label": "FOR LABORATORY USE ONLY"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood group"
+  },
+  {
+   "fieldname": "rh",
+   "fieldtype": "Data",
+   "label": "Rh"
+  },
+  {
+   "fieldname": "antibody_screen",
+   "fieldtype": "Data",
+   "label": "Antibody Screen"
+  },
+  {
+   "fieldname": "dat",
+   "fieldtype": "Data",
+   "label": "DAT"
+  },
+  {
+   "fieldname": "lab_tech_signature",
+   "fieldtype": "Data",
+   "label": "Lab Tech Signature"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fieldname": "routine_needed_date__time",
+   "fieldtype": "Datetime",
+   "label": "Routine Needed date  time"
+  },
+  {
+   "fieldname": "urgent_available_in_45_minutes",
+   "fieldtype": "Data",
+   "label": "Urgent Available in 45 minutes"
+  },
+  {
+   "fieldname": "specimen_collected_by",
+   "fieldtype": "Data",
+   "label": "Specimen collected by"
+  },
+  {
+   "fieldname": "date__time",
+   "fieldtype": "Datetime",
+   "label": "Date  Time"
+  },
+  {
+   "fieldname": "sign",
+   "fieldtype": "Data",
+   "label": "Sign"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received by"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
+  },
+  {
+   "fieldname": "signn",
+   "fieldtype": "Data",
+   "label": "Signn"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "hemolysed",
+   "fieldtype": "Data",
+   "label": "Hemolysed"
+  },
+  {
+   "fieldname": "slightly",
+   "fieldtype": "Data",
+   "label": "Slightly"
+  },
+  {
+   "fieldname": "moderately",
+   "fieldtype": "Data",
+   "label": "Moderately"
+  },
+  {
+   "fieldname": "grossly",
+   "fieldtype": "Data",
+   "label": "Grossly"
+  },
+  {
+   "fieldname": "lipemic",
+   "fieldtype": "Data",
+   "label": "Lipemic"
+  },
+  {
+   "fieldname": "slightly1",
+   "fieldtype": "Data",
+   "label": "Slightly"
+  },
+  {
+   "fieldname": "moderately1",
+   "fieldtype": "Data",
+   "label": "Moderately"
+  },
+  {
+   "fieldname": "grossly1",
+   "fieldtype": "Data",
+   "label": "Grossly"
+  },
+  {
+   "fieldname": "icteric",
+   "fieldtype": "Data",
+   "label": "Icteric"
+  },
+  {
+   "fieldname": "slightly2",
+   "fieldtype": "Data",
+   "label": "Slightly"
+  },
+  {
+   "fieldname": "moderately2",
+   "fieldtype": "Data",
+   "label": "Moderately"
+  },
+  {
+   "fieldname": "grossly2",
+   "fieldtype": "Data",
+   "label": "Grossly"
+  },
+  {
+   "fieldname": "insufficient_sample",
+   "fieldtype": "Data",
+   "label": "Insufficient sample"
+  },
+  {
+   "fieldname": "please",
+   "fieldtype": "Data",
+   "label": "Please fill in all relevant details to avoid rejection due to missing information "
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "BLOOD BANK TRANSFUSION REQUEST FORM",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hpajg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bbgwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tcn8c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pmtdj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_i8crw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jsmdx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qx9i6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_sla7p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8tgnr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8yt8c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_z6h1q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xihzz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_lngn2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_z8str",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "section_break_78mee",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_3kzhn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dicqb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_84hhv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_dlrmx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ttwrf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dk2nl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jzyxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lsuvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_le3ha",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9smt1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_njrwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_grnb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jztxm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_94tjl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ypld1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_qfq4e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lsks5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_duee2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ktmfp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dyjfk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_inst2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_a4fg4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ti7ft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_3j9ra",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qlsmm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yfjvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_e4gw8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_3mi0f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ws2rt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qimey",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "for_labortory_use_only",
+   "fieldtype": "HTML",
+   "label": "For Laboratory Use Only",
+   "options": "For Laboratory Use Only"
+  },
+  {
+   "fieldname": "section_break_m9v6t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hglg6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gy2mw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ea2dp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lxolz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mkw5g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_utmov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5btms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rhkoe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_o05ya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8ju4l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lmv6w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_v24n6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gbhbl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wicqk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_68bkn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hqwsp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cvbgh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_l1and",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_o058r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nbn8p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_h29rp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_a934t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8k1aw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7t8at",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ir5ly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rns3q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_splrn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mdjzs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ui3h6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_et2kn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_rulri",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date1",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-04 09:10:54.210821",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "BLOOD BANK TRANSFUSION REQUEST FORM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

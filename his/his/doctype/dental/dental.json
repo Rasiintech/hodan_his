@@ -1,0 +1,269 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Den-.#####",
+ "creation": "2023-04-23 12:12:00.291655",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "gender",
+  "date",
+  "age",
+  "column_break_t801h",
+  "healthcare_practitioner",
+  "department",
+  "medical_history",
+  "section_break_lfwrf",
+  "intra_oral_examination_tab",
+  "column_break_uhgcr",
+  "cheif_complaint",
+  "diagnosis",
+  "investigations_tab",
+  "investigations_section",
+  "lab_tests",
+  "medication_tab",
+  "section_break_orywh",
+  "drug_prescription",
+  "tab_break_5ao5g",
+  "section_break_drrqk",
+  "dental_services",
+  "medication_so",
+  "services_so",
+  "que",
+  "follow_up_tab",
+  "section_break_s7pgg",
+  "follow_up_in_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": " Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": " Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": " Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": " Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medical_history",
+   "fieldtype": "Small Text",
+   "label": "Medical history "
+  },
+  {
+   "fieldname": "column_break_uhgcr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "investigations_section",
+   "fieldtype": "Section Break",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "lab_tests",
+   "fieldtype": "Table",
+   "label": "Lab Tests",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "investigations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Lab Request"
+  },
+  {
+   "fieldname": "intra_oral_examination_tab",
+   "fieldtype": "Tab Break",
+   "label": "History"
+  },
+  {
+   "fieldname": "dental_services",
+   "fieldtype": "Table",
+   "label": "Dental Services",
+   "options": "Dental Prescription"
+  },
+  {
+   "fieldname": "tab_break_5ao5g",
+   "fieldtype": "Tab Break",
+   "label": " Dental Services Request"
+  },
+  {
+   "fieldname": "section_break_drrqk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "medication_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "services_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "healthcare_practitioner",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "que",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Que",
+   "options": "Que"
+  },
+  {
+   "fieldname": "column_break_t801h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lfwrf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "follow_up_tab",
+   "fieldtype": "Tab Break",
+   "label": "Follow Up"
+  },
+  {
+   "fieldname": "section_break_s7pgg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "follow_up_in_days",
+   "fieldtype": "Int",
+   "label": "Follow Up In days"
+  },
+  {
+   "fieldname": "medication_tab",
+   "fieldtype": "Tab Break",
+   "label": "Medication Request"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Drug Prescription",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "section_break_orywh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "healthcare_practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department"
+  },
+  {
+   "fieldname": "cheif_complaint",
+   "fieldtype": "Text",
+   "label": "Cheif Complaint"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Text",
+   "label": "Diagnosis"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-04 13:29:24.331033",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Dental",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dental",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

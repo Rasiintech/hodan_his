@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "H-RE-.##### ",
+ "creation": "2023-04-28 10:01:53.461985",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "date",
+  "entry_weight",
+  "target_weight",
+  "uf_rate",
+  "exit_weight",
+  "nursing",
+  "column_break_becmb",
+  "hbs_ag",
+  "hiv",
+  "hcv",
+  "machine__no",
+  "anticoagalant_type",
+  "dialysate",
+  "vascular_access_type",
+  "dialysor",
+  "practitioner",
+  "section_break_hnnf3",
+  "blood_pressure_tab",
+  "section_break_mvrpk",
+  "blood_pressure",
+  "dialysors_tab",
+  "section_break_tvfuo",
+  "dialysor_prescription",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "entry_weight",
+   "fieldtype": "Data",
+   "label": "Entry weight"
+  },
+  {
+   "fieldname": "target_weight",
+   "fieldtype": "Data",
+   "label": "Target weight  "
+  },
+  {
+   "fieldname": "uf_rate",
+   "fieldtype": "Data",
+   "label": "U.F. rate "
+  },
+  {
+   "fieldname": "exit_weight",
+   "fieldtype": "Data",
+   "label": "Exit weight"
+  },
+  {
+   "fieldname": "column_break_becmb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hbs_ag",
+   "fieldtype": "Data",
+   "label": "HBs Ag"
+  },
+  {
+   "fieldname": "hiv",
+   "fieldtype": "Data",
+   "label": "HIV"
+  },
+  {
+   "fieldname": "hcv",
+   "fieldtype": "Data",
+   "label": "HCV"
+  },
+  {
+   "fieldname": "machine__no",
+   "fieldtype": "Data",
+   "label": "Machine  NO"
+  },
+  {
+   "fieldname": "anticoagalant_type",
+   "fieldtype": "Data",
+   "label": "Anticoagalant type"
+  },
+  {
+   "fieldname": "dialysate",
+   "fieldtype": "Data",
+   "label": "dialysate"
+  },
+  {
+   "fieldname": "vascular_access_type",
+   "fieldtype": "Data",
+   "label": "Vascular access type "
+  },
+  {
+   "fieldname": "dialysor",
+   "fieldtype": "Data",
+   "label": "Dialysor "
+  },
+  {
+   "fieldname": "section_break_hnnf3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nursing",
+   "fieldtype": "Data",
+   "label": "Nursing"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "blood_pressure_tab",
+   "fieldtype": "Tab Break",
+   "label": "Blood Pressure"
+  },
+  {
+   "fieldname": "section_break_mvrpk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "blood_pressure",
+   "fieldtype": "Table",
+   "label": "Blood Pressure",
+   "options": "Blood Pressure"
+  },
+  {
+   "fieldname": "dialysors_tab",
+   "fieldtype": "Tab Break",
+   "label": "Dialysors"
+  },
+  {
+   "fieldname": "section_break_tvfuo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dialysor_prescription",
+   "fieldtype": "Table",
+   "label": "Dialysor Prescription",
+   "options": "Dialysor Prescription"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DIALYSIS REPORT",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-29 09:32:06.336312",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "DIALYSIS REPORT",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,500 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-01 11:17:06.158446",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_cszng",
+  "employee_name",
+  "column_break_m151o",
+  "mployee_number",
+  "section_break_gocej",
+  "department",
+  "column_break_i3sfa",
+  "position",
+  "column_break_obdvi",
+  "date_of_hire",
+  "section_break_tpdck",
+  "end_of_contract_date",
+  "column_break_limnw",
+  "address_during_leave_and_contact_number",
+  "column_break_xqjns",
+  "employee_sign",
+  "column_break_nqgrq",
+  "department_manager_sign",
+  "section_break_pyw19",
+  "request_for_leave",
+  "section_break_edh9n",
+  "the_above_employee_request_for_leave",
+  "section_break_al7ju",
+  "annual",
+  "column_break_qiz3b",
+  "emergency_2",
+  "column_break_yqzme",
+  "unpaid_2",
+  "column_break_pa25f",
+  "study_2",
+  "column_break_jfnpj",
+  "maternity_2",
+  "section_break_gvyzx",
+  "for",
+  "column_break_frxiq",
+  "from",
+  "column_break_ncrsp",
+  "to",
+  "section_break_ec01u",
+  "during_his_or_her_leave_emp_name",
+  "column_break_gqbec",
+  "will_replace_until_he_or_she_resume_on",
+  "section_break_rc4da",
+  "division_chief_sign",
+  "section_break_i2rcb",
+  "human_resources_remarks",
+  "section_break_qyuar",
+  "date_of_last_annual_leave",
+  "column_break_8ffpk",
+  "annual_leave",
+  "column_break_gdedt",
+  "his_or_her_leave_start",
+  "section_break_8ys7e",
+  "emergency",
+  "section_break_shwug",
+  "start_1",
+  "column_break_hjwks",
+  "end_2",
+  "section_break_o05ux",
+  "unpaid",
+  "section_break_2o6rs",
+  "start_2",
+  "column_break_ggsev",
+  "end_3",
+  "section_break_wbanb",
+  "study",
+  "section_break_bzotf",
+  "start_3",
+  "column_break_hy3my",
+  "end_4",
+  "section_break_38fdh",
+  "maternity",
+  "section_break_hq3cb",
+  "start_4",
+  "column_break_isgtl",
+  "end_5",
+  "section_break_olw61",
+  "human_resources_manager_date",
+  "column_break_vfsph",
+  "ceo_approval",
+  "section_break_pdlxc"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "mployee_number",
+   "fieldtype": "Data",
+   "label": "Employee Number"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "date_of_hire",
+   "fieldtype": "Data",
+   "label": "Date of Hire"
+  },
+  {
+   "fieldname": "end_of_contract_date",
+   "fieldtype": "Data",
+   "label": "End of Contract Date"
+  },
+  {
+   "fieldname": "address_during_leave_and_contact_number",
+   "fieldtype": "Data",
+   "label": "Address During Leave and Contact Number"
+  },
+  {
+   "fieldname": "employee_sign",
+   "fieldtype": "Data",
+   "label": "Employee Sign"
+  },
+  {
+   "fieldname": "department_manager_sign",
+   "fieldtype": "Data",
+   "label": "Department Manager Sign"
+  },
+  {
+   "fieldname": "the_above_employee_request_for_leave",
+   "fieldtype": "HTML",
+   "label": "The Above employee request for leave",
+   "options": "The Above employee request for leave"
+  },
+  {
+   "fieldname": "for",
+   "fieldtype": "Data",
+   "label": "For"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "during_his_or_her_leave_emp_name",
+   "fieldtype": "Data",
+   "label": "During his or her leave Emp Name"
+  },
+  {
+   "fieldname": "will_replace_until_he_or_she_resume_on",
+   "fieldtype": "Data",
+   "label": "Will replace until he or she resume on"
+  },
+  {
+   "fieldname": "division_chief_sign",
+   "fieldtype": "Data",
+   "label": "Division Chief Sign "
+  },
+  {
+   "fieldname": "date_of_last_annual_leave",
+   "fieldtype": "Data",
+   "label": "Date of last annual leave"
+  },
+  {
+   "fieldname": "annual_leave",
+   "fieldtype": "Data",
+   "label": "Annual Leave "
+  },
+  {
+   "fieldname": "his_or_her_leave_start",
+   "fieldtype": "Data",
+   "label": "his or her Leave start "
+  },
+  {
+   "fieldname": "emergency",
+   "fieldtype": "HTML",
+   "label": "Emergency ",
+   "options": "Emergency "
+  },
+  {
+   "fieldname": "start_1",
+   "fieldtype": "Data",
+   "label": "Start"
+  },
+  {
+   "fieldname": "end_2",
+   "fieldtype": "Data",
+   "label": "End"
+  },
+  {
+   "fieldname": "unpaid",
+   "fieldtype": "HTML",
+   "label": "Unpaid",
+   "options": "Unpaid"
+  },
+  {
+   "fieldname": "start_2",
+   "fieldtype": "Data",
+   "label": "Start"
+  },
+  {
+   "fieldname": "end_3",
+   "fieldtype": "Data",
+   "label": "End"
+  },
+  {
+   "fieldname": "study",
+   "fieldtype": "HTML",
+   "label": "Study",
+   "options": "Study"
+  },
+  {
+   "fieldname": "start_3",
+   "fieldtype": "Data",
+   "label": "start"
+  },
+  {
+   "fieldname": "end_4",
+   "fieldtype": "Data",
+   "label": "End"
+  },
+  {
+   "fieldname": "maternity",
+   "fieldtype": "HTML",
+   "label": "Maternity",
+   "options": "Maternity"
+  },
+  {
+   "fieldname": "start_4",
+   "fieldtype": "Data",
+   "label": "Start"
+  },
+  {
+   "fieldname": "end_5",
+   "fieldtype": "Data",
+   "label": "End"
+  },
+  {
+   "fieldname": "human_resources_manager_date",
+   "fieldtype": "Data",
+   "label": "Human Resources Manager Date"
+  },
+  {
+   "fieldname": "ceo_approval",
+   "fieldtype": "Data",
+   "label": "CEO Approval"
+  },
+  {
+   "fieldname": "column_break_cszng",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_m151o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gocej",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_i3sfa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_obdvi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tpdck",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_limnw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xqjns",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nqgrq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pyw19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "request_for_leave",
+   "fieldtype": "HTML",
+   "label": "Request for Leave ",
+   "options": "Request for Leave "
+  },
+  {
+   "fieldname": "section_break_edh9n",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_al7ju",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "annual",
+   "fieldtype": "Check",
+   "label": "Annual"
+  },
+  {
+   "fieldname": "column_break_qiz3b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "emergency_2",
+   "fieldtype": "Check",
+   "label": "Emergency"
+  },
+  {
+   "fieldname": "column_break_yqzme",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "unpaid_2",
+   "fieldtype": "Check",
+   "label": "Unpaid"
+  },
+  {
+   "fieldname": "column_break_pa25f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "study_2",
+   "fieldtype": "Check",
+   "label": "Study"
+  },
+  {
+   "fieldname": "column_break_jfnpj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "maternity_2",
+   "fieldtype": "Check",
+   "label": "Maternity"
+  },
+  {
+   "fieldname": "section_break_gvyzx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_frxiq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ncrsp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "section_break_ec01u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_gqbec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rc4da",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_i2rcb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "human_resources_remarks",
+   "fieldtype": "HTML",
+   "label": "Human Resources Remarks ",
+   "options": "Human Resources Remarks "
+  },
+  {
+   "fieldname": "section_break_qyuar",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8ffpk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gdedt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8ys7e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_shwug",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hjwks",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_o05ux",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_2o6rs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ggsev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wbanb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_bzotf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hy3my",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_38fdh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_hq3cb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_isgtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_olw61",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vfsph",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pdlxc",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-26 13:48:06.405869",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Leave Request Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

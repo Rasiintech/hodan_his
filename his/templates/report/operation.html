@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOSPITAL  DAILY REPORT</title>
+
+    <!-- tailwind cdn link
+    <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    td {
+      text-wrap: nowrap;
+    }
+    .sec_one table,
+    .sec_one th,
+    .sec_one td {
+      border: 1px solid black;
+    }
+
+    .sec_two table,
+    .sec_two td,
+    .sec_two th {
+      border: 1px solid black;
+    }
+
+    .mx {
+      width: 100%;
+      /* max-width: 1330px; */
+      /* margin-inline: auto; */
+    }
+
+    .myheader {
+      /* w-full max-w-[1330px] mx-auto flex items-center justify-between mt-4 */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+
+    .myheader > img {
+      /* w-20 h-20 object-contain */
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .headerTop {
+      /* flex flex-col items-center uppercase font-bold */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .headerDate {
+      /* font-bold self-end */
+      font-weight: bold;
+      align-self: self-end;
+    }
+
+    .sectionOne {
+      /* flex items-center gap-3 */
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sectionOne_item {
+      /* flex-1 */
+      flex: 1;
+    }
+
+    .sectionOne_item_mt {
+      /* sectionOne_item_mt */
+      margin-top: 28px;
+    }
+
+    .sectionOne_item_child {
+      /* flex flex-col */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sectionOne_item_child_title {
+      /* uppercase border border-black w-full text-center font-bold mb-1 mt-2 bg-red-100 */
+      text-transform: uppercase;
+      border: 1px solid black;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 4px;
+      margin-top: 8px;
+      background-color: rgb(245, 210, 210);
+    }
+
+    .sectionOne_item_table {
+      /* w-full border */
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .sectionTwo {
+      /* py-4 px-3 border-l-2 border-r-2 border-t-2 border-b-2 border-black mt-4 */
+      padding-top: 16px;
+      padding-bottom: 16px;
+      /* padding-left: 12px; */
+      /* padding-right: 12px; */
+      /* border: 2px solid black; */
+      margin-top: 16px;
+    }
+
+    .sectionTwo_title {
+      /* flex items-center */
+      display: flex;
+      align-items: center;
+    }
+
+    .sectionTwo_subTitle {
+      /* border border-black flex-[0.6] */
+      border: 1px solid black;
+      flex: 0.6;
+    }
+
+    .sectionTwo_item {
+      /* flex flex-col  */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sectionTwo_tableTitle {
+      /* uppercase border-t border-l border-r border-black w-full text-center font-bold mt-2 bg-red-100 */
+      text-transform: uppercase;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 8px;
+      background-color: rgb(245, 210, 210);
+    }
+
+    .sectionThree {
+      margin-top: 16px;
+    }
+
+    .sectionFour {
+      margin-top: 16px;
+    }
+
+    .sectionFive {
+      margin-top: 16px;
+    }
+
+    .sectionSix {
+      display: flex;
+      margin-top: 16px;
+    }
+
+    .sectionSix_footer {
+      /* flex flex-col items-center self-end pl-3 font-bold */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: self-end;
+      padding-left: 12px;
+      font-weight: bold;
+    }
+  </style>
+
+  <body>
+    <header class="mx myheader">
+      <img src="/files/logo hodan.png" />
+
+      <div class="headerTop">
+        <h1>Hodan</h1>
+        <h2>HOSPITAL</h2>
+        <span>DAILY REPORT- OPERATION</span>
+      </div>
+
+      <span class="headerDate">From Date: {{frappe.format(from_date, 'Date' )}} - To Date:{{frappe.format(to_date, 'Date' )}}</span>
+      </header>
+
+    <section class="mx sectionOne">
+      <div class="sectionOne_item sec_one">
+        <span style="text-transform: uppercase; text-decoration: underline"
+          >Summary</span
+        >
+        <br />
+        <div class="sectionOne_item_child">
+          <span class="sectionOne_item_child_title">REVENUE SUMMARY</span>
+          <table class="sectionOne_item_table">
+            <tbody class="">
+              <tr>
+                <td>Total Revenue</td>
+                <td>{{frappe.format(profit[0].value , 'Currency')}}</td>
+              </tr>
+              <tr>
+                <td>Total Expense</td>
+                <td>{{frappe.format(profit[2].value , 'Currency')}}</td>
+              </tr>
+              <tr>
+                <td>Gross Profit</td>
+                <td>{{frappe.format(profit[4].value , 'Currency')}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="sectionOne_item sec_one sectionOne_item_mt">
+        <div class="sectionOne_item_child">
+          <span class="sectionOne_item_child_title">FINANCE SUMMARY</span>
+          <table class="sectionOne_item_table">
+            <tbody class="">
+              <tbody class="">
+                <tr>
+                  <td>Cash In Hand</td>
+                  <td>${{cash_in_hand[0].balance if cash_in_hand else 0  }}</td>
+                </tr>
+                 <tr>
+                  <td>Cash In Bank</td>
+                  <td>${{ cash_in_bank[0].balance if cash_in_bank else 0 }}</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>${{( cash_in_hand[0].balance if cash_in_hand else 0)  + ( cash_in_bank[0].balance if cash_in_bank else 0) }}</td>
+                </tr>
+               <!--  <tr>
+                  <td>Total Receivable</td>
+                  <td>{{frappe.format(account_tran[2].balance , 'Currency')}}</td>
+                </tr>
+                <tr>
+                  <td>Total Payable</td>
+                  <td>{{frappe.format(account_tran[3].balance , 'Currency')}}</td>
+                </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sectionOne_item sec_one sectionOne_item_mt">
+        <div class="sectionOne_item_child">
+          <span class="sectionOne_item_child_title">PATIENTS SERVED</span>
+          <table class="sectionOne_item_table">
+            <tbody class="">
+              <tr>
+                <td>OPD/ER</td>
+                <!-- <td>{{served_dep[0].OPD or 0}}</td> -->
+                <td>{{ total_ques[0]['number'] }}</td>
+              </tr>
+              <tr>
+                <td>IPD</td>
+                <td>{{ total_admitted_list[0]['number'] }}</td>
+              </tr>
+              <tr>
+                <td>WP</td>
+                <td>{{served_dep[0].WP or 0}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx sectionTwo">
+      <div class="sectionTwo_title">
+        <span class="sectionTwo_subTitle">OPD/WP/ER: REVENUE BY DOCTOR/GROUP</span>
+        <span style="flex: 1"></span>
+      </div>
+
+      <div style="flex: 1">
+        <div class="sectionTwo_item sec_two">
+          <!-- <span class="sectionTwo_tableTitle">AMOUNT IN KsH</span> -->
+          <table style="width: 100%">
+            <thead style="width: 100%">
+              <tr style="width: 100%; background-color: rgb(245, 210, 210)">
+                <th rowspan="3" style="font-size: 14px">DOCTOR</th>
+                {% for th in doctor_sales[1] %}
+           
+                <th colspan="2">{{th}}</th>
+                <!-- <th colspan="2">LABROTARY</th>
+                <th colspan="2">IMAGING</th>
+                <th colspan="2">PROCEDURE</th>
+                <th colspan="2">DENTAL</th>
+                <th colspan="2">PHARMACY</th>
+                <th colspan="2">OTHERS</th>
+                <th colspan="2" rowspan="3">TotaRevenue</th> -->
+                {% endfor %}
+                <!-- <th colspan="2" style="font-size: 14px" rowspan="3">
+                  TotaRevenue
+                </th> -->
+              </tr>
+              <tr style="width: 100%; background-color: rgb(224, 224, 255)">
+                {% for th in doctor_sales[1] %}
+                <th>REVENUE</th>
+                <th>No</th>
+                {% endfor %}
+                <!-- <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th> -->
+              </tr>
+              </tr>
+            </thead>
+            <tbody class="">
+              {% for dic in doctor_sales[0] %}
+              {% for key , value in dic.items() %}
+              <tr class="">
+             
+                <td style="text-wrap: nowrap;">{{key}}</td>
+               
+                {% set keys = [] %}
+                {% set vals = [] %}
+                {% set vals_dic = {} %}
+                {% for v in value %}
+             
+                  {% set key = v.keys() | list %}
+                  {% set keys = keys.append(key[0]) %}
+            
+                  {% set _ = vals_dic.update({key[0]: v[key[0]][0]}) %}
+
+                {% endfor %}
+                
+         
+                {% for th in doctor_sales[1] %}
+              
+               
+                {% if th in keys %}
+                
+                <td style="text-wrap: nowrap;">{{frappe.format(vals_dic[th][1] , 'Currency')}}</td>
+                <td>{{vals_dic[th][0]}}</td>
+                {% else %} 
+             
+                <td>-</td>
+                <td>-</td>
+                {% endif %}
+                
+            
+          
+                {% endfor %}
+                <!-- <td>-</td> -->
+         
+              </tr>
+              {% endfor %}
+              {% endfor %}
+              <tr>
+                <td>Total</td>
+                {% for to in doctor_sales[3]%}
+            
+                <td>{{frappe.format(doctor_sales[3][to], 'Currency')}}</td>
+                <td>-</td>
+                {% endfor %}
+                <td style="text-wrap: nowrap;">{{frappe.format(doctor_sales[2][1] , 'Currency')}}</td>
+                <td>-</td>
+             
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx sectionThree">
+      <div class="sectionTwo_title">
+        <span class="sectionTwo_subTitle">IPD: REVENUE BY DOCTOR/GROUP</span>
+        <span style="flex: 1"></span>
+      </div>
+
+      <div style="flex: 1">
+        <div class="sectionTwo_item sec_two">
+          <!-- <span class="sectionTwo_tableTitle">AMOUNT IN KsH</span> -->
+          <table style="width: 100%">
+            <thead style="width: 100%">
+              <tr style="width: 100%; background-color: rgb(245, 210, 210)">
+                <th rowspan="3" style="font-size: 14px">DOCTOR</th>
+                {% for th in doctor_sales_ipd[1] %}
+           
+                <th colspan="2">{{th}}</th>
+                <!-- <th colspan="2">LABROTARY</th>
+                <th colspan="2">IMAGING</th>
+                <th colspan="2">PROCEDURE</th>
+                <th colspan="2">DENTAL</th>
+                <th colspan="2">PHARMACY</th>
+                <th colspan="2">OTHERS</th>
+                <th colspan="2" rowspan="3">TotaRevenue</th> -->
+                {% endfor %}
+                <!-- <th colspan="2" style="font-size: 14px" rowspan="3">
+                  Total Revenue
+                </th> -->
+              </tr>
+              <tr style="width: 100%; background-color: rgb(224, 224, 255)">
+                {% for th in doctor_sales_ipd[1] %}
+                <th>REVENUE</th>
+                <th>No</th>
+                {% endfor %}
+                <!-- <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th>
+                <th>REVENUE</th>
+                <th>No</th> -->
+              </tr>
+              </tr>
+            </thead>
+            <tbody class="">
+              {% for dic in doctor_sales_ipd[0] %}
+              {% for key , value in dic.items() %}
+              <tr class="">
+             
+                <td style="text-wrap: nowrap;">{{key}}</td>
+               
+                {% set keys = [] %}
+                {% set vals = [] %}
+                {% set vals_dic = {} %}
+                {% for v in value %}
+             
+                  {% set key = v.keys() | list %}
+                  {% set keys = keys.append(key[0]) %}
+            
+                  {% set _ = vals_dic.update({key[0]: v[key[0]][0]}) %}
+
+                {% endfor %}
+                
+         
+                {% for th in doctor_sales_ipd[1] %}
+              
+               
+                {% if th in keys %}
+                
+                <td style="text-wrap: nowrap;">{{frappe.format(vals_dic[th][1] , 'Currency')}}</td>
+                <td>{{vals_dic[th][0]}}</td>
+                {% else %} 
+             
+                <td>-</td>
+                <td>-</td>
+                {% endif %}
+                
+            
+          
+                {% endfor %}
+                <!-- <td>-</td> -->
+         
+              </tr>
+              {% endfor %}
+              {% endfor %}
+              <tr>
+                <td>Total</td>
+                {% for to in doctor_sales_ipd[3]%}
+            
+                <td>{{frappe.format(doctor_sales_ipd[3][to], 'Currency')}}</td>
+                <td>-</td>
+                {% endfor %}
+                <td>{{frappe.format(doctor_sales_ipd[2][1] , 'Currency')}}</td>
+                <td>-</td>
+             
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+   <!--  <section class="mx sectionFour">
+      <div class="sectionTwo_title">
+        <span class="sectionTwo_subTitle">Patient Visit By Doctor</span>
+        <span style="flex: 1"></span>
+      </div>
+
+      <div style="flex: 1">
+        <div class="sectionTwo_item sec_two">
+       
+          <table style="width: 100%">
+            <thead style="width: 100%">
+              <tr style="width: 100%; background-color: rgb(245, 210, 210)">
+                <th rowspan="3" style="font-size: 14px">DOCTOR</th>
+                
+
+              </tr>
+              <tr style="width: 100%; background-color: rgb(224, 224, 255)">
+                
+                <th>New</th>
+                <th>Followup</th>
+                <th>Refer</th>
+                <th>Total</th>
+                <th>Closed</th>
+                <th>Open</th>
+                
+
+              </tr>
+
+            </thead>
+            <tbody class="">
+              {% for data in patient_by_doctor %}
+              <td style="text-wrap: nowrap;">{{data["practitioner"]}}</td>
+              <td>{{data["new"]|int}}</td>
+              <td>{{data["followup"]|int}}</td>
+              <td>{{data["refer"]|int}}</td>
+              <td>{{data["total"]|int}}</td>
+              <td>{{data["closed"]|int}}</td>
+              <td>{{data["open"]|int}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="mx sectionFive">
+      <div style="flex: 1">
+        <div class="sectionTwo_item sec_two">
+          <table style="width: 100%; text-align: center">
+            <thead style="width: 100%">
+              <tr style="width: 100%; background-color: rgb(245, 210, 210)">
+                <th rowspan="3" style="opacity: 0; border: none"></th>
+                <th>BEG BALANCE</th>
+                <th>INVOICED</th>
+                <th>RECEIVED</th>
+                <th>BALANCE</th>
+              </tr>
+            </thead>
+            <tbody class="">
+              <tr class="">
+                <td class=""><strong>RECEIVABLES</strong></td>
+                <td>{{frappe.format(account_tran[2].opening , 'Currency')}}</td>
+                <td>{{frappe.format(account_tran[2].total_debit , 'Currency')}}</td>
+                <td>{{frappe.format(account_tran[2].total_credit , 'Currency')}}</td>
+                <td>{{frappe.format(account_tran[2].balance , 'Currency')}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx sectionSix" style="padding-bottom: 40px;">
+      <div style="flex: 1">
+        <div class="sectionTwo_item sec_two">
+          <table style="width: 100%; text-align: center">
+            <thead style="width: 100%">
+              <tr style="width: 100%; background-color: rgb(245, 210, 210)">
+                <th rowspan="3" style="opacity: 0; border: none"></th>
+                <th>BEG BALANCE</th>
+                <th>INVOICED</th>
+                <th>PAYMENT</th>
+                <th>BALANCE</th>
+              </tr>
+            </thead>
+            <tbody class="">
+              <tr class="">
+                <td class=""><strong>PAYABLES</strong></td>
+                <td>{{frappe.format(account_tran[3].opening , 'Currency')}}</td>
+                <td>{{frappe.format(account_tran[3].total_debit , 'Currency')}}</td>
+                <td>{{frappe.format(account_tran[3].total_credit , 'Currency')}}</td>
+                <td>{{frappe.format(account_tran[3].balance , 'Currency')}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sectionSix_footer" >
+        <span>PREPARED BY:</span>
+        <span>RASIIN TECHNOLOGY</span>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,484 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "M-.##### ",
+ "creation": "2023-05-13 16:36:25.429723",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "age",
+  "date",
+  "time",
+  "column_break_tbea1",
+  "practitioner",
+  "department",
+  "section_break_fkyfq",
+  "g",
+  "column_break_0h988",
+  "p",
+  "column_break_abkdi",
+  "abortion",
+  "column_break_xzyji",
+  "ano",
+  "column_break_ix5wy",
+  "lmp",
+  "section_break_86l8x",
+  "cheif_complaint",
+  "past_medical_obstric_history",
+  "section_break_7kkh4",
+  "section_break_rlyf8",
+  "previos_trasfusion",
+  "yes",
+  "no",
+  "column_break_tzjzz",
+  "csection",
+  "y2",
+  "n2",
+  "column_break_ugasq",
+  "previos_administions",
+  "y3",
+  "n3",
+  "column_break_nmtnb",
+  "pph",
+  "yes4",
+  "no4",
+  "column_break_quhjs",
+  "aph",
+  "yes5",
+  "no5",
+  "section_break_jciaf",
+  "if_yes_reason",
+  "drug_allergy",
+  "if_yes_which",
+  "history_of_medication",
+  "column_break_qw2hs",
+  "vital_presentation",
+  "plasanta_presentation",
+  "exaministations_tab",
+  "examination",
+  "vital_signs_tab",
+  "section_break_ciiur",
+  "vital_sign",
+  "amended_from",
+  "lab_investigation_tab",
+  "hb",
+  "b_glucose",
+  "hiv",
+  "column_break_1ljr4",
+  "hbv",
+  "hcv",
+  "b_group"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_tbea1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "section_break_fkyfq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "g",
+   "fieldtype": "Data",
+   "label": "G"
+  },
+  {
+   "fieldname": "column_break_0h988",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Data",
+   "label": "P"
+  },
+  {
+   "fieldname": "column_break_abkdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "abortion",
+   "fieldtype": "Data",
+   "label": "Abortion"
+  },
+  {
+   "fieldname": "column_break_xzyji",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ano",
+   "fieldtype": "Data",
+   "label": "A/No"
+  },
+  {
+   "fieldname": "section_break_86l8x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cheif_complaint",
+   "fieldtype": "Text",
+   "label": "Cheif Complaint"
+  },
+  {
+   "fieldname": "past_medical_obstric_history",
+   "fieldtype": "HTML",
+   "label": "Past medical Obstric History",
+   "options": "<h2><b>Past medical Obstric History</b></h2>"
+  },
+  {
+   "fieldname": "lmp",
+   "fieldtype": "Data",
+   "label": "GA(USG)"
+  },
+  {
+   "fieldname": "column_break_ix5wy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7kkh4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department"
+  },
+  {
+   "fieldname": "section_break_rlyf8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "previos_trasfusion",
+   "fieldtype": "HTML",
+   "label": "Previos Trasfusion",
+   "options": "<h2><b>Previos Trasfusion</b></h2> <br>"
+  },
+  {
+   "fieldname": "csection",
+   "fieldtype": "HTML",
+   "label": "C/Section",
+   "options": "<h2><b>C/Section</b></h2><br>"
+  },
+  {
+   "fieldname": "previos_administions",
+   "fieldtype": "HTML",
+   "label": "Previos Administions",
+   "options": "<h2><b>Previos Administions</b></h2><br>"
+  },
+  {
+   "fieldname": "if_yes_reason",
+   "fieldtype": "Data",
+   "label": "If Yes Reason"
+  },
+  {
+   "fieldname": "drug_allergy",
+   "fieldtype": "Data",
+   "label": "Drug Allergy"
+  },
+  {
+   "fieldname": "if_yes_which",
+   "fieldtype": "Data",
+   "label": "If Yes Which"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "default": "0",
+   "fieldname": "y2",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "n2",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "default": "0",
+   "fieldname": "y3",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "n3",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_tzjzz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ugasq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jciaf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qw2hs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "examination",
+   "fieldtype": "Table",
+   "label": "EXAMINATION ",
+   "options": "EXAMINATION Table"
+  },
+  {
+   "fieldname": "exaministations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Exaministations"
+  },
+  {
+   "fieldname": "vital_signs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Vital Signs"
+  },
+  {
+   "fieldname": "section_break_ciiur",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vital_sign",
+   "fieldtype": "Table",
+   "label": "VITAL SIGN",
+   "options": "VITAL SIGN"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Meternity Card",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "history_of_medication",
+   "fieldtype": "Data",
+   "label": "Medical Histroy"
+  },
+  {
+   "fieldname": "pph",
+   "fieldtype": "HTML",
+   "label": "Pph",
+   "options": "<h2><b>Pph</b></h2><br>"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes4",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_nmtnb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no4",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "aph",
+   "fieldtype": "HTML",
+   "label": "Aph",
+   "options": "<h2><b>Aph</b></h2><br>"
+  },
+  {
+   "fieldname": "column_break_quhjs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no5",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes5",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "lab_investigation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Lab Investigation"
+  },
+  {
+   "fieldname": "hb",
+   "fieldtype": "Data",
+   "label": "HB"
+  },
+  {
+   "fieldname": "b_glucose",
+   "fieldtype": "Data",
+   "label": "B Glucose"
+  },
+  {
+   "fieldname": "hiv",
+   "fieldtype": "Data",
+   "label": "HIV"
+  },
+  {
+   "fieldname": "column_break_1ljr4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hbv",
+   "fieldtype": "Data",
+   "label": "HBV"
+  },
+  {
+   "fieldname": "hcv",
+   "fieldtype": "Data",
+   "label": "HCV"
+  },
+  {
+   "fieldname": "b_group",
+   "fieldtype": "Data",
+   "label": "B Group"
+  },
+  {
+   "fieldname": "plasanta_presentation",
+   "fieldtype": "Data",
+   "label": "Placenta Position"
+  },
+  {
+   "fieldname": "vital_presentation",
+   "fieldtype": "Data",
+   "label": "Fetal Presentation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-24 14:17:54.733436",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Meternity Card",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maternity",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "OBS",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

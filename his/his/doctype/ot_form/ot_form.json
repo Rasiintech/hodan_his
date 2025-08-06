@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OT-.####",
+ "creation": "2023-06-20 10:37:15.348665",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_ip7fw",
+  "date",
+  "sex",
+  "drugs_used_anaesthesis_drugs_and_iv_fluids_section",
+  "drug",
+  "supplies_used_sutures_gloves_cathelers_tubes_and_etc_section",
+  "other_service"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_ip7fw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "drugs_used_anaesthesis_drugs_and_iv_fluids_section",
+   "fieldtype": "Section Break",
+   "label": "Drugs Used (AnaesThesis Drugs and iv Fluids)"
+  },
+  {
+   "fieldname": "drug",
+   "fieldtype": "Table",
+   "label": "Drug",
+   "options": "Ot prescription"
+  },
+  {
+   "fieldname": "supplies_used_sutures_gloves_cathelers_tubes_and_etc_section",
+   "fieldtype": "Section Break",
+   "label": "Supplies Used (Sutures, Gloves, cathelers, tubes and etc)"
+  },
+  {
+   "fieldname": "other_service",
+   "fieldtype": "Table",
+   "label": "Other Service",
+   "options": "Ot prescription"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-20 11:09:39.786230",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OT Form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

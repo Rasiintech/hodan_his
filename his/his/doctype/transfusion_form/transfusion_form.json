@@ -1,0 +1,357 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-20 19:53:47.378371",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transfusion_order_section",
+  "patient",
+  "column_break_wzpui",
+  "patient_name",
+  "column_break_gh6ga",
+  "ward",
+  "section_break_ytkij",
+  "date",
+  "column_break_2gukf",
+  "ordering_doctor",
+  "section_break_nqv5q",
+  "requested_blood_product",
+  "quantity",
+  "req2",
+  "q2",
+  "inv_sec",
+  "inv",
+  "withdrowing_blood_products_from_the_laboratory_section",
+  "qofka_loo_dhiibay",
+  "qofka_u_dhiibay",
+  "column_break_v6uah",
+  "with_date",
+  "column_break_k7pha",
+  "time",
+  "section_break_yaceo",
+  "blood_product",
+  "column_break_dbm25",
+  "b_q_1",
+  "column_break_p354x",
+  "bag_nr",
+  "section_break_fnjzn",
+  "bl_pr",
+  "column_break_oeihp",
+  "bl_qt",
+  "column_break_ou6s5",
+  "bg_nr",
+  "amended_from",
+  "giving_blood_product_section",
+  "patient_or_family_member_consent",
+  "section_break_obtrd",
+  "m_name",
+  "column_break_bqfa5",
+  "signature",
+  "section_break_vpagf",
+  "cross_matching",
+  "column_break_0bv3c",
+  "operator_1",
+  "column_break_dk5f9",
+  "operator_2",
+  "column_break_u2cpj",
+  "remarks",
+  "section_break_bqhpj",
+  "confrim"
+ ],
+ "fields": [
+  {
+   "fieldname": "transfusion_order_section",
+   "fieldtype": "Section Break",
+   "label": "TRANSFUSION ORDER"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "P-ID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_wzpui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_gh6ga",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Data",
+   "label": "Ward"
+  },
+  {
+   "fieldname": "section_break_ytkij",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_2gukf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ordering_doctor",
+   "fieldtype": "Link",
+   "label": "Ordering Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "section_break_nqv5q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requested_blood_product",
+   "fieldtype": "Data",
+   "label": "Requested blood product"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "req2",
+   "fieldtype": "Data",
+   "label": "Requested blood product"
+  },
+  {
+   "fieldname": "q2",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "inv_sec",
+   "fieldtype": "Section Break",
+   "label": "INVESTIGATIONS (2 persons should perform these examinations and compile all parts of this sector) "
+  },
+  {
+   "fieldname": "inv",
+   "fieldtype": "HTML",
+   "options": "<div id=\"inv\"></div>"
+  },
+  {
+   "fieldname": "withdrowing_blood_products_from_the_laboratory_section",
+   "fieldtype": "Section Break",
+   "label": "WITHDROWING BLOOD PRODUCTS FROM THE LABORATORY"
+  },
+  {
+   "fieldname": "qofka_loo_dhiibay",
+   "fieldtype": "Link",
+   "label": "Qofka loo dhiibay",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "qofka_u_dhiibay",
+   "fieldtype": "Link",
+   "label": "Qofka u dhiibay",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_v6uah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "with_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_k7pha",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "section_break_yaceo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "blood_product",
+   "fieldtype": "Data",
+   "label": "Blood Product"
+  },
+  {
+   "fieldname": "column_break_dbm25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "b_q_1",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "column_break_p354x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bag_nr",
+   "fieldtype": "Data",
+   "label": "Bag Nr"
+  },
+  {
+   "fieldname": "section_break_fnjzn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bl_pr",
+   "fieldtype": "Data",
+   "label": "Blood Product"
+  },
+  {
+   "fieldname": "column_break_oeihp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bl_qt",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "column_break_ou6s5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bg_nr",
+   "fieldtype": "Data",
+   "label": "Bag Nr"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "TRANSFUSION FORM",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "giving_blood_product_section",
+   "fieldtype": "Section Break",
+   "label": "GIVING BLOOD PRODUCT"
+  },
+  {
+   "fieldname": "patient_or_family_member_consent",
+   "fieldtype": "Heading",
+   "label": "Patient or family member consent"
+  },
+  {
+   "fieldname": "m_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_bqfa5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "HTML",
+   "label": "Signature",
+   "options": "Signature :__________________"
+  },
+  {
+   "fieldname": "section_break_obtrd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_vpagf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cross_matching",
+   "fieldtype": "Heading",
+   "label": "Cross matching"
+  },
+  {
+   "fieldname": "column_break_0bv3c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operator_1",
+   "fieldtype": "Data",
+   "label": "Operator 1"
+  },
+  {
+   "fieldname": "column_break_dk5f9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operator_2",
+   "fieldtype": "Data",
+   "label": "Operator 2"
+  },
+  {
+   "fieldname": "column_break_u2cpj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "confrim",
+   "fieldtype": "Table",
+   "options": "Transfusion confirming"
+  },
+  {
+   "fieldname": "section_break_bqhpj",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-21 10:33:10.788668",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "TRANSFUSION FORM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

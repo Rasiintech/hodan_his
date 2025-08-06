@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PROC-.#####",
+ "creation": "2023-04-18 13:07:57.177350",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "procedure",
+  "type_of_procedure",
+  "column_break_vs8qr",
+  "date",
+  "practitioner",
+  "practitioner_name",
+  "department",
+  "section_break_k5tby",
+  "ordered_by",
+  "column_break_saawk",
+  "carried_out_by",
+  "section_break_1jzyt",
+  "supervisor",
+  "comment",
+  "signature",
+  "assistant",
+  "reff_invoice",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Link",
+   "label": "Procedure",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "column_break_vs8qr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "practitioner.first_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "label": "Practitioner Name"
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department"
+  },
+  {
+   "fieldname": "type_of_procedure",
+   "fieldtype": "Data",
+   "label": "Type of procedure"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_k5tby",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ordered_by",
+   "fieldtype": "Data",
+   "label": "Ordered by"
+  },
+  {
+   "fieldname": "column_break_saawk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "carried_out_by",
+   "fieldtype": "Data",
+   "label": "Carried out by"
+  },
+  {
+   "fieldname": "section_break_1jzyt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "default": "-----------------------------------------------------------",
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature ",
+   "read_only": 1
+  },
+  {
+   "default": "-----------------------------------------------------------",
+   "fieldname": "assistant",
+   "fieldtype": "Data",
+   "label": "assistant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Procedures",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "reff_invoice",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "reff_invoice",
+   "options": "Sales Invoice",
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-18 14:02:41.136442",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Procedures",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

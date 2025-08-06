@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BR-.#####",
+ "creation": "2023-05-13 14:59:13.666520",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_exjol",
+  "sex",
+  "age",
+  "section_break_eycb1",
+  "date",
+  "spa",
+  "to_be_used",
+  "immediately",
+  "today",
+  "tomorrow",
+  "column_break_qgrbq",
+  "units",
+  "br",
+  "section_break_dwjkb",
+  "blood_group",
+  "column_break_bhep9",
+  "section_break_r8ewi",
+  "doctor_name",
+  "column_break_1go4m",
+  "signature",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sex",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_exjol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_eycb1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "spa",
+   "fieldtype": "HTML",
+   "options": "<br>"
+  },
+  {
+   "fieldname": "column_break_qgrbq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Data",
+   "label": "Unit(s)"
+  },
+  {
+   "fieldname": "to_be_used",
+   "fieldtype": "HTML",
+   "label": "To Be Used",
+   "options": "<br> <h2><b>To Be Used</b></h2>"
+  },
+  {
+   "default": "0",
+   "fieldname": "immediately",
+   "fieldtype": "Check",
+   "label": "Immediately"
+  },
+  {
+   "default": "0",
+   "fieldname": "today",
+   "fieldtype": "Check",
+   "label": "Today"
+  },
+  {
+   "default": "0",
+   "fieldname": "tomorrow",
+   "fieldtype": "Check",
+   "label": "Tomorrow"
+  },
+  {
+   "fieldname": "br",
+   "fieldtype": "HTML",
+   "options": "<br><br><br><br><br><br>"
+  },
+  {
+   "fieldname": "section_break_dwjkb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bhep9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_r8ewi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Link",
+   "label": "Doctor Name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_1go4m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "------------------------------",
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood Group"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Blood Request form",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-28 03:33:26.020645",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Blood Request form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,300 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ORSUR-.#####",
+ "creation": "2025-07-16 12:45:52.585685",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gender",
+  "age",
+  "date",
+  "section_break_zbiyl",
+  "or_01",
+  "or_why_01",
+  "section_break_eqtnb",
+  "or_02",
+  "or_why_02",
+  "section_break_667yr",
+  "or_03",
+  "or_why_03",
+  "section_break_8wx5q",
+  "or_04",
+  "or_why_04",
+  "section_break_pzder",
+  "or_05",
+  "or_why_05",
+  "section_break_khr6k",
+  "or_06",
+  "or_why_06",
+  "section_break_igg7e",
+  "or_08",
+  "or_why_08",
+  "section_break_ut5km",
+  "or_09",
+  "or_why_09",
+  "section_break_oqkh6",
+  "or_010",
+  "or_why_010",
+  "section_break_iskvm",
+  "or_011",
+  "or_why_011",
+  "section_break_ql7h7",
+  "or_013",
+  "or_why_013",
+  "section_break_pgsnj",
+  "or_012",
+  "or_why_012"
+ ],
+ "fields": [
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender ",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date "
+  },
+  {
+   "fieldname": "section_break_zbiyl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_01",
+   "fieldtype": "Select",
+   "label": "1. How clearly did the surgical team explain the procedure to you beforehand?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_01",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_eqtnb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_02",
+   "fieldtype": "Select",
+   "label": "2. How well were your questions and concerns addressed before surgery?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_02",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_667yr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_03",
+   "fieldtype": "Select",
+   "label": "3. How would you rate the pre-op staff\u2019s courtesy and professionalism?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_03",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_8wx5q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_04",
+   "fieldtype": "Select",
+   "label": "4. How would you rate the cleanliness and comfort of the operating room?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_04",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_pzder",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_05",
+   "fieldtype": "Select",
+   "label": "5. How well did the staff help ease your anxiety before the procedure?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_05",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_khr6k",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_06",
+   "fieldtype": "Select",
+   "label": "6. How would you rate your sense of safety and comfort in the OR?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_06",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_igg7e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_08",
+   "fieldtype": "Select",
+   "label": "7. How confident did you feel in your surgeon's abilities?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_08",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_ut5km",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_09",
+   "fieldtype": "Select",
+   "label": "8. How well did the anesthesiologist explain their role and respond to concerns?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_09",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_oqkh6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_010",
+   "fieldtype": "Select",
+   "label": "9. How clearly were post-surgical instructions explained to you?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_010",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_iskvm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_011",
+   "fieldtype": "Select",
+   "label": "10. How responsive was the staff to your needs during initial recovery?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_011",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_ql7h7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_012",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "12. Overall, how satisfied are you with your surgical experience?",
+   "options": "\nPoor\nFair\nVery good\nN/A",
+   "reqd": 1
+  },
+  {
+   "fieldname": "or_why_012",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  },
+  {
+   "fieldname": "section_break_pgsnj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "or_013",
+   "fieldtype": "Select",
+   "label": "11. Would you feel comfortable returning to this facility for future procedures?",
+   "options": "\nPoor\nFair\nVery good\nN/A"
+  },
+  {
+   "fieldname": "or_why_013",
+   "fieldtype": "Small Text",
+   "label": "if Poor, please explain:"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-06 09:34:59.990497",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OR Survey",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

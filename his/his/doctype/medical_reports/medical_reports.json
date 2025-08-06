@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 10:39:29.994228",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "gender",
+  "age",
+  "column_break_cw9q9",
+  "date",
+  "admission",
+  "discharge",
+  "section_break_dqybr",
+  "medical_report",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "column_break_yrfol",
+  "j",
+  "k",
+  "l",
+  "m",
+  "chief_medical_officer"
+ ],
+ "fields": [
+  {
+   "fieldname": "medical_report",
+   "fieldtype": "Data",
+   "label": "MEDICAL REPORT"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender ",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "e",
+   "fieldtype": "Data",
+   "label": "Brief Medical History: "
+  },
+  {
+   "fieldname": "f",
+   "fieldtype": "Data",
+   "label": "Main Medical Examination & Clinical findings:"
+  },
+  {
+   "fieldname": "g",
+   "fieldtype": "Data",
+   "label": "Laboratory Findings:"
+  },
+  {
+   "fieldname": "h",
+   "fieldtype": "Data",
+   "label": "Radiological and Pathological Findings:"
+  },
+  {
+   "fieldname": "i",
+   "fieldtype": "Data",
+   "label": "Diagnosis:"
+  },
+  {
+   "fieldname": "j",
+   "fieldtype": "Data",
+   "label": "Medications and Management so far: "
+  },
+  {
+   "fieldname": "k",
+   "fieldtype": "Data",
+   "label": "Recommendation: "
+  },
+  {
+   "fieldname": "l",
+   "fieldtype": "Data",
+   "label": "Justification for Management Abroad: "
+  },
+  {
+   "fieldname": "m",
+   "fieldtype": "Data",
+   "label": "Physician Name and Signature (MRP)"
+  },
+  {
+   "fieldname": "chief_medical_officer",
+   "fieldtype": "Data",
+   "label": "Chief Medical Officer"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_cw9q9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dqybr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yrfol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admission",
+   "fieldtype": "Date",
+   "label": "Date of Admission:"
+  },
+  {
+   "fieldname": "discharge",
+   "fieldtype": "Date",
+   "label": "Date of Discharge : "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-14 09:19:51.079343",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "MEDICAL REPORTS",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

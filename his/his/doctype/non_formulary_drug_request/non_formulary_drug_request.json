@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 16:37:59.784594",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "a",
+  "b",
+  "d",
+  "e",
+  "f",
+  "drag_requested",
+  "generic_name",
+  "trade_name",
+  "dosage_form",
+  "strength",
+  "dose_prescribed",
+  "frequency",
+  "column_break_issil",
+  "approximate_duration_of_use",
+  "g",
+  "for_pharmacy_use_only",
+  "date_drug_ordered",
+  "vendor",
+  "expected_receiving_date",
+  "date_received",
+  "date_dispensed",
+  "by",
+  "or",
+  "alternative_suggestive_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "a",
+   "fieldtype": "Data",
+   "label": "1: Completion of this form does not constitute a request for addition of this drug to the formulary."
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "2: This form must accompany the copy of the phsician's  Order sent the Pharmcy Department"
+  },
+  {
+   "fieldname": "d",
+   "fieldtype": "Data",
+   "label": "MR#"
+  },
+  {
+   "fieldname": "e",
+   "fieldtype": "Data",
+   "label": "Ward/Clinic"
+  },
+  {
+   "fieldname": "f",
+   "fieldtype": "Data",
+   "label": "R/B#"
+  },
+  {
+   "fieldname": "drag_requested",
+   "fieldtype": "Data",
+   "label": "Drag Requested"
+  },
+  {
+   "fieldname": "generic_name",
+   "fieldtype": "Data",
+   "label": "Generic Name"
+  },
+  {
+   "fieldname": "trade_name",
+   "fieldtype": "Data",
+   "label": "Trade Name"
+  },
+  {
+   "fieldname": "dosage_form",
+   "fieldtype": "Data",
+   "label": "Dosage Form"
+  },
+  {
+   "fieldname": "strength",
+   "fieldtype": "Data",
+   "label": "Strength"
+  },
+  {
+   "fieldname": "dose_prescribed",
+   "fieldtype": "Data",
+   "label": "Dose Prescribed"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "approximate_duration_of_use",
+   "fieldtype": "Data",
+   "label": "Approximate Duration of Use"
+  },
+  {
+   "fieldname": "g",
+   "fieldtype": "Data",
+   "label": "Reasons for using this drug as apposed to other medications(s) alreday on tjhe formulary"
+  },
+  {
+   "fieldname": "for_pharmacy_use_only",
+   "fieldtype": "Data",
+   "label": "For pharmacy use only"
+  },
+  {
+   "fieldname": "date_drug_ordered",
+   "fieldtype": "Date",
+   "label": "Date Drug Ordered"
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Data",
+   "label": "Vendor"
+  },
+  {
+   "fieldname": "expected_receiving_date",
+   "fieldtype": "Date",
+   "label": "Expected Receiving date"
+  },
+  {
+   "fieldname": "date_received",
+   "fieldtype": "Date",
+   "label": "Date Received"
+  },
+  {
+   "fieldname": "date_dispensed",
+   "fieldtype": "Date",
+   "label": "Date dispensed"
+  },
+  {
+   "fieldname": "by",
+   "fieldtype": "Data",
+   "label": "By"
+  },
+  {
+   "fieldname": "or",
+   "fieldtype": "Data",
+   "label": "Or"
+  },
+  {
+   "fieldname": "alternative_suggestive_by",
+   "fieldtype": "Data",
+   "label": "Alternative suggestive by"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_issil",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 08:59:11.621592",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Non Formulary Drug Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

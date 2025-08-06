@@ -1,0 +1,410 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-28 09:57:51.876121",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "column_break_hpir1",
+  "patient_name",
+  "column_break_s2262",
+  "age",
+  "column_break_slk1o",
+  "sex",
+  "section_break_7ra3z",
+  "date_of_admission",
+  "column_break_qk1os",
+  "from",
+  "column_break_xpdpb",
+  "reason_for_admission",
+  "column_break_28dm8",
+  "diagnosis",
+  "section_break_u580r",
+  "procedure_performed",
+  "column_break_buwc1",
+  "significant_history_findings",
+  "column_break_66c2j",
+  "significant_physical_findings",
+  "section_break_vqkc2",
+  "cns",
+  "column_break_rqwz8",
+  "chest",
+  "column_break_jzmlh",
+  "hr",
+  "column_break_tfq6d",
+  "rr",
+  "column_break_kt6fn",
+  "rp_2",
+  "section_break_8ukpj",
+  "ecg_fl_normal_fl_abnormal",
+  "column_break_npwhx",
+  "norma",
+  "column_break_4ha31",
+  "abnormal",
+  "section_break_kug79",
+  "s_creatinine",
+  "column_break_07l1v",
+  "hgb",
+  "column_break_cfvjt",
+  "pt",
+  "na",
+  "others",
+  "section_break_unbba",
+  "medications_on_transfer",
+  "column_break_fzi4n",
+  "transfer_from",
+  "column_break_vweqq",
+  "reason_for_transfer",
+  "section_break_4ht8s",
+  "condition_on_transfer",
+  "column_break_0tljc",
+  "recommended_continuing_care_need",
+  "column_break_y4k2q",
+  "date_of_transfer",
+  "column_break_wginf",
+  "time_of_transfer",
+  "section_break_7mb7s",
+  "transfer_from_dr",
+  "column_break_g4y1m",
+  "doctor_signature",
+  "column_break_hgmkk",
+  "flinternal_flexternal",
+  "column_break_3zzxq",
+  "abdomen"
+ ],
+ "fields": [
+  {
+   "fieldname": "flinternal_flexternal",
+   "fieldtype": "Data",
+   "label": "flInternal flExternal"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Data",
+   "label": "Date of Admission"
+  },
+  {
+   "fieldname": "reason_for_admission",
+   "fieldtype": "Data",
+   "label": "Reason for Admission"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "procedure_performed",
+   "fieldtype": "Data",
+   "label": "Procedure Performed"
+  },
+  {
+   "fieldname": "significant_history_findings",
+   "fieldtype": "Data",
+   "label": "Significant history findings"
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "label": "PP"
+  },
+  {
+   "fieldname": "significant_physical_findings",
+   "fieldtype": "Data",
+   "label": "Significant Physical findings"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Data",
+   "label": "Abdomen"
+  },
+  {
+   "fieldname": "cns",
+   "fieldtype": "Data",
+   "label": "CNS"
+  },
+  {
+   "fieldname": "chest",
+   "fieldtype": "Data",
+   "label": "Chest"
+  },
+  {
+   "fieldname": "rp_2",
+   "fieldtype": "Data",
+   "label": "RR"
+  },
+  {
+   "fieldname": "ecg_fl_normal_fl_abnormal",
+   "fieldtype": "HTML",
+   "label": "ECG ",
+   "options": "ECG "
+  },
+  {
+   "fieldname": "hr",
+   "fieldtype": "Data",
+   "label": "HR"
+  },
+  {
+   "fieldname": "s_creatinine",
+   "fieldtype": "Data",
+   "label": "S Creatinine"
+  },
+  {
+   "fieldname": "na",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hgb",
+   "fieldtype": "Data",
+   "label": "Hgb"
+  },
+  {
+   "fieldname": "pt",
+   "fieldtype": "Data",
+   "label": "PT"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "medications_on_transfer",
+   "fieldtype": "Data",
+   "label": "Medications (on transfer)"
+  },
+  {
+   "fieldname": "transfer_from",
+   "fieldtype": "Data",
+   "label": "Transfer from"
+  },
+  {
+   "fieldname": "reason_for_transfer",
+   "fieldtype": "Data",
+   "label": "Reason for Transfer"
+  },
+  {
+   "fieldname": "condition_on_transfer",
+   "fieldtype": "Data",
+   "label": "Condition on transfer  "
+  },
+  {
+   "fieldname": "recommended_continuing_care_need",
+   "fieldtype": "Data",
+   "label": "Recommended Continuing Care Need"
+  },
+  {
+   "fieldname": "transfer_from_dr",
+   "fieldtype": "Data",
+   "label": "Transfer from Dr"
+  },
+  {
+   "fieldname": "date_of_transfer",
+   "fieldtype": "Data",
+   "label": "Date of Transfer"
+  },
+  {
+   "fieldname": "time_of_transfer",
+   "fieldtype": "Data",
+   "label": "Time of Transfer"
+  },
+  {
+   "fieldname": "doctor_signature",
+   "fieldtype": "Data",
+   "label": "Doctor Signature"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_hpir1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_s2262",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_slk1o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7ra3z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qk1os",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "column_break_xpdpb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_28dm8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_u580r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_buwc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_66c2j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vqkc2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rqwz8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jzmlh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tfq6d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8ukpj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kt6fn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_npwhx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "norma",
+   "fieldtype": "Check",
+   "label": "Norma"
+  },
+  {
+   "fieldname": "column_break_4ha31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "abnormal",
+   "fieldtype": "Check",
+   "label": "Abnormal"
+  },
+  {
+   "fieldname": "section_break_kug79",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_07l1v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cfvjt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_unbba",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fzi4n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vweqq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4ht8s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_0tljc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_y4k2q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wginf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7mb7s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_g4y1m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hgmkk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3zzxq",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-29 12:07:34.743404",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "TRANSFER SUMMARY",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

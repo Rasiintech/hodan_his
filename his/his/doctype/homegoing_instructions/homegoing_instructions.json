@@ -1,0 +1,433 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-22 11:18:33.019091",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "column_break_hwbet",
+  "pid",
+  "column_break_at7ov",
+  "dob",
+  "column_break_lxj7f",
+  "mrp",
+  "section_break_h9s19",
+  "homegoing_instructions",
+  "section_break_tikfl",
+  "diat",
+  "column_break_bch1c",
+  "resume_home_diat",
+  "column_break_yh1ll",
+  "new_diat",
+  "section_break_gdbqq",
+  "physical_activity",
+  "column_break_eswet",
+  "no_restrictions",
+  "column_break_id1jd",
+  "restrictions",
+  "section_break_tydsh",
+  "bath",
+  "column_break_nfky3",
+  "shower",
+  "column_break_mnbto",
+  "driving",
+  "column_break_ff0ys",
+  "lifting",
+  "column_break_aw0hu",
+  "pounds",
+  "section_break_t8ck5",
+  "special_equipment",
+  "section_break_hpxoj",
+  "oxygen_pipap",
+  "column_break_dacpz",
+  "home_user_walker_cane_has",
+  "column_break_f7w9u",
+  "equipment_needed",
+  "column_break_vxqja",
+  "notify_compnay_phone_numer",
+  "section_break_efpso",
+  "follow_up_care",
+  "section_break_lpttw",
+  "office_clinic_with",
+  "column_break_ffwln",
+  "in",
+  "column_break_psdbs",
+  "home_health_care",
+  "column_break_raym5",
+  "other",
+  "section_break_2lckq",
+  "next_dose",
+  "section_break_qp8ou",
+  "additional_instractions",
+  "section_break_2noxc",
+  "i_hereby_acknowledge_and_understand_the_homegoing_instructions",
+  "section_break_owntb",
+  "i_have_received_from_royal_care_international",
+  "section_break_ozgsk",
+  "hospital_all_valuables_jewelry_money_glasses_dentures",
+  "section_break_6yltp",
+  "clothing_or_personal_items_which_i_kept_in_my_possession",
+  "section_break_vbkb3",
+  "we_hope_your_experience_here_was_very_satisfying"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts name"
+  },
+  {
+   "fieldname": "column_break_hwbet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "column_break_at7ov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_lxj7f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_h9s19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "homegoing_instructions",
+   "fieldtype": "HTML",
+   "label": "HOMEGOING INSTRUCTIONS",
+   "options": "HOMEGOING INSTRUCTIONS"
+  },
+  {
+   "fieldname": "section_break_tikfl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "diat",
+   "fieldtype": "HTML",
+   "label": "Diat",
+   "options": "Diat"
+  },
+  {
+   "fieldname": "column_break_bch1c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "resume_home_diat",
+   "fieldtype": "Check",
+   "label": "Resume Home diat"
+  },
+  {
+   "fieldname": "column_break_yh1ll",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "new_diat",
+   "fieldtype": "Check",
+   "label": "New diat"
+  },
+  {
+   "fieldname": "section_break_gdbqq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "physical_activity",
+   "fieldtype": "HTML",
+   "label": "Physical activity ",
+   "options": "Physical activity "
+  },
+  {
+   "fieldname": "column_break_eswet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_restrictions",
+   "fieldtype": "Check",
+   "label": "No restrictions"
+  },
+  {
+   "fieldname": "column_break_id1jd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "restrictions",
+   "fieldtype": "Check",
+   "label": "Restrictions"
+  },
+  {
+   "fieldname": "section_break_tydsh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bath",
+   "fieldtype": "Check",
+   "label": "Bath"
+  },
+  {
+   "fieldname": "column_break_nfky3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "shower",
+   "fieldtype": "Check",
+   "label": "Shower"
+  },
+  {
+   "fieldname": "column_break_mnbto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "driving",
+   "fieldtype": "Check",
+   "label": "Driving"
+  },
+  {
+   "fieldname": "column_break_ff0ys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "lifting",
+   "fieldtype": "Check",
+   "label": "Lifting"
+  },
+  {
+   "fieldname": "column_break_aw0hu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "pounds",
+   "fieldtype": "Check",
+   "label": "Pounds"
+  },
+  {
+   "fieldname": "section_break_t8ck5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "special_equipment",
+   "fieldtype": "HTML",
+   "label": "Special Equipment",
+   "options": "Special Equipment"
+  },
+  {
+   "fieldname": "section_break_hpxoj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "oxygen_pipap",
+   "fieldtype": "Check",
+   "label": "Oxygen, pipap"
+  },
+  {
+   "fieldname": "column_break_dacpz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "home_user_walker_cane_has",
+   "fieldtype": "Check",
+   "label": "Home user, walker, cane has"
+  },
+  {
+   "fieldname": "column_break_f7w9u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "equipment_needed",
+   "fieldtype": "Check",
+   "label": "Equipment needed"
+  },
+  {
+   "fieldname": "column_break_vxqja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notify_compnay_phone_numer",
+   "fieldtype": "Data",
+   "label": "Notify Compnay phone numer"
+  },
+  {
+   "fieldname": "section_break_efpso",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "follow_up_care",
+   "fieldtype": "HTML",
+   "label": "Follow up care",
+   "options": "Follow up care"
+  },
+  {
+   "fieldname": "section_break_lpttw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "office_clinic_with",
+   "fieldtype": "Data",
+   "label": "Office clinic with"
+  },
+  {
+   "fieldname": "column_break_ffwln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "in",
+   "fieldtype": "Data",
+   "label": "In"
+  },
+  {
+   "fieldname": "column_break_psdbs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "home_health_care",
+   "fieldtype": "Check",
+   "label": "Home Health care"
+  },
+  {
+   "fieldname": "column_break_raym5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "section_break_2lckq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "next_dose",
+   "fieldtype": "Table",
+   "label": "next Dose",
+   "options": "HOMEGOING INSTRUCTIONS child"
+  },
+  {
+   "fieldname": "section_break_qp8ou",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_instractions",
+   "fieldtype": "Text",
+   "label": "Additional instractions"
+  },
+  {
+   "fieldname": "section_break_2noxc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "i_hereby_acknowledge_and_understand_the_homegoing_instructions",
+   "fieldtype": "HTML",
+   "label": "I hereby acknowledge and understand the homegoing instructions.",
+   "options": "I hereby acknowledge and understand the homegoing instructions."
+  },
+  {
+   "fieldname": "section_break_owntb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "i_have_received_from_royal_care_international",
+   "fieldtype": "HTML",
+   "label": "I have received from Royal Care International ",
+   "options": "I have received from Royal Care International "
+  },
+  {
+   "fieldname": "section_break_ozgsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hospital_all_valuables_jewelry_money_glasses_dentures",
+   "fieldtype": "HTML",
+   "label": "Hospital all valuables (jewelry, money, glasses, dentures), ",
+   "options": "Hospital all valuables (jewelry, money, glasses, dentures), "
+  },
+  {
+   "fieldname": "section_break_6yltp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "clothing_or_personal_items_which_i_kept_in_my_possession",
+   "fieldtype": "HTML",
+   "label": "clothing, or personal items which I kept in my possession.",
+   "options": "clothing, or personal items which I kept in my possession.\n"
+  },
+  {
+   "fieldname": "section_break_vbkb3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "we_hope_your_experience_here_was_very_satisfying",
+   "fieldtype": "HTML",
+   "label": "We hope your experience here was very satisfying.",
+   "options": "We hope your experience here was very satisfying."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-04 09:00:17.239655",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "HOMEGOING INSTRUCTIONS",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

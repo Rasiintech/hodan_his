@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-30 10:36:35.460472",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_vnbw1",
+  "age",
+  "date",
+  "column_break_spmg2",
+  "hours_of_labour",
+  "fetal_heart_rate",
+  "section_break_tymxk",
+  "continuous_electronic_monitoring",
+  "column_break_mlqyt",
+  "intermittent_monitoring",
+  "column_break_ss8cx",
+  "fetal_scalp_electrode",
+  "section_break_jsfr5",
+  "handheld_doppler",
+  "column_break_l8ely",
+  "pinard_stethoscope",
+  "column_break_bw6yn",
+  "fetal_ph_liquor",
+  "section_break_o2if7",
+  "caput_moulding",
+  "column_break_tabn6",
+  "position",
+  "column_break_yms2r",
+  "cervical_dilatation",
+  "section_break_xofmp",
+  "descent_of_presenting_part",
+  "column_break_lfzfv",
+  "ontractions__per_10_minutes",
+  "column_break_vlxax",
+  "duration",
+  "section_break_bkpez"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient"
+  },
+  {
+   "fieldname": "column_break_vnbw1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "AGE"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_spmg2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hours_of_labour",
+   "fieldtype": "Data",
+   "label": "Hours of labour"
+  },
+  {
+   "fieldname": "fetal_heart_rate",
+   "fieldtype": "Data",
+   "label": "Fetal Heart Rate"
+  },
+  {
+   "fieldname": "section_break_tymxk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "continuous_electronic_monitoring",
+   "fieldtype": "Data",
+   "label": "Continuous Electronic monitoring"
+  },
+  {
+   "fieldname": "column_break_mlqyt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intermittent_monitoring",
+   "fieldtype": "Data",
+   "label": "Intermittent monitoring"
+  },
+  {
+   "fieldname": "column_break_ss8cx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fetal_scalp_electrode",
+   "fieldtype": "Data",
+   "label": "Fetal Scalp Electrode"
+  },
+  {
+   "fieldname": "section_break_jsfr5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "handheld_doppler",
+   "fieldtype": "Data",
+   "label": "Handheld Doppler"
+  },
+  {
+   "fieldname": "column_break_l8ely",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pinard_stethoscope",
+   "fieldtype": "Data",
+   "label": "Pinard stethoscope"
+  },
+  {
+   "fieldname": "column_break_bw6yn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fetal_ph_liquor",
+   "fieldtype": "Data",
+   "label": "Fetal pH Liquor"
+  },
+  {
+   "fieldname": "section_break_o2if7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "caput_moulding",
+   "fieldtype": "Data",
+   "label": "Caput moulding"
+  },
+  {
+   "fieldname": "column_break_tabn6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "column_break_yms2r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cervical_dilatation",
+   "fieldtype": "Data",
+   "label": "Cervical Dilatation"
+  },
+  {
+   "fieldname": "section_break_xofmp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "descent_of_presenting_part",
+   "fieldtype": "Data",
+   "label": "Descent of Presenting part"
+  },
+  {
+   "fieldname": "column_break_lfzfv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ontractions__per_10_minutes",
+   "fieldtype": "Data",
+   "label": "ontractions  per 10 minutes"
+  },
+  {
+   "fieldname": "column_break_vlxax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "section_break_bkpez",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-16 11:27:20.978797",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "DIH Partogram",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

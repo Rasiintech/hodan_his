@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-13 11:28:14.989673",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "time",
+  "wieght",
+  "temp",
+  "bp",
+  "rr",
+  "o2",
+  "amount_of_feeding",
+  "rgp"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_standard_filter": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "wieght",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Wieght"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Temp"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BP"
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RR"
+  },
+  {
+   "fieldname": "o2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "O2"
+  },
+  {
+   "fieldname": "amount_of_feeding",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "amount of feeding"
+  },
+  {
+   "fieldname": "rgp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RGP"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-13 11:33:20.277823",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Vital Flowsheet",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

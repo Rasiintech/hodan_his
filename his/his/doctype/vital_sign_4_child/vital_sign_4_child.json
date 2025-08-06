@@ -1,0 +1,357 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-06-05 10:50:07.767602",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "patient",
+  "patient_name",
+  "inpatient_record",
+  "appointment",
+  "encounter",
+  "column_break_2",
+  "company",
+  "signs_date",
+  "signs_time",
+  "sb_vs",
+  "temperature",
+  "pulse",
+  "column_break_guwwr",
+  "respiratory_rate",
+  "tongue",
+  "abdomen",
+  "column_break_8",
+  "reflexes",
+  "bp_systolic",
+  "bp_diastolic",
+  "bp",
+  "vital_signs_note",
+  "sb_nutrition_values",
+  "height",
+  "weight",
+  "hc",
+  "bmi",
+  "wh",
+  "ha",
+  "column_break_14",
+  "nutrition_note",
+  "sb_references",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-VTS-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 5,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.inpatient_record",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "read_only": 1
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Patient Appointment",
+   "no_copy": 1,
+   "options": "Patient Appointment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Patient Encounter",
+   "no_copy": 1,
+   "options": "Patient Encounter",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "Today",
+   "fieldname": "signs_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "signs_time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_vs",
+   "fieldtype": "Section Break",
+   "label": "Vital Signs"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Body Temperature"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Heart Rate / Pulse"
+  },
+  {
+   "fieldname": "column_break_guwwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Respiratory rate"
+  },
+  {
+   "fieldname": "tongue",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Tongue",
+   "options": "\nCoated\nVery Coated\nNormal\nFurry\nCuts"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Abdomen",
+   "options": "\nNormal\nBloated\nFull\nFluid\nConstipated"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reflexes",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Reflexes",
+   "options": "\nNormal\nHyper\nVery Hyper\nOne Sided"
+  },
+  {
+   "fieldname": "bp_systolic",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Blood Pressure (systolic)"
+  },
+  {
+   "fieldname": "bp_diastolic",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Blood Pressure (diastolic)"
+  },
+  {
+   "description": "Normal resting blood pressure in an adult is approximately 120 mmHg systolic, and 80 mmHg diastolic, abbreviated \"120/80 mmHg\"",
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "Blood Pressure",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vital_signs_note",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "ignore_xss_filter": 1,
+   "label": "Notes"
+  },
+  {
+   "fieldname": "sb_nutrition_values",
+   "fieldtype": "Section Break",
+   "label": "Nutrition Values"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Height (In CM)"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight (In Kilogram)"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "bmi",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "BMI"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nutrition_note",
+   "fieldtype": "Small Text",
+   "ignore_xss_filter": 1,
+   "label": "Notes"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_references",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wh",
+   "fieldtype": "Data",
+   "label": "W/H"
+  },
+  {
+   "fieldname": "ha",
+   "fieldtype": "Data",
+   "label": "H/A"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vital sign 4 Child",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "hc",
+   "fieldtype": "Data",
+   "label": "H/C"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-05 10:53:04.801803",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Vital sign 4 Child",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maternity",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Healthcare",
+ "search_fields": "patient, signs_date",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1,
+ "track_seen": 1
+}

@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 13:37:47.652523",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "quality",
+  "intervention",
+  "sedation",
+  "adverse_effect"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Quality"
+  },
+  {
+   "fieldname": "intervention",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Intervention"
+  },
+  {
+   "fieldname": "sedation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sedation"
+  },
+  {
+   "fieldname": "adverse_effect",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Adverse Effect"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-21 13:37:47.652523",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ADULT PAIN child table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

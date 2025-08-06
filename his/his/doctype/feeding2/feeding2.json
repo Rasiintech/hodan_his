@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 16:22:41.608339",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nutrition",
+  "s_albumin",
+  "feeding_type",
+  "npo_indications"
+ ],
+ "fields": [
+  {
+   "fieldname": "nutrition",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nutrition Status",
+   "options": "\nGood\nPoor"
+  },
+  {
+   "fieldname": "feeding_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Feeding type",
+   "options": "\nFluid\nSemi fluid\nNormal diet"
+  },
+  {
+   "fieldname": "npo_indications",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NPO indications"
+  },
+  {
+   "fieldname": "s_albumin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "S albumin"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-02 13:00:04.733492",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Feeding2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

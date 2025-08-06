@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-07 09:45:02.283227",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deparment",
+  "no_admission",
+  "no_transfer",
+  "discharge",
+  "no_death",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "deparment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Deparment",
+   "options": "Departments",
+   "width": "1"
+  },
+  {
+   "fieldname": "no_admission",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No Admission",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_transfer",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No Transfer",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "discharge",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Discharge",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_death",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "NO DEATH",
+   "width": "1"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-13 10:36:55.087216",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Monthly",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-13 11:29:54.167080",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "patient_name",
+  "gender",
+  "dob",
+  "admission_date",
+  "column_break_6zvi7",
+  "isolation",
+  "gestation",
+  "postnatal_week",
+  "weight",
+  "apgar_score",
+  "length",
+  "head_circumference",
+  "section_break_vazpj",
+  "flow_sheet"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Link",
+   "label": "ID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "flow_sheet",
+   "fieldtype": "Table",
+   "label": "Flow Sheet",
+   "options": "Vital Signs Flow sheet NICU child"
+  },
+  {
+   "fetch_from": "id.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "gestation",
+   "fieldtype": "Data",
+   "label": "Gestation"
+  },
+  {
+   "fieldname": "isolation",
+   "fieldtype": "Data",
+   "label": "Isolation"
+  },
+  {
+   "fieldname": "postnatal_week",
+   "fieldtype": "Data",
+   "label": "Postnatal Week"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "admission_date",
+   "fieldtype": "Date",
+   "label": "Admission Date"
+  },
+  {
+   "fieldname": "column_break_6zvi7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vazpj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "apgar_score",
+   "fieldtype": "Data",
+   "label": "APGAR Score"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length"
+  },
+  {
+   "fieldname": "head_circumference",
+   "fieldtype": "Data",
+   "label": "Head Circumference"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-22 07:35:11.960799",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Vital Signs Flow sheet NICU",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NICU",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,54 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-05-05 17:43:20.253496",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2025-06-25 11:52:45.307412",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Radiology Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    item_group, \r\n    COUNT(*) AS total\r\nFROM \r\n    `tabRadiology`\r\nWHERE \r\n    DATE(creation) BETWEEN %(from_date)s AND %(to_date)s\r\n    AND docstatus != 2\r\nGROUP BY \r\n    item_group;\r\n",
+ "ref_doctype": "Radiology",
+ "report_name": "Radiology Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Healthcare Administrator"
+  },
+  {
+   "role": "Imaging"
+  },
+  {
+   "role": "All"
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 14:11:10.126455",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hypo_perfusion",
+  "shocked",
+  "iv_fluids",
+  "vasopressors",
+  "adjustment"
+ ],
+ "fields": [
+  {
+   "fieldname": "hypo_perfusion",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Hypoperfusion",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "shocked",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Shocked",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "iv_fluids",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Need of IV fluids bolus",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "vasopressors",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Need of Vasopressors",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "adjustment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Adjustment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-02 12:52:53.350494",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Circulation3",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,422 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "AN-.#####",
+ "creation": "2023-06-13 15:19:00.772482",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "column_break_5whwr",
+  "date",
+  "anaesthetist_name",
+  "anaesthetic_assistant",
+  "s",
+  "pr",
+  "general_condition",
+  "allergies",
+  "regular_medicaton",
+  "previous_gas",
+  "asa",
+  "column_break_sg2ge",
+  "rs",
+  "cvs",
+  "teeth",
+  "other_systems",
+  "conclusion",
+  "anaesthetic_assistant_section",
+  "position",
+  "patient_safely_transferred",
+  "supine",
+  "left_lateral",
+  "right_lateral",
+  "lithotomy",
+  "prone",
+  "trendelenberg",
+  "reverse_trendelenberg",
+  "other",
+  "column_break_iwsag",
+  "position_of_arms",
+  "across_chest",
+  "down_by_side",
+  "left_only_by_side",
+  "right_only_by_side",
+  "arm_board_in_place",
+  "protective_padding_arm_boards",
+  "column_break_ejsql",
+  "heel_pad",
+  "head_ring",
+  "others",
+  "section_break_u4si6",
+  "throat_pack",
+  "in",
+  "out",
+  "section_break_0fcqq",
+  "vi",
+  "section_break_zoxv8",
+  "drugs",
+  "section_break_ungap",
+  "post_operative_instructions",
+  "billible_tab",
+  "procedure_items",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sex"
+  },
+  {
+   "fieldname": "column_break_5whwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "general_condition",
+   "fieldtype": "Data",
+   "label": "General Condition"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pr",
+   "fieldtype": "HTML",
+   "label": "Pre Operative Anaesthetic Assessment",
+   "options": "<b>Pre Operative Anaesthetic Assessment</b>"
+  },
+  {
+   "fieldname": "regular_medicaton",
+   "fieldtype": "Data",
+   "label": "Regular medicaton"
+  },
+  {
+   "fieldname": "previous_gas",
+   "fieldtype": "Data",
+   "label": "Previous GAs"
+  },
+  {
+   "fieldname": "asa",
+   "fieldtype": "Data",
+   "label": "ASA"
+  },
+  {
+   "fieldname": "column_break_sg2ge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rs",
+   "fieldtype": "Data",
+   "label": "RS"
+  },
+  {
+   "fieldname": "cvs",
+   "fieldtype": "Data",
+   "label": "CVS"
+  },
+  {
+   "fieldname": "teeth",
+   "fieldtype": "Data",
+   "label": "Teeth"
+  },
+  {
+   "fieldname": "other_systems",
+   "fieldtype": "Data",
+   "label": "Other systems"
+  },
+  {
+   "fieldname": "conclusion",
+   "fieldtype": "Data",
+   "label": "Conclusion"
+  },
+  {
+   "fieldname": "anaesthetic_assistant_section",
+   "fieldtype": "Section Break",
+   "label": "ANAESTHETIC ASSISTANT"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "HTML",
+   "label": "Patient position",
+   "options": "<b>Patient position</b>"
+  },
+  {
+   "default": "0",
+   "fieldname": "patient_safely_transferred",
+   "fieldtype": "Check",
+   "label": "Patient safely transferred"
+  },
+  {
+   "default": "0",
+   "fieldname": "supine",
+   "fieldtype": "Check",
+   "label": "Supine"
+  },
+  {
+   "default": "0",
+   "fieldname": "left_lateral",
+   "fieldtype": "Check",
+   "label": "Left lateral"
+  },
+  {
+   "default": "0",
+   "fieldname": "right_lateral",
+   "fieldtype": "Check",
+   "label": "Right lateral"
+  },
+  {
+   "default": "0",
+   "fieldname": "lithotomy",
+   "fieldtype": "Check",
+   "label": "Lithotomy"
+  },
+  {
+   "default": "0",
+   "fieldname": "prone",
+   "fieldtype": "Check",
+   "label": "Prone"
+  },
+  {
+   "default": "0",
+   "fieldname": "trendelenberg",
+   "fieldtype": "Check",
+   "label": "Trendelenberg"
+  },
+  {
+   "default": "0",
+   "fieldname": "reverse_trendelenberg",
+   "fieldtype": "Check",
+   "label": "Reverse Trendelenberg"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "column_break_iwsag",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "position_of_arms",
+   "fieldtype": "HTML",
+   "label": "Position of arms",
+   "options": "<b>Position of arms</b>"
+  },
+  {
+   "default": "0",
+   "fieldname": "across_chest",
+   "fieldtype": "Check",
+   "label": "Across chest"
+  },
+  {
+   "default": "0",
+   "fieldname": "down_by_side",
+   "fieldtype": "Check",
+   "label": "Down by side"
+  },
+  {
+   "default": "0",
+   "fieldname": "left_only_by_side",
+   "fieldtype": "Check",
+   "label": "Left only by side"
+  },
+  {
+   "default": "0",
+   "fieldname": "right_only_by_side",
+   "fieldtype": "Check",
+   "label": "Right only by side"
+  },
+  {
+   "default": "0",
+   "fieldname": "arm_board_in_place",
+   "fieldtype": "Check",
+   "label": "Arm board in place"
+  },
+  {
+   "default": "0",
+   "fieldname": "protective_padding_arm_boards",
+   "fieldtype": "Check",
+   "label": "Protective padding arm boards"
+  },
+  {
+   "fieldname": "column_break_ejsql",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "heel_pad",
+   "fieldtype": "Check",
+   "label": "Heel pad"
+  },
+  {
+   "default": "0",
+   "fieldname": "head_ring",
+   "fieldtype": "Check",
+   "label": "Head ring"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "section_break_u4si6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "throat_pack",
+   "fieldtype": "HTML",
+   "label": "Throat Pack",
+   "options": "<b>Throat Pack</b>"
+  },
+  {
+   "default": "0",
+   "fieldname": "in",
+   "fieldtype": "Check",
+   "label": "In"
+  },
+  {
+   "default": "0",
+   "fieldname": "out",
+   "fieldtype": "Check",
+   "label": "Out"
+  },
+  {
+   "fieldname": "anaesthetist_name",
+   "fieldtype": "Data",
+   "label": "Anaesthetist Name"
+  },
+  {
+   "fieldname": "anaesthetic_assistant",
+   "fieldtype": "Data",
+   "label": "Anaesthetic Assistant"
+  },
+  {
+   "fieldname": "section_break_0fcqq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vi",
+   "fieldtype": "Table",
+   "options": "VITAL SIGN"
+  },
+  {
+   "fieldname": "section_break_zoxv8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "drugs",
+   "fieldtype": "Table",
+   "label": "Drugs",
+   "options": "OT Medication"
+  },
+  {
+   "fieldname": "section_break_ungap",
+   "fieldtype": "Section Break",
+   "label": "Post Operative"
+  },
+  {
+   "fieldname": "post_operative_instructions",
+   "fieldtype": "Text",
+   "label": "Post Operative Instructions"
+  },
+  {
+   "fieldname": "billible_tab",
+   "fieldtype": "Tab Break",
+   "label": "Billible"
+  },
+  {
+   "fieldname": "procedure_items",
+   "fieldtype": "Table",
+   "label": "Procedure Items",
+   "options": "Procedure Items"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Anesthesia",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-22 16:16:01.499224",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Anesthesia",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

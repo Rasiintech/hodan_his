@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-25 14:44:28.077796",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "srl",
+  "description",
+  "manufacturer",
+  "ref_no",
+  "alternative_for",
+  "do_you_recommend_this_product",
+  "evaluation",
+  "suitable_for_patient_care",
+  "not_suitable_for_patient_care",
+  "good_quality",
+  "poor_quality"
+ ],
+ "fields": [
+  {
+   "fieldname": "srl",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SRL"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Manufacturer"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ref. No."
+  },
+  {
+   "fieldname": "alternative_for",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Alternative for"
+  },
+  {
+   "fieldname": "do_you_recommend_this_product",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Do you Recommend this product?"
+  },
+  {
+   "fieldname": "evaluation",
+   "fieldtype": "Data",
+   "label": "Evaluation"
+  },
+  {
+   "fieldname": "suitable_for_patient_care",
+   "fieldtype": "Data",
+   "label": "Suitable for Patient Care"
+  },
+  {
+   "fieldname": "not_suitable_for_patient_care",
+   "fieldtype": "Data",
+   "label": "Not Suitable for Patient Care"
+  },
+  {
+   "fieldname": "good_quality",
+   "fieldtype": "Data",
+   "label": " Good Quality"
+  },
+  {
+   "fieldname": "poor_quality",
+   "fieldtype": "Data",
+   "label": "Poor Quality"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-25 14:47:36.930014",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Item Evaluation Form child table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

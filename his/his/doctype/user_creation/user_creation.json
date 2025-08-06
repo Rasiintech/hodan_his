@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "USR-CRE-.#####",
+ "creation": "2024-12-01 11:38:49.436080",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employeid",
+  "employee_name",
+  "please_grant_the_following_request",
+  "internal_email",
+  "username__password",
+  "his_training_according_to_role_based",
+  "section_break_y9pgm",
+  "portal",
+  "section_break_xhtej",
+  "role_based_access_to_be_filled_up_by_hod",
+  "access_for_personal_data_section",
+  "edit",
+  "add",
+  "loan_request",
+  "leave_request",
+  "column_break_ulfun",
+  "sick_leave_request",
+  "return_from_leave",
+  "others",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employeid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "EmployeID",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employeid.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "please_grant_the_following_request",
+   "fieldtype": "Section Break",
+   "label": "Please grant the following request"
+  },
+  {
+   "default": "0",
+   "fieldname": "internal_email",
+   "fieldtype": "Check",
+   "label": "Internal Email"
+  },
+  {
+   "default": "0",
+   "fieldname": "username__password",
+   "fieldtype": "Check",
+   "label": "Username / password"
+  },
+  {
+   "default": "0",
+   "fieldname": "his_training_according_to_role_based",
+   "fieldtype": "Check",
+   "label": "HIS Training according to ROLE BASED"
+  },
+  {
+   "fieldname": "role_based_access_to_be_filled_up_by_hod",
+   "fieldtype": "Table",
+   "label": "ROLE BASED ACCESS (to be filled up by HOD)",
+   "options": "ROLE BASED ACCESS"
+  },
+  {
+   "fieldname": "section_break_y9pgm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xhtej",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "portal",
+   "fieldtype": "Check",
+   "label": "PORTAL"
+  },
+  {
+   "fieldname": "access_for_personal_data_section",
+   "fieldtype": "Section Break",
+   "label": "ACCESS FOR PERSONAL DATA"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit",
+   "fieldtype": "Check",
+   "label": "EDIT"
+  },
+  {
+   "default": "0",
+   "fieldname": "add",
+   "fieldtype": "Check",
+   "label": "ADD"
+  },
+  {
+   "default": "0",
+   "fieldname": "loan_request",
+   "fieldtype": "Check",
+   "label": "LOAN REQUEST"
+  },
+  {
+   "default": "0",
+   "fieldname": "leave_request",
+   "fieldtype": "Check",
+   "label": "LEAVE REQUEST"
+  },
+  {
+   "default": "0",
+   "fieldname": "sick_leave_request",
+   "fieldtype": "Check",
+   "label": "SICK LEAVE REQUEST"
+  },
+  {
+   "default": "0",
+   "fieldname": "return_from_leave",
+   "fieldtype": "Check",
+   "label": "RETURN FROM LEAVE"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "OTHERS"
+  },
+  {
+   "fieldname": "column_break_ulfun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Creation",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-20 10:59:55.182481",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "User Creation",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

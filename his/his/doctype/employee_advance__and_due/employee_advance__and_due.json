@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-31 16:57:54.605053",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account",
+  "due",
+  "allocate"
+ ],
+ "fields": [
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "due",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Due"
+  },
+  {
+   "fieldname": "allocate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Allocate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-31 17:00:43.248244",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Employee Advance  and Due",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

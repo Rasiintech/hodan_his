@@ -1,0 +1,385 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DP-.##### ",
+ "creation": "2022-04-09 11:43:47.248297",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "inpatient_record",
+  "ref_practitioner",
+  "room",
+  "column_break_2",
+  "blood_group",
+  "age",
+  "date",
+  "to_date",
+  "bed",
+  "history_tab",
+  "section_break_gf20p",
+  "history",
+  "physical_eximinition",
+  "complain",
+  "diagnosis",
+  "consultation_doctor",
+  "notes_tab",
+  "section_break_llaxt",
+  "note",
+  "ipd_drug_prescription_tab",
+  "section_break_4",
+  "drug_prescription",
+  "ipd_lab_prescription_tab",
+  "section_break_6",
+  "lab_tests",
+  "imaging_tab",
+  "section_break_nfdbb",
+  "imaging",
+  "ipd_procedure_prescription_tab",
+  "section_break_8",
+  "clinical_procedures",
+  "more_info_tab",
+  "section_break_10",
+  "comment",
+  "discharge_tab",
+  "medication_so",
+  "services_so",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Treatment Plan",
+   "options": "IPD Drug Prescription"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lab_tests",
+   "fieldtype": "Table",
+   "label": "Investigation",
+   "options": "IPD Lab Prescription"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "clinical_procedures",
+   "fieldtype": "Table",
+   "label": "IPD Procedure Prescription",
+   "options": "IPD Procedure Prescription"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.blood_group",
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Blood Group",
+   "options": "\nA Positive\nA Negative\nAB Positive\nAB Negative\nB Positive\nB Negative\nO Positive\nO Negative"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.inpatient_record",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "ref_practitioner",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Referring Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "ipd_drug_prescription_tab",
+   "fieldtype": "Tab Break",
+   "label": "Treatment Plan"
+  },
+  {
+   "fieldname": "ipd_lab_prescription_tab",
+   "fieldtype": "Tab Break",
+   "label": "Investigation"
+  },
+  {
+   "fieldname": "ipd_procedure_prescription_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procedure"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "more_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "More Info"
+  },
+  {
+   "bold": 1,
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Healthcare Service Unit Type",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "bed",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Bed",
+   "options": "Healthcare Service Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "discharge_tab",
+   "fieldtype": "Tab Break",
+   "label": "Discharge"
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "medication_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "services_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Doctor Plan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "imaging_tab",
+   "fieldtype": "Tab Break",
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "imaging",
+   "fieldtype": "Table",
+   "label": "Imaging",
+   "options": "Radiology Prescription"
+  },
+  {
+   "fieldname": "history_tab",
+   "fieldtype": "Tab Break",
+   "label": "History"
+  },
+  {
+   "fieldname": "complain",
+   "fieldtype": "Data",
+   "label": "Complain"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "consultation_doctor",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Consultation Doctor"
+  },
+  {
+   "fieldname": "history",
+   "fieldtype": "Small Text",
+   "label": "History"
+  },
+  {
+   "fieldname": "physical_eximinition",
+   "fieldtype": "Data",
+   "label": "Physical Eximinition"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Progress Note Table"
+  },
+  {
+   "fieldname": "section_break_nfdbb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_gf20p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_llaxt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Notes"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-31 10:27:37.209356",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Doctor Plan",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cashier",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cashiers",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "read_only": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

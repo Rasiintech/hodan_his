@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-21 14:08:10.820165",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "b",
+  "time",
+  "rate",
+  "volume_infused",
+  "hr",
+  "rr",
+  "bp",
+  "temp",
+  "hivesswelling",
+  "nauseavomiting"
+ ],
+ "fields": [
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Data",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "volume_infused",
+   "fieldtype": "Data",
+   "label": "Volume Infused"
+  },
+  {
+   "fieldname": "hr",
+   "fieldtype": "Data",
+   "label": "HR"
+  },
+  {
+   "fieldname": "rr",
+   "fieldtype": "Data",
+   "label": "RR"
+  },
+  {
+   "fieldname": "bp",
+   "fieldtype": "Data",
+   "label": "BP"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "Temp"
+  },
+  {
+   "fieldname": "hivesswelling",
+   "fieldtype": "Data",
+   "label": "Hives/Swelling"
+  },
+  {
+   "fieldname": "nauseavomiting",
+   "fieldtype": "Data",
+   "label": "Nausea/Vomiting"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-21 14:08:10.820165",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Blood Trunsfusion Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

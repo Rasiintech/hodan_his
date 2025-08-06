@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-15 11:05:16.648260",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bronchodilators",
+  "vasopressors",
+  "antihypertensive",
+  "laxatives",
+  "enema",
+  "gastric_prokinetics",
+  "insulin",
+  "diuretics",
+  "anti_adh"
+ ],
+ "fields": [
+  {
+   "fieldname": "bronchodilators",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "bronchodilators"
+  },
+  {
+   "fieldname": "vasopressors",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vasopressors"
+  },
+  {
+   "fieldname": "antihypertensive",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "antihypertensive"
+  },
+  {
+   "fieldname": "laxatives",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Laxatives"
+  },
+  {
+   "fieldname": "enema",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "enema"
+  },
+  {
+   "fieldname": "gastric_prokinetics",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Prokinetics"
+  },
+  {
+   "fieldname": "insulin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insulin"
+  },
+  {
+   "fieldname": "diuretics",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Diuretics"
+  },
+  {
+   "fieldname": "anti_adh",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "anti Diarrhea"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-15 11:05:16.648260",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Plan of management for admission3",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

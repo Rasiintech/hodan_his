@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-19 10:37:32.447309",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "dressing_type",
+  "dressing_attendantdoctor"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dressing_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Dressing Type",
+   "options": "Small\nMedium\nLarge"
+  },
+  {
+   "fieldname": "dressing_attendantdoctor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dressing Attendant(Doctor)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-19 10:40:26.025916",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Dressing Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,469 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-30 09:53:12.349800",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "pid",
+  "dob",
+  "mrp",
+  "consultant",
+  "referal",
+  "requesting_physician",
+  "referring_physician",
+  "date_of_collection",
+  "time_of_collection",
+  "source",
+  "screening_pap_1",
+  "screening_pap_2",
+  "screening_pap_3",
+  "lm_p",
+  "urine",
+  "voided",
+  "catheterized",
+  "bladder_washing",
+  "ureter",
+  "l_1",
+  "r_1",
+  "renal",
+  "l_2",
+  "r_2",
+  "hematuria",
+  "history_of_urothelial_cancer",
+  "left_1",
+  "right_1",
+  "cystic_aspirate",
+  "nipple_discharge",
+  "solid_mass_aspirate",
+  "lung_and_pleura",
+  "sputum",
+  "bronchial",
+  "washing",
+  "brushing",
+  "pleural_fluid",
+  "left_2",
+  "right_2",
+  "peritoneal_fluid",
+  "pelvic_wash",
+  "pricardial_fluid",
+  "csf",
+  "other_site_for_exfoliate_cytology",
+  "fine_needle_aspiration_specift_site",
+  "relevant_clinical_history_1",
+  "previous",
+  "cytology_lab",
+  "histology_lab",
+  "routine_exam",
+  "abnormal_bleeding",
+  "pregnant_wks",
+  "i_postpartum_wks",
+  "post_abortion",
+  "post_menopause",
+  "hysterectomy_subtotal",
+  "hormone_therapy",
+  "radiation_therapy",
+  "chemotherapy",
+  "gyn_conization",
+  "iud",
+  "history_of_malignancy",
+  "hysterectomy_total",
+  "normal",
+  "abnormal_explain_please",
+  "colposcopic_examination",
+  "specimen_for",
+  "relevant_clinical_history_2",
+  "received_by",
+  "date_time",
+  "sign"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Data",
+   "label": "Consultant"
+  },
+  {
+   "fieldname": "referal",
+   "fieldtype": "Data",
+   "label": "referal"
+  },
+  {
+   "fieldname": "requesting_physician",
+   "fieldtype": "Data",
+   "label": "Requesting Physician "
+  },
+  {
+   "fieldname": "referring_physician",
+   "fieldtype": "Data",
+   "label": "Referring Physician  "
+  },
+  {
+   "fieldname": "date_of_collection",
+   "fieldtype": "Data",
+   "label": "Date of collection"
+  },
+  {
+   "fieldname": "time_of_collection",
+   "fieldtype": "Data",
+   "label": "Time of collection"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "label": "Source"
+  },
+  {
+   "fieldname": "screening_pap_1",
+   "fieldtype": "Data",
+   "label": "Screening pap"
+  },
+  {
+   "fieldname": "screening_pap_2",
+   "fieldtype": "Data",
+   "label": "Screening pap"
+  },
+  {
+   "fieldname": "screening_pap_3",
+   "fieldtype": "Data",
+   "label": "Screening pap"
+  },
+  {
+   "fieldname": "lm_p",
+   "fieldtype": "Data",
+   "label": "LM P"
+  },
+  {
+   "fieldname": "urine",
+   "fieldtype": "Data",
+   "label": "Urine"
+  },
+  {
+   "fieldname": "voided",
+   "fieldtype": "Data",
+   "label": "Voided"
+  },
+  {
+   "fieldname": "catheterized",
+   "fieldtype": "Data",
+   "label": "Catheterized"
+  },
+  {
+   "fieldname": "bladder_washing",
+   "fieldtype": "Data",
+   "label": " Bladder washing"
+  },
+  {
+   "fieldname": "ureter",
+   "fieldtype": "Data",
+   "label": "Ureter"
+  },
+  {
+   "fieldname": "l_1",
+   "fieldtype": "Data",
+   "label": "L"
+  },
+  {
+   "fieldname": "r_1",
+   "fieldtype": "Data",
+   "label": "R"
+  },
+  {
+   "fieldname": "renal",
+   "fieldtype": "Data",
+   "label": "Renal"
+  },
+  {
+   "fieldname": "l_2",
+   "fieldtype": "Data",
+   "label": "L"
+  },
+  {
+   "fieldname": "r_2",
+   "fieldtype": "Data",
+   "label": "R"
+  },
+  {
+   "fieldname": "hematuria",
+   "fieldtype": "Data",
+   "label": "Hematuria "
+  },
+  {
+   "fieldname": "history_of_urothelial_cancer",
+   "fieldtype": "Data",
+   "label": " History of urothelial cancer"
+  },
+  {
+   "fieldname": "left_1",
+   "fieldtype": "Data",
+   "label": "Left"
+  },
+  {
+   "fieldname": "right_1",
+   "fieldtype": "Data",
+   "label": "Right"
+  },
+  {
+   "fieldname": "cystic_aspirate",
+   "fieldtype": "Data",
+   "label": "Cystic aspirate"
+  },
+  {
+   "fieldname": "nipple_discharge",
+   "fieldtype": "Data",
+   "label": " Nipple discharge"
+  },
+  {
+   "fieldname": "solid_mass_aspirate",
+   "fieldtype": "Data",
+   "label": "Solid mass aspirate"
+  },
+  {
+   "fieldname": "lung_and_pleura",
+   "fieldtype": "Data",
+   "label": "Lung and pleura"
+  },
+  {
+   "fieldname": "sputum",
+   "fieldtype": "Data",
+   "label": "Sputum"
+  },
+  {
+   "fieldname": "bronchial",
+   "fieldtype": "Data",
+   "label": "Bronchial "
+  },
+  {
+   "fieldname": "washing",
+   "fieldtype": "Data",
+   "label": "Washing"
+  },
+  {
+   "fieldname": "brushing",
+   "fieldtype": "Data",
+   "label": " Brushing"
+  },
+  {
+   "fieldname": "pleural_fluid",
+   "fieldtype": "Data",
+   "label": "Pleural fluid "
+  },
+  {
+   "fieldname": "left_2",
+   "fieldtype": "Data",
+   "label": "Left"
+  },
+  {
+   "fieldname": "right_2",
+   "fieldtype": "Data",
+   "label": "Right"
+  },
+  {
+   "fieldname": "peritoneal_fluid",
+   "fieldtype": "Data",
+   "label": "Peritoneal fluid"
+  },
+  {
+   "fieldname": "pelvic_wash",
+   "fieldtype": "Data",
+   "label": "Pelvic wash"
+  },
+  {
+   "fieldname": "pricardial_fluid",
+   "fieldtype": "Data",
+   "label": "Pricardial fluid"
+  },
+  {
+   "fieldname": "csf",
+   "fieldtype": "Data",
+   "label": "CSF"
+  },
+  {
+   "fieldname": "other_site_for_exfoliate_cytology",
+   "fieldtype": "Data",
+   "label": "Other site for exfoliate cytology  "
+  },
+  {
+   "fieldname": "fine_needle_aspiration_specift_site",
+   "fieldtype": "Data",
+   "label": "Fine needle aspiration specift site"
+  },
+  {
+   "fieldname": "relevant_clinical_history_1",
+   "fieldtype": "Data",
+   "label": "Relevant clinical history "
+  },
+  {
+   "fieldname": "previous",
+   "fieldtype": "Data",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "cytology_lab",
+   "fieldtype": "Data",
+   "label": "Cytology lab "
+  },
+  {
+   "fieldname": "histology_lab",
+   "fieldtype": "Data",
+   "label": "Histology lab"
+  },
+  {
+   "fieldname": "routine_exam",
+   "fieldtype": "Data",
+   "label": " Routine exam"
+  },
+  {
+   "fieldname": "abnormal_bleeding",
+   "fieldtype": "Data",
+   "label": "Abnormal bleeding"
+  },
+  {
+   "fieldname": "pregnant_wks",
+   "fieldtype": "Data",
+   "label": "Pregnant wks"
+  },
+  {
+   "fieldname": "i_postpartum_wks",
+   "fieldtype": "Data",
+   "label": " I Postpartum wks"
+  },
+  {
+   "fieldname": "post_abortion",
+   "fieldtype": "Data",
+   "label": "Post abortion"
+  },
+  {
+   "fieldname": "post_menopause",
+   "fieldtype": "Data",
+   "label": "Post menopause"
+  },
+  {
+   "fieldname": "hysterectomy_subtotal",
+   "fieldtype": "Data",
+   "label": "Hysterectomy subtotal"
+  },
+  {
+   "fieldname": "hormone_therapy",
+   "fieldtype": "Data",
+   "label": "Hormone therapy"
+  },
+  {
+   "fieldname": "radiation_therapy",
+   "fieldtype": "Data",
+   "label": "Radiation therapy"
+  },
+  {
+   "fieldname": "chemotherapy",
+   "fieldtype": "Data",
+   "label": "Chemotherapy"
+  },
+  {
+   "fieldname": "gyn_conization",
+   "fieldtype": "Data",
+   "label": "Gyn Conization"
+  },
+  {
+   "fieldname": "iud",
+   "fieldtype": "Data",
+   "label": "IUD"
+  },
+  {
+   "fieldname": "history_of_malignancy",
+   "fieldtype": "Data",
+   "label": "History of malignancy"
+  },
+  {
+   "fieldname": "hysterectomy_total",
+   "fieldtype": "Data",
+   "label": "Hysterectomy total"
+  },
+  {
+   "fieldname": "normal",
+   "fieldtype": "Data",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "abnormal_explain_please",
+   "fieldtype": "Data",
+   "label": "Abnormal explain please"
+  },
+  {
+   "fieldname": "colposcopic_examination",
+   "fieldtype": "Data",
+   "label": "Colposcopic examination"
+  },
+  {
+   "fieldname": "specimen_for",
+   "fieldtype": "Data",
+   "label": "Specimen for"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received by  "
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Data",
+   "label": "Date Time "
+  },
+  {
+   "fieldname": "sign",
+   "fieldtype": "Data",
+   "label": "Sign"
+  },
+  {
+   "fieldname": "relevant_clinical_history_2",
+   "fieldtype": "Data",
+   "label": "Relevant clinical history"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-30 09:53:18.444047",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Cytology Test Request Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,310 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GYN-.##### ",
+ "creation": "2023-05-09 11:24:01.906124",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "lmp",
+  "beading",
+  "column_break_sdjoi",
+  "practitioner",
+  "date",
+  "status",
+  "mctab",
+  "mc",
+  "lenght",
+  "amount",
+  "pain",
+  "menopause",
+  "past_mp",
+  "prolops",
+  "symptoms",
+  "primary_diagnosis",
+  "finally_diagnosis",
+  "comment",
+  "investigations_tab",
+  "select_lab_tests",
+  "lab_test_prescription",
+  "imaging_tab",
+  "radiology_prescription",
+  "procedures_tab",
+  "procedure_prescription",
+  "medication_tab",
+  "drug_prescription",
+  "medication_so",
+  "services_so",
+  "que",
+  "amended_from",
+  "lab_result_tab",
+  "lab"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "lmp",
+   "fieldtype": "Date",
+   "label": "LMP"
+  },
+  {
+   "default": "0",
+   "fieldname": "beading",
+   "fieldtype": "Check",
+   "label": "Beading"
+  },
+  {
+   "default": "0",
+   "fieldname": "mc",
+   "fieldtype": "Section Break",
+   "label": "MC"
+  },
+  {
+   "fieldname": "lenght",
+   "fieldtype": "Data",
+   "label": "Lenght"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "pain",
+   "fieldtype": "Check",
+   "label": "Pain"
+  },
+  {
+   "default": "0",
+   "fieldname": "menopause",
+   "fieldtype": "Check",
+   "label": "Menopause"
+  },
+  {
+   "default": "0",
+   "fieldname": "past_mp",
+   "fieldtype": "Check",
+   "label": "Past M.P"
+  },
+  {
+   "default": "0",
+   "fieldname": "prolops",
+   "fieldtype": "Check",
+   "label": "Prolops",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "symptoms",
+   "fieldtype": "Table MultiSelect",
+   "label": "Symptoms",
+   "options": "Patient Encounter Symptom"
+  },
+  {
+   "fieldname": "primary_diagnosis",
+   "fieldtype": "Table MultiSelect",
+   "label": "Primary Diagnosis",
+   "options": "Patient Encounter Diagnosis"
+  },
+  {
+   "fieldname": "finally_diagnosis",
+   "fieldtype": "Table MultiSelect",
+   "label": "Finally Diagnosis",
+   "options": "Patient Encounter Diagnosis"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "mctab",
+   "fieldtype": "Tab Break",
+   "label": "MC"
+  },
+  {
+   "fieldname": "investigations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "lab_test_prescription",
+   "fieldtype": "Table",
+   "label": "Lab Tests",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "imaging_tab",
+   "fieldtype": "Tab Break",
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "radiology_prescription",
+   "fieldtype": "Table",
+   "label": "Imaging",
+   "options": "Radiology Prescription"
+  },
+  {
+   "fieldname": "procedures_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procedures"
+  },
+  {
+   "fieldname": "procedure_prescription",
+   "fieldtype": "Table",
+   "label": "Procedure",
+   "options": "Procedure Prescription"
+  },
+  {
+   "fieldname": "medication_tab",
+   "fieldtype": "Tab Break",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Drug Prescription",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "medication_so",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "label": "services_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sdjoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "que",
+   "fieldtype": "Data",
+   "label": "Que",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "GYN",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_lab_tests",
+   "fieldtype": "Button",
+   "label": "Select Lab Tests"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "lab_result_tab",
+   "fieldtype": "Tab Break",
+   "label": "Lab Result"
+  },
+  {
+   "fieldname": "lab",
+   "fieldtype": "HTML",
+   "label": "lab",
+   "options": "<div id=\"labs\">  </div>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-28 03:01:15.520444",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "GYN",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

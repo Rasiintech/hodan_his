@@ -1,0 +1,700 @@
+
+
+    <main class="main__content">
+      <section class="analytics">
+        <section class="analytics__expense">
+          <div class="analytics__item1">
+            <div class="analytics__tm">
+              <div class="analytics__total">Completed Que</div>
+              <div class="analytics__money" id ="total_que"></div>
+              <div class="analytics__lineW">
+                <span class="analytics__linInd"></span>
+              </div>
+              <div id="open_que"></div>
+      
+            </div>
+
+            <!-- <span class="material-icons analytics__exIco">
+              <i class="fa fa-dollar-sign"></i>
+            </span> -->
+
+            <div class="analytics__image">
+              <img src="/assets/frappe/images/line-chart.png" alt="" />
+            </div>
+          </div>
+
+          <div class="analytics__item1">
+            <div class="analytics__tm">
+              <div class="analytics__total">Paid Invoices</div>
+              <div class="analytics__money" id ="invoices"></div>
+              <div class="analytics__lineW">
+                <span class="analytics__linInd"></span>
+              </div>
+              <div id="unpaid"></div>
+            </div>
+
+            <span class="material-icons analytics__exIcoR">
+              <i class="fa fa-dollar-sign"></i>
+            </span>
+
+            <div class="analytics__image">
+              <img src="/assets/frappe/images/line-chart-red.png" alt="" />
+            </div>
+          </div>
+
+          <div class="analytics__item2">
+            <canvas
+              id="myChart2"
+              style="width: 100%; max-width: 100%; display: block"
+              width="346"
+              height="100%"
+              class="chartjs-render-monitor"
+            ></canvas>
+          </div>
+
+          <div class="analytics__item1">
+            <div class="analytics__tm">
+              <div class="analytics__total">Completed Lab</div>
+              <div class="analytics__money" id ="lab"></div>
+              <div class="analytics__lineW">
+                <span class="analytics__linInd"></span>
+              </div>
+              <div id="draft_lab"></div>
+            </div>
+
+            <!-- <span class="material-icons analytics__exIcoR">
+              <i class="fa fa-dollar-sign"></i>
+            </span> -->
+
+            <div class="analytics__image">
+              <img src="/assets/frappe/images/line-chart-red.png" alt="" />
+            </div>
+          </div>
+
+          <div class="analytics__item3">
+            <div class="analytics__tmwrap">
+              <div class="analytics__tm">
+                <div class="analytics__total">Completed Radiology</div>
+                <div class="analytics__money" id ="radiology"></div>
+                <div class="analytics__lineW">
+                  <span class="analytics__linInd"></span>
+                </div>
+                <div id="draft_radiology"></div>
+              </div>
+
+              <!-- <span class="material-icons analytics__clenIco">
+                <i class="fa fa-calendar"></i>
+              </span> -->
+            </div>
+
+            <div class="analytics__task">
+              <div class="analytics__taskT">
+                <!-- <span class="analytics__cordi">Tasks Not Finished</span> -->
+                <span class="analytics__tsTD"></span>
+              </div>
+              <!-- <div class="analytics__lineW">
+                <span class="analytics__linInd"></span>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <section class="analytics__overview">
+          <div class="analytics__overL">
+            <div class="analytics__overLH">
+              <span class="analytics__overLeftT"> Que OverView</span>
+              <div class="analytics__overLBtn">
+                <button class="active" id="today">Today</button>
+                <button id="week">Week</button>
+                <button id="month">Month</button>
+                <button id="year">Year</button>
+                <button id="all">All</button>
+              </div>
+            </div>
+
+            <div class="analytics__overLChrt">
+              <canvas
+                id="myChart4"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  display: block;
+                  height: 435px;
+                "
+                width="1000"
+                height="435"
+                class="chartjs-render-monitor"
+              ></canvas>
+            </div>
+
+           <!--  <div class="analytics__overLFoot">
+              <div class="analytics__overLFootItem">
+                <span class="analytics__Mbl">12,721</span>
+                <span class="analytics__Tbl">Number of Projects</span>
+              </div>
+
+              <div class="analytics__overLFootItem">
+                <span class="analytics__Mprimay">721</span>
+                <span class="analytics__Tbl">Active Projects</span>
+              </div>
+
+              <div class="analytics__overLFootItem">
+                <span class="analytics__Mbl">$2,50,523</span>
+                <span class="analytics__Tbl">Revenue</span>
+              </div>
+
+              <div class="analytics__overLFootItem">
+                <span class="analytics__Msuccess">12,275h</span>
+                <span class="analytics__Tbl">Working Hours</span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="analytics__overR">
+            <div class="analytics__overRHead">
+              <span class="analytics__overRHeadTitle">My To Do Items</span>
+           
+            </div>
+
+            <div class="analytics__todoGrid">
+              <div class="analytics__todoItem">
+              
+
+                <div class="analytics__todoItemList">
+                  <input type="checkbox" />
+                  <span>Compete this projects Monday</span>
+                </div>
+
+                <span class="analytics__todoDate ml-3">2023-12-26 07:15:00</span>
+
+               
+              </div>
+
+              <div class="analytics__todoItem">
+              
+
+                <div class="analytics__todoItemList">
+                  <input type="checkbox" />
+                  <span>Compete this projects Monday</span>
+                </div>
+
+                <span class="analytics__todoDate ml-3">2023-12-26 07:15:00</span>
+
+               
+              </div>
+
+
+              <div class="analytics__todoItem">
+              
+
+                <div class="analytics__todoItemList">
+                  <input type="checkbox" />
+                  <span>Compete this projects Monday</span>
+                </div>
+
+                <span class="analytics__todoDate ml-3">2023-12-26 07:15:00</span>
+
+               
+              </div>
+
+              <div class="analytics__todoItem">
+              
+
+                <div class="analytics__todoItemList">
+                  <input type="checkbox" />
+                  <span>Compete this projects Monday</span>
+                </div>
+
+                <span class="analytics__todoDate ml-3">2023-12-26 07:15:00</span>
+
+               
+              </div>
+
+            </div>
+          </div> -->
+        </section>
+
+        <section class="analytics__activepro">
+          <div class="analytics__Atable">
+            <div class="analytics__ATHead">
+              <span class="analytics__ATHeadTL">Unpaid Invoices </span>
+            
+            </div>
+
+            <div class="analytics__ATBanner">
+              <button class="analytics__ATBannerIt">
+                <span>Patient ID</span>
+                <span>
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__ATBannerIt">
+                <span>Patient Name</span>
+                <span>
+                  <i class="fa-duotone fa-caret-down"></i>
+                </span>
+              </button>
+
+              <button class="analytics__ATBannerIt">
+                <span>Mobile</span>
+                <span>
+                  <i class="fa-duotone fa-caret-down"></i>
+                </span>
+              </button>
+
+            <button class="analytics__ATBannerIt">
+                <span>Sourse Order</span>
+                <span>
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__ATBannerIt">
+                <span>Date</span>
+                <span>
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__ATBannerIt">
+                <span>Amount</span>
+                <span>
+                  <i class="fa-duotone fa-caret-down"></i>
+                </span>
+              </button> 
+            </div>
+
+            <div class="analytics__ATContentWrap" id ="upaid_table">
+              
+                <!-- ------data------- -->
+             
+
+          </div>
+        </section>
+
+        <section class="analytics__maps">
+          <div class="analytics__mapLfet">
+         
+
+            <span class="analytics__mapTitle">Deparment  Wise Visit</span>
+              <div style="margin-top: 15%"> 
+         <table class="table table-bordered">
+    <thead style="background-color: lightblue; color: white">
+      <tr>
+        <th scope="col">Doctor</th>
+        <th scope="col">Number</th>
+        <th scope="col">Amount</th>
+        
+      </tr>
+    </thead>
+    <tbody id ="department">
+
+    </tbody>
+  </table>
+  </div>
+          </div>
+
+          <div class="analytics__mapLfet">
+            <span class="analytics__mapTitle">Doctor  Wise Visit</span>
+              <div style="margin-top: 15%; margin-left: 4px; color: white"> 
+         <table class="table table-bordered">
+    <thead style="background-color: gray; color: white">
+      <tr>
+        <th scope="col">Doctor</th>
+        <th scope="col">Number</th>
+        <th scope="col">Amount</th>
+        
+      </tr>
+    </thead>
+    <tbody  id="doctor">
+
+    </tbody>
+  </table>
+  </div>      
+         
+
+
+         
+          </div>
+
+         
+          </div>
+
+          <div class="analytics__mapRight">
+                  <span class="analytics__mapCountrName"> <b> Opening Que</b></span>
+
+
+
+         
+               <table class="table" style="overflow:auto;">
+    <thead>
+      <tr>
+        <th>Patient</th>
+        <th>Doctor</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="openque">
+   
+     
+    
+    </tbody>
+  </table>
+
+
+
+
+
+          </div>
+        </section>
+
+        <section class="analytics__sells">
+          <div class="analytics__sellsWrap">
+            <div class="analytics__sellHead">
+              <span class="analytics__sellHeadTitleL"
+                >Unbilled Orders
+              </span>
+
+        <!--       <div class="analytics__sellHeadR">
+                <span class="analytics__sellHeadRTitle">SORT BY:</span>
+                <select class="analytics__sellHeadRSelectO">
+                  <option value="Today">Today</option>
+                  <option value="Today">Week</option>
+                  <option value="Today">Month</option>
+                </select>
+              </div> -->
+            </div>
+
+            <div class="analytics__sellsBanner">
+              <button class="analytics__sellsBannerNames">
+                <span class="analytics__sellsBannerProName">Patient </span>
+                <span class="analytics__sellsBannerIcon">
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__sellsBannerNames">
+                <span class="analytics__sellsBannerProName">Patient Name</span>
+                <span class="analytics__sellsBannerIcon">
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__sellsBannerNames">
+                <span class="analytics__sellsBannerProName">Practitioner</span>
+                <span class="analytics__sellsBannerIcon">
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__sellsBannerNames">
+                <span class="analytics__sellsBannerProName">Total</span>
+                <span class="analytics__sellsBannerIcon">
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__sellsBannerNames">
+                <span class="analytics__sellsBannerProName">Amount</span>
+                <span class="analytics__sellsBannerIcon">
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+            </div>
+
+           <!-- ------------------------- -->
+
+ <div class="analytics__ATContentWrap" id ="unbilled_table">
+              
+          </div>
+        </section>
+
+        <section class="analytics__upcomping">
+          <div class="analytics__schedule">
+            <div class="analytics__scheduleHead">
+              <p class="analytics__scheduleTitle">OT Schedules</p>
+            </div>
+
+            <!-- <div class="analytics__scheduleCalender">
+              <div class="month">
+                <ul>
+                  <li class="prev">&#10094;</li>
+                  <li class="next">&#10095;</li>
+                  <li>
+                    August<br />
+                    <span style="font-size: 18px">2021</span>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+              </ul>
+
+              <ul class="days">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li><span class="active">10</span></li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+              </ul>
+            </div> -->
+
+            <div class="analytics__footerSchdule" id="ot">
+             
+<!-- --------------------------------------------- -->
+
+            </div>
+          </div>
+
+          <div class="analytics__projectStatus">
+            <div class="analytics__projectStatusHead">
+              <span class="analytics__projectStatusTitle">Accounts</span>
+<!--               <select id="productStatusSelect">
+                <option value="Today">Today</option>
+                <option value="Week">Week</option>
+                <option value="Month">Month</option>
+              </select> -->
+            </div>
+
+            <div class="analytics__projectStatusChart">
+              <canvas
+                id="myChart"
+                style="width: 100%; max-width: 100%"
+              ></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="analytics__employee">
+<!-- -------------- -->
+ <div class="analytics__Atable">
+            <div class="analytics__ATHead">
+              <span class="analytics__ATHeadTL">Insurance Invoices </span>
+            
+            </div>
+
+            <div class="analytics__ATBanner">
+              <button class="analytics__ATBannerIt">
+                <span>Patient ID</span>
+                <span>
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__ATBannerIt">
+                <span>Patient Name</span>
+                <span>
+                  <i class="fa-duotone fa-caret-down"></i>
+                </span>
+              </button>
+
+              <button class="analytics__ATBannerIt">
+                <span>Mobile</span>
+                <span>
+                  <i class="fa-duotone fa-caret-down"></i>
+                </span>
+              </button>
+
+            <button class="analytics__ATBannerIt">
+                <span>Insurance</span>
+                <span>
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__ATBannerIt">
+                <span>Date</span>
+                <span>
+                  <i class="fa-duotone fa-caret-up"></i>
+                </span>
+              </button>
+
+              <button class="analytics__ATBannerIt">
+                <span>Amount</span>
+                <span>
+                  <i class="fa-duotone fa-caret-down"></i>
+                </span>
+              </button> 
+            </div>
+
+            <div class="analytics__ATContentWrap" id ="insurance_table">
+              
+                <!-- ------data------- -->
+             
+
+          </div>
+        </section>
+
+        <section class="analytics__maps">
+          <div class="analytics__mapLfet">
+          <span class="analytics__mapTitle">QUE Doctor Wise Visit</span>
+   
+          
+              <div style="margin-top: 5%"> 
+         <table class="table table-bordered">
+    <thead style="background-color: lightblue; color: white">
+      <tr>
+        <th scope="col">Doctor</th>
+        <th scope="col">New</th>
+        <th scope="col">Follow Up</th>
+        <th scope="col">Refer</th>
+        <th scope="col">Revisit</th>
+        <th scope="col">Total</th>
+        <th scope="col">Open</th>
+        <th scope="col">Completed</th>
+        
+      </tr>
+    </thead>
+    <tbody id ="doctorque">
+
+    </tbody>
+  </table>
+  </div>
+          </div>
+
+
+
+         
+          </div>
+
+        </section>
+
+
+        <section class="analytics__maps">
+          <div class="analytics__mapLfet">
+          <span class="analytics__mapTitle">QUE Department Wise Visit</span>
+   
+          
+              <div style="margin-top: 5%"> 
+         <table class="table table-bordered">
+    <thead style="background-color: green; color: white">
+      <tr>
+        <th scope="col">Department</th>
+        <th scope="col">New</th>
+        <th scope="col">Follow Up</th>
+        <th scope="col">Refer</th>
+        <th scope="col">Revisit</th>
+        <th scope="col">Total</th>
+        <th scope="col">Open</th>
+        <th scope="col">Completed</th>
+        
+      </tr>
+    </thead>
+    <tbody id ="departmentque">
+
+    </tbody>
+  </table>
+  </div>
+          </div>
+
+
+
+         
+          </div>
+
+        </section>
+
+
+        <section class="analytics__maps">
+          <div class="analytics__mapLfet">
+          <span class="analytics__mapTitle">Doctor Wise Income</span>
+   
+          
+              <div style="margin-top: 5%"> 
+         <table class="table table-bordered">
+    <thead style="background-color: orange; color: white">
+      <tr>
+        <th scope="col">Practitioner</th>
+        <th scope="col">Group</th>
+        <th scope="col">Orders</th>
+        <th scope="col">Bills</th>
+
+        
+      </tr>
+    </thead>
+    <tbody id ="doctor_income_wise">
+
+    </tbody>
+  </table>
+  </div>
+          </div>
+
+
+
+         
+          </div>
+
+        </section>
+
+        <!-- <section class="analytics__maps">
+          <div class="analytics__mapLfet">
+          <span class="analytics__mapTitle">Patient Wise Income</span>
+   
+          
+              <div style="margin-top: 5%"> 
+         <table class="table table-bordered">
+    <thead style="background-color: lightblue; color: white">
+      <tr>
+        <th scope="col">Patient name</th>
+        <th scope="col">Group</th>
+        <th scope="col">Orders</th>
+        <th scope="col">Bills</th>
+
+        
+      </tr>
+    </thead>
+    <tbody id ="patient_income_wise">
+
+    </tbody>
+  </table>
+  </div>
+          </div>
+
+
+
+         
+          </div>
+
+        </section> -->
+
+
+        
+      </section>
+    </main>
+
+  
+  

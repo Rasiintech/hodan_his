@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-07 09:56:12.336331",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "time",
+  "r",
+  "l"
+ ],
+ "fields": [
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "r",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "R"
+  },
+  {
+   "fieldname": "l",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "L"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-07 09:56:12.336331",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Pacu total",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

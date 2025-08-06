@@ -1,0 +1,34 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-30 15:51:08.848693",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "data"
+ ],
+ "fields": [
+  {
+   "fieldname": "data",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Data",
+   "options": "Permanent",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-30 15:58:55.939692",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Permanent Upper Left",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

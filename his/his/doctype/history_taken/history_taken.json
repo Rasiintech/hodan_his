@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-30 16:36:54.907246",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "section_break_rf4hb",
+  "symptoms",
+  "column_break_3iqui",
+  "diagnosis",
+  "section_break_oi4sq",
+  "history_of_present_illness",
+  "past_medical_history",
+  "drug_history"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "symptoms",
+   "fieldtype": "Table MultiSelect",
+   "label": "Symptoms",
+   "options": "Patient Encounter Symptom"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "diagnosis",
+   "fieldtype": "Table MultiSelect",
+   "label": "Diagnosis",
+   "options": "Patient Encounter Diagnosis"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "history_of_present_illness",
+   "fieldtype": "Small Text",
+   "label": "History of present Illness"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "past_medical_history",
+   "fieldtype": "Small Text",
+   "label": "Past Medical History"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "drug_history",
+   "fieldtype": "Small Text",
+   "label": "Drug History"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "section_break_rf4hb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "column_break_3iqui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "section_break_oi4sq",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-30 16:39:05.957845",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "History Taken",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

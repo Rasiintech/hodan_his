@@ -1,0 +1,297 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-28 16:23:59.350292",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pid",
+  "name1",
+  "contact_number",
+  "age",
+  "sex",
+  "column_break_xiegc",
+  "date",
+  "primary_unit",
+  "weight",
+  "icu_day",
+  "consultation",
+  "cause_of_icu_admission",
+  "provisional_diagnosis",
+  "section_break_g6xvb",
+  "device",
+  "management_section",
+  "management",
+  "tube_section",
+  "tube",
+  "section_break_q6fon",
+  "vital_hr",
+  "section_break_oegvw",
+  "input",
+  "output_section",
+  "output_nurse_chart",
+  "balance_section",
+  "balance",
+  "care_section",
+  "care",
+  "mv_section",
+  "mv",
+  "drug_section",
+  "drug",
+  "drug2",
+  "drug2t",
+  "drug3",
+  "drug3t",
+  "case_sammary",
+  "nurse_note",
+  "nurse_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "pid",
+   "fieldtype": "Link",
+   "label": "PID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "pid.patient_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name "
+  },
+  {
+   "fetch_from": "pid.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date "
+  },
+  {
+   "fieldname": "primary_unit",
+   "fieldtype": "Data",
+   "label": "Primary unit "
+  },
+  {
+   "fetch_from": "pid.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex"
+  },
+  {
+   "fieldname": "column_break_xiegc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "icu_day",
+   "fieldtype": "Date",
+   "label": "ICU day"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Data",
+   "label": "Consultation"
+  },
+  {
+   "fetch_from": "pid.mobile_no",
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact number "
+  },
+  {
+   "fieldname": "section_break_g6xvb",
+   "fieldtype": "Section Break",
+   "label": "Device"
+  },
+  {
+   "fieldname": "cause_of_icu_admission",
+   "fieldtype": "Data",
+   "label": "Cause of ICU admission"
+  },
+  {
+   "fieldname": "provisional_diagnosis",
+   "fieldtype": "Data",
+   "label": "Provisional Diagnosis"
+  },
+  {
+   "fieldname": "section_break_q6fon",
+   "fieldtype": "Section Break",
+   "label": "Vitals"
+  },
+  {
+   "fieldname": "case_sammary",
+   "fieldtype": "Small Text",
+   "label": "Case sammary "
+  },
+  {
+   "fieldname": "nurse_note",
+   "fieldtype": "Small Text",
+   "label": "Nurse note"
+  },
+  {
+   "fieldname": "nurse_name",
+   "fieldtype": "Data",
+   "label": "Nurse Name"
+  },
+  {
+   "fieldname": "vital_hr",
+   "fieldtype": "Table",
+   "options": "Vital HR"
+  },
+  {
+   "fieldname": "section_break_oegvw",
+   "fieldtype": "Section Break",
+   "label": "Input"
+  },
+  {
+   "fieldname": "input",
+   "fieldtype": "Table",
+   "options": "Input"
+  },
+  {
+   "fieldname": "output_section",
+   "fieldtype": "Section Break",
+   "label": "Output"
+  },
+  {
+   "fieldname": "output_nurse_chart",
+   "fieldtype": "Table",
+   "options": "Output Nurse Chart"
+  },
+  {
+   "fieldname": "balance_section",
+   "fieldtype": "Section Break",
+   "label": "Balance"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Table",
+   "options": "Balance"
+  },
+  {
+   "fieldname": "care_section",
+   "fieldtype": "Section Break",
+   "label": "Care"
+  },
+  {
+   "fieldname": "care",
+   "fieldtype": "Table",
+   "options": "Care"
+  },
+  {
+   "fieldname": "mv_section",
+   "fieldtype": "Section Break",
+   "label": "MV"
+  },
+  {
+   "fieldname": "mv",
+   "fieldtype": "Table",
+   "options": "MV"
+  },
+  {
+   "fieldname": "drug_section",
+   "fieldtype": "Section Break",
+   "label": "Drug"
+  },
+  {
+   "fieldname": "drug",
+   "fieldtype": "Table",
+   "options": "Drug"
+  },
+  {
+   "fieldname": "device",
+   "fieldtype": "Table",
+   "options": "Device"
+  },
+  {
+   "fieldname": "management_section",
+   "fieldtype": "Section Break",
+   "label": "Management"
+  },
+  {
+   "fieldname": "management",
+   "fieldtype": "Table",
+   "options": "Management"
+  },
+  {
+   "fieldname": "tube_section",
+   "fieldtype": "Section Break",
+   "label": "Tube"
+  },
+  {
+   "fieldname": "tube",
+   "fieldtype": "Table",
+   "options": "Tube"
+  },
+  {
+   "fieldname": "drug2t",
+   "fieldtype": "Table",
+   "options": "Drug2"
+  },
+  {
+   "fieldname": "drug2",
+   "fieldtype": "Section Break",
+   "label": "Drug"
+  },
+  {
+   "fieldname": "drug3",
+   "fieldtype": "Section Break",
+   "label": "Drug"
+  },
+  {
+   "fieldname": "drug3t",
+   "fieldtype": "Table",
+   "options": "Drug3"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-26 10:20:44.232599",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Nurse Flow",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1",
+ "track_changes": 1
+}

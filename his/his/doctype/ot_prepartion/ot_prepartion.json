@@ -1,0 +1,278 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OT-PRE.#####",
+ "creation": "2023-04-01 09:58:58.009034",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "procedure_template",
+  "patient",
+  "patient_name",
+  "column_break_g3dpi",
+  "practitioner",
+  "practitioner_name",
+  "tab_break_zhwnj",
+  "section_break_pqjci",
+  "lab_investigations",
+  "tab_break_3jkok",
+  "section_break_sgnbg",
+  "imaging",
+  "consumable_tab",
+  "section_break_gcsu4",
+  "consumable_items",
+  "investigation_tab",
+  "section_break_l7y5f",
+  "lab_test",
+  "imaging_tab",
+  "section_break_0nc9p",
+  "radiology_prescription",
+  "medications_tab",
+  "section_break_ptk9z",
+  "drug_prescription",
+  "medication_so",
+  "reff_invoice",
+  "services_so",
+  "ot_schedule",
+  "aneasthesia",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_g3dpi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "practitioner.first_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Practitioner Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lab_investigations",
+   "fieldtype": "Table",
+   "label": "Lab Investigations",
+   "options": "Lab Test preparion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consumable_tab",
+   "fieldtype": "Tab Break",
+   "label": "Consumable "
+  },
+  {
+   "fieldname": "consumable_items",
+   "fieldtype": "Table",
+   "label": "Consumable Items",
+   "options": "Procedure Items"
+  },
+  {
+   "fieldname": "medication_so",
+   "fieldtype": "Link",
+   "label": "medication_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "services_so",
+   "fieldtype": "Link",
+   "label": "services_so",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OT Prepartion",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "reff_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "investigation_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Investigation"
+  },
+  {
+   "fieldname": "lab_test",
+   "fieldtype": "Table",
+   "label": "lab test",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "imaging_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Imaging"
+  },
+  {
+   "fieldname": "radiology_prescription",
+   "fieldtype": "Table",
+   "label": "Radiology prescription",
+   "options": "Radiology Prescription"
+  },
+  {
+   "fieldname": "medications_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Medications"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Drug Prescription",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "imaging",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Imaging",
+   "options": "Imaging Preparation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "procedure_template",
+   "fieldtype": "Link",
+   "label": "Procedure",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "ot_schedule",
+   "fieldtype": "Link",
+   "label": "OT Schedule",
+   "options": "OT Schedule",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "aneasthesia",
+   "fieldtype": "Check",
+   "label": "Aneasthesia",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tab_break_zhwnj",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Investigation Checklist",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tab_break_3jkok",
+   "fieldtype": "Tab Break",
+   "label": "Imaging Checklist"
+  },
+  {
+   "fieldname": "section_break_pqjci",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_sgnbg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_gcsu4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_l7y5f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_0nc9p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ptk9z",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-26 10:02:45.611582",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OT Prepartion",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "OT",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

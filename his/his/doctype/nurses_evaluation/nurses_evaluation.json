@@ -1,0 +1,437 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "NE-.#####",
+ "creation": "2025-07-24 16:52:47.648793",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_info",
+  "employee",
+  "employee_name",
+  "department",
+  "column_break_1",
+  "date_of_assessment",
+  "assessed_by",
+  "column_break_n0dhb",
+  "section_break_2",
+  "uses",
+  "comments_1",
+  "clearly_explains",
+  "comments__observations",
+  "actively_explains",
+  "comments_3",
+  "shares_important",
+  "comments_4",
+  "section_break_3",
+  "manages_own",
+  "comments_5",
+  "shows_empathy",
+  "comments_6",
+  "recognises",
+  "comments_7",
+  "section_break_4",
+  "greets",
+  "comments_8",
+  "responds",
+  "comments_9",
+  "personalizes",
+  "comments_10",
+  "deescalates",
+  "comments_11",
+  "section_break_5",
+  "follows",
+  "comments_12",
+  "section_break_xksua",
+  "b_accepts_responsibility_for_actions_and_decisions",
+  "comments_b_00",
+  "section_break_s6bzy",
+  "4_c",
+  "comments_c_00",
+  "section_break_3rjpd",
+  "4_d",
+  "comments_d_00",
+  "section_break_6",
+  "adjusts",
+  "comments_13",
+  "maintains",
+  "comments_14",
+  "section_break_7",
+  "identifies",
+  "comments_15",
+  "makes",
+  "comments_16",
+  "prioritizes",
+  "comments_17",
+  "section_break_8",
+  "overall",
+  "section_break_cbv7n",
+  "result"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainee's Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "date_of_assessment",
+   "fieldtype": "Date",
+   "label": "Date Of Assessment"
+  },
+  {
+   "fieldname": "assessed_by",
+   "fieldtype": "Data",
+   "label": "Assessed By"
+  },
+  {
+   "fieldname": "basic_info",
+   "fieldtype": "Section Break",
+   "label": "Trainee Basic Information"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_n0dhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "1-  Effective Communication:"
+  },
+  {
+   "fieldname": "uses",
+   "fieldtype": "Select",
+   "label": "A. Uses clear, respectful, and professional language with patients, families, and team",
+   "length": 5,
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_1",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "clearly_explains",
+   "fieldtype": "Select",
+   "label": "B. Clearly explains procedures and answers patient questions understandably.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments__observations",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "actively_explains",
+   "fieldtype": "Select",
+   "label": "C. Actively listens and responds appropriately to team members",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_3",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "shares_important",
+   "fieldtype": "Select",
+   "label": "D. Shares important information timely and accurately with team members.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_4",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "2. Emotional Intelligence"
+  },
+  {
+   "fieldname": "manages_own",
+   "fieldtype": "Select",
+   "label": "A.  Manages own emotions in stressful situations.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_5",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "shows_empathy",
+   "fieldtype": "Select",
+   "label": "B.  Shows empathy and emotional understanding towards patients.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_6",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "recognises",
+   "fieldtype": "Select",
+   "label": "C.  Recognizes and respects the emotions of patients and co-workers.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_7",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "3. Art of Dealing with Patients"
+  },
+  {
+   "fieldname": "greets",
+   "fieldtype": "Select",
+   "label": "A.  Greets and interacts with patients with warmth and professionalism.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_8",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "responds",
+   "fieldtype": "Select",
+   "label": "B.  Responds calmly and respectfully to patient concerns or complaints.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_9",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "personalizes",
+   "fieldtype": "Select",
+   "label": "C.   Personalizes care based on patient needs and preferences.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_10",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "deescalates",
+   "fieldtype": "Select",
+   "label": "D.  De-escalates tense situations using calm and respectful language.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_11",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "comments_12",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations "
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "4. Responsibility and Accountability"
+  },
+  {
+   "fieldname": "follows",
+   "fieldtype": "Select",
+   "label": "A.  Follows hospital protocols and completes assigned duties without reminders.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "5. Patient Personality"
+  },
+  {
+   "fieldname": "adjusts",
+   "fieldtype": "Select",
+   "label": "A.  Adjusts communication based on patient type (e.g., skeptical, anxious, dependent).",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_13",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "maintains",
+   "fieldtype": "Select",
+   "label": "B.  Maintains professionalism even with difficult personalities.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_14",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "6. Critical Thinking Skills"
+  },
+  {
+   "fieldname": "identifies",
+   "fieldtype": "Select",
+   "label": "A. Identifies patient problems and responds with appropriate nursing actions.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_15",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "makes",
+   "fieldtype": "Select",
+   "label": "B. Makes sound decisions based on patient assessments.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_16",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "prioritizes",
+   "fieldtype": "Select",
+   "label": "C. Prioritizes tasks based on urgency and patient needs.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_17",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Overall Comments from Supervisor:"
+  },
+  {
+   "fieldname": "overall",
+   "fieldtype": "Small Text",
+   "label": "Your Answer"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_cbv7n",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Data",
+   "label": "Result "
+  },
+  {
+   "fieldname": "b_accepts_responsibility_for_actions_and_decisions",
+   "fieldtype": "Select",
+   "label": "B. Accepts responsibility for actions and decisions.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_b_00",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "section_break_xksua",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_s6bzy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "4_c",
+   "fieldtype": "Select",
+   "label": "C. Reports to duty on time and completes assigned tasks without delay.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_c_00",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  },
+  {
+   "fieldname": "section_break_3rjpd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "4_d",
+   "fieldtype": "Select",
+   "label": "D. Accepts feedback and owns up to errors without defensiveness.",
+   "options": "2 = Excellent\n1 = Good\n0 = Poor"
+  },
+  {
+   "fieldname": "comments_d_00",
+   "fieldtype": "Small Text",
+   "label": "Comments / Observations"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-28 11:25:52.097327",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Nurses Evaluation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

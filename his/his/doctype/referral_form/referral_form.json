@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "FRP.#######",
+ "creation": "2022-04-04 11:03:38.809529",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "sex",
+  "age",
+  "department",
+  "pts_no",
+  "date",
+  "column_break_zh0e8",
+  "referred_by",
+  "referred_to",
+  "consultation",
+  "to",
+  "rtype",
+  "doctor",
+  "take_over",
+  "section_break_i20qm",
+  "dear__colleague_may_i_refer_to_you",
+  "requested",
+  "reply"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient ID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "referred_by",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Referred by"
+  },
+  {
+   "fetch_from": "patient_id.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To:Specialty"
+  },
+  {
+   "fieldname": "requested",
+   "fieldtype": "Small Text",
+   "label": "Reason for referral "
+  },
+  {
+   "fieldname": "rtype",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "referred_to",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Referred to"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department"
+  },
+  {
+   "fieldname": "pts_no",
+   "fieldtype": "Data",
+   "label": "Pts No"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Data",
+   "label": "Consultation"
+  },
+  {
+   "fieldname": "column_break_zh0e8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_i20qm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor ",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "take_over",
+   "fieldtype": "Data",
+   "label": " Take over"
+  },
+  {
+   "fieldname": "dear__colleague_may_i_refer_to_you",
+   "fieldtype": "Small Text",
+   "label": "Dear  colleague may I refer to you"
+  },
+  {
+   "fieldname": "reply",
+   "fieldtype": "Small Text",
+   "label": "Reply "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-04 13:36:13.633359",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Referral Form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

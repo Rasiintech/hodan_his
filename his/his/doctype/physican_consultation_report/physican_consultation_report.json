@@ -1,0 +1,340 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 14:08:51.191123",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pts_name",
+  "column_break_wdosu",
+  "pid",
+  "column_break_dwehb",
+  "dob",
+  "column_break_gytz6",
+  "mrp",
+  "section_break_30jqr",
+  "physican_consultation_report",
+  "section_break_1ibry",
+  "from",
+  "column_break_usuhh",
+  "to",
+  "column_break_ze5sg",
+  "date",
+  "section_break_tideo",
+  "timing_of_consultation",
+  "section_break_682qk",
+  "emergency",
+  "column_break_hb5er",
+  "urgent",
+  "column_break_mqtr7",
+  "routine",
+  "section_break_sjcjh",
+  "reason_for_referal",
+  "section_break_g5gxb",
+  "consultation_only",
+  "column_break_k9e0f",
+  "consultation_and_concurrent_care",
+  "column_break_vbmvw",
+  "consultation_and_transform_of_care",
+  "section_break_ztbns",
+  "clinical_information",
+  "section_break_se51s",
+  "current_medication",
+  "section_break_7sasi",
+  "referring_physician",
+  "column_break_5lhy9",
+  "consulting_physician_has_been_spoken_to",
+  "column_break_2672b",
+  "yes",
+  "column_break_a2x4t",
+  "no",
+  "column_break_drlno",
+  "section_break_lfgv4",
+  "date_2",
+  "section_break_3qyua",
+  "consultation_notes",
+  "section_break_8gtak",
+  "date_patient_seen",
+  "column_break_vhwm2",
+  "dr_name",
+  "section_break_1hbhx"
+ ],
+ "fields": [
+  {
+   "fieldname": "pts_name",
+   "fieldtype": "Data",
+   "label": "Pts Name"
+  },
+  {
+   "fieldname": "column_break_wdosu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pid",
+   "fieldtype": "Data",
+   "label": "PID"
+  },
+  {
+   "fieldname": "column_break_dwehb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "column_break_gytz6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "section_break_30jqr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "physican_consultation_report",
+   "fieldtype": "HTML",
+   "label": "physican consultation report",
+   "options": "physican consultation report"
+  },
+  {
+   "fieldname": "section_break_1ibry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "column_break_usuhh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "column_break_ze5sg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_tideo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "timing_of_consultation",
+   "fieldtype": "HTML",
+   "label": "Timing of consultation",
+   "options": "Timing of consultation"
+  },
+  {
+   "fieldname": "section_break_682qk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "emergency",
+   "fieldtype": "Check",
+   "label": "Emergency"
+  },
+  {
+   "fieldname": "column_break_hb5er",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "urgent",
+   "fieldtype": "Check",
+   "label": "Urgent"
+  },
+  {
+   "fieldname": "column_break_mqtr7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "routine",
+   "fieldtype": "Check",
+   "label": "Routine"
+  },
+  {
+   "fieldname": "section_break_sjcjh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason_for_referal",
+   "fieldtype": "HTML",
+   "label": "Reason for referal",
+   "options": "Reason for referal"
+  },
+  {
+   "fieldname": "section_break_g5gxb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "consultation_only",
+   "fieldtype": "Check",
+   "label": "Consultation Only"
+  },
+  {
+   "fieldname": "column_break_k9e0f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "consultation_and_concurrent_care",
+   "fieldtype": "Check",
+   "label": "Consultation and concurrent care"
+  },
+  {
+   "fieldname": "column_break_vbmvw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "consultation_and_transform_of_care",
+   "fieldtype": "Check",
+   "label": "Consultation and transform of care"
+  },
+  {
+   "fieldname": "section_break_ztbns",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "clinical_information",
+   "fieldtype": "Text",
+   "label": "Clinical Information"
+  },
+  {
+   "fieldname": "section_break_se51s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "current_medication",
+   "fieldtype": "Text",
+   "label": "Current medication"
+  },
+  {
+   "fieldname": "section_break_7sasi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "referring_physician",
+   "fieldtype": "Data",
+   "label": "Referring Physician"
+  },
+  {
+   "fieldname": "column_break_5lhy9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consulting_physician_has_been_spoken_to",
+   "fieldtype": "HTML",
+   "label": "Consulting Physician has been spoken to",
+   "options": "Consulting Physician has been spoken to:"
+  },
+  {
+   "fieldname": "column_break_2672b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "fieldname": "column_break_a2x4t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_drlno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_2",
+   "fieldtype": "Date",
+   "label": "date"
+  },
+  {
+   "fieldname": "section_break_3qyua",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_lfgv4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "consultation_notes",
+   "fieldtype": "Text",
+   "label": "Consultation notes"
+  },
+  {
+   "fieldname": "section_break_8gtak",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_patient_seen",
+   "fieldtype": "Date",
+   "label": "Date patient seen"
+  },
+  {
+   "fieldname": "column_break_vhwm2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dr_name",
+   "fieldtype": "Date",
+   "label": "Dr name"
+  },
+  {
+   "fieldname": "section_break_1hbhx",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-21 14:22:15.658497",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "physican consultation report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

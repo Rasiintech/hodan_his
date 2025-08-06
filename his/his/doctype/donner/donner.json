@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DON-.##### ",
+ "creation": "2023-12-20 11:14:51.269390",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "mobile",
+  "group",
+  "column_break_h67xu",
+  "patient2",
+  "recipient__name",
+  "blood_group",
+  "section_break_vmtep",
+  "lab_tests_tab",
+  "section_break_n6vlc",
+  "labs"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": " Donner",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Donner  name"
+  },
+  {
+   "fieldname": "group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Blood Group",
+   "options": "Blood Group",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "column_break_h67xu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient2",
+   "fieldtype": "Link",
+   "label": "Recipient ",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient2.patient_name",
+   "fieldname": "recipient__name",
+   "fieldtype": "Data",
+   "label": "Recipient  Name"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Link",
+   "label": "Blood Group",
+   "options": "Blood Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_vmtep",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lab_tests_tab",
+   "fieldtype": "Tab Break",
+   "label": "Lab Tests"
+  },
+  {
+   "fieldname": "section_break_n6vlc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "labs",
+   "fieldtype": "HTML",
+   "label": "Labs",
+   "options": "<div id=\"labs\">  </div>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-16 15:30:51.709411",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Donner",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
