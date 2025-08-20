@@ -10,7 +10,8 @@ def get_detailed_columns():
         {"label": _("Invoice Number"), "fieldname": "invoice_number", "fieldtype": "Link", "options": "Sales Invoice", "width": 150},
         {"label": _("Procedure Name"), "fieldname": "procedure_name", "fieldtype": "Link", "options": "Clinical Procedure Template",  "width": 200},  # Changed to Data for Procedure Name
         {"label": _("Medical Department"), "fieldname": "medical_department", "fieldtype": "Link", "options": "Medical Department", "width": 200},  # Changed to Data for Procedure Name
-        {"label": _("Rate"), "fieldname": "procedure_rate", "fieldtype": "Currency", "width": 100},
+        {"label": _("Procedure Rate"), "fieldname": "procedure_rate", "fieldtype": "Currency", "width": 100},
+        {"label": _("Anesthesia + OT Charge Rate"), "fieldname": "anesthesia_ot_rate", "fieldtype": "Currency", "width": 100},
         {"label": _("Net Rate"), "fieldname": "net_rate", "fieldtype": "Currency", "width": 100},
         {"label": _("Discount Amount"), "fieldname": "discount_amount", "fieldtype": "Currency", "width": 100},
     ]
@@ -27,6 +28,10 @@ def execute(filters=None):
         conditions.append(f"si.ref_practitioner = '{filters.get('practitioner')}'")
     if filters.get("medical_department"):
         conditions.append(f"cpt.medical_department = '{filters.get('medical_department')}'")
+    if filters.get("customer_group"):
+        conditions.append(f"si.customer_group = '{filters.get('customer_group')}'")
+    if filters.get("item_group"):
+        conditions.append(f"cpt.item_group = '{filters.get('item_group')}'")
     if filters.get("procedure_name"):
         conditions.append(f"cpt.template = '{filters.get('procedure_name')}'")
     if filters.get("from_date") and filters.get("to_date"):
@@ -38,10 +43,13 @@ def execute(filters=None):
             si.patient,
             si.patient_name,
             si.ref_practitioner,
+            si.customer_group AS customer_group,
             si.name AS invoice_number,
             cpt.template AS procedure_name,  # Correct field for procedure name
+            cpt.item_group AS item_group,
             cpt.medical_department AS medical_department,  # Correct field for procedure name
             ROUND(cpt.rate, 2) AS procedure_rate,      # Correct field for rate
+            ROUND(an.amount, 2) AS anesthesia_ot_rate,
             ROUND(sii.net_amount, 2) AS net_rate,
             ROUND((cpt.rate - sii.net_amount), 2) AS discount_amount
         FROM
@@ -50,9 +58,22 @@ def execute(filters=None):
             `tabSales Invoice Item` sii ON sii.parent = si.name
         JOIN
             `tabClinical Procedure Template` cpt ON cpt.template = sii.item_code
+        LEFT JOIN
+            `tabAneasthesia` an ON an.parent = cpt.template
         WHERE
             si.docstatus = 1
             {f"AND {' AND '.join(conditions)}" if conditions else ''}
+        GROUP BY
+            si.patient,
+            si.patient_name,
+            si.ref_practitioner,
+            si.customer_group,
+            si.name,
+            cpt.template,
+            cpt.item_group,
+            cpt.medical_department,
+            cpt.rate,
+            sii.net_amount
         ORDER BY
             si.posting_date
     """

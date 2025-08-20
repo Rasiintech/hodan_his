@@ -81,6 +81,9 @@ def check_out_inpatient(inpatient_record):
 		inpatient_record.save(ignore_permissions=True)
 		frappe.db.commit()  # Ensure changes are flushed
 
+		if inpatient_record.doctor_plan:
+			inpatient_record.doctor_plan.submit()
+
 		customer = frappe.db.get_value("Patient", inpatient_record.patient, "customer")
 		cust_gr = frappe.db.get_value("Customer", customer, "customer_group")
 		

@@ -6,37 +6,20 @@
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
- "filters": [
-  {
-   "default": "Today",
-   "fieldname": "Start_date",
-   "fieldtype": "Date",
-   "label": "From Date",
-   "mandatory": 1,
-   "wildcard_filter": 0
-  },
-  {
-   "default": "Today",
-   "fieldname": "End_date",
-   "fieldtype": "Date",
-   "label": "To Date",
-   "mandatory": 1,
-   "wildcard_filter": 0
-  }
- ],
+ "filters": [],
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "logo",
- "modified": "2025-03-20 07:50:06.701396",
+ "modified": "2025-08-07 09:39:55.455783",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Unbilled Procedures",
  "owner": "nasiye4@gmail.com",
  "prepared_report": 0,
- "query": "SELECT \n    S.name AS \"SN:Link/Sales Order:100\",\n    S.transaction_date AS \"Date:Date:100\", \n    S.patient AS \"Patient:Data:100\", \n    S.patient_name AS \"Patient Name:Data:220\", \n    P.mobile_no AS \"Mobile No:Data:120\",  -- Added mobile number from tabPatient\n    S.ref_practitioner AS \"Doctor:Data:200\", \n    S.medical_department AS \"Medical Department:Data:200\", \n    I.item_code AS \"Service Name:Data:250\", \n    I.item_group AS \"Service Type:Data:120\",\n    -- I.delivered_qty AS \"Delivered Quantity:Data:120\", \n    \n    -- CASE statement for the status based on qty\n    CASE \n        WHEN I.delivered_qty = 1 THEN 'Completed'\n        WHEN I.delivered_qty = 0 THEN 'To Deliver and Bill'\n        ELSE S.status\n    END AS \"Status:Data:120\",\n    \n    I.qty AS \"Qty\", \n    ROUND(I.rate, 2) AS \"Rate:Currency:100\", \n    ROUND(I.net_amount, 2) AS \"Net Rate:Currency:100\"\nFROM \n    `tabSales Order` S\nJOIN \n    `tabSales Order Item` I ON S.name = I.parent\nJOIN \n    `tabClinical Procedure Template` R ON I.item_code = R.name  \nLEFT JOIN \n    `tabPatient` P ON S.patient = P.name  -- Joining tabPatient to get mobile_no\nWHERE \n    S.docstatus = 1\n    AND S.transaction_date BETWEEN %(Start_date)s AND %(End_date)s;\n",
+ "query": "",
  "ref_doctype": "Sales Order",
  "report_name": "Unbilled Procedures",
- "report_type": "Query Report",
+ "report_type": "Script Report",
  "roles": [
   {
    "role": "Sales User"

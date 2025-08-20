@@ -21,13 +21,16 @@ def get_columns():
     ]
 
 def get_data(filters):
+    his_settings = frappe.get_doc("HIS Settings", "HIS Settings")
+    sales_expense = his_settings.sales_expense
+    # frappe.errprint(sales_expense)
     results = item_sales_register_execute({
         "from_date": filters.get("from_date"),
         "to_date": filters.get("to_date")
     })
 
     report_data = results[1]
-    frappe.errprint(report_data[0])  # Optional debug
+    # frappe.errprint(report_data[0])  # Optional debug
 
     # Step 1: Collect unique invoice numbers
     invoice_numbers = {row.get("invoice") for row in report_data if row.get("invoice")}
@@ -76,23 +79,29 @@ def get_data(filters):
 
     # Step 6: Format final output with full calculations
     output = []
+    net_sales=0
     for (ref_practitioner, item_group), gross_sales in grouped.items():
         commission_percent = flt(commission_percent_map.get((ref_practitioner, item_group), 0))
-        expense_percent = 25
+        expense_percent = sales_expense
         sales_expense_amount = flt(gross_sales * expense_percent / 100)
-        net_sales = flt(gross_sales - sales_expense_amount)
+        if item_group != "Consultation":
+            net_sales = flt(gross_sales - sales_expense_amount)
+        else:
+            sales_expense_amount=0
+            net_sales = flt(gross_sales)
+            
         net_commission = flt(net_sales * commission_percent / 100)
-
-        output.append(frappe._dict({
-            "ref_practitioner": ref_practitioner,
-            "item_group": item_group,
-            "gross_sales": gross_sales,
-            "expense_percent": expense_percent,
-            "sales_expense_amount": sales_expense_amount,
-            "net_sales": net_sales,
-            "commission_percent": commission_percent,
-            "net_commission": net_commission
-        }))
+        if commission_percent:
+            output.append(frappe._dict({
+                "ref_practitioner": ref_practitioner,
+                "item_group": item_group,
+                "gross_sales": round(gross_sales,2),
+                "expense_percent": sales_expense,
+                "sales_expense_amount": round(sales_expense_amount,2),
+                "net_sales": round(net_sales,2),
+                "commission_percent": commission_percent,
+                "net_commission": round(net_commission,2)
+            }))
 
     return output
 

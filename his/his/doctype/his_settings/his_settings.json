@@ -19,7 +19,11 @@
   "free_que_expense_account",
   "insurance_receivable_account",
   "debtors_account",
-  "employee_receivable"
+  "employee_receivable",
+  "discount_accounts_section",
+  "discount_account",
+  "commission_settings_section",
+  "sales_expense"
  ],
  "fields": [
   {
@@ -105,12 +109,33 @@
    "fieldtype": "Link",
    "label": "Employee Receivable",
    "options": "Account"
+  },
+  {
+   "fieldname": "commission_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Commission Settings"
+  },
+  {
+   "fieldname": "sales_expense",
+   "fieldtype": "Percent",
+   "label": "Sales Expense %"
+  },
+  {
+   "fieldname": "discount_accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Discount Accounts"
+  },
+  {
+   "fieldname": "discount_account",
+   "fieldtype": "Link",
+   "label": "Discount Account",
+   "options": "Account"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-07-20 10:38:32.114117",
+ "modified": "2025-08-10 08:22:25.497620",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "HIS Settings",

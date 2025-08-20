@@ -13,28 +13,28 @@
   "date",
   "questions_section",
   "r_s_01",
-  "r_s_why_1",
+  "why_1",
   "section_break_dk3ev",
   "r_s_02",
-  "r_s_why_2",
+  "why_2",
   "section_break_r2lum",
   "r_s_03",
-  "r_s_why_3",
+  "why_3",
   "section_break_g45lm",
   "r_s_04",
-  "r_s_why_4",
+  "why_4",
   "section_break_9yqfg",
   "r_s_05",
-  "r_s_why_5",
+  "why_5",
   "section_break_yovci",
   "r_s_06",
-  "r_s_why_6",
+  "why_6",
   "section_break_tvupr",
   "r_s_08",
-  "r_s_why_8",
+  "why_8",
   "section_break_jtwxj",
   "r_s_07",
-  "r_s_why_7"
+  "why_7"
  ],
  "fields": [
   {
@@ -43,11 +43,6 @@
    "in_list_view": 1,
    "label": "1. How would you rate the quality of care you received during your Radiology visit?",
    "options": "\nPoor\nFair\nVery good\nN/A"
-  },
-  {
-   "fieldname": "r_s_why_1",
-   "fieldtype": "Small Text",
-   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
   },
   {
    "fieldname": "gender",
@@ -84,11 +79,6 @@
    "options": "\nPoor\nFair\nVery good\nN/A"
   },
   {
-   "fieldname": "r_s_why_2",
-   "fieldtype": "Small Text",
-   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
-  },
-  {
    "fieldname": "section_break_r2lum",
    "fieldtype": "Section Break"
   },
@@ -97,12 +87,6 @@
    "fieldtype": "Select",
    "label": "3. How would you rate information provided Radiology staff about what to expect during your procedures & explanation of your tests?",
    "options": "\nPoor\nFair\nVery good\nN/A"
-  },
-  {
-   "fieldname": "r_s_why_3",
-   "fieldtype": "Small Text",
-   "in_list_view": 1,
-   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
   },
   {
    "fieldname": "section_break_g45lm",
@@ -115,11 +99,6 @@
    "options": "\nPoor\nFair\nVery good\nN/A"
   },
   {
-   "fieldname": "r_s_why_4",
-   "fieldtype": "Small Text",
-   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
-  },
-  {
    "fieldname": "section_break_9yqfg",
    "fieldtype": "Section Break"
   },
@@ -130,11 +109,6 @@
    "options": "\nPoor\nFair\nVery good\nN/A"
   },
   {
-   "fieldname": "r_s_why_5",
-   "fieldtype": "Small Text",
-   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
-  },
-  {
    "fieldname": "section_break_yovci",
    "fieldtype": "Section Break"
   },
@@ -143,11 +117,6 @@
    "fieldtype": "Select",
    "label": "6. How would you rate clarity of follow\u2011up instructions after Radiology tests, and timeliness\u202f&\u202feffectiveness of your results communication?",
    "options": "\nPoor\nFair\nVery good\nN/A"
-  },
-  {
-   "fieldname": "r_s_why_6",
-   "fieldtype": "Small Text",
-   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
   },
   {
    "fieldname": "section_break_tvupr",
@@ -161,11 +130,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "r_s_why_7",
-   "fieldtype": "Small Text",
-   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
-  },
-  {
    "fieldname": "section_break_jtwxj",
    "fieldtype": "Section Break"
   },
@@ -176,15 +140,51 @@
    "options": "\nPoor\nFair\nVery good\nN/A"
   },
   {
-   "fieldname": "r_s_why_8",
+   "fieldname": "why_1",
+   "fieldtype": "Small Text",
+   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
+  },
+  {
+   "fieldname": "why_2",
+   "fieldtype": "Small Text",
+   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
+  },
+  {
+   "fieldname": "why_3",
    "fieldtype": "Small Text",
    "in_list_view": 1,
+   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
+  },
+  {
+   "fieldname": "why_4",
+   "fieldtype": "Small Text",
+   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
+  },
+  {
+   "fieldname": "why_5",
+   "fieldtype": "Small Text",
+   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
+  },
+  {
+   "fieldname": "why_6",
+   "fieldtype": "Small Text",
+   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
+  },
+  {
+   "fieldname": "why_8",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
+  },
+  {
+   "fieldname": "why_7",
+   "fieldtype": "Small Text",
    "label": "If you answered \u201cPoor\u201d or \u201cFair,\u201d please explain:"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-20 14:32:56.239785",
+ "modified": "2025-08-16 15:18:04.586157",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Radiology Survey",

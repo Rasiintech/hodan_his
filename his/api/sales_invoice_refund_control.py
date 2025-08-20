@@ -98,7 +98,7 @@ def update_que_status(doc, method=None):
             
             # Get the associated "Sales Invoice" document    
             if not frappe.db.exists("Sales Invoice", sales_invoice_number):
-                frappe.log_error(f"Sales Invoice {sales_invoice_number} not found", "update_que_status Error")
+                # frappe.log_error(f"Sales Invoice {sales_invoice_number} not found", "update_que_status Error")
                 return
             
             sales_invoice = frappe.get_doc("Sales Invoice", sales_invoice_number)

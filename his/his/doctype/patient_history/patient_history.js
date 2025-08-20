@@ -91,11 +91,70 @@ frappe.ui.form.on('Patient History', {
 			// 	//perform desired action such as routing to new form or fetching etc.
 			//   }, __("IPD Forms"))
 
+			  frm.add_custom_button(__("Share to another Doctor"), function(){
+				// refer(frm);
+				let d = new frappe.ui.Dialog({
+				title: 'Refer Doctor',
+				fields: [
+					{
+						label: 'Consultant',
+						fieldname: 'practitioner',
+						fieldtype: 'Link',
+						options : "Healthcare Practitioner",
+						reqd : 1
+					},
+					{
+						label: 'Access',
+						fieldname: 'access',
+						fieldtype: 'Select',
+						options : "Give Access\nRemove Access",
+						reqd : 1
+					}
+				
+				],
+				size: 'small', // small, large, extra-large 
+				primary_action_label: 'Submit',
+				primary_action(values) {
+					d.hide();
+					// console.log()
+						// let inpatient_rec = frappe.get_doc('Inpatient Record', ip.name)
+						// inpatient_rec.ref_practitioner = "Dr Mohamed Dahir Aden"
+						// inpatient_rec.save()
+
+						frappe.call({
+							method: 'his.his.doctype.patient_history.patient_history.share',
+							args: {
+								'patient': frm.doc.patient,
+
+								'practitioner' : values.practitioner,
+								'doctype': "Inpatient Record",
+								'access': values.access
+								
+							},
+							callback: function(r) {
+								
+								// console.log(r)
+								// if (!r.exc) {
+								// 	// code snippet
+								// }
+							}
+						});
+						
+				}
+				 
+			});
+			
+			d.show();
+
+			
+				//perform desired action such as routing to new form or fetching etc.
+			  },__("Share or Refer"))
+
 			  frm.add_custom_button(__("Refer"), function(){
 				refer(frm);
 			
 				//perform desired action such as routing to new form or fetching etc.
-			  })
+			  },__("Share or Refer"))
 			if (frappe.user_roles.includes('Doctor') || frappe.user_roles.includes('Nurse')) {
 			var btn = frm.add_custom_button('Discharge', () => {
 				frappe.new_doc("Discharge Summary", { "patient": frm.doc.patient, "ref_practitioner": frm.doc.ref_practitioner, "doctor_plan": frm.doc.name })

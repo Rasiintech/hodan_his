@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:patient_name",
  "creation": "2024-11-27 11:09:09.272488",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,6 +10,7 @@
  "field_order": [
   "pid",
   "patient_name",
+  "age_type",
   "patient_age",
   "of_death",
   "column_break_bxz18",
@@ -34,28 +36,37 @@
   {
    "fieldname": "pid",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "PID",
-   "options": "Patient"
+   "options": "Patient",
+   "unique": 1
   },
   {
    "fetch_from": "pid.first_name",
    "fieldname": "patient_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Patient Name"
+   "label": "Patient Name",
+   "read_only": 1,
+   "unique": 1
   },
   {
    "fetch_from": "pid.p_age",
    "fieldname": "patient_age",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Patient Age"
+   "label": "Patient Age",
+   "read_only": 1
   },
   {
    "fieldname": "of_death",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": " POD",
-   "options": "\nDead On Arrival (DOA)\nDied In the Ward\nDied in the emergency\nDied in OR\nDied in ICU\nDied in NICU"
+   "options": "\nDead On Arrival (DOA)\nDied In the Ward\nDied in the emergency\nDied in OR\nDied in ICU\nDied in NICU",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_bxz18",
@@ -143,14 +154,23 @@
    "fieldname": "chief_medical_officer",
    "fieldtype": "Data",
    "label": "Chief Medical Officer"
+  },
+  {
+   "fetch_from": "pid.age_type",
+   "fieldname": "age_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age Type",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-29 13:48:38.012743",
+ "modified": "2025-08-11 13:38:07.788176",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Death Report Layout",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -180,5 +200,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "patient_name"
 }

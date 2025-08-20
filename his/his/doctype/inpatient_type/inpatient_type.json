@@ -10,7 +10,8 @@
  "engine": "InnoDB",
  "field_order": [
   "type",
-  "allowance"
+  "allowance",
+  "disabled"
  ],
  "fields": [
   {
@@ -25,11 +26,18 @@
    "fieldname": "allowance",
    "fieldtype": "Data",
    "label": "Allowance"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
+ "in_create": 1,
  "is_published_field": "type",
  "links": [],
- "modified": "2025-05-08 17:03:46.660880",
+ "modified": "2025-08-17 10:30:38.352593",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Inpatient Type",
@@ -49,7 +57,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -61,7 +68,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -73,7 +79,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,

@@ -10,6 +10,7 @@
   "patient",
   "patient_name",
   "sex",
+  "age_type",
   "age",
   "dob",
   "column_break_zu1be",
@@ -392,7 +393,8 @@
    "fetch_from": "patient.p_age",
    "fieldname": "age",
    "fieldtype": "Data",
-   "label": "Age"
+   "label": "Age",
+   "read_only": 1
   },
   {
    "fieldname": "previous_history_tab",
@@ -432,7 +434,8 @@
   {
    "fieldname": "date_of_admission",
    "fieldtype": "Datetime",
-   "label": "Date of Admission"
+   "label": "Date of Admission",
+   "read_only": 1
   },
   {
    "fieldname": "inpatient_record",
@@ -446,13 +449,21 @@
    "fetch_from": "patient.dob",
    "fieldname": "dob",
    "fieldtype": "Date",
-   "label": "Date of Birth"
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.age_type",
+   "fieldname": "age_type",
+   "fieldtype": "Data",
+   "label": "Age Type",
+   "read_only": 1
   }
  ],
  "hide_toolbar": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-07-31 10:28:06.241831",
+ "modified": "2025-08-13 10:25:55.873436",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Patient History",

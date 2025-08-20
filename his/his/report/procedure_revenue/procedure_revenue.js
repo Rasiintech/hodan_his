@@ -26,6 +26,13 @@ frappe.query_reports["Procedure Revenue"] = {
             "reqd": 0
         },
         {
+            "fieldname": "customer_group",
+            "label": __("Customer Group"),
+            "fieldtype": "Link",
+            "options": "Customer Group",
+            "reqd": 0
+        },
+        {
             "fieldname": "practitioner",
             "label": __("Practitioner"),
             "fieldtype": "Link",
@@ -37,6 +44,13 @@ frappe.query_reports["Procedure Revenue"] = {
             "label": __("Medical Department"),
             "fieldtype": "Link",
             "options": "Medical Department",
+            "reqd": 0
+        },
+        {
+            "fieldname": "item_group",
+            "label": __("Item Group"),
+            "fieldtype": "Link",
+            "options": "Item Group",
             "reqd": 0
         },
 		{

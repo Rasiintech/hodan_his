@@ -2,6 +2,9 @@ import frappe
 from frappe import _, msgprint
 from frappe.utils import flt
 def execute(filters=None):
+    his_settings = frappe.get_doc("HIS Settings", "HIS Settings")
+    sales_expense = his_settings.sales_expense
+    # frappe.errprint(sales_expense)
     if not filters:
         filters = {}
     
@@ -43,15 +46,18 @@ def execute(filters=None):
         for commission in commission_data:
             if item_group_record.item_group == commission["item_group"]:
                 original_total = item_group_record.total_amount
-                adjusted_total = original_total - (original_total * 0.25)
+                if item_group_record.item_group!= "Consultation":
+                    adjusted_total = original_total - (original_total * sales_expense / 100)
+                else:
+                    adjusted_total = original_total                    
                 net_commission = adjusted_total * (commission["percentage"] / 100)
                 
                 data.append({
                     "income_account": commission["income_account"],
                     "item_group": commission["item_group"],
-                    "total_amount": adjusted_total,
+                    "total_amount": round(adjusted_total,2),
                     "percentage": commission["percentage"],
-                    "net_commission": net_commission
+                    "net_commission": round(net_commission,2)
                 })
     
     return columns, data

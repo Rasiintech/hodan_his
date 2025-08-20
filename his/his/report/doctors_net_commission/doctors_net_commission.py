@@ -9,6 +9,8 @@ def execute(filters=None):
     return columns, data
 
 def get_data(filters):
+    his_settings = frappe.get_doc("HIS Settings", "HIS Settings")
+    expense_percent = his_settings.sales_expense
     results = item_sales_register_execute({
         "from_date": filters.get("from_date"),
         "to_date": filters.get("to_date")
@@ -65,19 +67,24 @@ def get_data(filters):
             for item in doc.get("commission", []):
                 if item.item_group:
                     commission_percent_map[(practitioner, item.item_group)] = item.percent
+                    
 
         except frappe.DoesNotExistError:
             continue
 
     # Step 5: Calculate per-doctor totals
     doctor_totals = {}
-    expense_percent = 25
+    # expense_percent = 25
+    
     for (ref_practitioner, item_group), gross_sales in grouped.items():
         if ref_practitioner not in practitioner_info:
             continue  # skip if not active or no commission
 
         commission_percent = flt(commission_percent_map.get((ref_practitioner, item_group), 0))
-        net_sales = flt(gross_sales * (1 - expense_percent / 100))
+        if item_group != "Consultation":
+            net_sales = flt(gross_sales * (1 - expense_percent / 100))
+        else:
+             net_sales = flt(gross_sales)
         net_commission = flt(net_sales * commission_percent / 100)
 
         if ref_practitioner not in doctor_totals:

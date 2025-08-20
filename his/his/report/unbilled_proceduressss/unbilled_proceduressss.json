@@ -1,0 +1,60 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-08-07 14:24:33.261294",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2025-08-07 14:41:13.456861",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Unbilled Proceduressss",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    S.name AS \"SN:Link/Sales Order:100\",\r\n    S.transaction_date AS \"Date:Date:100\", \r\n    S.patient AS \"Patient:Data:100\", \r\n    S.patient_name AS \"Patient Name:Data:220\", \r\n    P.mobile_no AS \"Mobile No:Data:120\",  \r\n    S.ref_practitioner AS \"Doctor:Data:200\", \r\n    S.medical_department AS \"Medical Department:Data:200\", \r\n    I.item_code AS \"Service Name:Data:250\", \r\n    SI.item_code AS \"Service Name In invoice:Data:250\", \r\n    I.item_group AS \"Service Type:Data:120\",\r\n\r\n    CASE \r\n        WHEN I.delivered_qty = 1 THEN 'Completed'\r\n        WHEN I.delivered_qty = 0 THEN 'To Deliver and Bill'\r\n        ELSE S.status\r\n    END AS \"Status:Data:120\",\r\n\r\n    I.qty AS \"Qty\", \r\n    SUM(ANS.amount) AS \"Anischarge:Currency:120\",\r\n    ROUND(R.rate, 2) AS \"Rate:Currency:100\"\r\nFROM \r\n    `tabSales Order` S\r\nJOIN \r\n    `tabSales Order Item` I ON S.name = I.parent\r\nJOIN \r\n    `tabSales Invoice Item` SI ON SI.so_detail = I.name\r\nJOIN \r\n    `tabClinical Procedure Template` R ON I.item_code = R.name  \r\nJOIN \r\n    `tabAneasthesia` ANS ON ANS.parent = R.name  \r\nLEFT JOIN \r\n    `tabPatient` P ON S.patient = P.name\r\nWHERE \r\n    S.docstatus = 1\r\n    AND S.transaction_date BETWEEN %(from)s AND %(to)s\r\nGROUP BY \r\n    R.name\r\n",
+ "ref_doctype": "Sales Order",
+ "report_name": "Unbilled Proceduressss",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Sales User"
+  },
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "Maintenance User"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "All"
+  }
+ ]
+}
