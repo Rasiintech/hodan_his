@@ -77,6 +77,8 @@ def get_data(filters):
     # expense_percent = 25
     
     for (ref_practitioner, item_group), gross_sales in grouped.items():
+        expense_percent = frappe.db.get_value("Healthcare Practitioner", ref_practitioner, "deduction_commission_percentage")  # Assuming a constant expense percentage
+
         if ref_practitioner not in practitioner_info:
             continue  # skip if not active or no commission
 

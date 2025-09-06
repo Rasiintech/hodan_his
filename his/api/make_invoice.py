@@ -17,7 +17,7 @@ def make_sales_invoice(source_name, target_doc=None, ignore_permissions=True):
 		target.is_pos = 1
 		target.cash = 1
 		target.sales_order = source_name
-		target.ignore_pricing_rule = 1
+		target.ignore_pricing_rule = 0
 		target.flags.ignore_permissions = True
 		target.run_method("set_missing_values")
 		target.run_method("set_po_nos")
@@ -106,7 +106,7 @@ def make_credit_invoice(source_name, target_doc=None, ignore_permissions=False):
 		target.is_pos = 0
 		target.update_stock = 1
 		target.is_cash = 0
-		target.ignore_pricing_rule = 1
+		target.ignore_pricing_rule = 0
 		target.flags.ignore_permissions = True
 		target.run_method("set_missing_values")
 		target.run_method("set_po_nos")
@@ -192,7 +192,7 @@ def make_credit_invoice_pd(source_name, target_doc=None, ignore_permissions=Fals
 		target.is_pos = 0
 		target.update_stock = 1
 		target.is_cash = 0
-		target.ignore_pricing_rule = 1
+		target.ignore_pricing_rule = 0
 		target.flags.ignore_permissions = True
 		target.run_method("set_missing_values")
 		target.run_method("set_po_nos")
@@ -286,7 +286,7 @@ def make_sales_invoice_direct(source_name , amount  , mode_of_payment = None, re
 			"amount" : amount
 		})
 		# target.discount_amount = discount
-		target.ignore_pricing_rule = 1
+		target.ignore_pricing_rule = 0
 		target.flags.ignore_permissions = True
 		target.run_method("set_missing_values")
 		target.run_method("set_po_nos")
@@ -372,7 +372,7 @@ def make_emergency_invoice(source_name, target_doc=None, ignore_permissions=True
 		
 		target.is_pos = 1
 		target.cash = 1
-		target.ignore_pricing_rule = 1
+		target.ignore_pricing_rule = 0
 		target.flags.ignore_permissions = True
 		target.run_method("set_missing_values")
 		target.run_method("set_po_nos")

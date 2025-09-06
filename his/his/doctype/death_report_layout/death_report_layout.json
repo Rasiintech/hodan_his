@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "field:patient_name",
  "creation": "2024-11-27 11:09:09.272488",
  "default_view": "List",
@@ -166,7 +165,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-11 13:38:07.788176",
+ "modified": "2025-08-31 10:50:50.647976",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Death Report Layout",

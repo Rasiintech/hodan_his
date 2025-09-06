@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "RADSUR-.####",
  "creation": "2025-07-16 10:34:57.331303",
  "default_view": "List",
@@ -184,7 +183,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-16 15:18:04.586157",
+ "modified": "2025-08-31 10:50:48.336113",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Radiology Survey",

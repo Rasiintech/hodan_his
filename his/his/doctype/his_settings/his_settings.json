@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "creation": "2023-03-23 16:32:25.119093",
  "default_view": "List",
  "doctype": "DocType",
@@ -135,7 +134,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-08-10 08:22:25.497620",
+ "modified": "2025-08-31 10:50:52.231451",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "HIS Settings",

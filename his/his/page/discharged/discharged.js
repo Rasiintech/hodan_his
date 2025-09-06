@@ -9,7 +9,7 @@ Disch = Class.extend(
 		init:function(wrapper){
 			this.page = frappe.ui.make_app_page({
 				parent : wrapper,
-				title: "Inpatient",
+				title: "Discharged",
 				single_column : true
 			});
 			this.groupbyD = []
@@ -25,228 +25,132 @@ Disch = Class.extend(
 			// this.grouping_cols()
 		},
 		make:function(){
+			let me = this;
 
-		
-			let me = this
-			// let date = this.page.add_field({
-			// 	fieldtype: 'Date',
-			
-			// 	fieldname: 'date',
-			// 	label : "Date",
-			// 	default: frappe.datetime.get_today(),
-				
-				
-			// 	change: () => {
-			// 		// alert()
-			// 		this.currDate = date.get_value()
-			// 		me.setupdata_table()
-			// 		// me.curMonth = field.get_value()
-			// 		// me.setup_datatable()
-			// 	}
-			// });
-   		
-   		
-			$(frappe.render_template(frappe.dashbard_page.body, me)).appendTo(me.page.main)
+			// Add Start Date field
+			let start_date_field = this.page.add_field({
+				fieldtype: 'Date',
+				fieldname: 'start_date',
+				label: 'Start Date',
+				default: frappe.datetime.get_today(),
+				change: () => {
+					// Update the selected start date value
+					this.startDate = start_date_field.get_value();
+					if (this.isTableReady) {
+						me.setupdata_table();  // Refresh the table with the updated date range
+					}
+				}
+			});
 
+			// Add End Date field
+			let end_date_field = this.page.add_field({
+				fieldtype: 'Date',
+				fieldname: 'end_date',
+				label: 'End Date',
+				default: frappe.datetime.get_today(),
+				change: () => {
+					// Update the selected end date value
+					this.endDate = end_date_field.get_value();
+					if (this.isTableReady) {
+						me.setupdata_table();  // Refresh the table with the updated date range
+					}
+				}
+			});
 
+			// Initialize the table after the fields are added
+			let dischargedHtml = `
+				<div class="container">
+					<div class="row">
+						<div id="discharged" style="min-width: 100%;"></div>
+					</div>
+				</div>
+			`;
+			$(dischargedHtml).appendTo(me.page.main);  // Append the table container
 
-
-		
+			// Set the flag to true once the table is ready
+			this.isTableReady = true;
+			me.setupdata_table();  // Initial data load
 		},
 
-		setupdata_table : function(gr_ref){
-			let currdate = this.currDate
-		let tbldata = []
-		frappe.db.get_list('Inpatient Record', {
-			fields: ['patient','patient_name', 'room' , 'bed' , 'admitted_datetime' , 'discharge_datetime' ,'admission_practitioner' ],
-			filters: {
-				status: 'Discharged'
-			},
-			limit : 1000
-		}).then(r => {
-			// console.log(r)
-			
-            // code snippet
-            // $(frappe.render_template(frappe.render_template('dashboard_page' ,{"data" : r.message }), me)).appendTo(me.page.main)
-			tbldata = r
-        // console.log(r)
-   
+		setupdata_table: function(gr_ref){
+			let currdate = this.currDate;
+			let startDate = this.startDate || frappe.datetime.get_today();  // Get selected start date
+			let endDate = this.endDate || frappe.datetime.get_today();  // Get selected end date
+			let tbldata = [];
 
-			// let doct ='Sales Order'.replace(' ' , '-').toLowerCase()
-		
-		 let me = this
-		//  let fields = frappe.get_meta("Sales Order").fields
-		 	columns = [
-			// {title:"ID", field:"name"},
-			// {title:"Patient", field:"customer"},
-			{title:"No", field:"id", formatter:"rownum"},
-			{title:"PID", field:"patient" ,  headerFilter:"input"},
-			{title:"Patient Name", field:"patient_name" ,  headerFilter:"input"},
-			{title:"Admitted Date", field:"admitted_datetime" ,  headerFilter:"input"},
-			{title:"Discharge Date", field:"discharge_datetime" ,  headerFilter:"input"},
-			{title:"Doctor Name", field:"admission_practitioner" ,  headerFilter:"input",},
-			{title:"Room", field:"room" ,  headerFilter:"input",},
-			
-			{title:"Bed", field:"bed" ,  headerFilter:"input",},
-			{title:"Status", field:"inpatient_status" ,  headerFilter:"input",},
-			{title:"Diagnosis", field:"diagnose" ,  headerFilter:"input",},
-			
+			// Fetch inpatient records with the date filter
+			frappe.db.get_list('Inpatient Record', {
+				fields: ['name', 'patient', 'patient_name', 'room', 'bed', 'admitted_datetime', 'discharge_datetime', 'admission_practitioner', 'diagnose'],
+				filters: {
+					status: 'Discharged',
+					discharge_datetime: ['between', [startDate, endDate]] // Filter by date range
+				},
+				limit: 1000
+			}).then(r => {
+				tbldata = r;
 
-			// {title:"Action", field:"action", hozAlign:"center" , formatter:"html"},
-			
-		 ]
-		//  fields.forEach(field => {
-		// 	if(field.in_list_view){
-		// 		columns.push(
-		// 			{title:field.label, field:field.fieldname}
-		// 		)
-		// 	}
-		//  })
-		// if(!gr_ref){
-		// 	columns.unshift(
-		// 		// {formatter:"responsiveCollapse", width:30, minWidth:30, hozAlign:"center", resizable:false, headerSort:false},
-    
-		// 		{formatter:"rowSelection", titleFormatter:"rowSelection", hozAlign:"left", headerSort:false, checked:function(e, cell){
-		// 			// cell.getRow().toggleSelect();
-		// 			// alert("ok 2")
-		// 			me.toggle_actions_menu_button(true);
-		// 		  }}
-		// 	)
-			
-			
-			
+				let me = this;
+				
+				// Fetch discharged_type for each inpatient record
+				let new_data = [];
+				let promises = tbldata.map(row => {
+					return frappe.db.get_value('Discharge Summary', { 'patient': row.patient }, 'discharged_type').then(res => {
+						row['discharged_type'] = res.message.discharged_type; // Set the discharged_type in the row
+						new_data.push(row); // Push the row with discharged_type to new_data
+					});
+				});
 
-		// }
-		// console.log("this is ",doctype)
-		let list_btns = frappe.listview_settings[`Sales Invoice`]
-		// tbldata = tbldata[0]['action'] = "Button"
-		let new_data = []
-		// if(list_btns)
-		// console.log(tbldata)
-		tbldata.forEach(row => {
-			// console.log(row.status)
-			// if(row.status === "To Deliver and Bill"){
-			// 	row.status = "To Bill"
+				// Wait for all promises to resolve
+				Promise.all(promises).then(() => {
+					// Define columns, using discharged_type instead of inpatient_status
+					let columns = [
+						{title: "No", field: "id", formatter: "rownum"},
+						{title: "PID", field: "patient", headerFilter: "input"},
+						{title: "Patient Name", field: "patient_name", headerFilter: "input"},
+						{title: "Admitted Date", field: "admitted_datetime", headerFilter: "input"},
+						{title: "Discharge Date", field: "discharge_datetime", headerFilter: "input"},
+						{title: "Doctor Name", field: "admission_practitioner", headerFilter: "input"},
+						{title: "Room", field: "room", headerFilter: "input"},
+						{title: "Bed", field: "bed", headerFilter: "input"},
+						{title: "Discharged Type", field: "discharged_type", headerFilter: "input"}, // Use discharged_type here
+						{title: "Diagnosis", field: "diagnose", headerFilter: "input"}
+					];
 
-			// }
-			// console.log("this is ",row.per_billed)
-			let btnhml = ''
-			// if(row.status !== "Draft" && row.status !== "Cancelled" && row.status!= "Completed" ){
-			
-			// btnhml += `
-			// <button class='btn btn-primary ml-2' onclick = "get_history('${row.patient }' , '${row.patient_name}')"> History</button>
-		
-			// <button class='btn btn-danger ml-2' onclick = "credit_sales('${row.name}')"> Ready To Surgery</button>
-			
-			// `
-			// }
-			// else{
-			// 	btnhml += `
-			// 	<div style="height: 100px; background-color: rgba(255,255,250);"> </div>
-		
-			
-			// `
+					// Initialize Tabulator with the updated columns
+					this.table = new Tabulator("#discharged", {
+						layout: "fitDataStretch",
+						rowHeight: 30, 
+						groupStartOpen: false,
+						printAsHtml: true,
+						groupHeader: function(value, count, data, group) {
+							return value + "<span style=' margin-left:0px;'>(" + count + "   )</span>";
+						},
+						groupToggleElement: "header",
+						textDirection: frappe.utils.is_rtl() ? "rtl" : "ltr",
+						pagination: "remote",  
+						paginationSize: 50,    
+						paginationDataSent: {
+							page: "page",      
+							size: "limit"      
+						},
+						paginationDataReceived: function(data) {
+							return {
+								rows: data.result, 
+								total: data.total   
+							};
+						},
+						columns: columns,
+						data: new_data // Use new_data which contains discharged_type
+					});
 
-			// }
-			// list_btns.forEach(btn => {
-			// 	btnhml += `<button class='btn btn-primary' > ${btn.get_label()}</button>`
-			// })
-			// for (const key in list_btns) {
-
-			// 	if (list_btns.hasOwnProperty(key) && list_btns[key].type == "btn") {
-			
-			// 		// console.log(`${key}: ${btn[key].get_label()}`);
-			// 		btnhml += `<button class='btn btn-${list_btns[key].color} ml-2' onclick = ""> ${list_btns[key].get_label()}</button>`
-			// 	}
-			// }
-			row['action'] = btnhml
-			new_data.push(row)
-		})
-		// console.log(columns)
-this.table = new Tabulator("#discharged", {
-			// layout:"fitDataFill",
-			layout:"fitDataStretch",
-			//  layout:"fitColumns",
-			// responsiveLayout:"collapse",
-			 rowHeight:30, 
-			//  selectable:true,
-			//  dataTree:true,
-			//  dataTreeStartExpanded:true,
-			 groupStartOpen:false,
-			 printAsHtml:true,
-			//  printHeader:`<img src = '/private/files/WhatsApp Image 2022-10-20 at 6.19.02 PM.jpeg'>`,
-			 printFooter:"<h2>Example Table Footer<h2>",
-			 // groupBy:"customer",
-			 groupHeader:function(value, count, data, group){
-				 //value - the value all members of this group share
-				 //count - the number of rows in this group
-				 //data - an array of all the row data objects in this group
-				 //group - the group component for the group
-			 // console.log(group)
-				 return value + "<span style=' margin-left:0px;'>(" + count + "   )</span>";
-			 },
-			 groupToggleElement:"header",
-			//  groupBy:groupbyD.length >0 ? groupbyD : "",
-			 textDirection: frappe.utils.is_rtl() ? "rtl" : "ltr",
-	 
-			 columns: columns,
-			 
-			 // [
-			 // 	{formatter:"rowSelection", titleFormatter:"rowSelection", hozAlign:"center", headerSort:false, cellClick:function(e, cell){
-			 // 		cell.getRow().toggleSelect();
-			 // 	  }},
-			 // 	{
-			 // 		title:"Name", field:"name", width:200,
-			 // 	},
-			 // 	{title:"Group", field:"item_group", width:200},
-			 // ],
-			 // [
-			 // {title:"Name", field:"name" , formatter:"link" , formatterParams:{
-			 // 	labelField:"name",
-			 // 	urlPrefix:`/app/${doct}/`,
-				 
-			 // }},
-			 // {title:"Customer", field:"customer" },
-			 // {title:"Total", field:"net_total" , bottomCalc:"sum",},
-		 
-			 // ],
-			 
-			 data: new_data
-		 });
-		 
-		 //  table.getSelectedData(); 
-		//  let row = this
-		//  this.table.on("rowClick", function(e ,rows){
-		// 	 let selectedRows = row.table.getSelectedRows(); 
-		// 	 // console.log(rows._row.data)
-		// 	//  console.log(row.table.getSelectedData())
-		// 	//  row.toggle_actions_menu_button(row.table.getSelectedData().length > 0);
-		// 	 frappe.set_route("Form" , doct , rows._row.data.name)
-		// 	 // document.getElementById("select-stats").innerHTML = data.length;
-		//    });
-		//    $(document).ready(function() {
-		// 	$('.tabulator input[type="checkbox"]').change(function() {
-		// 	//   alert ("The element with id " + this.id + " changed.");
-		// 	row.toggle_actions_menu_button(row.table.getSelectedData().length > 0);
-		//   });
-		  
-		// 	});
-		let row = this
-		this.table.on("rowClick", function(e ,rows){
-		   let target = e.target.nodeName
-		   //  let selectedRows = row.table.getSelectedRows(); 
-			// console.log(rows._row.data)
-		   //  console.log(row.table.getSelectedData())
-		   //  row.toggle_actions_menu_button(row.table.getSelectedData().length > 0);
-		  
-			frappe.new_doc("Patient History" , {patient: rows._row.data.patient})
-		
-			// document.getElementById("select-stats").innerHTML = data.length;
-		  });
-		
-	
-});
+					// Row click event handler
+					this.table.on("rowClick", function(e, rows) {
+						frappe.new_doc("Patient History", { patient: rows._row.data.patient })
+					});
+				});
+			});
 		},
+
 
 
 		make_grouping_btn:function(){
@@ -278,14 +182,6 @@ this.table = new Tabulator("#discharged", {
 				
 			})
 			$('.page-heade')
-			// 	<button type="button" class="btn btn-default btn-sm" data-toggle="dropdown">
-			// 	<span class="dropdown-text">Grouping by</span>
-			// 	<ul class="dropdown-menu dropdown-menu-right">
-				
-					
-			// 		${listitmes}
-			// 	</ul>
-			// </button>
 				$(`<div class="mt-2 sort-selector">
 				
 	

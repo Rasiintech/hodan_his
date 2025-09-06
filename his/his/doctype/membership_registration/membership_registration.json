@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "MEM-REG-.#####",
  "creation": "2025-03-06 11:01:14.817589",
  "default_view": "List",
@@ -45,14 +44,16 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Contact Number"
+   "label": "Contact Number",
+   "reqd": 1
   },
   {
    "fieldname": "card_number",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Card Number"
+   "label": "Card Number",
+   "reqd": 1
   },
   {
    "fieldname": "work_details_column",
@@ -106,7 +107,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-24 12:02:19.333647",
+ "modified": "2025-08-31 10:50:47.735117",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Membership Registration",

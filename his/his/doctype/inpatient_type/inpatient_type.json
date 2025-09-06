@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
- "allow_rename": 1,
  "autoname": "field:type",
  "creation": "2023-03-24 13:55:37.344577",
  "default_view": "List",
@@ -37,7 +36,7 @@
  "in_create": 1,
  "is_published_field": "type",
  "links": [],
- "modified": "2025-08-17 10:30:38.352593",
+ "modified": "2025-08-31 10:50:48.031658",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Inpatient Type",

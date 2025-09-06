@@ -12,9 +12,9 @@ def execute(filters=None):
 def get_columns():
     return [
         {"label": _("Item Group"), "fieldname": "item_group", "fieldtype": "Data", "width": 180},
-        {"label": _("Net Sales Amount"), "fieldname": "net_sales", "fieldtype": "Currency", "options": "currency", "width": 180},
+        {"label": _("Net Sales Amount"), "fieldname": "net_sales", "fieldtype": "Currency", "options": "currency", "width": 180, "precision": 2},
         {"label": _("Commission %"), "fieldname": "commission_percent", "fieldtype": "Percent", "width": 130},
-        {"label": _("Net Commission"), "fieldname": "net_commission", "fieldtype": "Currency", "options": "currency", "width": 150}
+        {"label": _("Net Commission"), "fieldname": "net_commission", "fieldtype": "Currency", "options": "currency", "width": 150, "precision": 2}
     ]
 
 def get_data(filters):
@@ -82,8 +82,14 @@ def get_data(filters):
     output = []
     for (ref_practitioner, item_group), gross_sales in grouped.items():
         commission_percent = flt(commission_percent_map.get((ref_practitioner, item_group), 0))
-        expense_percent = 25  # Assuming a constant expense percentage
+        # expense_percent = 25  # Assuming a constant expense percentage
+        expense_percent = frappe.db.get_value("Healthcare Practitioner", ref_practitioner, "deduction_commission_percentage")  # Assuming a constant expense percentage
         sales_expense_amount = flt(gross_sales * expense_percent / 100)
+        if item_group != "Consultation":
+            net_sales = flt(gross_sales - sales_expense_amount)
+        else:
+            sales_expense_amount=0
+            net_sales = flt(gross_sales)
         net_sales = flt(gross_sales - sales_expense_amount)
         net_commission = flt(net_sales * commission_percent / 100)
 

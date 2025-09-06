@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "EMP-REC-.#####",
  "creation": "2025-08-10 07:58:58.382926",
  "doctype": "DocType",
@@ -134,7 +133,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-10 08:35:26.223188",
+ "modified": "2025-08-31 10:50:51.920530",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Employee Receipt",

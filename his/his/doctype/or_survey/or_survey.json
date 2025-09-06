@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "ORSUR-.#####",
  "creation": "2025-07-16 12:45:52.585685",
  "default_view": "List",
@@ -250,7 +249,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-06 09:34:59.990497",
+ "modified": "2025-08-31 10:50:53.127061",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "OR Survey",
