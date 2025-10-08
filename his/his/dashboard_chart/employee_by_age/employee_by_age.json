@@ -1,0 +1,32 @@
+{
+ "chart_name": "Employee By Age",
+ "chart_type": "Custom",
+ "creation": "2025-02-23 18:12:37.203145",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{\"company\":\"frappe.defaults.get_user_default(\\\"Company\\\")\"}",
+ "filters_json": "{\"account\":\"Premier bank - HH\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "last_synced_on": "2025-09-22 09:17:31.374042",
+ "modified": "2025-09-22 09:23:13.927864",
+ "modified_by": "hhadmin@hodan.so",
+ "module": "HIS",
+ "name": "Employee By Age",
+ "number_of_groups": 0,
+ "owner": "hirsi801@gmail.com",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "source": "OPD Visits Trend",
+ "time_interval": "Daily",
+ "timeseries": 1,
+ "timespan": "Last Month",
+ "type": "Percentage",
+ "use_report_chart": 0,
+ "y_axis": []
+}

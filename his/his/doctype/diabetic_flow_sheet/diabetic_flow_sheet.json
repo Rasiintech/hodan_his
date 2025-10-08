@@ -30,6 +30,7 @@
   {
    "fieldname": "pid",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "PID",
    "options": "Patient"
   },
@@ -123,7 +124,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-29 09:28:33.673788",
+ "modified": "2025-09-21 10:32:43.417622",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Diabetic Flow Sheet",

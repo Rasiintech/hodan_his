@@ -419,6 +419,7 @@
    "options": "Sample Collection"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -513,7 +514,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-31 10:50:51.412670",
+ "modified": "2025-09-14 10:44:51.555597",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Lab Result",

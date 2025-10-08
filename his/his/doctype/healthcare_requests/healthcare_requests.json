@@ -267,6 +267,7 @@
    "label": "Procedure Request"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "procedure_prescription",
    "fieldtype": "Table",
    "label": "Procedure Prescription",
@@ -283,8 +284,7 @@
    "fieldname": "services_so",
    "fieldtype": "Link",
    "label": "services_so",
-   "options": "Sales Order",
-   "read_only": 1
+   "options": "Sales Order"
   },
   {
    "default": "User",
@@ -329,8 +329,7 @@
    "label": "Amended From",
    "no_copy": 1,
    "options": "Healthcare Requests",
-   "print_hide": 1,
-   "read_only": 1
+   "print_hide": 1
   },
   {
    "default": "0",
@@ -396,7 +395,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-31 10:50:46.851322",
+ "modified": "2025-09-27 11:57:33.998327",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Healthcare Requests",
@@ -411,7 +410,10 @@
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -425,6 +427,7 @@
   },
   {
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "if_owner": 1,
@@ -477,6 +480,8 @@
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,

@@ -39,7 +39,7 @@
    "in_standard_filter": 1,
    "label": "PID",
    "options": "Patient",
-   "unique": 1
+   "set_only_once": 1
   },
   {
    "fetch_from": "pid.first_name",
@@ -165,7 +165,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-31 10:50:50.647976",
+ "modified": "2025-09-24 16:11:28.326352",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Death Report Layout",
@@ -200,5 +200,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "patient_name"
+ "title_field": "patient_name",
+ "track_changes": 1
 }

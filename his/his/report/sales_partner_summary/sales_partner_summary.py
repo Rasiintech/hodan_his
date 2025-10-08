@@ -51,6 +51,7 @@ def get_entries(filters):
 			dt.sales_partner,
 			dt.commission_rate,
 			SUM((dt_item.base_net_amount * dt.commission_rate) / 100) AS commission
+
 		FROM
 			`tab{doctype}` dt
 		JOIN
@@ -63,6 +64,7 @@ def get_entries(filters):
 			AND dt.sales_partner IS NOT NULL
 			AND dt.sales_partner != ''
 			AND sp.partner_type = 'Employee'
+			AND dt.so_type="Cashiers"
 		GROUP BY
 			sp.employee_ids, dt.sales_partner, dt.commission_rate
 		ORDER BY

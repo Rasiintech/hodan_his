@@ -26,6 +26,8 @@ def get_data(filters):
             patient,
             patient_name,
             type,
+            room,
+            bed,
             admission_practitioner,
             SUBSTRING(admitted_datetime, 1, 19) AS admitted_datetime,
             SUBSTRING(discharge_datetime, 1, 19) AS discharge_datetime,
@@ -54,6 +56,18 @@ def get_columns():
             "label": ("Doctor"),
             "fieldtype": "Data",
             "fieldname": "admission_practitioner",
+            "width": 250,
+        },
+        {
+            "label": ("Room"),
+            "fieldtype": "Data",
+            "fieldname": "room",
+            "width": 250,
+        },
+        {
+            "label": ("Bed"),
+            "fieldtype": "Data",
+            "fieldname": "bed",
             "width": 250,
         },
         {

@@ -25,6 +25,7 @@
   {
    "fieldname": "pid",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Patient ID",
    "options": "Patient"
   },
@@ -92,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-13 11:50:05.087274",
+ "modified": "2025-09-21 10:25:29.555687",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Fluid Balance Record",

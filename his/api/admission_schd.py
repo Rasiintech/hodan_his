@@ -78,33 +78,7 @@ def schedule_inpatient(args):
     inpatient_record.save(ignore_permissions=True)
 
 
-    customer = frappe.db.get_value("Patient", inpatient_record.patient, "customer" )
-    patient_name = frappe.db.get_value("Patient", inpatient_record.patient, "patient_name" )
-    if not frappe.db.exists("Customer Group", patient_name+ "."):
-        customer_group = frappe.get_doc({
-            'doctype' : "Customer Group" ,
-            'customer_group_name' : patient_name + ".",
-            'debtor_type' : 'Inpatient' ,
-            'debtor_type' : 'Inpatient', 
-            'patient' : inpatient_record.patient,
-            'patient_name' : patient_name,
-
-        })
-        customer_group.insert(ignore_permissions=1)
-        # frappe.errprint(patient_name)
-
-        Customer_doc = frappe.get_doc('Customer', customer)
-        Customer_doc.customer_group= customer_group.name
-        Customer_doc.save()
-    else:
-        customer_group= frappe.get_doc("Customer Group", patient_name+ ".")
-        if customer_group.status== "Closed":
-            customer_group.status= "Active"
-            customer_group.save()
-        Customer_doc = frappe.get_doc('Customer', customer)
-        Customer_doc.customer_group= customer_group.name
-
-        Customer_doc.save()
+    
 
 
 @frappe.whitelist()
