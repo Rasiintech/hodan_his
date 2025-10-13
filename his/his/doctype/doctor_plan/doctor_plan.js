@@ -115,3 +115,15 @@ frappe.ui.form.on('Doctor Plan', {
         // your code here
     }
 })
+
+
+frappe.ui.form.on('IPD Drug Prescription', {
+	refresh(frm) {
+		// your code here
+	},
+    // before_drug_prescription_remove(frm, cdt, cdn) {
+    //     if (frappe.user_roles.includes('Academics User')) {
+    //         frappe.throw(__('You are not allowed to delete this medicine'));
+    //     }
+    // },
+})
