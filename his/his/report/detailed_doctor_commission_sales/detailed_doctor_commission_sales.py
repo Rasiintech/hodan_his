@@ -101,14 +101,14 @@ def get_item_group_data(filters):
 
 
 
-import frappe
-from erpnext.accounts.report.item_wise_sales_register.item_wise_sales_register import execute as item_sales_register_execute
+# import frappe
+# from erpnext.accounts.report.item_wise_sales_register.item_wise_sales_register import execute as item_sales_register_execute
 
-def execute(filters=None):
-    # You can pass filters directly or modify them
-    columns, data = item_sales_register_execute(filters)
+# def execute(filters=None):
+#     # You can pass filters directly or modify them
+#     columns, data = item_sales_register_execute(filters)
     
-    # Optionally filter or modify data here
-    filtered_data = [row for row in data if row[3] == "Some Item Code"]
+#     # Optionally filter or modify data here
+#     filtered_data = [row for row in data if row[3] == "Some Item Code"]
 
-    return columns, filtered_data
+#     return columns, filtered_data

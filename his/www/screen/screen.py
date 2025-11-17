@@ -140,7 +140,7 @@ def get_doctors():
         AND practitioner_name IN (
             SELECT practitioner_name FROM `tabHealthcare Practitioner` WHERE doctor_room = '{room}'
         )
-    ORDER BY modified DESC
+    ORDER BY modified ASC
     """
     que = frappe.db.sql(query_que, as_dict=True)
 

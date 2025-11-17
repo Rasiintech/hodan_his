@@ -31,6 +31,7 @@
   "practitioner_name",
   "referring_practitioner",
   "department",
+  "er_type",
   "type",
   "doctor_amount",
   "bill_to",
@@ -156,7 +157,8 @@
    "fieldtype": "Link",
    "hidden": 1,
    "label": "Sales Invoice",
-   "options": "Sales Invoice"
+   "options": "Sales Invoice",
+   "read_only": 1
   },
   {
    "fieldname": "status",
@@ -527,11 +529,19 @@
    "fieldtype": "Check",
    "label": "Is Refer",
    "set_only_once": 1
+  },
+  {
+   "depends_on": "eval: doc.department == \"Accident And Emergency Care\"",
+   "fieldname": "er_type",
+   "fieldtype": "Select",
+   "label": "ER Type",
+   "mandatory_depends_on": "eval: doc.department == \"Accident And Emergency Care\"",
+   "options": "\nAdult\nPediatric\nOBS/GYN"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-22 12:38:15.528750",
+ "modified": "2025-11-01 15:05:23.206472",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Que",

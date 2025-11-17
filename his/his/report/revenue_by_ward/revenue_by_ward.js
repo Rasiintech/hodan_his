@@ -20,7 +20,7 @@ frappe.query_reports["Revenue by Ward"] = {
 			"fieldname": "ward",
 			"label": "Ward",
 			"fieldtype": "Link",
-			"options": "Ward"
+			"options": "Wards"
 		}
 	]
 };

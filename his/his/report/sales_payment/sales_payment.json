@@ -1,0 +1,34 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-10-14 14:54:26.385873",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2025-10-14 14:59:14.238966",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Sales Payment",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "/* Today's Sales & Receipts summary (includes returns subtraction + Journal Entries)\r\n   Assumptions: \"2025-10-01\" = report date; replace with explicit date if needed.\r\n*/\r\n\r\nWITH\r\n  cash_accounts AS (\r\n    SELECT name FROM `tabAccount` WHERE account_type IN ('Bank','Cash')\r\n  ),\r\n  income_accounts AS (\r\n    SELECT name FROM `tabAccount` WHERE account_type = 'Income'\r\n  ),\r\n  sales_totals AS (\r\n    SELECT\r\n      COALESCE(SUM(CASE WHEN si.is_return = 1 THEN -si.base_grand_total ELSE si.base_grand_total END),0) AS sales_invoices_net\r\n    FROM `tabSales Invoice` si\r\n    WHERE si.docstatus = 1\r\n      AND si.posting_date = '2025-10-01'\r\n  ),\r\n  je_sales AS (\r\n    SELECT\r\n      COALESCE(SUM(jea.credit),0) AS je_credit_income\r\n    FROM `tabJournal Entry` je\r\n    JOIN `tabJournal Entry Account` jea ON jea.parent = je.name\r\n    WHERE je.docstatus = 1\r\n      AND je.posting_date = '2025-10-01'\r\n      AND jea.party_type = 'Customer'\r\n      AND jea.account IN (SELECT name FROM income_accounts)\r\n  ),\r\n  pe_totals AS (\r\n    SELECT\r\n      COALESCE(SUM(pe.received_amount),0) AS total_pe_receipts_posted_today\r\n    FROM `tabPayment Entry` pe\r\n    WHERE pe.docstatus = 1\r\n      AND pe.posting_date = '2025-10-01'\r\n      AND pe.payment_type = 'Receive'\r\n  ),\r\n  pe_applied AS (\r\n    SELECT\r\n      COALESCE(SUM(CASE WHEN s.posting_date = '2025-10-01' THEN per.allocated_amount ELSE 0 END),0) AS pe_alloc_to_today_invoices,\r\n      COALESCE(SUM(CASE WHEN s.posting_date < '2025-10-01' THEN per.allocated_amount ELSE 0 END),0) AS pe_alloc_to_prev_invoices,\r\n      COALESCE(SUM(CASE WHEN (pe.mode_of_payment = 'Cash' OR s.is_pos = 1) AND s.posting_date = '2025-10-01' THEN per.allocated_amount ELSE 0 END),0) AS pe_cash_alloc_to_today_invoices,\r\n      COALESCE(SUM(CASE WHEN NOT (pe.mode_of_payment = 'Cash' OR s.is_pos = 1) AND s.posting_date = '2025-10-01' THEN per.allocated_amount ELSE 0 END),0) AS pe_noncash_alloc_to_today_invoices\r\n    FROM `tabPayment Entry` pe\r\n    JOIN `tabPayment Entry Reference` per ON per.parent = pe.name\r\n    JOIN `tabSales Invoice` s ON per.reference_name = s.name AND per.reference_doctype = 'Sales Invoice'\r\n    WHERE pe.docstatus = 1\r\n      AND pe.posting_date = '2025-10-01'\r\n  ),\r\n  je_receipts AS (\r\n    SELECT\r\n      COALESCE(SUM(jea.credit),0) AS je_total_cashcredits,\r\n      COALESCE(SUM(CASE WHEN jea.against_voucher IS NOT NULL AND jea.against_voucher_doctype = 'Sales Invoice' AND s2.posting_date = '2025-10-01' THEN jea.credit ELSE 0 END),0) AS je_alloc_to_today_invoices,\r\n      COALESCE(SUM(CASE WHEN jea.against_voucher IS NOT NULL AND jea.against_voucher_doctype = 'Sales Invoice' AND s2.posting_date < '2025-10-01' THEN jea.credit ELSE 0 END),0) AS je_alloc_to_prev_invoices\r\n    FROM `tabJournal Entry` je\r\n    JOIN `tabJournal Entry Account` jea ON jea.parent = je.name\r\n    LEFT JOIN `tabSales Invoice` s2 ON jea.against_voucher = s2.name AND jea.against_voucher_doctype = 'Sales Invoice'\r\n    WHERE je.docstatus = 1\r\n      AND je.posting_date = '2025-10-01'\r\n      AND jea.party_type = 'Customer'\r\n      AND jea.account IN (SELECT name FROM cash_accounts)\r\n  )\r\nSELECT\r\n  st.sales_invoices_net + COALESCE(js.je_credit_income,0) AS total_sales_today_incl_je_sales,\r\n  COALESCE(peap.pe_cash_alloc_to_today_invoices,0) + COALESCE(jr.je_alloc_to_today_invoices,0) AS cash_collected_against_today_sales,\r\n  COALESCE(peap.pe_noncash_alloc_to_today_invoices,0) AS noncash_collected_against_today_sales,\r\n  (st.sales_invoices_net + COALESCE(js.je_credit_income,0)) \r\n    - (COALESCE(peap.pe_alloc_to_today_invoices,0) + COALESCE(jr.je_alloc_to_today_invoices,0)) AS unpaid_amount_of_today_sales,\r\n  COALESCE(pt.total_pe_receipts_posted_today,0) + COALESCE(jr.je_total_cashcredits,0) AS total_receipts_posted_today,\r\n  COALESCE(peap.pe_alloc_to_today_invoices,0) + COALESCE(jr.je_alloc_to_today_invoices,0) AS receipts_posted_today_for_todays_sales,\r\n  COALESCE(peap.pe_alloc_to_prev_invoices,0) + COALESCE(jr.je_alloc_to_prev_invoices,0) AS receipts_posted_today_for_previous_sales\r\nFROM sales_totals st\r\nCROSS JOIN je_sales js\r\nCROSS JOIN pe_totals pt\r\nCROSS JOIN pe_applied peap\r\nCROSS JOIN je_receipts jr\r\n",
+ "ref_doctype": "GL Entry",
+ "report_name": "Sales Payment",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Auditor"
+  }
+ ]
+}

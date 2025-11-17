@@ -43,6 +43,7 @@
  ],
  "fields": [
   {
+   "allow_on_submit": 1,
    "fieldname": "patient",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -51,6 +52,7 @@
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fetch_from": "patient.patient_name",
    "fieldname": "patient_name",
    "fieldtype": "Data",
@@ -63,6 +65,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fetch_from": "patient.p_age",
    "fieldname": "age",
    "fieldtype": "Data",
@@ -143,6 +146,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "reff_invoice",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -256,7 +260,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-31 14:06:20.810544",
+ "modified": "2025-10-29 11:54:24.892597",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Radiology",

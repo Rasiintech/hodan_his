@@ -15,6 +15,8 @@ def transfer_patient(inpatient_record, service_unit, check_in, inpatient_type):
 	item_line.check_in = check_in
 	inpatient_record.type =inpatient_type
 	inpatient_record.bed = service_unit
+	inpatient_record.type = inpatient_type
+	
 	inpatient_record.room = frappe.db.get_value("Healthcare Service Unit",service_unit,"service_unit_type")
 	frappe.db.set_value("Healthcare Service Unit", service_unit, "patient", inpatient_record.patient)
 

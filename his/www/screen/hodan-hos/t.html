@@ -276,6 +276,8 @@
                         queueList = data.message.que || [];
                         doctors = data.message.doctors || [];
                         calledQueue = data.message.by_doc_call || {};
+
+                        console.log(queueList)
                         
                         updateDisplay(); // Update only if there is a change
                     }

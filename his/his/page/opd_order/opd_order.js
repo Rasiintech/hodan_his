@@ -131,6 +131,10 @@ OpdOrder = Class.extend(
 				<button class='btn btn-success ml-2' onclick = 'frappe.utils.print("Sales Order","${row.name}","drug","logo")'> Print</button>
 				
 			`	
+				btnhml += `
+				<button class='btn btn-success ml-2' onclick = 'frappe.utils.print("Sales Order","${row.name}","sticker","logo")'> Sticker</button>
+				
+			`	
 			
 			// }
 			if(row.status !== "Draft" && row.status !== "Cancelled" && row.per_billed < 100 ){

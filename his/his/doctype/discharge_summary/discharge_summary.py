@@ -37,7 +37,8 @@ class DischargeSummary(Document):
 
                         # Convert the difference to hours
                         hours_difference = round(time_difference.total_seconds() / 3600)
-
+                if hours_difference <= 0:
+                    hours_difference = 1  # ensure at least 1 hour charge
                 room = frappe.get_doc("Healthcare Service Unit Type" , inpatient_record.room)
                 if inpatient_record.status == "Admitted":
                     if inpatient_record.type == "Day Care":

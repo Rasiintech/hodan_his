@@ -19,10 +19,11 @@
   "insurance_receivable_account",
   "debtors_account",
   "employee_receivable",
+  "commission_settings_section",
+  "sales_expense",
   "discount_accounts_section",
   "discount_account",
-  "commission_settings_section",
-  "sales_expense"
+  "payment_entry_discount_level"
  ],
  "fields": [
   {
@@ -122,19 +123,25 @@
   {
    "fieldname": "discount_accounts_section",
    "fieldtype": "Section Break",
-   "label": "Discount Accounts"
+   "label": "Discount Levels"
   },
   {
    "fieldname": "discount_account",
    "fieldtype": "Link",
-   "label": "Discount Account",
+   "label": "Default  Discount Account",
    "options": "Account"
+  },
+  {
+   "fieldname": "payment_entry_discount_level",
+   "fieldtype": "Table",
+   "label": "Payment Entry Discount Level",
+   "options": "PE Discount Level"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-08-31 10:50:52.231451",
+ "modified": "2025-11-11 12:28:30.551034",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "HIS Settings",

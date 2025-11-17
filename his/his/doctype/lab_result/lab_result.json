@@ -98,11 +98,11 @@
    "in_standard_filter": 1,
    "label": "Patient Name",
    "print_hide": 1,
+   "read_only": 1,
    "report_hide": 1,
    "reqd": 1
   },
   {
-   "allow_on_submit": 1,
    "fetch_from": "patient.p_age",
    "fieldname": "patient_age",
    "fieldtype": "Data",
@@ -123,6 +123,7 @@
    "report_hide": 1
   },
   {
+   "allow_on_submit": 1,
    "fetch_from": "patient.inpatient_record",
    "fieldname": "inpatient_record",
    "fieldtype": "Link",
@@ -514,7 +515,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-14 10:44:51.555597",
+ "modified": "2025-10-29 12:35:18.565730",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Lab Result",

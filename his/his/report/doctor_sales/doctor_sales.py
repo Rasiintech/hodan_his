@@ -26,6 +26,10 @@ def _execute(filters, additional_table_columns=None, additional_query_columns=No
 		invoice_list, additional_table_columns
 	)
 
+	# Prefetch practitioner -> medical_department
+	practitioners = [inv.ref_practitioner for inv in invoice_list if inv.ref_practitioner]
+	practitioner_dept_map = get_practitioner_department_map(practitioners)
+
 	if not invoice_list:
 		msgprint(_("No record found"))
 		return columns, []
@@ -48,6 +52,7 @@ def _execute(filters, additional_table_columns=None, additional_query_columns=No
 			# Initialize a new row for the ref_practitioner if not already present
 			data[ref_practitioner] = {
 				"ref_practitioner": ref_practitioner,
+				"medical_department": practitioner_dept_map.get(ref_practitioner, ""),
 				"sales_order": set(),
 				"delivery_note": set(),
 				"cost_center": set(),
@@ -115,6 +120,17 @@ def _execute(filters, additional_table_columns=None, additional_query_columns=No
 		final_data.append(row)
 
 	return columns, final_data
+
+def get_practitioner_department_map(practitioner_names):
+    if not practitioner_names:
+        return {}
+    rows = frappe.get_all(
+        "Healthcare Practitioner",
+        filters={"name": ["in", list(set(practitioner_names))]},
+        fields=["name", "department"],
+    )
+    return {r.name: r.department for r in rows}
+
 def get_columns(invoice_list, additional_table_columns):
 	"""return columns based on filters"""
 	columns = [
@@ -128,7 +144,8 @@ def get_columns(invoice_list, additional_table_columns):
 	columns += [
 	
 		
-		{"label": _("Doctor"), "fieldname": "ref_practitioner", "fieldtype": "Data", "width": 150},
+		{"label": _("Doctor"), "fieldname": "ref_practitioner", "fieldtype": "Link", "options": "Healthcare Practitioner", "width": 150},
+		{"label": _("Medical Department"), "fieldname": "medical_department", "fieldtype": "Link", "options": "Medical Department", "width": 150},
 	
 
 	]
@@ -245,11 +262,11 @@ def get_columns(invoice_list, additional_table_columns):
 
 	columns = (
 		columns
-		+ income_columns
-		+ unrealized_profit_loss_account_columns
 		+ net_total_column
-		+ tax_columns
 		+ total_columns
+		+ income_columns
+		+ unrealized_profit_loss_account_columns	
+		+ tax_columns	
 	)
 	
 	return columns, income_accounts, tax_accounts, unrealized_profit_loss_accounts
