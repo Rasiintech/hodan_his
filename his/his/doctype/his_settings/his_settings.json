@@ -23,6 +23,9 @@
   "sales_expense",
   "discount_accounts_section",
   "discount_account",
+  "column_break_egb0x",
+  "add_si",
+  "section_break_rf4xx",
   "payment_entry_discount_level"
  ],
  "fields": [
@@ -136,12 +139,26 @@
    "fieldtype": "Table",
    "label": "Payment Entry Discount Level",
    "options": "PE Discount Level"
+  },
+  {
+   "fieldname": "column_break_egb0x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "add_si",
+   "fieldtype": "Check",
+   "label": "Add SI "
+  },
+  {
+   "fieldname": "section_break_rf4xx",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-11-11 12:28:30.551034",
+ "modified": "2025-11-25 13:39:26.098262",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "HIS Settings",

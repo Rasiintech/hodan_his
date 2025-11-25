@@ -74,6 +74,7 @@
   {
    "fieldname": "date",
    "fieldtype": "Date",
+   "in_standard_filter": 1,
    "label": "Date"
   },
   {
@@ -84,6 +85,7 @@
   {
    "fieldname": "date_of_death",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date Of Death"
   },
   {
@@ -165,7 +167,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-24 16:11:28.326352",
+ "modified": "2025-11-24 17:13:00.569246",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Death Report Layout",

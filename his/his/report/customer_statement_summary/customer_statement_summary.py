@@ -11,6 +11,12 @@ from collections import defaultdict
 
 from datetime import datetime
 
+his_settings = frappe.get_doc("HIS Settings", "HIS Settings")
+INCLUDE_SI_DISCOUNTS = his_settings.add_si
+# frappe.errprint(INCLUDE_SI_DISCOUNTS)
+# 👉 Toggle: include Sales Invoice header discounts in this report?
+# INCLUDE_SI_DISCOUNTS = False  # set to True if you want SI discounts back
+
 def execute(filters=None):
     company = filters.get("company")
     from_date = filters.get("from_date")
@@ -43,7 +49,7 @@ def execute(filters=None):
     columns = get_columns()
 
     transformed_data, total_discount_si, total_discount_pe, opening_discount_total, opening_payment_discount_total = transform_data_with_balance(gl_data, from_date, customer)
-    data = group_by_item_group(transformed_data, total_discount_si, total_discount_pe, opening_discount_total, opening_payment_discount_total)
+    data = group_by_item_group(transformed_data, total_discount_si, total_discount_pe, opening_discount_total, opening_payment_discount_total, include_si_discounts=INCLUDE_SI_DISCOUNTS)
     return columns, data
     
 def get_columns():
@@ -63,7 +69,7 @@ def get_columns():
         {"label": _("Discounts Made"), "fieldname": "discount_made", "fieldtype": "Currency", "width": 120},
     ]
 
-def group_by_item_group(data, total_discount_si, total_discount_pe, opening_discount_total, opening_payment_discount_total):
+def group_by_item_group(data, total_discount_si, total_discount_pe, opening_discount_total, opening_payment_discount_total,include_si_discounts=True,):
     
     grouped = defaultdict(lambda: {"debit": 0.0, "credit": 0.0, "discount_made": 0.0})
     opening_rows = []
@@ -76,23 +82,55 @@ def group_by_item_group(data, total_discount_si, total_discount_pe, opening_disc
         voucher_no = (row.get("voucher_no") or "").strip().strip("'").strip('"')
         voucher_type = row.get("voucher_type") or ""
 
+        # if account == "Opening" or voucher_no == "Opening":
+        #     row["balance"] = row.get("debit", 0.0) - row.get("credit", 0.0)
+        #     row["discount_made"] = opening_discount_total + opening_payment_discount_total
+        #     opening_rows.append(row)
+        #     continue
+
+        # elif account == "Total":
+        #     row["balance"] = row.get("debit", 0.0) - row.get("credit", 0.0)
+        #     row["discount_made"] = total_discount_si + total_discount_pe
+        #     ending_rows.append(row)
+        #     continue
+
+        # elif account == "Closing (Opening + Total)":
+        #     row["balance"] = row.get("debit", 0.0) - row.get("credit", 0.0)
+        #     row["discount_made"] = opening_discount_total + total_discount_pe + total_discount_si + opening_payment_discount_total
+        #     ending_rows.append(row)
+        #     continue
+
         if account == "Opening" or voucher_no == "Opening":
             row["balance"] = row.get("debit", 0.0) - row.get("credit", 0.0)
-            row["discount_made"] = opening_discount_total + opening_payment_discount_total
+            # Only include SI discounts if enabled
+            row["discount_made"] = (
+                opening_discount_total + opening_payment_discount_total
+                if include_si_discounts
+                else opening_payment_discount_total
+            )
             opening_rows.append(row)
             continue
 
         elif account == "Total":
             row["balance"] = row.get("debit", 0.0) - row.get("credit", 0.0)
-            row["discount_made"] = total_discount_si + total_discount_pe
+            row["discount_made"] = (
+                total_discount_si + total_discount_pe
+                if include_si_discounts
+                else total_discount_pe
+            )
             ending_rows.append(row)
             continue
 
         elif account == "Closing (Opening + Total)":
             row["balance"] = row.get("debit", 0.0) - row.get("credit", 0.0)
-            row["discount_made"] = opening_discount_total + total_discount_pe + total_discount_si + opening_payment_discount_total
+            row["discount_made"] = (
+                opening_discount_total + total_discount_pe + total_discount_si + opening_payment_discount_total
+                if include_si_discounts
+                else opening_payment_discount_total + total_discount_pe
+            )
             ending_rows.append(row)
             continue
+
 
         item_group = row.get("item_groups")
         income_account = row.get("income_accounts")
@@ -115,7 +153,11 @@ def group_by_item_group(data, total_discount_si, total_discount_pe, opening_disc
 
         grouped[key]["debit"] += row.get("debit", 0.0)
         grouped[key]["credit"] += row.get("credit", 0.0)
-        if voucher_type == "Sales Invoice":
+        # if voucher_type == "Sales Invoice":
+        #     grouped[key]["discount_made"] += row.get("discount_made", 0.0)
+
+        # Only aggregate SI discounts into the group if flag is on
+        if voucher_type == "Sales Invoice" and include_si_discounts:
             grouped[key]["discount_made"] += row.get("discount_made", 0.0)
 
 
@@ -414,7 +456,12 @@ def transform_data_with_balance(gl_data, from_date, customer):
                 "debit": opening_debit,
                 "credit": opening_credit,
                 "balance": running_balance,
-                "discount_made": opening_discount_total + opening_payment_discount_total
+                # "discount_made": opening_discount_total + opening_payment_discount_total
+                "discount_made": (
+                    opening_discount_total + opening_payment_discount_total
+                    if INCLUDE_SI_DISCOUNTS
+                    else opening_payment_discount_total
+                )
             })
             continue
 
@@ -431,21 +478,49 @@ def transform_data_with_balance(gl_data, from_date, customer):
 
         if voucher_type == "Sales Invoice" and voucher_no:
             item_rows = invoice_item_map.get(voucher_no, [{}])
-            discount_amount_si = invoice_discount_map.get(voucher_no, 0.0)
-            total_discount_si += discount_amount_si
+
+            if INCLUDE_SI_DISCOUNTS:
+                discount_amount_si = invoice_discount_map.get(voucher_no, 0.0)
+                total_discount_si += discount_amount_si
+            else:
+                discount_amount_si = 0.0
+
             total_amount = sum(flt(i.get("base_net_amount")) for i in item_rows if i.get("base_net_amount"))
 
             proportions = [flt(i.get("base_net_amount")) / total_amount if total_amount else 0 for i in item_rows]
             debit_splits = [round(debit * p, 2) for p in proportions]
             credit_splits = [round(credit * p, 2) for p in proportions]
-            discount_splits = [round(discount_amount_si * p, 2) for p in proportions]
+
+            if INCLUDE_SI_DISCOUNTS:
+                discount_splits = [round(discount_amount_si * p, 2) for p in proportions]
+            else:
+                discount_splits = [0.0 for _ in proportions]
 
             if debit:
                 debit_splits[-1] += round(debit - sum(debit_splits), 2)
             if credit:
                 credit_splits[-1] += round(credit - sum(credit_splits), 2)
-            if discount_amount_si:
+            if INCLUDE_SI_DISCOUNTS and discount_amount_si:
                 discount_splits[-1] += round(discount_amount_si - sum(discount_splits), 2)
+
+
+        # if voucher_type == "Sales Invoice" and voucher_no:
+        #     item_rows = invoice_item_map.get(voucher_no, [{}])
+        #     discount_amount_si = invoice_discount_map.get(voucher_no, 0.0)
+        #     total_discount_si += discount_amount_si
+        #     total_amount = sum(flt(i.get("base_net_amount")) for i in item_rows if i.get("base_net_amount"))
+
+        #     proportions = [flt(i.get("base_net_amount")) / total_amount if total_amount else 0 for i in item_rows]
+        #     debit_splits = [round(debit * p, 2) for p in proportions]
+        #     credit_splits = [round(credit * p, 2) for p in proportions]
+        #     discount_splits = [round(discount_amount_si * p, 2) for p in proportions]
+
+        #     if debit:
+        #         debit_splits[-1] += round(debit - sum(debit_splits), 2)
+        #     if credit:
+        #         credit_splits[-1] += round(credit - sum(credit_splits), 2)
+        #     if discount_amount_si:
+        #         discount_splits[-1] += round(discount_amount_si - sum(discount_splits), 2)
 
         elif voucher_type == "Payment Entry" and voucher_no:
             items = []
@@ -494,7 +569,8 @@ def transform_data_with_balance(gl_data, from_date, customer):
             row_credit = 0.0
 
             if voucher_type == "Sales Invoice":
-                discount_value = discount_splits[idx]
+                # discount_value = discount_splits[idx]
+                discount_value = discount_splits[idx] if INCLUDE_SI_DISCOUNTS else 0.0
                 row_debit = debit_splits[idx]
                 row_credit = credit_splits[idx]
             elif voucher_type == "Payment Entry":

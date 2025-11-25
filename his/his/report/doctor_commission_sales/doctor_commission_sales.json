@@ -10,7 +10,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "logo",
- "modified": "2025-03-05 10:35:54.154931",
+ "modified": "2025-11-18 16:28:25.436097",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Doctor Commission Sales",
@@ -28,6 +28,9 @@
   },
   {
    "role": "Employee Self Service"
+  },
+  {
+   "role": "All"
   }
  ]
 }
