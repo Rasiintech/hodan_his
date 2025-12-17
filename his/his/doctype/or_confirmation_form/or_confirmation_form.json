@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": " ORCF-.#####",
  "creation": "2024-04-26 19:14:22.459675",
@@ -239,7 +240,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-09 16:32:32.573312",
+ "modified": "2025-11-30 20:50:35.089343",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "OR Confirmation Form",

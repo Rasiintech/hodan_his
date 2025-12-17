@@ -1,144 +1,309 @@
 let btn = {}
-if(frappe.user_roles.includes("Cashier")){
-    btn = {
-        type : "btn",
-        color : "success",
-        status : ['Closed'],
-        show: function(doc) {
-            return true;
-        },
-        get_label: function() {
-            return __('Check FollowUp');
-        },
-        get_description: function(doc) {
-            return __('Print {0}', [doc.name])
-        },
-        action: function(doc) {
-            //frappe.set_route("/app/print/Invoice/" + doc.name);
-            // frappe.msgprint(doc.patient_name)
+// if(frappe.user_roles.includes("Cashier")){
+//     btn = {
+//         type : "btn",
+//         color : "success",
+//         status : ['Closed'],
+//         show: function(doc) {
+//             return true;
+//         },
+//         get_label: function() {
+//             return __('Check FollowUp');
+//         },
+//         get_description: function(doc) {
+//             return __('Print {0}', [doc.name])
+//         },
+//         action: function(doc) {
+//             //frappe.set_route("/app/print/Invoice/" + doc.name);
+//             // frappe.msgprint(doc.patient_name)
           
-             frappe.call({
-                    method: "his.api.checkfollowup.Check_follow_up", //dotted path to server method
-                    args: {
-                        "patient" : doc.patient
+//              frappe.call({
+//                     method: "his.api.checkfollowup.Check_follow_up", //dotted path to server method
+//                     args: {
+//                         "patient" : doc.patient
 			        
                     
-                    },                                  
+//                     },                                  
 
-     callback: function(res) {
-        console.log(res)
-		// var template = "<table><tbody>{% for (var row in rows) { %}<tr>{% for (var col in rows[row]) { %}<td>rows[row][col]</td>{% } %}</tr>{% } %}</tbody></table>",
-        // frm.set_df_property('html_fieldname', 'options', frappe.render(template, {rows: res.message});
-        // frm.refresh_field('html_fieldname');
+//      callback: function(res) {
+//         console.log(res)
+// 		// var template = "<table><tbody>{% for (var row in rows) { %}<tr>{% for (var col in rows[row]) { %}<td>rows[row][col]</td>{% } %}</tr>{% } %}</tbody></table>",
+//         // frm.set_df_property('html_fieldname', 'options', frappe.render(template, {rows: res.message});
+//         // frm.refresh_field('html_fieldname');
        
-        const currentDate = new Date();
+//         const currentDate = new Date();
         
 
-        let htmldata = ''
+//         let htmldata = ''
        
-        res.message.forEach(row => {
-        const validTillDate = new Date(row.valid_till);
-        const validTillColor = validTillDate < currentDate ? 'red' : 'green'; // Red if expired, green if valid
-        const isButtonDisabled = validTillDate < currentDate ? 'disabled' : ''; // Disable button if expired
+//         res.message.forEach(row => {
+//         const validTillDate = new Date(row.valid_till);
+//         const validTillColor = validTillDate < currentDate ? 'red' : 'green'; // Red if expired, green if valid
+//         const isButtonDisabled = validTillDate < currentDate ? 'disabled' : ''; // Disable button if expired
 
-            htmldata += ` <tr>
-        <td>${doc.patient_name}</td>
-        <td>${row.practitioner}</td>
-        <td>${row.start_date}</td>
+//             htmldata += ` <tr>
+//         <td>${doc.patient_name}</td>
+//         <td>${row.practitioner}</td>
+//         <td>${row.start_date}</td>
         
-        <td style="color: ${validTillColor};" >${row.valid_till}</td>
+//         <td style="color: ${validTillColor};" >${row.valid_till}</td>
         
-        <td><button class= 'btn btn-success' id= 'f' ${isButtonDisabled} onclick='
-        frappe.call({
-        method: "his.api.Que_to_fee_validity.make_que", //dotted path to server method
-        args: {
+//         <td><button class= 'btn btn-success' id= 'f' ${isButtonDisabled} onclick='
+//         frappe.call({
+//         method: "his.api.Que_to_fee_validity.make_que", //dotted path to server method
+//         args: {
             
             
-            "patient" : "${row.patient}",
-            "practitioner" : "${row.practitioner}"
+//             "patient" : "${row.patient}",
+//             "practitioner" : "${row.practitioner}"
             
-        },
-        callback: function(r) {
-            $(".modal-dialog").hide()
+//         },
+//         callback: function(r) {
+//             $(".modal-dialog").hide()
            
-            document.getElementById("f").disabled = true;
-            // code snippet
-            // frappe.msgprint(r)
-        // frm.set_value("status" , "Refered")
-         frappe.utils.play_sound("submit")
-    frappe.show_alert({
-        message:__("Que Created Successfully!!"),
-        indicator:"green",
+//             document.getElementById("f").disabled = true;
+//             // code snippet
+//             // frappe.msgprint(r)
+//         // frm.set_value("status" , "Refered")
+//          frappe.utils.play_sound("submit")
+//     frappe.show_alert({
+//         message:__("Que Created Successfully!!"),
+//         indicator:"green",
         
-    }, 5);
-        }
-});
-        ' width='40px'>Que</button></td>
-      </tr>`
-        })
+//     }, 5);
+//         }
+// });
+//         ' width='40px'>Que</button></td>
+//       </tr>`
+//         })
 
-        // ------------------------------------------------------------
+//         // ------------------------------------------------------------
 
-        // -----------------------------
+//         // -----------------------------
 
-var template=`
-<div class="container">
+// var template=`
+// <div class="container">
              
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Patient Name</th>
-        <th>practitioner Name</th>
-        <th>Start Date</th>
-        <th>End Date</th>
+//   <table class="table table-hover">
+//     <thead>
+//       <tr>
+//         <th>Patient Name</th>
+//         <th>practitioner Name</th>
+//         <th>Start Date</th>
+//         <th>End Date</th>
        
-        <th>Action</th>
+//         <th>Action</th>
         
-      </tr>
-    </thead>
-    <tbody>
+//       </tr>
+//     </thead>
+//     <tbody>
     
-    ${htmldata}
+//     ${htmldata}
      
-    </tbody>
-  </table>
-</div>
+//     </tbody>
+//   </table>
+// </div>
 
-`;
+// `;
                    		     		    
-let d = new frappe.ui.Dialog({
-    title: 'Follow Up Lists',
-    fields: [
-        {
-            label: 'Que List',
-            fieldname: 'practitioner',
-            fieldtype: 'HTML',
-            options: template,
+// let d = new frappe.ui.Dialog({
+//     title: 'Follow Up Lists',
+//     fields: [
+//         {
+//             label: 'Que List',
+//             fieldname: 'practitioner',
+//             fieldtype: 'HTML',
+//             options: template,
             
-        }
+//         }
        
        
      
-    ]
+//     ]
 
     
-});
+// });
 
-d.show();
-d.$wrapper.find('.modal-content').css("width", "800px");
+// d.show();
+// d.$wrapper.find('.modal-content').css("width", "800px");
 	     	
 
                         
-                    }
-        });
+//                     }
+//         });
      
    
             
-           //frappe.msgprint("Name "+doc.name+" Patient: "+doc.patient_name+" practitioner: "+doc.practitioner_name)
+//            //frappe.msgprint("Name "+doc.name+" Patient: "+doc.patient_name+" practitioner: "+doc.practitioner_name)
            
-        }
-    }
+//         }
+//     }
+// }
+if (frappe.user_roles.includes("Cashier")) {
+  btn = {
+    type: "btn",
+    color: "success",
+    status: ["Closed"],
+    show: function (doc) {
+      return true;
+    },
+    get_label: function () {
+      return __("Check FollowUp");
+    },
+    get_description: function (doc) {
+      return __("Check FollowUp for {0}", [doc.patient_name || doc.patient]);
+    },
+    action: function (doc) {
+      frappe.call({
+        method: "his.api.checkfollowup.Check_follow_up",
+        args: { patient: doc.patient },
+        callback: function (res) {
+          const rows = res.message || [];
+          if (!rows.length) {
+            frappe.msgprint(__("No follow up records found."));
+            return;
+          }
+
+          const today = frappe.datetime.get_today();
+          let htmldata = "";
+
+          rows.forEach((row) => {
+            const end = row.valid_till || "";
+            const start = row.start_date || "";
+
+            const is_expired =
+              end &&
+              frappe.datetime.str_to_obj(end) < frappe.datetime.str_to_obj(today);
+
+            const validTillColor = is_expired ? "red" : "green";
+            const disabledAttr = is_expired ? "disabled aria-disabled='true'" : "";
+            const btnClass = is_expired ? "btn-secondary" : "btn-success";
+
+            htmldata += `
+              <tr>
+                <td>${frappe.utils.escape_html(doc.patient_name || "")}</td>
+                <td>${frappe.utils.escape_html(row.practitioner || "")}</td>
+                <td>${frappe.utils.escape_html(start)}</td>
+                <td style="color:${validTillColor};">${frappe.utils.escape_html(end)}</td>
+                <td>${frappe.utils.escape_html(row.status || "")}</td>
+                <td>
+                  <button
+                    class="btn ${btnClass} btn-sm btn-make-que"
+                    ${disabledAttr}
+                    data-patient="${frappe.utils.escape_html(row.patient || doc.patient)}"
+                    data-practitioner="${frappe.utils.escape_html(row.practitioner || "")}"
+                    data-start="${frappe.utils.escape_html(start)}"
+                    data-end="${frappe.utils.escape_html(end)}"
+                  >${__("Que")}</button>
+                </td>
+              </tr>
+            `;
+          });
+
+          const template = `
+            <div class="container">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>${__("Patient Name")}</th>
+                    <th>${__("Practitioner Name")}</th>
+                    <th>${__("Start Date")}</th>
+                    <th>${__("End Date")}</th>
+                    <th>${__("Status")}</th>
+                    <th>${__("Action")}</th>
+                  </tr>
+                </thead>
+                <tbody>${htmldata}</tbody>
+              </table>
+            </div>
+          `;
+
+          const d = new frappe.ui.Dialog({
+            title: __("Follow Up Lists"),
+            fields: [
+              {
+                label: __("Que List"),
+                fieldname: "followup_html",
+                fieldtype: "HTML",
+                options: template,
+              },
+            ],
+          });
+
+          d.show();
+          d.$wrapper.find(".modal-content").css("width", "800px");
+
+          d.$wrapper.off("click", ".btn-make-que");
+          d.$wrapper.on("click", ".btn-make-que", function () {
+            const $btn = $(this);
+            if ($btn.is(":disabled")) return;
+
+            const patient = $btn.data("patient");
+            const practitioner = $btn.data("practitioner");
+            const start_date = $btn.data("start");
+            const end_date = $btn.data("end");
+
+            const today = frappe.datetime.get_today();
+
+            const minDate =
+              frappe.datetime.str_to_obj(today) > frappe.datetime.str_to_obj(start_date)
+                ? today
+                : start_date;
+
+            const date_dlg = new frappe.ui.Dialog({
+              title: __("Choose Follow Up Date"),
+              fields: [
+                {
+                  fieldtype: "Date",
+                  fieldname: "que_date",
+                  label: __("Que Date"),
+                  reqd: 1,
+                  default: minDate,
+                },
+              ],
+              primary_action_label: __("Create Que"),
+              primary_action: function () {
+                const que_date = date_dlg.get_value("que_date");
+
+                frappe.call({
+                  method: "his.api.Que_to_fee_validity.make_que",
+                  args: {
+                    patient: patient,
+                    practitioner: practitioner,
+                    que_date: que_date,
+                  },
+                  callback: function (r) {
+                    // close both dialogs
+                    date_dlg.hide();
+                    d.hide();
+
+                    // disable only this clicked button (in case dialog stays open)
+                    $btn.prop("disabled", true);
+
+                    frappe.utils.play_sound("submit");
+                    frappe.show_alert(
+                      { message: __("Que Created Successfully!!"), indicator: "green" },
+                      5
+                    );
+                  },
+                });
+              },
+            });
+
+            date_dlg.show();
+
+            const f = date_dlg.get_field("que_date");
+            if (f && f.datepicker) {
+              f.datepicker.set("minDate", minDate);
+              f.datepicker.set("maxDate", end_date);
+            }
+          });
+        },
+      });
+    },
+  };
 }
+
 if(frappe.user_roles.includes("Doctor")){
     btn = {
         type : "btn",

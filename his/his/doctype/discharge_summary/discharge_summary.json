@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "DS -.##### ",
  "creation": "2023-03-29 11:49:38.065602",
@@ -196,6 +197,7 @@
   {
    "fieldname": "discharged_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Discharged Type",
    "options": "\nRecovered\nReferd\nDeath\nSelf Discharged",
@@ -420,7 +422,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-19 17:39:29.958789",
+ "modified": "2025-11-29 11:05:40.647911",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Discharge Summary",

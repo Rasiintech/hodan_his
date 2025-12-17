@@ -69,7 +69,7 @@ frappe.ui.form.on('Que', {
             //   frm.set_value("messege","?");
             if (frm.doc.status=="Open") {
                
-                if (frappe.user_roles.includes('Main Cashier') || frappe.user_roles.includes('Cashier')) {
+                if (frappe.user_roles.includes('Main Cashiers') || frappe.user_roles.includes('Sales Cancel')) {
                 // -------------------------------------------------------------------------------
                 var cancel_btn=  frm.add_custom_button(__("Cancel"), function(){
 

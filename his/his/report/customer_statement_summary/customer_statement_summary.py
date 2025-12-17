@@ -12,7 +12,7 @@ from collections import defaultdict
 from datetime import datetime
 
 his_settings = frappe.get_doc("HIS Settings", "HIS Settings")
-INCLUDE_SI_DISCOUNTS = his_settings.add_si
+INCLUDE_SI_DISCOUNTS = bool(his_settings.add_si)
 # frappe.errprint(INCLUDE_SI_DISCOUNTS)
 # 👉 Toggle: include Sales Invoice header discounts in this report?
 # INCLUDE_SI_DISCOUNTS = False  # set to True if you want SI discounts back
