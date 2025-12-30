@@ -6,19 +6,77 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "test"
+  "test",
+  "age",
+  "sex",
+  "age_type",
+  "normal_range",
+  "min_age",
+  "min_age_unit",
+  "max_age",
+  "max_age_unit"
  ],
  "fields": [
   {
    "fieldname": "test",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Test"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ref Group"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "age_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Age Type",
+   "options": "\nDay\nYear"
+  },
+  {
+   "fieldname": "normal_range",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Range"
+  },
+  {
+   "fieldname": "min_age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Min Age"
+  },
+  {
+   "fieldname": "min_age_unit",
+   "fieldtype": "Select",
+   "label": "Min Age Unit",
+   "options": "Years\nMonths\nDays"
+  },
+  {
+   "fieldname": "max_age",
+   "fieldtype": "Data",
+   "label": "Max Age <="
+  },
+  {
+   "fieldname": "max_age_unit",
+   "fieldtype": "Select",
+   "label": "Max Age Unit",
+   "options": "Years\nMonths\nDays"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-12-17 18:46:08.002463",
+ "modified": "2025-12-17 19:14:53.897032",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Rangs",

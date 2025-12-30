@@ -87,25 +87,23 @@ def make_que(patient, practitioner, que_date=None):
     # ------------------------------------------------------------------
     # Prevent duplicates / wrong doctor on same day
     # ------------------------------------------------------------------
-    existing = frappe.db.get_value(
+    existing_name = frappe.db.get_value(
         "Que",
         {
             "patient": patient,
             "date": que_date,
             "follow_up": 1,
-            "docstatus": ["<", 2],   # Draft or Submitted
+            "practitioner": practitioner,
+            "docstatus": ["<", 2],  # Draft or Submitted
         },
-        ["name", "practitioner"],
-        as_dict=True
+        "name",
     )
 
-    if existing:
-        if (existing.practitioner or "") != (practitioner or ""):
-            frappe.throw(
-                f"A Follow Up Que already exists on {que_date} for another doctor ({existing.practitioner})."
-            )
-        frappe.throw(f"Follow Up Que already created for this patient and doctor on {que_date}: {existing.name}")
-
+    if existing_name:
+        frappe.throw(
+            f"Follow Up Que already created for this patient and doctor on {que_date}: {existing_name}"
+        )
+        
     # ------------------------------------------------------------------
 
     pat = frappe.get_doc("Patient", patient)
