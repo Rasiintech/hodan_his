@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "template",
+  "package_type",
   "item",
   "template_code",
   "item_group",
@@ -110,10 +111,16 @@
    "fieldname": "change_in_item",
    "fieldtype": "Check",
    "label": "Change In Item"
+  },
+  {
+   "fieldname": "package_type",
+   "fieldtype": "Select",
+   "label": "Package Type",
+   "options": "Hajj\nCheckup"
   }
  ],
  "links": [],
- "modified": "2023-06-28 01:56:16.790445",
+ "modified": "2026-01-03 06:41:07.116658",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Package Template",

@@ -2,21 +2,26 @@ from his.api.tests_sts_check import create_tests_sts
 import frappe
 from his.api.make_sample_collection import make_sample_collection
 def create_radiolgy(doc, method=None):
+	is_return = 0
+	reff_invoice = ""
+	if doc.doctype == "Sales Invoice":
+		reff_invoice = doc.name
+		is_return = doc.is_return
 	
 	# frappe.msgprint()
 	sample_collection = []
 	radiology  = []
 	for i in doc.items:
-		if frappe.db.exists("Radiology Template", i.item_code, cache=True) and not doc.is_return:
+		if frappe.db.exists("Radiology Template", i.item_code, cache=True) and not is_return:
 			
 			rad_doc = frappe.get_doc({
 			'doctype': 'Radiology',
 			
 			'patient': doc.patient,
-			'indication':i.comments,
+			# 'indication':i.comments,
 			'eximination': frappe.db.get_value("Radiology Template" , {"item": i.item_code},"name"),
 			'practitioner' : doc.ref_practitioner,
-			'reff_invoice' : doc.name,
+			'reff_invoice' : reff_invoice,
 			'source_order' : doc.source_order
 			})
 			
@@ -27,27 +32,27 @@ def create_radiolgy(doc, method=None):
 			rad_doc.save()
 			doc.token_no = tok
 			doc.save()
-			create_tests_sts(rad_doc.doctype , rad_doc.name)
-		if i.item_group == "Checkup":
-			checup_doc = frappe.get_doc("Package Template" , i.item_code)
-			for check in  checup_doc.package_prescription:
-				if check.item_group == "Imaging":
-					rad_doc = frappe.get_doc({
-					'doctype': 'Radiology',
+			# create_tests_sts(rad_doc.doctype , rad_doc.name)
+	# 	if i.item_group == "Checkup":
+	# 		checup_doc = frappe.get_doc("Package Template" , i.item_code)
+	# 		for check in  checup_doc.package_prescription:
+	# 			if check.item_group == "Imaging":
+	# 				rad_doc = frappe.get_doc({
+	# 				'doctype': 'Radiology',
 					
-					'patient': doc.patient,
-					# 'indication':check.comments,
-					'eximination': check.item,
-					'practitioner' : doc.ref_practitioner,
-					'reff_invoice' : doc.name,
-					'source_order' : doc.source_order
-					})
-					# frappe.msgprint("OK")
-					rad_doc.insert(ignore_permissions=True)
-				if check.item_group == "Laboratory":
-					sample_collection.append({"lab_test" : check.item })
-	if len(sample_collection) > 0:
-		make_sample_collection(doc ,method = None, items = sample_collection)
+	# 				'patient': doc.patient,
+	# 				# 'indication':check.comments,
+	# 				'eximination': check.item,
+	# 				'practitioner' : doc.ref_practitioner,
+	# 				'reff_invoice' : reff_invoice,
+	# 				'source_order' : doc.source_order
+	# 				})
+	# 				# frappe.msgprint("OK")
+	# 				rad_doc.insert(ignore_permissions=True)
+	# 			if check.item_group == "Laboratory":
+	# 				sample_collection.append({"lab_test" : check.item })
+	# if len(sample_collection) > 0:
+	# 	make_sample_collection(doc ,method = None, items = sample_collection)
 
 
 

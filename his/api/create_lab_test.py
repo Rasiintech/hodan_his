@@ -7,7 +7,10 @@ def create_lab_tests(doc , method = None):
     # 'patient': doc.patient
     # })
     # lab_test.insert()
-    sam = frappe.get_doc('Sales Invoice', doc.reff_invoice)
+    if doc.hajj_screening:
+        sam = frappe.get_doc('Hajj Screening', doc.hajj_screening)
+    else:
+        sam = frappe.get_doc('Sales Invoice', doc.reff_invoice)
     lab_test_itmes = []
     urine_lab_test_itmes = []
     hor_lab_test_itmes = []

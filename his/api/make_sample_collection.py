@@ -1,5 +1,11 @@
 import frappe;
 def make_sample_collection(doc, method=None , items = None):
+	hajj_screening = ""
+	if doc.doctype == "Hajj Screening":
+		hajj_screening = doc.name
+	reff_invoice = ""
+	if doc.doctype == "Sales Invoice":
+		reff_invoice = doc.name
 	itms= []
 	if items:
 		itms = items
@@ -28,11 +34,12 @@ def make_sample_collection(doc, method=None , items = None):
 			'practitioner':doc.ref_practitioner,
 			'patient': doc.patient,
 			'lab_test': itms,
-			'reff_invoice' : doc.name,
+			'reff_invoice' : reff_invoice,
 			'source_order' : doc.source_order,
-			'doner' : doc.doner,
-			"for_patient" : doc.ref_patient,
+			# 'doner' : doc.doner,
+			# "for_patient" : doc.ref_patient,
 			# "blood_donar" : 1
+			"hajj_screening" : hajj_screening
 		})
 		sm_doc.insert(ignore_permissions = True)
 		tok = token_numebr(sm_doc)

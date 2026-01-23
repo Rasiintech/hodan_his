@@ -258,7 +258,7 @@ def medic_h(patient ):
     c.dosage as `Dosage`,
 
     
-     p.full_name as Ordered
+     p.user as Ordered
      from `tabDrug Prescription` c
      left join `tabHealthcare Requests` p
     on c.parent = p.name    
