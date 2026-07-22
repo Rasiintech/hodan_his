@@ -1,0 +1,155 @@
+<div class="mbp-shell">
+	<div class="mbp-top-stripe"></div>
+	<div class="mbp-paper">
+		<div class="mbp-header">
+			<div class="mbp-title-block">
+				<div class="mbp-company">{%= company %}</div>
+				<h1>MONTHLY BUDGET PLAN</h1>
+				<div class="mbp-period">{%= period_label %}</div>
+			</div>
+			<div class="mbp-meta">
+				<div class="mbp-meta-row mbp-meta-row--month">
+					<span class="mbp-meta-icon"><i class="fa fa-calendar"></i></span>
+					<div class="mbp-meta-label">Month</div>
+					<div class="mbp-meta-value">
+						<div class="mbp-month-control">
+							<button type="button" class="mbp-month-nav" data-budget-action="prev-month" aria-label="Previous month">
+								<i class="fa fa-chevron-left"></i>
+							</button>
+							<button type="button" class="mbp-month-display" data-budget-action="pick-month">
+								{%= month_label %}
+							</button>
+							<button type="button" class="mbp-month-nav" data-budget-action="next-month" aria-label="Next month">
+								<i class="fa fa-chevron-right"></i>
+							</button>
+							<input type="month" class="mbp-month-input" value="{%= month_input_value %}">
+						</div>
+					</div>
+				</div>
+				<div class="mbp-meta-row">
+					<span class="mbp-meta-icon"><i class="fa fa-usd"></i></span>
+					<div class="mbp-meta-label">Currency</div>
+					<div class="mbp-meta-value">{%= currency %}</div>
+				</div>
+				<div class="mbp-meta-row">
+					<span class="mbp-meta-icon"><i class="fa fa-university"></i></span>
+					<div class="mbp-meta-label">Company</div>
+					<div class="mbp-meta-value">{%= company %}</div>
+				</div>
+			</div>
+		</div>
+
+		{% if (!has_data) { %}
+		<div class="mbp-empty">
+			<i class="fa fa-folder-open"></i>
+			<p>No budget plans overlap the selected month.</p>
+		</div>
+		{% } else { %}
+		<table class="mbp-table">
+			<thead>
+				<tr>
+					<th class="mbp-particulars">PARTICULARS</th>
+					<th>BUDGET<br><span>({%= currency %})</span></th>
+					<th>ACTUAL<br><span>({%= currency %})</span></th>
+					<th>VARIANCE<br><span>({%= currency %})</span></th>
+					<th>VARIANCE %</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for (let section of sections) { %}
+					<tr class="mbp-section-row">
+						<td class="mbp-section-title"><span class="mbp-section-icon"><i class="fa {%= section.icon %}"></i></span>{%= section.label.toUpperCase() %}</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					{% for (let category of section.categories) { %}
+						<tr class="mbp-category-row">
+							<td>{%= category.label %}</td>
+							<td>{%= category.budget %}</td>
+							<td>{%= category.actual %}</td>
+							<td class="mbp-{%= category.variance_class %}">{%= category.variance %}</td>
+							<td class="mbp-{%= category.variance_class %}">{%= category.variance_percent %}</td>
+						</tr>
+						{% for (let row of category.rows) { %}
+							<tr class="mbp-account-row">
+								<td class="mbp-sub-account">{%= row.account %}</td>
+								<td>{%= row.budget %}</td>
+								<td>{%= row.actual %}</td>
+								<td class="mbp-{%= row.variance_class %}">{%= row.variance %}</td>
+								<td class="mbp-{%= row.variance_class %}">{%= row.variance_percent %}</td>
+							</tr>
+						{% } %}
+					{% } %}
+					<tr class="mbp-total-row">
+						<td>TOTAL {%= section.label.toUpperCase() %}</td>
+						<td>{%= section.budget %}</td>
+						<td>{%= section.actual %}</td>
+						<td class="mbp-{%= section.variance_class %}">{%= section.variance %}</td>
+						<td class="mbp-{%= section.variance_class %}">{%= section.variance_percent %}</td>
+					</tr>
+				{% } %}
+
+				<tr class="mbp-net-row">
+					<td><span class="mbp-section-icon mbp-net-icon"><i class="fa fa-line-chart"></i></span>{%= summary.net.label.toUpperCase() %}</td>
+					<td>{%= summary.net.budget %}</td>
+					<td>{%= summary.net.actual %}</td>
+					<td class="mbp-{%= summary.net.variance_class %}">{%= summary.net.variance %}</td>
+					<td class="mbp-{%= summary.net.variance_class %}">{%= summary.net.variance_percent %}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="mbp-cards">
+			{% for (let card of summary.cards) { %}
+			<div class="mbp-card">
+				<div class="mbp-card-icon"><i class="fa {%= card.icon %}"></i></div>
+				<div class="mbp-card-body">
+					<div class="mbp-card-label">{%= card.label %}</div>
+					<div class="mbp-card-value">{%= card.value %}</div>
+					<div class="mbp-card-delta mbp-{%= card.delta_class %}">{%= card.delta %}</div>
+					{% if (card.meta) { %}
+					<div class="mbp-card-meta">{%= card.meta %}</div>
+					{% } %}
+				</div>
+			</div>
+			{% } %}
+		</div>
+
+		<div class="mbp-footer">
+			<div class="mbp-notes">
+				<div class="mbp-notes-title">Notes:</div>
+				<ol>
+					{% for (let note of notes) { %}
+					<li>{%= note %}</li>
+					{% } %}
+				</ol>
+			</div>
+
+			<div class="mbp-signatures">
+				<div class="mbp-signature">
+					<div class="mbp-signature-title">Prepared By</div>
+					<div class="mbp-signature-line"></div>
+					<div class="mbp-signature-date">Date:</div>
+				</div>
+				<div class="mbp-signature">
+					<div class="mbp-signature-title">Reviewed By</div>
+					<div class="mbp-signature-line"></div>
+					<div class="mbp-signature-date">Date:</div>
+				</div>
+				<div class="mbp-signature">
+					<div class="mbp-signature-title">Approved By</div>
+					<div class="mbp-signature-line"></div>
+					<div class="mbp-signature-date">Date:</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mbp-bottom-bar">
+			<div class="mbp-website"><i class="fa fa-globe"></i> www.hodanhospital.so</div>
+			<div class="mbp-bottom-accent"></div>
+		</div>
+		{% } %}
+	</div>
+</div>

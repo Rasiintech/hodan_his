@@ -63,11 +63,12 @@ def token_numebr(doc, method=None):
 	
 	doc.token_no = int(num) + 1
 	# doc.appointment_time = ""
-	col = frappe.get_last_doc("Sample Collection")
+	# col = frappe.get_last_doc("Sample Collection")
 	
-	if col:
-		if col.lab_ref:
-			doc.lab_ref = int(col.lab_ref) + 1
+	# if col:
+	# 	if col.lab_ref:
+	# 		doc.lab_ref = int(col.lab_ref) + 1
+	doc.lab_ref = set_lab_ref(doc)
 	# doc.appointment_time = ""
 	if frappe.db.exists("Sample Collection", {}):
 		col = frappe.get_last_doc("Sample Collection")
@@ -75,3 +76,15 @@ def token_numebr(doc, method=None):
 			return col.token_no + 1
 		else:
 			return 1
+		
+
+
+def set_lab_ref(doc):
+    last_lab_ref = frappe.db.sql("""
+        SELECT COALESCE(MAX(CAST(lab_ref AS UNSIGNED)), 0)
+        FROM `tabSample Collection`
+        WHERE lab_ref REGEXP '^[0-9]+$'
+        FOR UPDATE
+    """)[0][0]
+
+    return int(last_lab_ref) + 1

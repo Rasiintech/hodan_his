@@ -48,6 +48,7 @@
    "options": "Healthcare Practitioner"
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
@@ -93,7 +94,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-21 10:25:29.555687",
+ "modified": "2026-07-14 09:22:54.435711",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Fluid Balance Record",
@@ -127,5 +128,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "timeline_field": "pid",
+ "title_field": "pid",
+ "track_changes": 1
 }

@@ -1,0 +1,37 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-05-13 10:00:56.937072",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-05-16 15:35:09.185952",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Patient Recovery Time",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    p.name AS \"Patient ID:Link/Patient:120\",\n    CASE\n        WHEN p.p_age > 0 THEN CONCAT(p.p_age, ' ', IFNULL(NULLIF(p.age_type, ''), 'Year'))\n        WHEN p.dob IS NULL THEN CONCAT(p.p_age, ' ', IFNULL(NULLIF(p.age_type, ''), 'Year'))\n        WHEN TIMESTAMPDIFF(YEAR, p.dob, CURDATE()) > 0 THEN CONCAT(TIMESTAMPDIFF(YEAR, p.dob, CURDATE()), ' Year')\n        WHEN TIMESTAMPDIFF(MONTH, p.dob, CURDATE()) > 0 THEN CONCAT(TIMESTAMPDIFF(MONTH, p.dob, CURDATE()), ' Month')\n        ELSE CONCAT(GREATEST(DATEDIFF(CURDATE(), p.dob), 0), ' Day')\n    END AS \"Age:Data:100\",\n    p.sex AS \"Sex:Data:100\",\n    COALESCE(NULLIF(ip.diagnose, ''), diagnosis.diagnosis) AS \"Diagnose:Data:160\",\n    vitals.bp AS \"Blood Pressure:Data:140\",\n    vitals.spo2 AS \"SPO2:Data:90\",\n    vitals.temperature AS \"Body Temperature:Data:130\",\n\n    CASE\n        WHEN IFNULL(ip.type, '') LIKE '%%ICU%%' THEN 'YES'\n        ELSE 'NO'\n    END AS \"ICU Admission:Data:120\",\n\n    CASE\n        WHEN ip.admitted_datetime IS NOT NULL\n            AND ip.discharge_datetime IS NOT NULL\n        THEN TIMESTAMPDIFF(DAY, ip.admitted_datetime, ip.discharge_datetime)\n    END AS \"Recovery Time:Int:130\"\n\nFROM (\n    SELECT\n        patient,\n        SUBSTRING_INDEX(\n            GROUP_CONCAT(\n                name\n                ORDER BY COALESCE(admitted_datetime, scheduled_date) DESC, creation DESC, name DESC\n                SEPARATOR '\\n'\n            ),\n            '\\n',\n            1\n        ) AS inpatient_record\n    FROM `tabInpatient Record`\n    WHERE docstatus < 2\n    GROUP BY patient\n) latest_ip\n\nINNER JOIN `tabInpatient Record` ip ON ip.name = latest_ip.inpatient_record\nINNER JOIN `tabPatient` p ON p.name = ip.patient\n\nLEFT JOIN (\n    SELECT\n        patient,\n        SUBSTRING_INDEX(\n            GROUP_CONCAT(bp ORDER BY signs_date DESC, signs_time DESC, creation DESC, name DESC SEPARATOR '\\n'),\n            '\\n',\n            1\n        ) AS bp,\n        SUBSTRING_INDEX(\n            GROUP_CONCAT(spo ORDER BY signs_date DESC, signs_time DESC, creation DESC, name DESC SEPARATOR '\\n'),\n            '\\n',\n            1\n        ) AS spo2,\n        SUBSTRING_INDEX(\n            GROUP_CONCAT(temperature ORDER BY signs_date DESC, signs_time DESC, creation DESC, name DESC SEPARATOR '\\n'),\n            '\\n',\n            1\n        ) AS temperature\n    FROM `tabVital Signs`\n    WHERE docstatus < 2\n    GROUP BY patient\n) vitals ON vitals.patient = p.name\n\n\nLEFT JOIN (\n    SELECT\n        parent,\n        GROUP_CONCAT(diagnosis ORDER BY idx SEPARATOR ', ') AS diagnosis\n    FROM `tabPatient Encounter Diagnosis`\n    WHERE parenttype = 'Inpatient Record'\n    GROUP BY parent\n) diagnosis ON diagnosis.parent = ip.name\n\nORDER BY COALESCE(ip.admitted_datetime, ip.scheduled_date) DESC, p.name;\n",
+ "ref_doctype": "Inpatient Record",
+ "report_name": "Patient Recovery Time",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Healthcare Administrator"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Nursing User"
+  },
+  {
+   "role": "Cashier"
+  }
+ ]
+}

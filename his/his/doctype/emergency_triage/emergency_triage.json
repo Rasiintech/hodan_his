@@ -145,9 +145,10 @@
   },
   {
    "fieldname": "mrp",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "MRP"
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "ER Category",
+   "options": "\nTrauma\nNon-Trauma"
   },
   {
    "fieldname": "section_break_97yvp",
@@ -198,6 +199,7 @@
   {
    "fieldname": "practitioner",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Consultant",
    "options": "Healthcare Practitioner"
   },
@@ -395,17 +397,20 @@
   {
    "fieldname": "chief_complaint",
    "fieldtype": "Text",
-   "label": "CHIEF COMPLAINT"
+   "label": "CHIEF COMPLAINT",
+   "reqd": 1
   },
   {
    "fieldname": "hpi",
    "fieldtype": "Text",
-   "label": "HPI"
+   "label": "HPI",
+   "reqd": 1
   },
   {
    "fieldname": "cvs",
    "fieldtype": "Text",
-   "label": "CVS"
+   "label": "CVS",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_8luoi",
@@ -414,17 +419,20 @@
   {
    "fieldname": "git",
    "fieldtype": "Text",
-   "label": "GIT"
+   "label": "GIT",
+   "reqd": 1
   },
   {
    "fieldname": "gus",
    "fieldtype": "Text",
-   "label": "GUS"
+   "label": "GUS",
+   "reqd": 1
   },
   {
    "fieldname": "cns",
    "fieldtype": "Text",
-   "label": "CNS"
+   "label": "CNS",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_xd3gs",
@@ -433,12 +441,14 @@
   {
    "fieldname": "ms",
    "fieldtype": "Text",
-   "label": "MS"
+   "label": "MS",
+   "reqd": 1
   },
   {
    "fieldname": "gyne_hx",
    "fieldtype": "Text",
-   "label": "GYNE HX"
+   "label": "GYNE HX",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_ujtlf",
@@ -519,22 +529,26 @@
   {
    "fieldname": "fhx",
    "fieldtype": "Text",
-   "label": "FHx"
+   "label": "FHx",
+   "reqd": 1
   },
   {
    "fieldname": "medication",
    "fieldtype": "Text",
-   "label": "Medication"
+   "label": "Medication",
+   "reqd": 1
   },
   {
    "fieldname": "investigations",
    "fieldtype": "Text",
-   "label": "Investigations"
+   "label": "Investigations",
+   "reqd": 1
   },
   {
    "fieldname": "physical_exam",
    "fieldtype": "Text",
-   "label": "Physical Exam"
+   "label": "Physical Exam",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_hme5n",
@@ -543,7 +557,8 @@
   {
    "fieldname": "doctors_name",
    "fieldtype": "Data",
-   "label": "Doctors Name "
+   "label": "Doctors Name ",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_lthhd",
@@ -552,7 +567,8 @@
   {
    "fieldname": "nurses_name",
    "fieldtype": "Data",
-   "label": "Nurses Name "
+   "label": "Nurses Name ",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_sqeam",
@@ -580,7 +596,6 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Status",
    "options": "\nDischarged\nAdmitted",
    "read_only": 1
@@ -603,7 +618,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-09 09:58:19.831792",
+ "modified": "2026-06-30 14:40:43.817136",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Emergency Triage",

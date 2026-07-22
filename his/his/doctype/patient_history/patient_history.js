@@ -513,7 +513,7 @@ frappe.ui.form.on('Patient History', {
 			btn6.addClass('btn-danger');
 
 			var btn6 = frm.add_custom_button("Fluid Balance Record (Intake & Output)", () => {
-				frappe.new_doc("Fluid Balance Record", { "patient": frm.doc.patient})
+				frappe.new_doc("Fluid Balance Record", { "pid": frm.doc.patient})
 		
 			},__("Nurse Forms"))
 			btn6.addClass('btn-danger');
@@ -1651,7 +1651,7 @@ function get_history(patient ,tab) {
 
 function setup_datatable(columns , data , group , tabid){
 	
-	let doctypes = {"vitals" : "Vital Signs" , "drug_sheet" :"Inpatient Medication" , "imaging" : "Radiology" , "operation" : "Clinical Procedure" , "blood_transfusion" : "Healthcare Requests"}  
+	let doctypes = {"vitals" : "Vital Signs" , "fluid_balance" : "Fluid Balance Record","drug_sheet" :"Inpatient Medication" , "imaging" : "Radiology" , "operation" : "Clinical Procedure" , "blood_transfusion" : "Healthcare Requests"}  
 	// console.log(data)
 
 	// alert(tabid)

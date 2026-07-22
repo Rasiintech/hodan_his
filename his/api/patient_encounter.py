@@ -177,6 +177,7 @@ def add_service_items(so, doc):
                     so_item = find_or_create_item(i, so, doc , from_templae=True, item_name=item_name)
                     so_item.item_code = i.aneasthesia
                     so_item.rate=i.amount
+                    so_item.price_list_rate = i.amount
                     so_item.qty = 1
             
                     
@@ -200,13 +201,17 @@ def add_service_items(so, doc):
             if child_table=="packages_prescription":
                 child= frappe.get_doc('Package Template', item)
                 for i in child.package_prescription:
+                    so.selling_price_list = "Standard Selling"
                     item_name = i.item
                     so_item = find_or_create_item(i, so, doc , from_templae=True, item_name=item_name)
                     so_item.item_code = i.item
                     so_item.rate = i.rate
+                    so_item.price_list_rate = i.rate
                     so_item.qty = row.qty or 1
+                    so.package = item
+                   
 
-            if child_table!="packages_prescription":
+            if child_table != "packages_prescription":
                 so_item = find_or_create_item(row, so, doc)
                 so_item.item_code = item
                 so_item.qty = 1

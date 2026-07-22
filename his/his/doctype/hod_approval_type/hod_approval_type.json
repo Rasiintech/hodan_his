@@ -8,7 +8,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "department"
+  "department",
+  "disabled"
  ],
  "fields": [
   {
@@ -18,11 +19,17 @@
    "label": "Department",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-24 16:28:02.357241",
+ "modified": "2026-06-28 14:49:40.342285",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "HOD Approval Type",

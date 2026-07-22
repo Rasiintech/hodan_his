@@ -151,7 +151,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-20 10:59:55.182481",
+ "modified": "2026-02-23 09:57:40.319533",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "User Creation",
@@ -205,5 +205,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

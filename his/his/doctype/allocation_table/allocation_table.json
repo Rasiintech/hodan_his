@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-06 11:32:00.588221",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "consultant",
+  "department",
+  "allocatated_percentage",
+  "allocatated_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Consultant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Medical Department"
+  },
+  {
+   "fieldname": "allocatated_percentage",
+   "fieldtype": "Markdown Editor",
+   "in_list_view": 1,
+   "label": "Allocatated Percentage"
+  },
+  {
+   "fieldname": "allocatated_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Allocatated Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-03-06 11:33:01.993928",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Allocation Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

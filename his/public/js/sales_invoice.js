@@ -7,6 +7,8 @@ frappe.ui.form.on('Sales Invoice', {
           
       };
   })
+		add_sales_return_request_button(frm);
+
 		if (frm.doc.docstatus !== 0 || frm.doc.workflow_state != "Approved") return;
 
 		const editable_fields = ['is_pos', 'payments'];
@@ -135,4 +137,37 @@ frappe.ui.form.on('Sales Invoice Item', {
     function percentage(partialValue, totalValue) {
       // alert( (100 * partialValue) / totalValue)
       return (100 * partialValue) / totalValue;
-   } 
+   }
+
+function add_sales_return_request_button(frm) {
+	if (frm.doc.docstatus !== 1 || cint(frm.doc.is_return)) {
+		return;
+	}
+
+	frappe.call({
+		method: "his.his.doctype.sales_return_request.sales_return_request.get_existing_sales_return_request",
+		args: {
+			sales_invoice: frm.doc.name,
+			patient: frm.doc.patient,
+		},
+		callback(r) {
+			if (r.message) {
+				frm.add_custom_button(__("Open Sales Return Request"), function () {
+					frappe.set_route("Form", "Sales Return Request", r.message);
+				}, __("Create"));
+				return;
+			}
+
+			frm.add_custom_button(__("Sales Return Request"), function () {
+				frappe.new_doc("Sales Return Request", {
+					initiating_department: "Cashier - HH",
+					patient: frm.doc.patient,
+					patient_name: frm.doc.patient_name,
+					customer: frm.doc.customer,
+					sales_invoice: frm.doc.name,
+					company: frm.doc.company
+				});
+			}, __("Create"));
+		}
+	});
+}

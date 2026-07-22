@@ -159,7 +159,8 @@
    "fetch_from": "surgeon.department",
    "fieldname": "dept",
    "fieldtype": "Data",
-   "label": "Dept"
+   "label": "Dept",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_vwe5v",
@@ -168,7 +169,8 @@
   {
    "fieldname": "surgical_procedure",
    "fieldtype": "Data",
-   "label": "Surgical Procedure"
+   "label": "Surgical Procedure",
+   "reqd": 1
   },
   {
    "fieldname": "height",
@@ -179,27 +181,32 @@
   {
    "fieldname": "weight",
    "fieldtype": "Data",
-   "label": "Weight"
+   "label": "Weight",
+   "reqd": 1
   },
   {
    "fieldname": "offasprinanti_plateletdrugs",
    "fieldtype": "Data",
-   "label": "offAsprin/Anti PlateletDrugs"
+   "label": "offAsprin/Anti PlateletDrugs",
+   "reqd": 1
   },
   {
    "fieldname": "airway_asessment",
    "fieldtype": "Data",
-   "label": "Airway Asessment"
+   "label": "Airway Asessment",
+   "reqd": 1
   },
   {
    "fieldname": "allergies",
    "fieldtype": "Data",
-   "label": "Allergies"
+   "label": "Allergies",
+   "reqd": 1
   },
   {
    "fieldname": "mouth_opening",
    "fieldtype": "Data",
-   "label": "Mouth Opening"
+   "label": "Mouth Opening",
+   "reqd": 1
   },
   {
    "fieldname": "teeth",
@@ -209,27 +216,32 @@
   {
    "fieldname": "neck_movements",
    "fieldtype": "Data",
-   "label": "Neck Movements"
+   "label": "Neck Movements",
+   "reqd": 1
   },
   {
    "fieldname": "blood_group",
    "fieldtype": "Data",
-   "label": "Blood Group"
+   "label": "Blood Group",
+   "reqd": 1
   },
   {
    "fieldname": "emergency_yn",
    "fieldtype": "Data",
-   "label": "Emergency Y/N"
+   "label": "Emergency Y/N",
+   "reqd": 1
   },
   {
    "fieldname": "complications_of_previous_anesthesia_if_any",
    "fieldtype": "Data",
-   "label": "Complications of Previous Anesthesia if any"
+   "label": "Complications of Previous Anesthesia if any",
+   "reqd": 1
   },
   {
    "fieldname": "patient_and_family_history_of_anesthesia_complication",
    "fieldtype": "Data",
-   "label": "Patient and Family History of Anesthesia complication"
+   "label": "Patient and Family History of Anesthesia complication",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_weipn",
@@ -240,31 +252,36 @@
    "fieldname": "asthma",
    "fieldtype": "Select",
    "label": " Asthma",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "copd",
    "fieldtype": "Select",
    "label": "COPD",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "pneumonia",
    "fieldtype": "Select",
    "label": "Pneumonia ",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "expectoration",
    "fieldtype": "Select",
    "label": "Expectoration ",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "cough",
    "fieldtype": "Select",
    "label": "Cough",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "cardio_vascular_system_section",
@@ -279,25 +296,29 @@
    "fieldname": "hypertension",
    "fieldtype": "Select",
    "label": "Hypertension",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "cadmi",
    "fieldtype": "Select",
    "label": "CAD/MI",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "angina",
    "fieldtype": "Select",
    "label": "Angina",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "pace_maker",
    "fieldtype": "Select",
    "label": "Pace Maker ",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "cnsmusculo_skeletal_system_section",
@@ -514,18 +535,21 @@
   {
    "fieldname": "diagnosis",
    "fieldtype": "Data",
-   "label": "diagnosis"
+   "label": "diagnosis",
+   "reqd": 1
   },
   {
    "fieldname": "proposed_date_of_surgury",
    "fieldtype": "Date",
-   "label": "Proposed Date of Surgury"
+   "label": "Proposed Date of Surgury",
+   "reqd": 1
   },
   {
    "fieldname": "surgeon",
    "fieldtype": "Link",
    "label": "Surgeon",
-   "options": "Healthcare Practitioner"
+   "options": "Healthcare Practitioner",
+   "reqd": 1
   },
   {
    "fieldname": "lenght_of_stay",
@@ -536,79 +560,92 @@
    "fieldname": "edema",
    "fieldtype": "Select",
    "label": "Edema",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "dyspnoea",
    "fieldtype": "Select",
    "label": "Dyspnoea",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "orthopnoea",
    "fieldtype": "Select",
    "label": "Orthopnoea",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "recenturti",
    "fieldtype": "Select",
    "label": "RecentURTI",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "smoker",
    "fieldtype": "Select",
    "label": "Smoker",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "xray_chest",
    "fieldtype": "Select",
    "label": "Xray Chest ",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "pulmonary_function_test",
    "fieldtype": "Select",
    "label": "Pulmonary Function Test ",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "abg",
    "fieldtype": "Select",
    "label": "ABG",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "chf",
    "fieldtype": "Select",
    "label": "CHF",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "cyanosis",
    "fieldtype": "Select",
    "label": "Cyanosis",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "echo",
    "fieldtype": "Select",
    "label": "Echo",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "lvef_",
    "fieldtype": "Select",
    "label": "LVEF %",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "rwma",
    "fieldtype": "Select",
    "label": "RWMA",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_qbrgr",
@@ -799,7 +836,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-23 10:13:48.790620",
+ "modified": "2026-06-30 16:56:12.273811",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Pre Anesthesia Evaluation and Re Evaluation Form",

@@ -38,6 +38,11 @@ def refer_out_side(docname , practitioner,to,rtype,patient,request):
 @frappe.whitelist()
 def refer_from_doctor(patient,request, type,ref_practitioner, rtype = None,to=None,practitioner = None):
    # pre_app = frappe.get_doc("Patient Appointment" , docname)
+    if practitioner and ref_practitioner and practitioner == ref_practitioner:
+        
+
+        frappe.throw("The referring consultant and referred consultant cannot be the same..")
+
     new_refer = frappe.get_doc({
         "doctype" : "Referral Form",
         "patient" : patient,

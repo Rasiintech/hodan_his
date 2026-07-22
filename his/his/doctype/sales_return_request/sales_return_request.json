@@ -1,0 +1,591 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-31 09:39:29.855819",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "request_date",
+  "company",
+  "status",
+  "workflow_state",
+  "sb_patient",
+  "patient",
+  "customer",
+  "patient_name",
+  "patient_encounter",
+  "appointment",
+  "inpatient_record",
+  "sb_source",
+  "column_break_qkl5x",
+  "initiating_department",
+  "requested_by",
+  "requested_by_name",
+  "sb_invoice",
+  "sales_invoice",
+  "sales_invoice_date",
+  "currency",
+  "invoice_grand_total",
+  "column_break_pffoo",
+  "invoice_additional_discount_",
+  "invoice_discount_amount",
+  "invoice_paid_amount",
+  "invoice_outstanding_amount",
+  "eligible_refund_amount",
+  "already_refunded_amount",
+  "balance_refundable",
+  "healthcare_insurance",
+  "is_insurance",
+  "insurance",
+  "insurance_id",
+  "insurance_policy",
+  "insurance_company",
+  "policy_number",
+  "policyholder_name",
+  "coverage_limits",
+  "expiry_date",
+  "insurance_coverage_amount",
+  "insurance_paid",
+  "is_claimed",
+  "section_break_kde0o",
+  "items",
+  "sb_return",
+  "return_type",
+  "return_basis",
+  "reason_code",
+  "reason_details",
+  "column_break_fe9ti",
+  "service_rendered",
+  "requested_amount",
+  "finance_remarks",
+  "rejection_reason",
+  "sb_finance",
+  "finance_reviewer",
+  "finance_review_date",
+  "sb_cashier",
+  "cashier",
+  "cashier_action_date",
+  "column_break_pjkto",
+  "return_sales_invoice",
+  "refund_payment_entry",
+  "refund_mode_of_payment",
+  "refund_reference_no",
+  "refund_remarks",
+  "amended_from",
+  "reference_doctype",
+  "reference_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "SRR-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nUnder Review\nApproved\nRejected\nRefund In Progress\nRefunded\nCancelled",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Workflow State",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_patient",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Appointment",
+   "options": "Patient Appointment"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "sb_source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "Source Order"
+  },
+  {
+   "fieldname": "column_break_qkl5x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "initiating_department",
+   "fieldtype": "Link",
+   "label": "Initiating Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_by_name",
+   "fieldtype": "Data",
+   "label": "Requested By Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_invoice",
+   "fieldtype": "Section Break",
+   "label": "Original Invoice"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Original Sales Invoice",
+   "options": "Sales Invoice",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_invoice_date",
+   "fieldtype": "Date",
+   "label": "Sales Invoice Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_grand_total",
+   "fieldtype": "Currency",
+   "label": "Invoice Grand Total",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pffoo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Paid Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Outstanding Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "eligible_refund_amount",
+   "fieldtype": "Currency",
+   "label": "Eligible Refund Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "already_refunded_amount",
+   "fieldtype": "Currency",
+   "label": "Already Refunded Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_refundable",
+   "fieldtype": "Currency",
+   "label": "Balance Refundable",
+   "options": "currency"
+  },
+  {
+   "fieldname": "section_break_kde0o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Sales Return Request Item"
+  },
+  {
+   "fieldname": "sb_return",
+   "fieldtype": "Section Break",
+   "label": "Return Details"
+  },
+  {
+   "fieldname": "return_type",
+   "fieldtype": "Select",
+   "label": "Return Type",
+   "options": "Full\nPartial",
+   "reqd": 1
+  },
+  {
+   "default": "Selected Items/Services",
+   "fieldname": "return_basis",
+   "fieldtype": "Select",
+   "label": "Return Basis",
+   "options": "\nEntire Invoice\nSelected Items/Services\nAdjustment Only",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Select",
+   "label": "Reason Code",
+   "options": "\nService Not Rendered\nService Cancelled\nDuplicate Billing\nOvercharge\nWrong Patient/Customer\nDoctor/Lab Request Cancelled\nSystem Error\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason_details",
+   "fieldtype": "Small Text",
+   "label": "Reason Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fe9ti",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_rendered",
+   "fieldtype": "Select",
+   "label": "Service Rendered",
+   "options": "No\nPartially\nFully",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requested_amount",
+   "fieldtype": "Currency",
+   "label": "Requested Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "finance_remarks",
+   "fieldtype": "Small Text",
+   "label": "Finance Remarks"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "sb_finance",
+   "fieldtype": "Section Break",
+   "label": "Finance Review"
+  },
+  {
+   "fieldname": "finance_reviewer",
+   "fieldtype": "Link",
+   "label": "Finance Reviewer",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finance_review_date",
+   "fieldtype": "Datetime",
+   "label": "Finance Review Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_cashier",
+   "fieldtype": "Section Break",
+   "label": "Cashier Execution"
+  },
+  {
+   "fieldname": "cashier",
+   "fieldtype": "Link",
+   "label": "Cashier",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cashier_action_date",
+   "fieldtype": "Datetime",
+   "label": "Cashier Action Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pjkto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_sales_invoice",
+   "fieldtype": "Link",
+   "label": "Return Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refund_payment_entry",
+   "fieldtype": "Link",
+   "label": "Refund Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "refund_mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Refund Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "refund_reference_no",
+   "fieldtype": "Data",
+   "label": "Refund Reference No"
+  },
+  {
+   "fieldname": "refund_remarks",
+   "fieldtype": "Small Text",
+   "label": "Refund Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Return Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference Doctype",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "reference_name",
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Return Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_additional_discount_",
+   "fieldtype": "Percent",
+   "label": "Invoice Additional Discount %"
+  },
+  {
+   "fieldname": "invoice_discount_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Discount Amount"
+  },
+  {
+   "fieldname": "healthcare_insurance",
+   "fieldtype": "Section Break",
+   "label": "Insurance Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_insurance",
+   "fieldtype": "Check",
+   "label": "Is Insurance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Link",
+   "label": "Insurance",
+   "options": "Insurance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_id",
+   "fieldtype": "Data",
+   "label": "Insurance ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_policy",
+   "fieldtype": "Link",
+   "label": "Insurance Policy",
+   "options": "Insurance Policy",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "label": "Insurance Company",
+   "options": "Insurance Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "label": "Policy Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "policyholder_name",
+   "fieldtype": "Data",
+   "label": "Policyholder Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "coverage_limits",
+   "fieldtype": "Data",
+   "label": "Coverage Limits",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Data",
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_coverage_amount",
+   "fieldtype": "Currency",
+   "label": "Insurance Coverage Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_paid",
+   "fieldtype": "Currency",
+   "label": "Insurance Paid",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_claimed",
+   "fieldtype": "Check",
+   "label": "Is Claimed",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-12 14:01:36.214588",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Sales Return Request",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFO",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -33,10 +33,9 @@
    "label": "Disabled"
   }
  ],
- "in_create": 1,
  "is_published_field": "type",
  "links": [],
- "modified": "2025-08-31 10:50:48.031658",
+ "modified": "2026-03-28 11:45:44.099169",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Inpatient Type",

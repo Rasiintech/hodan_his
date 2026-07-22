@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-26 07:55:50.959984",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "department",
+  "section_break_1",
+  "part_1_hand_hygiene",
+  "section_break_2",
+  "part_2_ppe",
+  "section_break_3",
+  "part_3_waste_management",
+  "section_break_4",
+  "part_4_environmental_cleaning",
+  "section_break_5",
+  "part_5_patient_care",
+  "section_break_6",
+  "part_6_patient_isolation",
+  "section_break_7",
+  "part_7_medical_equipment",
+  "section_break_8",
+  "part_8_cssd",
+  "section_break_9",
+  "part_9_laundry_cleaning",
+  "section_break_10",
+  "part_10_restaurant_cleaning",
+  "section_break_11",
+  "part_11_score_supervision",
+  "section_break_gzqol",
+  "recommendations",
+  "preprepared_by",
+  "full_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Medical Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Part 1: Hand Hygiene"
+  },
+  {
+   "fieldname": "part_1_hand_hygiene",
+   "fieldtype": "Table",
+   "label": "Part 1 Hand Hygiene",
+   "options": "IPC Part 1 Hand Hygiene"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Part 2: PPE"
+  },
+  {
+   "fieldname": "part_2_ppe",
+   "fieldtype": "Table",
+   "label": "Part 2 PPE",
+   "options": "IPC Part 2 PPE"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Part 3: Waste Management"
+  },
+  {
+   "fieldname": "part_3_waste_management",
+   "fieldtype": "Table",
+   "label": "Part 3 Waste Management",
+   "options": "IPC Part 3 Waste Management"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Part 4: Environmental Cleaning and Disinfection"
+  },
+  {
+   "fieldname": "part_4_environmental_cleaning",
+   "fieldtype": "Table",
+   "label": "Part 4 Environmental Cleaning",
+   "options": "IPC Part 4 Environmental Cleaning"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Part 5: Patient Care and Aseptic Techniques"
+  },
+  {
+   "fieldname": "part_5_patient_care",
+   "fieldtype": "Table",
+   "label": "Part 5 Patient Care",
+   "options": "IPC Part 5 Patient Care"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Part 6: Patient Isolation and Precautions"
+  },
+  {
+   "fieldname": "part_6_patient_isolation",
+   "fieldtype": "Table",
+   "label": "Part 6 Patient Isolation",
+   "options": "IPC Part 6 Patient Isolation"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Part 7: Medical Equipment Disinfected"
+  },
+  {
+   "fieldname": "part_7_medical_equipment",
+   "fieldtype": "Table",
+   "label": "Part 7 Medical Equipment",
+   "options": "IPC Part 7 Medical Equipment"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Part 8: CSSD"
+  },
+  {
+   "fieldname": "part_8_cssd",
+   "fieldtype": "Table",
+   "label": "Part 8 CSSD",
+   "options": "IPC Part 8 CSSD"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Part 9: Laundry Cleaning"
+  },
+  {
+   "fieldname": "part_9_laundry_cleaning",
+   "fieldtype": "Table",
+   "label": "Part 9 Laundry Cleaning",
+   "options": "IPC Part 9 Laundry Cleaning"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Part 10: Restaurant Staff and Visitors Cleaning"
+  },
+  {
+   "fieldname": "part_10_restaurant_cleaning",
+   "fieldtype": "Table",
+   "label": "Part 10 Restaurant Cleaning",
+   "options": "IPC Part 10 Restaurant Cleaning"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Part 11: Score Supervision Form"
+  },
+  {
+   "fieldname": "part_11_score_supervision",
+   "fieldtype": "Table",
+   "label": "Part 11 Score Supervision",
+   "options": "IPC Part 11 Score Supervision"
+  },
+  {
+   "fieldname": "section_break_gzqol",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Small Text",
+   "label": "RECOMMENDATIONS"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "preprepared_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Preprepared by",
+   "options": "User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-26 10:18:52.218492",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "IPC Compliance Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,192 @@
+<div class="accounts-dashboard theme-{%= current_theme || "standard" %}">
+	<aside class="accounts-sidebar">
+		<nav class="accounts-nav">
+			<a class="active" href="#"><i class="fa fa-shopping-cart"></i><span>Purchase Overview</span></a>
+			<a href="#"><i class="fa fa-truck"></i><span>Suppliers</span></a>
+			<a href="#"><i class="fa fa-tags"></i><span>Supplier Groups</span></a>
+			<a href="#"><i class="fa fa-hospital-o"></i><span>Departments</span></a>
+			<a href="#"><i class="fa fa-building"></i><span>Warehouses</span></a>
+			<a href="#"><i class="fa fa-cubes"></i><span>Item Groups</span></a>
+			<a href="#"><i class="fa fa-file-text-o"></i><span>Invoices</span></a>
+			<a href="#"><i class="fa fa-undo"></i><span>Returns</span></a>
+			<a href="#"><i class="fa fa-credit-card"></i><span>Payments</span></a>
+			<a href="#"><i class="fa fa-sitemap"></i><span>Procurement Mix</span></a>
+		</nav>
+	</aside>
+
+	<main class="accounts-content">
+		<header class="accounts-header">
+			<div>
+				<h1>Hospital Purchase Dashboard</h1>
+				<p>Supplier, department, warehouse, and item-group purchase performance</p>
+			</div>
+			<div class="accounts-actions">
+				<button class="theme-button" type="button"><i class="fa fa-paint-brush"></i><span>{%= current_theme_label || "Standard" %}</span><i class="fa fa-chevron-down"></i></button>
+				<button class="date-button"><i class="fa fa-calendar"></i><span>{%= date_range %}</span><i class="fa fa-chevron-down"></i></button>
+				<button class="filter-button"><i class="fa fa-filter"></i><span>Filters</span></button>
+				<button class="refresh-button"><i class="fa fa-sync-alt"></i><span>Refresh</span></button>
+				<button class="export-button"><i class="fa fa-download"></i><span>Export</span></button>
+			</div>
+		</header>
+
+		<section class="metric-grid">
+			{% for metric in metrics %}
+			<div class="metric-card {%= metric.class %}">
+				<div class="metric-icon">{%= metric.icon %}</div>
+				<div>
+					<span>{%= metric.label %}</span>
+					<strong>{%= metric.value %}</strong>
+					<small class="{%= metric.trend_class %}">{%= metric.trend %}</small>
+					<em>vs {%= comparison_range %}</em>
+				</div>
+			</div>
+			{% endfor %}
+		</section>
+
+		<section class="chart-row">
+			<div class="panel income-expenses">
+				<div class="panel-head">
+					<h2>Purchases vs Payments</h2>
+					<div class="legend"><span class="green"></span>Purchases <span class="red"></span>Payments</div>
+				</div>
+				<div class="bar-chart">
+					<div class="plot">
+						<div class="grid-lines"></div>
+						{% for item in income_expenses %}
+						<div class="bar-group">
+							<div class="bar-stack">
+								<span class="bar-column">
+									<span class="bar-value income-value">{%= item.income_value %}</span>
+									<span class="income-b" style="height: {%= item.income_height %}px;"></span>
+								</span>
+								<span class="bar-column">
+									<span class="bar-value expense-value">{%= item.expense_value %}</span>
+									<span class="expense-b" style="height: {%= item.expense_height %}px;"></span>
+								</span>
+							</div>
+							<label>{%= item.label %}</label>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+
+			<div class="panel donut-panel">
+				<h2>Purchase by Cost Center</h2>
+				<div class="donut-wrap">
+					<div class="donut expense-donut" style="{%= expense_donut_style %}"></div>
+					<ul class="chart-list">
+						{% for category in expense_categories %}
+						<li><span class="{%= category.class %}"></span>{%= category.label %} <b>{%= category.value %}</b></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+
+			<div class="panel donut-panel source-panel">
+				<h2>Purchase by Warehouse</h2>
+				<div class="donut-wrap">
+					<div class="donut source-donut" style="{%= source_donut_style %}"></div>
+					<ul class="chart-list">
+						{% for source in income_sources %}
+						<li><span class="{%= source.class %}"></span>{%= source.label %} <b>{%= source.value %}</b></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="table-row">
+			<div class="panel table-panel accounts-table">
+				<h2>Supplier Spend</h2>
+				<div class="table-row-limit-panel" data-row-limit-panel="10">
+				<table>
+					<thead><tr><th>Supplier</th><th>Supplier Group</th><th>Net Purchase ($)</th><th>Payment ($)</th><th>Balance as of {%= to_date %}</th></tr></thead>
+					<tbody>
+						{% for row in account_balances %}
+						{% if row.is_over_limit %}
+						<tr class="is-over-limit"><td>{%= row.account %}</td><td>{%= row.type %}</td><td>{%= row.balance %}</td><td>{%= row.payment %}</td><td>{%= row.supplier_balance %}</td></tr>
+						{% else %}
+						<tr><td>{%= row.account %}</td><td>{%= row.type %}</td><td>{%= row.balance %}</td><td>{%= row.payment %}</td><td>{%= row.supplier_balance %}</td></tr>
+						{% endif %}
+						{% endfor %}
+					</tbody>
+					<tfoot>
+						<tr><th>Total</th><th>Top Suppliers</th><th>{%= account_balances_total %}</th><th>{%= account_balances_payment_total %}</th><th>{%= account_balances_supplier_balance_total %}</th></tr>
+					</tfoot>
+				</table>
+				{% if account_balances_has_more %}
+				<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="View All Suppliers" data-collapse-label="Show Less">View All Suppliers</button>
+				{% endif %}
+				</div>
+			</div>
+
+			<div class="panel table-panel">
+				<h2>Purchase by Item Group</h2>
+				<table>
+					<thead><tr><th>Item Group</th><th>Qty</th><th>Amount ($)</th></tr></thead>
+					<tbody>
+						{% for row in unpaid_invoices %}
+						<tr><td>{%= row.item_group %}</td><td>{%= row.qty %}</td><td>{%= row.amount %}</td></tr>
+						{% endfor %}
+					</tbody>
+					<tfoot>
+						<tr><th>Total</th><th>{%= unpaid_invoices_total.qty %}</th><th>{%= unpaid_invoices_total.amount %}</th></tr>
+					</tfoot>
+				</table>
+				<a href="#">View Item Group Breakdown</a>
+			</div>
+		</section>
+
+		<section class="bottom-row">
+			<div class="panel table-panel budget-variance-panel">
+				<h2>Anomalies in Purchase</h2>
+				{% if budget_variance.length %}
+				<div class="table-row-limit-panel" data-row-limit-panel="10">
+				<table>
+					<thead><tr><th>Supplier / Item</th><th>Current Value</th><th>Expected Value</th><th>Variance</th></tr></thead>
+					<tbody>
+						{% for row in budget_variance %}
+						{% if row.is_over_limit %}
+						<tr class="is-over-limit">
+						{% else %}
+						<tr>
+						{% endif %}
+							<td>{%= row.subject %}</td>
+							<td>{%= row.current_value %}</td>
+							<td>{%= row.expected_value %}</td>
+							<td class="variance-cell {%= row.variance_class %}">{%= row.variance %}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Total</th>
+							<th colspan="3">{%= budget_variance_total.count %} anomalies</th>
+						</tr>
+					</tfoot>
+				</table>
+				{% if budget_variance_has_more %}
+				<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="Display All" data-collapse-label="Show Less">Display All</button>
+				{% endif %}
+				</div>
+				{% else %}
+				<div class="budget-empty-state">
+					<i class="fa fa-chart-pie"></i>
+					<p>{%= budget_variance_message %}</p>
+				</div>
+				{% endif %}
+				<a href="#" data-budget-plan-link="1">View Detailed Purchase Breakdown</a>
+			</div>
+
+			<div class="panel insight-panel">
+				<h2><span class="spark"><i class="fa fa-sun"></i></span>AI Insight</h2>
+				<div data-ai-insight-content="1">
+					{% for insight in insights %}
+					<p><i class="fa {%= insight.icon_class %} {%= insight.text_class %}"></i>{%= insight.text %}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+	</main>
+</div>

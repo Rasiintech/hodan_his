@@ -1,0 +1,31 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-04-08 17:05:40.068656",
+ "disable_prepared_report": 1,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-04-08 17:18:55.571872",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ER Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "filters = filters or {}\n\ncolumns = [\n    {\"label\": \"Date\", \"fieldname\": \"date\", \"fieldtype\": \"Date\", \"width\": 110},\n    {\"label\": \"Patient ID\", \"fieldname\": \"patient\", \"fieldtype\": \"Link\", \"options\": \"Patient\", \"width\": 140},\n    {\"label\": \"Patient Name\", \"fieldname\": \"patient_name\", \"fieldtype\": \"Data\", \"width\": 220},\n    {\"label\": \"Trauma Category\", \"fieldname\": \"trauma_category\", \"fieldtype\": \"Data\", \"width\": 130},\n    {\"label\": \"ER Type\", \"fieldname\": \"er_type\", \"fieldtype\": \"Data\", \"width\": 120},\n    {\"label\": \"Practitioner\", \"fieldname\": \"practitioner\", \"fieldtype\": \"Data\", \"width\": 180},\n]\n\nconditions = [\"IFNULL(et.mrp, '') IN ('Trauma', 'Non-Trauma')\"]\nsql_filters = {}\n\nif filters.get(\"from_date\"):\n    conditions.append(\"COALESCE(em.encounter_date, et.date) >= %(from_date)s\")\n    sql_filters[\"from_date\"] = filters.get(\"from_date\")\n\nif filters.get(\"to_date\"):\n    conditions.append(\"COALESCE(em.encounter_date, et.date) <= %(to_date)s\")\n    sql_filters[\"to_date\"] = filters.get(\"to_date\")\n\nif filters.get(\"patient\"):\n    conditions.append(\"et.patient = %(patient)s\")\n    sql_filters[\"patient\"] = filters.get(\"patient\")\n\nif filters.get(\"practitioner\"):\n    conditions.append(\"COALESCE(NULLIF(em.practitioner, ''), et.practitioner) = %(practitioner)s\")\n    sql_filters[\"practitioner\"] = filters.get(\"practitioner\")\n\nif filters.get(\"trauma_category\"):\n    conditions.append(\"et.mrp = %(trauma_category)s\")\n    sql_filters[\"trauma_category\"] = filters.get(\"trauma_category\")\n\nif filters.get(\"er_type\"):\n    conditions.append(\"et.er_type = %(er_type)s\")\n    sql_filters[\"er_type\"] = filters.get(\"er_type\")\n\nquery = \"\"\"\n    SELECT\n        COALESCE(em.encounter_date, et.date) AS date,\n        et.patient AS patient,\n        et.patient_name AS patient_name,\n        IFNULL(et.mrp, '') AS trauma_category,\n        IFNULL(et.er_type, '') AS er_type,\n        COALESCE(NULLIF(em.practitioner_name, ''), NULLIF(em.practitioner, ''), et.practitioner) AS practitioner\n    FROM `tabEmergency Triage` et\n    LEFT JOIN `tabEmergency` em ON em.que = et.que\n    WHERE \"\"\" + \" AND \".join(conditions) + \"\"\"\n    ORDER BY COALESCE(em.encounter_date, et.date) DESC, et.patient_name ASC, et.creation DESC\n\"\"\"\n\nresult = frappe.db.sql(query, sql_filters, as_dict=True)\n\ndata = [columns, result]",
+ "ref_doctype": "Emergency",
+ "report_name": "ER Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "All"
+  }
+ ]
+}

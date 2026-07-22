@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-11 14:14:33.567150",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "azure_section",
+  "tenant_id",
+  "client_id",
+  "column_break_ids",
+  "client_secret",
+  "power_bi_section",
+  "reports",
+  "legacy_report_section",
+  "workspace_id",
+  "report_id",
+  "column_break_report",
+  "report_url"
+ ],
+ "fields": [
+  {
+   "fieldname": "azure_section",
+   "fieldtype": "Section Break",
+   "label": "Azure App Credentials"
+  },
+  {
+   "fieldname": "tenant_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ids",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_secret",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Client Secret",
+   "reqd": 1
+  },
+  {
+   "fieldname": "power_bi_section",
+   "fieldtype": "Section Break",
+   "label": "Power BI Reports"
+  },
+  {
+   "description": "Use the real workspace GUID, not groups/me.",
+   "fieldname": "workspace_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Workspace ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "report_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Report ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_report",
+   "fieldtype": "Column Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "report_url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Report URL",
+   "read_only": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "reports",
+   "fieldtype": "Table",
+   "label": "Reports",
+   "options": "Power BI Report"
+  },
+  {
+   "fieldname": "legacy_report_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Legacy Report Fields"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-04-18 14:54:00.613567",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Powerbi Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,6 +1,7 @@
 import frappe
 from frappe import _
 
+
 # Function to define the report columns
 def get_detailed_columns():
     return [
@@ -17,8 +18,10 @@ def get_detailed_columns():
         {"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 120},
         {"label": _("Quantity"), "fieldname": "qty", "fieldtype": "Int", "width": 100},
         {"label": _("Rate"), "fieldname": "rate", "fieldtype": "Currency", "width": 100},
-        {"label": _("Sales Rate"), "fieldname": "sales_net_rate", "fieldtype": "Currency", "width": 100},
-        {"label": _("Discount"), "fieldname": "discount", "fieldtype": "Currency", "width": 100},
+        # {"label": _("Sales Rate"), "fieldname": "sales_net_rate", "fieldtype": "Currency", "width": 100},
+        # {"label": _("Discount"), "fieldname": "discount", "fieldtype": "Currency", "width": 100},
+          {"label": _("Comment"), "fieldname": "comment", "fieldtype": "Data", "width": 350},
+          {"label": _("Updated Comment"), "fieldname": "updated_comment", "fieldtype": "Data", "width": 350},
     ]
 
 
@@ -61,6 +64,8 @@ def execute(filters=None):
             R.item_group AS "item_group",
             I.name as "sales_order_item",
             S.name as sales_order,
+             S.comment as "comment",
+             S.updated_comment as "Updated Comment",
             CASE
                 WHEN I.delivered_qty = 1 THEN 'Completed'
                 WHEN I.delivered_qty = 0 THEN 'To Deliver and Bill'
@@ -68,6 +73,7 @@ def execute(filters=None):
             END AS "status",
             I.qty AS "qty",
             ROUND(R.rate, 2) AS "rate"
+            
         FROM `tabSales Order` S
         JOIN `tabSales Order Item` I ON S.name = I.parent
         JOIN `tabClinical Procedure Template` R ON I.item_code = R.name
@@ -75,14 +81,34 @@ def execute(filters=None):
         WHERE S.docstatus = 1
             {f"AND {' AND '.join(conditions)}" if conditions else ''}
         ORDER BY S.transaction_date DESC
+
     """
 
     data = frappe.db.sql(query, as_dict=True)
 
     result = []
+ 
     for i in data:
         # Load the procedure template for this row
         pro = frappe.get_doc("Clinical Procedure Template", {"name": i.procedure})
+        # if i.status == "Completed":
+        #     i.comment = "Billed"
+        # sales_item_invoice = frappe.db.get_value("Sales Invoice Item" , {"item_code": i.item_code , "creation": (">=", i.transaction_date) , "docstatus" : 1} , "parent")
+        items = frappe.db.sql(
+                f"""
+                SELECT sii.parent, sii.item_code, sii.item_name, sii.qty, sii.rate
+                FROM `tabSales Invoice Item` sii
+                INNER JOIN `tabSales Invoice` si ON si.name = sii.parent
+                WHERE sii.item_code = "{i.item_code}" and si.patient = "{i.patient}" AND si.docstatus = 1  and si.posting_date >= "{i.transaction_date}" 
+                """,
+                as_dict=True,
+            )
+
+        if items:
+            if items[0].parent:
+            
+                i.status = "Completed"
+                i.comment = "Billed"
 
         # --- Gather anesthesia items from the template child table dynamically ---
         # NOTE: If your child table field is named differently, change "_aneasthesia_prescription"
@@ -142,8 +168,8 @@ def execute(filters=None):
         result.append({
             **i,
             "rate": round(updated_rate, 2),
-            "sales_net_rate": round(billed_rate, 2),
-            "discount": round(discount, 2),
+            # "sales_net_rate": round(billed_rate, 2),
+            # "discount": round(discount, 2),
         })
 
     return columns, result

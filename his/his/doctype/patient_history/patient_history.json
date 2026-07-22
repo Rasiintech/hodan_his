@@ -31,6 +31,9 @@
   "section_break_6qzlz",
   "view_as_chart",
   "vitals",
+  "fluid_balance_tab",
+  "section_break_qnzzh",
+  "fluid_balance",
   "drug_sheet_tab",
   "section_break_ribwz",
   "drug",
@@ -458,12 +461,27 @@
    "fieldtype": "Data",
    "label": "Age Type",
    "read_only": 1
+  },
+  {
+   "fieldname": "fluid_balance_tab",
+   "fieldtype": "Tab Break",
+   "label": "Fluid Balance"
+  },
+  {
+   "fieldname": "section_break_qnzzh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fluid_balance",
+   "fieldtype": "HTML",
+   "label": "Fluid Balance",
+   "options": "<div id=\"fluid_balance\">  </div>"
   }
  ],
  "hide_toolbar": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-01-22 13:27:23.154891",
+ "modified": "2026-01-24 14:41:12.611043",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Patient History",

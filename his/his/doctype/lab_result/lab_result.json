@@ -85,6 +85,7 @@
    "fieldname": "patient",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Patient",
    "options": "Patient",
@@ -395,6 +396,7 @@
   {
    "fieldname": "template",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Template",
    "options": "Lab Test Template"
@@ -408,7 +410,6 @@
   {
    "fieldname": "type",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Sample",
    "read_only": 1
@@ -515,7 +516,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-24 13:49:09.296635",
+ "modified": "2026-05-31 10:51:11.441307",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Lab Result",
@@ -559,8 +560,7 @@
    "report": 1,
    "role": "Physician",
    "select": 1,
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
    "amend": 1,
@@ -580,7 +580,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -588,9 +587,7 @@
    "report": 1,
    "role": "All",
    "select": 1,
-   "share": 1,
-   "submit": 1,
-   "write": 1
+   "share": 1
   }
  ],
  "restrict_to_domain": "Healthcare",

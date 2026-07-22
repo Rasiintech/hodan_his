@@ -1,0 +1,46 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-02-24 12:32:16.823331",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-05-09 11:10:03.608271",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Sales Return Fraud Monitor",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n  si.customer AS \"Customer:Link/Customer:170\",\r\n  si.name AS \"Return Invoice:Link/Sales Invoice:160\",\r\n    si.posting_date AS \"Return Date:Date:95\",\r\n   -- si.owner AS \"Return User:Data:140\",\r\n   si.grand_total AS \"Return Amount:Currency:120\",\r\n   orig.grand_total AS \"Original Amount:Currency:120\",\r\n   orig.posting_date AS \"Original Date:Date:95\",\r\n  \r\n  si.owner AS \"Return Created By\",\r\n  si.return_against AS \"Original Invoice:Link/Sales Invoice:160\",\r\n  si.comment AS \"Remark:Data:300\",\r\n   -- orig.owner AS \"Original User:Data:140\",\r\n  \r\n  DATEDIFF(si.posting_date, orig.posting_date) AS \"Days Gap:Int:80\",\r\n  CASE\r\n    WHEN si.return_against IS NULL OR si.return_against = '' THEN 'NO ORIGINAL'\r\n    WHEN orig.name IS NULL THEN 'ORIGINAL MISSING'\r\n    WHEN si.grand_total > orig.grand_total THEN 'RETURN > ORIGINAL'\r\n    WHEN DATEDIFF(si.posting_date, orig.posting_date) > 7 THEN 'LATE RETURN'\r\n    WHEN si.owner <> orig.owner THEN 'DIFFERENT USER'\r\n    ELSE 'OK'\r\n  END AS \"Risk Flag:Data:140\"\r\nFROM\r\n  `tabSales Invoice` si\r\nLEFT JOIN\r\n  `tabSales Invoice` orig\r\n  ON orig.name = si.return_against\r\nWHERE\r\n  si.is_return = 1\r\n  AND si.docstatus = 1\r\nORDER BY\r\n  si.posting_date DESC, si.modified DESC;",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Sales Return Fraud Monitor",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "Cashier"
+  },
+  {
+   "role": "OT"
+  },
+  {
+   "role": "Doctor"
+  },
+  {
+   "role": "Sales Cancel"
+  }
+ ]
+}

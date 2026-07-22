@@ -20,6 +20,7 @@
   "emergency_number",
   "contact_person",
   "ref_practitioner",
+  "date",
   "section_break1",
   "q1",
   "cb1",
@@ -522,12 +523,21 @@
    "fieldtype": "Link",
    "label": "Healthcare Practitioner",
    "options": "Healthcare Practitioner"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-12 10:53:52.289327",
+ "modified": "2026-01-25 14:30:50.746940",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Hajj Screening",

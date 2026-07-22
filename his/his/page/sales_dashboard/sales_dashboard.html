@@ -1,0 +1,353 @@
+<div class="accounts-dashboard theme-{%= current_theme || "standard" %}">
+	<aside class="accounts-sidebar">
+		<nav class="accounts-nav">
+			<a class="active" href="#"><i class="fa fa-home"></i><span>Sales Overview</span></a>
+			<a href="#"><i class="fa fa-user-md"></i><span>Doctors</span></a>
+			<a href="#"><i class="fa fa-hospital-o"></i><span>Departments</span></a>
+			<a href="#"><i class="fa fa-bed"></i><span>Admissions</span></a>
+			<a href="#"><i class="fa fa-cubes"></i><span>Item Groups</span></a>
+			<a href="#"><i class="fa fa-users"></i><span>Patients</span></a>
+			<a href="#"><i class="fa fa-credit-card"></i><span>Payers</span></a>
+			<a href="#"><i class="fa fa-line-chart"></i><span>Collections</span></a>
+			<a href="#"><i class="fa fa-list"></i><span>Invoices</span></a>
+			<a href="#"><i class="fa fa-sitemap"></i><span>Operational Mix</span></a>
+	
+		</nav>
+		<!-- <div class="accounts-updated">
+			<strong>Last Updated</strong>
+			<span>May 31, 2024 10:30 AM</span>
+			<i class="fa fa-sync-alt"></i>
+		</div> -->
+	</aside>
+
+	<main class="accounts-content">
+		<header class="accounts-header">
+			<div>
+				<h1>Hospital Sales Dashboard</h1>
+				<p>Doctor, department, admission, and item-group sales performance</p>
+			</div>
+			<div class="accounts-actions">
+				<button class="theme-button" type="button"><i class="fa fa-paint-brush"></i><span>{%= current_theme_label || "Standard" %}</span><i class="fa fa-chevron-down"></i></button>
+				<button class="date-button"><i class="fa fa-calendar"></i><span>{%= date_range %}</span><i class="fa fa-chevron-down"></i></button>
+				<button class="filter-button"><i class="fa fa-filter"></i><span>Filters</span></button>
+				<button class="refresh-button"><i class="fa fa-sync-alt"></i><span>Refresh</span></button>
+				<button class="export-button"><i class="fa fa-download"></i><span>Export</span></button>
+			</div>
+		</header>
+
+		<section class="metric-grid">
+			{% for metric in metrics %}
+			<div class="metric-card {%= metric.class %}">
+				<div class="metric-icon">{%= metric.icon %}</div>
+				<div>
+					<span>{%= metric.label %}</span>
+					<strong>{%= metric.value %}</strong>
+					<small class="{%= metric.trend_class %}">{%= metric.trend %}</small>
+					<em>vs {%= comparison_range %}</em>
+				</div>
+			</div>
+			{% endfor %}
+		</section>
+
+		<section class="chart-row">
+			<div class="panel income-expenses">
+				<div class="panel-head">
+					<h2>Sales vs Collections</h2>
+					<div class="legend"><span class="green"></span>Sales <span class="red"></span>Collections</div>
+				</div>
+				<div class="bar-chart">
+					<div class="plot">
+						<div class="grid-lines"></div>
+						{% for item in income_expenses %}
+						<div class="bar-group">
+							<div class="bar-stack">
+								<span class="bar-column">
+									<span class="bar-value income-value">{%= item.income_value %}</span>
+									<span class="income-b" style="height: {%= item.income_height %}px;"></span>
+								</span>
+								<span class="bar-column">
+									<span class="bar-value expense-value">{%= item.expense_value %}</span>
+									<span class="expense-b" style="height: {%= item.expense_height %}px;"></span>
+								</span>
+							</div>
+							<label>{%= item.label %}</label>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+
+			<div class="panel donut-panel">
+				<h2>Sales by Pharmacy and Hospital</h2>
+				<div class="donut-wrap">
+					<div class="donut expense-donut" style="{%= expense_donut_style %}"></div>
+					<ul class="chart-list">
+						{% for category in expense_categories %}
+						<li><span class="{%= category.class %}"></span>{%= category.label %} <b>{%= category.value %}</b></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+
+			<div class="panel donut-panel source-panel">
+				<h2>Sales by Inpatient Type</h2>
+				<div class="donut-wrap">
+					<div class="donut source-donut" style="{%= source_donut_style %}"></div>
+					<ul class="chart-list">
+						{% for source in income_sources %}
+						<li><span class="{%= source.class %}"></span>{%= source.label %} <b>{%= source.value %}</b></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="table-row">
+			<div class="panel table-panel department-performance-panel">
+				<div class="table-panel-head">
+					<h2>Performance</h2>
+					<div class="performance-toggle" role="tablist" aria-label="Performance View">
+						<button type="button" class="is-active" data-performance-toggle="doctor">Doctor</button>
+						<button type="button" data-performance-toggle="department">Department</button>
+					</div>
+				</div>
+				<div class="performance-table-view is-active" data-performance-panel="doctor">
+					<div class="table-row-limit-panel" data-row-limit-panel="10">
+					<table>
+						<thead>
+							<tr>
+								<th>{%= performance_views.doctor.entity_label %}</th>
+								<th>Net Sales ($)</th>
+								<th>% of Total Sales</th>
+								<th>OPD</th>
+								{% for column in performance_views.doctor.ipd_type_columns %}
+								<th>{%= column.label %}</th>
+								{% endfor %}
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in performance_views.doctor.rows %}
+							{% if row.is_over_limit %}
+							<tr class="is-over-limit">
+							{% else %}
+							<tr>
+							{% endif %}
+								<td>{%= row.doctor %}</td>
+								<td>{%= row.net_sales %}</td>
+								<td>{%= row.sales_share %}</td>
+								<td>{%= row.opd_sales %}</td>
+								{% for value in row.ipd_type_values %}
+								<td>{%= value %}</td>
+								{% endfor %}
+							</tr>
+							{% endfor %}
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<th>{%= performance_views.doctor.total.outstanding %}</th>
+								<th>100.0%</th>
+								<th>{%= performance_views.doctor.total.opd_sales %}</th>
+								{% for value in performance_views.doctor.total.ipd_type_values %}
+								<th>{%= value %}</th>
+								{% endfor %}
+							</tr>
+						</tfoot>
+					</table>
+					{% if performance_views.doctor.has_more %}
+					<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="View All Doctors" data-collapse-label="Show Less">View All Doctors</button>
+					{% endif %}
+					</div>
+				</div>
+				<div class="performance-table-view" data-performance-panel="department">
+					<div class="table-row-limit-panel" data-row-limit-panel="10">
+					<table>
+						<thead>
+							<tr>
+								<th>{%= performance_views.department.entity_label %}</th>
+								<th>Net Sales ($)</th>
+								<th>% of Total Sales</th>
+								<th>OPD</th>
+								{% for column in performance_views.department.ipd_type_columns %}
+								<th>{%= column.label %}</th>
+								{% endfor %}
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in performance_views.department.rows %}
+							{% if row.is_over_limit %}
+							<tr class="is-over-limit">
+							{% else %}
+							<tr>
+							{% endif %}
+								<td>{%= row.department %}</td>
+								<td>{%= row.net_sales %}</td>
+								<td>{%= row.sales_share %}</td>
+								<td>{%= row.opd_sales %}</td>
+								{% for value in row.ipd_type_values %}
+								<td>{%= value %}</td>
+								{% endfor %}
+							</tr>
+							{% endfor %}
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<th>{%= performance_views.department.total.outstanding %}</th>
+								<th>100.0%</th>
+								<th>{%= performance_views.department.total.opd_sales %}</th>
+								{% for value in performance_views.department.total.ipd_type_values %}
+								<th>{%= value %}</th>
+								{% endfor %}
+							</tr>
+						</tfoot>
+					</table>
+					{% if performance_views.department.has_more %}
+					<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="View All Departments" data-collapse-label="Show Less">View All Departments</button>
+					{% endif %}
+					</div>
+				</div>
+			</div>
+
+			<div class="panel table-panel">
+				<h2>Admission Contribution</h2>
+				<div class="table-row-limit-panel" data-row-limit-panel="10">
+				<table>
+					<thead><tr><th>Admission</th><th>Patients</th><th>Net Sales ($)</th></tr></thead>
+					<tbody>
+						{% for row in top_supplier_balances %}
+						{% if row.is_over_limit %}
+						<tr class="is-over-limit">
+						{% else %}
+						<tr>
+						{% endif %}
+							<td>{%= row.supplier %}</td><td>{%= row.supplier_group %}</td><td>{%= row.balance %}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+					<tfoot>
+						<tr><th>Total</th><th>All Patients</th><th>{%= top_supplier_balances_total %}</th></tr>
+					</tfoot>
+				</table>
+				{% if top_supplier_balances_has_more %}
+				<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="View All Admissions" data-collapse-label="Show Less">View All Admissions</button>
+				{% endif %}
+				</div>
+			</div>
+		</section>
+
+		<section class="bottom-row">
+			<div class="panel table-panel budget-variance-panel">
+				<div class="table-panel-head">
+					<h2>Item Group Performance</h2>
+					<div class="performance-toggle" role="tablist" aria-label="Item Group View">
+						<button type="button" class="is-active" data-item-group-toggle="summary">Summary</button>
+						<button type="button" data-item-group-toggle="doctor_matrix">Doctor View</button>
+					</div>
+				</div>
+				{% if budget_variance.length %}
+				<div class="item-group-table-view is-active" data-item-group-panel="summary">
+					<div class="table-row-limit-panel" data-row-limit-panel="10">
+					<table>
+						<thead><tr><th>Item Group</th><th>Invoices</th><th>Qty</th><th>Revenue</th><th>Mix</th></tr></thead>
+						<tbody>
+							{% for row in budget_variance %}
+							{% if row.is_over_limit %}
+							<tr class="is-over-limit">
+							{% else %}
+							<tr>
+							{% endif %}
+								<td>{%= row.category %}</td>
+								<td>{%= row.budget %}</td>
+								<td>{%= row.actual %}</td>
+								<td class="variance-cell {%= row.variance_class %}">{%= row.variance %}</td>
+								<td>
+									<div class="budget-indicator">
+										<span class="indicator-pill {%= row.indicator_class %}">{%= row.indicator_label %}</span>
+										<small>{%= row.utilization %}</small>
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<th>{%= budget_variance_total.budget %}</th>
+								<th>{%= budget_variance_total.actual %}</th>
+								<th class="variance-cell {%= budget_variance_total.variance_class %}">{%= budget_variance_total.variance %}</th>
+								<th>
+									<div class="budget-indicator">
+										<span class="indicator-pill {%= budget_variance_total.indicator_class %}">{%= budget_variance_total.indicator_label %}</span>
+										<small>{%= budget_variance_total.utilization %}</small>
+									</div>
+								</th>
+							</tr>
+						</tfoot>
+					</table>
+					{% if item_group_views.summary.has_more %}
+					<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="View All Item Groups" data-collapse-label="Show Less">View All Item Groups</button>
+					{% endif %}
+					</div>
+				</div>
+				<div class="item-group-table-view" data-item-group-panel="doctor_matrix">
+					<div class="table-row-limit-panel" data-row-limit-panel="10">
+					<table class="doctor-item-group-table">
+						<thead>
+							<tr>
+								<th>{%= item_group_views.doctor_matrix.entity_label %}</th>
+								{% for column in item_group_views.doctor_matrix.columns %}
+								<th>{%= column.label %}</th>
+								{% endfor %}
+								<th>Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in item_group_views.doctor_matrix.rows %}
+							{% if row.is_over_limit %}
+							<tr class="is-over-limit">
+							{% else %}
+							<tr>
+							{% endif %}
+								<td>{%= row.doctor %}</td>
+								{% for value in row.item_group_values %}
+								<td>{%= value %}</td>
+								{% endfor %}
+								<td>{%= row.total_amount %}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								{% for value in item_group_views.doctor_matrix.total.item_group_values %}
+								<th>{%= value %}</th>
+								{% endfor %}
+								<th>{%= item_group_views.doctor_matrix.total.total_amount %}</th>
+							</tr>
+						</tfoot>
+					</table>
+					{% if item_group_views.doctor_matrix.has_more %}
+					<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="View All Doctors" data-collapse-label="Show Less">View All Doctors</button>
+					{% endif %}
+					</div>
+				</div>
+				{% else %}
+				<div class="budget-empty-state">
+					<i class="fa fa-chart-pie"></i>
+					<p>{%= budget_variance_message %}</p>
+				</div>
+				{% endif %}
+			</div>
+
+			<div class="panel insight-panel">
+				<h2><span class="spark"><i class="fa fa-sun"></i></span>AI Insight</h2>
+				<div data-ai-insight-content="1">
+					{% for insight in insights %}
+					<p><i class="fa {%= insight.icon_class %} {%= insight.text_class %}"></i>{%= insight.text %}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+	</main>
+</div>

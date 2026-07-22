@@ -454,7 +454,7 @@ function admit(inpatient_record, patient, practitioner, type){
 		],
 		primary_action_label: 'Submit',
 		primary_action(values) {
-			admit_p(inpatient_record ,values.bed , patient, practitioner, values.type )
+			admit_p(inpatient_record , values.bed ,   values.room , patient, practitioner, values.type )
 			// alert("ok")
 				// console.log(values.room)
 			//    frappe.route_options = {'room': values.room , "type" : values.type  , "inp_doc" : inpatient_record  , "patient" : patient };
@@ -484,7 +484,14 @@ function admit(inpatient_record, patient, practitioner, type){
 	d.show();
 }
 
-function admit_p(inpatient_record, bed,patient_name, practitioner, type){
+function admit_p(inpatient_record, bed, room, patient_name, practitioner, type){
+	if(room == "Pediatric ICU" && (inpatient_record.admission_practitioner == "Dr Mustafa Ali Moalim (Irani)" || inpatient_record.primary_practitioner == "Dr. Nasteha Hersi Kheire")){
+		frappe.throw(__('Only Dr Mustafa and Dr Nasteha can admit to P-ICU'))
+	}
+	else if(room == "NICU" && inpatient_record.admission_practitioner == "Dr Mohamed Mukhtar Kassim"){
+		frappe.throw(__('Only Dr Mohamed Mukhtar Kassim can admit to NICU'))
+	}
+	else{
 	frappe.call({
 			
 		method: 'his.api.admit.admit_p',
@@ -492,6 +499,7 @@ function admit_p(inpatient_record, bed,patient_name, practitioner, type){
 			
 			"inp_doc" :inpatient_record,
 			'service_unit': bed,
+			"room": room,
 			"patient":patient_name,
 			"practitioner":practitioner,
 			'type' : type
@@ -506,6 +514,7 @@ function admit_p(inpatient_record, bed,patient_name, practitioner, type){
 
 		}
 	})
+}
 
 }
 

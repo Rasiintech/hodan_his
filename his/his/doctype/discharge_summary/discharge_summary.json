@@ -401,7 +401,8 @@
   {
    "allow_on_submit": 1,
    "fieldname": "reference_invoice",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
+   "hidden": 1,
    "label": "Reference Invoice",
    "options": "Sales Invoice"
   },
@@ -422,7 +423,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-29 11:05:40.647911",
+ "modified": "2026-04-21 09:14:55.515182",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Discharge Summary",

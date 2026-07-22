@@ -559,12 +559,12 @@
   {
    "fieldname": "set_warehouse",
    "fieldtype": "Link",
-   "hidden": 1,
    "hide_days": 1,
    "hide_seconds": 1,
    "label": "Set Source Warehouse",
    "options": "Warehouse",
-   "print_hide": 1
+   "print_hide": 1,
+   "reqd": 1
   },
   {
    "fieldname": "items_section",
@@ -1609,7 +1609,8 @@
    "fieldtype": "Link",
    "label": "Ref Practitioner",
    "options": "Healthcare Practitioner",
-   "print_hide": 1
+   "print_hide": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "patient.first_name",
@@ -1639,7 +1640,7 @@
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-13 14:51:56.923773",
+ "modified": "2026-02-18 09:10:20.062073",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Sales Return",

@@ -1,0 +1,107 @@
+<div class="accounts-dashboard theme-{%= current_theme || "standard" %}">
+	<aside class="accounts-sidebar">
+		<nav class="accounts-nav">
+			<a href="#" data-route="finance"><i class="fa fa-home"></i><span>Finance</span></a>
+			<a class="active" href="#" data-route="profit-and-loss"><i class="fa fa-landmark"></i><span>Profit and Loss</span></a>
+			<a href="#" data-route="sales-dashboard"><i class="fa fa-file-invoice"></i><span>Sales</span></a>
+			<a href="#" data-route="purchase-dashboard"><i class="fa fa-shopping-cart"></i><span>Purchase</span></a>
+			<a href="#" data-route="stock-dashboard"><i class="fa fa-cubes"></i><span>Stock</span></a>
+			<a href="#" data-route="hr-dashboard"><i class="fa fa-university"></i><span>HR</span></a>
+			<a href="#" data-route="payroll-dashboard"><i class="fa fa-money"></i><span>Payroll</span></a>
+			<a href="#" data-route="commissions-dashboard"><i class="fa fa-chart-bar"></i><span>Commissions</span></a>
+			<a href="#" data-route="budget-dashboard"><i class="fa fa-clipboard"></i><span>Budget</span></a>
+			<a href="#" data-route="tasks-dashboard"><i class="fa fa-sitemap"></i><span>Tasks</span></a>
+		</nav>
+	</aside>
+
+	<main class="accounts-content">
+		<header class="accounts-header">
+			<div>
+				<h1>Hospital Profit and Loss Dashboard</h1>
+			</div>
+			<div class="accounts-actions">
+				<button class="theme-button" type="button"><i class="fa fa-paint-brush"></i><span>{%= current_theme_label || "Standard" %}</span><i class="fa fa-chevron-down"></i></button>
+				<button class="date-button"><i class="fa fa-calendar"></i><span>{%= date_range %}</span><i class="fa fa-chevron-down"></i></button>
+				<button class="filter-button"><i class="fa fa-filter"></i><span>Filters</span></button>
+				<button class="refresh-button"><i class="fa fa-sync-alt"></i><span>Refresh</span></button>
+				<button class="export-button"><i class="fa fa-download"></i><span>Export</span></button>
+			</div>
+		</header>
+
+		<!-- <section class="metric-grid">
+			{% for metric in metrics %}
+			<div class="metric-card {%= metric.class %}">
+				<div class="metric-icon">{%= metric.icon %}</div>
+				<div>
+					<span>{%= metric.label %}</span>
+					<strong>{%= metric.value %}</strong>
+					<small class="{%= metric.trend_class %}">{%= metric.trend %}</small>
+					<em>vs {%= comparison_range %}</em>
+				</div>
+			</div>
+			{% endfor %}
+		</section> -->
+
+		<section class="table-row statement-only-row">
+			<div class="panel statement-panel">
+				<div class="statement-table-wrap">
+					<table class="statement-table">
+						<thead>
+							<tr class="statement-head-top">
+								<th rowspan="2">Particulars</th>
+								<th colspan="2">Actual Period<br><small>{%= statement_table.actual_period_label %}</small></th>
+								<th colspan="2">Compare With Period<br><small>{%= statement_table.previous_period_label %}</small></th>
+							</tr>
+							<tr class="statement-head-sub">
+								<th>Amount ({%= statement_table.currency %})</th>
+								<th>% of Revenue</th>
+								<th>Amount ({%= statement_table.currency %})</th>
+								<th>% of Revenue</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in statement_table.rows %}
+							{% if row.row_type == "section" %}
+							<tr class="statement-section-row">
+								<td colspan="5">{%= row.label %}</td>
+							</tr>
+							{% else %}
+							<tr class="statement-data-row statement-{%= row.row_type %} {%= row.is_collapsible_group ? "statement-group-row is-collapsed" : "" %}" data-indent="{%= row.indent || 0 %}" data-collapsible-group="{%= row.is_collapsible_group ? 1 : 0 %}">
+								<td class="statement-label indent-{%= row.indent || 0 %} {%= row.is_group ? "is-group" : "" %}">
+									{% if row.is_collapsible_group %}
+									<button type="button" class="statement-toggle" aria-label="Toggle account group"><span class="statement-toggle-arrow">▸</span></button>
+									{% endif %}
+									<span>{%= row.label %}</span>
+								</td>
+								<td>
+									<div class="statement-amount-row">
+										<span>{%= row.current_amount %}</span>
+									{% if row.current_trend %}
+										<small class="statement-trend trend-{%= row.current_trend_class || "flat" %}">{%= row.current_trend %}</small>
+									{% endif %}
+									</div>
+								</td>
+								<td>{%= row.current_percent %}</td>
+								<td>{%= row.previous_amount %}</td>
+								<td>{%= row.previous_percent %}</td>
+							</tr>
+							{% endif %}
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="bottom-row bottom-row--single">
+			<div class="panel insight-panel">
+				<h2><span class="spark"><i class="fa fa-sun"></i></span>AI Insight</h2>
+				<div data-ai-insight-content="1">
+					{% for insight in insights %}
+					<p><i class="fa {%= insight.icon_class %} {%= insight.text_class %}"></i>{%= insight.text %}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+	</main>
+</div>

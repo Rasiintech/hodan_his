@@ -30,6 +30,7 @@ def create_inv(doc_name ,dt , is_sales_return = False ,  is_credit = False , mod
             "rate" : item.rate,
             "qty" : qty,
             "uom" : item.uom,
+            "warehouse" : cash_sales.set_warehouse
             # "batch_no" : item.batch_no
         })
     payments = []

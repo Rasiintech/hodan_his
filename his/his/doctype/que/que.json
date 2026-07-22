@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_import": 1,
+ "allow_copy": 1,
  "allow_rename": 1,
  "autoname": "QUE.#####",
  "creation": "2023-03-05 11:47:56.722515",
@@ -143,7 +143,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Que Type",
-   "options": "New Patient\nFollow Up\nRevisit\nRenew\nRefer\nRefer With Payment"
+   "options": "New Patient\nFollow Up\nRevisit\nRenew\nRefer\nRefer With Payment",
+   "read_only": 1
   },
   {
    "fetch_from": "doctor.op_consulting_charge_item",
@@ -541,7 +542,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-04 09:38:57.498214",
+ "modified": "2026-07-04 14:27:43.713163",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Que",

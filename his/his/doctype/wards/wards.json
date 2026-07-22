@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_rename": 1,
  "autoname": "field:ward_name",
  "creation": "2025-08-11 13:39:51.640755",
  "default_view": "List",
@@ -26,7 +27,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-31 10:50:50.419877",
+ "modified": "2026-04-25 10:26:36.282007",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Wards",

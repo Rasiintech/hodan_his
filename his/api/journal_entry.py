@@ -168,3 +168,54 @@ def cancell_sales_invoice(doc , method = None):
                 frappe.throw(f"This Journal Entry Is Linked with Sales Invoice <strong><a href = '/app/sales-invoice/{sales.name}' >{sales.name}</a></strong> Please Cancel Sales Invoice Instead")
 
 
+def validate_finance_approval(doc, method=None):
+    if not requires_finance_approval(doc):
+        return
+
+    user_roles = set(frappe.get_roles(frappe.session.user))
+    allowed_roles = {"CFO"}
+
+    if user_roles.intersection(allowed_roles):
+        return
+
+    frappe.throw(
+        _(
+            "CFO approval is required before submitting this Journal Entry because it includes an Expense account against a Cash or Bank account."
+        )
+    )
+
+
+def requires_finance_approval(doc):
+    account_names = [row.account for row in doc.accounts if row.account]
+    if not account_names:
+        return False
+
+    account_types = frappe.get_all(
+        "Account",
+        filters={"name": ["in", account_names]},
+        fields=["name", "account_type", "root_type"],
+        limit_page_length=0,
+    )
+
+    account_map = {row.name: row for row in account_types}
+
+    has_expense = False
+    has_cash_or_bank = False
+    has_discount_account = False
+
+    for row in doc.accounts:
+        account = account_map.get(row.account)
+        if not account:
+            continue
+
+        # Discount account always requires CFO approval
+        if row.account == "Discount - HH":
+            has_discount_account = True
+
+        if account.root_type == "Expense":
+            has_expense = True
+
+        if account.account_type in ("Cash", "Bank"):
+            has_cash_or_bank = True
+
+    return has_discount_account or (has_expense and has_cash_or_bank)

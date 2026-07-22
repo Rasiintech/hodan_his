@@ -201,8 +201,8 @@ def get_report_content( company, customer_name,cost_center = None, account = Non
     if not to_date:
         to_date = today()
 
-    # Get General Ledger report content
-    report_gl = frappe.get_doc("Report", "General Ledger")
+    # Get Custom General ledger report content
+    report_gl = frappe.get_doc("Report", "Custom General ledger")
    
     
     report_gl_filters = {
@@ -299,8 +299,8 @@ def get_report_content_2( company, supplier_name, account  = None,from_date=None
     if not to_date:
         to_date = today()
 
-    # Get General Ledger report content
-    report_gl = frappe.get_doc("Report", "General Ledger")
+    # Get Custom General ledger report content
+    report_gl = frappe.get_doc("Report", "Custom General ledger")
    
 
     report_gl_filters = {
@@ -393,8 +393,8 @@ def get_report_content_3(company, employee_name,account  = None, from_date=None,
     if not to_date:
         to_date = today()
 
-    # Get General Ledger report content
-    report_gl = frappe.get_doc("Report", "General Ledger")
+    # Get Custom General ledger report content
+    report_gl = frappe.get_doc("Report", "Custom General ledger")
    
 
     report_gl_filters = {
@@ -553,7 +553,7 @@ def send_individual_statement(customer, email_id, company, from_date, to_date):
         ),
         attachments=attachments,
         doctype="Report",
-        name="General Ledger",
+        name="Custom General ledger",
     )
 
 
@@ -574,7 +574,7 @@ def send_individual_statement(customer, email_id, company, from_date, to_date):
 #             "to_date" : frappe.utils.getdate()
 #         }
 
-#         report_gl = frappe.get_doc("Report", "General Ledger")
+#         report_gl = frappe.get_doc("Report", "Custom General ledger")
 #         # report_gl_filters = report_gl.get_filter_values(filters)
 
 #         columns_gl, data_gl = report_gl.get_data(

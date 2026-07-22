@@ -56,7 +56,7 @@ IPD = Class.extend(
 			let currdate = this.currDate
 		let tbldata = []
 		frappe.db.get_list('Inpatient Record', {
-			fields: ['patient','patient_name', 'age', 'dob', 'type','room' , 'bed' , 'admitted_datetime' , 'medical_department', 'admission_practitioner' , 'diagnose'],
+			fields: ['patient','patient_name', 'age', 'dob', 'type', 'floor', 'room' , 'bed' , 'admitted_datetime' , 'medical_department', 'admission_practitioner' , 'diagnose'],
 			filters: {
 				"status": 'Admitted',
 				"type": "Maternity"
@@ -94,6 +94,9 @@ IPD = Class.extend(
 			{title:"Duration", field:"duration" ,  headerFilter:"input" , formatter:durationformatter},
 			{title:"Doctor Name", field:"admission_practitioner" ,  headerFilter:"input",},
 			{title:"Medical Department", field:"medical_department" ,  headerFilter:"input",},
+			{title:"Floor", field:"floor" ,  headerFilter:"input",},
+			
+
 			{title:"Room", field:"room" ,  headerFilter:"input",},
 			
 			{title:"Bed", field:"bed" ,  headerFilter:"input",},
@@ -173,7 +176,7 @@ IPD = Class.extend(
 			new_data.push(row)
 		})
 		// console.log(columns)
-this.table = new Tabulator("#met", {
+this.table = new Tabulator("#ipd", {
 			// layout:"fitDataFill",
 			layout:"fitDataStretch",
 			//  layout:"fitColumns",
@@ -253,10 +256,11 @@ this.table = new Tabulator("#met", {
 			patient: rows._row.data.patient , 
 			type: rows._row.data.type , 
 			consultant: rows._row.data.admission_practitioner,
+			diagnosis: rows._row.data.diagnose , 
 			floor: rows._row.data.floor , 
 			room: rows._row.data.room , 
-			bed: rows._row.data.bed
-		 })
+			bed: rows._row.data.bed,
+		})
 		
 			// document.getElementById("select-stats").innerHTML = data.length;
 		  });
@@ -358,12 +362,12 @@ this.table = new Tabulator("#met", {
 
 	
 )
-let met = `
+let ipd_ = `
 
 <div class="container">
 <div class="row">
 
-<div id="met" style = "min-width : 100%"></div>
+<div id="ipd" style = "min-width : 100%"></div>
 
 </div>
 
@@ -374,7 +378,7 @@ let met = `
 
 `
 frappe.dashbard_page = {
-	body : met
+	body : ipd_
 }
 
 get_history = function(patient , patient_name){
@@ -449,14 +453,6 @@ credit_sales = function(source_name){
 durationformatter = function(cell, formatterParams, onRendered){
 	return frappe.datetime.prettyDate(cell.getValue() , 1)
 }
-// let calculate_age = function(birth) {
-//     let ageMS = Date.parse(Date()) - Date.parse(birth);
-//     let age = new Date();
-//     age.setTime(ageMS);
-//     let years = age.getFullYear() - 1970;
-//     return `${years} Years(s) ${age.getMonth()} Month(s) ${age.getDate()} Day(s)`;
-// };
-
 let calculate_age = function(birth) {
     let birthDate = new Date(birth);
     let today = new Date();

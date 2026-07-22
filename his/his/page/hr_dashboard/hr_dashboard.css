@@ -1,0 +1,614 @@
+.fd-hr-fullscreen {
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.fd-hr-fullscreen .navbar,
+.fd-hr-fullscreen .navbar-height-spacer {
+	display: none !important;
+}
+
+.fd-hr-page,
+.fd-hr-page .page-body,
+.fd-hr-page .page-content,
+.fd-hr-page .layout-main,
+.fd-hr-page .layout-main-section-wrapper,
+.fd-hr-page .layout-main-section {
+	background: #0f4f86;
+	margin: 0 !important;
+	padding: 0;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+.fd-hr-page .page-body {
+	background: #0f4f86;
+}
+
+.fd-hr-page .container,
+.fd-hr-page .container-fluid {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+.fd-hr {
+	box-sizing: border-box;
+	background: #0f4f86;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	min-height: 100vh;
+	max-width: 100%;
+	overflow: visible;
+	overflow-x: hidden;
+	padding: 6px 2px 7px;
+	width: 100%;
+}
+
+.fd-hr-header {
+	align-items: center;
+	display: grid;
+	gap: 8px;
+	grid-template-columns: 520px 1fr 160px;
+	height: 36px;
+	margin-bottom: 7px;
+}
+
+.fd-hr-header h2 {
+	color: #fff200;
+	font-size: 25px;
+	font-weight: 800;
+	letter-spacing: 0;
+	line-height: 36px;
+	margin: 0;
+	text-align: center;
+}
+
+.fd-date-filters {
+	align-items: center;
+	display: grid;
+	gap: 6px;
+	grid-template-columns: 126px 18px 126px minmax(160px, 1fr);
+	height: 36px;
+	margin-left: 18px;
+	padding: 0;
+}
+
+.fd-filter-card {
+	border: 1px solid rgba(255, 255, 255, 0.62);
+	height: 36px;
+	min-width: 0;
+	padding: 2px 8px;
+}
+
+.fd-date-filters .frappe-control {
+	margin: 0;
+}
+
+.fd-date-filters .control-input-wrapper,
+.fd-date-filters .form-control {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	color: #fff;
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+}
+
+.fd-date-filters .link-field .awesomplete > ul {
+	color: #222;
+}
+
+.fd-date-filters .form-control:focus {
+	box-shadow: none;
+}
+
+.fd-date-filters .clearfix,
+.fd-date-filters .control-label,
+.fd-date-filters .help-box {
+	display: none;
+}
+
+.fd-date-separator::before {
+	color: #23c25b;
+	content: "...";
+	display: block;
+	font-size: 15px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	margin-top: -8px;
+	text-align: center;
+}
+
+.fd-header-mark::after {
+	color: rgba(255, 255, 255, 0.72);
+	content: "|";
+	display: block;
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 36px;
+	text-align: center;
+}
+
+.fd-hr-kpis {
+	display: grid;
+	gap: 8px;
+	grid-template-columns: repeat(9, minmax(0, 1fr));
+	margin-bottom: 8px;
+}
+
+.fd-hr-kpi {
+	align-items: center;
+	background: #0a3b67;
+	border-radius: 7px;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 76px;
+	padding: 6px 8px;
+	text-align: center;
+}
+
+.fd-hr-kpi-value {
+	color: #fff;
+	display: block;
+	font-size: 21px;
+	font-weight: 800;
+	line-height: 25px;
+	margin: 0 0 7px;
+	overflow: hidden;
+	text-align: center !important;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+}
+
+.fd-hr-kpi-label {
+	color: #fff;
+	display: block;
+	font-size: 11px;
+	line-height: 14px;
+	overflow: hidden;
+	text-align: center !important;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.fd-hr-grid {
+	display: grid;
+	gap: 6px;
+	grid-template-columns: minmax(260px, 21.8%) minmax(0, 1fr) minmax(300px, 25.7%);
+	grid-template-rows: 229px 228px minmax(0, 1fr);
+	grid-template-areas:
+		"departments salary advances"
+		"departments expense advances"
+		"departments expense leaves";
+	min-height: calc(100vh - 135px);
+}
+
+.fd-section {
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.fd-section h3 {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	height: 17px;
+	line-height: 17px;
+	margin: 0 0 3px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.fd-department-panel {
+	grid-area: departments;
+}
+
+.fd-salary-panel {
+	grid-area: salary;
+}
+
+.fd-trend-grid {
+	display: grid;
+	gap: 6px;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	height: 100%;
+	min-height: 0;
+}
+
+.fd-trend-cell {
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.fd-advance-panel {
+	grid-area: advances;
+}
+
+.fd-expense-panel {
+	grid-area: expense;
+}
+
+.fd-expense-grid {
+	display: grid;
+	gap: 6px;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: 229px minmax(0, 1fr);
+	height: 100%;
+	min-height: 0;
+}
+
+.fd-expense-chart-cell,
+.fd-expense-table-cell {
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.fd-leave-panel {
+	grid-area: leaves;
+}
+
+.fd-department-bars,
+.fd-hr-chart,
+.fd-table-wrap {
+	background: #fff;
+	color: #222;
+	flex: 1 1 auto;
+	min-height: 0;
+}
+
+.fd-department-bars {
+	border-radius: 6px;
+	height: auto;
+	overflow: auto;
+	padding: 13px 10px 8px;
+}
+
+.fd-dept-row {
+	align-items: center;
+	display: grid;
+	gap: 7px;
+	grid-template-columns: 158px 1fr;
+	height: 22px;
+}
+
+.fd-dept-name {
+	color: #111;
+	font-size: 11px;
+	line-height: 18px;
+	overflow: hidden;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.fd-dept-bar-track {
+	align-items: center;
+	display: flex;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.fd-dept-bar {
+	background: #ff9f1a;
+	height: 17px;
+	min-width: 3px;
+}
+
+.fd-dept-value {
+	color: #063b68;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 17px;
+	margin-left: 5px;
+	white-space: nowrap;
+}
+
+.fd-hr-chart {
+	height: auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+.fd-hr-chart .chart-container {
+	margin-top: 0;
+}
+
+.fd-step-chart {
+	background: #fff;
+	border-bottom: 2px solid #0f4f86;
+	border-top: 2px solid #0f4f86;
+	height: 201px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.fd-exit-chart .fd-step-chart {
+	height: 100%;
+}
+
+.fd-exit-chart .fd-step-chart svg {
+	height: 100%;
+}
+
+.fd-step-chart svg {
+	display: block;
+	height: 201px;
+	width: 100%;
+}
+
+.fd-step-fill {
+	fill: #e9f4ff;
+	stroke: none;
+}
+
+.fd-step-line {
+	fill: none;
+	stroke: #2f86ff;
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	stroke-width: 2;
+	vector-effect: non-scaling-stroke;
+}
+
+.fd-step-dot {
+	fill: #2f86ff;
+	stroke: #2f86ff;
+	stroke-width: 1;
+	vector-effect: non-scaling-stroke;
+}
+
+.fd-step-labels,
+.fd-step-months {
+	inset: 0;
+	pointer-events: none;
+	position: absolute;
+}
+
+.fd-step-value-label {
+	line-height: 12px;
+	position: absolute;
+	text-align: center;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.fd-step-total {
+	color: #000;
+	font-size: 11px;
+	font-weight: 800;
+	line-height: 12px;
+}
+
+.fd-step-change {
+	align-items: center;
+	display: flex;
+	font-size: 10px;
+	font-weight: 700;
+	justify-content: center;
+	line-height: 11px;
+	margin-top: 1px;
+}
+
+.fd-step-change.positive {
+	color: #108b28;
+}
+
+.fd-step-change.negative {
+	color: #e42222;
+}
+
+.fd-step-caret {
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	display: inline-block;
+	height: 0;
+	margin-right: 3px;
+	width: 0;
+}
+
+.fd-step-change.positive .fd-step-caret {
+	border-bottom: 7px solid #108b28;
+}
+
+.fd-step-change.negative .fd-step-caret {
+	border-top: 7px solid #e42222;
+}
+
+.fd-step-month {
+	bottom: 7px;
+	color: #111;
+	font-size: 10px;
+	line-height: 11px;
+	position: absolute;
+	text-align: center;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.fd-table-wrap {
+	height: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.fd-advance-table {
+	height: auto;
+}
+
+.fd-leave-table {
+	height: auto;
+}
+
+.fd-expense-table {
+	height: auto;
+}
+
+.fd-hr-table {
+	border-collapse: collapse;
+	font-size: 11px;
+	line-height: 14px;
+	min-width: 100%;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.fd-expense-table .fd-hr-table {
+	width: 100%;
+}
+
+.fd-hr-table th {
+	background: #0b477c;
+	border: 1px solid #08365f;
+	border-bottom: 2px solid #052d50;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 800;
+	height: 26px;
+	line-height: 13px;
+	padding: 4px 5px;
+	position: sticky;
+	text-align: left;
+	top: 0;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+.fd-hr-table td {
+	border-left: 1px solid #f4f4f4;
+	border-right: 1px solid #f4f4f4;
+	color: #222;
+	height: 18px;
+	line-height: 14px;
+	padding: 2px 5px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.fd-hr-table tbody tr:nth-child(even) td {
+	background: #e8e8e8;
+}
+
+.fd-hr-table tbody tr:nth-child(odd) td {
+	background: #f7f7f7;
+}
+
+.fd-hr-table tfoot td {
+	background: #fff;
+	border-top: 1px solid #0f4f86;
+	font-weight: 800;
+	height: 20px;
+}
+
+.fd-advance-table .fd-hr-table td:first-child,
+.fd-expense-table .fd-hr-table td:first-child {
+	max-width: 185px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.fd-num {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.fd-empty-state {
+	align-items: center;
+	color: #555;
+	display: flex;
+	font-size: 12px;
+	justify-content: center;
+	min-height: 120px;
+	text-align: center;
+}
+
+@media (max-width: 1320px) {
+	.fd-hr-header {
+		grid-template-columns: 340px 1fr 80px;
+	}
+
+	.fd-hr-grid {
+		grid-template-columns: minmax(260px, 22%) minmax(0, 1fr) minmax(290px, 25%);
+	}
+}
+
+@media (max-width: 1200px) {
+	.fd-hr {
+		overflow: auto;
+	}
+
+	.fd-hr-header {
+		grid-template-columns: 1fr;
+		height: auto;
+	}
+
+	.fd-date-filters {
+		margin-left: 0;
+	}
+
+	.fd-header-mark {
+		display: none;
+	}
+
+	.fd-hr-kpis {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.fd-hr-grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"departments"
+			"salary"
+			"expense"
+			"advances"
+			"leaves";
+	}
+
+	.fd-department-bars,
+	.fd-advance-table,
+	.fd-expense-table,
+	.fd-leave-table {
+		height: auto;
+		max-height: 420px;
+		overflow: auto;
+	}
+}
+
+@media (max-width: 640px) {
+	.fd-hr-kpis {
+		grid-template-columns: 1fr;
+	}
+
+	.fd-date-filters {
+		grid-template-columns: 1fr;
+		height: auto;
+		padding: 6px 8px;
+	}
+
+	.fd-date-separator {
+		display: none;
+	}
+}
+	overflow: hidden;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-overflow: ellipsis;

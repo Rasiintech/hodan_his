@@ -1,0 +1,61 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2026-02-24 12:33:04.565987",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-02-24 12:34:28.335096",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Patient Visits Summary report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n  CASE\r\n    WHEN h.unique_visits > 20 THEN '20+'\r\n    ELSE CAST(h.unique_visits AS CHAR)\r\n  END AS visit_bucket,\r\n  COUNT(*) AS patient_count,\r\n  SUM(h.total_records) AS total_que_records_in_bucket\r\nFROM (\r\n  SELECT\r\n    q.patient,\r\n    COUNT(DISTINCT DATE(q.`date`)) AS unique_visits,\r\n    COUNT(*) AS total_records\r\n  FROM `tabQue` q\r\n  INNER JOIN (\r\n    SELECT DISTINCT patient\r\n    FROM `tabQue`\r\n    WHERE status <> 'Canceled'\r\n      AND `date` BETWEEN %(from_date)s AND %(to_date)s\r\n  ) cohort ON cohort.patient = q.patient\r\n  WHERE q.status <> 'Canceled'\r\n  GROUP BY q.patient\r\n) h\r\nGROUP BY visit_bucket\r\nORDER BY\r\n  CASE\r\n    WHEN visit_bucket = '20+' THEN 999999\r\n    ELSE CAST(visit_bucket AS UNSIGNED)\r\n  END;",
+ "ref_doctype": "Que",
+ "report_name": "Patient Visits Summary report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Cashier"
+  },
+  {
+   "role": "All"
+  },
+  {
+   "role": "Nursing User"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Laboratory User"
+  }
+ ]
+}

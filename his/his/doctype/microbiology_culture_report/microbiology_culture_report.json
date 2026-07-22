@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-20 11:53:13.294057",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "patient_id",
+  "patient_name",
+  "sex",
+  "age",
+  "column_break_patient",
+  "ward",
+  "specimen_type",
+  "collection_date",
+  "result_organism",
+  "pathogen_type",
+  "drugs_section",
+  "drugs"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient ID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient_id.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_id.sex",
+   "fieldname": "sex",
+   "fieldtype": "Data",
+   "label": "Sex",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_id.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_patient",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ward",
+   "options": "\nICU\nNICU\nPICU\nER\nOPD\nIPD"
+  },
+  {
+   "fieldname": "specimen_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Specimen Type",
+   "options": "\nBlood Culture\nUrine Culture\nSputum Culture\nPus Culture\nSwab Culture\nCSF Culture"
+  },
+  {
+   "fieldname": "collection_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Collection Date"
+  },
+  {
+   "fieldname": "result_organism",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Result Organism",
+   "options": "S. Aureus\nS. Cohnii\nS. Hominis\nS. Haemolyticus\nE. Colli\nS. Epidermidis\nK. Oxytoca\nPseudomonas\nK. Pneumonia\nS. Saprophyticus\nKluyvera Ascorbata\nBurkholderia Cepaci\nS. Schleiferi\nEnterobacter\nS. Agalactiae\nAcinetobacter\nShewanella\nS. Lugdunensis\nS. Simulans\nS. Marcescens\nS-Sciuri\nP. Lueola\nChryseobacterium\nP. rustigiani\nK. Ozaenae\nCedecea davisae\nB. Pseudomallei\nS. Intermedius\nC. Indologenes\nS. Xylosus",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pathogen_type",
+   "fieldtype": "Select",
+   "label": "Pathogen Type",
+   "options": "\nGram Positive\nGram Negative"
+  },
+  {
+   "fieldname": "drugs_section",
+   "fieldtype": "Section Break",
+   "label": "Drug Sensitivity"
+  },
+  {
+   "fieldname": "drugs",
+   "fieldtype": "Table",
+   "label": "Drugs",
+   "options": "Microbiology Culture Drug",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-21 09:22:18.951349",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Microbiology Culture Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,46 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2026-02-15 13:05:01.150806",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-02-15 14:53:59.297322",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "OPD Credit",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT DISTINCT \r\n    s.customer,\r\n    s.patient,\r\n    s.patient_name,\r\n    SUM(s.outstanding_amount) AS balance\r\nFROM \r\n    `tabSales Invoice` s\r\nLEFT JOIN \r\n    `tabInpatient Record` ip ON s.patient = ip.patient\r\nWHERE \r\n    s.posting_date BETWEEN \"2026-02-15\" AND \"2026-02-15\"\r\n    AND s.bill_to_employee = 0\r\n    AND s.is_inpatient = 0\r\n    AND s.docstatus = 1\r\n    AND NOT EXISTS (\r\n        SELECT 1\r\n        FROM `tabInpatient Record` ip2\r\n        WHERE ip2.patient = s.patient\r\n        AND (\r\n            (ip2.status IN (\"Admitted\" ,  \"Discharge Scheduled\") )  -- Exclude \"Admitted\" patients\r\n        \r\n            OR (\r\n                ip2.status = \"Discharged\" \r\n                AND ip2.discharge_datetime >= \"2026-02-15\"  -- Exclude any previous discharges with discharge datetime >= {to_date}\r\n            )\r\n        )\r\n    )\r\nGROUP BY \r\n    s.customer, s.patient\r\nHAVING \r\n    balance > 0\r\n",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "OPD Credit",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "Cashier"
+  },
+  {
+   "role": "OT"
+  },
+  {
+   "role": "Doctor"
+  },
+  {
+   "role": "Sales Cancel"
+  }
+ ]
+}

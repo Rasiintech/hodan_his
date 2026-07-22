@@ -1,0 +1,40 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-05-17 11:07:02.658851",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-05-17 15:14:41.231177",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "New Born",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    p.name AS \"Baby PID:Link/Patient:120\",\n    p.patient_name AS \"Baby Name:Data:220\",\n    p.mother_pid AS \"Mother PID:Link/Patient:120\",\n    p.mother_name AS \"Mother Name:Data:220\"\nFROM `tabPatient` p\nWHERE\n    IFNULL(p.is_new_born, 0) = 1\n    AND IFNULL(p.mother_pid, '') != ''\n    AND IFNULL(p.mother_name, '') != ''\nORDER BY p.name;\n",
+ "ref_doctype": "Patient",
+ "report_name": "New Born",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Nursing User"
+  },
+  {
+   "role": "Laboratory User"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Sales Master Manager"
+  }
+ ]
+}

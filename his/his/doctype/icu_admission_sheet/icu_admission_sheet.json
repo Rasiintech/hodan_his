@@ -1,0 +1,284 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-16 08:08:07.541994",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_fhraq",
+  "age",
+  "sex",
+  "doa",
+  "section_break_40gwt",
+  "complain",
+  "present_history",
+  "past_medical_history",
+  "drug_history",
+  "examination_on_admission_section",
+  "cns",
+  "chest",
+  "column_break_krvq0",
+  "rbs",
+  "spo2",
+  "column_break_wtjql",
+  "temp",
+  "abg",
+  "section_break_y16zv",
+  "cvs_bp",
+  "column_break_bmq4b",
+  "hr",
+  "column_break_xxq7d",
+  "ecg",
+  "section_break_slckr",
+  "abdomen",
+  "extremeties",
+  "column_break_v0t7k",
+  "column_break_tmejp",
+  "section_break_wjgrz",
+  "investigations",
+  "section_break_fgkk5",
+  "provisional_diagnosis",
+  "section_break_jjmpg",
+  "apache_score",
+  "vte",
+  "section_break_zfxke",
+  "plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.p_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "doa",
+   "fieldtype": "Data",
+   "label": "DOA"
+  },
+  {
+   "fieldname": "complain",
+   "fieldtype": "Small Text",
+   "label": "Complain"
+  },
+  {
+   "fieldname": "present_history",
+   "fieldtype": "Small Text",
+   "label": "Present History"
+  },
+  {
+   "fieldname": "past_medical_history",
+   "fieldtype": "Small Text",
+   "label": "Past Medical History"
+  },
+  {
+   "fieldname": "drug_history",
+   "fieldtype": "Small Text",
+   "label": "Drug History"
+  },
+  {
+   "fieldname": "examination_on_admission_section",
+   "fieldtype": "Section Break",
+   "label": "Examination On Admission"
+  },
+  {
+   "fieldname": "cns",
+   "fieldtype": "Data",
+   "label": "CNS"
+  },
+  {
+   "fieldname": "chest",
+   "fieldtype": "Data",
+   "label": "CHEST"
+  },
+  {
+   "fieldname": "cvs_bp",
+   "fieldtype": "Data",
+   "label": "CVS: BP"
+  },
+  {
+   "fieldname": "hr",
+   "fieldtype": "Data",
+   "label": "HR"
+  },
+  {
+   "fieldname": "column_break_v0t7k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "abdomen",
+   "fieldtype": "Data",
+   "label": "ABDOMEN"
+  },
+  {
+   "fieldname": "extremeties",
+   "fieldtype": "Data",
+   "label": "EXTREMETIES"
+  },
+  {
+   "fieldname": "rbs",
+   "fieldtype": "Data",
+   "label": "RBS"
+  },
+  {
+   "fieldname": "spo2",
+   "fieldtype": "Data",
+   "label": "SPO2"
+  },
+  {
+   "fieldname": "ecg",
+   "fieldtype": "Data",
+   "label": "ECG"
+  },
+  {
+   "fieldname": "column_break_xxq7d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "TEMP"
+  },
+  {
+   "fieldname": "abg",
+   "fieldtype": "Data",
+   "label": "ABG"
+  },
+  {
+   "fieldname": "section_break_40gwt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fhraq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "investigations",
+   "fieldtype": "Small Text",
+   "label": "Investigations"
+  },
+  {
+   "fieldname": "section_break_wjgrz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_fgkk5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "provisional_diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Provisional Diagnosis"
+  },
+  {
+   "fieldname": "section_break_jjmpg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "apache_score",
+   "fieldtype": "Data",
+   "label": "APACHE Score"
+  },
+  {
+   "fieldname": "vte",
+   "fieldtype": "Data",
+   "label": "VTE"
+  },
+  {
+   "fieldname": "section_break_zfxke",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Small Text",
+   "label": "Plan"
+  },
+  {
+   "fieldname": "section_break_y16zv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bmq4b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tmejp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_slckr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_krvq0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wtjql",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-21 10:15:48.083261",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "ICU Admission Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -3,6 +3,7 @@
 
 frappe.ui.form.on('Discharge And Clearance', {
 	refresh: function (frm) {
+	
 		if (!frm.is_new()) {
 			if (frm.doc.patient_balance) {
 				var refurn_btn = frm.add_custom_button(__("Transfer Balance"), function () {
@@ -388,70 +389,38 @@ frappe.ui.form.on('Discharge And Clearance', {
 
 	onload: function (frm) {
 
-		// let cost_centers
-		// let data = []
-		// frappe.db.get_list('Cost Center', {
-		//     fields: ['name'],
-		//     filters: {
-		//         is_group: 0
-		//     }
-		// }).then(function(records) {
-		//     if (records) {
-		//         // do something with the list of Cost Centers
-		//      cost_centers = records.map(function(r) {
-		//             return r.name;
-		//         });
-		//         // console.log(cost_centers);
-		// 		// let centers = []
-		// 		// cost_centers.forEach(row=>{
-		// 		// 	// frappe.call({
-		// 		// 	// 	method: "erpnext.accounts.utils.get_balance_on",
-		// 		// 	// 	args: {
-		// 		// 	// 		company: frappe.defaults.get_user_default("Company"),
-		// 		// 	// 		party_type: "Customer",
-		// 		// 	// 		party: frm.doc.customer,
-		// 		// 	// 		date: get_today(),
-		// 		// 	// 		cost_center: row
-		// 		// 	// 	},
-		// 		// 	// 	callback: function(r) {
-		// 		// 	// 		if(r.message) {
-		// 		// 	// 			// console.log(r.message)
-		// 		// 	// 			// console.log(row)
-		// 		// 	// 		centers.push({"cost_center" : row , "amount" : r.message})
-		// 		// 	// 		}
+		let cost_centers
+		let data = []
+	
+		        // console.log(cost_centers);
+				// let centers = []
+				// cost_centers.forEach(row=>{
+				// 	// frappe.call({
+				// 	// 	method: "erpnext.accounts.utils.get_balance_on",
+				// 	// 	args: {
+				// 	// 		company: frappe.defaults.get_user_default("Company"),
+				// 	// 		party_type: "Customer",
+				// 	// 		party: frm.doc.customer,
+				// 	// 		date: get_today(),
+				// 	// 		cost_center: row
+				// 	// 	},
+				// 	// 	callback: function(r) {
+				// 	// 		if(r.message) {
+				// 	// 			// console.log(r.message)
+				// 	// 			// console.log(row)
+				// 	// 		centers.push({"cost_center" : row , "amount" : r.message})
+				// 	// 		}
 
-		// 		// 	// 	}
-		// 		// 	// });
-		// 		// 	})
-		// 	// console.log(cost_centers)
-		// 	// setTimeout(() => {
-		// 	// 	frm.set_value("patient_receivables" , centers)
+				// 	// 	}
+				// 	// });
+				// 	})
+			// console.log(cost_centers)
+			// setTimeout(() => {
+			// 	frm.set_value("patient_receivables" , centers)
 
-		// 	// }, 100);
+			// }, 100);
 
-		// 	}});
-		// cost_centers.forEach(row=>{	
-		// frappe.call({
-		// method: "erpnext.accounts.utils.get_balance_on",
-		// args: {
-		// 	company: frappe.defaults.get_user_default("Company"),
-		// 	party_type: "Customer",
-		// 	party: frm.doc.customer,
-		// 	date: get_today(),
-		// 	cost_center: row,
-		// },
-		// callback: function(r, rt) {
-		// 	if(r.message) {
-		// 		// console.log(r.message)
-		// 	data.push({"cost_center" : row , "amount" : r.message})
-		// 				}
-
-		// }
-		// });
-		// })
-		// setTimeout(() => {
-		// frm.set_value("patient_receivables" , data)
-		// }, 200);
+	
 		frappe.call({
 			method: "erpnext.accounts.utils.get_balance_on",
 			args: {
@@ -461,34 +430,37 @@ frappe.ui.form.on('Discharge And Clearance', {
 				date: frappe.datetime.get_today()
 			},
 			callback: function (r, rt) {
-				if (r.message) {
-					// alert(r.message)
+				// if (r.message) {
+				// 	// alert(r.message)
+				// 	console.log("this is " , r.message)
 					frm.set_value("patient_balance", r.message)
-				}
+					frm.save()
+				// }
 			}
 		});
 
-		frappe.call({
-			method: "his.api.api.patient_clearance", //dotted path to server method
-			args: {
-				"patient": frm.doc.patient
-			},
-			callback: function (r) {
-				console.log(r);
-				let centers = []
-				// frm.set_value("patient_receivables" , [{"cost_center" : "Demo - D" , "amount" : r.message[0].outstanding}])
-				r.message.forEach(row => {
+		// frappe.call({
+		// 	method: "his.api.api.patient_clearance", //dotted path to server method
+		// 	args: {
+		// 		"patient": frm.doc.patient
+		// 	},
+		// 	callback: function (r) {
+		// 		console.log(r);
+		// 		let centers = []
+		// 		// frm.set_value("patient_receivables" , [{"cost_center" : "Demo - D" , "amount" : r.message[0].outstanding}])
+		// 		r.message.forEach(row => {
 
-					// alert(row.amount)
-					// alert(r.message[0].outstanding)
-					centers.push({ "cost_center": row.cost_center, "amount": row.amount })
+		// 			// alert(row.amount)
+		// 			// alert(r.message[0].outstanding)
+		// 			centers.push({ "cost_center": row.cost_center, "amount": row.amount })
 
 
-				})
-				frm.set_value("patient_receivables", centers)
-				frm.save()
-			}
-		});
+		// 		})
+		// 		frm.set_value("patient_receivables", centers)
+		// 		frm.save()
+		// 	}
+		// });
+
 		if (frm.dirty()) {
 			frm.save(); // Only saves if value actually changed
 			}

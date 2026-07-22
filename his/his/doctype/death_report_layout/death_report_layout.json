@@ -21,10 +21,12 @@
   "brief_medical_history",
   "laboratory_findings",
   "main_medical_examination__clinical_findings",
-  "column_break_3n4rl",
   "radiological_and_pathological_findings",
+  "column_break_3n4rl",
   "diagnosis",
   "primary_cause_of_death",
+  "antecedent_cause",
+  "immediate_cause_of_death",
   "section_break_ljejh",
   "name1",
   "title",
@@ -64,7 +66,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": " POD",
-   "options": "\nDead On Arrival (DOA)\nDied In the Ward\nDied in the emergency\nDied in OR\nDied in ICU\nDied in NICU",
+   "options": "\nDead On Arrival (DOA)\nDied In the Ward\nDied in the emergency\nDied in OR\nDied in ICU\nDied in NICU\nDied in PICU",
    "reqd": 1
   },
   {
@@ -163,11 +165,21 @@
    "in_list_view": 1,
    "label": "Age Type",
    "read_only": 1
+  },
+  {
+   "fieldname": "antecedent_cause",
+   "fieldtype": "Small Text",
+   "label": "ANTECEDENT CAUSE"
+  },
+  {
+   "fieldname": "immediate_cause_of_death",
+   "fieldtype": "Small Text",
+   "label": "IMMEDIATE CAUSE OF DEATH"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-24 17:13:00.569246",
+ "modified": "2026-05-16 15:20:21.871409",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Death Report Layout",

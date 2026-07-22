@@ -9,7 +9,7 @@ def get_p_histy(patient = ""):
     labs = lab_h(patient)
     med = medic_h(patient)
     drug_pres = medic_hh(patient)
-    
+    fluid_balance = get_fluid_balance(patient)
     comp = comp_h(patient)
     diag = diag_h(patient)
     imaging = imaging_h(patient)
@@ -32,9 +32,9 @@ def get_p_histy(patient = ""):
     # docplan  = doc_plan(patient)
 
     
-    all_his =  [visits , vitals , labs , med , comp , diag , imaging , vitals_cur , labs_today ,images , drug_sheet , doctor_progress_note , nursing_progress_note, doctor_plan  , lab_prescription,drug_pres , operation , blood_transfusion, dental_plan]
+    all_his =  [visits , vitals ,fluid_balance, labs , med , comp , diag , imaging , vitals_cur , labs_today ,images , drug_sheet , doctor_progress_note , nursing_progress_note, doctor_plan  , lab_prescription,drug_pres , operation , blood_transfusion, dental_plan]
     data = {}
-    all_his_key =  ["visits" , "vitals" , "labs" , "med" , "comp" , "diag" , "imaging" , "vitals_cur" , "labs_today" ,"images" ,"drug_sheet" , "doctor_progress_note" , "nursing_progress_note", "doctor_plan" , "lab_prescription","drug_pres" , "operation" ,  "blood_transfusion", "dental_plan"]
+    all_his_key =  ["visits" , "vitals" , "fluid_balance" ,"labs" , "med" , "comp" , "diag" , "imaging" , "vitals_cur" , "labs_today" ,"images" ,"drug_sheet" , "doctor_progress_note" , "nursing_progress_note", "doctor_plan" , "lab_prescription","drug_pres" , "operation" ,  "blood_transfusion", "dental_plan"]
     columns = {}
     for   index , history in enumerate(all_his):
         # frappe.errprint(history)
@@ -280,6 +280,38 @@ def lab_pres_h(patient ):
      left join `tabHealthcare Requests` p
     on c.parent = p.name    
       where p.patient = "{patient}" order by p.encounter_date DESC
+    
+    """ , as_dict = True)
+    return data
+
+
+@frappe.whitelist()
+def get_fluid_balance(patient ):
+    data = frappe.db.sql(f""" 
+    
+    select 
+    p.name as sr, 
+    p.date  as date, 
+
+    d.time  as time,
+    d.oraltube  as oraltube ,
+    d.intakeother as input,
+    d.outputother as output,
+     p.total_intake as "Total Intake",
+    p.total_output as "Total Output" ,
+    p.mrp as Consultant,
+    p.fluid_balance as Balance,
+    p.owner as "User" 
+    
+
+
+    
+  
+    from `tabFluid Balance Record Data` d  
+	left join `tabFluid Balance Record` p
+    on d.parent = p.name  
+    where p.pid= "{patient}"
+  
     
     """ , as_dict = True)
     return data

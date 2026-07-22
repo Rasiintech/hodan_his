@@ -102,7 +102,8 @@
     <div class="report-container">
         <img src="/files/logo hodan.png" alt="Company Logo" class="logo" />
         <div class="report-title">{{ title }}</div>
-        <h3 class="text-center">Customer: {{ customer_name }}</h3>
+           <h3 class="text-center">ID: {{ patient }}</h3>
+        <h3 class="text-center">Name: {{ customer_name }}</h3>
         <div class="report-date-range">
             From: {{ frappe.format(filters.from_date, {'fieldtype': 'Date'}) }}
             &nbsp; to &nbsp;
