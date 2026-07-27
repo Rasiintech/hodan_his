@@ -39,6 +39,18 @@ def execute(filters=None):
 		sql_filters["consultant"] = filters.get("consultant")
 
 	columns = [
+	{
+						"label": "Patient",
+						"fieldname": "patient",
+						"fieldtype": "Data",
+						"width": 260,
+					},
+					{
+										"label": "Patient",
+										"fieldname": "patient_name",
+										"fieldtype": "Data",
+										"width": 260,
+									},
 		{
 			"label": "Consultant",
 			"fieldname": "consultant",
@@ -89,7 +101,8 @@ def execute(filters=None):
 		FROM (
 			SELECT
 				si.name AS sales_invoice,
-				si.patient AS Patient,
+				si.patient AS patient,
+				si.patient_name AS patient_name,
 				COALESCE(NULLIF(hp.practitioner_name, ''), si.ref_practitioner) AS consultant,
 				MAX(IFNULL(si.total, 0)) AS total_amount,
 				MAX(IFNULL(si.discount_amount, 0)) AS discount_amount,
@@ -109,7 +122,7 @@ def execute(filters=None):
 			GROUP BY
 				si.name,
 				si.patient,
-				COALESCE(NULLIF(hp.patient_name, ''), si.patient)
+				COALESCE(NULLIF(si.patient_name, ''), si.patient)
 		) base
 		GROUP BY base.patient, base.patient
 		ORDER BY base.patient ASC

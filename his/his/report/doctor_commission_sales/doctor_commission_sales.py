@@ -74,7 +74,7 @@ def get_columns():
 
 
 def get_item_group_data(filters):
-    conditions = "where si.docstatus = 1"
+    conditions = "where si.docstatus = 1 and si.status = 'Paid'"
     if filters.get("ref_practitioner"):
         conditions += " and si.ref_practitioner = %(ref_practitioner)s"
     if filters.get("from_date"):

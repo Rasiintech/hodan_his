@@ -39,7 +39,7 @@ def get_data(filters):
     invoice_docs = frappe.get_all(
         "Sales Invoice",
         fields=["name", "ref_practitioner"],
-        filters={"name": ("in", list(invoice_numbers))}
+        filters={"name": ("in", list(invoice_numbers)) , "status": "Paid"}
     )
     invoice_ref_map = {doc.name: doc.ref_practitioner for doc in invoice_docs}
 
