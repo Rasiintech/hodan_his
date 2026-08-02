@@ -1,271 +1,413 @@
+from collections import defaultdict
+
 import frappe
 from frappe import _
 from frappe.utils import flt
-from erpnext.accounts.report.item_wise_sales_register.item_wise_sales_register import execute as item_sales_register_execute
+
+
+COMMISSION_DISCOUNT_ACCOUNT = "Discount - HH"
+DISCOUNT_EXCLUDED_SO_TYPE = "Pharmacy"
+
 
 def execute(filters=None):
-    columns = get_columns()
-    data = get_data(filters)
-    return columns, data
+	filters = frappe._dict(filters or {})
+	return get_columns(), get_data(filters)
+
 
 def get_columns():
-    return [
-        {"label": _("Ref Practitioner"), "fieldname": "ref_practitioner", "fieldtype": "Link","options": "Healthcare Practitioner", "width": 180},
-        {"label": _("Item Group"), "fieldname": "item_group", "fieldtype": "Data", "width": 180},
-        {"label": _("Gross Sales"), "fieldname": "gross_sales", "fieldtype": "Currency", "options": "currency", "width": 150},
-        {"label": _("Sales Expense %"), "fieldname": "expense_percent", "fieldtype": "Percent", "width": 130},
-        {"label": _("Sales Expense Amount"), "fieldname": "sales_expense_amount", "fieldtype": "Currency", "options": "currency", "width": 180},
-        {"label": _("Net Sales Amount"), "fieldname": "net_sales", "fieldtype": "Currency", "options": "currency", "width": 180},
-        {"label": _("Commission %"), "fieldname": "commission_percent", "fieldtype": "Percent", "width": 130},
-        {"label": _("Net Commission"), "fieldname": "net_commission", "fieldtype": "Currency", "options": "currency", "width": 150}
-    ]
+	return [
+		{
+			"label": _("Ref Practitioner"),
+			"fieldname": "ref_practitioner",
+			"fieldtype": "Link",
+			"options": "Healthcare Practitioner",
+			"width": 180,
+		},
+		{"label": _("Item Group"), "fieldname": "item_group", "fieldtype": "Data", "width": 180},
+		{
+			"label": _("Total Invoiced"),
+			"fieldname": "total_invoiced",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 150,
+		},
+		{
+			"label": _("Allocated Amount"),
+			"fieldname": "allocated_amount",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 150,
+		},
+		{
+			"label": _("Deduction Amount"),
+			"fieldname": "deduction_amount",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 150,
+		},
+		{
+			"label": _("Paid Amount"),
+			"fieldname": "paid_amount",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 150,
+		},
+		{
+			"label": _("Gross Sales"),
+			"fieldname": "gross_sales",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 150,
+		},
+		{
+			"label": _("Sales Expense %"),
+			"fieldname": "expense_percent",
+			"fieldtype": "Percent",
+			"width": 130,
+		},
+		{
+			"label": _("Sales Expense Amount"),
+			"fieldname": "sales_expense_amount",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 180,
+		},
+		{
+			"label": _("Net Sales Amount"),
+			"fieldname": "net_sales",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 180,
+		},
+		{
+			"label": _("Commission %"),
+			"fieldname": "commission_percent",
+			"fieldtype": "Percent",
+			"width": 130,
+		},
+		{
+			"label": _("Net Commission"),
+			"fieldname": "net_commission",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 150,
+		},
+	]
+
 
 def get_data(filters):
-    his_settings = frappe.get_doc("HIS Settings", "HIS Settings")
-    sales_expense = his_settings.sales_expense
-    # frappe.errprint(sales_expense)
-    results = item_sales_register_execute({
-        "from_date": filters.get("from_date"),
-        "to_date": filters.get("to_date")
-    })
+	validate_filters(filters)
 
-    report_data = results[1]
-    # frappe.errprint(report_data[0])  # Optional debug
+	amounts_by_group = defaultdict(new_group_totals)
 
-    # Step 1: Collect unique invoice numbers
-    invoice_numbers = {row.get("invoice") for row in report_data if row.get("invoice")}
+	for row in get_invoiced_items(filters):
+		key = (row.ref_practitioner, row.item_group)
+		amounts_by_group[key]["total_invoiced"] += flt(row.base_net_amount)
 
-    # Step 2: Bulk fetch ref_practitioner mapping
-    invoice_docs = frappe.get_all(
-        "Sales Invoice",
-        fields=["name", "ref_practitioner"],
-        filters={"name": ("in", list(invoice_numbers)) , "status": "Paid"}
-    )
-    invoice_ref_map = {doc.name: doc.ref_practitioner for doc in invoice_docs}
+	payment_rows = get_payment_rows(filters)
+	if payment_rows:
+		items_by_invoice = get_items_by_invoice([row.invoice for row in payment_rows])
+		for payment in payment_rows:
+			allocate_payment(amounts_by_group, payment, items_by_invoice.get(payment.invoice, []))
 
-    # Step 3: Build raw list and apply optional filtering
-    filtered_rows = []
-    for row in report_data:
-        invoice = row.get("invoice")
-        ref_practitioner = invoice_ref_map.get(invoice)
-
-        if filters.get("ref_practitioner") and filters["ref_practitioner"] != ref_practitioner:
-            continue
-
-        filtered_rows.append({
-            "ref_practitioner": ref_practitioner,
-            "item_group": row.get("item_group"),
-            "gross_sales": flt(row.get("amount") or 0)
-        })
-
-    # Step 4: Group and summarize by (ref_practitioner, item_group)
-    grouped = {}
-    for row in filtered_rows:
-        key = (row["ref_practitioner"], row["item_group"])
-        grouped.setdefault(key, 0)
-        grouped[key] += row["gross_sales"]
-
-    # Step 5: Fetch commission mapping from Healthcare Practitioner
-    commission_percent_map = {}
-    practitioner_names = {k[0] for k in grouped.keys() if k[0]}
-    for practitioner in practitioner_names:
-        try:
-            doc = frappe.get_doc("Healthcare Practitioner", practitioner)
-            for item in doc.get("commission", []):
-                if item.item_group:
-                    commission_percent_map[(practitioner, item.item_group)] = item.percent
-        except frappe.DoesNotExistError:
-            pass  # Skip if practitioner not found
-
-    # Step 6: Format final output with full calculations
-    output = []
-    net_sales=0
-    for (ref_practitioner, item_group), gross_sales in grouped.items():
-        commission_percent = flt(commission_percent_map.get((ref_practitioner, item_group), 0))
-        sales_expense = expense_percent = frappe.db.get_value("Healthcare Practitioner", ref_practitioner, "deduction_commission_percentage")  # Assuming a constant expense percentage
-        expense_percent = sales_expense
-        sales_expense_amount = flt(gross_sales * expense_percent / 100)
-        if item_group != "Consultation":
-            net_sales = flt(gross_sales - sales_expense_amount)
-        else:
-            sales_expense_amount=0
-            sales_expense = 0
-            net_sales = flt(gross_sales)
-            
-        net_commission = flt(net_sales * commission_percent / 100)
-        if commission_percent:
-            output.append(frappe._dict({
-                "ref_practitioner": ref_practitioner,
-                "item_group": item_group,
-                "gross_sales": round(gross_sales,2),
-                "expense_percent": sales_expense,
-                "sales_expense_amount": round(sales_expense_amount,2),
-                "net_sales": round(net_sales,2),
-                "commission_percent": commission_percent,
-                "net_commission": round(net_commission,2)
-            }))
-
-    return output
+	return build_output(amounts_by_group)
 
 
-# import frappe
-# from frappe import _
-# from frappe.utils import flt
-# from erpnext.accounts.report.item_wise_sales_register.item_wise_sales_register import execute as item_sales_register_execute
+def validate_filters(filters):
+	if not filters.get("from_date") or not filters.get("to_date"):
+		frappe.throw(_("From Date and To Date are required"))
 
-# def execute(filters=None):
-#     columns = get_columns()
-#     data = get_data(filters)
-#     return columns, data
-
-# def get_columns():
-#     return [
-#         {"label": _("Ref Practitioner"), "fieldname": "ref_practitioner", "fieldtype": "Data", "width": 180},
-#         {"label": _("Item Group"), "fieldname": "item_group", "fieldtype": "Data", "width": 180},
-#         {"label": _("Total Amount"), "fieldname": "amount", "fieldtype": "Currency", "options": "currency", "width": 150}
-#     ]
-
-# def get_data(filters):
-#     results = item_sales_register_execute({
-#         "from_date": filters.get("from_date"),
-#         "to_date": filters.get("to_date")
-#     })
-
-#     report_data = results[1]
-#     frappe.errprint(report_data[0])  # Optional: sample debug
-
-#     # Step 1: Collect unique invoice numbers
-#     invoice_numbers = {row.get("invoice") for row in report_data if row.get("invoice")}
-
-#     # Step 2: Bulk fetch ref_practitioner mapping
-#     invoice_docs = frappe.get_all(
-#         "Sales Invoice",
-#         fields=["name", "ref_practitioner"],
-#         filters={"name": ("in", list(invoice_numbers))}
-#     )
-#     invoice_ref_map = {doc.name: doc.ref_practitioner for doc in invoice_docs}
-
-#     # Step 3: Build raw list and apply optional filtering
-#     filtered_rows = []
-#     for row in report_data:
-#         invoice = row.get("invoice")
-#         ref_practitioner = invoice_ref_map.get(invoice)
-
-#         if filters.get("ref_practitioner") and filters["ref_practitioner"] != ref_practitioner:
-#             continue
-
-#         filtered_rows.append({
-#             "ref_practitioner": ref_practitioner,
-#             "item_group": row.get("item_group"),
-#             "amount": flt(row.get("amount") or 0)
-#         })
-
-#     # Step 4: Group and summarize by (ref_practitioner, item_group)
-#     grouped = {}
-#     for row in filtered_rows:
-#         key = (row["ref_practitioner"], row["item_group"])
-#         grouped.setdefault(key, 0)
-#         grouped[key] += row["amount"]
-
-#     # Step 5: Format final output
-#     output = []
-#     for (ref_practitioner, item_group), amount in grouped.items():
-#         output.append(frappe._dict({
-#             "ref_practitioner": ref_practitioner,
-#             "item_group": item_group,
-#             "amount": flt(amount)
-#         }))
-
-#     return output
+	if filters.from_date > filters.to_date:
+		frappe.throw(_("From Date cannot be after To Date"))
 
 
-# import frappe
-# from frappe import _
-# from frappe.utils import flt
-# from erpnext.accounts.report.item_wise_sales_register.item_wise_sales_register import execute as item_sales_register_execute
+def get_invoiced_items(filters):
+	conditions = get_invoice_conditions(filters, date_field="si.posting_date")
+	return frappe.db.sql(
+		f"""
+			SELECT
+				si.name AS invoice,
+				si.ref_practitioner,
+				sii.item_group,
+				sii.base_net_amount
+			FROM `tabSales Invoice` si
+			INNER JOIN `tabSales Invoice Item` sii ON sii.parent = si.name
+			WHERE
+				si.docstatus = 1
+				AND IFNULL(si.is_return, 0) = 0
+				AND IFNULL(si.ref_practitioner, '') != ''
+				AND {conditions}
+		""",
+		filters,
+		as_dict=True,
+	)
 
-# def execute(filters=None):
-#     columns = get_columns()
-#     data = get_data(filters)
-#     return columns, data
 
-# def get_columns():
-#     return [
-#         {"label": _("Ref Practitioner"), "fieldname": "ref_practitioner", "fieldtype": "Data", "width": 180},
-#         {"label": _("Item Group"), "fieldname": "item_group", "fieldtype": "Data", "width": 180},
-#         {"label": _("Gross Sales"), "fieldname": "gross_sales", "fieldtype": "Currency", "options": "currency", "width": 150},
-#         {"label": _("Sales Expense %"), "fieldname": "expense_percent", "fieldtype": "Percent", "width": 130},
-#         {"label": _("Sales Expense Amount"), "fieldname": "sales_expense_amount", "fieldtype": "Currency", "options": "currency", "width": 180},
-#         {"label": _("Net Sales Amount"), "fieldname": "net_sales", "fieldtype": "Currency", "options": "currency", "width": 180},
-#         {"label": _("Commission %"), "fieldname": "commission_percent", "fieldtype": "Percent", "width": 130},
-#         {"label": _("Net Commission"), "fieldname": "net_commission", "fieldtype": "Currency", "options": "currency", "width": 150}
-#     ]
+def get_payment_rows(filters):
+	company_condition = "AND si.company = %(company)s" if filters.get("company") else ""
+	practitioner_condition = (
+		"AND si.ref_practitioner = %(ref_practitioner)s"
+		if filters.get("ref_practitioner")
+		else ""
+	)
 
-# def get_data(filters):
-#     results = item_sales_register_execute({
-#         "from_date": filters.get("from_date"),
-#         "to_date": filters.get("to_date")
-#     })
+	query_filters = dict(filters)
+	query_filters["discount_account"] = COMMISSION_DISCOUNT_ACCOUNT
+	query_filters["discount_excluded_so_type"] = DISCOUNT_EXCLUDED_SO_TYPE
 
-#     report_data = results[1]
-#     frappe.errprint(report_data[0])  # Optional: sample debug
+	return frappe.db.sql(
+		f"""
+			SELECT
+				payments.invoice,
+				payments.ref_practitioner,
+				payments.base_grand_total,
+				payments.base_net_total,
+				SUM(payments.base_allocated_amount) AS base_allocated_amount,
+				SUM(payments.base_deduction_amount) AS base_deduction_amount
+			FROM (
+				SELECT
+					si.name AS invoice,
+					si.ref_practitioner,
+					si.base_grand_total,
+					si.base_net_total,
+					si.base_paid_amount AS base_allocated_amount,
+					0 AS base_deduction_amount
+				FROM `tabSales Invoice` si
+				WHERE
+					si.docstatus = 1
+					AND IFNULL(si.is_return, 0) = 0
+					AND IFNULL(si.ref_practitioner, '') != ''
+					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
+					AND IFNULL(si.base_paid_amount, 0) > 0
+					{company_condition}
+					{practitioner_condition}
 
-#     # Step 1: Collect unique invoice numbers
-#     invoice_numbers = {row.get("invoice") for row in report_data if row.get("invoice")}
+				UNION ALL
 
-#     # Step 2: Bulk fetch ref_practitioner mapping
-#     invoice_docs = frappe.get_all(
-#         "Sales Invoice",
-#         fields=["name", "ref_practitioner"],
-#         filters={"name": ("in", list(invoice_numbers))}
-#     )
-#     invoice_ref_map = {doc.name: doc.ref_practitioner for doc in invoice_docs}
+				SELECT
+					si.name AS invoice,
+					si.ref_practitioner,
+					si.base_grand_total,
+					si.base_net_total,
+					per.allocated_amount
+						* CASE
+							WHEN IFNULL(per.exchange_rate, 0) > 0 THEN per.exchange_rate
+							WHEN IFNULL(si.conversion_rate, 0) > 0 THEN si.conversion_rate
+							ELSE 1
+						END AS base_allocated_amount,
+					CASE
+						WHEN IFNULL(si.so_type, '') = %(discount_excluded_so_type)s
+							OR NOT EXISTS (
+								SELECT 1
+								FROM `tabSales Invoice Item` commission_item
+								INNER JOIN `tabCommission` commission_rule
+									ON commission_rule.parent = si.ref_practitioner
+									AND commission_rule.item_group = commission_item.item_group
+									AND IFNULL(commission_rule.percent, 0) > 0
+								WHERE commission_item.parent = si.name
+							)
+							THEN 0
+						ELSE IFNULL(discounts.base_deduction_amount, 0)
+							* (
+								per.allocated_amount
+								* CASE
+									WHEN IFNULL(per.exchange_rate, 0) > 0 THEN per.exchange_rate
+									WHEN IFNULL(si.conversion_rate, 0) > 0 THEN si.conversion_rate
+									ELSE 1
+								END
+							)
+							/ NULLIF(eligible_allocations.base_allocated_amount, 0)
+					END AS base_deduction_amount
+				FROM `tabPayment Entry` pe
+				INNER JOIN `tabPayment Entry Reference` per ON per.parent = pe.name
+				LEFT JOIN (
+					SELECT parent, SUM(amount) AS base_deduction_amount
+					FROM `tabPayment Entry Deduction`
+					WHERE account = %(discount_account)s
+					GROUP BY parent
+				) discounts ON discounts.parent = pe.name
+				LEFT JOIN (
+					SELECT
+						eligible_per.parent,
+						SUM(
+							eligible_per.allocated_amount
+							* CASE
+								WHEN IFNULL(eligible_per.exchange_rate, 0) > 0
+									THEN eligible_per.exchange_rate
+								WHEN IFNULL(eligible_si.conversion_rate, 0) > 0
+									THEN eligible_si.conversion_rate
+								ELSE 1
+							END
+						) AS base_allocated_amount
+					FROM `tabPayment Entry Reference` eligible_per
+					INNER JOIN `tabPayment Entry` eligible_pe
+						ON eligible_pe.name = eligible_per.parent
+					INNER JOIN `tabSales Invoice` eligible_si
+						ON eligible_per.reference_doctype = 'Sales Invoice'
+						AND eligible_per.reference_name = eligible_si.name
+					WHERE
+						eligible_pe.docstatus = 1
+						AND eligible_pe.payment_type = 'Receive'
+						AND eligible_pe.party_type = 'Customer'
+						AND eligible_pe.posting_date BETWEEN %(from_date)s AND %(to_date)s
+						AND IFNULL(eligible_per.allocated_amount, 0) > 0
+						AND eligible_si.docstatus = 1
+						AND IFNULL(eligible_si.is_return, 0) = 0
+						AND IFNULL(eligible_si.so_type, '') != %(discount_excluded_so_type)s
+						AND EXISTS (
+							SELECT 1
+							FROM `tabSales Invoice Item` eligible_commission_item
+							INNER JOIN `tabCommission` eligible_commission_rule
+								ON eligible_commission_rule.parent = eligible_si.ref_practitioner
+								AND eligible_commission_rule.item_group = eligible_commission_item.item_group
+								AND IFNULL(eligible_commission_rule.percent, 0) > 0
+							WHERE eligible_commission_item.parent = eligible_si.name
+						)
+					GROUP BY eligible_per.parent
+				) eligible_allocations ON eligible_allocations.parent = pe.name
+				INNER JOIN `tabSales Invoice` si
+					ON per.reference_doctype = 'Sales Invoice'
+					AND per.reference_name = si.name
+				WHERE
+					pe.docstatus = 1
+					AND pe.payment_type = 'Receive'
+					AND pe.party_type = 'Customer'
+					AND pe.posting_date BETWEEN %(from_date)s AND %(to_date)s
+					AND IFNULL(per.allocated_amount, 0) > 0
+					AND si.docstatus = 1
+					AND IFNULL(si.is_return, 0) = 0
+					AND IFNULL(si.ref_practitioner, '') != ''
+					{company_condition}
+					{practitioner_condition}
+			) payments
+			GROUP BY
+				payments.invoice,
+				payments.ref_practitioner,
+				payments.base_grand_total,
+				payments.base_net_total
+		""",
+		query_filters,
+		as_dict=True,
+	)
 
-#     # Step 3: Build raw list and apply optional filtering
-#     filtered_rows = []
-#     for row in report_data:
-#         invoice = row.get("invoice")
-#         ref_practitioner = invoice_ref_map.get(invoice)
 
-#         if filters.get("ref_practitioner") and filters["ref_practitioner"] != ref_practitioner:
-#             continue
+def get_invoice_conditions(filters, date_field):
+	conditions = [f"{date_field} BETWEEN %(from_date)s AND %(to_date)s"]
 
-#         filtered_rows.append({
-#             "ref_practitioner": ref_practitioner,
-#             "item_group": row.get("item_group"),
-#             "gross_sales": flt(row.get("amount") or 0)
-#         })
+	if filters.get("company"):
+		conditions.append("si.company = %(company)s")
+	if filters.get("ref_practitioner"):
+		conditions.append("si.ref_practitioner = %(ref_practitioner)s")
 
-#     # Step 4: Group and summarize by (ref_practitioner, item_group)
-#     grouped = {}
-#     for row in filtered_rows:
-#         key = (row["ref_practitioner"], row["item_group"])
-#         grouped.setdefault(key, 0)
-#         grouped[key] += row["gross_sales"]
+	return " AND ".join(conditions)
 
-#     # Step 5: Fetch commission mapping from Healthcare Practitioner
-#     commission_percent_map = {}
-#     practitioner_names = {k[0] for k in grouped.keys() if k[0]}
-#     for practitioner in practitioner_names:
-#         try:
-#             doc = frappe.get_doc("Healthcare Practitioner", practitioner)
-#             for item in doc.get("commission", []):
-#                 if item.item_group:
-#                     commission_percent_map[(practitioner, item.item_group)] = item.percent
-#         except frappe.DoesNotExistError:
-#             pass  # Skip if practitioner record not found
 
-#     # Step 6: Format final output
-#     output = []
-#     for (ref_practitioner, item_group), amount in grouped.items():
-#         commission_percent = commission_percent_map.get((ref_practitioner, item_group), 0)
-#         output.append(frappe._dict({
-#             "ref_practitioner": ref_practitioner,
-#             "item_group": item_group,
-#             "gross_sales": flt(amount),
-#             "expense_percent": 25,
-#             "commission_percent": flt(commission_percent)
-#         }))
-        
+def get_items_by_invoice(invoice_names):
+	if not invoice_names:
+		return {}
 
-#     return output
+	rows = frappe.get_all(
+		"Sales Invoice Item",
+		filters={"parent": ("in", invoice_names)},
+		fields=["parent", "item_group", "base_net_amount"],
+		order_by="parent, idx",
+	)
+	items_by_invoice = defaultdict(list)
+	for row in rows:
+		items_by_invoice[row.parent].append(row)
+
+	return items_by_invoice
+
+
+def allocate_payment(amounts_by_group, payment, invoice_items):
+	base_grand_total = flt(payment.base_grand_total)
+	base_net_total = flt(payment.base_net_total)
+	if base_grand_total <= 0 or base_net_total == 0:
+		return
+
+	base_allocated_amount = min(max(flt(payment.base_allocated_amount), 0), base_grand_total)
+	# Preserve the full non-pharmacy discount, but never let it create negative commission.
+	base_deduction_amount = max(flt(payment.base_deduction_amount), 0)
+	base_paid_amount = max(base_allocated_amount - base_deduction_amount, 0)
+	if not base_paid_amount:
+		paid_ratio = 0
+	else:
+		paid_ratio = base_paid_amount / base_grand_total
+
+	for item in invoice_items:
+		item_amount = flt(item.base_net_amount)
+		key = (payment.ref_practitioner, item.item_group)
+		item_share = item_amount / base_net_total
+
+		amounts_by_group[key]["allocated_amount"] += base_allocated_amount * item_share
+		amounts_by_group[key]["deduction_amount"] += base_deduction_amount * item_share
+		amounts_by_group[key]["paid_amount"] += base_paid_amount * item_share
+		amounts_by_group[key]["gross_sales"] += item_amount * paid_ratio
+
+
+def new_group_totals():
+	return {
+		"total_invoiced": 0.0,
+		"allocated_amount": 0.0,
+		"deduction_amount": 0.0,
+		"paid_amount": 0.0,
+		"gross_sales": 0.0,
+	}
+
+
+def build_output(amounts_by_group):
+	practitioner_names = {key[0] for key in amounts_by_group if key[0]}
+	commission_percent_map = {}
+	expense_percent_map = {}
+
+	for practitioner in practitioner_names:
+		try:
+			doc = frappe.get_doc("Healthcare Practitioner", practitioner)
+		except frappe.DoesNotExistError:
+			continue
+
+		expense_percent_map[practitioner] = flt(doc.deduction_commission_percentage)
+		for item in doc.get("commission", []):
+			if item.item_group:
+				commission_percent_map[(practitioner, item.item_group)] = flt(item.percent)
+
+	output = []
+	for (ref_practitioner, item_group), amounts in sorted(
+		amounts_by_group.items(), key=lambda entry: (entry[0][0] or "", entry[0][1] or "")
+	):
+		commission_percent = commission_percent_map.get((ref_practitioner, item_group), 0)
+		if not commission_percent:
+			continue
+
+		gross_sales = flt(amounts["gross_sales"])
+		expense_percent = expense_percent_map.get(ref_practitioner, 0)
+		if item_group == "Consultation":
+			expense_percent = 0
+
+		sales_expense_amount = gross_sales * expense_percent / 100
+		net_sales = gross_sales - sales_expense_amount
+		net_commission = net_sales * commission_percent / 100
+		allocated_amount = round(amounts["allocated_amount"], 2)
+		deduction_amount = round(amounts["deduction_amount"], 2)
+		paid_amount = max(round(allocated_amount - deduction_amount, 2), 0)
+
+		output.append(
+			frappe._dict(
+				{
+					"ref_practitioner": ref_practitioner,
+					"item_group": item_group,
+					"total_invoiced": round(amounts["total_invoiced"], 2),
+					"allocated_amount": allocated_amount,
+					"deduction_amount": deduction_amount,
+					"paid_amount": paid_amount,
+					"gross_sales": round(gross_sales, 2),
+					"expense_percent": expense_percent,
+					"sales_expense_amount": round(sales_expense_amount, 2),
+					"net_sales": round(net_sales, 2),
+					"commission_percent": commission_percent,
+					"net_commission": round(net_commission, 2),
+				}
+			)
+		)
+
+	return output

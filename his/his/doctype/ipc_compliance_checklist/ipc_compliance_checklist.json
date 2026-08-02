@@ -55,6 +55,7 @@
   {
    "fieldname": "section_break_1",
    "fieldtype": "Section Break",
+   "in_preview": 1,
    "label": "Part 1: Hand Hygiene"
   },
   {
@@ -198,7 +199,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-26 10:18:52.218492",
+ "modified": "2026-07-29 10:53:08.026669",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "IPC Compliance Checklist",
