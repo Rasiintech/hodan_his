@@ -41,16 +41,15 @@ def resolve_practitioner(requested_practitioner):
 
 
 def get_columns():
-	visible_fields = {
-		"item_group",
-		"total_invoiced",
-		"paid_amount",
-		"net_commission",
-	}
-	return [
-		column
+	columns_by_field = {
+		column.get("fieldname"): column.copy()
 		for column in get_doctor_commission_columns()
-		if column.get("fieldname") in visible_fields
+	}
+	columns_by_field["net_sales"]["label"] = _("Net Sales")
+	columns_by_field["commission_percent"]["label"] = _("Percentage")
+	return [
+		columns_by_field[fieldname]
+		for fieldname in ("item_group", "net_sales", "commission_percent", "net_commission")
 	]
 
 
