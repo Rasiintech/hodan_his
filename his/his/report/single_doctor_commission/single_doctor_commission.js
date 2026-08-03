@@ -18,7 +18,16 @@ frappe.query_reports["Single Doctor Commission"] = {
             "fieldtype": "Link",
             "options": "Healthcare Practitioner",
             "reqd": 1,
+            "read_only": frappe.session.user !== "Administrator",
             "get_query": function () {
+                if (frappe.session.user === "Administrator") {
+                    return {
+                        filters: {
+                            status: "Active"
+                        }
+                    };
+                }
+
                 return {
                     filters: {
                         user_id: frappe.session.user
@@ -36,6 +45,10 @@ frappe.query_reports["Single Doctor Commission"] = {
         }
     ],
     "onload": function(report) {
+        if (frappe.session.user === "Administrator") {
+            return;
+        }
+
         frappe.call({
             method: "frappe.client.get_value",
             args: {
@@ -46,6 +59,8 @@ frappe.query_reports["Single Doctor Commission"] = {
             callback: function(r) {
                 if (r.message) {
                     frappe.query_report.set_filter_value("ref_practitioner", r.message.name);
+                } else {
+                    frappe.msgprint(__("Your user is not linked to a Healthcare Practitioner."));
                 }
             }
         });

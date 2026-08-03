@@ -1,127 +1,65 @@
+from collections import defaultdict
+
 import frappe
 from frappe import _
 from frappe.utils import flt
-from erpnext.accounts.report.item_wise_sales_register.item_wise_sales_register import execute as item_sales_register_execute
+
+from his.his.report.doctor_commission.doctor_commission import get_data as get_doctor_commission_data
+
 
 def execute(filters=None):
-    columns = get_columns()
-    data = get_data(filters)
-    return columns, data
+	filters = frappe._dict(filters or {})
+	return get_columns(), get_data(filters)
+
 
 def get_data(filters):
-    his_settings = frappe.get_doc("HIS Settings", "HIS Settings")
-    expense_percent = his_settings.sales_expense
-    results = item_sales_register_execute({
-        "from_date": filters.get("from_date"),
-        "to_date": filters.get("to_date")
-    })
+	commission_rows = get_doctor_commission_data(frappe._dict(filters or {}))
+	active_practitioners = get_active_practitioners({row.ref_practitioner for row in commission_rows})
+	doctor_totals = defaultdict(
+		lambda: {"net_commission": 0.0, "net_sales": 0.0, "weighted_commission_sum": 0.0}
+	)
 
-    report_data = results[1]
+	for row in commission_rows:
+		if row.ref_practitioner not in active_practitioners:
+			continue
+		stats = doctor_totals[row.ref_practitioner]
+		stats["net_commission"] += flt(row.net_commission)
+		stats["net_sales"] += flt(row.net_sales)
+		stats["weighted_commission_sum"] += flt(row.commission_percent) * flt(row.net_sales)
 
-    # Step 1: Get invoice->ref_practitioner mapping
-    invoice_numbers = {row.get("invoice") for row in report_data if row.get("invoice")}
-    invoice_docs = frappe.get_all(
-        "Sales Invoice",
-        fields=["name", "ref_practitioner"],
-        filters={"name": ("in", list(invoice_numbers))}
-    )
-    invoice_ref_map = {doc.name: doc.ref_practitioner for doc in invoice_docs}
+	return [
+		frappe._dict(
+			{
+				"employee_commisison": active_practitioners[doctor].get("employee_commisison"),
+				"ref_practitioner": doctor,
+				"commission_percent": round(
+					stats["weighted_commission_sum"] / stats["net_sales"] if stats["net_sales"] else 0,
+					2,
+				),
+				"net_commission": round(stats["net_commission"], 2),
+			}
+		)
+		for doctor, stats in sorted(doctor_totals.items())
+	]
 
-    # Step 2: Prepare filtered rows
-    filtered_rows = []
-    for row in report_data:
-        invoice = row.get("invoice")
-        ref_practitioner = invoice_ref_map.get(invoice)
 
-        if filters.get("ref_practitioner") and filters["ref_practitioner"] != ref_practitioner:
-            continue
-
-        filtered_rows.append({
-            "ref_practitioner": ref_practitioner,
-            "item_group": row.get("item_group"),
-            "gross_sales": flt(row.get("amount") or 0)
-        })
-
-    # Step 3: Group gross_sales by (doctor, item group)
-    grouped = {}
-    for row in filtered_rows:
-        key = (row["ref_practitioner"], row["item_group"])
-        grouped.setdefault(key, 0)
-        grouped[key] += row["gross_sales"]
-
-    # Step 4: Get active practitioners with commission rules
-    commission_percent_map = {}
-    practitioner_info = {}
-    practitioner_names = {k[0] for k in grouped.keys() if k[0]}
-
-    for practitioner in practitioner_names:
-        try:
-            doc = frappe.get_doc("Healthcare Practitioner", practitioner)
-            if doc.status != "Active" or not doc.get("commission"):
-                continue  # skip inactive or no commission entries
-
-            practitioner_info[practitioner] = {
-                "employee_commisison": doc.employee_commisison or None
-            }
-
-            for item in doc.get("commission", []):
-                if item.item_group:
-                    commission_percent_map[(practitioner, item.item_group)] = item.percent
-                    
-
-        except frappe.DoesNotExistError:
-            continue
-
-    # Step 5: Calculate per-doctor totals
-    doctor_totals = {}
-    # expense_percent = 25
-    
-    for (ref_practitioner, item_group), gross_sales in grouped.items():
-        expense_percent = frappe.db.get_value("Healthcare Practitioner", ref_practitioner, "deduction_commission_percentage")  # Assuming a constant expense percentage
-
-        if ref_practitioner not in practitioner_info:
-            continue  # skip if not active or no commission
-
-        commission_percent = flt(commission_percent_map.get((ref_practitioner, item_group), 0))
-        if item_group != "Consultation":
-            net_sales = flt(gross_sales * (1 - expense_percent / 100))
-        else:
-             net_sales = flt(gross_sales)
-        net_commission = flt(net_sales * commission_percent / 100)
-
-        if ref_practitioner not in doctor_totals:
-            doctor_totals[ref_practitioner] = {
-                "total_net_commission": 0,
-                "total_net_sales": 0,
-                "weighted_commission_sum": 0
-            }
-
-        doctor_totals[ref_practitioner]["total_net_commission"] += net_commission
-        doctor_totals[ref_practitioner]["total_net_sales"] += net_sales
-        doctor_totals[ref_practitioner]["weighted_commission_sum"] += commission_percent * net_sales
-
-    # Step 6: Format output
-    output = []
-    for doctor, stats in doctor_totals.items():
-        total_net_sales = stats["total_net_sales"]
-        avg_commission_rate = (
-            stats["weighted_commission_sum"] / total_net_sales if total_net_sales else 0
-        )
-        output.append(frappe._dict({
-            "employee_commisison": practitioner_info[doctor]["employee_commisison"],
-            "ref_practitioner": doctor,
-            "commission_percent": round(avg_commission_rate, 2),
-            "net_commission": round(stats["total_net_commission"], 2)
-        }))
-
-    return output
+def get_active_practitioners(practitioners):
+	if not practitioners:
+		return {}
+	return {
+		row.name: row
+		for row in frappe.get_all(
+			"Healthcare Practitioner",
+			filters={"name": ("in", list(practitioners)), "status": "Active"},
+			fields=["name", "employee_commisison"],
+		)
+	}
 
 
 def get_columns():
-    return [
-        {"label": _("Employee ID"), "fieldname": "employee_commisison", "fieldtype": "Link", "options": "Employee", "width": 150},
-        {"label": _("Doctor Name"), "fieldname": "ref_practitioner", "fieldtype": "Link", "options": "Healthcare Practitioner", "width": 200},
-        {"label": _("Commission Rate %"), "fieldname": "commission_percent", "fieldtype": "Percent", "width": 150},
-        {"label": _("Net Commission"), "fieldname": "net_commission", "fieldtype": "Currency", "options": "currency", "width": 180}
-    ]
-
+	return [
+		{"label": _("Employee ID"), "fieldname": "employee_commisison", "fieldtype": "Link", "options": "Employee", "width": 150},
+		{"label": _("Doctor Name"), "fieldname": "ref_practitioner", "fieldtype": "Link", "options": "Healthcare Practitioner", "width": 200},
+		{"label": _("Commission Rate %"), "fieldname": "commission_percent", "fieldtype": "Percent", "width": 150},
+		{"label": _("Net Commission"), "fieldname": "net_commission", "fieldtype": "Currency", "options": "currency", "width": 180},
+	]
