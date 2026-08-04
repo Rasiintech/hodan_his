@@ -7,6 +7,7 @@ from frappe.utils import flt
 
 COMMISSION_DISCOUNT_ACCOUNT = "Discount - HH"
 DISCOUNT_EXCLUDED_SO_TYPE = "Pharmacy"
+DISCOUNT_EXCLUDED_ITEM_GROUPS = ("OT",)
 
 
 def execute(filters=None):
@@ -154,6 +155,7 @@ def get_payment_rows(filters):
 	query_filters = dict(filters)
 	query_filters["discount_account"] = COMMISSION_DISCOUNT_ACCOUNT
 	query_filters["discount_excluded_so_type"] = DISCOUNT_EXCLUDED_SO_TYPE
+	query_filters["discount_excluded_item_groups"] = DISCOUNT_EXCLUDED_ITEM_GROUPS
 
 	return frappe.db.sql(
 		f"""
@@ -279,6 +281,7 @@ def get_payment_rows(filters):
 									AND commission_rule.item_group = commission_item.item_group
 									AND IFNULL(commission_rule.percent, 0) > 0
 								WHERE commission_item.parent = si.name
+									AND commission_item.item_group NOT IN %(discount_excluded_item_groups)s
 							)
 							THEN 0
 						ELSE IFNULL(discounts.base_deduction_amount, 0)
@@ -340,6 +343,7 @@ def get_payment_rows(filters):
 								AND eligible_commission_rule.item_group = eligible_commission_item.item_group
 								AND IFNULL(eligible_commission_rule.percent, 0) > 0
 							WHERE eligible_commission_item.parent = eligible_si.name
+								AND eligible_commission_item.item_group NOT IN %(discount_excluded_item_groups)s
 						)
 					GROUP BY eligible_per.parent
 				) eligible_allocations ON eligible_allocations.parent = pe.name
@@ -416,7 +420,6 @@ def allocate_payment(amounts_by_group, payment, invoice_items):
 		max(flt(payment.base_insurance_discount_amount), 0),
 		base_insurance_coverage_amount,
 	)
-	base_insurance_paid_amount = base_insurance_coverage_amount - base_insurance_discount_amount
 	base_employee_billed_amount = min(
 		max(flt(payment.base_employee_billed_amount), 0),
 		max(base_allocated_amount - base_insurance_coverage_amount, 0),
@@ -427,21 +430,42 @@ def allocate_payment(amounts_by_group, payment, invoice_items):
 		0,
 	)
 	base_cash_deduction_amount = max(base_deduction_amount - base_insurance_discount_amount, 0)
-	base_cash_paid_amount = max(base_cash_allocated_amount - base_cash_deduction_amount, 0)
-	base_paid_amount = base_insurance_paid_amount + base_employee_billed_amount + base_cash_paid_amount
-	commissionable_amount = base_insurance_paid_amount + base_employee_billed_amount + (
-		base_cash_paid_amount * base_net_total / base_grand_total
+	deduction_eligible_total = sum(
+		flt(item.base_net_amount)
+		for item in invoice_items
+		if item.item_group not in DISCOUNT_EXCLUDED_ITEM_GROUPS
 	)
 
 	for item in invoice_items:
 		item_amount = flt(item.base_net_amount)
 		key = (payment.ref_practitioner, item.item_group)
 		item_share = item_amount / base_net_total
+		cash_deduction_share = 0
+		if item.item_group not in DISCOUNT_EXCLUDED_ITEM_GROUPS and deduction_eligible_total > 0:
+			cash_deduction_share = base_cash_deduction_amount * item_amount / deduction_eligible_total
+
+		insurance_allocated_share = base_insurance_coverage_amount * item_share
+		insurance_discount_share = base_insurance_discount_amount * item_share
+		employee_billed_share = base_employee_billed_amount * item_share
+		cash_allocated_share = base_cash_allocated_amount * item_share
+		cash_paid_share = max(cash_allocated_share - cash_deduction_share, 0)
+		paid_share = (
+			insurance_allocated_share
+			- insurance_discount_share
+			+ employee_billed_share
+			+ cash_paid_share
+		)
+		commissionable_share = (
+			insurance_allocated_share
+			- insurance_discount_share
+			+ employee_billed_share
+			+ cash_paid_share * base_net_total / base_grand_total
+		)
 
 		amounts_by_group[key]["allocated_amount"] += base_allocated_amount * item_share
-		amounts_by_group[key]["deduction_amount"] += base_deduction_amount * item_share
-		amounts_by_group[key]["paid_amount"] += base_paid_amount * item_share
-		amounts_by_group[key]["gross_sales"] += commissionable_amount * item_share
+		amounts_by_group[key]["deduction_amount"] += insurance_discount_share + cash_deduction_share
+		amounts_by_group[key]["paid_amount"] += paid_share
+		amounts_by_group[key]["gross_sales"] += commissionable_share
 
 
 def new_group_totals():

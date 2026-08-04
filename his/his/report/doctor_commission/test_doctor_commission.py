@@ -176,3 +176,30 @@ class TestDoctorCommission(TestCase):
 		self.assertEqual(amounts[("Doctor", "Laboratory")]["deduction_amount"], 120)
 		self.assertEqual(amounts[("Doctor", "Laboratory")]["paid_amount"], 0)
 		self.assertEqual(amounts[("Doctor", "Laboratory")]["gross_sales"], 0)
+
+	def test_payment_entry_discount_does_not_reduce_ot_commission(self):
+		amounts = defaultdict(new_group_totals)
+		payment = frappe._dict(
+			{
+				"ref_practitioner": "Doctor",
+				"base_grand_total": 100,
+				"base_net_total": 100,
+				"base_allocated_amount": 100,
+				"base_deduction_amount": 20,
+			}
+		)
+		items = [
+			frappe._dict({"item_group": "OT", "base_net_amount": 40}),
+			frappe._dict({"item_group": "Laboratory", "base_net_amount": 60}),
+		]
+
+		allocate_payment(amounts, payment, items)
+
+		self.assertEqual(amounts[("Doctor", "OT")]["allocated_amount"], 40)
+		self.assertEqual(amounts[("Doctor", "OT")]["deduction_amount"], 0)
+		self.assertEqual(amounts[("Doctor", "OT")]["paid_amount"], 40)
+		self.assertEqual(amounts[("Doctor", "OT")]["gross_sales"], 40)
+		self.assertEqual(amounts[("Doctor", "Laboratory")]["allocated_amount"], 60)
+		self.assertEqual(amounts[("Doctor", "Laboratory")]["deduction_amount"], 20)
+		self.assertEqual(amounts[("Doctor", "Laboratory")]["paid_amount"], 40)
+		self.assertEqual(amounts[("Doctor", "Laboratory")]["gross_sales"], 40)
