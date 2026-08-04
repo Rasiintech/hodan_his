@@ -163,19 +163,93 @@ def get_payment_rows(filters):
 				payments.base_grand_total,
 				payments.base_net_total,
 				SUM(payments.base_allocated_amount) AS base_allocated_amount,
-				SUM(payments.base_deduction_amount) AS base_deduction_amount
+				SUM(payments.base_deduction_amount) AS base_deduction_amount,
+				SUM(payments.base_insurance_coverage_amount) AS base_insurance_coverage_amount,
+				SUM(payments.base_insurance_discount_amount) AS base_insurance_discount_amount,
+				SUM(payments.base_employee_billed_amount) AS base_employee_billed_amount
 			FROM (
 				SELECT
 					si.name AS invoice,
 					si.ref_practitioner,
 					si.base_grand_total,
 					si.base_net_total,
-					si.base_paid_amount AS base_allocated_amount,
-					0 AS base_deduction_amount
+					si.insurance_coverage_amount * IFNULL(NULLIF(si.conversion_rate, 0), 1)
+						AS base_allocated_amount,
+					si.insurance_coverage_amount * IFNULL(NULLIF(si.conversion_rate, 0), 1)
+						* GREATEST(LEAST(IFNULL(ic.discount_percentage, 0), 100), 0) / 100
+						AS base_deduction_amount,
+					si.insurance_coverage_amount * IFNULL(NULLIF(si.conversion_rate, 0), 1)
+						AS base_insurance_coverage_amount,
+					si.insurance_coverage_amount * IFNULL(NULLIF(si.conversion_rate, 0), 1)
+						* GREATEST(LEAST(IFNULL(ic.discount_percentage, 0), 100), 0) / 100
+						AS base_insurance_discount_amount,
+					0 AS base_employee_billed_amount
+				FROM `tabSales Invoice` si
+				LEFT JOIN `tabInsurance Company` ic ON ic.name = si.insurance_company
+				WHERE
+					si.docstatus = 1
+					AND IFNULL(si.is_return, 0) = 0
+					AND IFNULL(si.insurance_coverage_amount, 0) > 0
+					AND IFNULL(si.ref_practitioner, '') != ''
+					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
+					{company_condition}
+					{practitioner_condition}
+
+				UNION ALL
+
+				SELECT
+					si.name AS invoice,
+					si.ref_practitioner,
+					si.base_grand_total,
+					si.base_net_total,
+					GREATEST(
+						si.base_net_total
+							- IFNULL(si.insurance_coverage_amount, 0)
+								* IFNULL(NULLIF(si.conversion_rate, 0), 1),
+						0
+					) AS base_allocated_amount,
+					0 AS base_deduction_amount,
+					0 AS base_insurance_coverage_amount,
+					0 AS base_insurance_discount_amount,
+					GREATEST(
+						si.base_net_total
+							- IFNULL(si.insurance_coverage_amount, 0)
+								* IFNULL(NULLIF(si.conversion_rate, 0), 1),
+						0
+					) AS base_employee_billed_amount
 				FROM `tabSales Invoice` si
 				WHERE
 					si.docstatus = 1
 					AND IFNULL(si.is_return, 0) = 0
+					AND IFNULL(si.bill_to_employee, 0) = 1
+					AND IFNULL(si.ref_practitioner, '') != ''
+					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
+					AND GREATEST(
+						si.base_net_total
+							- IFNULL(si.insurance_coverage_amount, 0)
+								* IFNULL(NULLIF(si.conversion_rate, 0), 1),
+						0
+					) > 0
+					{company_condition}
+					{practitioner_condition}
+
+				UNION ALL
+
+				SELECT
+					si.name AS invoice,
+					si.ref_practitioner,
+					si.base_grand_total,
+					si.base_net_total,
+					si.base_paid_amount AS base_allocated_amount,
+					0 AS base_deduction_amount,
+					0 AS base_insurance_coverage_amount,
+					0 AS base_insurance_discount_amount,
+					0 AS base_employee_billed_amount
+				FROM `tabSales Invoice` si
+				WHERE
+					si.docstatus = 1
+					AND IFNULL(si.is_return, 0) = 0
+					AND IFNULL(si.bill_to_employee, 0) = 0
 					AND IFNULL(si.ref_practitioner, '') != ''
 					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
 					AND IFNULL(si.base_paid_amount, 0) > 0
@@ -217,7 +291,10 @@ def get_payment_rows(filters):
 								END
 							)
 							/ NULLIF(eligible_allocations.base_allocated_amount, 0)
-					END AS base_deduction_amount
+					END AS base_deduction_amount,
+					0 AS base_insurance_coverage_amount,
+					0 AS base_insurance_discount_amount,
+					0 AS base_employee_billed_amount
 				FROM `tabPayment Entry` pe
 				INNER JOIN `tabPayment Entry Reference` per ON per.parent = pe.name
 				LEFT JOIN (
@@ -253,6 +330,7 @@ def get_payment_rows(filters):
 						AND IFNULL(eligible_per.allocated_amount, 0) > 0
 						AND eligible_si.docstatus = 1
 						AND IFNULL(eligible_si.is_return, 0) = 0
+						AND IFNULL(eligible_si.bill_to_employee, 0) = 0
 						AND IFNULL(eligible_si.so_type, '') != %(discount_excluded_so_type)s
 						AND EXISTS (
 							SELECT 1
@@ -276,6 +354,7 @@ def get_payment_rows(filters):
 					AND IFNULL(per.allocated_amount, 0) > 0
 					AND si.docstatus = 1
 					AND IFNULL(si.is_return, 0) = 0
+					AND IFNULL(si.bill_to_employee, 0) = 0
 					AND IFNULL(si.ref_practitioner, '') != ''
 					{company_condition}
 					{practitioner_condition}
@@ -326,13 +405,33 @@ def allocate_payment(amounts_by_group, payment, invoice_items):
 		return
 
 	base_allocated_amount = min(max(flt(payment.base_allocated_amount), 0), base_grand_total)
-	# Preserve the full non-pharmacy discount, but never let it create negative commission.
+	# Preserve contractual and payment deductions, but never let them create negative commission.
 	base_deduction_amount = max(flt(payment.base_deduction_amount), 0)
-	base_paid_amount = max(base_allocated_amount - base_deduction_amount, 0)
-	if not base_paid_amount:
-		paid_ratio = 0
-	else:
-		paid_ratio = base_paid_amount / base_grand_total
+	base_insurance_coverage_amount = min(
+		max(flt(payment.base_insurance_coverage_amount), 0),
+		base_allocated_amount,
+		base_net_total,
+	)
+	base_insurance_discount_amount = min(
+		max(flt(payment.base_insurance_discount_amount), 0),
+		base_insurance_coverage_amount,
+	)
+	base_insurance_paid_amount = base_insurance_coverage_amount - base_insurance_discount_amount
+	base_employee_billed_amount = min(
+		max(flt(payment.base_employee_billed_amount), 0),
+		max(base_allocated_amount - base_insurance_coverage_amount, 0),
+		max(base_net_total - base_insurance_coverage_amount, 0),
+	)
+	base_cash_allocated_amount = max(
+		base_allocated_amount - base_insurance_coverage_amount - base_employee_billed_amount,
+		0,
+	)
+	base_cash_deduction_amount = max(base_deduction_amount - base_insurance_discount_amount, 0)
+	base_cash_paid_amount = max(base_cash_allocated_amount - base_cash_deduction_amount, 0)
+	base_paid_amount = base_insurance_paid_amount + base_employee_billed_amount + base_cash_paid_amount
+	commissionable_amount = base_insurance_paid_amount + base_employee_billed_amount + (
+		base_cash_paid_amount * base_net_total / base_grand_total
+	)
 
 	for item in invoice_items:
 		item_amount = flt(item.base_net_amount)
@@ -342,7 +441,7 @@ def allocate_payment(amounts_by_group, payment, invoice_items):
 		amounts_by_group[key]["allocated_amount"] += base_allocated_amount * item_share
 		amounts_by_group[key]["deduction_amount"] += base_deduction_amount * item_share
 		amounts_by_group[key]["paid_amount"] += base_paid_amount * item_share
-		amounts_by_group[key]["gross_sales"] += item_amount * paid_ratio
+		amounts_by_group[key]["gross_sales"] += commissionable_amount * item_share
 
 
 def new_group_totals():
