@@ -1,6 +1,5 @@
 import frappe
 from frappe import _
-from frappe.utils import flt
 
 from his.his.report.doctor_commission.doctor_commission import (
 	get_columns as get_doctor_commission_columns,
@@ -48,13 +47,6 @@ def get_columns():
 	}
 	columns_by_field["net_sales"]["label"] = _("Net Sales")
 	columns_by_field["commission_percent"]["label"] = _("Percentage")
-	columns_by_field["pending_amount"] = {
-		"label": _("Pending Amount"),
-		"fieldname": "pending_amount",
-		"fieldtype": "Currency",
-		"options": "currency",
-		"width": 150,
-	}
 	return [
 		columns_by_field[fieldname]
 		for fieldname in (
@@ -62,13 +54,9 @@ def get_columns():
 			"net_sales",
 			"commission_percent",
 			"net_commission",
-			"pending_amount",
 		)
 	]
 
 
 def get_data(filters):
-	rows = get_doctor_commission_data(frappe._dict(filters or {}))
-	for row in rows:
-		row.pending_amount = max(flt(flt(row.total_invoiced) - flt(row.allocated_amount), 2), 0)
-	return rows
+	return get_doctor_commission_data(frappe._dict(filters or {}))
