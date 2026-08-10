@@ -6,17 +6,22 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.utils import flt
 
+from erpnext.accounts.doctype.payment_entry.payment_entry import get_outstanding_reference_documents
 from erpnext.accounts.party import get_party_account
 from erpnext.accounts.utils import get_balance_on
+
+from his.api.payment_entry import distribute_with_limits
 
 
 class CustomerBalanceTransfer(Document):
 	def validate(self):
 		self.set_missing_values()
+		self.allocate_invoice_references()
 		self.validate_transfer()
 
 	def on_submit(self):
 		self.set_missing_values()
+		self.allocate_invoice_references()
 		self.validate_transfer()
 		journal_entry = self.make_journal_entry()
 		self.db_set("journal_entry", journal_entry.name)
@@ -78,7 +83,7 @@ class CustomerBalanceTransfer(Document):
 		if flt(self.amount) <= 0:
 			frappe.throw(_("Amount must be greater than zero"))
 
-		if flt(self.discount_amount) < 0:
+		if get_transfer_discount(self) < 0:
 			frappe.throw(_("Discount Amount cannot be negative"))
 
 		if not self.source_account:
@@ -87,12 +92,52 @@ class CustomerBalanceTransfer(Document):
 		if not self.target_account:
 			frappe.throw(_("Target Account is required"))
 
-		total_reduction = flt(self.amount) + flt(self.discount_amount)
+		total_reduction = flt(self.amount) + get_transfer_discount(self)
 		if flt(self.source_balance) > 0 and total_reduction > flt(self.source_balance):
 			frappe.throw(_("Transfer amount plus discount cannot be greater than Source Customer Balance"))
 
+		if not self.reference:
+			frappe.throw(_("Select outstanding Sales Invoices for this transfer"))
+
+		allocated_total = sum(flt(row.allocated_amount) for row in self.reference)
+		if abs(allocated_total - total_reduction) > 0.005:
+			frappe.throw(
+				_("Invoice allocation must equal Transfer Amount plus Discount ({0}).").format(
+					frappe.format_value(total_reduction, {"fieldtype": "Currency"})
+				)
+			)
+
+	def allocate_invoice_references(self):
+		invoice_references = [
+			row
+			for row in self.reference
+			if row.reference_doctype == "Sales Invoice"
+			and (flt(row.outstanding_amount) > 0 or flt(row.allocated_amount) > 0)
+		]
+		if not invoice_references:
+			return
+
+		if len(invoice_references) != len(self.reference):
+			frappe.throw(_("Customer Balance Transfer references must be Sales Invoices"))
+
+		target = flt(self.amount) + get_transfer_discount(self)
+		allocations = distribute_with_limits(
+			[flt(row.allocated_amount) for row in invoice_references],
+			[flt(row.outstanding_amount) for row in invoice_references],
+			target,
+		)
+		if allocations is None:
+			frappe.throw(
+				_(
+					"Transfer amount plus discount cannot be fully allocated because the selected "
+					"Sales Invoices do not have enough outstanding amount."
+				)
+			)
+
+		for row, allocated_amount in zip(invoice_references, allocations):
+			row.allocated_amount = allocated_amount
+
 	def make_journal_entry(self):
-		total_source_credit = flt(self.amount) + flt(self.discount_amount)
 		accounts = [
 			{
 				"account": self.target_account,
@@ -100,19 +145,26 @@ class CustomerBalanceTransfer(Document):
 				"party": self.target_party,
 				"debit_in_account_currency": flt(self.amount),
 			},
+		]
+		accounts.extend(
 			{
 				"account": self.source_account,
 				"party_type": "Customer",
 				"party": self.source_customer,
-				"credit_in_account_currency": total_source_credit,
-			},
-		]
+				"credit_in_account_currency": flt(row.allocated_amount),
+				"reference_type": "Sales Invoice",
+				"reference_name": row.reference_name,
+			}
+			for row in self.reference
+			if flt(row.allocated_amount) > 0
+		)
 
-		if flt(self.discount_amount):
+		discount_amount = get_transfer_discount(self)
+		if discount_amount:
 			accounts.append(
 				{
 					"account": get_discount_account(self.company),
-					"debit_in_account_currency": flt(self.discount_amount),
+					"debit_in_account_currency": discount_amount,
 				}
 			)
 
@@ -203,6 +255,10 @@ def get_discount_account(company):
 	frappe.throw(_("Discount account is not configured in HIS Settings"))
 
 
+def get_transfer_discount(doc):
+	return flt(doc.get("discount"))
+
+
 def get_party_balance(party_type, party, company, account=None):
 	if not party_type or not party or not company:
 		return 0
@@ -215,6 +271,40 @@ def get_party_balance(party_type, party, company, account=None):
 			account=account,
 		)
 	)
+
+
+@frappe.whitelist()
+def get_customer_outstanding_invoices(source_customer, source_account, company, posting_date=None):
+	if not source_customer or not source_account or not company:
+		frappe.throw(_("Company, Source Customer, and Source Account are required"))
+
+	rows = get_outstanding_reference_documents(
+		{
+			"posting_date": posting_date,
+			"company": company,
+			"party_type": "Customer",
+			"payment_type": "Receive",
+			"party": source_customer,
+			"party_account": source_account,
+			"get_outstanding_invoices": True,
+			"get_orders_to_be_billed": False,
+		}
+	) or []
+
+	return [
+		{
+			"reference_doctype": row.voucher_type,
+			"reference_name": row.voucher_no,
+			"due_date": row.due_date,
+			"total_amount": row.invoice_amount,
+			"outstanding_amount": row.outstanding_amount,
+			"allocated_amount": 0,
+			"exchange_rate": row.exchange_rate or 1,
+			"payment_term": row.payment_term,
+		}
+		for row in rows
+		if row.voucher_type == "Sales Invoice" and flt(row.outstanding_amount) > 0
+	]
 
 
 @frappe.whitelist()

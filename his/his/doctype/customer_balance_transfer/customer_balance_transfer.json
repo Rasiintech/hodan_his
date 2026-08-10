@@ -19,14 +19,17 @@
   "target_section",
   "target_party_type",
   "target_party",
+  "target_party_name",
   "target_account",
   "column_break_target",
   "target_balance",
   "transfer_section",
   "amount",
   "discount",
+  "section_break_cujse",
+  "get_outstanding_invoices",
+  "reference",
   "remarks",
-  "column_break_reference",
   "journal_entry",
   "amended_from"
  ],
@@ -146,10 +149,6 @@
    "label": "Remarks"
   },
   {
-   "fieldname": "column_break_reference",
-   "fieldtype": "Column Break"
-  },
-  {
    "allow_on_submit": 1,
    "fieldname": "journal_entry",
    "fieldtype": "Link",
@@ -170,12 +169,33 @@
    "fieldname": "discount",
    "fieldtype": "Currency",
    "label": "Discount"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Table",
+   "label": "Reference",
+   "options": "Payment Entry Reference",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_cujse",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "get_outstanding_invoices",
+   "fieldtype": "Button",
+   "label": "Get Outstanding Invoices"
+  },
+  {
+   "fieldname": "target_party_name",
+   "fieldtype": "Data",
+   "label": "target Party Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-01 10:30:04.061683",
+ "modified": "2026-08-09 11:45:37.555838",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Customer Balance Transfer",

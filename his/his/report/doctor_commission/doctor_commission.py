@@ -6,6 +6,7 @@ from frappe.utils import flt
 
 
 COMMISSION_DISCOUNT_ACCOUNT = "Discount - HH"
+COMMISSION_START_DATE = "2026-07-25"
 DISCOUNT_EXCLUDED_SO_TYPE = "Pharmacy"
 DISCOUNT_EXCLUDED_ITEM_GROUPS = ("OT",)
 
@@ -124,6 +125,8 @@ def validate_filters(filters):
 
 def get_invoiced_items(filters):
 	conditions = get_invoice_conditions(filters, date_field="si.posting_date")
+	query_filters = dict(filters)
+	query_filters["commission_start_date"] = COMMISSION_START_DATE
 	return frappe.db.sql(
 		f"""
 			SELECT
@@ -139,7 +142,7 @@ def get_invoiced_items(filters):
 				AND IFNULL(si.ref_practitioner, '') != ''
 				AND {conditions}
 		""",
-		filters,
+		query_filters,
 		as_dict=True,
 	)
 
@@ -154,6 +157,7 @@ def get_payment_rows(filters):
 
 	query_filters = dict(filters)
 	query_filters["discount_account"] = COMMISSION_DISCOUNT_ACCOUNT
+	query_filters["commission_start_date"] = COMMISSION_START_DATE
 	query_filters["discount_excluded_so_type"] = DISCOUNT_EXCLUDED_SO_TYPE
 	query_filters["discount_excluded_item_groups"] = DISCOUNT_EXCLUDED_ITEM_GROUPS
 
@@ -194,6 +198,7 @@ def get_payment_rows(filters):
 					AND IFNULL(si.insurance_coverage_amount, 0) > 0
 					AND IFNULL(si.ref_practitioner, '') != ''
 					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
+					AND si.posting_date >= %(commission_start_date)s
 					{company_condition}
 					{practitioner_condition}
 
@@ -226,6 +231,7 @@ def get_payment_rows(filters):
 					AND IFNULL(si.bill_to_employee, 0) = 1
 					AND IFNULL(si.ref_practitioner, '') != ''
 					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
+					AND si.posting_date >= %(commission_start_date)s
 					AND GREATEST(
 						si.base_net_total
 							- IFNULL(si.insurance_coverage_amount, 0)
@@ -254,6 +260,7 @@ def get_payment_rows(filters):
 					AND IFNULL(si.bill_to_employee, 0) = 0
 					AND IFNULL(si.ref_practitioner, '') != ''
 					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
+					AND si.posting_date >= %(commission_start_date)s
 					AND IFNULL(si.base_paid_amount, 0) > 0
 					{company_condition}
 					{practitioner_condition}
@@ -333,6 +340,7 @@ def get_payment_rows(filters):
 						AND IFNULL(eligible_per.allocated_amount, 0) > 0
 						AND eligible_si.docstatus = 1
 						AND IFNULL(eligible_si.is_return, 0) = 0
+						AND eligible_si.posting_date >= %(commission_start_date)s
 						AND IFNULL(eligible_si.bill_to_employee, 0) = 0
 						AND IFNULL(eligible_si.so_type, '') != %(discount_excluded_so_type)s
 						AND EXISTS (
@@ -358,11 +366,124 @@ def get_payment_rows(filters):
 					AND IFNULL(per.allocated_amount, 0) > 0
 					AND si.docstatus = 1
 					AND IFNULL(si.is_return, 0) = 0
+					AND si.posting_date >= %(commission_start_date)s
 					AND IFNULL(si.bill_to_employee, 0) = 0
-					AND IFNULL(si.ref_practitioner, '') != ''
-					{company_condition}
-					{practitioner_condition}
-			) payments
+						AND IFNULL(si.ref_practitioner, '') != ''
+						{company_condition}
+						{practitioner_condition}
+
+					UNION ALL
+
+					SELECT
+						si.name AS invoice,
+						si.ref_practitioner,
+						si.base_grand_total,
+						si.base_net_total,
+						transfer_reference.allocated_amount
+							* CASE
+								WHEN IFNULL(transfer_reference.exchange_rate, 0) > 0
+									THEN transfer_reference.exchange_rate
+								WHEN IFNULL(si.conversion_rate, 0) > 0 THEN si.conversion_rate
+								ELSE 1
+							END AS base_allocated_amount,
+						CASE
+							WHEN IFNULL(si.so_type, '') = %(discount_excluded_so_type)s
+								OR NOT EXISTS (
+									SELECT 1
+									FROM `tabSales Invoice Item` commission_item
+									INNER JOIN `tabCommission` commission_rule
+										ON commission_rule.parent = si.ref_practitioner
+										AND commission_rule.item_group = commission_item.item_group
+										AND IFNULL(commission_rule.percent, 0) > 0
+									WHERE commission_item.parent = si.name
+										AND commission_item.item_group NOT IN %(discount_excluded_item_groups)s
+								)
+								THEN 0
+							ELSE LEAST(
+								GREATEST(IFNULL(cbt.discount, 0), 0),
+								IFNULL(eligible_transfer_allocations.base_allocated_amount, 0)
+							)
+								* (
+									transfer_reference.allocated_amount
+									* CASE
+										WHEN IFNULL(transfer_reference.exchange_rate, 0) > 0
+											THEN transfer_reference.exchange_rate
+										WHEN IFNULL(si.conversion_rate, 0) > 0 THEN si.conversion_rate
+										ELSE 1
+									END
+								)
+								/ NULLIF(eligible_transfer_allocations.base_allocated_amount, 0)
+						END AS base_deduction_amount,
+						0 AS base_insurance_coverage_amount,
+						0 AS base_insurance_discount_amount,
+						0 AS base_employee_billed_amount
+					FROM `tabCustomer Balance Transfer` cbt
+					INNER JOIN `tabJournal Entry` transfer_journal
+						ON transfer_journal.name = cbt.journal_entry
+						AND transfer_journal.docstatus = 1
+					INNER JOIN `tabPayment Entry Reference` transfer_reference
+						ON transfer_reference.parent = cbt.name
+						AND transfer_reference.parenttype = 'Customer Balance Transfer'
+					LEFT JOIN (
+						SELECT
+							eligible_reference.parent,
+							SUM(
+								eligible_reference.allocated_amount
+								* CASE
+									WHEN IFNULL(eligible_reference.exchange_rate, 0) > 0
+										THEN eligible_reference.exchange_rate
+									WHEN IFNULL(eligible_si.conversion_rate, 0) > 0
+										THEN eligible_si.conversion_rate
+									ELSE 1
+								END
+							) AS base_allocated_amount
+						FROM `tabPayment Entry Reference` eligible_reference
+						INNER JOIN `tabCustomer Balance Transfer` eligible_transfer
+							ON eligible_transfer.name = eligible_reference.parent
+							AND eligible_reference.parenttype = 'Customer Balance Transfer'
+						INNER JOIN `tabJournal Entry` eligible_transfer_journal
+							ON eligible_transfer_journal.name = eligible_transfer.journal_entry
+							AND eligible_transfer_journal.docstatus = 1
+						INNER JOIN `tabSales Invoice` eligible_si
+							ON eligible_reference.reference_doctype = 'Sales Invoice'
+							AND eligible_reference.reference_name = eligible_si.name
+						WHERE
+							eligible_transfer.docstatus = 1
+							AND eligible_transfer.date BETWEEN %(from_date)s AND %(to_date)s
+							AND IFNULL(eligible_reference.allocated_amount, 0) > 0
+							AND eligible_si.docstatus = 1
+							AND IFNULL(eligible_si.is_return, 0) = 0
+							AND eligible_si.posting_date >= %(commission_start_date)s
+							AND IFNULL(eligible_si.bill_to_employee, 0) = 0
+							AND IFNULL(eligible_si.so_type, '') != %(discount_excluded_so_type)s
+							AND EXISTS (
+								SELECT 1
+								FROM `tabSales Invoice Item` eligible_commission_item
+								INNER JOIN `tabCommission` eligible_commission_rule
+									ON eligible_commission_rule.parent = eligible_si.ref_practitioner
+									AND eligible_commission_rule.item_group = eligible_commission_item.item_group
+									AND IFNULL(eligible_commission_rule.percent, 0) > 0
+								WHERE eligible_commission_item.parent = eligible_si.name
+									AND eligible_commission_item.item_group NOT IN %(discount_excluded_item_groups)s
+							)
+						GROUP BY eligible_reference.parent
+					) eligible_transfer_allocations
+						ON eligible_transfer_allocations.parent = cbt.name
+					INNER JOIN `tabSales Invoice` si
+						ON transfer_reference.reference_doctype = 'Sales Invoice'
+						AND transfer_reference.reference_name = si.name
+					WHERE
+						cbt.docstatus = 1
+						AND cbt.date BETWEEN %(from_date)s AND %(to_date)s
+						AND IFNULL(transfer_reference.allocated_amount, 0) > 0
+						AND si.docstatus = 1
+						AND IFNULL(si.is_return, 0) = 0
+						AND si.posting_date >= %(commission_start_date)s
+						AND IFNULL(si.bill_to_employee, 0) = 0
+						AND IFNULL(si.ref_practitioner, '') != ''
+						{company_condition}
+						{practitioner_condition}
+				) payments
 			GROUP BY
 				payments.invoice,
 				payments.ref_practitioner,
@@ -375,7 +496,10 @@ def get_payment_rows(filters):
 
 
 def get_invoice_conditions(filters, date_field):
-	conditions = [f"{date_field} BETWEEN %(from_date)s AND %(to_date)s"]
+	conditions = [
+		f"{date_field} BETWEEN %(from_date)s AND %(to_date)s",
+		f"{date_field} >= %(commission_start_date)s",
+	]
 
 	if filters.get("company"):
 		conditions.append("si.company = %(company)s")

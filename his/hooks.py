@@ -126,6 +126,9 @@ override_doctype_class = {
 # Hook on document methods and events
 
 doc_events = {
+	"Payment Entry": {
+		"before_validate": "his.api.payment_entry.allocate_discount_to_references",
+	},
     "Patient Encounter": {
         "before_validate": "his.api.patient_encounter.set_so_values_from_db",
         "on_update": "his.api.patient_encounter.enqueue_sales_orders",

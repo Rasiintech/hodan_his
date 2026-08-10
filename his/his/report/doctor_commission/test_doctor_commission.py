@@ -1,12 +1,44 @@
 from collections import defaultdict
 from unittest import TestCase
+from unittest.mock import Mock, patch
 
 import frappe
 
+from his.his.report.doctor_commission import doctor_commission
 from his.his.report.doctor_commission.doctor_commission import allocate_payment, new_group_totals
 
 
 class TestDoctorCommission(TestCase):
+	def test_invoice_query_enforces_commission_start_date(self):
+		filters = frappe._dict({"from_date": "2026-07-01", "to_date": "2026-07-31"})
+
+		db = Mock()
+		db.sql.return_value = []
+		with patch.dict(doctor_commission.frappe.__dict__, {"db": db}):
+			doctor_commission.get_invoiced_items(filters)
+
+		query, query_filters = db.sql.call_args.args[:2]
+		self.assertIn("si.posting_date >= %(commission_start_date)s", query)
+		self.assertEqual(query_filters["commission_start_date"], "2026-07-25")
+
+	def test_payment_query_excludes_pre_cutoff_invoices(self):
+		filters = frappe._dict({"from_date": "2026-07-01", "to_date": "2026-07-31"})
+
+		db = Mock()
+		db.sql.return_value = []
+		with patch.dict(doctor_commission.frappe.__dict__, {"db": db}):
+			doctor_commission.get_payment_rows(filters)
+
+		query, query_filters = db.sql.call_args.args[:2]
+		cutoff_lines = [line.strip() for line in query.splitlines()]
+		self.assertEqual(cutoff_lines.count("AND si.posting_date >= %(commission_start_date)s"), 5)
+		self.assertIn("eligible_si.posting_date >= %(commission_start_date)s", query)
+		self.assertIn("FROM `tabCustomer Balance Transfer` cbt", query)
+		self.assertIn("cbt.date BETWEEN %(from_date)s AND %(to_date)s", query)
+		self.assertIn("transfer_reference.parenttype = 'Customer Balance Transfer'", query)
+		self.assertIn("transfer_journal.docstatus = 1", query)
+		self.assertEqual(query_filters["commission_start_date"], "2026-07-25")
+
 	def test_partial_payment_is_allocated_across_item_groups(self):
 		amounts = defaultdict(new_group_totals)
 		payment = frappe._dict(
