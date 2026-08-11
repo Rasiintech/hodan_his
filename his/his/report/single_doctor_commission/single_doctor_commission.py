@@ -1,10 +1,14 @@
 import frappe
 from frappe import _
+from frappe.utils import formatdate, getdate
 
 from his.his.report.doctor_commission.doctor_commission import (
 	get_columns as get_doctor_commission_columns,
 	get_data as get_doctor_commission_data,
 )
+
+
+REPORT_START_DATE = getdate("2026-07-26")
 
 
 def execute(filters=None):
@@ -17,6 +21,14 @@ def execute(filters=None):
 def validate_filters(filters):
 	if not filters.get("ref_practitioner"):
 		frappe.throw(_("Doctor is required"))
+
+	for fieldname in ("from_date", "to_date"):
+		if filters.get(fieldname) and getdate(filters.get(fieldname)) < REPORT_START_DATE:
+			frappe.throw(
+				_("Single Doctor Commission dates cannot be before {0}").format(
+					formatdate(REPORT_START_DATE, "dd MMM yyyy")
+				)
+			)
 
 
 def resolve_practitioner(requested_practitioner):
