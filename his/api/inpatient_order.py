@@ -32,7 +32,10 @@ def create_sales_orders(doc):
             sales_order = frappe.new_doc("Sales Order")
             sales_order.source_order="IPD"
             sales_order.selling_price_list = patient_doc.default_price_list
-            sales_order.ref_practitioner=doc.practitioner
+
+        # Keep the linked Sales Order doctor in sync when the practitioner is
+        # changed on the source Healthcare Request/Inpatient Order.
+        sales_order.ref_practitioner = doc.practitioner
 
         map_doc(
             doc,
@@ -201,4 +204,3 @@ def find_or_create_item(row, so, doc , from_templae = False, item_name=None):
 # def drug_code(drug_code):
 #     data= frappe.get_all("IPD Drug Prescription",filters={'name': drug_code},fields=['drug_code'] )
 #     return data
-

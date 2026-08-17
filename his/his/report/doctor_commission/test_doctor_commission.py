@@ -31,8 +31,11 @@ class TestDoctorCommission(TestCase):
 
 		query, query_filters = db.sql.call_args.args[:2]
 		cutoff_lines = [line.strip() for line in query.splitlines()]
-		self.assertEqual(cutoff_lines.count("AND si.posting_date >= %(commission_start_date)s"), 5)
+		self.assertEqual(cutoff_lines.count("AND si.posting_date >= %(commission_start_date)s"), 6)
 		self.assertIn("eligible_si.posting_date >= %(commission_start_date)s", query)
+		self.assertIn("IFNULL(si.bill_to_patient, '') != ''", query)
+		self.assertGreaterEqual(query.count("AND IFNULL(si.bill_to_patient, '') = ''"), 3)
+		self.assertEqual(query.count("AND IFNULL(eligible_si.bill_to_patient, '') = ''"), 2)
 		self.assertIn("FROM `tabCustomer Balance Transfer` cbt", query)
 		self.assertIn("cbt.date BETWEEN %(from_date)s AND %(to_date)s", query)
 		self.assertIn("transfer_reference.parenttype = 'Customer Balance Transfer'", query)

@@ -6,6 +6,29 @@ from frappe.utils import flt
 DISCOUNT_ACCOUNT = "Discount - HH"
 
 
+def set_reference_sales_types(doc, method=None):
+	invoice_references = [
+		row
+		for row in doc.get("references")
+		if row.reference_doctype == "Sales Invoice" and row.reference_name
+	]
+	if not invoice_references:
+		return
+
+	invoice_names = list({row.reference_name for row in invoice_references})
+	sales_types = {
+		row.name: row.so_type
+		for row in frappe.get_all(
+			"Sales Invoice",
+			filters={"name": ["in", invoice_names]},
+			fields=["name", "so_type"],
+			limit_page_length=len(invoice_names),
+		)
+	}
+	for row in invoice_references:
+		row.sales_type = sales_types.get(row.reference_name)
+
+
 def allocate_discount_to_references(doc, method=None):
 	if (
 		doc.docstatus != 0

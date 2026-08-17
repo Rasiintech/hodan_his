@@ -1,11 +1,45 @@
 from unittest import TestCase
+from unittest.mock import patch
 
 import frappe
 
-from his.api.payment_entry import allocate_discount_to_references, distribute_with_limits
+from his.api.payment_entry import (
+	allocate_discount_to_references,
+	distribute_with_limits,
+	set_reference_sales_types,
+)
 
 
 class TestPaymentEntryDiscountAllocation(TestCase):
+	@patch("his.api.payment_entry.frappe.get_all")
+	def test_fetches_sales_type_for_sales_invoice_references(self, get_all):
+		get_all.return_value = [frappe._dict({"name": "SINV-1", "so_type": "Pharmacy"})]
+		doc = frappe._dict(
+			{
+				"references": [
+					frappe._dict(
+						{
+							"reference_doctype": "Sales Invoice",
+							"reference_name": "SINV-1",
+							"sales_type": None,
+						}
+					),
+					frappe._dict(
+						{
+							"reference_doctype": "Journal Entry",
+							"reference_name": "JV-1",
+							"sales_type": None,
+						}
+					),
+				]
+			}
+		)
+
+		set_reference_sales_types(doc)
+
+		self.assertEqual(doc.references[0].sales_type, "Pharmacy")
+		self.assertIsNone(doc.references[1].sales_type)
+
 	def test_distributes_discount_proportionally(self):
 		self.assertEqual(
 			distribute_with_limits([60, 30], [100, 100], 100),

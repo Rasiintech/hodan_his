@@ -229,6 +229,46 @@ def get_payment_rows(filters):
 					si.docstatus = 1
 					AND IFNULL(si.is_return, 0) = 0
 					AND IFNULL(si.bill_to_employee, 0) = 1
+					AND IFNULL(si.bill_to_patient, '') = ''
+					AND IFNULL(si.ref_practitioner, '') != ''
+					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
+					AND si.posting_date >= %(commission_start_date)s
+					AND GREATEST(
+						si.base_net_total
+							- IFNULL(si.insurance_coverage_amount, 0)
+								* IFNULL(NULLIF(si.conversion_rate, 0), 1),
+						0
+					) > 0
+					{company_condition}
+					{practitioner_condition}
+
+				UNION ALL
+
+				SELECT
+					si.name AS invoice,
+					si.ref_practitioner,
+					si.base_grand_total,
+					si.base_net_total,
+					GREATEST(
+						si.base_net_total
+							- IFNULL(si.insurance_coverage_amount, 0)
+								* IFNULL(NULLIF(si.conversion_rate, 0), 1),
+						0
+					) AS base_allocated_amount,
+					0 AS base_deduction_amount,
+					0 AS base_insurance_coverage_amount,
+					0 AS base_insurance_discount_amount,
+					GREATEST(
+						si.base_net_total
+							- IFNULL(si.insurance_coverage_amount, 0)
+								* IFNULL(NULLIF(si.conversion_rate, 0), 1),
+						0
+					) AS base_employee_billed_amount
+				FROM `tabSales Invoice` si
+				WHERE
+					si.docstatus = 1
+					AND IFNULL(si.is_return, 0) = 0
+					AND IFNULL(si.bill_to_patient, '') != ''
 					AND IFNULL(si.ref_practitioner, '') != ''
 					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
 					AND si.posting_date >= %(commission_start_date)s
@@ -258,6 +298,7 @@ def get_payment_rows(filters):
 					si.docstatus = 1
 					AND IFNULL(si.is_return, 0) = 0
 					AND IFNULL(si.bill_to_employee, 0) = 0
+					AND IFNULL(si.bill_to_patient, '') = ''
 					AND IFNULL(si.ref_practitioner, '') != ''
 					AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s
 					AND si.posting_date >= %(commission_start_date)s
@@ -342,6 +383,7 @@ def get_payment_rows(filters):
 						AND IFNULL(eligible_si.is_return, 0) = 0
 						AND eligible_si.posting_date >= %(commission_start_date)s
 						AND IFNULL(eligible_si.bill_to_employee, 0) = 0
+						AND IFNULL(eligible_si.bill_to_patient, '') = ''
 						AND IFNULL(eligible_si.so_type, '') != %(discount_excluded_so_type)s
 						AND EXISTS (
 							SELECT 1
@@ -368,6 +410,7 @@ def get_payment_rows(filters):
 					AND IFNULL(si.is_return, 0) = 0
 					AND si.posting_date >= %(commission_start_date)s
 					AND IFNULL(si.bill_to_employee, 0) = 0
+					AND IFNULL(si.bill_to_patient, '') = ''
 						AND IFNULL(si.ref_practitioner, '') != ''
 						{company_condition}
 						{practitioner_condition}
@@ -455,6 +498,7 @@ def get_payment_rows(filters):
 							AND IFNULL(eligible_si.is_return, 0) = 0
 							AND eligible_si.posting_date >= %(commission_start_date)s
 							AND IFNULL(eligible_si.bill_to_employee, 0) = 0
+							AND IFNULL(eligible_si.bill_to_patient, '') = ''
 							AND IFNULL(eligible_si.so_type, '') != %(discount_excluded_so_type)s
 							AND EXISTS (
 								SELECT 1
@@ -480,6 +524,7 @@ def get_payment_rows(filters):
 						AND IFNULL(si.is_return, 0) = 0
 						AND si.posting_date >= %(commission_start_date)s
 						AND IFNULL(si.bill_to_employee, 0) = 0
+						AND IFNULL(si.bill_to_patient, '') = ''
 						AND IFNULL(si.ref_practitioner, '') != ''
 						{company_condition}
 						{practitioner_condition}

@@ -1,0 +1,12 @@
+{
+ "creation":"2026-08-17 00:00:00.000000","doctype":"DocType","editable_grid":1,"engine":"InnoDB",
+ "field_order":["description","cash_receipt","served","exchange"],
+ "fields":[
+  {"fieldname":"description","fieldtype":"Data","in_list_view":1,"label":"Description","reqd":1},
+  {"fieldname":"cash_receipt","fieldtype":"Currency","in_list_view":1,"label":"Cash Receipt"},
+  {"fieldname":"served","fieldtype":"Currency","in_list_view":1,"label":"Served"},
+  {"fieldname":"exchange","fieldtype":"Currency","in_list_view":1,"label":"Exchange"}
+ ],
+ "istable":1,"modified":"2026-08-17 00:00:00.000000","modified_by":"Administrator","module":"HIS","name":"Cashier Cash Available","owner":"Administrator"
+}
+

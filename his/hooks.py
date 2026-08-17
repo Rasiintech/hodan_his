@@ -32,6 +32,7 @@ app_include_js = ["/assets/his/js/his.js"]
 
 # include js in doctype views
 doctype_js = {
+    "Payment Entry": "public/js/payment_entry.js",
     "Sales Invoice" : "public/js/sales_invoice.js" , 
     "Patient" : "public/js/patient.js" ,  
     "Patient Appointment" : "public/js/patient_encounter.js" , 
@@ -85,6 +86,7 @@ website_route_rules = [
 
 # before_install = "his.install.before_install"
 after_install = "his.setup.install.after_install"
+after_migrate = "his.patches.add_bill_to_patient_invoice_reference.execute"
 
 # Uninstallation
 # ------------
@@ -127,7 +129,10 @@ override_doctype_class = {
 
 doc_events = {
 	"Payment Entry": {
-		"before_validate": "his.api.payment_entry.allocate_discount_to_references",
+		"before_validate": [
+			"his.api.payment_entry.set_reference_sales_types",
+			"his.api.payment_entry.allocate_discount_to_references",
+		],
 	},
     "Patient Encounter": {
         "before_validate": "his.api.patient_encounter.set_so_values_from_db",
