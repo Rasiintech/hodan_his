@@ -174,7 +174,7 @@
   {
    "fieldname": "get_outstanding_invoices",
    "fieldtype": "Button",
-   "label": "Get Outstanding Invoices"
+   "label": "Get Outstanding References"
   },
   {
    "fieldname": "target_party_name",
