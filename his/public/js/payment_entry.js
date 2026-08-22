@@ -47,15 +47,15 @@ function wrap_outstanding_invoice_fetch(frm) {
 	frm.__sales_type_fetch_wrapped = true;
 }
 
-frappe.ui.form.on('Payment Entry', {
-	refresh(frm) {
-		wrap_outstanding_invoice_fetch(frm);
-		if (frm.doc.docstatus !== 0) return;
-		populate_reference_sales_types(frm);
-	}
-});
+// frappe.ui.form.on('Payment Entry', {
+// 	refresh(frm) {
+// 		wrap_outstanding_invoice_fetch(frm);
+// 		if (frm.doc.docstatus !== 0) return;
+// 		populate_reference_sales_types(frm);
+// 	}
+// });
 
-frappe.ui.form.on('Payment Entry Reference', {
-	reference_doctype: set_reference_sales_type,
-	reference_name: set_reference_sales_type
-});
+// frappe.ui.form.on('Payment Entry Reference', {
+// 	reference_doctype: set_reference_sales_type,
+// 	reference_name: set_reference_sales_type
+// });

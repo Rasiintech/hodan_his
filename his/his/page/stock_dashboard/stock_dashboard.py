@@ -27,8 +27,9 @@ def get_dashboard_data(from_date=None, to_date=None):
 		colors=("blue", "green", "orange", "purple", "indigo"),
 	)
 	stock_anomaly_rows, stock_anomaly_total = get_stock_anomaly_rows(current_bins, current_sle, limit=100)
+	low_moving_rows, low_moving_total, low_moving_has_more = get_low_moving_high_balance_rows(current_bins, current_sle)
 	stock_anomaly_rows, stock_anomaly_has_more = mark_over_limit_rows(stock_anomaly_rows)
-	low_quantity_rows, low_quantity_total = get_fast_moving_drug_low_quantity_rows(
+	low_quantity_rows, low_quantity_total, store_balance_columns, low_quantity_has_more = get_fast_moving_drug_low_quantity_rows(
 		current_bins,
 		current_sle,
 		from_date,
@@ -50,8 +51,13 @@ def get_dashboard_data(from_date=None, to_date=None):
 		"income_empty_message": income_empty_message,
 		"account_balances": get_warehouse_stock_rows(current_bins),
 		"unpaid_invoices": get_item_group_inventory_rows(current_bins),
+		"low_moving_items": low_moving_rows,
+		"low_moving_items_total": low_moving_total,
+		"low_moving_items_has_more": low_moving_has_more,
 		"top_supplier_balances": low_quantity_rows,
 		"top_supplier_balances_total": low_quantity_total,
+		"store_balance_columns": store_balance_columns,
+		"top_supplier_balances_has_more": low_quantity_has_more,
 		"budget_variance": stock_anomaly_rows,
 		"budget_variance_has_more": stock_anomaly_has_more,
 		"budget_variance_total": stock_anomaly_total,
@@ -390,17 +396,75 @@ def get_low_stock_rows(bins, limit=10):
 	return sorted(rows, key=lambda item: item["raw_balance"], reverse=True)[: int(limit)]
 
 
+def get_low_moving_high_balance_rows(bins, sle_rows, limit=10, max_sell_through=25.0):
+	stock_by_item = {}
+	for row in bins:
+		if (row.get("item_group") or "").strip().lower() != "drug":
+			continue
+		item_code = (row.get("item_code") or "").strip()
+		if not item_code:
+			continue
+		entry = stock_by_item.setdefault(
+			item_code,
+			{
+				"item_name": row.get("item_name") or item_code or "Unknown Item",
+				"total_qty": 0.0,
+				"total_value": 0.0,
+			},
+		)
+		entry["total_qty"] += flt(row.get("actual_qty"))
+		entry["total_value"] += flt(row.get("stock_value"))
+
+	sold_by_item = {}
+	for row in sle_rows:
+		item_code = (row.get("item_code") or "").strip()
+		issued_qty = abs(min(flt(row.get("actual_qty")), 0))
+		if item_code and issued_qty > 0.005:
+			sold_by_item[item_code] = sold_by_item.get(item_code, 0.0) + issued_qty
+
+	rows = []
+	for item_code, stock_entry in stock_by_item.items():
+		total_qty = stock_entry["total_qty"]
+		if total_qty <= 0.005:
+			continue
+		total_sold = sold_by_item.get(item_code, 0.0)
+		sell_through = total_sold / total_qty * 100
+		if sell_through > max_sell_through:
+			continue
+		rows.append(
+			{
+				"item": stock_entry["item_name"],
+				"total_qty": format_quantity(total_qty),
+				"total_sold": format_quantity(total_sold),
+				"item_value": format_metric_currency(stock_entry["total_value"]),
+				"sell_through": f"{sell_through:.1f}%",
+				"raw_total_qty": total_qty,
+			}
+		)
+
+	rows = sorted(rows, key=lambda item: item["raw_total_qty"], reverse=True)
+	rows, has_more = mark_over_limit_rows(rows, limit)
+	return rows, format_metric_number(len(rows)), has_more
+
+
 def get_fast_moving_drug_low_quantity_rows(bins, sle_rows, from_date, to_date, limit=10):
 	weeks = max((date_diff(to_date, from_date) + 1) / 7.0, 1.0)
 	current_qty_by_key = {}
+	store_qty_by_item = {}
 
 	for row in bins:
+		item_code = (row.get("item_code") or "").strip()
+		warehouse = (row.get("warehouse") or "").strip() or "Unassigned"
+		if item_code:
+			store_quantities = store_qty_by_item.setdefault(item_code, {})
+			store_quantities[warehouse] = store_quantities.get(warehouse, 0.0) + flt(row.get("actual_qty"))
+
 		if not is_pharmacy_warehouse(row.get("warehouse")):
 			continue
 
 		key = (
-			(row.get("item_code") or "").strip(),
-			(row.get("warehouse") or "").strip() or "Unassigned",
+			item_code,
+			warehouse,
 		)
 		entry = current_qty_by_key.setdefault(
 			key,
@@ -452,15 +516,29 @@ def get_fast_moving_drug_low_quantity_rows(bins, sle_rows, from_date, to_date, l
 			{
 				"supplier": current_entry["item_name"],
 				"supplier_group": current_entry["warehouse"],
-				"current_qty": format_quantity(actual_qty),
-				"weekly_avg_sold": format_quantity(weekly_avg_sold),
+				"total_qty": format_quantity(sum(store_qty_by_item.get(key[0], {}).values())),
+				"store_quantities": {
+					warehouse: format_quantity(quantity)
+					for warehouse, quantity in store_qty_by_item.get(key[0], {}).items()
+					if warehouse == current_entry["warehouse"] or abs(flt(quantity)) > 0.005
+				},
+				"total_sold": format_quantity(issued_entry["issued_qty"]),
 				"raw_balance": gap_qty,
 				"balance": format_quantity(gap_qty),
 			}
 		)
 
-	rows = sorted(rows, key=lambda item: item["raw_balance"], reverse=True)[: int(limit)]
-	return rows, format_metric_number(len(rows))
+	rows = sorted(rows, key=lambda item: item["raw_balance"], reverse=True)
+	rows, has_more = mark_over_limit_rows(rows, limit)
+	store_balance_columns = sorted({
+		warehouse
+		for row in rows
+		for warehouse in row["store_quantities"]
+	})
+	for row in rows:
+		row["store_balance_values"] = [row["store_quantities"].get(warehouse, "—") for warehouse in store_balance_columns]
+		row.pop("store_quantities", None)
+	return rows, format_metric_number(len(rows)), store_balance_columns, has_more
 
 
 def get_fast_moving_rows(sle_rows, limit=10):
@@ -649,7 +727,7 @@ def build_stock_ai_prompt(context, from_date=None, to_date=None):
 	lines.append("Fast moving drug items below weekly average sold:")
 	for item in (context.get("top_supplier_balances") or [])[:5]:
 		lines.append(
-			f"- {item.get('supplier')} ({item.get('supplier_group')}): Current Qty {item.get('current_qty')}, Weekly Avg Sold {item.get('weekly_avg_sold')}"
+			f"- {item.get('supplier')} ({item.get('supplier_group')}): Total Qty {item.get('total_qty')}, Total Sold {item.get('total_sold')}"
 		)
 
 	stock_anomaly_total = context.get("budget_variance_total") or {}

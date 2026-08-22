@@ -3,9 +3,6 @@ from frappe import _
 from frappe.utils import flt
 
 
-DISCOUNT_ACCOUNT = "Discount - HH"
-
-
 def set_reference_sales_types(doc, method=None):
 	invoice_references = [
 		row
@@ -37,12 +34,11 @@ def allocate_discount_to_references(doc, method=None):
 	):
 		return
 
-	discount_in_company_currency = sum(
+	deduction_in_company_currency = sum(
 		max(flt(row.amount), 0)
 		for row in doc.get("deductions")
-		if row.account == DISCOUNT_ACCOUNT
 	)
-	if not discount_in_company_currency:
+	if not deduction_in_company_currency:
 		return
 
 	invoice_references = [
@@ -60,9 +56,9 @@ def allocate_discount_to_references(doc, method=None):
 		if row not in invoice_references
 	)
 	source_exchange_rate = flt(doc.source_exchange_rate) or 1
-	discount_in_party_currency = discount_in_company_currency / source_exchange_rate
+	deduction_in_party_currency = deduction_in_company_currency / source_exchange_rate
 	target_invoice_allocation = (
-		flt(doc.paid_amount) + discount_in_party_currency - other_allocations
+		flt(doc.paid_amount) + deduction_in_party_currency - other_allocations
 	)
 	if target_invoice_allocation < 0:
 		return
@@ -74,7 +70,7 @@ def allocate_discount_to_references(doc, method=None):
 	if allocations is None:
 		frappe.throw(
 			_(
-				"Discount - HH cannot be fully allocated because the selected Sales Invoices "
+				"Payment Entry deductions cannot be fully allocated because the selected Sales Invoices "
 				"do not have enough outstanding amount."
 			)
 		)

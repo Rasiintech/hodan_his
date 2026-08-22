@@ -13,7 +13,10 @@ required_apps = ["erpnext","healthcare"]
 
 # include js, css files in header of desk.html
 app_include_css = ["/assets/his/css/his.css"]
-app_include_js = ["/assets/his/js/his.js"]
+app_include_js = [
+    "/assets/his/js/his.js",
+    "/assets/his/js/profit_and_loss_statement.js",
+]
 
 
 # include js, css files in header of web template
@@ -128,12 +131,12 @@ override_doctype_class = {
 # Hook on document methods and events
 
 doc_events = {
-	"Payment Entry": {
-		"before_validate": [
-			"his.api.payment_entry.set_reference_sales_types",
-			"his.api.payment_entry.allocate_discount_to_references",
-		],
-	},
+	# "Payment Entry": {
+	# 	"before_validate": [
+	# 		"his.api.payment_entry.set_reference_sales_types",
+	# 		"his.api.payment_entry.allocate_discount_to_references",
+	# 	],
+	# },
     "Patient Encounter": {
         "before_validate": "his.api.patient_encounter.set_so_values_from_db",
         "on_update": "his.api.patient_encounter.enqueue_sales_orders",

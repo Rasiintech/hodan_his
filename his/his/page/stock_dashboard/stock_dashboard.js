@@ -97,8 +97,13 @@ stock_dashboard = Class.extend({
 			account_balances_total: '$ 0',
 			unpaid_invoices: [],
 			unpaid_invoices_total: { customer_count: 0, outstanding: '$ 0' },
+			low_moving_items: [],
+			low_moving_items_total: '0',
+			low_moving_items_has_more: false,
 			top_supplier_balances: [],
 			top_supplier_balances_total: '0',
+			top_supplier_balances_has_more: false,
+			store_balance_columns: [],
 			budget_variance: [],
 			budget_variance_has_more: false,
 			budget_variance_total: {
@@ -116,7 +121,14 @@ stock_dashboard = Class.extend({
 		const prepared = Object.assign({}, data || {});
 		prepared.account_balances = prepared.account_balances || [];
 		prepared.unpaid_invoices = prepared.unpaid_invoices || [];
+		prepared.low_moving_items = prepared.low_moving_items || [];
+		prepared.low_moving_items_has_more = !!prepared.low_moving_items_has_more;
+		prepared.low_moving_items_total = prepared.low_moving_items_total || this.format_number_total(prepared.low_moving_items.length);
 		prepared.top_supplier_balances = prepared.top_supplier_balances || [];
+		prepared.store_balance_columns = prepared.store_balance_columns || [];
+		prepared.top_supplier_balances.forEach((row) => {
+			row.store_balance_values = row.store_balance_values || prepared.store_balance_columns.map(() => '—');
+		});
 		prepared.account_balances_total = this.format_currency_total(
 			prepared.account_balances.reduce((sum, row) => sum + this.to_number(row.raw_balance), 0)
 		);
@@ -126,6 +138,7 @@ stock_dashboard = Class.extend({
 				prepared.unpaid_invoices.reduce((sum, row) => sum + this.to_number(row.raw_outstanding), 0)
 			)
 		};
+		prepared.top_supplier_balances_has_more = !!prepared.top_supplier_balances_has_more;
 		prepared.top_supplier_balances_total = prepared.top_supplier_balances_total || this.format_number_total(prepared.top_supplier_balances.length);
 		prepared.budget_variance = prepared.budget_variance || [];
 		prepared.budget_variance_has_more = !!prepared.budget_variance_has_more;
@@ -439,17 +452,25 @@ stock_dashboard = Class.extend({
 		addRow('Total', data.unpaid_invoices_total.customer_count, data.unpaid_invoices_total.outstanding);
 		addBlankRow();
 
-		addSectionTitle('Fast Moving Drug Items Below Weekly Average Sold');
-		addRow('Item', 'Current Qty', 'Weekly Avg Sold');
-		(data.top_supplier_balances || []).forEach((row) => {
-			addRow(row.supplier, row.current_qty, row.weekly_avg_sold);
+		addSectionTitle('Low Moving Items with High Balance');
+		addRow('Item', 'Total Qty', 'Total Sold', 'Item Value', 'Sell-through');
+		(data.low_moving_items || []).forEach((row) => {
+			addRow(row.item, row.total_qty, row.total_sold, row.item_value, row.sell_through);
 		});
-		addRow('Total', 'Flagged Items', data.top_supplier_balances_total || '');
+		addRow('Total', 'High-balance low movers', '', '', data.low_moving_items_total || '0');
+		addBlankRow();
+
+		addSectionTitle('Fast Moving Drug Items Below Weekly Average Sold');
+		addRow('Item', 'Total Qty', ...(data.store_balance_columns || []), 'Total Sold');
+		(data.top_supplier_balances || []).forEach((row) => {
+			addRow(row.supplier, row.total_qty, ...(row.store_balance_values || []), row.total_sold);
+		});
+		addRow('Total', 'Flagged Items', ...(data.store_balance_columns || []).map(() => ''), data.top_supplier_balances_total || '');
 		addBlankRow();
 
 		addSectionTitle('Stock Anomalies');
 		if ((data.budget_variance || []).length) {
-			addRow('Item', 'Anomaly', 'Current Qty', 'Detail');
+			addRow('Item', 'Anomaly', 'Total Qty', 'Detail');
 			(data.budget_variance || []).forEach((row) => {
 				addRow(row.category, row.anomaly, row.actual, row.variance);
 			});
@@ -477,6 +498,9 @@ stock_dashboard = Class.extend({
 				<tr>${columns.map((column) => `<td>${this.escape_html(item[column] == null ? '' : item[column])}</td>`).join('')}</tr>
 			`).join('');
 		};
+		const renderFastMovingRows = (items) => (items || []).map((row) => `
+			<tr><td>${this.escape_html(row.supplier || '')}</td><td>${this.escape_html(row.total_qty || '')}</td>${(row.store_balance_values || []).map((balance) => `<td>${this.escape_html(balance)}</td>`).join('')}<td>${this.escape_html(row.total_sold || '')}</td></tr>
+		`).join('');
 
 		return `<!DOCTYPE html>
 <html>
@@ -574,10 +598,18 @@ stock_dashboard = Class.extend({
 	</div>
 
 	<div class="section-block">
+		<h2>Low Moving Items with High Balance</h2>
+		<table>
+			<thead><tr><th>Item</th><th>Total Qty</th><th>Total Sold</th><th>Item Value</th><th>Sell-through</th></tr></thead>
+			<tbody>${renderRows(data.low_moving_items, ['item', 'total_qty', 'total_sold', 'item_value', 'sell_through'])}</tbody>
+		</table>
+	</div>
+
+	<div class="section-block">
 		<h2>Fast Moving Drug Items Below Weekly Average Sold</h2>
 		<table>
-			<thead><tr><th>Item</th><th>Current Qty</th><th>Weekly Avg Sold</th></tr></thead>
-			<tbody>${renderRows(data.top_supplier_balances, ['supplier', 'current_qty', 'weekly_avg_sold'])}</tbody>
+			<thead><tr><th>Item</th><th>Total Qty</th>${(data.store_balance_columns || []).map((warehouse) => `<th>${this.escape_html(warehouse)}</th>`).join('')}<th>Total Sold</th></tr></thead>
+			<tbody>${renderFastMovingRows(data.top_supplier_balances)}</tbody>
 		</table>
 		<p><strong>Flagged Items:</strong> ${this.escape_html(data.top_supplier_balances_total || '')}</p>
 	</div>
@@ -586,7 +618,7 @@ stock_dashboard = Class.extend({
 		<h2>Stock Anomalies</h2>
 		${(data.budget_variance || []).length ? `
 			<table>
-				<thead><tr><th>Item</th><th>Anomaly</th><th>Current Qty</th><th>Detail</th></tr></thead>
+				<thead><tr><th>Item</th><th>Anomaly</th><th>Total Qty</th><th>Detail</th></tr></thead>
 				<tbody>${renderRows(data.budget_variance, ['category', 'anomaly', 'actual', 'variance'])}</tbody>
 			</table>
 			<p><strong>Total:</strong> ${this.escape_html((data.budget_variance_total || {}).count || '0')} anomalies</p>

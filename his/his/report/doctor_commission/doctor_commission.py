@@ -5,7 +5,6 @@ from frappe import _
 from frappe.utils import flt
 
 
-COMMISSION_DISCOUNT_ACCOUNT = "Discount - HH"
 COMMISSION_START_DATE = "2026-07-25"
 DISCOUNT_EXCLUDED_SO_TYPE = "Pharmacy"
 DISCOUNT_EXCLUDED_ITEM_GROUPS = ("OT",)
@@ -156,7 +155,6 @@ def get_payment_rows(filters):
 	)
 
 	query_filters = dict(filters)
-	query_filters["discount_account"] = COMMISSION_DISCOUNT_ACCOUNT
 	query_filters["commission_start_date"] = COMMISSION_START_DATE
 	query_filters["discount_excluded_so_type"] = DISCOUNT_EXCLUDED_SO_TYPE
 	query_filters["discount_excluded_item_groups"] = DISCOUNT_EXCLUDED_ITEM_GROUPS
@@ -351,7 +349,7 @@ def get_payment_rows(filters):
 				LEFT JOIN (
 					SELECT parent, SUM(amount) AS base_deduction_amount
 					FROM `tabPayment Entry Deduction`
-					WHERE account = %(discount_account)s
+					WHERE IFNULL(amount, 0) > 0
 					GROUP BY parent
 				) discounts ON discounts.parent = pe.name
 				LEFT JOIN (

@@ -1780,3 +1780,18 @@ body[data-route^="stock-dashboard"] .page-container[data-page-route="stock-dashb
 		margin-bottom: 16px;
 	}
 }
+
+.table-row-limit-panel:not(.is-expanded) tbody tr.is-over-limit {
+	display: none;
+}
+
+.table-expand-link {
+	margin-top: 12px;
+	border: 0;
+	background: transparent;
+	color: var(--table-link);
+	font-size: 13px;
+	font-weight: 800;
+	padding: 0;
+	cursor: pointer;
+}

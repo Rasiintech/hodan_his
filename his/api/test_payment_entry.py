@@ -69,7 +69,10 @@ class TestPaymentEntryDiscountAllocation(TestCase):
 				"party_type": "Customer",
 				"paid_amount": 90,
 				"source_exchange_rate": 1,
-				"deductions": [frappe._dict({"account": "Discount - HH", "amount": 10})],
+				"deductions": [
+					frappe._dict({"account": "Discount - HH", "amount": 4}),
+					frappe._dict({"account": "Write Off - HH", "amount": 6}),
+				],
 				"references": [
 					frappe._dict(
 						{

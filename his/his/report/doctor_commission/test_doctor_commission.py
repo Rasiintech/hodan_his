@@ -40,6 +40,8 @@ class TestDoctorCommission(TestCase):
 		self.assertIn("cbt.date BETWEEN %(from_date)s AND %(to_date)s", query)
 		self.assertIn("transfer_reference.parenttype = 'Customer Balance Transfer'", query)
 		self.assertIn("transfer_journal.docstatus = 1", query)
+		self.assertIn("WHERE IFNULL(amount, 0) > 0", query)
+		self.assertNotIn("discount_account", query_filters)
 		self.assertEqual(query_filters["commission_start_date"], "2026-07-25")
 
 	def test_partial_payment_is_allocated_across_item_groups(self):

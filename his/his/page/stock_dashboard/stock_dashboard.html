@@ -75,59 +75,52 @@
 			</div>
 
 			<div class="panel table-panel">
-				<h2>Fast Moving Drug Items Below Weekly Average Sold</h2>
-				<table>
-					<thead><tr><th>Item</th><th>Current Qty</th><th>Weekly Avg Sold</th></tr></thead>
-					<tbody>
-						{% for row in top_supplier_balances %}
-						<tr><td>{%= row.supplier %}</td><td>{%= row.current_qty %}</td><td>{%= row.weekly_avg_sold %}</td></tr>
-						{% endfor %}
-					</tbody>
-					<tfoot>
-						<tr><th>Total</th><th>Flagged Items</th><th>{%= top_supplier_balances_total %}</th></tr>
-					</tfoot>
-				</table>
-			</div>
-		</section>
-
-		<section class="bottom-row">
-			<div class="panel table-panel budget-variance-panel">
-				<h2>Stock Anomalies</h2>
-				{% if budget_variance.length %}
+				<h2>Low Moving Items with High Balance</h2>
 				<div class="table-row-limit-panel" data-row-limit-panel="10">
 				<table>
-					<thead><tr><th>Item</th><th>Anomaly</th><th>Current Qty</th><th>Detail</th></tr></thead>
+					<thead><tr><th>Item</th><th>Total Qty</th><th>Total Sold</th><th>Item Value</th><th>Sell-through</th></tr></thead>
 					<tbody>
-						{% for row in budget_variance %}
+						{% for row in low_moving_items %}
 						{% if row.is_over_limit %}
-						<tr class="is-over-limit">
+						<tr class="is-over-limit"><td>
 						{% else %}
-						<tr>
-						{% endif %}
-							<td>{%= row.category %}</td>
-							<td>{%= row.anomaly %}</td>
-							<td>{%= row.actual %}</td>
-							<td>{%= row.variance %}</td>
-						</tr>
+						<tr><td>
+						{% endif %}{%= row.item %}</td><td>{%= row.total_qty %}</td><td>{%= row.total_sold %}</td><td>{%= row.item_value %}</td><td>{%= row.sell_through %}</td></tr>
 						{% endfor %}
 					</tbody>
-					<tfoot>
-						<tr>
-							<th>Total</th>
-							<th colspan="3">{%= budget_variance_total.count %} anomalies</th>
-						</tr>
-					</tfoot>
+					<tfoot><tr><th>Total</th><th colspan="3">High-balance low movers</th><th>{%= low_moving_items_total %}</th></tr></tfoot>
 				</table>
-				{% if budget_variance_has_more %}
+				{% if low_moving_items_has_more %}
 				<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="View All" data-collapse-label="Show Less">View All</button>
 				{% endif %}
 				</div>
-				{% else %}
-				<div class="budget-empty-state">
-					<i class="fa fa-chart-pie"></i>
-					<p>{%= budget_variance_message %}</p>
-				</div>
+			</div>
+
+		</section>
+
+		<section class="bottom-row">
+			<div class="panel table-panel">
+				<h2>Fast Moving Drug Items Below Weekly Average Sold</h2>
+				<div class="table-row-limit-panel" data-row-limit-panel="10">
+				<table>
+					<thead><tr><th>Item</th><th>Total Qty</th>{% for warehouse in store_balance_columns %}<th>{%= warehouse %}</th>{% endfor %}<th>Total Sold</th></tr></thead>
+					<tbody>
+						{% for row in top_supplier_balances %}
+						{% if row.is_over_limit %}
+						<tr class="is-over-limit"><td>
+						{% else %}
+						<tr><td>
+						{% endif %}{%= row.supplier %}</td><td>{%= row.total_qty %}</td>{% for balance in row.store_balance_values %}<td>{%= balance %}</td>{% endfor %}<td>{%= row.total_sold %}</td></tr>
+						{% endfor %}
+					</tbody>
+					<tfoot>
+						<tr><th>Total</th><th colspan="{%= 1 + store_balance_columns.length %}">Flagged Items</th><th>{%= top_supplier_balances_total %}</th></tr>
+					</tfoot>
+				</table>
+				{% if top_supplier_balances_has_more %}
+				<button type="button" class="table-expand-link" data-table-expand="1" data-expand-label="View All" data-collapse-label="Show Less">View All</button>
 				{% endif %}
+				</div>
 			</div>
 
 			<div class="panel insight-panel">
