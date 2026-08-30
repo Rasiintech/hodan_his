@@ -1,11 +1,10 @@
-const SINGLE_DOCTOR_COMMISSION_START_DATE = "2026-07-26";
+const SINGLE_DOCTOR_COMMISSION_START_DATE = "2026-08-26";
 const default_from_date = frappe.datetime.add_days(frappe.datetime.get_today(), -30);
 
 frappe.query_reports["Single Doctor Commission"] = {
     "filters": [
         {
             "fieldname": "from_date",
-            "label": __("From Date"),
             "fieldtype": "Date",
             "default": default_from_date < SINGLE_DOCTOR_COMMISSION_START_DATE
                 ? SINGLE_DOCTOR_COMMISSION_START_DATE

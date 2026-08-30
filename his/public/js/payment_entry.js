@@ -1,18 +1,18 @@
-function set_reference_sales_type(frm, cdt, cdn) {
-	const row = locals[cdt][cdn];
-	if (frm.doc.docstatus !== 0 || row.reference_doctype !== 'Sales Invoice' || !row.reference_name) {
-		if (frm.doc.docstatus === 0 && row.sales_type) {
-			frappe.model.set_value(cdt, cdn, 'sales_type', null);
-		}
-		return;
-	}
+// function set_reference_sales_type(frm, cdt, cdn) {
+// 	const row = locals[cdt][cdn];
+// 	if (frm.doc.docstatus !== 0 || row.reference_doctype !== 'Sales Invoice' || !row.reference_name) {
+// 		if (frm.doc.docstatus === 0 && row.sales_type) {
+// 			frappe.model.set_value(cdt, cdn, 'sales_type', null);
+// 		}
+// 		return;
+// 	}
 
-	frappe.db.get_value('Sales Invoice', row.reference_name, 'so_type').then((response) => {
-		const currentRow = locals[cdt] && locals[cdt][cdn];
-		if (!currentRow || currentRow.reference_name !== row.reference_name) return;
-		frappe.model.set_value(cdt, cdn, 'sales_type', response.message?.so_type || null);
-	});
-}
+// 	frappe.db.get_value('Sales Invoice', row.reference_name, 'so_type').then((response) => {
+// 		const currentRow = locals[cdt] && locals[cdt][cdn];
+// 		if (!currentRow || currentRow.reference_name !== row.reference_name) return;
+// 		frappe.model.set_value(cdt, cdn, 'sales_type', response.message?.so_type || null);
+// 	});
+// }
 
 function populate_reference_sales_types(frm) {
 	const invoiceRows = (frm.doc.references || []).filter((row) =>
@@ -47,15 +47,15 @@ function wrap_outstanding_invoice_fetch(frm) {
 	frm.__sales_type_fetch_wrapped = true;
 }
 
-frappe.ui.form.on('Payment Entry', {
-	refresh(frm) {
-		wrap_outstanding_invoice_fetch(frm);
-		if (frm.doc.docstatus !== 0) return;
-		populate_reference_sales_types(frm);
-	}
-});
+// frappe.ui.form.on('Payment Entry', {
+// 	refresh(frm) {
+// 		wrap_outstanding_invoice_fetch(frm);
+// 		if (frm.doc.docstatus !== 0) return;
+// 		populate_reference_sales_types(frm);
+// 	}
+// });
 
-frappe.ui.form.on('Payment Entry Reference', {
-	reference_doctype: set_reference_sales_type,
-	reference_name: set_reference_sales_type
-});
+// frappe.ui.form.on('Payment Entry Reference', {
+// 	reference_doctype: set_reference_sales_type,
+// 	reference_name: set_reference_sales_type
+// });

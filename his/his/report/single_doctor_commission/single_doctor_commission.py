@@ -8,7 +8,7 @@ from his.his.report.doctor_commission.doctor_commission import (
 )
 
 
-REPORT_START_DATE = getdate("2026-07-26")
+REPORT_START_DATE = getdate("2026-08-26")
 
 
 def execute(filters=None):

@@ -22,7 +22,8 @@
    "default": "Now",
    "fieldname": "date",
    "fieldtype": "Datetime",
-   "label": "Date"
+   "label": "Date",
+   "read_only": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -73,7 +74,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-01 15:38:19.969191",
+ "modified": "2026-08-24 08:32:47.811329",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Progress Note",
@@ -107,5 +108,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

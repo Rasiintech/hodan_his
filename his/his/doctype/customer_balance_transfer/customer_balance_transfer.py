@@ -13,6 +13,9 @@ from erpnext.accounts.utils import get_balance_on
 from his.api.payment_entry import distribute_with_limits
 
 
+SUPPORTED_REFERENCE_DOCTYPES = ("Sales Invoice", "Journal Entry")
+
+
 class CustomerBalanceTransfer(Document):
 	def validate(self):
 		self.set_missing_values()
@@ -97,7 +100,7 @@ class CustomerBalanceTransfer(Document):
 			frappe.throw(_("Transfer amount plus discount cannot be greater than Source Customer Balance"))
 
 		if not self.reference:
-			frappe.throw(_("Select outstanding Sales Invoices for this transfer"))
+			frappe.throw(_("Select outstanding Sales Invoices or Journal Entries for this transfer"))
 
 		allocated_total = sum(flt(row.allocated_amount) for row in self.reference)
 		if abs(allocated_total - total_reduction) > 0.005:
@@ -108,33 +111,35 @@ class CustomerBalanceTransfer(Document):
 			)
 
 	def allocate_invoice_references(self):
-		invoice_references = [
+		outstanding_references = [
 			row
 			for row in self.reference
-			if row.reference_doctype == "Sales Invoice"
+			if row.reference_doctype in SUPPORTED_REFERENCE_DOCTYPES
 			and (flt(row.outstanding_amount) > 0 or flt(row.allocated_amount) > 0)
 		]
-		if not invoice_references:
+		if not outstanding_references:
 			return
 
-		if len(invoice_references) != len(self.reference):
-			frappe.throw(_("Customer Balance Transfer references must be Sales Invoices"))
+		if len(outstanding_references) != len(self.reference):
+			frappe.throw(
+				_("Customer Balance Transfer references must be Sales Invoices or Journal Entries")
+			)
 
 		target = flt(self.amount) + get_transfer_discount(self)
 		allocations = distribute_with_limits(
-			[flt(row.allocated_amount) for row in invoice_references],
-			[flt(row.outstanding_amount) for row in invoice_references],
+			[flt(row.allocated_amount) for row in outstanding_references],
+			[flt(row.outstanding_amount) for row in outstanding_references],
 			target,
 		)
 		if allocations is None:
 			frappe.throw(
 				_(
 					"Transfer amount plus discount cannot be fully allocated because the selected "
-					"Sales Invoices do not have enough outstanding amount."
+					"Sales Invoices and Journal Entries do not have enough outstanding amount."
 				)
 			)
 
-		for row, allocated_amount in zip(invoice_references, allocations):
+		for row, allocated_amount in zip(outstanding_references, allocations):
 			row.allocated_amount = allocated_amount
 
 	def make_journal_entry(self):
@@ -152,7 +157,7 @@ class CustomerBalanceTransfer(Document):
 				"party_type": "Customer",
 				"party": self.source_customer,
 				"credit_in_account_currency": flt(row.allocated_amount),
-				"reference_type": "Sales Invoice",
+				"reference_type": row.reference_doctype,
 				"reference_name": row.reference_name,
 			}
 			for row in self.reference
@@ -303,7 +308,7 @@ def get_customer_outstanding_invoices(source_customer, source_account, company, 
 			"payment_term": row.payment_term,
 		}
 		for row in rows
-		if row.voucher_type == "Sales Invoice" and flt(row.outstanding_amount) > 0
+		if row.voucher_type in SUPPORTED_REFERENCE_DOCTYPES and flt(row.outstanding_amount) > 0
 	]
 
 

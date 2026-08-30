@@ -1,0 +1,33 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-08-19 11:33:07.555858",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-08-19 11:33:07.555858",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Commission-Agents Admission",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Inpatient Record",
+ "report_name": "Commission-Agents Admission",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Healthcare Administrator"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Nursing User"
+  }
+ ]
+}

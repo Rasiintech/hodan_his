@@ -5,7 +5,7 @@ from frappe import _
 from frappe.utils import flt
 
 
-COMMISSION_DISCOUNT_ACCOUNT = "Discount - HH"
+COMMISSION_DISCOUNT_ACCOUNT = "4999001 - Patient Service Discounts - HH"
 COMMISSION_START_DATE = "2026-07-25"
 DISCOUNT_EXCLUDED_SO_TYPE = "Pharmacy"
 DISCOUNT_EXCLUDED_ITEM_GROUPS = ("OT",)
@@ -98,21 +98,41 @@ def get_columns():
 
 
 def get_data(filters):
+	return build_output(collect_amounts(filters))
+
+
+def get_detail_data(filters):
+	"""Return the same commission calculation, but kept split per Sales Invoice."""
+	return build_output(collect_amounts(filters, group_by_invoice=True), group_by_invoice=True)
+
+
+def collect_amounts(filters, group_by_invoice=False):
 	validate_filters(filters)
 
 	amounts_by_group = defaultdict(new_group_totals)
 
 	for row in get_invoiced_items(filters):
-		key = (row.ref_practitioner, row.item_group)
+		key = group_key(row.invoice, row.ref_practitioner, row.item_group, group_by_invoice)
 		amounts_by_group[key]["total_invoiced"] += flt(row.base_net_amount)
 
 	payment_rows = get_payment_rows(filters)
 	if payment_rows:
 		items_by_invoice = get_items_by_invoice([row.invoice for row in payment_rows])
 		for payment in payment_rows:
-			allocate_payment(amounts_by_group, payment, items_by_invoice.get(payment.invoice, []))
+			allocate_payment(
+				amounts_by_group,
+				payment,
+				items_by_invoice.get(payment.invoice, []),
+				group_by_invoice=group_by_invoice,
+			)
 
-	return build_output(amounts_by_group)
+	return amounts_by_group
+
+
+def group_key(invoice, ref_practitioner, item_group, group_by_invoice):
+	if group_by_invoice:
+		return (invoice, ref_practitioner, item_group)
+	return (ref_practitioner, item_group)
 
 
 def validate_filters(filters):
@@ -571,7 +591,7 @@ def get_items_by_invoice(invoice_names):
 	return items_by_invoice
 
 
-def allocate_payment(amounts_by_group, payment, invoice_items):
+def allocate_payment(amounts_by_group, payment, invoice_items, group_by_invoice=False):
 	base_grand_total = flt(payment.base_grand_total)
 	base_net_total = flt(payment.base_net_total)
 	if base_grand_total <= 0 or base_net_total == 0:
@@ -607,7 +627,7 @@ def allocate_payment(amounts_by_group, payment, invoice_items):
 
 	for item in invoice_items:
 		item_amount = flt(item.base_net_amount)
-		key = (payment.ref_practitioner, item.item_group)
+		key = group_key(payment.invoice, payment.ref_practitioner, item.item_group, group_by_invoice)
 		item_share = item_amount / base_net_total
 		cash_deduction_share = 0
 		if item.item_group not in DISCOUNT_EXCLUDED_ITEM_GROUPS and deduction_eligible_total > 0:
@@ -647,8 +667,9 @@ def new_group_totals():
 	}
 
 
-def build_output(amounts_by_group):
-	practitioner_names = {key[0] for key in amounts_by_group if key[0]}
+def build_output(amounts_by_group, group_by_invoice=False):
+	practitioner_index = 1 if group_by_invoice else 0
+	practitioner_names = {key[practitioner_index] for key in amounts_by_group if key[practitioner_index]}
 	commission_percent_map = {}
 	expense_percent_map = {}
 
@@ -664,9 +685,12 @@ def build_output(amounts_by_group):
 				commission_percent_map[(practitioner, item.item_group)] = flt(item.percent)
 
 	output = []
-	for (ref_practitioner, item_group), amounts in sorted(
-		amounts_by_group.items(), key=lambda entry: (entry[0][0] or "", entry[0][1] or "")
+	for key, amounts in sorted(
+		amounts_by_group.items(), key=lambda entry: tuple(part or "" for part in entry[0])
 	):
+		invoice, ref_practitioner, item_group = (
+			key if group_by_invoice else (None, key[0], key[1])
+		)
 		commission_percent = commission_percent_map.get((ref_practitioner, item_group), 0)
 		if not commission_percent:
 			continue
@@ -686,6 +710,7 @@ def build_output(amounts_by_group):
 		output.append(
 			frappe._dict(
 				{
+					**({"invoice": invoice} if group_by_invoice else {}),
 					"ref_practitioner": ref_practitioner,
 					"item_group": item_group,
 					"total_invoiced": round(amounts["total_invoiced"], 2),
