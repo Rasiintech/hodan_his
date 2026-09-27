@@ -33,6 +33,7 @@
   "department",
   "er_type",
   "type",
+  "billing_item",
   "doctor_amount",
   "bill_to",
   "full_name",
@@ -538,11 +539,20 @@
    "label": "ER Type",
    "mandatory_depends_on": "eval: doc.department == \"Accident And Emergency Care\"",
    "options": "\nAdult\nPediatric\nOBS/GYN"
+  },
+  {
+   "depends_on": "eval:doc.is_free != 1",
+   "fetch_from": "practitioner.op_consulting_charge_item",
+   "fieldname": "billing_item",
+   "fieldtype": "Link",
+   "label": "Billing Item",
+   "options": "Item",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-26 11:29:34.597336",
+ "modified": "2026-09-12 11:27:00.605005",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Que",

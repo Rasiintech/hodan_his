@@ -21,7 +21,7 @@ def create_que_order_bill(doc):
     # for item in self.items:
 
     items.append({
-            "item_code" : "OPD Consultation",
+            "item_code" : doc.billing_item,
             "rate" : doc.doctor_amount,
             "qty" : 1,
             
@@ -74,7 +74,7 @@ def create_inp_order_bill(doc):
     # for item in self.items:
 
     items.append({
-            "item_code" : "OPD Consultation",
+            "item_code" : doc.billing_item,
             "rate" : doc.doctor_amount,
             "qty" : 1,
             

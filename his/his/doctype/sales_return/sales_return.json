@@ -25,6 +25,7 @@
   "transaction_date",
   "refund",
   "mode_of_payment",
+  "remark",
   "column_break1",
   "po_no",
   "po_date",
@@ -1634,13 +1635,19 @@
   {
    "fieldname": "section_break_9wipq",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "label": "Remark",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-02-18 09:10:20.062073",
+ "modified": "2026-09-12 14:35:15.343595",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Sales Return",

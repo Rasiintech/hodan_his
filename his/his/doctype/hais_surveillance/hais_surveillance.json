@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-23 09:27:24.941312",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_section",
+  "patient_id",
+  "patient_name",
+  "column_break_patient",
+  "age",
+  "sex",
+  "department",
+  "clinical_section",
+  "diagnosis",
+  "wbc",
+  "column_break_clinical",
+  "crp",
+  "type_of_infection",
+  "classification_section",
+  "hai",
+  "cai",
+  "column_break_classification",
+  "culture",
+  "results",
+  "treatment_section",
+  "antibiotics",
+  "column_break_treatment",
+  "outcome"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient ID",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient_id.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_patient",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "non_negative": 1
+  },
+  {
+   "fetch_from": "patient_id.sex",
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "\nInternal Medicine\nGeneral Surgery\nOrthopedic\nNeurosurgery\nObs & Gyn\nPediatric\nGeneral Ward\nIPD 2nd Floor\nIPD 3rd Floor\nNICU\nICU\nP-ICU",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clinical_section",
+   "fieldtype": "Section Break",
+   "label": "Clinical Information"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "wbc",
+   "fieldtype": "Float",
+   "label": "WBC (/\u00b5L)",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_clinical",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "crp",
+   "fieldtype": "Float",
+   "label": "CRP (mg/L)",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "type_of_infection",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Type of Infection",
+   "options": "\nCatheter-Associated Infection\nCentral Line-Associated Blood Infection\nVentilator-Associated Pneumonia\nSurgical Site Infection\nN/A"
+  },
+  {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Infection Classification and Laboratory Results"
+  },
+  {
+   "fieldname": "hai",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "HAI",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cai",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "CAI",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_classification",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "culture",
+   "fieldtype": "Select",
+   "label": "Culture",
+   "options": "\nBlood Culture\nUrine Culture\nSputum Culture\nStool Culture\nSwab Culture\nPus Culture\nCSF Culture\nBiopsy Culture\nN/A"
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Select",
+   "label": "Results",
+   "options": "\nS. Aureus\nS. Cohnii\nS. Hominis\nS. Haemolyticus\nE. Coli\nS. Epidermidis\nK. Oxytoca\nPseudomonas\nK. Pneumonia\nS. Saprophyticus\nKluyvera Ascorbata\nBurkholderia Cepaci\nS. Schleiferi\nEnterobacter\nS. Agalactiae\nAcinetobacter\nShewanella\nS. Lugdunensis\nS. Simulans\nS. Marcescens\nS-Sciuri\nP. Lueola\nChryseobacterium\nP. Rustigiani\nK. Ozaenae\nCedecea Davisae\nB. Pseudomallei"
+  },
+  {
+   "fieldname": "treatment_section",
+   "fieldtype": "Section Break",
+   "label": "Treatment and Outcome"
+  },
+  {
+   "fieldname": "antibiotics",
+   "fieldtype": "Small Text",
+   "label": "Antibiotics"
+  },
+  {
+   "fieldname": "column_break_treatment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Data",
+   "label": "Outcome"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-23 09:28:29.214636",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "HAIs Surveillance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -8,7 +8,7 @@ from frappe.utils import flt
 COMMISSION_DISCOUNT_ACCOUNT = "4999001 - Patient Service Discounts - HH"
 COMMISSION_START_DATE = "2026-07-25"
 DISCOUNT_EXCLUDED_SO_TYPE = "Pharmacy"
-DISCOUNT_EXCLUDED_ITEM_GROUPS = ("OT",)
+DISCOUNT_EXCLUDED_ITEM_GROUPS = ("OT","Induction")
 
 
 def execute(filters=None):

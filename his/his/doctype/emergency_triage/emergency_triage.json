@@ -618,7 +618,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-30 14:40:43.817136",
+ "modified": "2026-09-26 16:08:55.349672",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Emergency Triage",
@@ -640,7 +640,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,

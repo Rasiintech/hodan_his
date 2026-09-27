@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-23 09:23:34.849027",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "disease",
+  "contact",
+  "droplet",
+  "airborne",
+  "ppe_required",
+  "key_precaution"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "disease",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Disease",
+   "options": "\nTuberculosis TB\nMeasles\nMeningitis\nPertussis\nDiphtheria\nChickenpox Virus\nInfluenza\nMumps\nScabies\nSalmonella\nC. Difficile Diarrhea\nHepatatis B Virus\nHepatatis C Virus\nHIV\nCovid-19\nEbola\nWound Infection\nBurn Infection\nCellulitis with Sepsis\nChemotherapy",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "contact",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Contact",
+   "options": "\nYes\nNo"
+  },
+  {
+   "columns": 1,
+   "fieldname": "droplet",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Droplet",
+   "options": "\nYes\nNo"
+  },
+  {
+   "columns": 1,
+   "fieldname": "airborne",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Airborne",
+   "options": "\nYes\nNo"
+  },
+  {
+   "columns": 2,
+   "fieldname": "ppe_required",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "PPE Required",
+   "options": "\nN95 Mask\nSurgucal Mask\nGloves\nSteril gloves\nGloves + gown\nDouble gloves\nGown\nEye Protection"
+  },
+  {
+   "columns": 4,
+   "fieldname": "key_precaution",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Key Precaution",
+   "options": "\nAirborne\nDroplet\nContact\nStandard Precautions\nAirborne + Contact\nDroplet + Contact\nAirborne + Droplet"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-23 12:57:06.384555",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Infectious Disease Precaution",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

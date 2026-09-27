@@ -19,7 +19,9 @@
   "journal_entry",
   "amended_from",
   "cost_center",
-  "remark"
+  "remark",
+  "section_break_bkri6",
+  "accounts"
  ],
  "fields": [
   {
@@ -39,6 +41,7 @@
    "allow_on_submit": 1,
    "fieldname": "journal_entry",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": " Journal Entry",
    "options": "Journal Entry"
   },
@@ -66,10 +69,10 @@
   {
    "fieldname": "from_account",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "From Account",
-   "options": "Account",
-   "reqd": 1
+   "options": "Account"
   },
   {
    "fieldname": "to_account",
@@ -95,12 +98,22 @@
    "label": "Cost Center",
    "options": "Cost Center",
    "reqd": 1
+  },
+  {
+   "fieldname": "accounts",
+   "fieldtype": "Table",
+   "label": "Accounts",
+   "options": "Accounts Transfer"
+  },
+  {
+   "fieldname": "section_break_bkri6",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-03 09:31:07.616942",
+ "modified": "2026-08-31 13:55:13.904158",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Cash Transfer",

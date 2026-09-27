@@ -179,7 +179,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-16 15:20:21.871409",
+ "modified": "2026-09-14 11:53:55.371208",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Death Report Layout",
@@ -200,7 +200,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,

@@ -1,0 +1,241 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-09-09 15:41:51.574446",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "voucher_details_section",
+  "posting_date",
+  "amount",
+  "currency",
+  "column_break_voucher",
+  "payment_method",
+  "bank_name",
+  "cheque_no",
+  "cash_no",
+  "payment_details_section",
+  "supplier",
+  "payee",
+  "amount_in_words",
+  "being",
+  "vendor_balance",
+  "authorization_section",
+  "payee_name",
+  "paid_by",
+  "approved_by",
+  "attachments_section",
+  "supplier_statement_attached",
+  "cheque_copy_attached",
+  "amended_from",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "voucher_details_section",
+   "fieldtype": "Section Break",
+   "label": "Voucher Details"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_voucher",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Cheque",
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Method of Payment",
+   "options": "Cash\nCheque\nBank Transfer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name",
+   "mandatory_depends_on": "eval:doc.payment_method!='Cash'"
+  },
+  {
+   "depends_on": "eval:doc.payment_method=='Cheque'",
+   "fieldname": "cheque_no",
+   "fieldtype": "Data",
+   "label": "Cheque No",
+   "mandatory_depends_on": "eval:doc.payment_method=='Cheque'"
+  },
+  {
+   "depends_on": "eval:doc.payment_method=='Cash'",
+   "fieldname": "cash_no",
+   "fieldtype": "Data",
+   "label": "Cash No"
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "payee",
+   "fieldtype": "Data",
+   "label": "To / Payee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount_in_words",
+   "fieldtype": "Small Text",
+   "label": "The Sum of",
+   "read_only": 1
+  },
+  {
+   "fieldname": "being",
+   "fieldtype": "Small Text",
+   "label": "Being",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vendor_balance",
+   "fieldtype": "Currency",
+   "label": "Vendor Balance"
+  },
+  {
+   "fieldname": "authorization_section",
+   "fieldtype": "Section Break",
+   "label": "Authorization"
+  },
+  {
+   "fieldname": "payee_name",
+   "fieldtype": "Data",
+   "label": "Payee Name"
+  },
+  {
+   "fieldname": "paid_by",
+   "fieldtype": "Link",
+   "label": "Paid By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Required Attachments"
+  },
+  {
+   "default": "0",
+   "fieldname": "supplier_statement_attached",
+   "fieldtype": "Check",
+   "label": "Statement of Supplier / Invoice / Formal Request attached"
+  },
+  {
+   "default": "0",
+   "fieldname": "cheque_copy_attached",
+   "fieldtype": "Check",
+   "label": "Copy of Cheque with full signatures attached"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Voucher",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "PV-",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "options": "PV-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-09-12 14:43:02.308424",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Payment Voucher",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFO",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

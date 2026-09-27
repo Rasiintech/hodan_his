@@ -20,11 +20,13 @@ def create_inv(doc_name ,dt , is_sales_return = False ,  is_credit = False , mod
     customer = cash_sales.customer
     items = []
     empty_items = ""
+    reuturn_remark = ""
     for item in cash_sales.items:
 
         qty = item.qty
         if is_sales_return:
             qty = float(item.qty) * (-1)
+            
         items.append({
             "item_code" : item.item_code,
             "rate" : item.rate,
@@ -67,7 +69,8 @@ def create_inv(doc_name ,dt , is_sales_return = False ,  is_credit = False , mod
 
     is_return = 0
     if is_sales_return :
-         is_return = 1 
+         is_return = 1
+         reuturn_remark =  cash_sales.remark 
     sales_doc = frappe.get_doc({
         "doctype" : "Sales Invoice",
         "is_return" : is_return,
@@ -82,6 +85,7 @@ def create_inv(doc_name ,dt , is_sales_return = False ,  is_credit = False , mod
         "source_order" : source,
         "ref_practitioner" : cash_sales.ref_practitioner,
         "additional_discount_percentage": cash_sales.additional_discount_percentage,
+        "remarks" : reuturn_remark,
         "items" : items,
        
     })

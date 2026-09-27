@@ -252,16 +252,19 @@ def medic_h(patient ):
     #  appointment_date  as Date,
     data = frappe.db.sql(f""" 
     
-     select p.name as sr,    p.encounter_date  as Date, 
+     select p.name as sr,    p.encounter_date  as Date,
+     p.encounter_time as Time,
      c.drug_code  as Drug, 
       c.qty as QTY ,
     c.dosage as `Dosage`,
 
     
-     p.user as Ordered
+     coalesce(nullif(p.full_name, ''), nullif(u.full_name, ''), p.user) as Ordered
      from `tabDrug Prescription` c
      left join `tabHealthcare Requests` p
-    on c.parent = p.name    
+    on c.parent = p.name
+     left join `tabUser` u
+    on p.user = u.name
       where p.patient = "{patient}" order by p.encounter_date DESC
     
     """ , as_dict = True)
@@ -562,8 +565,6 @@ def plan(patient):
     """, as_dict = 1)
 
     return doc_plan
-
-
 
 
 
