@@ -6,6 +6,19 @@ from frappe import _
 from frappe.utils import add_months, date_diff, flt, formatdate, getdate
 
 
+REVENUE_DISCOUNT_RATE = 0.10
+ANCILLARY_MONTHLY_BUDGET = -114.0
+AMOUNT_FIELDS = (
+	"monthly_budget",
+	"daily_budget",
+	"weekly_budget",
+	"period_budget",
+	"actual",
+	"budget_variance",
+	"last_month_actual",
+	"last_month_variance",
+)
+
 
 def execute(filters=None):
 	filters = frappe._dict(filters or {})
@@ -35,27 +48,19 @@ def execute(filters=None):
 		)
 
 	data = []
-	rev_total = build_section(
+	rev_total, revenue_discount = build_section(
 		filters, "Income", from_date, to_date, last_from, last_to, days, data, period_label
 	)
+	income_after_discount = add_revenue_discount_rows(data, rev_total, revenue_discount)
 	data.append({})
-	exp_total = build_section(
+	exp_total, expense_discount = build_section(
 		filters, "Expense", from_date, to_date, last_from, last_to, days, data, period_label
 	)
 	data.append({})
 
 	net = {"account_group": _("Net Income"), "bold": 1}
-	for key in (
-		"monthly_budget",
-		"daily_budget",
-		"weekly_budget",
-		"period_budget",
-		"actual",
-		"budget_variance",
-		"last_month_actual",
-		"last_month_variance",
-	):
-		net[key] = flt(rev_total.get(key)) - flt(exp_total.get(key))
+	for key in AMOUNT_FIELDS:
+		net[key] = flt(income_after_discount.get(key)) - flt(exp_total.get(key))
 	data.append(net)
 
 	return columns, data
@@ -68,6 +73,7 @@ def get_columns(filters, month_label, days, last_month_label):
 			"fieldname": fieldname,
 			"fieldtype": "Currency",
 			"options": "currency",
+			"precision": 2,
 			"width": width,
 		}
 
@@ -101,18 +107,24 @@ def build_section(filters, root_type, from_date, to_date, last_from, last_to, da
 		order_by="lft",
 	)
 	if not accounts:
-		return frappe._dict()
+		return frappe._dict(), frappe._dict()
 
 	by_name = {d.name: d for d in accounts}
 	roots = [d for d in accounts if not d.parent_account or d.parent_account not in by_name]
 
-	# report rows: grandchildren of the root, plus any leaf sitting directly under the root's children
 	rows_accounts = []
 	for root in roots:
-		for child in accounts:
-			if child.parent_account != root.name:
-				continue
-			grandchildren = [a for a in accounts if a.parent_account == child.name]
+		children = [account for account in accounts if account.parent_account == root.name]
+		if root_type == "Expense":
+			# The expense snapshot is grouped by the main accounts directly below
+			# TOTAL EXPENSES. Each row includes every account below that group.
+			rows_accounts.extend(children)
+			continue
+
+		# Revenue keeps its existing presentation: groups one level below the
+		# root's main children, or a main child itself when it has no children.
+		for child in children:
+			grandchildren = [account for account in accounts if account.parent_account == child.name]
 			if grandchildren:
 				rows_accounts.extend(grandchildren)
 			else:
@@ -142,6 +154,7 @@ def build_section(filters, root_type, from_date, to_date, last_from, last_to, da
 		last_month_actual=0,
 		last_month_variance=0,
 	)
+	discount_row = None
 
 	for grp in rows_accounts:
 		monthly = actual = last_actual = 0.0
@@ -151,7 +164,17 @@ def build_section(filters, root_type, from_date, to_date, last_from, last_to, da
 				actual += flt(actual_map.get(leaf.name))
 				last_actual += flt(last_actual_map.get(leaf.name))
 
-		if not (monthly or actual or last_actual):
+		if (
+			root_type == "Income"
+			and grp.account_name == "Ancillary & Other Operating Income"
+			and not monthly
+		):
+			monthly = ANCILLARY_MONTHLY_BUDGET
+
+		is_revenue_discount = (
+			root_type == "Income" and grp.account_name == "Patient Service Discounts"
+		)
+		if not (monthly or actual or last_actual or is_revenue_discount):
 			continue
 
 		daily = monthly / 30
@@ -169,14 +192,54 @@ def build_section(filters, root_type, from_date, to_date, last_from, last_to, da
 			"last_month_variance": actual - last_actual,
 			"currency": currency,
 		}
+		if is_revenue_discount:
+			discount_row = row
+			data.append(row)
+			continue
+
 		data.append(row)
 		for key in total:
 			if key not in ("account_group", "bold"):
 				total[key] += flt(row.get(key))
 
+	if discount_row:
+		discount_row["monthly_budget"] = -(total.monthly_budget * REVENUE_DISCOUNT_RATE)
+		discount_row["daily_budget"] = discount_row["monthly_budget"] / 30
+		discount_row["weekly_budget"] = discount_row["monthly_budget"] / 4
+		discount_row["period_budget"] = discount_row["daily_budget"] * days
+		discount_row["budget_variance"] = (
+			discount_row["actual"] - discount_row["period_budget"]
+		)
+		discount_row["last_month_variance"] = (
+			discount_row["actual"] - discount_row["last_month_actual"]
+		)
+
 	total["currency"] = currency
 	data.append(total)
-	return total
+	return total, discount_row or frappe._dict()
+
+
+def add_revenue_discount_rows(data, revenue_total, discount_source):
+	"""Add the positive discount deduction and net revenue rows."""
+	currency = revenue_total.get("currency")
+	discount = frappe._dict(account_group=_("Discount"), bold=1, currency=currency)
+
+	for key in ("monthly_budget", "daily_budget", "weekly_budget", "period_budget"):
+		discount[key] = -flt(discount_source.get(key))
+
+	discount.actual = -flt(discount_source.get("actual"))
+	discount.last_month_actual = -flt(discount_source.get("last_month_actual"))
+	discount.budget_variance = discount.actual - discount.period_budget
+	discount.last_month_variance = discount.actual - discount.last_month_actual
+	data.append(discount)
+
+	income_after_discount = frappe._dict(
+		account_group=_("Income After Discount"), bold=1, currency=currency
+	)
+	for key in AMOUNT_FIELDS:
+		income_after_discount[key] = flt(revenue_total.get(key)) - flt(discount.get(key))
+	data.append(income_after_discount)
+	return income_after_discount
 
 
 def get_budget_plan_map(root_type, from_date):
@@ -246,5 +309,3 @@ def get_gl_sums(filters, root_type, from_date, to_date):
 		as_dict=True,
 	)
 	return {d.account: flt(d.amount) for d in rows}
-
-

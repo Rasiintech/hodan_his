@@ -5,11 +5,17 @@
 frappe.query_reports["Drug Purchase Rate Comparison"] = {
 	filters: [
 		{
-			fieldname: "company",
-			label: __("Company"),
-			fieldtype: "Link",
-			options: "Company",
-			default: frappe.defaults.get_user_default("Company"),
+			fieldname: "previous_from_date",
+			label: __("Previous From Date"),
+			fieldtype: "Date",
+			default: frappe.datetime.add_days(frappe.datetime.get_today(), -59),
+			reqd: 1
+		},
+		{
+			fieldname: "previous_to_date",
+			label: __("Previous To Date"),
+			fieldtype: "Date",
+			default: frappe.datetime.add_days(frappe.datetime.get_today(), -30),
 			reqd: 1
 		},
 		{
@@ -24,20 +30,6 @@ frappe.query_reports["Drug Purchase Rate Comparison"] = {
 			label: __("Current To Date"),
 			fieldtype: "Date",
 			default: frappe.datetime.get_today(),
-			reqd: 1
-		},
-		{
-			fieldname: "previous_from_date",
-			label: __("Previous From Date"),
-			fieldtype: "Date",
-			default: frappe.datetime.add_days(frappe.datetime.get_today(), -59),
-			reqd: 1
-		},
-		{
-			fieldname: "previous_to_date",
-			label: __("Previous To Date"),
-			fieldtype: "Date",
-			default: frappe.datetime.add_days(frappe.datetime.get_today(), -30),
 			reqd: 1
 		},
 		{
@@ -61,7 +53,11 @@ frappe.query_reports["Drug Purchase Rate Comparison"] = {
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
 		if (data && ["saving", "reduction_percent"].includes(column.fieldname)) {
-			return `<span style="color:#16803c;font-weight:600">${value}</span>`;
+			const amount = Number(data[column.fieldname]) || 0;
+			if (amount !== 0) {
+				const color = amount < 0 ? "#dc2626" : "#16803c";
+				return `<span style="color:${color};font-weight:600">${value}</span>`;
+			}
 		}
 		return value;
 	}

@@ -38,7 +38,8 @@ doctype_js = {
     "Patient Appointment" : "public/js/patient_encounter.js" , 
     "Patient Encounter" : "public/js/encounter_steps.js",
     "Sample Collection": "public/js/sample.js",
-    "Inpatient Record": "public/js/inpatient_record.js"
+    "Inpatient Record": "public/js/inpatient_record.js",
+    "Asset Movement": "public/js/asset_movement.js",
 
 
     
@@ -120,7 +121,8 @@ override_doctype_class = {
     # "Item": "his.api.retail_setup.CustomItem",
     "Clinical Procedure": "his.api.clinical_procedure.CustomClinicalProcedure",
      "Sales Order": "his.override.sales_order.CustomSalesOrder",
-      "Sales Invoice": "his.override.sales_invoice.CustomSalesInvoice"
+      "Sales Invoice": "his.override.sales_invoice.CustomSalesInvoice",
+      "Asset Movement": "his.override.asset_movement.CustomAssetMovement",
 }
 
 # Document Events

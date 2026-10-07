@@ -18,6 +18,7 @@
   "diagnosis",
   "wbc",
   "column_break_clinical",
+  "temp",
   "crp",
   "type_of_infection",
   "classification_section",
@@ -59,6 +60,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "patient_id.p_age",
    "fieldname": "age",
    "fieldtype": "Int",
    "label": "Age",
@@ -94,7 +96,7 @@
   {
    "fieldname": "wbc",
    "fieldtype": "Float",
-   "label": "WBC (/\u00b5L)",
+   "label": "WBC (\u00b5L)",
    "non_negative": 1,
    "precision": "2"
   },
@@ -114,7 +116,7 @@
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Type of Infection",
-   "options": "\nCatheter-Associated Infection\nCentral Line-Associated Blood Infection\nVentilator-Associated Pneumonia\nSurgical Site Infection\nN/A"
+   "options": "\nCatheter-Associated Infection\nCentral Line-Associated Blood Infection\nVentilator-Associated Pneumonia\nSurgical Site Infection\nNeonatal Sepsis\nN/A"
   },
   {
    "fieldname": "classification_section",
@@ -170,11 +172,16 @@
    "fieldname": "outcome",
    "fieldtype": "Data",
    "label": "Outcome"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "Temp \u00b0C"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-23 09:28:29.214636",
+ "modified": "2026-09-28 12:44:42.022164",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "HAIs Surveillance",

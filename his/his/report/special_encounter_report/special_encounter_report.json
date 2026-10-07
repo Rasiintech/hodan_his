@@ -1,0 +1,59 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-09-29 13:51:53.817176",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "consultant",
+   "fieldtype": "Link",
+   "label": "Consultant",
+   "mandatory": 0,
+   "options": "Healthcare Practitioner",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-09-29 13:54:04.575405",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Special Encounter Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    COALESCE(pe.practitioner_name, pe.practitioner) AS \"Consultant:Data:220\",\n    pe.patient AS \"Patient ID:Link/Patient:150\",\n    COALESCE(p.patient_name, pe.patient_name) AS \"Patient Name:Data:220\",\n    COALESCE(pe.patient_age, TIMESTAMPDIFF(YEAR, p.dob, pe.encounter_date)) AS \"Age:Data:100\",\n    COALESCE(p.sex, pe.patient_sex) AS \"Sex:Data:90\",\n    dd.differential_diagnosis AS \"Differential Diagnosis:Data:300\",\n    pe.encounter_date AS \"Date:Date:110\",\n    p.territory AS \"Territory:Link/Territory:160\"\nFROM `tabPatient Encounter` pe\nINNER JOIN `tabPatient` p\n    ON p.name = pe.patient\nLEFT JOIN (\n    SELECT\n        parent,\n        GROUP_CONCAT(DISTINCT diagnosis ORDER BY idx SEPARATOR ', ') AS differential_diagnosis\n    FROM `tabPatient Encounter Diagnosis`\n    WHERE parenttype = 'Patient Encounter'\n      AND parentfield = 'differential_diagnosis'\n    GROUP BY parent\n) dd ON dd.parent = pe.name\nWHERE pe.docstatus < 2\n  AND pe.encounter_date BETWEEN %(from_date)s AND %(to_date)s\nORDER BY pe.encounter_date DESC, pe.encounter_time DESC, pe.creation DESC",
+ "ref_doctype": "Patient Encounter",
+ "report_name": "Special Encounter Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Lab"
+  }
+ ]
+}

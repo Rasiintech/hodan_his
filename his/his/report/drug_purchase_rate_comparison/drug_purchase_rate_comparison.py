@@ -47,8 +47,8 @@ def get_columns(filters):
 	return [
 		{"label": _("Item"), "fieldname": "item_code", "fieldtype": "Link", "options": "Item", "width": 150},
 		{"label": _("Item Name"), "fieldname": "item_name", "fieldtype": "Data", "width": 220},
-		{"label": after_label, "fieldname": "after_rate", "fieldtype": "Currency", "options": "currency", "width": 190},
 		{"label": before_label, "fieldname": "before_rate", "fieldtype": "Currency", "options": "currency", "width": 190},
+		{"label": after_label, "fieldname": "after_rate", "fieldtype": "Currency", "options": "currency", "width": 190},
 		{"label": _("Qty"), "fieldname": "qty", "fieldtype": "Float", "width": 100},
 		{"label": _("Saving"), "fieldname": "saving", "fieldtype": "Currency", "options": "currency", "width": 130},
 		{"label": _("Cost Reduction %"), "fieldname": "reduction_percent", "fieldtype": "Percent", "width": 140},

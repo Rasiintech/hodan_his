@@ -1,0 +1,23 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-09-29 13:03:17.780619",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-09-29 13:03:17.780619",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Hospital Balance Sheet",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "GL Entry",
+ "report_name": "Hospital Balance Sheet",
+ "report_type": "Script Report",
+ "roles": []
+}
