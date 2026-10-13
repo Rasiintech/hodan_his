@@ -10,7 +10,8 @@
   "patient_name",
   "doctor",
   "visit_date",
-  "date"
+  "date",
+  "queuelist"
  ],
  "fields": [
   {
@@ -25,7 +26,7 @@
    "fieldtype": "Data",
    "label": "Patient Name"
   },
-   {
+  {
    "fieldname": "queuelist",
    "fieldtype": "Button",
    "label": "Que List"

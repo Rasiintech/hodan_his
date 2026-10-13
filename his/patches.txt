@@ -1,1 +1,2 @@
-his.patches.add_bill_to_patient_invoice_reference
+# Deferred: his.patches.add_bill_to_patient_invoice_reference
+# Preserve the live Bill To Server Script during routine migration.

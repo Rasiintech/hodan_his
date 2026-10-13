@@ -22,7 +22,6 @@
   "sb_vs",
   "temperature",
   "pulse",
-  "column_break_guwwr",
   "respiratory_rate",
   "tongue",
   "abdomen",
@@ -61,7 +60,7 @@
    "read_only": 1
   },
   {
-   "allow_in_quick_entry": 1,
+   "allow_in_quick_entry": 0,
    "fetch_from": "inpatient_record.patient",
    "fieldname": "patient",
    "fieldtype": "Link",
@@ -141,33 +140,36 @@
    "fieldtype": "Data",
    "ignore_xss_filter": 1,
    "in_list_view": 1,
-   "label": "Body Temperature"
+   "label": "Body Temperature",
+   "description": "Presence of a fever (temp &gt; 38.5 °C/101.3 °F or sustained temp &gt; 38 °C/100.4 °F)"
   },
   {
    "fieldname": "pulse",
    "fieldtype": "Data",
    "ignore_xss_filter": 1,
    "in_list_view": 1,
-   "label": "Heart Rate / Pulse"
+   "label": "Heart Rate / Pulse",
+   "description": "Adults' pulse rate is anywhere between 50 and 80 beats per minute."
   },
   {
    "fieldname": "respiratory_rate",
    "fieldtype": "Data",
    "ignore_xss_filter": 1,
    "in_list_view": 1,
-   "label": "Respiratory rate"
+   "label": "Respiratory rate",
+   "description": "Normal reference range for an adult is 16–20 breaths/minute (RCP 2012)"
   },
   {
    "fieldname": "tongue",
    "fieldtype": "Select",
-   "hidden": 1,
+   "hidden": 0,
    "label": "Tongue",
    "options": "\nCoated\nVery Coated\nNormal\nFurry\nCuts"
   },
   {
    "fieldname": "abdomen",
    "fieldtype": "Select",
-   "hidden": 1,
+   "hidden": 0,
    "label": "Abdomen",
    "options": "\nNormal\nBloated\nFull\nFluid\nConstipated"
   },
@@ -178,7 +180,7 @@
   {
    "fieldname": "reflexes",
    "fieldtype": "Select",
-   "hidden": 1,
+   "hidden": 0,
    "label": "Reflexes",
    "options": "\nNormal\nHyper\nVery Hyper\nOne Sided"
   },
@@ -206,7 +208,7 @@
   {
    "fieldname": "vital_signs_note",
    "fieldtype": "Small Text",
-   "hidden": 1,
+   "hidden": 0,
    "ignore_xss_filter": 1,
    "label": "Notes"
   },
@@ -232,7 +234,8 @@
    "fieldname": "bmi",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "BMI"
+   "label": "BMI",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_14",
@@ -257,10 +260,6 @@
    "options": "Vital Signs",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "column_break_guwwr",
-   "fieldtype": "Column Break"
   }
  ],
  "is_submittable": 1,
@@ -298,32 +297,6 @@
    "role": "Nursing User",
    "share": 1,
    "submit": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Maternity",
-   "select": 1,
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "All",
-   "select": 1,
-   "share": 1,
    "write": 1
   }
  ],

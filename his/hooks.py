@@ -87,7 +87,8 @@ website_route_rules = [
 
 # before_install = "his.install.before_install"
 after_install = "his.setup.install.after_install"
-after_migrate = "his.patches.add_bill_to_patient_invoice_reference.execute"
+# Invoice-reference changes are deferred to an explicitly approved operation.
+# Routine migration must preserve the live Bill To Server Script.
 
 # Uninstallation
 # ------------

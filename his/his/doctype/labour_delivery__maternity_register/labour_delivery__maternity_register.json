@@ -8,6 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "facility_name",
+  "patient",
+  "patient_name",
   "column_break_hjek0",
   "facility_type",
   "mfl_code",
@@ -162,6 +164,7 @@
   "column_break_geunr",
   "f_2",
   "column_break_rgl5g",
+  "baby_hight_cm",
   "baby_weight_grams_2",
   "column_break_okexl",
   "bf_within_1_hr_yn_section",
@@ -187,6 +190,38 @@
   "results_pos__neg",
   "column_break_br3vf",
   "column_break_daoil",
+  "column_break_mgxef",
+  "initiated_option_b_plus",
+  "column_break_napba",
+  "hi_plus_known_on_haart",
+  "column_break_ivsn5",
+  "infant_prophylaxis_2",
+  "section_break_trbb7",
+  "date_of_discharge_ddmmyy",
+  "column_break_kjikc",
+  "condition_at_discharge_ad",
+  "column_break_vgsyv",
+  "mother",
+  "column_break_ctprd",
+  "baby_column",
+  "section_break_u9oe0",
+  "health_education_ipc_la_talin_caafimaad",
+  "column_break_9dpb1",
+  "iycf",
+  "column_break_jeovh",
+  "section_break_pdzlf",
+  "column_break_d308o",
+  "next_visit_for_postnatal_care_ddmmyy",
+  "section_break_nawll",
+  "referral_yn_gudbin_column",
+  "mother_in",
+  "column_break_ssnoe",
+  "mother_out",
+  "column_break_enn8r",
+  "infant_out",
+  "section_break_hxsqf",
+  "remarks_3",
+  "fff",
   "live_birth_hiv_plus__mother_status_knownnew",
   "labour_delivery__maternity_register_r_09_a_section",
   "facility_name_3",
@@ -243,12 +278,16 @@
   {
    "fieldname": "facility_name",
    "fieldtype": "Data",
-   "label": "Facility Name"
+   "label": "Facility Name",
+   "default": "Hodan Hospital",
+   "read_only": 1
   },
   {
    "fieldname": "facility_type",
    "fieldtype": "Data",
-   "label": "Facility Type"
+   "label": "Facility Type",
+   "default": "Private",
+   "read_only": 1
   },
   {
    "fieldname": "mfl_code",
@@ -270,7 +309,8 @@
   {
    "fieldname": "region",
    "fieldtype": "Data",
-   "label": "Region"
+   "label": "Region",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_ugg5i",
@@ -318,7 +358,8 @@
   {
    "fieldname": "serial_number",
    "fieldtype": "Data",
-   "label": "Serial Number"
+   "label": "Serial Number",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_mhffm",
@@ -327,7 +368,8 @@
   {
    "fieldname": "date_of_admission",
    "fieldtype": "Date",
-   "label": "Date of Admission"
+   "label": "Date of Admission",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_3q6il",
@@ -336,7 +378,11 @@
   {
    "fieldname": "full_names_mobile",
    "fieldtype": "Data",
-   "label": "Full Names Mobile"
+   "label": "Full Names",
+   "in_list_view": 1,
+   "fetch_from": "patient.first_name",
+   "in_standard_filter": 1,
+   "read_only": 1
   },
   {
    "fieldname": "column_break_8j48r",
@@ -345,7 +391,9 @@
   {
    "fieldname": "age",
    "fieldtype": "Data",
-   "label": "Age"
+   "label": "Age",
+   "in_list_view": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_wmmll",
@@ -372,7 +420,8 @@
   {
    "fieldname": "gravidae",
    "fieldtype": "Data",
-   "label": "Gravidae"
+   "label": "Gravidae",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_msikc",
@@ -394,7 +443,8 @@
   {
    "fieldname": "gestation_at_delivery_weeks",
    "fieldtype": "Data",
-   "label": "Gestation at Delivery (weeks)"
+   "label": "Gestation at Delivery (weeks)",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_563ul",
@@ -421,7 +471,8 @@
   {
    "fieldname": "partograph_used_yn",
    "fieldtype": "Data",
-   "label": "Partograph used (Y/N)"
+   "label": "Partograph used (Y/N)",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_ayjjn",
@@ -430,7 +481,10 @@
   {
    "fieldname": "date_of_delivery_dd_mm_yy",
    "fieldtype": "Date",
-   "label": "Date of Delivery (DD MM YY)"
+   "label": "Date of Delivery (DD MM YY)",
+   "in_list_view": 1,
+   "reqd": 1,
+   "in_standard_filter": 1
   },
   {
    "fieldname": "section_break_mnizl",
@@ -439,7 +493,8 @@
   {
    "fieldname": "time_of_delivery_hh__mm",
    "fieldtype": "Time",
-   "label": "Time of Delivery (HH  MM)"
+   "label": "Time of Delivery (HH  MM)",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_18mum",
@@ -448,7 +503,10 @@
   {
    "fieldname": "type_of_delivery_normalinstrumentalcs",
    "fieldtype": "Data",
-   "label": "Type of delivery (Normal/Instrumental/CS)"
+   "label": "Type of delivery (Normal/Instrumental/CS)",
+   "in_list_view": 1,
+   "reqd": 1,
+   "in_standard_filter": 1
   },
   {
    "fieldname": "column_break_kc7zo",
@@ -457,7 +515,9 @@
   {
    "fieldname": "presentation",
    "fieldtype": "Data",
-   "label": "Presentation"
+   "label": "Presentation",
+   "in_list_view": 1,
+   "reqd": 1
   },
   {
    "fieldname": "section_break_ynbdo",
@@ -466,7 +526,8 @@
   {
    "fieldname": "delivery_conducted_by_name_designation",
    "fieldtype": "Data",
-   "label": "Delivery conducted by (Name Designation)"
+   "label": "Delivery conducted by (Name Designation)",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_yedau",
@@ -475,7 +536,8 @@
   {
    "fieldname": "uterotonic_for_pph",
    "fieldtype": "Data",
-   "label": "Uterotonic for PPH"
+   "label": "Uterotonic for PPH",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_l25ju",
@@ -560,7 +622,8 @@
   {
    "fieldname": "apgar_score_0___10",
    "fieldtype": "Data",
-   "label": "APGAR Score (0   10)"
+   "label": "APGAR Score (0   10)",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_gliod",
@@ -569,7 +632,8 @@
   {
    "fieldname": "sex_of_baby_fm",
    "fieldtype": "Data",
-   "label": "Sex of Baby (F/M)"
+   "label": "Sex of Baby (F/M)",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_x1v7r",
@@ -578,7 +642,8 @@
   {
    "fieldname": "baby_weight_grams",
    "fieldtype": "Data",
-   "label": "Baby weight (grams)"
+   "label": "Baby weight (grams)",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_euyic",
@@ -794,7 +859,8 @@
   {
    "fieldname": "district_1",
    "fieldtype": "Data",
-   "label": "District"
+   "label": "District",
+   "reqd": 1
   },
   {
    "fieldname": "start_date_1",
@@ -1011,7 +1077,8 @@
   },
   {
    "fieldname": "labour_delivery__maternity_register_r_09_a_section",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Labour Delivery and  Maternity Register (R 09 A)"
   },
   {
    "fieldname": "section_break_acaee",
@@ -1298,8 +1365,182 @@
   },
   {
    "fieldname": "results_pos__neg",
+   "fieldtype": "Check",
+   "label": "Results (Pos / Neg)",
+   "default": "0"
+  },
+  {
+   "fieldname": "patient",
+   "label": "Patient ID",
+   "fieldtype": "Link",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
    "fieldtype": "Data",
-   "label": "Results (Pos / Neg)"
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+  {
+   "fieldname": "baby_hight_cm",
+   "label": "Baby Hight cm",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_mgxef",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "initiated_option_b_plus",
+   "label": "Initiated Option B plus",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_napba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hi_plus_known_on_haart",
+   "label": "HI plus Known on HAART",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_ivsn5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "infant_prophylaxis_2",
+   "label": "Infant prophylaxis",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "section_break_trbb7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_discharge_ddmmyy",
+   "label": "Date of Discharge (DD/MM/YY)",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "column_break_kjikc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "condition_at_discharge_ad",
+   "label": "Condition at Discharge (A/D",
+   "fieldtype": "Heading"
+  },
+  {
+   "fieldname": "column_break_vgsyv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mother",
+   "label": "Mother",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_ctprd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "baby_column",
+   "label": "Baby",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "section_break_u9oe0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "health_education_ipc_la_talin_caafimaad",
+   "label": "Health Education (IPC) La talin Caafimaad",
+   "fieldtype": "Heading"
+  },
+  {
+   "fieldname": "column_break_9dpb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "iycf",
+   "label": "IYCF",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_jeovh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pdzlf",
+   "label": "Postpartum BS",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_d308o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "next_visit_for_postnatal_care_ddmmyy",
+   "label": "Next visit for Postnatal Care (DD/MM/YY)",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "section_break_nawll",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "referral_yn_gudbin_column",
+   "label": "Referral (Y/N) Gudbin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mother_in",
+   "label": "Mother In",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_ssnoe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mother_out",
+   "label": "Mother out",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_enn8r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "infant_out",
+   "label": "Infant OUT",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "section_break_hxsqf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks_3",
+   "label": "Remarks",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "fff",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -1337,5 +1578,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "full_names_mobile",
+ "allow_import": 1
 }

@@ -3,8 +3,8 @@
   "docstatus": 0,
   "doctype": "Workflow",
   "document_type": "Sales Invoice",
-  "is_active": 0,
-  "modified": "2021-08-18 12:23:26.977915",
+  "is_active": 1,
+  "modified": "2025-05-24 09:05:56.442857",
   "name": "Sales Invoice Discount Approval",
   "override_status": 1,
   "parent": null,
@@ -13,148 +13,491 @@
   "send_email_alert": 0,
   "states": [
    {
-    "allow_edit": "Cashier",
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
     "state": "Draft",
-    "update_field": null,
-    "update_value": null
+    "doc_status": "0",
+    "allow_edit": "Discount 10%"
    },
    {
-    "allow_edit": "Accounts Manager",
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
-    "state": "Discount Approval Pending",
-    "update_field": null,
-    "update_value": null
-   },
-   {
-    "allow_edit": "Accounts Manager",
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
-    "state": "Discount Rejected",
-    "update_field": null,
-    "update_value": null
-   },
-   {
-    "allow_edit": "Cashier",
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
     "state": "Approved",
-    "update_field": null,
-    "update_value": null
+    "doc_status": "0",
+    "allow_edit": "Discount 10%"
    },
    {
-    "allow_edit": "Cashier",
-    "doc_status": "1",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
     "state": "Submitted",
-    "update_field": null,
-    "update_value": null
+    "doc_status": "1",
+    "allow_edit": "All"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "doc_status": "0",
+    "allow_edit": "Discount 15%"
+   },
+   {
+    "state": "Discount Rejected",
+    "doc_status": "0",
+    "allow_edit": "Discount 15%"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "doc_status": "0",
+    "allow_edit": "Discount 20%"
+   },
+   {
+    "state": "Discount Rejected",
+    "doc_status": "0",
+    "allow_edit": "Discount 20%"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "doc_status": "0",
+    "allow_edit": "Discount 30%"
+   },
+   {
+    "state": "Discount Rejected",
+    "doc_status": "0",
+    "allow_edit": "Discount 30%"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "doc_status": "0",
+    "allow_edit": "Discount 40%"
+   },
+   {
+    "state": "Discount Rejected",
+    "doc_status": "0",
+    "allow_edit": "Discount 40%"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "doc_status": "0",
+    "allow_edit": "Discount 50%"
+   },
+   {
+    "state": "Discount Rejected",
+    "doc_status": "0",
+    "allow_edit": "Discount 50%"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "doc_status": "0",
+    "allow_edit": "Discount 60%"
+   },
+   {
+    "state": "Discount Rejected",
+    "doc_status": "0",
+    "allow_edit": "Discount 60%"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "doc_status": "0",
+    "allow_edit": "Discount 100%"
+   },
+   {
+    "state": "Discount Rejected",
+    "doc_status": "0",
+    "allow_edit": "Discount 100%"
    }
   ],
   "transitions": [
    {
+    "state": "Draft",
     "action": "Submit",
-    "allow_self_approval": 1,
-    "allowed": "Cashier",
-    "condition": "doc.percentage <= get_allowed_discount()",
     "next_state": "Submitted",
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Draft"
-   },
-   {
-    "action": "Request Review",
+    "allowed": "Discount 10%",
     "allow_self_approval": 1,
-    "allowed": "Cashier",
-    "condition": "doc.percentage > get_allowed_discount()",
-    "next_state": "Discount Approval Pending",
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Draft"
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
    },
    {
+    "state": "Draft",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 10%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 10%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Approved",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 10%",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 15%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
     "action": "Approve",
-    "allow_self_approval": 1,
-    "allowed": "Accounts Manager",
-    "condition": "doc.percentage <= get_allowed_discount()",
     "next_state": "Approved",
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Discount Approval Pending"
+    "allowed": "Discount 15%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
    },
    {
+    "state": "Discount Approval Pending",
     "action": "Reject",
-    "allow_self_approval": 1,
-    "allowed": "Accounts Manager",
-    "condition": "doc.percentage <= get_allowed_discount()",
     "next_state": "Discount Rejected",
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Discount Approval Pending"
-   },
-   {
-    "action": "Submit",
+    "allowed": "Discount 15%",
     "allow_self_approval": 1,
-    "allowed": "Cashier",
-    "condition": "",
-    "next_state": "Submitted",
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Approved"
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
    },
    {
+    "state": "Discount Rejected",
     "action": "Submit",
-    "allow_self_approval": 1,
-    "allowed": "Accounts Manager",
-    "condition": "doc.percentage <= get_allowed_discount()",
     "next_state": "Submitted",
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Discount Rejected"
+    "allowed": "Discount 15%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
    },
    {
+    "state": "Approved",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 15%",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Draft",
     "action": "Request Review",
-    "allow_self_approval": 1,
-    "allowed": "Cashier",
-    "condition": "doc.percentage > get_allowed_discount()",
     "next_state": "Discount Approval Pending",
-    "parent": "Sales Invoice Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Discount Rejected"
+    "allowed": "Discount 15%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 15%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 20%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Discount 20%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Reject",
+    "next_state": "Discount Rejected",
+    "allowed": "Discount 20%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 20%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Approved",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 20%",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Draft",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 20%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 20%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 30%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Discount 30%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Reject",
+    "next_state": "Discount Rejected",
+    "allowed": "Discount 30%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 30%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Approved",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 30%",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Draft",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 30%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 30%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 40%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Discount 40%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Reject",
+    "next_state": "Discount Rejected",
+    "allowed": "Discount 40%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 40%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Approved",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 40%",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Draft",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 40%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 40%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 50%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Discount 50%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Reject",
+    "next_state": "Discount Rejected",
+    "allowed": "Discount 50%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 50%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Approved",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 50%",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Draft",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 50%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 50%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 60%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Discount 60%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Reject",
+    "next_state": "Discount Rejected",
+    "allowed": "Discount 60%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 60%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Approved",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 60%",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Draft",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 60%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Request Review",
+    "next_state": "Discount Approval Pending",
+    "allowed": "Discount 60%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage > get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 100%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Discount 100%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
+    "action": "Reject",
+    "next_state": "Discount Rejected",
+    "allowed": "Discount 100%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Rejected",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 100%",
+    "allow_self_approval": 1,
+    "condition": "doc.percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Approved",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Discount 100%",
+    "allow_self_approval": 1
    }
   ],
   "workflow_name": "Sales Invoice Discount Approval",
@@ -165,7 +508,7 @@
   "doctype": "Workflow",
   "document_type": "Patient Appointment",
   "is_active": 0,
-  "modified": "2021-09-07 15:24:40.161605",
+  "modified": "2025-05-19 10:42:44.976607",
   "name": "Patient Appointment Discount Approval",
   "override_status": 1,
   "parent": null,
@@ -174,124 +517,74 @@
   "send_email_alert": 0,
   "states": [
    {
-    "allow_edit": "Accounts User",
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
     "state": "Draft",
-    "update_field": null,
-    "update_value": null
+    "doc_status": "0",
+    "allow_edit": "Accounts User"
    },
    {
-    "allow_edit": "Accounts User",
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
     "state": "Discount Approval Pending",
-    "update_field": null,
-    "update_value": null
+    "doc_status": "0",
+    "allow_edit": "Accounts User"
    },
    {
-    "allow_edit": "Accounts User",
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
     "state": "Discount Rejected",
-    "update_field": null,
-    "update_value": null
+    "doc_status": "0",
+    "allow_edit": "Accounts User"
    },
    {
-    "allow_edit": "Accounts User",
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
     "state": "Approved",
-    "update_field": null,
-    "update_value": null
+    "doc_status": "0",
+    "allow_edit": "Accounts User"
    }
   ],
   "transitions": [
    {
+    "state": "Draft",
     "action": "Approve",
-    "allow_self_approval": 1,
-    "allowed": "Accounts User",
-    "condition": "doc.discount_percentage <= get_allowed_discount()",
     "next_state": "Approved",
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Draft"
+    "allowed": "Accounts User",
+    "allow_self_approval": 1,
+    "condition": "doc.discount_percentage <= get_allowed_discount(doc.customer)"
    },
    {
+    "state": "Draft",
     "action": "Request Review",
-    "allow_self_approval": 1,
-    "allowed": "Accounts User",
-    "condition": "doc.discount_percentage > get_allowed_discount()",
     "next_state": "Discount Approval Pending",
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Draft"
-   },
-   {
-    "action": "Approve",
-    "allow_self_approval": 1,
     "allowed": "Accounts User",
-    "condition": "doc.discount_percentage <= get_allowed_discount()",
-    "next_state": "Approved",
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Discount Approval Pending"
+    "allow_self_approval": 1,
+    "condition": "doc.discount_percentage > get_allowed_discount(doc.customer)"
    },
    {
+    "state": "Discount Approval Pending",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Accounts User",
+    "allow_self_approval": 1,
+    "condition": "doc.discount_percentage <= get_allowed_discount(doc.customer)"
+   },
+   {
+    "state": "Discount Approval Pending",
     "action": "Reject",
-    "allow_self_approval": 1,
-    "allowed": "Accounts User",
-    "condition": "doc.discount_percentage <= get_allowed_discount()",
     "next_state": "Discount Rejected",
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Discount Approval Pending"
+    "allowed": "Accounts User",
+    "allow_self_approval": 1,
+    "condition": "doc.discount_percentage <= get_allowed_discount(doc.customer)"
    },
    {
+    "state": "Discount Rejected",
     "action": "Approve",
-    "allow_self_approval": 1,
-    "allowed": "Accounts User",
-    "condition": "doc.discount_percentage <= get_allowed_discount()",
     "next_state": "Approved",
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Discount Rejected"
+    "allowed": "Accounts User",
+    "allow_self_approval": 1,
+    "condition": "doc.discount_percentage <= get_allowed_discount(doc.customer)"
    },
    {
+    "state": "Discount Rejected",
     "action": "Request Review",
-    "allow_self_approval": 1,
-    "allowed": "Accounts User",
-    "condition": "doc.discount_percentage > get_allowed_discount()",
     "next_state": "Discount Approval Pending",
-    "parent": "Patient Appointment Discount Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Discount Rejected"
+    "allowed": "Accounts User",
+    "allow_self_approval": 1,
+    "condition": "doc.discount_percentage > get_allowed_discount(doc.customer)"
    }
   ],
   "workflow_name": "Patient Appointment Discount Approval",

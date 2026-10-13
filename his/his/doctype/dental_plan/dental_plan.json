@@ -42,7 +42,9 @@
    "in_list_view": 1,
    "label": "Patient",
    "options": "Patient",
-   "reqd": 1
+   "reqd": 1,
+   "in_filter": 1,
+   "in_standard_filter": 1
   },
   {
    "fetch_from": "patient.first_name",
@@ -75,7 +77,9 @@
    "fieldtype": "Link",
    "label": "Practitioner",
    "options": "Healthcare Practitioner",
-   "reqd": 1
+   "reqd": 1,
+   "in_filter": 1,
+   "in_standard_filter": 1
   },
   {
    "fieldname": "section_break_igphs",
@@ -115,7 +119,9 @@
   {
    "fieldname": "agreed_fee",
    "fieldtype": "Currency",
-   "label": "Agreed Fee"
+   "label": "Agreed Fee",
+   "hidden": 1,
+   "print_hide": 1
   },
   {
    "fetch_from": "practitioner.department",

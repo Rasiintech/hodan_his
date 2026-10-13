@@ -11,10 +11,10 @@
  "fields": [
   {
    "fieldname": "role_based_access",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Role",
-   "options": "Role"
+   "options": ""
   }
  ],
  "index_web_pages_for_search": 1,

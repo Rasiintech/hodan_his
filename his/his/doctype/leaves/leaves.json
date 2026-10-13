@@ -28,7 +28,8 @@
   {
    "fieldname": "employee_name",
    "fieldtype": "Data",
-   "label": "Employee Name"
+   "label": "Employee Name",
+   "fetch_from": "emoloyee.employee_name"
   },
   {
    "fieldname": "from_date",
@@ -42,8 +43,9 @@
   },
   {
    "fieldname": "leave_type",
-   "fieldtype": "Data",
-   "label": "Leave Type"
+   "fieldtype": "Link",
+   "label": "Leave Type",
+   "options": "Leave Type"
   },
   {
    "fieldname": "reason",
@@ -101,9 +103,23 @@
    "select": 1,
    "share": 1,
    "write": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

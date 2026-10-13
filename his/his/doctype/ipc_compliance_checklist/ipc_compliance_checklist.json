@@ -55,7 +55,7 @@
   {
    "fieldname": "section_break_1",
    "fieldtype": "Section Break",
-   "in_preview": 1,
+   "in_preview": 0,
    "label": "Part 1: Hand Hygiene"
   },
   {

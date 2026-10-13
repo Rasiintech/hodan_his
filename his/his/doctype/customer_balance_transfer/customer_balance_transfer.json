@@ -30,7 +30,8 @@
   "get_outstanding_invoices",
   "reference",
   "remarks",
-  "journal_entry"
+  "journal_entry",
+  "amended_from"
  ],
  "fields": [
   {
@@ -180,6 +181,15 @@
    "fieldname": "target_party_name",
    "fieldtype": "Data",
    "label": "target Party Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "label": "Amended From",
+   "fieldtype": "Link",
+   "options": "Customer Balance Transfer",
+   "print_hide": 1,
+   "no_copy": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -215,6 +225,20 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
   }
  ],
  "sort_field": "modified",

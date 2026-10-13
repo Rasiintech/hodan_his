@@ -661,6 +661,29 @@
    "property_type": "Check",
    "row_name": null,
    "value": "0"
+  },
+  {
+   "name": "Healthcare Service Unit-healthcare_service_unit_name-in_standard_filter",
+   "creation": "2026-05-06 09:14:52.576569",
+   "modified": "2026-05-06 09:14:52.576569",
+   "modified_by": "hhadmin@hodan.so",
+   "owner": "hhadmin@hodan.so",
+   "docstatus": 0,
+   "idx": 0,
+   "is_system_generated": 0,
+   "doctype_or_field": "DocField",
+   "doc_type": "Healthcare Service Unit",
+   "field_name": "healthcare_service_unit_name",
+   "row_name": null,
+   "module": null,
+   "property": "in_standard_filter",
+   "property_type": "Check",
+   "value": "1",
+   "default_value": null,
+   "_user_tags": null,
+   "_comments": null,
+   "_assign": null,
+   "_liked_by": null
   }
  ],
  "sync_on_migrate": 1
