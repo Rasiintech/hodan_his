@@ -3427,7 +3427,7 @@
    "cancel": 1,
    "create": 1,
    "creation": "2022-01-25 10:29:57.771398",
-   "delete": 0,
+   "delete": 1,
    "docstatus": 0,
    "email": 1,
    "export": 1,
@@ -3462,7 +3462,7 @@
    "delete": 0,
    "docstatus": 0,
    "email": 0,
-   "export": 0,
+   "export": 1,
    "idx": 3,
    "if_owner": 0,
    "import": 0,
@@ -3494,7 +3494,7 @@
    "delete": 0,
    "docstatus": 0,
    "email": 0,
-   "export": 0,
+   "export": 1,
    "idx": 4,
    "if_owner": 0,
    "import": 0,
@@ -3526,7 +3526,7 @@
    "delete": 1,
    "docstatus": 0,
    "email": 1,
-   "export": 0,
+   "export": 1,
    "idx": 1,
    "if_owner": 0,
    "import": 0,
@@ -3699,6 +3699,105 @@
   }
  ],
  "property_setters": [
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "contact_person",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-contact_person-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "total",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-total-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "base_in_words",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-base_in_words-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "in_words",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-in_words-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "outstanding_amount",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-outstanding_amount-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "paid_amount",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-paid_amount-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "status",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-status-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "amount_eligible_for_commission",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-amount_eligible_for_commission-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Sales Invoice",
+   "doctype_or_field": "DocField",
+   "field_name": "only_include_allocated_payments",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Sales Invoice-only_include_allocated_payments-default",
+   "property": "default",
+   "property_type": "Data",
+   "value": "0"
+  },
   {
    "_assign": null,
    "_comments": null,
@@ -4272,7 +4371,7 @@
    "property": "precision",
    "property_type": "Select",
    "row_name": null,
-   "value": "2"
+   "value": "9"
   },
   {
    "_assign": null,
@@ -4594,7 +4693,7 @@
    "property": "precision",
    "property_type": "Select",
    "row_name": null,
-   "value": "2"
+   "value": "9"
   },
   {
    "_assign": null,

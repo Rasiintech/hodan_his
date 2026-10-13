@@ -122,6 +122,8 @@ override_doctype_class = {
     "Clinical Procedure": "his.api.clinical_procedure.CustomClinicalProcedure",
      "Sales Order": "his.override.sales_order.CustomSalesOrder",
       "Sales Invoice": "his.override.sales_invoice.CustomSalesInvoice",
+    "Purchase Invoice": "his.override.buying.CustomPurchaseInvoice",
+    "Purchase Receipt": "his.override.buying.CustomPurchaseReceipt",
       "Asset Movement": "his.override.asset_movement.CustomAssetMovement",
 }
 
@@ -301,6 +303,7 @@ fixtures = [
         "Client Script",
         "Server Script",
         "Custom Field",
+        "Property Setter",
         "Print Format",
         # "Home Page"  # Uncomment if needed
     ]

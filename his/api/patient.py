@@ -9,6 +9,12 @@ from erpnext.accounts.doctype.sales_invoice.sales_invoice import (
 def age_todate(doc, method=None):
     if doc.p_age < 0 :
         frappe.throw("Age Can not be Negative ")
+
+    # Keep an explicitly entered date of birth. Only estimate DOB from the
+    # patient's age when no date of birth was supplied.
+    if doc.dob:
+        return
+
     if doc.age_type=="Year":
 
         # frappe.msgprint(str(doc.p_age)+ " "+ str(doc.age_type))

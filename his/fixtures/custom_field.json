@@ -1,5 +1,25 @@
 [
  {
+  "doctype": "Custom Field",
+  "dt": "Buying Settings",
+  "fieldname": "froze_purchase_receipt_after",
+  "fieldtype": "Date",
+  "insert_after": "over_order_allowance",
+  "label": "Froze Purchase Receipt After",
+  "module": "HIS",
+  "name": "Buying Settings-froze_purchase_receipt_after"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Selling Settings",
+  "fieldname": "payment_discount_limit",
+  "fieldtype": "Currency",
+  "insert_after": "enable_discount_accounting",
+  "label": "Payment Discount Limit",
+  "module": "HIS",
+  "name": "Selling Settings-payment_discount_limit"
+ },
+ {
   "allow_in_quick_entry": 0,
   "allow_on_submit": 0,
   "bold": 0,

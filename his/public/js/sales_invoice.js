@@ -1,4 +1,37 @@
+function his_move_invoice_field(frm, fieldname, after) {
+  const field = frm.fields_dict[fieldname];
+  const anchor = frm.fields_dict[after];
+  if (!field || !anchor) return;
+
+  // Keep section/tab membership consistent with the visible position.
+  for (const key of ['section', 'tab']) {
+    const previous = field[key];
+    const destination = anchor[key];
+    if (previous) {
+      previous.fields_list = previous.fields_list.filter(item => item !== field);
+      delete previous.fields_dict[fieldname];
+    }
+    if (destination) {
+      const index = destination.fields_list.indexOf(anchor);
+      destination.fields_list.splice(index + 1, 0, field);
+      destination.fields_dict[fieldname] = field;
+    }
+    field[key] = destination;
+  }
+  field.$wrapper.insertAfter(anchor.$wrapper);
+  field.parent = anchor.parent;
+}
+
 frappe.ui.form.on('Sales Invoice', {
+  setup(frm) {
+    // Preserve the field positions previously customized in ERPNext's definition.
+    his_move_invoice_field(frm, 'customer_group', 'customer_name');
+    let anchor = 'pos_profile';
+    for (const fieldname of ['payments', 'additional_discount_percentage', 'discount_amount', 'paid_amount']) {
+      his_move_invoice_field(frm, fieldname, anchor);
+      anchor = fieldname;
+    }
+  },
   refresh(frm) {
     frm.set_query('ref_practitioner',  function() {
       return {
