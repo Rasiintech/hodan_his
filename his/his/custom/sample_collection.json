@@ -1158,9 +1158,65 @@
    "translatable": 1,
    "unique": 0,
    "width": null
+  },
+  {
+   "fieldname": "sample_time",
+   "fieldtype": "Time",
+   "label": "sample time",
+   "dt": "Sample Collection",
+   "doctype": "Custom Field",
+   "module": "HIS",
+   "name": "Sample Collection-sample_time",
+   "insert_after": "amended_from"
   }
  ],
- "custom_perms": [],
+ "custom_perms": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1,
+   "parent": "Sample Collection",
+   "name": "HIS-Sample Collection-Laboratory User-0",
+   "idx": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1,
+   "parent": "Sample Collection",
+   "name": "HIS-Sample Collection-Administrator-0",
+   "idx": 2
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "parent": "Sample Collection",
+   "name": "HIS-Sample Collection-System Manager-0",
+   "idx": 3
+  }
+ ],
  "doctype": "Sample Collection",
  "links": [],
  "property_setters": [
@@ -1208,7 +1264,7 @@
    "property": "naming_rule",
    "property_type": "Data",
    "row_name": null,
-   "value": "Expression (old style)"
+   "value": "By \"Naming Series\" field"
   },
   {
    "_assign": null,

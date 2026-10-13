@@ -487,6 +487,17 @@
    "translatable": 0,
    "unique": 0,
    "width": null
+  },
+  {
+   "default": "0",
+   "fieldname": "is_station",
+   "fieldtype": "Check",
+   "label": "Is Station",
+   "dt": "Healthcare Service Unit Type",
+   "doctype": "Custom Field",
+   "module": "HIS",
+   "name": "Healthcare Service Unit Type-is_station",
+   "insert_after": "change_in_item"
   }
  ],
  "custom_perms": [
@@ -626,6 +637,28 @@
    "property_type": "Check",
    "row_name": null,
    "value": "1"
+  },
+  {
+   "doc_type": "Healthcare Service Unit Type",
+   "doctype_or_field": "DocField",
+   "field_name": "item",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Healthcare Service Unit Type-item-read_only",
+   "property": "read_only",
+   "property_type": "Check",
+   "value": "0"
+  },
+  {
+   "doc_type": "Healthcare Service Unit Type",
+   "doctype_or_field": "DocType",
+   "field_name": null,
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Healthcare Service Unit Type-main-naming_rule",
+   "property": "naming_rule",
+   "property_type": "Data",
+   "value": "By fieldname"
   }
  ],
  "sync_on_migrate": 1

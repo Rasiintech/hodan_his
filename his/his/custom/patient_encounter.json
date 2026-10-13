@@ -13116,7 +13116,41 @@
    "width": null
   }
  ],
- "custom_perms": [],
+ "custom_perms": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "submit": 1,
+   "write": 1,
+   "parent": "Patient Encounter",
+   "name": "HIS-Patient Encounter-Physician-0",
+   "idx": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1,
+   "parent": "Patient Encounter",
+   "name": "HIS-Patient Encounter-Administrator-0",
+   "idx": 2
+  }
+ ],
  "doctype": "Patient Encounter",
  "links": [],
  "property_setters": [
@@ -13141,7 +13175,7 @@
    "property": "read_only",
    "property_type": "Check",
    "row_name": null,
-   "value": "1"
+   "value": "0"
   },
   {
    "_assign": null,
@@ -13486,6 +13520,50 @@
    "property": "read_only",
    "property_type": "Check",
    "row_name": null,
+   "value": "1"
+  },
+  {
+   "doc_type": "Patient Encounter",
+   "doctype_or_field": "DocField",
+   "field_name": "patient",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Patient Encounter-patient-set_only_once",
+   "property": "set_only_once",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Patient Encounter",
+   "doctype_or_field": "DocField",
+   "field_name": "drug_prescription",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Patient Encounter-drug_prescription-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Patient Encounter",
+   "doctype_or_field": "DocField",
+   "field_name": "lab_test_prescription",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Patient Encounter-lab_test_prescription-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doc_type": "Patient Encounter",
+   "doctype_or_field": "DocField",
+   "field_name": "procedure_prescription",
+   "is_system_generated": 0,
+   "module": "HIS",
+   "name": "Patient Encounter-procedure_prescription-allow_on_submit",
+   "property": "allow_on_submit",
+   "property_type": "Check",
    "value": "1"
   }
  ],
