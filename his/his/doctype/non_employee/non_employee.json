@@ -161,8 +161,7 @@
    "in_standard_filter": 1,
    "label": "Full Name",
    "oldfieldname": "employee_name",
-   "oldfieldtype": "Data",
-   "read_only": 1
+   "oldfieldtype": "Data"
   },
   {
    "fieldname": "column_break_9",
@@ -387,8 +386,7 @@
   {
    "fieldname": "cell_number",
    "fieldtype": "Data",
-   "label": "Mobile",
-   "options": "Phone"
+   "label": "Mobile"
   },
   {
    "fieldname": "column_break_40",
@@ -726,7 +724,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-10-13 20:13:56.770713",
+ "modified": "2026-10-14 16:39:16.891024",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Non-Employee",
