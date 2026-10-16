@@ -13128,7 +13128,7 @@
    "module": null,
    "label": "Patient Referral",
    "fieldname": "patient_referral",
-   "insert_after": "patient",
+   "insert_after": "customer_group",
    "length": 0,
    "fieldtype": "Link",
    "precision": "",

@@ -119,6 +119,7 @@ after_install = "his.setup.install.after_install"
 # Override standard doctype classes
 
 override_doctype_class = {
+    "Journal Entry": "his.override.journal_entry.CustomJournalEntry",
     # "Item": "his.api.retail_setup.CustomItem",
     "Clinical Procedure": "his.api.clinical_procedure.CustomClinicalProcedure",
      "Sales Order": "his.override.sales_order.CustomSalesOrder",
