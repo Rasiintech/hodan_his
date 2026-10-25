@@ -37,12 +37,16 @@ def get_discount_levels():
 
 
 def get_allowed_discount(customer = None):
-    # Get customer group if customer is provided
+    # Customer Groups marked to bypass role limits use their configured default.
     if customer:
         customer_group = frappe.db.get_value("Customer", customer, "customer_group")
-        ignore_discount = frappe.db.get_value("Customer Group", customer_group, "ignore_discount")
+        ignore_discount, default_discount_percentage = frappe.db.get_value(
+            "Customer Group",
+            customer_group,
+            ["ignore_discount", "default_discount_percentage"],
+        ) or (0, 0)
         if ignore_discount:
-            return 100
+            return min(max(flt(default_discount_percentage), 0), 100)
         
     discount_levels = get_discount_levels()
     if not discount_levels:
