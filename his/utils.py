@@ -36,8 +36,9 @@ def get_discount_levels():
     }
 
 
-def get_allowed_discount(customer = None):
-    # Customer Groups marked to bypass role limits use their configured default.
+def get_allowed_discount(customer=None):
+    # Group defaults are automatic allowances, without reducing role authority.
+    customer_group_allowance = 0
     if customer:
         customer_group = frappe.db.get_value("Customer", customer, "customer_group")
         ignore_discount, default_discount_percentage = frappe.db.get_value(
@@ -46,7 +47,7 @@ def get_allowed_discount(customer = None):
             ["ignore_discount", "default_discount_percentage"],
         ) or (0, 0)
         if ignore_discount:
-            return min(max(flt(default_discount_percentage), 0), 100)
+            customer_group_allowance = min(max(flt(default_discount_percentage), 0), 100)
         
     discount_levels = get_discount_levels()
     if not discount_levels:
@@ -58,7 +59,8 @@ def get_allowed_discount(customer = None):
         for role, discount_allowed in discount_levels.items()
         if role in roles
     ]
-    return max(discount_levels) if discount_levels else 0
+    role_limit = max(discount_levels) if discount_levels else 0
+    return max(role_limit, customer_group_allowance)
 
 
 
