@@ -1,0 +1,319 @@
+{
+ "actions": [],
+ "autoname": "CSH-.YYYY.-.MM.-.#####",
+ "creation": "2026-10-27 13:05:49.637550",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "cashier",
+  "cashier_name",
+  "cashier_type",
+  "column_break_details",
+  "posting_date",
+  "shift",
+  "company",
+  "mode_of_payment",
+  "account",
+  "account_balance",
+  "collection_section",
+  "cash_collections",
+  "section_break_k0myx",
+  "total_opening_balance",
+  "column_break_collection",
+  "total_collection_today",
+  "column_break_grand",
+  "grand_total",
+  "cash_available_section",
+  "cash_available",
+  "section_break_bmoqp",
+  "total_cash_receipt",
+  "column_break_served",
+  "total_served",
+  "column_break_exchange",
+  "total_exchange",
+  "merchant_section",
+  "merchant_credits",
+  "merchant_withdrawals",
+  "total_withdraw",
+  "amended_from",
+  "section_break_tndsr",
+  "section_break_bldoh"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Cashier Hand Over"
+  },
+  {
+   "fieldname": "cashier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Cashier (POS Profile)",
+   "options": "POS Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cashier_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "default": "OPD Cashier",
+   "fieldname": "cashier_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "OPD Cashier\nIPD Cashier\nPharmacy Cashier\nMain Cashier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_details",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Day",
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shift",
+   "options": "Day\nNight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "options": "Mode of Payment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "account_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Account Balance",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "collection_section",
+   "fieldtype": "Section Break",
+   "label": "Cash Collection Report"
+  },
+  {
+   "fieldname": "cash_collections",
+   "fieldtype": "Table",
+   "label": "Cash Collections",
+   "options": "Cashier Shift Collection"
+  },
+  {
+   "fieldname": "total_opening_balance",
+   "fieldtype": "Currency",
+   "label": "Total Opening Balance",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_collection",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_collection_today",
+   "fieldtype": "Currency",
+   "label": "Total Collection Today",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_grand",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_available_section",
+   "fieldtype": "Section Break",
+   "label": "Cash Available"
+  },
+  {
+   "fieldname": "cash_available",
+   "fieldtype": "Table",
+   "label": "Cash Available",
+   "options": "Cashier Shift Cash Available"
+  },
+  {
+   "fieldname": "total_cash_receipt",
+   "fieldtype": "Currency",
+   "label": "Total Cash Receipt",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_served",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_served",
+   "fieldtype": "Currency",
+   "label": "Total Served",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_exchange",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_exchange",
+   "fieldtype": "Currency",
+   "label": "Total Exchange",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "merchant_section",
+   "fieldtype": "Section Break",
+   "label": "H-Merchant Report"
+  },
+  {
+   "fieldname": "merchant_credits",
+   "fieldtype": "Currency",
+   "label": "Merchants Credits",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "merchant_withdrawals",
+   "fieldtype": "Table",
+   "label": "Merchant Withdrawals",
+   "options": "Cashier Shift Merchant Withdraw"
+  },
+  {
+   "fieldname": "total_withdraw",
+   "fieldtype": "Currency",
+   "label": "Total Withdraw",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cashier Shift Handover",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_tndsr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_bldoh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_k0myx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_bmoqp",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-27 13:09:57.316176",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Cashier Shift Handover",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cashier",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Main Cashier",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "cashier_name",
+ "track_changes": 1
+}

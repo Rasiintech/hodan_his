@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "autoname": "format:FIM-{####}",
+ "creation": "2026-10-29 15:31:08.396379",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "incident_title",
+  "column_break_1",
+  "incident_area",
+  "column_break_2",
+  "incident_time",
+  "section_break_1",
+  "date",
+  "column_break_3",
+  "technician",
+  "technician_name",
+  "column_break_4",
+  "technician_calling_time",
+  "section_break_2",
+  "department",
+  "column_break_5",
+  "technician_mobile",
+  "column_break_6",
+  "closing_time",
+  "incident_section",
+  "incident_details",
+  "column_break_7",
+  "status",
+  "remark_section",
+  "remark",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "incident_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Incident Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "incident_area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Incident Area"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "incident_time",
+   "fieldtype": "Time",
+   "label": "Incident Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "label": "Technician",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "technician.employee_name",
+   "fetch_if_empty": 1,
+   "fieldname": "technician_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Technician",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technician_calling_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Technician Calling Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "technician.cell_number",
+   "fetch_if_empty": 1,
+   "fieldname": "technician_mobile",
+   "fieldtype": "Data",
+   "label": "Technician Mobile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Close'",
+   "fieldname": "closing_time",
+   "fieldtype": "Time",
+   "label": "Closing Time",
+   "mandatory_depends_on": "eval:doc.status == 'Close'"
+  },
+  {
+   "fieldname": "incident_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "incident_details",
+   "fieldtype": "Long Text",
+   "label": "Incident Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nOpen\nClose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remark_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Long Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Facility Incident Management",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-29 15:35:16.032978",
+ "modified_by": "Administrator",
+ "module": "HIS",
+ "name": "Facility Incident Management",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+}

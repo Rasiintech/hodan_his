@@ -79,6 +79,7 @@ def execute(filters=None):
         JOIN `tabClinical Procedure Template` R ON I.item_code = R.name
         LEFT JOIN `tabPatient` P ON S.patient = P.name
         WHERE S.docstatus = 1
+            AND COALESCE(S.cancel_ot, 0) = 0
             {f"AND {' AND '.join(conditions)}" if conditions else ''}
         ORDER BY S.transaction_date DESC
 

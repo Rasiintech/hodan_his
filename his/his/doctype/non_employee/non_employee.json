@@ -103,7 +103,8 @@
   "lft",
   "rgt",
   "old_parent",
-  "connections_tab"
+  "connections_tab",
+  "deleted"
  ],
  "fields": [
   {
@@ -720,11 +721,19 @@
    "fieldtype": "Tab Break",
    "label": "Connections",
    "show_dashboard": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "deleted",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Deleted",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-10-14 16:39:16.891024",
+ "modified": "2026-10-31 13:18:49.669030",
  "modified_by": "Administrator",
  "module": "HIS",
  "name": "Non-Employee",

@@ -1,0 +1,15 @@
+{
+ "add_total_row": 1,
+ "disable_prepared_report": 1,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "HIS",
+ "name": "Surgery Report",
+ "ref_doctype": "Sales Order",
+ "report_name": "Surgery Report",
+ "report_type": "Query Report",
+ "query": "SELECT S.name AS `Sales Order:Link/Sales Order:150`, S.transaction_date AS `Transaction Date:Date:100`, S.patient AS `Patient:Link/Patient:150`, S.patient_name AS `Patient Name:Data:200`, S.customer_group AS `Customer Group:Data:200`, P.mobile_no AS `Mobile No:Data:120`, S.ref_practitioner AS `Consultant:Link/Healthcare Practitioner:150`, S.medical_department AS `Medical Department:Link/Medical Department:200`, I.item_code AS `Service Name:Link/Clinical Procedure Template:250`, R.item_group AS `Service Type:Data:120`, CASE WHEN EXISTS (SELECT 1 FROM `tabSales Invoice Item` X JOIN `tabSales Invoice` V ON V.name=X.parent WHERE X.item_code=I.item_code AND V.patient=S.patient AND V.docstatus=1 AND V.posting_date>=S.transaction_date) OR I.delivered_qty=1 THEN 'Completed' WHEN I.delivered_qty=0 THEN 'To Deliver and Bill' ELSE S.status END AS `Status:Data:120`, I.qty AS `Quantity:Int:100`, ROUND(IFNULL(R.rate,0)+IFNULL((SELECT SUM(A.amount) FROM `tabAneasthesia` A WHERE A.parent=R.name),0),2) AS `Rate:Currency:100`, IFNULL((SELECT ROUND(SUM(PI.net_amount*LEAST(1,GREATEST(0,(PV.grand_total-PV.outstanding_amount)/NULLIF(PV.grand_total,0)))),2) FROM `tabSales Invoice Item` PI JOIN `tabSales Invoice` PV ON PV.name=PI.parent WHERE PV.docstatus=1 AND PI.so_detail=I.name),0) AS `Paid Amount:Currency:120`, CASE WHEN EXISTS (SELECT 1 FROM `tabSales Invoice Item` CX JOIN `tabSales Invoice` CV ON CV.name=CX.parent WHERE CX.item_code=I.item_code AND CV.patient=S.patient AND CV.docstatus=1 AND CV.posting_date>=S.transaction_date) THEN 'Billed' ELSE S.comment END AS `Comment:Data:350`, S.updated_comment AS `Updated Comment:Data:350` FROM `tabSales Order` S JOIN `tabSales Order Item` I ON I.parent=S.name JOIN `tabClinical Procedure Template` R ON R.name=I.item_code LEFT JOIN `tabPatient` P ON P.name=S.patient WHERE S.docstatus=1 AND IFNULL(S.cancel_ot,0)=0 AND S.transaction_date BETWEEN %(from_date)s AND %(to_date)s AND IFNULL(S.patient,'') LIKE %(patient_value)s AND IFNULL(S.customer_group,'') LIKE %(customer_group_value)s AND IFNULL(S.ref_practitioner,'') LIKE %(practitioner_value)s AND IFNULL(S.medical_department,'') LIKE %(medical_department_value)s AND IFNULL(R.item_group,'') LIKE %(item_group_value)s AND IFNULL(R.template,'') LIKE %(procedure_name_value)s ORDER BY S.transaction_date DESC",
+ "roles": [{"role":"Sales User"},{"role":"Sales Manager"},{"role":"Maintenance User"},{"role":"Accounts User"},{"role":"Stock User"},{"role":"All"}]
+}
